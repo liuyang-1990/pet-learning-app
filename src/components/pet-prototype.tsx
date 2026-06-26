@@ -43,10 +43,8 @@ import {
 
 type Tab = "home" | "session" | "vocabulary" | "guardian" | "content";
 
-const storageKey = "pet-learning-household-v2";
-
 export function PetPrototype() {
-  const [household, setHousehold] = usePersistentHousehold();
+  const [household, setHousehold, syncState] = useServerHousehold();
   const [activeTab, setActiveTab] = useState<Tab>("home");
   const [session, setSession] = useState<DailySession | null>(null);
   const [sessionStartedAt, setSessionStartedAt] = useState<Date | null>(null);
@@ -61,6 +59,7 @@ export function PetPrototype() {
   const [shadowInputs, setShadowInputs] = useState<Record<string, string>>({});
   const [shadowFeedback, setShadowFeedback] = useState<Record<string, WordShadowingFeedback>>({});
   const [isRecording, setIsRecording] = useState(false);
+  const [isAiThinking, setIsAiThinking] = useState(false);
   const [recordingError, setRecordingError] = useState<string | null>(null);
   const [currentRecordingUrl, setCurrentRecordingUrl] = useState<string | null>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
@@ -86,19 +85,45 @@ export function PetPrototype() {
     setActiveTab("session");
   };
 
-  const submitAttempt = () => {
+  const submitAttempt = async () => {
     if (!session) return;
 
-    const conversation = continuePart1Conversation(session, {
+    let conversation = continuePart1Conversation(session, {
       promptId: "part-1-school",
       learnerAnswer: transcript,
       previousTurns: part1Turns,
     });
-    const attemptFeedback = submitSpeakingAttempt(session, {
+    let attemptFeedback = submitSpeakingAttempt(session, {
       promptId: "part-1-school",
       transcript,
       attemptNumber,
     });
+
+    setIsAiThinking(true);
+    try {
+      const response = await fetch("/api/ai/part1", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          session,
+          promptId: "part-1-school",
+          learnerAnswer: transcript,
+          attemptNumber,
+          previousTurns: part1Turns,
+        }),
+      });
+
+      if (response.ok) {
+        const data = (await response.json()) as {
+          conversation: Part1ConversationResult;
+          feedback: SpeakingAttemptResult;
+        };
+        conversation = data.conversation;
+        attemptFeedback = data.feedback;
+      }
+    } finally {
+      setIsAiThinking(false);
+    }
 
     setPart1Turns((current) => [...current, conversation.turn]);
     setPart1FollowUp(conversation.examinerFollowUp);
@@ -154,16 +179,27 @@ export function PetPrototype() {
         const audioUrl = URL.createObjectURL(blob);
         setCurrentRecordingUrl(audioUrl);
         setIsRecording(false);
-        setHousehold((current) =>
-          addRecentRecording(
-            current,
-            {
-              promptTitle: "Talking about school",
-              audioUrl,
-            },
-            new Date(),
-          ),
-        );
+        void uploadRecording(blob, "Talking about school").then((result) => {
+          if (!result) {
+            setHousehold((current) =>
+              addRecentRecording(
+                current,
+                {
+                  promptTitle: "Talking about school",
+                  audioUrl,
+                },
+                new Date(),
+              ),
+            );
+            return;
+          }
+
+          setHousehold(result.household);
+          if (result.transcript) {
+            setTranscript(result.transcript);
+          }
+          setCurrentRecordingUrl(result.recording.audioUrl);
+        });
       };
 
       mediaRecorderRef.current = recorder;
@@ -242,6 +278,7 @@ export function PetPrototype() {
             <p className="eyebrow">PET Speaking</p>
             <h1>今日练习</h1>
           </div>
+          <span className="sync-pill">{syncState}</span>
           <button className="icon-button" aria-label="播放英音示范">
             <Volume2 size={20} />
           </button>
@@ -280,6 +317,7 @@ export function PetPrototype() {
               attemptNumber={attemptNumber}
               transcript={transcript}
               feedback={feedback}
+              isAiThinking={isAiThinking}
               part1Turns={part1Turns}
               part1FollowUp={part1FollowUp}
               part1Feedback={part1Feedback}
@@ -369,6 +407,7 @@ function DailySessionView({
   attemptNumber,
   transcript,
   feedback,
+  isAiThinking,
   part1Turns,
   part1FollowUp,
   part1Feedback,
@@ -391,6 +430,7 @@ function DailySessionView({
   attemptNumber: number;
   transcript: string;
   feedback: SpeakingAttemptResult | null;
+  isAiThinking: boolean;
   part1Turns: Part1ConversationTurn[];
   part1FollowUp: string | null;
   part1Feedback: Part1ConversationResult | null;
@@ -509,9 +549,9 @@ function DailySessionView({
             <span>转写文本</span>
             <textarea value={transcript} onChange={(event) => onTranscriptChange(event.target.value)} rows={4} />
           </label>
-          <button className="primary-button full-width" onClick={onSubmit}>
+          <button className="primary-button full-width" onClick={onSubmit} disabled={isAiThinking || !transcript.trim()}>
             <CheckCircle2 size={18} />
-            回答并听追问
+            {isAiThinking ? "AI 考官思考中" : "回答并听追问"}
           </button>
         </section>
       )}
@@ -900,42 +940,97 @@ function TabButton({
   );
 }
 
-function usePersistentHousehold() {
+function useServerHousehold() {
   const [household, setHousehold] = useState<HouseholdSpace>(() => createDemoHousehold());
+  const [loaded, setLoaded] = useState(false);
+  const [syncState, setSyncState] = useState("连接中");
 
   useEffect(() => {
-    const storage = getLocalStorage();
+    let cancelled = false;
 
-    if (!storage) return;
+    fetch("/api/household")
+      .then((response) => response.json())
+      .then((data: { household: HouseholdSpace }) => {
+        if (cancelled) return;
+        setHousehold(data.household);
+        setLoaded(true);
+        setSyncState("已连接");
+      })
+      .catch(() => {
+        if (cancelled) return;
+        setLoaded(true);
+        setSyncState("本地模式");
+      });
 
-    const saved = storage.getItem(storageKey);
-
-    if (!saved) return;
-
-    try {
-      setHousehold(JSON.parse(saved) as HouseholdSpace);
-    } catch {
-      storage.removeItem(storageKey);
-    }
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   useEffect(() => {
-    getLocalStorage()?.setItem(storageKey, JSON.stringify(household));
-  }, [household]);
+    if (!loaded) return;
 
-  return [household, setHousehold] as const;
+    const timeout = window.setTimeout(() => {
+      setSyncState("保存中");
+      fetch("/api/household", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ household }),
+      })
+        .then(() => setSyncState("已保存"))
+        .catch(() => setSyncState("保存失败"));
+    }, 450);
+
+    return () => window.clearTimeout(timeout);
+  }, [household, loaded]);
+
+  return [household, setHousehold, syncState] as const;
 }
 
-function getLocalStorage(): Storage | null {
+async function uploadRecording(blob: Blob, promptTitle: string) {
+  const form = new FormData();
+  form.append("audio", blob, "speaking.webm");
+  form.append("promptTitle", promptTitle);
+
   try {
-    return typeof window !== "undefined" && window.localStorage ? window.localStorage : null;
+    const response = await fetch("/api/audio/transcribe", {
+      method: "POST",
+      body: form,
+    });
+
+    if (!response.ok) return null;
+
+    return (await response.json()) as {
+      transcript: string;
+      recording: RecentRecording;
+      household: HouseholdSpace;
+    };
   } catch {
     return null;
   }
 }
 
-function speakBritish(text: string) {
+async function speakBritish(text: string) {
   if (typeof window === "undefined" || !window.speechSynthesis) return;
+
+  try {
+    const response = await fetch("/api/audio/tts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ text }),
+    });
+
+    if (response.ok) {
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const audio = new Audio(url);
+      audio.onended = () => URL.revokeObjectURL(url);
+      await audio.play();
+      return;
+    }
+  } catch {
+    // Fall back to the browser voice below.
+  }
 
   const utterance = new SpeechSynthesisUtterance(text);
   const voices = window.speechSynthesis.getVoices();

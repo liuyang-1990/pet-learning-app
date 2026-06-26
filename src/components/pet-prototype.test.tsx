@@ -1,11 +1,26 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import { describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
+import { createDemoHousehold } from "@/lib/pet-learning-app";
 import { PetPrototype } from "./pet-prototype";
 
 describe("PetPrototype", () => {
-  it("starts with learner practice and avoids score-style gamification", () => {
+  beforeEach(() => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn((url: string, init?: RequestInit) => {
+        if (url === "/api/household" && init?.method === "PUT") {
+          return Promise.resolve(Response.json({ household: createDemoHousehold() }));
+        }
+
+        return Promise.resolve(Response.json({ household: createDemoHousehold() }));
+      }),
+    );
+  });
+
+  it("starts with learner practice and avoids score-style gamification", async () => {
     render(<PetPrototype />);
 
+    expect(await screen.findByText("已连接")).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "今日练习" })).toBeInTheDocument();
     expect(screen.getByText("4 天连续练习")).toBeInTheDocument();
     expect(screen.queryByText(/总分|通过率|金币|排行榜/)).not.toBeInTheDocument();

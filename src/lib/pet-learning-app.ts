@@ -28,6 +28,7 @@ export type RecentRecording = {
   promptTitle: string;
   recordedAt: string;
   audioUrl: string;
+  transcript?: string;
 };
 
 type VocabularyReviewResult = {
