@@ -8,9 +8,11 @@ import {
   completeDailySession,
   completeVocabularyReview,
   createDemoHousehold,
+  ensurePart2Image,
   getGuardianProgress,
   getLearnerHome,
   purgeExpiredRecentRecordings,
+  submitPart2Answer,
   submitSpeakingAttempt,
   startDailySession,
 } from "./pet-learning-app";
@@ -206,5 +208,30 @@ describe("PET Learning App", () => {
     expect(clear.feedback).toContain("清楚");
     expect(unclear.status).toBe("needs_practice");
     expect(unclear.feedback).toContain("再跟读");
+  });
+
+  it("provides a part 2 image and gives feedback on a picture description", () => {
+    const household = createDemoHousehold();
+    const session = startDailySession(household, new Date("2026-06-26T08:05:00+08:00"));
+    const part2 = session.steps.find((step) => step.kind === "speaking_part_2");
+
+    expect(part2?.kind).toBe("speaking_part_2");
+    expect(part2?.kind === "speaking_part_2" && ensurePart2Image(part2.prompt).imageUrl).toContain(
+      "data:image/svg+xml",
+    );
+
+    const result = submitPart2Answer(session, {
+      promptId: "part-2-park",
+      transcript:
+        "In the picture, there are children playing in a park. A woman is sitting on a bench because the weather is sunny.",
+      attemptNumber: 1,
+    });
+
+    expect(result.feedback.chinese).toContain("图片");
+    expect(result.feedback.exampleAnswer).toContain("In the picture");
+    expect(result.feedback.pronunciation.targetAccent).toBe("British English");
+    expect(result.weakWords.map((word) => word.term)).toEqual(
+      expect.arrayContaining(["because"]),
+    );
   });
 });

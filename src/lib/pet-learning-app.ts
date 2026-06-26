@@ -161,6 +161,12 @@ export type SpeakingAttemptResult = {
   weakWords: WeakWord[];
 };
 
+type Part2AnswerInput = {
+  promptId: string;
+  transcript: string;
+  attemptNumber: number;
+};
+
 export function createDemoHousehold(): HouseholdSpace {
   return {
     learnerName: "Alex",
@@ -227,6 +233,7 @@ export function createDemoHousehold(): HouseholdSpace {
         title: "Describe a park scene",
         question: "Look at the picture and describe what the people are doing.",
         part: "part_2",
+        imageUrl: createDefaultPart2ImageDataUrl(),
       },
     ],
   };
@@ -295,6 +302,52 @@ export function submitSpeakingAttempt(
       },
     },
     weakWords,
+  };
+}
+
+export function submitPart2Answer(
+  session: DailySession,
+  input: Part2AnswerInput,
+): SpeakingAttemptResult {
+  const prompt = session.steps
+    .filter((step) => step.kind === "speaking_part_2")
+    .map((step) => step.prompt)
+    .find((item) => item.id === input.promptId);
+
+  if (!prompt) {
+    throw new Error(`Unknown speaking part 2 prompt: ${input.promptId}`);
+  }
+
+  const weakWords = extractWeakWords(input.transcript);
+  const hasLocationLanguage = /\bin the picture\b|\bon the left\b|\bon the right\b|\bin the background\b/i.test(
+    input.transcript,
+  );
+
+  return {
+    acceptedAttemptNumber: Math.min(input.attemptNumber, 3),
+    canRetakeAgain: input.attemptNumber < 3,
+    feedback: {
+      chinese: hasLocationLanguage
+        ? "你描述了图片内容，也用了图片位置表达。下一步可以补充人物动作和原因。"
+        : "回答提到了图片内容，但要多用 In the picture、on the left、in the background 这样的图片描述表达。",
+      exampleAnswer:
+        "In the picture, some children are playing in a park. On the left, a girl is running, and in the background, a woman is sitting on a bench because it is a sunny day.",
+      pronunciation: {
+        targetAccent: "British English",
+        summary: "注意 picture 的 /tʃ/ 音，以及 background 的重音。",
+        wordsToShadow: ["picture", "background", ...weakWords.map((word) => word.term)].slice(0, 4),
+      },
+    },
+    weakWords,
+  };
+}
+
+export function ensurePart2Image(prompt: Prompt): Prompt {
+  if (prompt.imageUrl) return prompt;
+
+  return {
+    ...prompt,
+    imageUrl: createDefaultPart2ImageDataUrl(),
   };
 }
 
@@ -624,6 +677,35 @@ function slugify(value: string): string {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
+}
+
+function createDefaultPart2ImageDataUrl() {
+  const svg = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620">
+      <rect width="900" height="620" fill="#d9ecff"/>
+      <circle cx="760" cy="100" r="54" fill="#f8c95d"/>
+      <rect y="410" width="900" height="210" fill="#8ccf8a"/>
+      <path d="M0 415 C130 350 210 430 340 370 C480 300 560 420 700 360 C780 330 840 345 900 320 L900 430 L0 430 Z" fill="#6fbf7c"/>
+      <rect x="80" y="295" width="160" height="86" rx="12" fill="#b67a45"/>
+      <rect x="95" y="255" width="18" height="132" fill="#6e4b2a"/>
+      <rect x="210" y="255" width="18" height="132" fill="#6e4b2a"/>
+      <circle cx="515" cy="288" r="34" fill="#f0b38b"/>
+      <rect x="485" y="322" width="62" height="92" rx="18" fill="#4b78a8"/>
+      <line x1="492" y1="352" x2="430" y2="385" stroke="#2d425a" stroke-width="14" stroke-linecap="round"/>
+      <line x1="542" y1="352" x2="604" y2="376" stroke="#2d425a" stroke-width="14" stroke-linecap="round"/>
+      <line x1="500" y1="410" x2="472" y2="490" stroke="#283747" stroke-width="16" stroke-linecap="round"/>
+      <line x1="535" y1="410" x2="570" y2="490" stroke="#283747" stroke-width="16" stroke-linecap="round"/>
+      <circle cx="650" cy="318" r="28" fill="#f1c29c"/>
+      <rect x="622" y="348" width="56" height="78" rx="16" fill="#db6d55"/>
+      <line x1="626" y1="376" x2="585" y2="420" stroke="#7d332a" stroke-width="12" stroke-linecap="round"/>
+      <line x1="672" y1="376" x2="720" y2="410" stroke="#7d332a" stroke-width="12" stroke-linecap="round"/>
+      <circle cx="705" cy="410" r="27" fill="#ffffff" stroke="#333" stroke-width="4"/>
+      <path d="M125 260 C90 210 115 145 178 148 C230 150 257 204 235 257 Z" fill="#4f9d69"/>
+      <rect x="170" y="250" width="22" height="135" fill="#79553b"/>
+      <text x="450" y="570" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#24496c">Park scene</text>
+    </svg>`;
+
+  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
 }
 
 function nextReviewStage(stage: ReviewStage): ReviewStage {

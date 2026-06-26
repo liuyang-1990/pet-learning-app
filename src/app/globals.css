@@ -595,6 +595,49 @@ a {
   font-weight: 800;
 }
 
+.image-placeholder.large {
+  min-height: 220px;
+}
+
+.part2-image-frame {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fbff;
+}
+
+.part2-image-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.part2-feedback {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f9fbff;
+  border: 1px solid rgba(75, 120, 168, 0.24);
+}
+
+.part2-feedback p,
+.part2-feedback blockquote {
+  margin: 0;
+}
+
+.part2-feedback blockquote {
+  padding: 12px;
+  border-left: 4px solid var(--blue);
+  background: #ffffff;
+  border-radius: 6px;
+  line-height: 1.5;
+}
+
 .image-prompt p {
   margin: 6px 0 0;
   color: var(--muted);

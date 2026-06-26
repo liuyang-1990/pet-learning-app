@@ -2,6 +2,7 @@ import OpenAI from "openai";
 
 import {
   continuePart1Conversation,
+  submitPart2Answer,
   submitSpeakingAttempt,
   type DailySession,
   type Part1ConversationResult,
@@ -157,6 +158,79 @@ export async function generatePart1Feedback(input: {
       feedback: localFeedback,
       usedOpenAI: false,
     };
+  }
+}
+
+export async function generatePart2Feedback(input: {
+  session: DailySession;
+  promptId: string;
+  learnerAnswer: string;
+  attemptNumber: number;
+}): Promise<{ feedback: SpeakingAttemptResult; usedOpenAI: boolean }> {
+  const localFeedback = submitPart2Answer(input.session, {
+    promptId: input.promptId,
+    transcript: input.learnerAnswer,
+    attemptNumber: input.attemptNumber,
+  });
+
+  if (!hasOpenAIKey()) {
+    return { feedback: localFeedback, usedOpenAI: false };
+  }
+
+  try {
+    const response = await getOpenAIClient().responses.create({
+      model: process.env.OPENAI_TEXT_MODEL ?? "gpt-4.1-mini",
+      input: [
+        {
+          role: "system",
+          content:
+            "You are a warm Cambridge B1 Preliminary Speaking Part 2 examiner. Give concise feedback for a sixth-grade learner. Return only compact JSON.",
+        },
+        {
+          role: "user",
+          content: JSON.stringify({
+            answer: input.learnerAnswer,
+            requiredShape: {
+              chineseFeedback: "short Chinese feedback about picture description, location language, completeness",
+              exampleAnswer: "one improved B1-level picture description beginning with In the picture",
+              pronunciationSummary: "short Chinese pronunciation advice",
+              wordsToShadow: ["word"],
+            },
+          }),
+        },
+      ],
+    });
+    const parsed = parseJsonObject(response.output_text);
+
+    return {
+      feedback: {
+        ...localFeedback,
+        feedback: {
+          ...localFeedback.feedback,
+          chinese:
+            typeof parsed.chineseFeedback === "string"
+              ? parsed.chineseFeedback
+              : localFeedback.feedback.chinese,
+          exampleAnswer:
+            typeof parsed.exampleAnswer === "string"
+              ? parsed.exampleAnswer
+              : localFeedback.feedback.exampleAnswer,
+          pronunciation: {
+            ...localFeedback.feedback.pronunciation,
+            summary:
+              typeof parsed.pronunciationSummary === "string"
+                ? parsed.pronunciationSummary
+                : localFeedback.feedback.pronunciation.summary,
+            wordsToShadow: Array.isArray(parsed.wordsToShadow)
+              ? parsed.wordsToShadow.filter((word): word is string => typeof word === "string")
+              : localFeedback.feedback.pronunciation.wordsToShadow,
+          },
+        },
+      },
+      usedOpenAI: true,
+    };
+  } catch {
+    return { feedback: localFeedback, usedOpenAI: false };
   }
 }
 

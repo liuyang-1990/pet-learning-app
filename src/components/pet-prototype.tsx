@@ -26,8 +26,10 @@ import {
   completeVocabularyReview,
   continuePart1Conversation,
   createDemoHousehold,
+  ensurePart2Image,
   getGuardianProgress,
   getLearnerHome,
+  submitPart2Answer,
   submitSpeakingAttempt,
   startDailySession,
   type DailySession,
@@ -53,6 +55,11 @@ export function PetPrototype() {
     "I like science because it is interesting and I usually learn new things.",
   );
   const [feedback, setFeedback] = useState<SpeakingAttemptResult | null>(null);
+  const [part2Transcript, setPart2Transcript] = useState(
+    "In the picture, children are playing in a park and a woman is sitting on a bench.",
+  );
+  const [part2Feedback, setPart2Feedback] = useState<SpeakingAttemptResult | null>(null);
+  const [isPart2Thinking, setIsPart2Thinking] = useState(false);
   const [part1Turns, setPart1Turns] = useState<Part1ConversationTurn[]>([]);
   const [part1FollowUp, setPart1FollowUp] = useState<string | null>(null);
   const [part1Feedback, setPart1Feedback] = useState<Part1ConversationResult | null>(null);
@@ -75,6 +82,8 @@ export function PetPrototype() {
     setSessionStartedAt(startedAt);
     setAttemptNumber(1);
     setFeedback(null);
+    setPart2Feedback(null);
+    setPart2Transcript("In the picture, children are playing in a park and a woman is sitting on a bench.");
     setPart1Turns([]);
     setPart1FollowUp(null);
     setPart1Feedback(null);
@@ -138,6 +147,42 @@ export function PetPrototype() {
     setAttemptNumber((value) => value + 1);
     setFeedback(null);
     setPart1Feedback(null);
+  };
+
+  const submitPart2 = async () => {
+    if (!session) return;
+
+    const part2 = session.steps.find((step) => step.kind === "speaking_part_2");
+    if (part2?.kind !== "speaking_part_2") return;
+
+    let result = submitPart2Answer(session, {
+      promptId: part2.prompt.id,
+      transcript: part2Transcript,
+      attemptNumber,
+    });
+
+    setIsPart2Thinking(true);
+    try {
+      const response = await fetch("/api/ai/part2", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          session,
+          promptId: part2.prompt.id,
+          learnerAnswer: part2Transcript,
+          attemptNumber,
+        }),
+      });
+
+      if (response.ok) {
+        const data = (await response.json()) as { feedback: SpeakingAttemptResult };
+        result = data.feedback;
+      }
+    } finally {
+      setIsPart2Thinking(false);
+    }
+
+    setPart2Feedback(result);
   };
 
   const updateShadowInput = (word: string, value: string) => {
@@ -317,6 +362,9 @@ export function PetPrototype() {
               attemptNumber={attemptNumber}
               transcript={transcript}
               feedback={feedback}
+              part2Transcript={part2Transcript}
+              part2Feedback={part2Feedback}
+              isPart2Thinking={isPart2Thinking}
               isAiThinking={isAiThinking}
               part1Turns={part1Turns}
               part1FollowUp={part1FollowUp}
@@ -328,7 +376,9 @@ export function PetPrototype() {
               currentRecordingUrl={currentRecordingUrl}
               onStart={startPractice}
               onTranscriptChange={setTranscript}
+              onPart2TranscriptChange={setPart2Transcript}
               onSubmit={submitAttempt}
+              onSubmitPart2={submitPart2}
               onRetake={retake}
               onToggleRecording={toggleRecording}
               onCompleteSession={completeSession}
@@ -407,7 +457,10 @@ function DailySessionView({
   attemptNumber,
   transcript,
   feedback,
+  part2Transcript,
+  part2Feedback,
   isAiThinking,
+  isPart2Thinking,
   part1Turns,
   part1FollowUp,
   part1Feedback,
@@ -418,7 +471,9 @@ function DailySessionView({
   currentRecordingUrl,
   onStart,
   onTranscriptChange,
+  onPart2TranscriptChange,
   onSubmit,
+  onSubmitPart2,
   onRetake,
   onToggleRecording,
   onCompleteSession,
@@ -430,7 +485,10 @@ function DailySessionView({
   attemptNumber: number;
   transcript: string;
   feedback: SpeakingAttemptResult | null;
+  part2Transcript: string;
+  part2Feedback: SpeakingAttemptResult | null;
   isAiThinking: boolean;
+  isPart2Thinking: boolean;
   part1Turns: Part1ConversationTurn[];
   part1FollowUp: string | null;
   part1Feedback: Part1ConversationResult | null;
@@ -441,7 +499,9 @@ function DailySessionView({
   currentRecordingUrl: string | null;
   onStart: () => void;
   onTranscriptChange: (value: string) => void;
+  onPart2TranscriptChange: (value: string) => void;
   onSubmit: () => void;
+  onSubmitPart2: () => void;
   onRetake: () => void;
   onToggleRecording: () => void;
   onCompleteSession: () => void;
@@ -588,16 +648,51 @@ function DailySessionView({
       )}
 
       {part2?.kind === "speaking_part_2" && (
-        <section className="image-prompt">
-          <div className="image-placeholder">
-            <ImageIcon size={28} />
-            <span>Part 2 Image</span>
+        <section className="practice-card">
+          <div className="prompt-head">
+            <div>
+              <p className="eyebrow">Speaking Part 2</p>
+              <h2>{part2.prompt.title}</h2>
+            </div>
+            <button className="icon-button compact-icon" aria-label="播放 Part 2 问题" onClick={() => onSpeak(part2.prompt.question)}>
+              <Volume2 size={16} />
+            </button>
           </div>
-          <div>
-            <p className="eyebrow">Speaking Part 2</p>
-            <h2>{part2.prompt.title}</h2>
-            <p>{part2.prompt.question}</p>
-          </div>
+          <Part2Image prompt={ensurePart2Image(part2.prompt)} />
+          <p className="prompt-question">{part2.prompt.question}</p>
+          <label className="field">
+            <span>图片描述回答</span>
+            <textarea
+              value={part2Transcript}
+              onChange={(event) => onPart2TranscriptChange(event.target.value)}
+              rows={4}
+              placeholder="In the picture, ..."
+            />
+          </label>
+          <button className="primary-button full-width" onClick={onSubmitPart2} disabled={isPart2Thinking || !part2Transcript.trim()}>
+            <CheckCircle2 size={18} />
+            {isPart2Thinking ? "AI 正在看你的描述" : "提交 Part 2 回答"}
+          </button>
+          {part2Feedback && (
+            <div className="part2-feedback">
+              <p>{part2Feedback.feedback.chinese}</p>
+              <blockquote>{part2Feedback.feedback.exampleAnswer}</blockquote>
+              <div className="pronunciation">
+                <Volume2 size={18} />
+                <span>{part2Feedback.feedback.pronunciation.summary}</span>
+              </div>
+              {part2Feedback.weakWords.length > 0 && (
+                <div className="feedback-words">
+                  {part2Feedback.weakWords.map((word) => (
+                    <span className="chip" key={word.term}>
+                      {word.term}
+                      <small>{word.chineseGloss}</small>
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
         </section>
       )}
     </div>
@@ -644,6 +739,23 @@ function VocabularyView({
           ))}
         </div>
       </section>
+    </div>
+  );
+}
+
+function Part2Image({ prompt }: { prompt: Prompt }) {
+  if (!prompt.imageUrl) {
+    return (
+      <div className="image-placeholder large">
+        <ImageIcon size={28} />
+        <span>Part 2 Image</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="part2-image-frame">
+      <img src={prompt.imageUrl} alt={prompt.title} />
     </div>
   );
 }
