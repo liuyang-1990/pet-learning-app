@@ -44,6 +44,7 @@ import {
 } from "@/lib/pet-learning-app";
 
 type Tab = "home" | "session" | "vocabulary" | "guardian" | "content";
+type RecordingTarget = "part1" | "part2";
 
 export function PetPrototype() {
   const [household, setHousehold, syncState] = useServerHousehold();
@@ -65,10 +66,16 @@ export function PetPrototype() {
   const [part1Feedback, setPart1Feedback] = useState<Part1ConversationResult | null>(null);
   const [shadowInputs, setShadowInputs] = useState<Record<string, string>>({});
   const [shadowFeedback, setShadowFeedback] = useState<Record<string, WordShadowingFeedback>>({});
-  const [isRecording, setIsRecording] = useState(false);
   const [isAiThinking, setIsAiThinking] = useState(false);
-  const [recordingError, setRecordingError] = useState<string | null>(null);
-  const [currentRecordingUrl, setCurrentRecordingUrl] = useState<string | null>(null);
+  const [recordingTarget, setRecordingTarget] = useState<RecordingTarget | null>(null);
+  const [recordingError, setRecordingError] = useState<Record<RecordingTarget, string | null>>({
+    part1: null,
+    part2: null,
+  });
+  const [recordingUrls, setRecordingUrls] = useState<Record<RecordingTarget, string | null>>({
+    part1: null,
+    part2: null,
+  });
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
   const now = useMemo(() => new Date(), []);
@@ -89,8 +96,9 @@ export function PetPrototype() {
     setPart1Feedback(null);
     setShadowInputs({});
     setShadowFeedback({});
-    setCurrentRecordingUrl(null);
-    setRecordingError(null);
+    setRecordingTarget(null);
+    setRecordingUrls({ part1: null, part2: null });
+    setRecordingError({ part1: null, part2: null });
     setActiveTab("session");
   };
 
@@ -197,14 +205,17 @@ export function PetPrototype() {
     }));
   };
 
-  const toggleRecording = async () => {
-    if (isRecording) {
+  const toggleRecording = async (target: RecordingTarget) => {
+    if (recordingTarget) {
       mediaRecorderRef.current?.stop();
       return;
     }
 
     if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === "undefined") {
-      setRecordingError("当前浏览器不支持录音，可以先手动输入转写文本。");
+      setRecordingError((current) => ({
+        ...current,
+        [target]: "当前浏览器不支持录音，可以先手动输入转写文本。",
+      }));
       return;
     }
 
@@ -222,15 +233,16 @@ export function PetPrototype() {
         stream.getTracks().forEach((track) => track.stop());
         const blob = new Blob(chunksRef.current, { type: recorder.mimeType || "audio/webm" });
         const audioUrl = URL.createObjectURL(blob);
-        setCurrentRecordingUrl(audioUrl);
-        setIsRecording(false);
-        void uploadRecording(blob, "Talking about school").then((result) => {
+        const promptTitle = target === "part1" ? "Talking about school" : "Speaking Part 2";
+        setRecordingUrls((current) => ({ ...current, [target]: audioUrl }));
+        setRecordingTarget(null);
+        void uploadRecording(blob, promptTitle).then((result) => {
           if (!result) {
             setHousehold((current) =>
               addRecentRecording(
                 current,
                 {
-                  promptTitle: "Talking about school",
+                  promptTitle,
                   audioUrl,
                 },
                 new Date(),
@@ -241,19 +253,26 @@ export function PetPrototype() {
 
           setHousehold(result.household);
           if (result.transcript) {
-            setTranscript(result.transcript);
+            if (target === "part1") {
+              setTranscript(result.transcript);
+            } else {
+              setPart2Transcript(result.transcript);
+            }
           }
-          setCurrentRecordingUrl(result.recording.audioUrl);
+          setRecordingUrls((current) => ({ ...current, [target]: result.recording.audioUrl }));
         });
       };
 
       mediaRecorderRef.current = recorder;
       recorder.start();
-      setIsRecording(true);
-      setRecordingError(null);
+      setRecordingTarget(target);
+      setRecordingError((current) => ({ ...current, [target]: null }));
     } catch {
-      setRecordingError("无法获取麦克风权限，可以检查浏览器权限后再试。");
-      setIsRecording(false);
+      setRecordingError((current) => ({
+        ...current,
+        [target]: "无法获取麦克风权限，可以检查浏览器权限后再试。",
+      }));
+      setRecordingTarget(null);
     }
   };
 
@@ -371,9 +390,9 @@ export function PetPrototype() {
               part1Feedback={part1Feedback}
               shadowInputs={shadowInputs}
               shadowFeedback={shadowFeedback}
-              isRecording={isRecording}
+              recordingTarget={recordingTarget}
               recordingError={recordingError}
-              currentRecordingUrl={currentRecordingUrl}
+              recordingUrls={recordingUrls}
               onStart={startPractice}
               onTranscriptChange={setTranscript}
               onPart2TranscriptChange={setPart2Transcript}
@@ -466,9 +485,9 @@ function DailySessionView({
   part1Feedback,
   shadowInputs,
   shadowFeedback,
-  isRecording,
+  recordingTarget,
   recordingError,
-  currentRecordingUrl,
+  recordingUrls,
   onStart,
   onTranscriptChange,
   onPart2TranscriptChange,
@@ -494,16 +513,16 @@ function DailySessionView({
   part1Feedback: Part1ConversationResult | null;
   shadowInputs: Record<string, string>;
   shadowFeedback: Record<string, WordShadowingFeedback>;
-  isRecording: boolean;
-  recordingError: string | null;
-  currentRecordingUrl: string | null;
+  recordingTarget: RecordingTarget | null;
+  recordingError: Record<RecordingTarget, string | null>;
+  recordingUrls: Record<RecordingTarget, string | null>;
   onStart: () => void;
   onTranscriptChange: (value: string) => void;
   onPart2TranscriptChange: (value: string) => void;
   onSubmit: () => void;
   onSubmitPart2: () => void;
   onRetake: () => void;
-  onToggleRecording: () => void;
+  onToggleRecording: (target: RecordingTarget) => void;
   onCompleteSession: () => void;
   onSpeak: (text: string) => void;
   onShadowInputChange: (word: string, value: string) => void;
@@ -526,6 +545,8 @@ function DailySessionView({
   const part1 = session.steps.find((step) => step.kind === "speaking_part_1");
   const part2 = session.steps.find((step) => step.kind === "speaking_part_2");
   const warmup = session.steps.find((step) => step.kind === "weak_word_warmup");
+  const isPart1Recording = recordingTarget === "part1";
+  const isPart2Recording = recordingTarget === "part2";
   const currentQuestion =
     part1FollowUp && part1FollowUp !== "Thank you. Let's move on to the next question."
       ? part1FollowUp
@@ -589,20 +610,20 @@ function DailySessionView({
           </div>
           <p className="prompt-question">{currentQuestion}</p>
           <div className="record-row">
-            <button className={isRecording ? "danger-button" : "secondary-button"} onClick={onToggleRecording}>
+            <button className={isPart1Recording ? "danger-button" : "secondary-button"} onClick={() => onToggleRecording("part1")}>
               <Mic size={18} />
-              {isRecording ? "停止录音" : "开始录音"}
+              {isPart1Recording ? "停止录音" : "Part 1 录音转文本"}
             </button>
             <button className="secondary-button" onClick={onRetake} disabled={attemptNumber >= 3}>
               <RotateCcw size={18} />
               第 {attemptNumber} 次
             </button>
           </div>
-          {recordingError && <p className="inline-error">{recordingError}</p>}
-          {currentRecordingUrl && (
+          {recordingError.part1 && <p className="inline-error">{recordingError.part1}</p>}
+          {recordingUrls.part1 && (
             <div className="audio-review">
-              <span>本次录音</span>
-              <audio controls src={currentRecordingUrl} />
+              <span>Part 1 录音</span>
+              <audio controls src={recordingUrls.part1} />
             </div>
           )}
           <label className="field">
@@ -660,6 +681,27 @@ function DailySessionView({
           </div>
           <Part2Image prompt={ensurePart2Image(part2.prompt)} />
           <p className="prompt-question">{part2.prompt.question}</p>
+          <div className="record-row">
+            <button className={isPart2Recording ? "danger-button" : "secondary-button"} onClick={() => onToggleRecording("part2")}>
+              <Mic size={18} />
+              {isPart2Recording ? "停止录音" : "Part 2 录音转文本"}
+            </button>
+            <button
+              className="secondary-button"
+              onClick={() => onSpeak(part2Transcript || part2.prompt.question)}
+              disabled={!part2Transcript.trim()}
+            >
+              <Volume2 size={18} />
+              播放我的描述
+            </button>
+          </div>
+          {recordingError.part2 && <p className="inline-error">{recordingError.part2}</p>}
+          {recordingUrls.part2 && (
+            <div className="audio-review">
+              <span>Part 2 录音</span>
+              <audio controls src={recordingUrls.part2} />
+            </div>
+          )}
           <label className="field">
             <span>图片描述回答</span>
             <textarea
