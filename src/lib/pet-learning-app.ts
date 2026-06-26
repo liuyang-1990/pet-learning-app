@@ -8,20 +8,22 @@ export type WeakWord = {
   mastered: boolean;
 };
 
-type Prompt = {
+export type Prompt = {
   id: string;
   title: string;
   question: string;
   part: "part_1" | "part_2";
+  imageUrl?: string;
 };
 
-type DailySessionRecord = {
+export type DailySessionRecord = {
   id: string;
   completedOn: string;
   durationMinutes: number;
+  feedbackSummary?: string;
 };
 
-type RecentRecording = {
+export type RecentRecording = {
   id: string;
   promptTitle: string;
   recordedAt: string;
@@ -31,6 +33,29 @@ type RecentRecording = {
 type VocabularyReviewResult = {
   term: string;
   correct: boolean;
+};
+
+type GuardianTopicWordInput = {
+  term: string;
+  chineseGloss: string;
+  dueOn: string;
+};
+
+type GuardianPromptInput = {
+  title: string;
+  question: string;
+  part: Prompt["part"];
+  imageUrl?: string;
+};
+
+type RecentRecordingInput = {
+  promptTitle: string;
+  audioUrl: string;
+};
+
+type DailySessionCompletionInput = {
+  durationMinutes: number;
+  feedback?: SpeakingAttemptResult | null;
 };
 
 export type HouseholdSpace = {
@@ -268,6 +293,102 @@ export function completeVocabularyReview(
   };
 }
 
+export function addGuardianTopicWord(
+  household: HouseholdSpace,
+  input: GuardianTopicWordInput,
+): HouseholdSpace {
+  const existing = household.weakWords.some(
+    (word) => word.term.toLowerCase() === input.term.trim().toLowerCase(),
+  );
+
+  if (existing || !input.term.trim()) {
+    return household;
+  }
+
+  return {
+    ...household,
+    weakWords: [
+      ...household.weakWords,
+      {
+        term: input.term.trim(),
+        chineseGloss: input.chineseGloss.trim() || "待补充",
+        reviewStage: "new",
+        dueOn: input.dueOn,
+        mastered: false,
+      },
+    ],
+  };
+}
+
+export function addGuardianPrompt(
+  household: HouseholdSpace,
+  input: GuardianPromptInput,
+): HouseholdSpace {
+  if (!input.title.trim() || !input.question.trim()) {
+    return household;
+  }
+
+  return {
+    ...household,
+    presetPrompts: [
+      ...household.presetPrompts,
+      {
+        id: `${input.part}-${slugify(input.title)}-${household.presetPrompts.length + 1}`,
+        title: input.title.trim(),
+        question: input.question.trim(),
+        part: input.part,
+        imageUrl: input.imageUrl,
+      },
+    ],
+  };
+}
+
+export function addRecentRecording(
+  household: HouseholdSpace,
+  input: RecentRecordingInput,
+  now: Date,
+): HouseholdSpace {
+  return purgeExpiredRecentRecordings(
+    {
+      ...household,
+      recentRecordings: [
+        ...household.recentRecordings,
+        {
+          id: `recording-${now.getTime()}`,
+          promptTitle: input.promptTitle,
+          recordedAt: now.toISOString(),
+          audioUrl: input.audioUrl,
+        },
+      ],
+    },
+    now,
+  );
+}
+
+export function completeDailySession(
+  household: HouseholdSpace,
+  session: DailySession,
+  input: DailySessionCompletionInput,
+  now: Date,
+): HouseholdSpace {
+  const completedOn = dateKey(now);
+  const sessionRecord: DailySessionRecord = {
+    id: session.id,
+    completedOn,
+    durationMinutes: input.durationMinutes,
+    feedbackSummary: input.feedback?.feedback.chinese,
+  };
+
+  return purgeExpiredRecentRecordings(
+    {
+      ...household,
+      dailySessions: replaceById(household.dailySessions, sessionRecord),
+      weakWords: mergeWeakWords(household.weakWords, input.feedback?.weakWords ?? []),
+    },
+    now,
+  );
+}
+
 export function getGuardianProgress(
   household: HouseholdSpace,
   now: Date,
@@ -304,7 +425,7 @@ export function purgeExpiredRecentRecordings(
 }
 
 function findPrompt(household: HouseholdSpace, part: Prompt["part"]): Prompt {
-  const prompt = household.presetPrompts.find((item) => item.part === part);
+  const prompt = [...household.presetPrompts].reverse().find((item) => item.part === part);
 
   if (!prompt) {
     throw new Error(`Missing preset prompt for ${part}`);
@@ -358,6 +479,32 @@ function extractWeakWords(transcript: string): WeakWord[] {
       dueOn: "2026-06-27",
       mastered: false,
     }));
+}
+
+function mergeWeakWords(current: WeakWord[], incoming: WeakWord[]): WeakWord[] {
+  const byTerm = new Map(current.map((word) => [word.term.toLowerCase(), word]));
+
+  for (const word of incoming) {
+    const key = word.term.toLowerCase();
+    const existing = byTerm.get(key);
+
+    byTerm.set(key, existing ? { ...existing, mastered: false } : word);
+  }
+
+  return Array.from(byTerm.values());
+}
+
+function replaceById(records: DailySessionRecord[], incoming: DailySessionRecord) {
+  const others = records.filter((record) => record.id !== incoming.id);
+  return [...others, incoming].sort((a, b) => a.completedOn.localeCompare(b.completedOn));
+}
+
+function slugify(value: string): string {
+  return value
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
 }
 
 function nextReviewStage(stage: ReviewStage): ReviewStage {

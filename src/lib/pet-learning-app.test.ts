@@ -1,5 +1,9 @@
 import { describe, expect, it } from "vitest";
 import {
+  addGuardianPrompt,
+  addGuardianTopicWord,
+  addRecentRecording,
+  completeDailySession,
   completeVocabularyReview,
   createDemoHousehold,
   getGuardianProgress,
@@ -100,5 +104,65 @@ describe("PET Learning App", () => {
     expect(cleaned.recentRecordings.map((recording) => recording.id)).toEqual([
       "recording-recent",
     ]);
+  });
+
+  it("lets the guardian add content that appears in learner practice", () => {
+    const household = addGuardianPrompt(
+      addGuardianTopicWord(createDemoHousehold(), {
+        term: "playground",
+        chineseGloss: "操场",
+        dueOn: "2026-06-26",
+      }),
+      {
+        title: "After school",
+        question: "What do you usually do after school?",
+        part: "part_1",
+      },
+    );
+
+    const home = getLearnerHome(household, new Date("2026-06-26T08:00:00+08:00"));
+
+    expect(home.dueWeakWords.map((word) => word.term)).toContain("playground");
+    expect(household.presetPrompts.at(-1)?.title).toBe("After school");
+  });
+
+  it("completes a daily session by keeping progress, feedback words, and recent recordings", () => {
+    const household = createDemoHousehold();
+    const session = startDailySession(household, new Date("2026-06-26T08:05:00+08:00"));
+    const feedback = submitSpeakingAttempt(session, {
+      promptId: "part-1-school",
+      transcript: "I usually read because the environment is quiet.",
+      attemptNumber: 1,
+    });
+
+    const withRecording = addRecentRecording(
+      household,
+      {
+        promptTitle: "Talking about school",
+        audioUrl: "blob:recent-recording",
+      },
+      new Date("2026-06-26T08:12:00+08:00"),
+    );
+    const completed = completeDailySession(
+      withRecording,
+      session,
+      {
+        durationMinutes: 13,
+        feedback,
+      },
+      new Date("2026-06-26T08:25:00+08:00"),
+    );
+
+    expect(completed.dailySessions.at(-1)).toMatchObject({
+      id: "session-2026-06-26",
+      completedOn: "2026-06-26",
+      durationMinutes: 13,
+    });
+    expect(completed.weakWords.map((word) => word.term)).toEqual(
+      expect.arrayContaining(["usually", "because", "environment"]),
+    );
+    expect(completed.recentRecordings.map((recording) => recording.audioUrl)).toContain(
+      "blob:recent-recording",
+    );
   });
 });

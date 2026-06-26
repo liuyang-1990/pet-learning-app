@@ -372,6 +372,38 @@ a {
   resize: vertical;
 }
 
+.inline-error {
+  margin: 10px 0 0;
+  padding: 10px;
+  border-radius: 8px;
+  color: #842d22;
+  background: #fff0ec;
+  border: 1px solid rgba(219, 109, 85, 0.3);
+  line-height: 1.45;
+}
+
+.audio-review {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f6f8f5;
+  border: 1px solid var(--line);
+}
+
+.audio-review span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.audio-review audio,
+.recording-row audio {
+  width: 100%;
+  max-width: 100%;
+}
+
 .feedback-panel {
   background: #f9fbff;
   border-color: rgba(75, 120, 168, 0.24);
@@ -401,6 +433,13 @@ a {
 .pronunciation {
   color: var(--leaf-dark);
   font-weight: 800;
+}
+
+.feedback-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
 }
 
 .image-prompt {
@@ -465,11 +504,103 @@ a {
   align-items: center;
 }
 
+.timeline-item p {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .recording-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
   padding: 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #fffdf8;
+}
+
+.recording-row audio {
+  grid-column: 1 / -1;
+}
+
+.mini-empty {
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  min-height: 96px;
+  padding: 14px;
+  color: var(--muted);
+  text-align: center;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  background: #fffdf8;
+}
+
+.mini-empty p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  padding: 4px;
+  border-radius: 8px;
+  background: #edf1ed;
+}
+
+.segment {
+  min-height: 38px;
+  border: 0;
+  border-radius: 6px;
+  color: var(--muted);
+  background: transparent;
+  font-weight: 800;
+}
+
+.segment.active {
+  color: var(--leaf-dark);
+  background: #ffffff;
+}
+
+.file-drop {
+  min-height: 68px;
+  display: grid;
+  place-items: center;
+  gap: 6px;
+  margin: 12px 0;
+  color: var(--blue);
+  border: 1px dashed rgba(75, 120, 168, 0.46);
+  border-radius: 8px;
+  background: #f8fbff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.file-drop input {
+  display: none;
+}
+
+.image-preview {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  margin-bottom: 12px;
+}
+
+.text-button {
+  min-height: 36px;
+  margin-top: 12px;
+  padding: 0;
+  border: 0;
+  color: var(--leaf-dark);
+  background: transparent;
+  font-weight: 800;
 }
 
 .empty-state {
