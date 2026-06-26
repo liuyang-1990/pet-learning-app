@@ -130,6 +130,12 @@ a {
   color: var(--leaf-dark);
 }
 
+.compact-icon {
+  width: 34px;
+  min-height: 34px;
+  flex: 0 0 34px;
+}
+
 .tab-bar {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -333,9 +339,57 @@ a {
 }
 
 .prompt-question {
-  margin: 0 0 14px;
+  margin: 14px 0;
   font-size: 17px;
   line-height: 1.45;
+}
+
+.conversation {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.chat-pair {
+  display: grid;
+  gap: 8px;
+}
+
+.chat-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  line-height: 1.45;
+}
+
+.chat-row p {
+  margin: 0;
+}
+
+.chat-row.examiner {
+  background: #f3f8ff;
+  border: 1px solid rgba(75, 120, 168, 0.22);
+  color: #24496c;
+}
+
+.chat-row.learner {
+  background: #eef7f1;
+  border: 1px solid rgba(47, 125, 89, 0.22);
+  color: var(--leaf-dark);
+}
+
+.chat-row.learner strong {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #ffffff;
+  background: var(--leaf);
+  font-size: 12px;
 }
 
 .record-row,
@@ -440,6 +494,65 @@ a {
   flex-wrap: wrap;
   gap: 8px;
   margin: 12px 0;
+}
+
+.shadow-list {
+  display: grid;
+  gap: 10px;
+}
+
+.shadow-card {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffdf8;
+}
+
+.shadow-word {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.shadow-word h3,
+.shadow-word p,
+.shadow-feedback {
+  margin: 0;
+}
+
+.shadow-word h3 {
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.shadow-word p {
+  color: var(--muted);
+}
+
+.compact-field {
+  margin: 0;
+}
+
+.shadow-feedback {
+  padding: 10px;
+  border-radius: 8px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.shadow-feedback.clear {
+  color: var(--leaf-dark);
+  background: #edf7ef;
+  border: 1px solid rgba(47, 125, 89, 0.22);
+}
+
+.shadow-feedback.needs-practice {
+  color: #805a00;
+  background: #fff7e3;
+  border: 1px solid rgba(232, 185, 81, 0.36);
 }
 
 .image-prompt {

@@ -8,6 +8,7 @@ import {
   FolderPlus,
   Home,
   ImageIcon,
+  MessageCircle,
   Mic,
   Play,
   RotateCcw,
@@ -20,8 +21,10 @@ import {
   addGuardianPrompt,
   addGuardianTopicWord,
   addRecentRecording,
+  assessWordShadowing,
   completeDailySession,
   completeVocabularyReview,
+  continuePart1Conversation,
   createDemoHousehold,
   getGuardianProgress,
   getLearnerHome,
@@ -29,10 +32,13 @@ import {
   startDailySession,
   type DailySession,
   type HouseholdSpace,
+  type Part1ConversationResult,
+  type Part1ConversationTurn,
   type Prompt,
   type RecentRecording,
   type SpeakingAttemptResult,
   type WeakWord,
+  type WordShadowingFeedback,
 } from "@/lib/pet-learning-app";
 
 type Tab = "home" | "session" | "vocabulary" | "guardian" | "content";
@@ -49,6 +55,11 @@ export function PetPrototype() {
     "I like science because it is interesting and I usually learn new things.",
   );
   const [feedback, setFeedback] = useState<SpeakingAttemptResult | null>(null);
+  const [part1Turns, setPart1Turns] = useState<Part1ConversationTurn[]>([]);
+  const [part1FollowUp, setPart1FollowUp] = useState<string | null>(null);
+  const [part1Feedback, setPart1Feedback] = useState<Part1ConversationResult | null>(null);
+  const [shadowInputs, setShadowInputs] = useState<Record<string, string>>({});
+  const [shadowFeedback, setShadowFeedback] = useState<Record<string, WordShadowingFeedback>>({});
   const [isRecording, setIsRecording] = useState(false);
   const [recordingError, setRecordingError] = useState<string | null>(null);
   const [currentRecordingUrl, setCurrentRecordingUrl] = useState<string | null>(null);
@@ -65,6 +76,11 @@ export function PetPrototype() {
     setSessionStartedAt(startedAt);
     setAttemptNumber(1);
     setFeedback(null);
+    setPart1Turns([]);
+    setPart1FollowUp(null);
+    setPart1Feedback(null);
+    setShadowInputs({});
+    setShadowFeedback({});
     setCurrentRecordingUrl(null);
     setRecordingError(null);
     setActiveTab("session");
@@ -73,13 +89,22 @@ export function PetPrototype() {
   const submitAttempt = () => {
     if (!session) return;
 
-    setFeedback(
-      submitSpeakingAttempt(session, {
-        promptId: "part-1-school",
-        transcript,
-        attemptNumber,
-      }),
-    );
+    const conversation = continuePart1Conversation(session, {
+      promptId: "part-1-school",
+      learnerAnswer: transcript,
+      previousTurns: part1Turns,
+    });
+    const attemptFeedback = submitSpeakingAttempt(session, {
+      promptId: "part-1-school",
+      transcript,
+      attemptNumber,
+    });
+
+    setPart1Turns((current) => [...current, conversation.turn]);
+    setPart1FollowUp(conversation.examinerFollowUp);
+    setPart1Feedback(conversation);
+    setFeedback(attemptFeedback);
+    setTranscript("");
   };
 
   const retake = () => {
@@ -87,6 +112,19 @@ export function PetPrototype() {
 
     setAttemptNumber((value) => value + 1);
     setFeedback(null);
+    setPart1Feedback(null);
+  };
+
+  const updateShadowInput = (word: string, value: string) => {
+    setShadowInputs((current) => ({ ...current, [word]: value }));
+  };
+
+  const checkShadowing = (word: WeakWord) => {
+    const spokenText = shadowInputs[word.term] || word.term;
+    setShadowFeedback((current) => ({
+      ...current,
+      [word.term]: assessWordShadowing({ word: word.term, spokenText }),
+    }));
   };
 
   const toggleRecording = async () => {
@@ -242,6 +280,11 @@ export function PetPrototype() {
               attemptNumber={attemptNumber}
               transcript={transcript}
               feedback={feedback}
+              part1Turns={part1Turns}
+              part1FollowUp={part1FollowUp}
+              part1Feedback={part1Feedback}
+              shadowInputs={shadowInputs}
+              shadowFeedback={shadowFeedback}
               isRecording={isRecording}
               recordingError={recordingError}
               currentRecordingUrl={currentRecordingUrl}
@@ -251,6 +294,9 @@ export function PetPrototype() {
               onRetake={retake}
               onToggleRecording={toggleRecording}
               onCompleteSession={completeSession}
+              onSpeak={speakBritish}
+              onShadowInputChange={updateShadowInput}
+              onCheckShadowing={checkShadowing}
             />
           )}
 
@@ -323,6 +369,11 @@ function DailySessionView({
   attemptNumber,
   transcript,
   feedback,
+  part1Turns,
+  part1FollowUp,
+  part1Feedback,
+  shadowInputs,
+  shadowFeedback,
   isRecording,
   recordingError,
   currentRecordingUrl,
@@ -332,11 +383,19 @@ function DailySessionView({
   onRetake,
   onToggleRecording,
   onCompleteSession,
+  onSpeak,
+  onShadowInputChange,
+  onCheckShadowing,
 }: {
   session: DailySession | null;
   attemptNumber: number;
   transcript: string;
   feedback: SpeakingAttemptResult | null;
+  part1Turns: Part1ConversationTurn[];
+  part1FollowUp: string | null;
+  part1Feedback: Part1ConversationResult | null;
+  shadowInputs: Record<string, string>;
+  shadowFeedback: Record<string, WordShadowingFeedback>;
   isRecording: boolean;
   recordingError: string | null;
   currentRecordingUrl: string | null;
@@ -346,6 +405,9 @@ function DailySessionView({
   onRetake: () => void;
   onToggleRecording: () => void;
   onCompleteSession: () => void;
+  onSpeak: (text: string) => void;
+  onShadowInputChange: (word: string, value: string) => void;
+  onCheckShadowing: (word: WeakWord) => void;
 }) {
   if (!session) {
     return (
@@ -364,6 +426,12 @@ function DailySessionView({
   const part1 = session.steps.find((step) => step.kind === "speaking_part_1");
   const part2 = session.steps.find((step) => step.kind === "speaking_part_2");
   const warmup = session.steps.find((step) => step.kind === "weak_word_warmup");
+  const currentQuestion =
+    part1FollowUp && part1FollowUp !== "Thank you. Let's move on to the next question."
+      ? part1FollowUp
+      : part1?.kind === "speaking_part_1"
+        ? part1.prompt.question
+        : "";
 
   return (
     <div className="stack">
@@ -372,19 +440,54 @@ function DailySessionView({
           <h2>Daily Session</h2>
           <span>英音目标</span>
         </div>
-        {warmup?.kind === "weak_word_warmup" && <WordList words={warmup.words} compact />}
+        {warmup?.kind === "weak_word_warmup" && (
+          <WordShadowingList
+            words={warmup.words}
+            inputs={shadowInputs}
+            feedback={shadowFeedback}
+            onSpeak={onSpeak}
+            onInputChange={onShadowInputChange}
+            onCheck={onCheckShadowing}
+          />
+        )}
       </section>
 
       {part1?.kind === "speaking_part_1" && (
         <section className="practice-card">
           <div className="prompt-head">
             <div>
-              <p className="eyebrow">Speaking Part 1</p>
+              <p className="eyebrow">AI Examiner · Speaking Part 1</p>
               <h2>{part1.prompt.title}</h2>
             </div>
             <span>最多 2 次重录</span>
           </div>
-          <p className="prompt-question">{part1.prompt.question}</p>
+          <div className="conversation">
+            <div className="chat-row examiner">
+              <MessageCircle size={18} />
+              <p>{part1.prompt.question}</p>
+              <button className="icon-button compact-icon" aria-label="播放考官问题" onClick={() => onSpeak(part1.prompt.question)}>
+                <Volume2 size={16} />
+              </button>
+            </div>
+            {part1Turns.map((turn) => (
+              <div className="chat-pair" key={turn.id}>
+                <div className="chat-row learner">
+                  <strong>我</strong>
+                  <p>{turn.learnerAnswer}</p>
+                </div>
+                {turn.id === part1Turns.at(-1)?.id && part1FollowUp && (
+                  <div className="chat-row examiner">
+                    <MessageCircle size={18} />
+                    <p>{part1FollowUp}</p>
+                    <button className="icon-button compact-icon" aria-label="播放追问" onClick={() => onSpeak(part1FollowUp)}>
+                      <Volume2 size={16} />
+                    </button>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          <p className="prompt-question">{currentQuestion}</p>
           <div className="record-row">
             <button className={isRecording ? "danger-button" : "secondary-button"} onClick={onToggleRecording}>
               <Mic size={18} />
@@ -408,24 +511,26 @@ function DailySessionView({
           </label>
           <button className="primary-button full-width" onClick={onSubmit}>
             <CheckCircle2 size={18} />
-            生成反馈
+            回答并听追问
           </button>
         </section>
       )}
 
-      {feedback && (
+      {(feedback || part1Feedback) && (
         <section className="feedback-panel">
           <div className="section-title">
-            <h2>Practice Feedback</h2>
+            <h2>AI Feedback</h2>
             <span>不显示总分</span>
           </div>
-          <p>{feedback.feedback.chinese}</p>
-          <blockquote>{feedback.feedback.exampleAnswer}</blockquote>
-          <div className="pronunciation">
-            <Volume2 size={18} />
-            <span>{feedback.feedback.pronunciation.summary}</span>
-          </div>
-          {feedback.weakWords.length > 0 && (
+          {part1Feedback && <p>{part1Feedback.turnFeedback.chinese}</p>}
+          {feedback && <blockquote>{feedback.feedback.exampleAnswer}</blockquote>}
+          {feedback && (
+            <div className="pronunciation">
+              <Volume2 size={18} />
+              <span>{feedback.feedback.pronunciation.summary}</span>
+            </div>
+          )}
+          {feedback && feedback.weakWords.length > 0 && (
             <div className="feedback-words">
               {feedback.weakWords.map((word) => (
                 <span className="chip" key={word.term}>
@@ -705,6 +810,77 @@ function WordList({ words, compact = false }: { words: WeakWord[]; compact?: boo
   );
 }
 
+function WordShadowingList({
+  words,
+  inputs,
+  feedback,
+  onSpeak,
+  onInputChange,
+  onCheck,
+}: {
+  words: WeakWord[];
+  inputs: Record<string, string>;
+  feedback: Record<string, WordShadowingFeedback>;
+  onSpeak: (text: string) => void;
+  onInputChange: (word: string, value: string) => void;
+  onCheck: (word: WeakWord) => void;
+}) {
+  if (words.length === 0) {
+    return (
+      <div className="mini-empty">
+        <CheckCircle2 size={22} />
+        <p>今天没有到期 Weak Words，可以直接进入 Speaking Part 1。</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="shadow-list">
+      {words.map((word) => {
+        const result = feedback[word.term];
+
+        return (
+          <article className="shadow-card" key={word.term}>
+            <div className="shadow-word">
+              <div>
+                <h3>{word.term}</h3>
+                <p>{word.chineseGloss}</p>
+              </div>
+              <button className="secondary-button" onClick={() => onSpeak(word.term)}>
+                <Volume2 size={18} />
+                英音
+              </button>
+            </div>
+            <label className="field compact-field">
+              <span>跟读后输入识别到的英文</span>
+              <input
+                value={inputs[word.term] ?? ""}
+                onChange={(event) => onInputChange(word.term, event.target.value)}
+                placeholder={word.term}
+              />
+            </label>
+            <div className="split-actions">
+              <button className="secondary-button" onClick={() => onSpeak(`I can say ${word.term} clearly.`)}>
+                <Play size={18} />
+                句子示范
+              </button>
+              <button className="primary-button" onClick={() => onCheck(word)}>
+                <CheckCircle2 size={18} />
+                跟读反馈
+              </button>
+            </div>
+            {result && (
+              <p className={result.status === "clear" ? "shadow-feedback clear" : "shadow-feedback needs-practice"}>
+                {result.feedback}
+              </p>
+            )}
+          </article>
+        );
+      })}
+    </div>
+  );
+}
+
 function TabButton({
   active,
   icon,
@@ -756,6 +932,25 @@ function getLocalStorage(): Storage | null {
   } catch {
     return null;
   }
+}
+
+function speakBritish(text: string) {
+  if (typeof window === "undefined" || !window.speechSynthesis) return;
+
+  const utterance = new SpeechSynthesisUtterance(text);
+  const voices = window.speechSynthesis.getVoices();
+  const britishVoice =
+    voices.find((voice) => voice.lang === "en-GB") ??
+    voices.find((voice) => voice.lang.startsWith("en"));
+
+  if (britishVoice) {
+    utterance.voice = britishVoice;
+  }
+
+  utterance.lang = britishVoice?.lang ?? "en-GB";
+  utterance.rate = 0.86;
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(utterance);
 }
 
 function toDateKey(date: Date): string {

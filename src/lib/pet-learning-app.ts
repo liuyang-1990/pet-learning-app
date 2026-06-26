@@ -111,6 +111,40 @@ type SpeakingAttemptInput = {
   attemptNumber: number;
 };
 
+export type Part1ConversationTurn = {
+  id: string;
+  examinerQuestion: string;
+  learnerAnswer: string;
+};
+
+type Part1ConversationInput = {
+  promptId: string;
+  learnerAnswer: string;
+  previousTurns: Part1ConversationTurn[];
+};
+
+export type Part1ConversationResult = {
+  turn: Part1ConversationTurn;
+  examinerFollowUp: string;
+  conversationComplete: boolean;
+  turnFeedback: {
+    chinese: string;
+    exampleAnswer: string;
+    weakWords: WeakWord[];
+  };
+};
+
+type WordShadowingInput = {
+  word: string;
+  spokenText: string;
+};
+
+export type WordShadowingFeedback = {
+  status: "clear" | "needs_practice";
+  feedback: string;
+  modelPhrase: string;
+};
+
 export type SpeakingAttemptResult = {
   acceptedAttemptNumber: number;
   canRetakeAgain: boolean;
@@ -260,6 +294,64 @@ export function submitSpeakingAttempt(
       },
     },
     weakWords,
+  };
+}
+
+export function continuePart1Conversation(
+  session: DailySession,
+  input: Part1ConversationInput,
+): Part1ConversationResult {
+  const prompt = session.steps
+    .filter((step) => step.kind === "speaking_part_1")
+    .map((step) => step.prompt)
+    .find((item) => item.id === input.promptId);
+
+  if (!prompt) {
+    throw new Error(`Unknown speaking part 1 prompt: ${input.promptId}`);
+  }
+
+  const turn: Part1ConversationTurn = {
+    id: `part1-turn-${input.previousTurns.length + 1}`,
+    examinerQuestion:
+      input.previousTurns.at(-1)?.examinerQuestion ?? prompt.question,
+    learnerAnswer: input.learnerAnswer.trim(),
+  };
+  const weakWords = extractWeakWords(input.learnerAnswer);
+  const wordCount = countWords(input.learnerAnswer);
+  const hasReason = /\bbecause\b|\bso\b|\bfor example\b/i.test(input.learnerAnswer);
+  const conversationComplete = input.previousTurns.length >= 2 && wordCount >= 8;
+
+  return {
+    turn,
+    examinerFollowUp: conversationComplete
+      ? "Thank you. Let's move on to the next question."
+      : choosePart1FollowUp(input.learnerAnswer, input.previousTurns.length),
+    conversationComplete,
+    turnFeedback: {
+      chinese:
+        wordCount < 4
+          ? "这次回答太短，可以补充一个原因或例子。"
+          : hasReason
+            ? "回答里有原因，已经更接近 PET Speaking Part 1 的完整回答。"
+            : "回答基本清楚，下一句试着用 because 加一个原因。",
+      exampleAnswer:
+        "I like science because experiments are exciting and I can learn how the world works.",
+      weakWords,
+    },
+  };
+}
+
+export function assessWordShadowing(input: WordShadowingInput): WordShadowingFeedback {
+  const target = normalizeSpokenText(input.word);
+  const spoken = normalizeSpokenText(input.spokenText);
+  const clear = spoken.includes(target);
+
+  return {
+    status: clear ? "clear" : "needs_practice",
+    feedback: clear
+      ? `“${input.word}” 听起来比较清楚，可以放进句子里继续练。`
+      : `“${input.word}” 还不够清楚，请听英音示范后再跟读一次。`,
+    modelPhrase: `I can say ${input.word} clearly.`,
   };
 }
 
@@ -479,6 +571,32 @@ function extractWeakWords(transcript: string): WeakWord[] {
       dueOn: "2026-06-27",
       mastered: false,
     }));
+}
+
+function choosePart1FollowUp(answer: string, previousTurnCount: number): string {
+  const wordCount = countWords(answer);
+
+  if (wordCount < 4) {
+    return "Can you tell me more about that?";
+  }
+
+  if (!/\bbecause\b|\bso\b|\bfor example\b/i.test(answer)) {
+    return "Why do you think so?";
+  }
+
+  if (previousTurnCount <= 1) {
+    return "How often do you do that?";
+  }
+
+  return "Can you give me one example?";
+}
+
+function countWords(value: string): number {
+  return value.trim().split(/\s+/).filter(Boolean).length;
+}
+
+function normalizeSpokenText(value: string): string {
+  return value.toLowerCase().replace(/[^a-z]+/g, "");
 }
 
 function mergeWeakWords(current: WeakWord[], incoming: WeakWord[]): WeakWord[] {

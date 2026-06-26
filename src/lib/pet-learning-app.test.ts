@@ -3,6 +3,8 @@ import {
   addGuardianPrompt,
   addGuardianTopicWord,
   addRecentRecording,
+  assessWordShadowing,
+  continuePart1Conversation,
   completeDailySession,
   completeVocabularyReview,
   createDemoHousehold,
@@ -164,5 +166,45 @@ describe("PET Learning App", () => {
     expect(completed.recentRecordings.map((recording) => recording.audioUrl)).toContain(
       "blob:recent-recording",
     );
+  });
+
+  it("continues speaking part 1 with examiner follow-up questions", () => {
+    const household = createDemoHousehold();
+    const session = startDailySession(household, new Date("2026-06-26T08:05:00+08:00"));
+
+    const firstTurn = continuePart1Conversation(session, {
+      promptId: "part-1-school",
+      learnerAnswer: "Science.",
+      previousTurns: [],
+    });
+
+    expect(firstTurn.examinerFollowUp).toBe("Can you tell me more about that?");
+    expect(firstTurn.turnFeedback.chinese).toContain("太短");
+    expect(firstTurn.conversationComplete).toBe(false);
+
+    const secondTurn = continuePart1Conversation(session, {
+      promptId: "part-1-school",
+      learnerAnswer: "I like science because experiments are exciting.",
+      previousTurns: [firstTurn.turn],
+    });
+
+    expect(secondTurn.examinerFollowUp).toContain("How often");
+    expect(secondTurn.turnFeedback.chinese).toContain("原因");
+  });
+
+  it("gives word-level shadowing feedback for weak words", () => {
+    const clear = assessWordShadowing({
+      word: "usually",
+      spokenText: "usually",
+    });
+    const unclear = assessWordShadowing({
+      word: "environment",
+      spokenText: "enviroment",
+    });
+
+    expect(clear.status).toBe("clear");
+    expect(clear.feedback).toContain("清楚");
+    expect(unclear.status).toBe("needs_practice");
+    expect(unclear.feedback).toContain("再跟读");
   });
 });
