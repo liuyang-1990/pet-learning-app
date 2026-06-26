@@ -31,6 +31,17 @@ export type RecentRecording = {
   transcript?: string;
 };
 
+export type HouseholdSettings = {
+  dailyWeakWordLimit: number;
+};
+
+export type WeakWordMistakeRecord = {
+  id: string;
+  term: string;
+  reviewedOn: string;
+  mistakeCount: number;
+};
+
 type VocabularyReviewResult = {
   term: string;
   correct: boolean;
@@ -61,7 +72,9 @@ type DailySessionCompletionInput = {
 
 export type HouseholdSpace = {
   learnerName: string;
+  settings: HouseholdSettings;
   weakWords: WeakWord[];
+  wordMistakes: WeakWordMistakeRecord[];
   dailySessions: DailySessionRecord[];
   recentRecordings: RecentRecording[];
   presetPrompts: Prompt[];
@@ -167,9 +180,14 @@ type Part2AnswerInput = {
   attemptNumber: number;
 };
 
+const defaultDailyWeakWordLimit = 5;
+
 export function createDemoHousehold(): HouseholdSpace {
   return {
     learnerName: "Alex",
+    settings: {
+      dailyWeakWordLimit: defaultDailyWeakWordLimit,
+    },
     weakWords: [
       {
         term: "usually",
@@ -193,11 +211,46 @@ export function createDemoHousehold(): HouseholdSpace {
         mastered: false,
       },
       {
+        term: "picture",
+        chineseGloss: "图片",
+        reviewStage: "new",
+        dueOn: "2026-06-28",
+        mastered: false,
+      },
+      {
+        term: "background",
+        chineseGloss: "背景",
+        reviewStage: "new",
+        dueOn: "2026-06-28",
+        mastered: false,
+      },
+      {
+        term: "playground",
+        chineseGloss: "操场",
+        reviewStage: "new",
+        dueOn: "2026-06-29",
+        mastered: false,
+      },
+      {
         term: "library",
         chineseGloss: "图书馆",
         reviewStage: "mastered",
         dueOn: "2026-06-20",
         mastered: true,
+      },
+    ],
+    wordMistakes: [
+      {
+        id: "mistake-2026-06-25-environment",
+        term: "environment",
+        reviewedOn: "2026-06-25",
+        mistakeCount: 3,
+      },
+      {
+        id: "mistake-2026-06-25-usually",
+        term: "usually",
+        reviewedOn: "2026-06-25",
+        mistakeCount: 1,
       },
     ],
     dailySessions: [
@@ -241,9 +294,7 @@ export function createDemoHousehold(): HouseholdSpace {
 
 export function getLearnerHome(household: HouseholdSpace, now: Date): LearnerHome {
   const today = dateKey(now);
-  const dueWeakWords = household.weakWords.filter(
-    (word) => !word.mastered && word.dueOn <= today,
-  );
+  const dueWeakWords = selectDailyWeakWords(household, today);
 
   return {
     learnerName: household.learnerName,
@@ -415,6 +466,13 @@ export function completeVocabularyReview(
   now: Date,
 ): HouseholdSpace {
   const resultsByTerm = new Map(results.map((result) => [result.term, result.correct]));
+  const incorrectCounts = new Map<string, number>();
+
+  for (const result of results) {
+    if (!result.correct) {
+      incorrectCounts.set(result.term, (incorrectCounts.get(result.term) ?? 0) + 1);
+    }
+  }
 
   return {
     ...household,
@@ -436,6 +494,24 @@ export function completeVocabularyReview(
         dueOn: nextDueDate(reviewStage, now),
       };
     }),
+    wordMistakes: mergeMistakeRecords(
+      household.wordMistakes ?? [],
+      incorrectCounts,
+      dateKey(now),
+    ),
+  };
+}
+
+export function updateDailyWeakWordLimit(
+  household: HouseholdSpace,
+  dailyWeakWordLimit: number,
+): HouseholdSpace {
+  return {
+    ...household,
+    settings: {
+      ...household.settings,
+      dailyWeakWordLimit: clampDailyWeakWordLimit(dailyWeakWordLimit),
+    },
   };
 }
 
@@ -580,6 +656,39 @@ function findPrompt(household: HouseholdSpace, part: Prompt["part"]): Prompt {
   return prompt;
 }
 
+function selectDailyWeakWords(household: HouseholdSpace, today: string): WeakWord[] {
+  const limit = clampDailyWeakWordLimit(
+    household.settings?.dailyWeakWordLimit ?? defaultDailyWeakWordLimit,
+  );
+  const wordsByTerm = new Map(
+    household.weakWords
+      .filter((word) => !word.mastered)
+      .map((word) => [word.term.toLowerCase(), word]),
+  );
+  const yesterday = previousDateKey(today);
+  const selectedTerms = new Set<string>();
+  const priorityWords = [...(household.wordMistakes ?? [])]
+    .filter((record) => record.reviewedOn === yesterday)
+    .sort((a, b) => b.mistakeCount - a.mistakeCount || a.term.localeCompare(b.term))
+    .flatMap((record) => {
+      const key = record.term.toLowerCase();
+      const word = wordsByTerm.get(key);
+
+      if (!word || selectedTerms.has(key)) {
+        return [];
+      }
+
+      selectedTerms.add(key);
+      return [word];
+    });
+  const randomFill = seededShuffle(
+    [...wordsByTerm.values()].filter((word) => !selectedTerms.has(word.term.toLowerCase())),
+    `${household.learnerName}:${today}:weak-words`,
+  );
+
+  return [...priorityWords, ...randomFill].slice(0, limit);
+}
+
 function countPracticeStreak(records: DailySessionRecord[], today: string): number {
   const completedDays = new Set(records.map((record) => record.completedOn));
   let cursor = previousDateKey(today);
@@ -594,7 +703,11 @@ function countPracticeStreak(records: DailySessionRecord[], today: string): numb
 }
 
 function dateKey(date: Date): string {
-  return date.toISOString().slice(0, 10);
+  const year = date.getFullYear();
+  const month = `${date.getMonth() + 1}`.padStart(2, "0");
+  const day = `${date.getDate()}`.padStart(2, "0");
+
+  return `${year}-${month}-${day}`;
 }
 
 function previousDateKey(value: string): string {
@@ -666,9 +779,68 @@ function mergeWeakWords(current: WeakWord[], incoming: WeakWord[]): WeakWord[] {
   return Array.from(byTerm.values());
 }
 
+function mergeMistakeRecords(
+  current: WeakWordMistakeRecord[],
+  incorrectCounts: Map<string, number>,
+  reviewedOn: string,
+): WeakWordMistakeRecord[] {
+  if (incorrectCounts.size === 0) {
+    return current;
+  }
+
+  const byKey = new Map(
+    current.map((record) => [`${record.reviewedOn}:${record.term.toLowerCase()}`, record]),
+  );
+
+  for (const [term, count] of incorrectCounts) {
+    const key = `${reviewedOn}:${term.toLowerCase()}`;
+    const existing = byKey.get(key);
+
+    byKey.set(key, {
+      id: existing?.id ?? `mistake-${reviewedOn}-${slugify(term)}`,
+      term,
+      reviewedOn,
+      mistakeCount: (existing?.mistakeCount ?? 0) + count,
+    });
+  }
+
+  return Array.from(byKey.values()).sort(
+    (a, b) => a.reviewedOn.localeCompare(b.reviewedOn) || a.term.localeCompare(b.term),
+  );
+}
+
 function replaceById(records: DailySessionRecord[], incoming: DailySessionRecord) {
   const others = records.filter((record) => record.id !== incoming.id);
   return [...others, incoming].sort((a, b) => a.completedOn.localeCompare(b.completedOn));
+}
+
+function clampDailyWeakWordLimit(value: number): number {
+  if (!Number.isFinite(value)) {
+    return defaultDailyWeakWordLimit;
+  }
+
+  return Math.min(20, Math.max(1, Math.round(value)));
+}
+
+function seededShuffle<T>(items: T[], seed: string): T[] {
+  return items
+    .map((item, index) => ({
+      item,
+      order: hashString(`${seed}:${index}`),
+    }))
+    .sort((a, b) => a.order - b.order)
+    .map(({ item }) => item);
+}
+
+function hashString(value: string): number {
+  let hash = 2166136261;
+
+  for (let index = 0; index < value.length; index += 1) {
+    hash ^= value.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+
+  return hash >>> 0;
 }
 
 function slugify(value: string): string {

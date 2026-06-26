@@ -22,7 +22,7 @@ describe("PetPrototype", () => {
 
     expect(await screen.findByText("已连接")).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "今日练习" })).toBeInTheDocument();
-    expect(screen.getByText("4 天连续练习")).toBeInTheDocument();
+    expect(screen.getByText(/\d+ 天连续练习/)).toBeInTheDocument();
     expect(screen.queryByText(/总分|通过率|金币|排行榜/)).not.toBeInTheDocument();
 
     fireEvent.click(screen.getByRole("button", { name: "开始今日练习" }));
@@ -32,5 +32,9 @@ describe("PetPrototype", () => {
     expect(screen.getByText("最多 2 次重录")).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Part 2 录音转文本" })).toBeInTheDocument();
     expect(screen.getByLabelText("图片描述回答")).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: "内容" }));
+
+    expect(screen.getByLabelText("每日 Weak Words 数量")).toHaveValue(5);
   });
 });

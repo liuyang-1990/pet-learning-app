@@ -32,7 +32,9 @@ import {
   submitPart2Answer,
   submitSpeakingAttempt,
   startDailySession,
+  updateDailyWeakWordLimit,
   type DailySession,
+  type HouseholdSettings,
   type HouseholdSpace,
   type Part1ConversationResult,
   type Part1ConversationTurn,
@@ -326,6 +328,10 @@ export function PetPrototype() {
     setHousehold((current) => addGuardianPrompt(current, input));
   };
 
+  const updateDailyLimit = (dailyWeakWordLimit: number) => {
+    setHousehold((current) => updateDailyWeakWordLimit(current, dailyWeakWordLimit));
+  };
+
   const resetDemoData = () => {
     setHousehold(createDemoHousehold());
     setSession(null);
@@ -420,9 +426,11 @@ export function PetPrototype() {
 
           {activeTab === "content" && (
             <GuardianContentView
+              settings={household.settings}
               prompts={household.presetPrompts}
               onAddTopicWord={addTopicWord}
               onAddPrompt={addPrompt}
+              onUpdateDailyLimit={updateDailyLimit}
               onResetDemoData={resetDemoData}
             />
           )}
@@ -868,14 +876,18 @@ function GuardianProgressView({
 }
 
 function GuardianContentView({
+  settings,
   prompts,
   onAddTopicWord,
   onAddPrompt,
+  onUpdateDailyLimit,
   onResetDemoData,
 }: {
+  settings: HouseholdSettings;
   prompts: Prompt[];
   onAddTopicWord: (term: string, chineseGloss: string) => void;
   onAddPrompt: (input: { title: string; question: string; part: Prompt["part"]; imageUrl?: string }) => void;
+  onUpdateDailyLimit: (dailyWeakWordLimit: number) => void;
   onResetDemoData: () => void;
 }) {
   const [wordTerm, setWordTerm] = useState("playground");
@@ -917,6 +929,23 @@ function GuardianContentView({
 
   return (
     <div className="stack">
+      <section className="panel">
+        <div className="section-title">
+          <h2>Daily 设置</h2>
+          <span>今日单词</span>
+        </div>
+        <label className="field">
+          <span>每日 Weak Words 数量</span>
+          <input
+            type="number"
+            min={1}
+            max={20}
+            value={settings.dailyWeakWordLimit}
+            onChange={(event) => onUpdateDailyLimit(Number(event.target.value))}
+          />
+        </label>
+      </section>
+
       <section className="panel">
         <div className="section-title">
           <h2>家长内容</h2>

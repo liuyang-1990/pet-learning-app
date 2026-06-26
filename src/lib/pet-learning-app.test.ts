@@ -15,6 +15,7 @@ import {
   submitPart2Answer,
   submitSpeakingAttempt,
   startDailySession,
+  updateDailyWeakWordLimit,
 } from "./pet-learning-app";
 
 describe("PET Learning App", () => {
@@ -24,10 +25,10 @@ describe("PET Learning App", () => {
     const home = getLearnerHome(household, new Date("2026-06-26T08:00:00+08:00"));
 
     expect(home.practiceStreakDays).toBe(4);
-    expect(home.dueWeakWords.map((word) => word.term)).toEqual([
-      "usually",
-      "because",
+    expect(home.dueWeakWords).toHaveLength(5);
+    expect(home.dueWeakWords.map((word) => word.term).slice(0, 2)).toEqual([
       "environment",
+      "usually",
     ]);
     expect(home.canStartDailySession).toBe(true);
 
@@ -41,6 +42,18 @@ describe("PET Learning App", () => {
       "vocabulary_review",
     ]);
     expect(session.steps[1]?.prompt.title).toContain("school");
+  });
+
+  it("lets guardians cap daily words and keeps yesterday's hardest mistakes first", () => {
+    const household = updateDailyWeakWordLimit(createDemoHousehold(), 2);
+
+    const home = getLearnerHome(household, new Date("2026-06-26T08:00:00+08:00"));
+
+    expect(household.settings.dailyWeakWordLimit).toBe(2);
+    expect(home.dueWeakWords.map((word) => word.term)).toEqual([
+      "environment",
+      "usually",
+    ]);
   });
 
   it("limits retakes and turns a speaking attempt into actionable feedback", () => {

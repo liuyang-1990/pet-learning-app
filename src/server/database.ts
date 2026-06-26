@@ -8,6 +8,7 @@ import {
   type Prompt,
   type RecentRecording,
   type WeakWord,
+  type WeakWordMistakeRecord,
 } from "@/lib/pet-learning-app";
 
 type SqliteDatabase = {
@@ -49,17 +50,26 @@ export function getDatabase() {
 export function getHouseholdSpace(): HouseholdSpace {
   const db = getDatabase();
   const household = db
-    .prepare("SELECT learner_name FROM households WHERE id = ?")
-    .get(householdId) as { learner_name: string } | undefined;
+    .prepare("SELECT learner_name, daily_weak_word_limit FROM households WHERE id = ?")
+    .get(householdId) as { learner_name: string; daily_weak_word_limit: number } | undefined;
 
   return {
     learnerName: household?.learner_name ?? "Alex",
+    settings: {
+      dailyWeakWordLimit: household?.daily_weak_word_limit ?? 5,
+    },
     weakWords: db
       .prepare(
         "SELECT term, chinese_gloss, review_stage, due_on, mastered FROM weak_words WHERE household_id = ? ORDER BY created_at ASC",
       )
       .all(householdId)
       .map(mapWeakWord),
+    wordMistakes: db
+      .prepare(
+        "SELECT id, term, reviewed_on, mistake_count FROM word_review_mistakes WHERE household_id = ? ORDER BY reviewed_on ASC, term ASC",
+      )
+      .all(householdId)
+      .map(mapMistakeRecord),
     dailySessions: db
       .prepare(
         "SELECT id, completed_on, duration_minutes, feedback_summary FROM daily_sessions WHERE household_id = ? ORDER BY completed_on ASC",
@@ -86,19 +96,24 @@ export function saveHouseholdSpace(household: HouseholdSpace) {
 
   db.exec("BEGIN");
   try {
-    db.prepare("UPDATE households SET learner_name = ?, updated_at = ? WHERE id = ?").run(
+    db.prepare("UPDATE households SET learner_name = ?, daily_weak_word_limit = ?, updated_at = ? WHERE id = ?").run(
       household.learnerName,
+      household.settings?.dailyWeakWordLimit ?? 5,
       new Date().toISOString(),
       householdId,
     );
 
     db.prepare("DELETE FROM weak_words WHERE household_id = ?").run(householdId);
+    db.prepare("DELETE FROM word_review_mistakes WHERE household_id = ?").run(householdId);
     db.prepare("DELETE FROM prompts WHERE household_id = ?").run(householdId);
     db.prepare("DELETE FROM daily_sessions WHERE household_id = ?").run(householdId);
     db.prepare("DELETE FROM recent_recordings WHERE household_id = ?").run(householdId);
 
     for (const word of household.weakWords) {
       insertWeakWord(db, word);
+    }
+    for (const mistake of household.wordMistakes ?? []) {
+      insertMistakeRecord(db, mistake);
     }
     for (const prompt of household.presetPrompts) {
       insertPrompt(db, prompt);
@@ -125,6 +140,7 @@ function ensureSchema(db: SqliteDatabase) {
       id TEXT PRIMARY KEY,
       learner_name TEXT NOT NULL,
       entry_code TEXT NOT NULL,
+      daily_weak_word_limit INTEGER NOT NULL DEFAULT 5,
       created_at TEXT NOT NULL,
       updated_at TEXT NOT NULL
     );
@@ -141,6 +157,18 @@ function ensureSchema(db: SqliteDatabase) {
       created_at TEXT NOT NULL,
       updated_at TEXT NOT NULL,
       UNIQUE(household_id, term),
+      FOREIGN KEY(household_id) REFERENCES households(id) ON DELETE CASCADE
+    );
+
+    CREATE TABLE IF NOT EXISTS word_review_mistakes (
+      id TEXT PRIMARY KEY,
+      household_id TEXT NOT NULL,
+      term TEXT NOT NULL,
+      reviewed_on TEXT NOT NULL,
+      mistake_count INTEGER NOT NULL,
+      created_at TEXT NOT NULL,
+      updated_at TEXT NOT NULL,
+      UNIQUE(household_id, term, reviewed_on),
       FOREIGN KEY(household_id) REFERENCES households(id) ON DELETE CASCADE
     );
 
@@ -178,6 +206,7 @@ function ensureSchema(db: SqliteDatabase) {
       FOREIGN KEY(household_id) REFERENCES households(id) ON DELETE CASCADE
     );
   `);
+  ensureColumn(db, "households", "daily_weak_word_limit", "INTEGER NOT NULL DEFAULT 5");
 }
 
 function ensureSeedData(db: SqliteDatabase) {
@@ -186,19 +215,30 @@ function ensureSeedData(db: SqliteDatabase) {
   if (existing) return;
 
   const now = new Date().toISOString();
-  db.prepare("INSERT INTO households (id, learner_name, entry_code, created_at, updated_at) VALUES (?, ?, ?, ?, ?)").run(
+  const demo = createDemoHousehold();
+  db.prepare("INSERT INTO households (id, learner_name, entry_code, daily_weak_word_limit, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?)").run(
     householdId,
     "Alex",
     process.env.LEARNER_ENTRY_CODE ?? "123456",
+    demo.settings.dailyWeakWordLimit,
     now,
     now,
   );
 
-  const demo = createDemoHousehold();
   for (const word of demo.weakWords) insertWeakWord(db, word);
+  for (const mistake of demo.wordMistakes) insertMistakeRecord(db, mistake);
   for (const prompt of demo.presetPrompts) insertPrompt(db, prompt);
   for (const session of demo.dailySessions) insertDailySession(db, session);
   for (const recording of demo.recentRecordings) insertRecording(db, recording);
+}
+
+function ensureColumn(db: SqliteDatabase, table: string, column: string, definition: string) {
+  const columns = db.prepare(`PRAGMA table_info(${table})`).all() as Array<{ name: string }>;
+  const exists = columns.some((item) => item.name === column);
+
+  if (!exists) {
+    db.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${definition}`);
+  }
 }
 
 function insertWeakWord(db: SqliteDatabase, word: WeakWord) {
@@ -214,6 +254,21 @@ function insertWeakWord(db: SqliteDatabase, word: WeakWord) {
     word.dueOn,
     word.mastered ? 1 : 0,
     "topic",
+    now,
+    now,
+  );
+}
+
+function insertMistakeRecord(db: SqliteDatabase, mistake: WeakWordMistakeRecord) {
+  const now = new Date().toISOString();
+  db.prepare(
+    "INSERT OR REPLACE INTO word_review_mistakes (id, household_id, term, reviewed_on, mistake_count, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?)",
+  ).run(
+    mistake.id,
+    householdId,
+    mistake.term,
+    mistake.reviewedOn,
+    mistake.mistakeCount,
     now,
     now,
   );
@@ -268,6 +323,22 @@ function mapWeakWord(row: unknown): WeakWord {
     reviewStage: item.review_stage,
     dueOn: item.due_on,
     mastered: Boolean(item.mastered),
+  };
+}
+
+function mapMistakeRecord(row: unknown): WeakWordMistakeRecord {
+  const item = row as {
+    id: string;
+    term: string;
+    reviewed_on: string;
+    mistake_count: number;
+  };
+
+  return {
+    id: item.id,
+    term: item.term,
+    reviewedOn: item.reviewed_on,
+    mistakeCount: item.mistake_count,
   };
 }
 
