@@ -402,9 +402,12 @@ export function ensurePart2Image(prompt: Prompt): Prompt {
   };
 }
 
-export function getPart2ImageChoices(prompt: Prompt): string[] {
+export function getPart2ImageChoices(prompt: Prompt, prompts: Prompt[] = []): string[] {
   return uniqueValues([
     prompt.imageUrl,
+    ...prompts
+      .filter((item) => item.part === "part_2")
+      .map((item) => item.imageUrl),
     createDefaultPart2ImageDataUrl(),
     createPart2SceneImageDataUrl("Classroom activity", "#f6efe5", "#86b7d6", "#e7a45f"),
     createPart2SceneImageDataUrl("Family kitchen", "#fff3c9", "#74a57f", "#d96c5f"),

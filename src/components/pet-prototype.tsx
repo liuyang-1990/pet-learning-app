@@ -205,7 +205,7 @@ export function PetPrototype() {
     const part2 = session.steps.find((step) => step.kind === "speaking_part_2");
     if (part2?.kind !== "speaking_part_2") return;
 
-    const choices = getPart2ImageChoices(part2.prompt);
+    const choices = getPart2ImageChoices(part2.prompt, household.presetPrompts);
     const currentImage = part2ImageUrl ?? ensurePart2Image(part2.prompt).imageUrl;
     const candidates = choices.filter((imageUrl) => imageUrl !== currentImage);
     const nextImage = candidates[Math.floor(Math.random() * candidates.length)] ?? choices[0] ?? null;

@@ -255,5 +255,18 @@ describe("PET Learning App", () => {
 
     expect(prompt).toBeDefined();
     expect(prompt && getPart2ImageChoices(prompt)).toHaveLength(4);
+    expect(
+      prompt &&
+        getPart2ImageChoices(prompt, [
+          ...household.presetPrompts,
+          {
+            id: "part-2-extra-image",
+            title: "Extra image",
+            question: "Look at the picture and describe what the people are doing.",
+            part: "part_2",
+            imageUrl: "data:image/svg+xml;charset=utf-8,extra",
+          },
+        ]),
+    ).toHaveLength(5);
   });
 });
