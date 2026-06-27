@@ -1,11 +1,29 @@
 export type ReviewStage = "new" | "tomorrow" | "threeDaysLater" | "mastered";
+export type WeakWordReason = "pronunciation" | "recall" | "meaning" | "usage" | "spelling";
 
-export type WeakWord = {
+export type VocabularyItem = {
   term: string;
   chineseGloss: string;
+};
+
+export type WordBankItem = VocabularyItem & {
+  theme: string;
+  source: string;
+};
+
+export type SeenWord = VocabularyItem & {
+  theme: string;
+  seenOn: string;
+  successfulUses: number;
+};
+
+export type WeakWord = VocabularyItem & {
   reviewStage: ReviewStage;
   dueOn: string;
   mastered: boolean;
+  reason: WeakWordReason;
+  correctAttempts: number;
+  totalAttempts: number;
 };
 
 export type Prompt = {
@@ -32,7 +50,9 @@ export type RecentRecording = {
 };
 
 export type HouseholdSettings = {
+  dailyNewWordCount: number;
   dailyWeakWordLimit: number;
+  currentWordTheme: string;
 };
 
 export type WeakWordMistakeRecord = {
@@ -73,6 +93,8 @@ type DailySessionCompletionInput = {
 export type HouseholdSpace = {
   learnerName: string;
   settings: HouseholdSettings;
+  wordBank: WordBankItem[];
+  seenWords: SeenWord[];
   weakWords: WeakWord[];
   wordMistakes: WeakWordMistakeRecord[];
   dailySessions: DailySessionRecord[];
@@ -83,7 +105,8 @@ export type HouseholdSpace = {
 export type LearnerHome = {
   learnerName: string;
   practiceStreakDays: number;
-  dueWeakWords: WeakWord[];
+  dailyNewWords: WordBankItem[];
+  dailyWeakWords: WeakWord[];
   canStartDailySession: boolean;
 };
 
@@ -92,6 +115,10 @@ export type DailySession = {
   status: "in_progress";
   startedAt: string;
   steps: Array<
+    | {
+        kind: "new_word_practice";
+        words: WordBankItem[];
+      }
     | {
         kind: "weak_word_warmup";
         words: WeakWord[];
@@ -181,63 +208,44 @@ type Part2AnswerInput = {
 };
 
 const defaultDailyWeakWordLimit = 5;
+const defaultDailyNewWordCount = 5;
+const defaultWordTheme = "school";
 
 export function createDemoHousehold(): HouseholdSpace {
   return {
     learnerName: "Alex",
     settings: {
+      dailyNewWordCount: defaultDailyNewWordCount,
       dailyWeakWordLimit: defaultDailyWeakWordLimit,
+      currentWordTheme: defaultWordTheme,
     },
+    wordBank: [
+      { term: "subject", chineseGloss: "科目", theme: "school", source: "demo" },
+      { term: "classmate", chineseGloss: "同学", theme: "school", source: "demo" },
+      { term: "homework", chineseGloss: "家庭作业", theme: "school", source: "demo" },
+      { term: "experiment", chineseGloss: "实验", theme: "school", source: "demo" },
+      { term: "library", chineseGloss: "图书馆", theme: "school", source: "demo" },
+      { term: "playground", chineseGloss: "操场", theme: "school", source: "demo" },
+      { term: "break", chineseGloss: "课间休息", theme: "school", source: "demo" },
+      { term: "uniform", chineseGloss: "校服", theme: "school", source: "demo" },
+      { term: "cousin", chineseGloss: "堂/表兄弟姐妹", theme: "family", source: "demo" },
+      { term: "grandparent", chineseGloss: "祖父母/外祖父母", theme: "family", source: "demo" },
+    ],
+    seenWords: [
+      {
+        term: "classroom",
+        chineseGloss: "教室",
+        theme: "school",
+        seenOn: "2026-06-25",
+        successfulUses: 1,
+      },
+    ],
     weakWords: [
-      {
-        term: "usually",
-        chineseGloss: "通常",
-        reviewStage: "tomorrow",
-        dueOn: "2026-06-26",
-        mastered: false,
-      },
-      {
-        term: "because",
-        chineseGloss: "因为",
-        reviewStage: "new",
-        dueOn: "2026-06-26",
-        mastered: false,
-      },
-      {
-        term: "environment",
-        chineseGloss: "环境",
-        reviewStage: "threeDaysLater",
-        dueOn: "2026-06-26",
-        mastered: false,
-      },
-      {
-        term: "picture",
-        chineseGloss: "图片",
-        reviewStage: "new",
-        dueOn: "2026-06-28",
-        mastered: false,
-      },
-      {
-        term: "background",
-        chineseGloss: "背景",
-        reviewStage: "new",
-        dueOn: "2026-06-28",
-        mastered: false,
-      },
-      {
-        term: "playground",
-        chineseGloss: "操场",
-        reviewStage: "new",
-        dueOn: "2026-06-29",
-        mastered: false,
-      },
-      {
-        term: "library",
-        chineseGloss: "图书馆",
-        reviewStage: "mastered",
-        dueOn: "2026-06-20",
-        mastered: true,
-      },
+      makeWeakWord("usually", "通常", "tomorrow", "2026-06-26", "pronunciation", 1, 2),
+      makeWeakWord("because", "因为", "new", "2026-06-26", "usage", 0, 1),
+      makeWeakWord("environment", "环境", "threeDaysLater", "2026-06-26", "recall", 1, 3),
+      makeWeakWord("background", "背景", "new", "2026-06-28", "pronunciation", 0, 1),
+      makeWeakWord("library", "图书馆", "mastered", "2026-06-20", "meaning", 3, 3),
     ],
     wordMistakes: [
       {
@@ -294,12 +302,14 @@ export function createDemoHousehold(): HouseholdSpace {
 
 export function getLearnerHome(household: HouseholdSpace, now: Date): LearnerHome {
   const today = dateKey(now);
-  const dueWeakWords = selectDailyWeakWords(household, today);
+  const dailyNewWords = selectDailyNewWords(household, today);
+  const dailyWeakWords = selectDailyWeakWords(household, today);
 
   return {
     learnerName: household.learnerName,
     practiceStreakDays: countPracticeStreak(household.dailySessions, today),
-    dueWeakWords,
+    dailyNewWords,
+    dailyWeakWords,
     canStartDailySession: true,
   };
 }
@@ -314,10 +324,11 @@ export function startDailySession(household: HouseholdSpace, now: Date): DailySe
     status: "in_progress",
     startedAt: now.toISOString(),
     steps: [
-      { kind: "weak_word_warmup", words: home.dueWeakWords },
+      { kind: "new_word_practice", words: home.dailyNewWords },
+      { kind: "weak_word_warmup", words: home.dailyWeakWords },
       { kind: "speaking_part_1", prompt: part1Prompt },
       { kind: "speaking_part_2", prompt: part2Prompt },
-      { kind: "vocabulary_review", words: home.dueWeakWords },
+      { kind: "vocabulary_review", words: home.dailyWeakWords },
     ],
   };
 }
@@ -489,6 +500,12 @@ export function completeVocabularyReview(
 
   return {
     ...household,
+    seenWords: mergeSeenWords(
+      household.seenWords ?? [],
+      household.wordBank ?? [],
+      results.filter((result) => result.correct).map((result) => result.term),
+      dateKey(now),
+    ),
     weakWords: household.weakWords.map((word) => {
       const correct = resultsByTerm.get(word.term);
 
@@ -499,11 +516,16 @@ export function completeVocabularyReview(
       const reviewStage = correct
         ? nextReviewStage(word.reviewStage)
         : previousReviewStage(word.reviewStage);
+      const correctAttempts = word.correctAttempts + (correct ? 1 : 0);
+      const totalAttempts = word.totalAttempts + 1;
+      const mastered = reviewStage === "mastered" || correctAttempts >= 2 && totalAttempts >= 3;
 
       return {
         ...word,
         reviewStage,
-        mastered: reviewStage === "mastered",
+        correctAttempts,
+        totalAttempts,
+        mastered,
         dueOn: nextDueDate(reviewStage, now),
       };
     }),
@@ -523,7 +545,28 @@ export function updateDailyWeakWordLimit(
     ...household,
     settings: {
       ...household.settings,
-      dailyWeakWordLimit: clampDailyWeakWordLimit(dailyWeakWordLimit),
+      dailyWeakWordLimit: clampDailyWordCount(dailyWeakWordLimit),
+    },
+  };
+}
+
+export function updateWordPracticeSettings(
+  household: HouseholdSpace,
+  input: Partial<HouseholdSettings>,
+): HouseholdSpace {
+  return {
+    ...household,
+    settings: {
+      ...household.settings,
+      dailyNewWordCount:
+        input.dailyNewWordCount === undefined
+          ? household.settings.dailyNewWordCount
+          : clampDailyWordCount(input.dailyNewWordCount),
+      dailyWeakWordLimit:
+        input.dailyWeakWordLimit === undefined
+          ? household.settings.dailyWeakWordLimit
+          : clampDailyWordCount(input.dailyWeakWordLimit),
+      currentWordTheme: input.currentWordTheme?.trim() || household.settings.currentWordTheme,
     },
   };
 }
@@ -532,7 +575,7 @@ export function addGuardianTopicWord(
   household: HouseholdSpace,
   input: GuardianTopicWordInput,
 ): HouseholdSpace {
-  const existing = household.weakWords.some(
+  const existing = [...household.wordBank, ...household.weakWords].some(
     (word) => word.term.toLowerCase() === input.term.trim().toLowerCase(),
   );
 
@@ -542,14 +585,13 @@ export function addGuardianTopicWord(
 
   return {
     ...household,
-    weakWords: [
-      ...household.weakWords,
+    wordBank: [
+      ...household.wordBank,
       {
         term: input.term.trim(),
         chineseGloss: input.chineseGloss.trim() || "待补充",
-        reviewStage: "new",
-        dueOn: input.dueOn,
-        mastered: false,
+        theme: household.settings.currentWordTheme,
+        source: "guardian",
       },
     ],
   };
@@ -670,7 +712,7 @@ function findPrompt(household: HouseholdSpace, part: Prompt["part"]): Prompt {
 }
 
 function selectDailyWeakWords(household: HouseholdSpace, today: string): WeakWord[] {
-  const limit = clampDailyWeakWordLimit(
+  const limit = clampDailyWordCount(
     household.settings?.dailyWeakWordLimit ?? defaultDailyWeakWordLimit,
   );
   const wordsByTerm = new Map(
@@ -700,6 +742,34 @@ function selectDailyWeakWords(household: HouseholdSpace, today: string): WeakWor
   );
 
   return [...priorityWords, ...randomFill].slice(0, limit);
+}
+
+function selectDailyNewWords(household: HouseholdSpace, today: string): WordBankItem[] {
+  const limit = clampDailyWordCount(
+    household.settings?.dailyNewWordCount ?? defaultDailyNewWordCount,
+  );
+  const theme = household.settings?.currentWordTheme || defaultWordTheme;
+  const blockedTerms = new Set([
+    ...(household.seenWords ?? []).map((word) => word.term.toLowerCase()),
+    ...(household.weakWords ?? []).map((word) => word.term.toLowerCase()),
+  ]);
+  const unseenWords = (household.wordBank ?? []).filter(
+    (word) => !blockedTerms.has(word.term.toLowerCase()),
+  );
+  const themed = unseenWords.filter((word) => word.theme === theme);
+  const themedSelection = seededShuffle(themed, `${household.learnerName}:${today}:${theme}:new-words`);
+
+  if (themedSelection.length >= limit) {
+    return themedSelection.slice(0, limit);
+  }
+
+  const selectedTerms = new Set(themedSelection.map((word) => word.term.toLowerCase()));
+  const fallback = seededShuffle(
+    unseenWords.filter((word) => !selectedTerms.has(word.term.toLowerCase())),
+    `${household.learnerName}:${today}:fallback-new-words`,
+  );
+
+  return [...themedSelection, ...fallback].slice(0, limit);
 }
 
 function countPracticeStreak(records: DailySessionRecord[], today: string): number {
@@ -737,20 +807,17 @@ function retentionCutoffDateKey(now: Date): string {
 
 function extractWeakWords(transcript: string): WeakWord[] {
   const lower = transcript.toLowerCase();
-  const candidates: Array<Omit<WeakWord, "dueOn" | "mastered" | "reviewStage">> = [
-    { term: "usually", chineseGloss: "通常" },
-    { term: "because", chineseGloss: "因为" },
-    { term: "environment", chineseGloss: "环境" },
+  const candidates: Array<VocabularyItem & { reason: WeakWordReason }> = [
+    { term: "usually", chineseGloss: "通常", reason: "pronunciation" },
+    { term: "because", chineseGloss: "因为", reason: "usage" },
+    { term: "environment", chineseGloss: "环境", reason: "recall" },
   ];
 
   return candidates
     .filter((candidate) => lower.includes(candidate.term))
-    .map((candidate) => ({
-      ...candidate,
-      reviewStage: "new",
-      dueOn: "2026-06-27",
-      mastered: false,
-    }));
+    .map((candidate) =>
+      makeWeakWord(candidate.term, candidate.chineseGloss, "new", "2026-06-27", candidate.reason),
+    );
 }
 
 function choosePart1FollowUp(answer: string, previousTurnCount: number): string {
@@ -786,10 +853,56 @@ function mergeWeakWords(current: WeakWord[], incoming: WeakWord[]): WeakWord[] {
     const key = word.term.toLowerCase();
     const existing = byTerm.get(key);
 
-    byTerm.set(key, existing ? { ...existing, mastered: false } : word);
+    byTerm.set(
+      key,
+      existing
+        ? {
+            ...existing,
+            mastered: false,
+            reason: existing.reason ?? word.reason,
+          }
+        : normalizeWeakWord(word),
+    );
   }
 
   return Array.from(byTerm.values());
+}
+
+function mergeSeenWords(
+  current: SeenWord[],
+  wordBank: WordBankItem[],
+  terms: string[],
+  seenOn: string,
+): SeenWord[] {
+  const byTerm = new Map(current.map((word) => [word.term.toLowerCase(), word]));
+  const bankByTerm = new Map(wordBank.map((word) => [word.term.toLowerCase(), word]));
+
+  for (const term of terms) {
+    const key = term.toLowerCase();
+    const existing = byTerm.get(key);
+    const bankWord = bankByTerm.get(key);
+
+    if (!bankWord) continue;
+
+    byTerm.set(key, {
+      term: bankWord.term,
+      chineseGloss: bankWord.chineseGloss,
+      theme: bankWord.theme,
+      seenOn,
+      successfulUses: (existing?.successfulUses ?? 0) + 1,
+    });
+  }
+
+  return Array.from(byTerm.values());
+}
+
+function normalizeWeakWord(word: WeakWord): WeakWord {
+  return {
+    ...word,
+    reason: word.reason ?? "usage",
+    correctAttempts: word.correctAttempts ?? 0,
+    totalAttempts: word.totalAttempts ?? 0,
+  };
 }
 
 function mergeMistakeRecords(
@@ -827,12 +940,33 @@ function replaceById(records: DailySessionRecord[], incoming: DailySessionRecord
   return [...others, incoming].sort((a, b) => a.completedOn.localeCompare(b.completedOn));
 }
 
-function clampDailyWeakWordLimit(value: number): number {
+function clampDailyWordCount(value: number): number {
   if (!Number.isFinite(value)) {
     return defaultDailyWeakWordLimit;
   }
 
   return Math.min(20, Math.max(1, Math.round(value)));
+}
+
+function makeWeakWord(
+  term: string,
+  chineseGloss: string,
+  reviewStage: ReviewStage,
+  dueOn: string,
+  reason: WeakWordReason,
+  correctAttempts = 0,
+  totalAttempts = 0,
+): WeakWord {
+  return {
+    term,
+    chineseGloss,
+    reviewStage,
+    dueOn,
+    mastered: reviewStage === "mastered",
+    reason,
+    correctAttempts,
+    totalAttempts,
+  };
 }
 
 function seededShuffle<T>(items: T[], seed: string): T[] {

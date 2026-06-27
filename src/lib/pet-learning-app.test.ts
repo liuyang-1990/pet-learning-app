@@ -26,8 +26,9 @@ describe("PET Learning App", () => {
     const home = getLearnerHome(household, new Date("2026-06-26T08:00:00+08:00"));
 
     expect(home.practiceStreakDays).toBe(4);
-    expect(home.dueWeakWords).toHaveLength(5);
-    expect(home.dueWeakWords.map((word) => word.term).slice(0, 2)).toEqual([
+    expect(home.dailyNewWords).toHaveLength(5);
+    expect(home.dailyWeakWords).toHaveLength(4);
+    expect(home.dailyWeakWords.map((word) => word.term).slice(0, 2)).toEqual([
       "environment",
       "usually",
     ]);
@@ -37,12 +38,13 @@ describe("PET Learning App", () => {
 
     expect(session.status).toBe("in_progress");
     expect(session.steps.map((step) => step.kind)).toEqual([
+      "new_word_practice",
       "weak_word_warmup",
       "speaking_part_1",
       "speaking_part_2",
       "vocabulary_review",
     ]);
-    expect(session.steps[1]?.prompt.title).toContain("school");
+    expect(session.steps[2]?.prompt.title).toContain("school");
   });
 
   it("lets guardians cap daily words and keeps yesterday's hardest mistakes first", () => {
@@ -51,7 +53,7 @@ describe("PET Learning App", () => {
     const home = getLearnerHome(household, new Date("2026-06-26T08:00:00+08:00"));
 
     expect(household.settings.dailyWeakWordLimit).toBe(2);
-    expect(home.dueWeakWords.map((word) => word.term)).toEqual([
+    expect(home.dailyWeakWords.map((word) => word.term)).toEqual([
       "environment",
       "usually",
     ]);
@@ -127,8 +129,8 @@ describe("PET Learning App", () => {
   it("lets the guardian add content that appears in learner practice", () => {
     const household = addGuardianPrompt(
       addGuardianTopicWord(createDemoHousehold(), {
-        term: "playground",
-        chineseGloss: "操场",
+        term: "assembly",
+        chineseGloss: "集会",
         dueOn: "2026-06-26",
       }),
       {
@@ -140,7 +142,7 @@ describe("PET Learning App", () => {
 
     const home = getLearnerHome(household, new Date("2026-06-26T08:00:00+08:00"));
 
-    expect(home.dueWeakWords.map((word) => word.term)).toContain("playground");
+    expect(home.dailyNewWords.map((word) => word.term)).toContain("assembly");
     expect(household.presetPrompts.at(-1)?.title).toBe("After school");
   });
 

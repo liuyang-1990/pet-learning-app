@@ -20,6 +20,7 @@ const scenes = buildPart2Scenes();
 const db = new DatabaseSync(dbPath);
 
 try {
+  ensureReferenceSchema(db);
   importWords(db, words);
   importPart2Scenes(db, scenes);
 } finally {
@@ -115,14 +116,15 @@ function ensurePythonPdfParser() {
 
 function importWords(db, words) {
   const now = new Date().toISOString();
-  const today = toDateKey(new Date());
   const statement = db.prepare(`
-    INSERT INTO weak_words
-      (id, household_id, term, chinese_gloss, review_stage, due_on, mastered, source, created_at, updated_at)
+    INSERT INTO word_bank
+      (id, household_id, term, chinese_gloss, theme, source, created_at, updated_at)
     VALUES
-      (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      (?, ?, ?, ?, ?, ?, ?, ?)
     ON CONFLICT(household_id, term) DO UPDATE SET
-      chinese_gloss = COALESCE(weak_words.chinese_gloss, excluded.chinese_gloss),
+      chinese_gloss = excluded.chinese_gloss,
+      theme = excluded.theme,
+      source = excluded.source,
       updated_at = excluded.updated_at
   `);
 
@@ -134,9 +136,7 @@ function importWords(db, words) {
         householdId,
         word,
         "Cambridge B1/PET 官方词表",
-        "new",
-        today,
-        0,
+        inferTheme(word),
         "cambridge-b1-preliminary-vocabulary-list-2025",
         now,
         now,
@@ -147,6 +147,22 @@ function importWords(db, words) {
     db.exec("ROLLBACK");
     throw error;
   }
+}
+
+function ensureReferenceSchema(db) {
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS word_bank (
+      id TEXT PRIMARY KEY,
+      household_id TEXT NOT NULL,
+      term TEXT NOT NULL,
+      chinese_gloss TEXT NOT NULL,
+      theme TEXT NOT NULL,
+      source TEXT NOT NULL,
+      created_at TEXT NOT NULL,
+      updated_at TEXT NOT NULL,
+      UNIQUE(household_id, term)
+    );
+  `);
 }
 
 function importPart2Scenes(db, scenes) {
@@ -243,14 +259,6 @@ function createSceneImageDataUrl(scene) {
   return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
 }
 
-function toDateKey(date) {
-  const year = date.getFullYear();
-  const month = `${date.getMonth() + 1}`.padStart(2, "0");
-  const day = `${date.getDate()}`.padStart(2, "0");
-
-  return `${year}-${month}-${day}`;
-}
-
 function slugify(value) {
   return value
     .trim()
@@ -269,6 +277,27 @@ function hashString(value) {
   }
 
   return (hash >>> 0).toString(36);
+}
+
+function inferTheme(term) {
+  const lower = term.toLowerCase();
+  const themeTerms = {
+    school: ["school", "class", "teacher", "student", "homework", "subject", "exam", "library", "lesson"],
+    family: ["family", "mother", "father", "parent", "brother", "sister", "cousin", "grand"],
+    food: ["food", "bread", "cake", "coffee", "restaurant", "meal", "fruit", "vegetable", "breakfast"],
+    travel: ["airport", "bus", "train", "hotel", "passport", "ticket", "travel", "journey", "station"],
+    sport: ["sport", "football", "tennis", "swim", "cycling", "basketball", "gym", "race"],
+    work: ["job", "work", "office", "manager", "doctor", "engineer", "teacher", "assistant"],
+    nature: ["animal", "environment", "forest", "river", "weather", "mountain", "beach", "tree"],
+  };
+
+  for (const [theme, terms] of Object.entries(themeTerms)) {
+    if (terms.some((item) => lower.includes(item))) {
+      return theme;
+    }
+  }
+
+  return "general";
 }
 
 function escapeXml(value) {

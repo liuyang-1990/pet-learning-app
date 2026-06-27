@@ -40,13 +40,41 @@ _Avoid_: American accent, mixed accent, accent preference
 Short repeated practice of PET-relevant words selected from common exam topics and the learner's own speaking mistakes.
 _Avoid_: Word memorization, dictionary, vocabulary course
 
+**New Word Practice**:
+A short three-step flow for Daily New Words: understand the word with a Chinese Gloss and British English audio, shadow the word or a short phrase, then produce a simple English sentence using the word.
+_Avoid_: Flashcard-only review, Chinese-only memorisation, long spelling drill
+
+**PET Word Bank**:
+The broad Cambridge B1 Preliminary/PET-relevant vocabulary pool available for selecting new practice words, topic words, and future review items.
+_Avoid_: Weak Words, wrong words, daily due words
+
+**Daily New Words**:
+The fixed set of new PET Word Bank items introduced in a Daily Session before they have become learner-specific Weak Words.
+_Avoid_: Weak Words, due words, total daily words
+
+**Daily Weak Words**:
+Up to five learner-specific Weak Words selected for a Daily Session, prioritised by recent mistakes, repeated mistakes, unclear pronunciation, and recall failures.
+_Avoid_: Daily New Words, PET Word Bank items, total daily words
+
+**Word Theme**:
+A PET-speaking topic area such as school, family, hobbies, food, travel, health, shopping, sport, work, or the natural world used to select Daily New Words from the PET Word Bank.
+_Avoid_: Random bucket, lesson chapter, course unit
+
 **Topic Word**:
 A PET-relevant word from a common theme such as school, family, hobbies, food, travel, health, or environment.
 _Avoid_: Preset word, textbook word
 
 **Weak Word**:
 A word the learner missed, misused, could not recall, or pronounced unclearly during speaking practice.
-_Avoid_: Wrong word, mistake word, error item
+_Avoid_: PET Word Bank item, topic word, wrong word, mistake word, error item
+
+**Weak Word Reason**:
+The specific reason a word became a Weak Word, such as unclear pronunciation, recall failure, incorrect meaning, incorrect usage, or spelling/recognition error.
+_Avoid_: Generic mistake, score, wrong count
+
+**Seen Word**:
+A Daily New Word that the learner has encountered and handled successfully enough that it should not become a Weak Word, while still being available for light future exposure.
+_Avoid_: Weak Word, mastered word, forgotten word
 
 **Chinese Gloss**:
 A Chinese meaning or explanation used to help the learner understand an English word or prompt without replacing English output practice.

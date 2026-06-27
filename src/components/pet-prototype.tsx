@@ -42,8 +42,11 @@ import {
   type Part1ConversationTurn,
   type Prompt,
   type RecentRecording,
+  type SeenWord,
   type SpeakingAttemptResult,
+  type VocabularyItem,
   type WeakWord,
+  type WordBankItem,
   type WordShadowingFeedback,
 } from "@/lib/pet-learning-app";
 
@@ -217,7 +220,7 @@ export function PetPrototype() {
     setShadowInputs((current) => ({ ...current, [word]: value }));
   };
 
-  const checkShadowing = (word: WeakWord) => {
+  const checkShadowing = (word: VocabularyItem) => {
     const spokenText = shadowInputs[word.term] || word.term;
     setShadowFeedback((current) => ({
       ...current,
@@ -350,6 +353,16 @@ export function PetPrototype() {
     setHousehold((current) => updateDailyWeakWordLimit(current, dailyWeakWordLimit));
   };
 
+  const updateWordTheme = (currentWordTheme: string) => {
+    setHousehold((current) => ({
+      ...current,
+      settings: {
+        ...current.settings,
+        currentWordTheme,
+      },
+    }));
+  };
+
   const resetDemoData = () => {
     setHousehold(createDemoHousehold());
     setSession(null);
@@ -393,7 +406,8 @@ export function PetPrototype() {
         <div className="screen">
           {activeTab === "home" && (
             <LearnerHomeView
-              dueWeakWords={learnerHome.dueWeakWords}
+              dailyNewWords={learnerHome.dailyNewWords}
+              dailyWeakWords={learnerHome.dailyWeakWords}
               practiceStreakDays={learnerHome.practiceStreakDays}
               onStart={startPractice}
             />
@@ -435,7 +449,10 @@ export function PetPrototype() {
 
           {activeTab === "vocabulary" && (
             <VocabularyView
-              words={learnerHome.dueWeakWords}
+              wordBank={household.wordBank}
+              seenWords={household.seenWords}
+              dailyNewWords={learnerHome.dailyNewWords}
+              dailyWeakWords={learnerHome.dailyWeakWords}
               onComplete={completeReview}
             />
           )}
@@ -451,6 +468,7 @@ export function PetPrototype() {
               onAddTopicWord={addTopicWord}
               onAddPrompt={addPrompt}
               onUpdateDailyLimit={updateDailyLimit}
+              onUpdateWordTheme={updateWordTheme}
               onResetDemoData={resetDemoData}
             />
           )}
@@ -461,11 +479,13 @@ export function PetPrototype() {
 }
 
 function LearnerHomeView({
-  dueWeakWords,
+  dailyNewWords,
+  dailyWeakWords,
   practiceStreakDays,
   onStart,
 }: {
-  dueWeakWords: WeakWord[];
+  dailyNewWords: WordBankItem[];
+  dailyWeakWords: WeakWord[];
   practiceStreakDays: number;
   onStart: () => void;
 }) {
@@ -485,15 +505,23 @@ function LearnerHomeView({
 
       <section className="stats-grid" aria-label="今日概览">
         <Metric icon={<Trophy size={18} />} value={`${practiceStreakDays} 天连续练习`} label="轻奖励" />
-        <Metric icon={<BookOpen size={18} />} value={`${dueWeakWords.length} 个待复习`} label="Weak Words" />
+        <Metric icon={<BookOpen size={18} />} value={`${dailyNewWords.length} 新词 + ${dailyWeakWords.length} 弱词`} label="今日单词" />
+      </section>
+
+      <section className="panel">
+        <div className="section-title">
+          <h2>今天的新词</h2>
+          <span>Daily New Words</span>
+        </div>
+        <WordList words={dailyNewWords} />
       </section>
 
       <section className="panel">
         <div className="section-title">
           <h2>今天的 Weak Words</h2>
-          <span>英音跟读</span>
+          <span>最多 5 个</span>
         </div>
-        <WordList words={dueWeakWords} />
+        <WordList words={dailyWeakWords} />
       </section>
     </div>
   );
@@ -558,7 +586,7 @@ function DailySessionView({
   onCompleteSession: () => void;
   onSpeak: (text: string) => void;
   onShadowInputChange: (word: string, value: string) => void;
-  onCheckShadowing: (word: WeakWord) => void;
+  onCheckShadowing: (word: VocabularyItem) => void;
 }) {
   if (!session) {
     return (
@@ -576,6 +604,7 @@ function DailySessionView({
 
   const part1 = session.steps.find((step) => step.kind === "speaking_part_1");
   const part2 = session.steps.find((step) => step.kind === "speaking_part_2");
+  const newWords = session.steps.find((step) => step.kind === "new_word_practice");
   const warmup = session.steps.find((step) => step.kind === "weak_word_warmup");
   const basePart2Prompt = part2?.kind === "speaking_part_2" ? ensurePart2Image(part2.prompt) : null;
   const visiblePart2Prompt =
@@ -598,15 +627,37 @@ function DailySessionView({
           <h2>Daily Session</h2>
           <span>英音目标</span>
         </div>
+        {newWords?.kind === "new_word_practice" && (
+          <>
+            <div className="subsection-title">
+              <strong>5 个新词</strong>
+              <span>理解 · 跟读 · 英文输出</span>
+            </div>
+            <WordShadowingList
+              words={newWords.words}
+              inputs={shadowInputs}
+              feedback={shadowFeedback}
+              onSpeak={onSpeak}
+              onInputChange={onShadowInputChange}
+              onCheck={onCheckShadowing}
+            />
+          </>
+        )}
         {warmup?.kind === "weak_word_warmup" && (
-          <WordShadowingList
-            words={warmup.words}
-            inputs={shadowInputs}
-            feedback={shadowFeedback}
-            onSpeak={onSpeak}
-            onInputChange={onShadowInputChange}
-            onCheck={onCheckShadowing}
-          />
+          <>
+            <div className="subsection-title">
+              <strong>Weak Words</strong>
+              <span>按问题原因复习</span>
+            </div>
+            <WordShadowingList
+              words={warmup.words}
+              inputs={shadowInputs}
+              feedback={shadowFeedback}
+              onSpeak={onSpeak}
+              onInputChange={onShadowInputChange}
+              onCheck={onCheckShadowing}
+            />
+          </>
         )}
       </section>
 
@@ -784,32 +835,65 @@ function DailySessionView({
 }
 
 function VocabularyView({
-  words,
+  wordBank,
+  seenWords,
+  dailyNewWords,
+  dailyWeakWords,
   onComplete,
 }: {
-  words: WeakWord[];
+  wordBank: WordBankItem[];
+  seenWords: SeenWord[];
+  dailyNewWords: WordBankItem[];
+  dailyWeakWords: WeakWord[];
   onComplete: (word: WeakWord, correct: boolean) => void;
 }) {
+  const themes = Array.from(new Set(wordBank.map((word) => word.theme))).sort();
+
   return (
     <div className="stack">
       <section className="panel">
         <div className="section-title">
-          <h2>单词复习</h2>
-          <span>中文理解，英文输出</span>
+          <h2>Daily New Words</h2>
+          <span>{dailyNewWords.length} 个</span>
         </div>
-        {words.length === 0 && (
+        {dailyNewWords.length === 0 && (
           <div className="mini-empty">
             <CheckCircle2 size={22} />
-            <p>今天没有到期的 Weak Words。可以去家长内容里补充 Topic Words。</p>
+            <p>当前主题下没有可用新词，可以切换主题或导入 PET Word Bank。</p>
           </div>
         )}
         <div className="word-review-list">
-          {words.map((word) => (
+          {dailyNewWords.map((word) => (
             <article className="word-review" key={word.term}>
               <div>
                 <h3>{word.term}</h3>
                 <p>{word.chineseGloss}</p>
-                <span>{stageLabel(word.reviewStage)}</span>
+                <span>{word.theme}</span>
+              </div>
+              <span className="word-status">新词</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="panel">
+        <div className="section-title">
+          <h2>Weak Words</h2>
+          <span>{dailyWeakWords.length} 个待处理</span>
+        </div>
+        {dailyWeakWords.length === 0 && (
+          <div className="mini-empty">
+            <CheckCircle2 size={22} />
+            <p>今天没有需要优先复习的 Weak Words。</p>
+          </div>
+        )}
+        <div className="word-review-list">
+          {dailyWeakWords.map((word) => (
+            <article className="word-review" key={word.term}>
+              <div>
+                <h3>{word.term}</h3>
+                <p>{word.chineseGloss}</p>
+                <span>{weakReasonLabel(word.reason)} · {stageLabel(word.reviewStage)}</span>
               </div>
               <div className="split-actions">
                 <button className="secondary-button" onClick={() => onComplete(word, false)}>
@@ -820,6 +904,25 @@ function VocabularyView({
                 </button>
               </div>
             </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="panel">
+        <div className="section-title">
+          <h2>PET Word Bank</h2>
+          <span>{wordBank.length} 个词</span>
+        </div>
+        <div className="word-bank-summary">
+          <Metric icon={<BookOpen size={18} />} value={`${themes.length} 个主题`} label="Word Themes" />
+          <Metric icon={<CheckCircle2 size={18} />} value={`${seenWords.length} 个已见`} label="Seen Words" />
+        </div>
+        <div className="chips compact">
+          {themes.slice(0, 12).map((theme) => (
+            <span className="chip" key={theme}>
+              {theme}
+              <small>{wordBank.filter((word) => word.theme === theme).length}</small>
+            </span>
           ))}
         </div>
       </section>
@@ -915,6 +1018,7 @@ function GuardianContentView({
   onAddTopicWord,
   onAddPrompt,
   onUpdateDailyLimit,
+  onUpdateWordTheme,
   onResetDemoData,
 }: {
   settings: HouseholdSettings;
@@ -922,6 +1026,7 @@ function GuardianContentView({
   onAddTopicWord: (term: string, chineseGloss: string) => void;
   onAddPrompt: (input: { title: string; question: string; part: Prompt["part"]; imageUrl?: string }) => void;
   onUpdateDailyLimit: (dailyWeakWordLimit: number) => void;
+  onUpdateWordTheme: (currentWordTheme: string) => void;
   onResetDemoData: () => void;
 }) {
   const [wordTerm, setWordTerm] = useState("playground");
@@ -969,7 +1074,21 @@ function GuardianContentView({
           <span>今日单词</span>
         </div>
         <label className="field">
-          <span>每日 Weak Words 数量</span>
+          <span>当前 Word Theme</span>
+          <select value={settings.currentWordTheme} onChange={(event) => onUpdateWordTheme(event.target.value)}>
+            {["school", "family", "food", "travel", "sport", "work", "nature", "general"].map((theme) => (
+              <option key={theme} value={theme}>
+                {theme}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="field">
+          <span>每日新词数量</span>
+          <input type="number" min={1} max={20} value={settings.dailyNewWordCount} readOnly />
+        </label>
+        <label className="field">
+          <span>每日 Weak Words 上限</span>
           <input
             type="number"
             min={1}
@@ -1054,7 +1173,7 @@ function Metric({ icon, value, label }: { icon: React.ReactNode; value: string; 
   );
 }
 
-function WordList({ words, compact = false }: { words: WeakWord[]; compact?: boolean }) {
+function WordList({ words, compact = false }: { words: VocabularyItem[]; compact?: boolean }) {
   return (
     <div className={compact ? "chips compact" : "chips"}>
       {words.map((word) => (
@@ -1075,18 +1194,18 @@ function WordShadowingList({
   onInputChange,
   onCheck,
 }: {
-  words: WeakWord[];
+  words: VocabularyItem[];
   inputs: Record<string, string>;
   feedback: Record<string, WordShadowingFeedback>;
   onSpeak: (text: string) => void;
   onInputChange: (word: string, value: string) => void;
-  onCheck: (word: WeakWord) => void;
+  onCheck: (word: VocabularyItem) => void;
 }) {
   if (words.length === 0) {
     return (
       <div className="mini-empty">
         <CheckCircle2 size={22} />
-        <p>今天没有到期 Weak Words，可以直接进入 Speaking Part 1。</p>
+        <p>这一组今天没有要练的词，可以直接进入 Speaking。</p>
       </div>
     );
   }
@@ -1274,4 +1393,12 @@ function stageLabel(stage: WeakWord["reviewStage"]) {
   if (stage === "tomorrow") return "明天复习";
   if (stage === "threeDaysLater") return "三天后复习";
   return "已掌握";
+}
+
+function weakReasonLabel(reason: WeakWord["reason"]) {
+  if (reason === "pronunciation") return "发音不清";
+  if (reason === "recall") return "想不起来";
+  if (reason === "meaning") return "意思不稳";
+  if (reason === "spelling") return "拼写/识别";
+  return "用法问题";
 }

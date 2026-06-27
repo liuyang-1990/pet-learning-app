@@ -36,6 +36,7 @@ describe("PetPrototype", () => {
 
     fireEvent.click(screen.getByRole("button", { name: "内容" }));
 
-    expect(screen.getByLabelText("每日 Weak Words 数量")).toHaveValue(5);
+    expect(screen.getByLabelText("每日新词数量")).toHaveValue(5);
+    expect(screen.getByLabelText("每日 Weak Words 上限")).toHaveValue(5);
   });
 });

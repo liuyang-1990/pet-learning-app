@@ -438,6 +438,7 @@ a {
 }
 
 .field input,
+.field select,
 .field textarea {
   width: 100%;
   border: 1px solid var(--line);
@@ -446,6 +447,10 @@ a {
   color: var(--ink);
   background: #fffdf8;
   line-height: 1.45;
+}
+
+.field select {
+  min-height: 44px;
 }
 
 .field textarea {
@@ -525,6 +530,24 @@ a {
 .shadow-list {
   display: grid;
   gap: 10px;
+}
+
+.subsection-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 12px 0 10px;
+}
+
+.subsection-title strong {
+  color: var(--ink);
+}
+
+.subsection-title span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .shadow-card {
@@ -679,6 +702,23 @@ a {
 
 .word-review p {
   color: var(--muted);
+}
+
+.word-status {
+  justify-self: start;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--leaf-dark);
+  background: #eaf6ee;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.word-bank-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
 .timeline-item {
