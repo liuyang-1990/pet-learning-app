@@ -501,6 +501,41 @@ export function assessWordShadowing(input: WordShadowingInput): WordShadowingFee
 
 export function getWordExample(word: VocabularyItem): WordExample {
   const examples: Record<string, WordExample> = {
+    class: {
+      focusWord: "class",
+      sentence: "I have maths class right after lunch.",
+      chinese: "class = 课；我午饭后马上有数学课。",
+    },
+    classical: {
+      focusWord: "classical",
+      sentence: "My dad likes classical music, but I prefer pop.",
+      chinese: "classical = 古典的；我爸爸喜欢古典音乐，但我更喜欢流行音乐。",
+    },
+    classroom: {
+      focusWord: "classroom",
+      sentence: "Our classroom is quiet in the morning.",
+      chinese: "classroom = 教室；早上的时候我们教室很安静。",
+    },
+    exam: {
+      focusWord: "exam",
+      sentence: "I felt nervous before the English exam.",
+      chinese: "exam = 考试；英语考试前我有点紧张。",
+    },
+    examiner: {
+      focusWord: "examiner",
+      sentence: "The examiner asked me two easy questions.",
+      chinese: "examiner = 考官；考官问了我两个简单的问题。",
+    },
+    example: {
+      focusWord: "example",
+      sentence: "Can you give me one example?",
+      chinese: "example = 例子；你能给我一个例子吗？",
+    },
+    headteacher: {
+      focusWord: "headteacher",
+      sentence: "The headteacher spoke to us after assembly.",
+      chinese: "headteacher = 校长；校长在集会后和我们讲话。",
+    },
     usually: {
       focusWord: "usually",
       sentence: "I usually grab a snack after school.",
@@ -536,6 +571,36 @@ export function getWordExample(word: VocabularyItem): WordExample {
       sentence: "I finished my homework before dinner.",
       chinese: "homework = 家庭作业；我晚饭前完成了作业。",
     },
+    lesson: {
+      focusWord: "lesson",
+      sentence: "The lesson was funny, so everyone joined in.",
+      chinese: "lesson = 课；这节课很有趣，所以大家都参与了。",
+    },
+    primaryschool: {
+      focusWord: "primary school",
+      sentence: "My primary school was only ten minutes from home.",
+      chinese: "primary school = 小学；我的小学离家只有十分钟路程。",
+    },
+    school: {
+      focusWord: "school",
+      sentence: "I walk to school with my friend every morning.",
+      chinese: "school = 学校；我每天早上和朋友一起走路去学校。",
+    },
+    schoolchild: {
+      focusWord: "schoolchild",
+      sentence: "Every schoolchild needs a quiet place to read.",
+      chinese: "schoolchild = 学童；每个学生都需要一个安静读书的地方。",
+    },
+    student: {
+      focusWord: "student",
+      sentence: "She is a new student in our class.",
+      chinese: "student = 学生；她是我们班的新学生。",
+    },
+    teacher: {
+      focusWord: "teacher",
+      sentence: "My teacher helped me fix my answer.",
+      chinese: "teacher = 老师；我的老师帮我修改了答案。",
+    },
     classmate: {
       focusWord: "classmate",
       sentence: "My classmate helped me with the project.",
@@ -547,19 +612,128 @@ export function getWordExample(word: VocabularyItem): WordExample {
       chinese: "subject = 科目；科学是我今年最喜欢的科目。",
     },
   };
-  const key = normalizeSpokenText(word.term);
+  const term = cleanExampleTerm(word.term);
+  const key = normalizeSpokenText(term);
 
   return (
     examples[key] ?? {
-      focusWord: word.term,
-      sentence: `I heard the word ${word.term} in a conversation.`,
-      chinese: `${word.term} = ${displayWordGloss(word.chineseGloss)}；我在一段对话里听到了 ${word.term} 这个词。`,
+      focusWord: term,
+      ...makeNaturalFallbackExample(term, word.chineseGloss),
     }
   );
 }
 
 export function displayWordGloss(gloss: string): string {
   return gloss === "Cambridge B1/PET 官方词表" ? "PET 词汇" : gloss;
+}
+
+function cleanExampleTerm(term: string): string {
+  const parts = term
+    .split("/")
+    .map((part) => part.trim().replace(/^[^a-zA-Z]+|[^a-zA-Z\s-]+$/g, ""))
+    .filter(Boolean);
+  const preferredPart =
+    parts.length > 1
+      ? parts.reduce((shortest, current) =>
+          current.length < shortest.length ? current : shortest,
+        )
+      : parts[0] ?? term;
+
+  return preferredPart
+    .replace(/^of the\s+/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function makeNaturalFallbackExample(
+  term: string,
+  chineseGloss: string,
+): Omit<WordExample, "focusWord"> {
+  const normalized = normalizeSpokenText(term);
+  const displayGloss = displayWordGloss(chineseGloss);
+  const meaning =
+    displayGloss === "PET 词汇" || displayGloss === ""
+      ? "中文释义待补充"
+      : displayGloss;
+  const sentence = fallbackSentenceForTerm(term, normalized);
+
+  return {
+    sentence,
+    chinese: `${term} = ${meaning}；${translateFallbackSentence(term, sentence)}`,
+  };
+}
+
+function fallbackSentenceForTerm(term: string, normalized: string): string {
+  if (term.includes(" ")) {
+    return `I can talk about ${term} in my speaking answer.`;
+  }
+
+  if (normalized.endsWith("ly") && normalized.length > 4) {
+    return `She answered ${term} when the teacher asked her.`;
+  }
+
+  if (normalized.endsWith("ed") && normalized.length > 4) {
+    return `I felt really ${term} after the long lesson.`;
+  }
+
+  if (normalized.endsWith("ing") && normalized.length > 5) {
+    return `This activity is ${term}, so I want to try it again.`;
+  }
+
+  if (
+    normalized.endsWith("ful") ||
+    normalized.endsWith("ive") ||
+    normalized.endsWith("able") ||
+    normalized.endsWith("al")
+  ) {
+    return `That sounds really ${term}, but I need more time.`;
+  }
+
+  const templates = [
+    `My teacher asked us to write about ${term} today.`,
+    `I need to check the ${term} before class.`,
+    `Let's talk about the ${term} after school.`,
+    `I put the ${term} in my bag before I left.`,
+  ];
+  const index = normalized.charCodeAt(0) % templates.length || 0;
+
+  return templates[index];
+}
+
+function translateFallbackSentence(term: string, sentence: string): string {
+  if (sentence.includes("speaking answer")) {
+    return `我可以在口语回答里谈到 ${term}。`;
+  }
+
+  if (sentence.includes("answered")) {
+    return `老师问她时，她${term}地回答了。`;
+  }
+
+  if (sentence.includes("felt really")) {
+    return `上完很长的一节课后，我感到很${term}。`;
+  }
+
+  if (sentence.includes("activity")) {
+    return `这个活动很${term}，所以我想再试一次。`;
+  }
+
+  if (sentence.includes("sounds really")) {
+    return `那听起来很${term}，但我还需要更多时间。`;
+  }
+
+  if (sentence.includes("write about")) {
+    return `老师让我们今天写一写 ${term}。`;
+  }
+
+  if (sentence.includes("check the")) {
+    return `上课前我需要检查一下 ${term}。`;
+  }
+
+  if (sentence.includes("talk about")) {
+    return `我们放学后聊聊 ${term} 吧。`;
+  }
+
+  return `我离开前把 ${term} 放进了书包。`;
 }
 
 export function completeVocabularyReview(

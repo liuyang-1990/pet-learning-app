@@ -240,10 +240,20 @@ describe("PET Learning App", () => {
 
   it("shows spoken examples with the word and Chinese meaning", () => {
     const example = getWordExample({ term: "background", chineseGloss: "背景" });
+    const examExample = getWordExample({
+      term: "examination / exam",
+      chineseGloss: "考试",
+    });
+    const fallback = getWordExample({ term: "project", chineseGloss: "项目" });
 
     expect(example.focusWord).toBe("background");
     expect(example.sentence).toContain("background");
     expect(example.chinese).toContain("背景");
+    expect(examExample.focusWord).toBe("exam");
+    expect(examExample.sentence).toContain("English exam");
+    expect(fallback.sentence).not.toContain("I heard the word");
+    expect(fallback.sentence).toContain("project");
+    expect(fallback.chinese).toContain("项目");
   });
 
   it("provides a part 2 image and gives feedback on a picture description", () => {
