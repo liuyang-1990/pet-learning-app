@@ -9,6 +9,7 @@ import {
   completeVocabularyReview,
   createDemoHousehold,
   ensurePart2Image,
+  getPart2ImageChoices,
   getGuardianProgress,
   getLearnerHome,
   purgeExpiredRecentRecordings,
@@ -246,5 +247,13 @@ describe("PET Learning App", () => {
     expect(result.weakWords.map((word) => word.term)).toEqual(
       expect.arrayContaining(["because"]),
     );
+  });
+
+  it("offers multiple built-in images for speaking part 2 practice", () => {
+    const household = createDemoHousehold();
+    const prompt = household.presetPrompts.find((item) => item.part === "part_2");
+
+    expect(prompt).toBeDefined();
+    expect(prompt && getPart2ImageChoices(prompt)).toHaveLength(4);
   });
 });

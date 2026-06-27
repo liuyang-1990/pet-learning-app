@@ -12,6 +12,7 @@ import {
   Mic,
   Play,
   RotateCcw,
+  Shuffle,
   Trophy,
   Upload,
   Volume2,
@@ -27,6 +28,7 @@ import {
   continuePart1Conversation,
   createDemoHousehold,
   ensurePart2Image,
+  getPart2ImageChoices,
   getGuardianProgress,
   getLearnerHome,
   submitPart2Answer,
@@ -62,6 +64,7 @@ export function PetPrototype() {
     "In the picture, children are playing in a park and a woman is sitting on a bench.",
   );
   const [part2Feedback, setPart2Feedback] = useState<SpeakingAttemptResult | null>(null);
+  const [part2ImageUrl, setPart2ImageUrl] = useState<string | null>(null);
   const [isPart2Thinking, setIsPart2Thinking] = useState(false);
   const [part1Turns, setPart1Turns] = useState<Part1ConversationTurn[]>([]);
   const [part1FollowUp, setPart1FollowUp] = useState<string | null>(null);
@@ -93,6 +96,7 @@ export function PetPrototype() {
     setFeedback(null);
     setPart2Feedback(null);
     setPart2Transcript("In the picture, children are playing in a park and a woman is sitting on a bench.");
+    setPart2ImageUrl(null);
     setPart1Turns([]);
     setPart1FollowUp(null);
     setPart1Feedback(null);
@@ -193,6 +197,20 @@ export function PetPrototype() {
     }
 
     setPart2Feedback(result);
+  };
+
+  const shufflePart2Image = () => {
+    if (!session) return;
+
+    const part2 = session.steps.find((step) => step.kind === "speaking_part_2");
+    if (part2?.kind !== "speaking_part_2") return;
+
+    const choices = getPart2ImageChoices(part2.prompt);
+    const currentImage = part2ImageUrl ?? ensurePart2Image(part2.prompt).imageUrl;
+    const candidates = choices.filter((imageUrl) => imageUrl !== currentImage);
+    const nextImage = candidates[Math.floor(Math.random() * candidates.length)] ?? choices[0] ?? null;
+
+    setPart2ImageUrl(nextImage);
   };
 
   const updateShadowInput = (word: string, value: string) => {
@@ -389,6 +407,7 @@ export function PetPrototype() {
               feedback={feedback}
               part2Transcript={part2Transcript}
               part2Feedback={part2Feedback}
+              part2ImageUrl={part2ImageUrl}
               isPart2Thinking={isPart2Thinking}
               isAiThinking={isAiThinking}
               part1Turns={part1Turns}
@@ -402,6 +421,7 @@ export function PetPrototype() {
               onStart={startPractice}
               onTranscriptChange={setTranscript}
               onPart2TranscriptChange={setPart2Transcript}
+              onShufflePart2Image={shufflePart2Image}
               onSubmit={submitAttempt}
               onSubmitPart2={submitPart2}
               onRetake={retake}
@@ -486,6 +506,7 @@ function DailySessionView({
   feedback,
   part2Transcript,
   part2Feedback,
+  part2ImageUrl,
   isAiThinking,
   isPart2Thinking,
   part1Turns,
@@ -499,6 +520,7 @@ function DailySessionView({
   onStart,
   onTranscriptChange,
   onPart2TranscriptChange,
+  onShufflePart2Image,
   onSubmit,
   onSubmitPart2,
   onRetake,
@@ -514,6 +536,7 @@ function DailySessionView({
   feedback: SpeakingAttemptResult | null;
   part2Transcript: string;
   part2Feedback: SpeakingAttemptResult | null;
+  part2ImageUrl: string | null;
   isAiThinking: boolean;
   isPart2Thinking: boolean;
   part1Turns: Part1ConversationTurn[];
@@ -527,6 +550,7 @@ function DailySessionView({
   onStart: () => void;
   onTranscriptChange: (value: string) => void;
   onPart2TranscriptChange: (value: string) => void;
+  onShufflePart2Image: () => void;
   onSubmit: () => void;
   onSubmitPart2: () => void;
   onRetake: () => void;
@@ -553,6 +577,11 @@ function DailySessionView({
   const part1 = session.steps.find((step) => step.kind === "speaking_part_1");
   const part2 = session.steps.find((step) => step.kind === "speaking_part_2");
   const warmup = session.steps.find((step) => step.kind === "weak_word_warmup");
+  const basePart2Prompt = part2?.kind === "speaking_part_2" ? ensurePart2Image(part2.prompt) : null;
+  const visiblePart2Prompt =
+    basePart2Prompt && part2ImageUrl
+      ? { ...basePart2Prompt, imageUrl: part2ImageUrl }
+      : basePart2Prompt;
   const isPart1Recording = recordingTarget === "part1";
   const isPart2Recording = recordingTarget === "part2";
   const currentQuestion =
@@ -683,11 +712,16 @@ function DailySessionView({
               <p className="eyebrow">Speaking Part 2</p>
               <h2>{part2.prompt.title}</h2>
             </div>
-            <button className="icon-button compact-icon" aria-label="播放 Part 2 问题" onClick={() => onSpeak(part2.prompt.question)}>
-              <Volume2 size={16} />
-            </button>
+            <div className="icon-actions">
+              <button className="icon-button compact-icon" aria-label="随机切换 Part 2 图片" onClick={onShufflePart2Image}>
+                <Shuffle size={16} />
+              </button>
+              <button className="icon-button compact-icon" aria-label="播放 Part 2 问题" onClick={() => onSpeak(part2.prompt.question)}>
+                <Volume2 size={16} />
+              </button>
+            </div>
           </div>
-          <Part2Image prompt={ensurePart2Image(part2.prompt)} />
+          {visiblePart2Prompt && <Part2Image prompt={visiblePart2Prompt} />}
           <p className="prompt-question">{part2.prompt.question}</p>
           <div className="record-row">
             <button className={isPart2Recording ? "danger-button" : "secondary-button"} onClick={() => onToggleRecording("part2")}>

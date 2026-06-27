@@ -402,6 +402,16 @@ export function ensurePart2Image(prompt: Prompt): Prompt {
   };
 }
 
+export function getPart2ImageChoices(prompt: Prompt): string[] {
+  return uniqueValues([
+    prompt.imageUrl,
+    createDefaultPart2ImageDataUrl(),
+    createPart2SceneImageDataUrl("Classroom activity", "#f6efe5", "#86b7d6", "#e7a45f"),
+    createPart2SceneImageDataUrl("Family kitchen", "#fff3c9", "#74a57f", "#d96c5f"),
+    createPart2SceneImageDataUrl("Sports day", "#e4f2ff", "#66b37a", "#557bb6"),
+  ]);
+}
+
 export function continuePart1Conversation(
   session: DailySession,
   input: Part1ConversationInput,
@@ -851,6 +861,10 @@ function slugify(value: string): string {
     .replace(/(^-|-$)/g, "");
 }
 
+function uniqueValues(values: Array<string | undefined>): string[] {
+  return Array.from(new Set(values.filter((value): value is string => Boolean(value))));
+}
+
 function createDefaultPart2ImageDataUrl() {
   const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620">
@@ -875,6 +889,38 @@ function createDefaultPart2ImageDataUrl() {
       <path d="M125 260 C90 210 115 145 178 148 C230 150 257 204 235 257 Z" fill="#4f9d69"/>
       <rect x="170" y="250" width="22" height="135" fill="#79553b"/>
       <text x="450" y="570" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#24496c">Park scene</text>
+    </svg>`;
+
+  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+}
+
+function createPart2SceneImageDataUrl(
+  label: string,
+  sky: string,
+  ground: string,
+  accent: string,
+) {
+  const svg = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620">
+      <rect width="900" height="620" fill="${sky}"/>
+      <rect y="410" width="900" height="210" fill="${ground}"/>
+      <rect x="95" y="130" width="235" height="170" rx="18" fill="#ffffff" stroke="#2d425a" stroke-width="8"/>
+      <line x1="125" y1="178" x2="300" y2="178" stroke="${accent}" stroke-width="14" stroke-linecap="round"/>
+      <line x1="125" y1="226" x2="255" y2="226" stroke="#6d7f8f" stroke-width="12" stroke-linecap="round"/>
+      <circle cx="455" cy="270" r="35" fill="#efb88f"/>
+      <rect x="420" y="304" width="72" height="98" rx="20" fill="${accent}"/>
+      <line x1="430" y1="340" x2="365" y2="382" stroke="#6b3b2a" stroke-width="14" stroke-linecap="round"/>
+      <line x1="488" y1="340" x2="555" y2="382" stroke="#6b3b2a" stroke-width="14" stroke-linecap="round"/>
+      <line x1="438" y1="400" x2="405" y2="500" stroke="#2d425a" stroke-width="17" stroke-linecap="round"/>
+      <line x1="475" y1="400" x2="510" y2="500" stroke="#2d425a" stroke-width="17" stroke-linecap="round"/>
+      <circle cx="640" cy="292" r="32" fill="#f2c29d"/>
+      <rect x="610" y="324" width="65" height="96" rx="18" fill="#5d8cc1"/>
+      <line x1="616" y1="356" x2="560" y2="402" stroke="#70402c" stroke-width="13" stroke-linecap="round"/>
+      <line x1="669" y1="356" x2="730" y2="390" stroke="#70402c" stroke-width="13" stroke-linecap="round"/>
+      <ellipse cx="720" cy="450" rx="54" ry="20" fill="#ffffff" stroke="#2d425a" stroke-width="5"/>
+      <rect x="155" y="410" width="130" height="70" rx="10" fill="#b77a4d"/>
+      <rect x="185" y="350" width="70" height="62" rx="8" fill="#d9a15f"/>
+      <text x="450" y="570" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#24496c">${label}</text>
     </svg>`;
 
   return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
