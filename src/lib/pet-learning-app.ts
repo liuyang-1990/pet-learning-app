@@ -179,6 +179,7 @@ type WordShadowingInput = {
   word: string;
   spokenText: string;
   chineseGloss?: string;
+  assessment?: WordPronunciationAssessment;
 };
 
 export type WordExample = {
@@ -187,12 +188,31 @@ export type WordExample = {
   chinese: string;
 };
 
+export type PronunciationScoreDetail = {
+  score: number;
+  feedback: string;
+};
+
+export type WordPronunciationAssessment = {
+  overallScore: number;
+  pronunciation: PronunciationScoreDetail;
+  stress: PronunciationScoreDetail;
+  clarity: PronunciationScoreDetail;
+  feedback: string;
+};
+
 export type WordShadowingFeedback = {
   status: "strong" | "okay" | "needs_practice";
   score: number;
   transcript: string;
   feedback: string;
   example: WordExample;
+  details: {
+    pronunciation: PronunciationScoreDetail;
+    stress: PronunciationScoreDetail;
+    clarity: PronunciationScoreDetail;
+  };
+  source: "audio_ai" | "transcript_match";
 };
 
 export type SpeakingAttemptResult = {
@@ -482,7 +502,7 @@ export function continuePart1Conversation(
 export function assessWordShadowing(input: WordShadowingInput): WordShadowingFeedback {
   const target = normalizeSpokenText(input.word);
   const spoken = normalizeSpokenText(input.spokenText);
-  const score = scorePronunciationMatch(target, spoken);
+  const score = input.assessment?.overallScore ?? scorePronunciationMatch(target, spoken);
   const status =
     score >= 85 ? "strong" : score >= 65 ? "okay" : "needs_practice";
   const example = getWordExample({
@@ -494,8 +514,16 @@ export function assessWordShadowing(input: WordShadowingInput): WordShadowingFee
     status,
     score,
     transcript: input.spokenText.trim(),
-    feedback: wordShadowingFeedbackText(input.word, score, input.spokenText),
+    feedback: input.assessment?.feedback ?? wordShadowingFeedbackText(input.word, score, input.spokenText),
     example,
+    details: input.assessment
+      ? {
+          pronunciation: input.assessment.pronunciation,
+          stress: input.assessment.stress,
+          clarity: input.assessment.clarity,
+        }
+      : makeTranscriptMatchDetails(score, input.spokenText),
+    source: input.assessment ? "audio_ai" : "transcript_match",
   };
 }
 
@@ -1150,6 +1178,43 @@ function wordShadowingFeedbackText(word: string, score: number, spokenText: stri
   }
 
   return `AI 听到的内容和 “${word}” 差距较大。先听英音，再慢速跟读一遍。`;
+}
+
+function makeTranscriptMatchDetails(
+  score: number,
+  spokenText: string,
+): WordShadowingFeedback["details"] {
+  if (!spokenText.trim()) {
+    return {
+      pronunciation: {
+        score: 35,
+        feedback: "本次没有识别到稳定英文，先确认麦克风输入和音量。",
+      },
+      stress: {
+        score: 35,
+        feedback: "没有可分析的音频识别结果，暂时无法判断重音。",
+      },
+      clarity: {
+        score: 35,
+        feedback: "清晰度不足或录音太短，请靠近麦克风再试。",
+      },
+    };
+  }
+
+  return {
+    pronunciation: {
+      score,
+      feedback: score >= 85 ? "目标词识别清楚。" : "目标词识别还不够稳定。",
+    },
+    stress: {
+      score: Math.max(40, Math.min(92, score - 4)),
+      feedback: "当前为转写匹配估算，重音只做粗略参考。",
+    },
+    clarity: {
+      score: Math.max(40, Math.min(94, score + 2)),
+      feedback: score >= 85 ? "录音整体清楚。" : "请放慢速度，把词尾读完整。",
+    },
+  };
 }
 
 function mergeWeakWords(current: WeakWord[], incoming: WeakWord[]): WeakWord[] {

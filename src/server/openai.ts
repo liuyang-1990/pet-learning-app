@@ -7,6 +7,7 @@ import {
   type DailySession,
   type Part1ConversationResult,
   type Part1ConversationTurn,
+  type WordPronunciationAssessment,
   type SpeakingAttemptResult,
 } from "@/lib/pet-learning-app";
 
@@ -36,6 +37,77 @@ export async function transcribeAudio(file: File) {
   });
 
   return result.text;
+}
+
+export async function assessPronunciationWithAudio(input: {
+  file: File;
+  targetWord: string;
+  chineseGloss?: string;
+  transcript: string;
+}): Promise<WordPronunciationAssessment | null> {
+  if (!hasOpenAIKey()) {
+    return null;
+  }
+
+  const audio = await input.file.arrayBuffer();
+  const format = audioFormatForFile(input.file);
+
+  if (!format) {
+    return null;
+  }
+
+  try {
+    const response = await getOpenAIClient().chat.completions.create({
+      model: process.env.OPENAI_AUDIO_ANALYSIS_MODEL ?? "gpt-audio-1.5",
+      messages: [
+        {
+          role: "system",
+          content:
+            "You are a careful British English pronunciation coach for a Cambridge B1 Preliminary learner. Return only compact JSON.",
+        },
+        {
+          role: "user",
+          content: [
+            {
+              type: "text",
+              text: JSON.stringify({
+                task:
+                  "Evaluate whether the learner clearly said the target word. Score for a child-friendly practice app, not an official exam.",
+                targetAccent: "British English",
+                targetWord: input.targetWord,
+                chineseGloss: input.chineseGloss ?? "",
+                transcript: input.transcript,
+                requiredShape: {
+                  overallScore: "0-100 integer",
+                  pronunciationScore: "0-100 integer for individual sounds",
+                  stressScore: "0-100 integer for word stress/rhythm",
+                  clarityScore: "0-100 integer for loudness, pace, and recognisability",
+                  feedback: "short Chinese feedback, one concrete next step",
+                  pronunciationFeedback: "short Chinese note about sounds",
+                  stressFeedback: "short Chinese note about stress/rhythm",
+                  clarityFeedback: "short Chinese note about clarity",
+                },
+              }),
+            },
+            {
+              type: "input_audio",
+              input_audio: {
+                data: Buffer.from(audio).toString("base64"),
+                format,
+              },
+            },
+          ],
+        },
+      ],
+      response_format: { type: "json_object" },
+      temperature: 0.2,
+    });
+    const parsed = parseJsonObject(response.choices[0]?.message.content ?? "");
+
+    return normalizePronunciationAssessment(parsed);
+  } catch {
+    return null;
+  }
 }
 
 export async function createBritishSpeech(text: string) {
@@ -245,4 +317,52 @@ function parseJsonObject(value: string) {
   } catch {
     return {};
   }
+}
+
+function audioFormatForFile(file: File): "wav" | "mp3" | null {
+  if (file.type.includes("wav") || file.name.endsWith(".wav")) return "wav";
+  if (file.type.includes("mpeg") || file.type.includes("mp3") || file.name.endsWith(".mp3")) return "mp3";
+  return null;
+}
+
+function normalizePronunciationAssessment(
+  parsed: Record<string, unknown>,
+): WordPronunciationAssessment {
+  const overallScore = clampScore(parsed.overallScore);
+
+  return {
+    overallScore,
+    pronunciation: {
+      score: clampScore(parsed.pronunciationScore ?? overallScore),
+      feedback:
+        typeof parsed.pronunciationFeedback === "string"
+          ? parsed.pronunciationFeedback
+          : "重点音基本可参考总分。",
+    },
+    stress: {
+      score: clampScore(parsed.stressScore ?? overallScore),
+      feedback:
+        typeof parsed.stressFeedback === "string"
+          ? parsed.stressFeedback
+          : "重音节奏基本可参考总分。",
+    },
+    clarity: {
+      score: clampScore(parsed.clarityScore ?? overallScore),
+      feedback:
+        typeof parsed.clarityFeedback === "string"
+          ? parsed.clarityFeedback
+          : "清晰度基本可参考总分。",
+    },
+    feedback:
+      typeof parsed.feedback === "string"
+        ? parsed.feedback
+        : "AI 已结合目标词和录音给出粗略发音评估。",
+  };
+}
+
+function clampScore(value: unknown): number {
+  const score = typeof value === "number" ? value : Number(value);
+
+  if (!Number.isFinite(score)) return 60;
+  return Math.max(0, Math.min(100, Math.round(score)));
 }

@@ -231,11 +231,35 @@ describe("PET Learning App", () => {
     expect(clear.status).toBe("strong");
     expect(clear.score).toBeGreaterThanOrEqual(85);
     expect(clear.example.sentence).toContain("usually");
+    expect(clear.details.pronunciation.score).toBeGreaterThanOrEqual(85);
+    expect(clear.source).toBe("transcript_match");
     expect(unclear.status).toBe("okay");
     expect(unclear.score).toBeGreaterThanOrEqual(65);
     expect(unclear.transcript).toBe("enviroment");
     expect(missed.status).toBe("needs_practice");
     expect(missed.feedback).toContain("没有稳定识别");
+    expect(missed.details.clarity.feedback).toContain("麦克风");
+  });
+
+  it("uses audio AI pronunciation assessment when available", () => {
+    const result = assessWordShadowing({
+      word: "teacher",
+      chineseGloss: "老师",
+      spokenText: "teacher",
+      assessment: {
+        overallScore: 82,
+        pronunciation: { score: 78, feedback: "t 音清楚，结尾可以再轻一点。" },
+        stress: { score: 85, feedback: "重音位置自然。" },
+        clarity: { score: 88, feedback: "声音清楚，速度合适。" },
+        feedback: "整体能听清 teacher，再注意结尾不要拖长。",
+      },
+    });
+
+    expect(result.score).toBe(82);
+    expect(result.source).toBe("audio_ai");
+    expect(result.details.pronunciation.score).toBe(78);
+    expect(result.details.stress.feedback).toContain("重音");
+    expect(result.feedback).toContain("teacher");
   });
 
   it("shows spoken examples with the word and Chinese meaning", () => {

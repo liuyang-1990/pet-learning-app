@@ -88,6 +88,7 @@ export function PetPrototype() {
     part2: null,
   });
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const shadowRecorderRef = useRef<{ stop: () => Promise<Blob> } | null>(null);
   const chunksRef = useRef<Blob[]>([]);
   const now = useMemo(() => new Date(), []);
 
@@ -227,11 +228,11 @@ export function PetPrototype() {
     }
 
     if (shadowRecordingTerm) {
-      mediaRecorderRef.current?.stop();
+      void shadowRecorderRef.current?.stop();
       return;
     }
 
-    if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === "undefined") {
+    if (!navigator.mediaDevices?.getUserMedia) {
       setShadowRecordingError("当前浏览器不支持录音评分，可以先用英音示范跟读。");
       setShadowFeedback((current) => ({
         ...current,
@@ -244,6 +245,53 @@ export function PetPrototype() {
       return;
     }
 
+    if (!getAudioContextConstructor()) {
+      if (typeof MediaRecorder !== "undefined") {
+        await scoreShadowingWithMediaRecorder(word);
+        return;
+      }
+
+      setShadowRecordingError("当前浏览器不支持录音评分，可以先用英音示范跟读。");
+      return;
+    }
+
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const recorder = await createWavRecorder(stream, async (blob) => {
+        setShadowRecordingTerm(null);
+        shadowRecorderRef.current = null;
+        const result = await uploadPronunciationRecording(blob, word);
+
+        if (result) {
+          setHousehold(result.household);
+          setShadowFeedback((current) => ({
+            ...current,
+            [word.term]: result.feedback,
+          }));
+          return;
+        }
+
+        setShadowFeedback((current) => ({
+          ...current,
+          [word.term]: assessWordShadowing({
+            word: word.term,
+            chineseGloss: word.chineseGloss,
+            spokenText: "",
+          }),
+        }));
+      });
+
+      shadowRecorderRef.current = recorder;
+      setShadowRecordingTerm(word.term);
+      setShadowRecordingError(null);
+    } catch {
+      setShadowRecordingTerm(null);
+      shadowRecorderRef.current = null;
+      setShadowRecordingError("无法获取麦克风权限，可以检查浏览器权限后再试。");
+    }
+  };
+
+  const scoreShadowingWithMediaRecorder = async (word: VocabularyItem) => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       chunksRef.current = [];
@@ -258,11 +306,15 @@ export function PetPrototype() {
         stream.getTracks().forEach((track) => track.stop());
         const blob = new Blob(chunksRef.current, { type: recorder.mimeType || "audio/webm" });
         setShadowRecordingTerm(null);
-        void uploadRecording(blob, `Shadowing: ${word.term}`).then((result) => {
-          const spokenText = result?.transcript ?? "";
-
+        shadowRecorderRef.current = null;
+        void uploadPronunciationRecording(blob, word).then((result) => {
           if (result) {
             setHousehold(result.household);
+            setShadowFeedback((current) => ({
+              ...current,
+              [word.term]: result.feedback,
+            }));
+            return;
           }
 
           setShadowFeedback((current) => ({
@@ -270,13 +322,19 @@ export function PetPrototype() {
             [word.term]: assessWordShadowing({
               word: word.term,
               chineseGloss: word.chineseGloss,
-              spokenText,
+              spokenText: "",
             }),
           }));
         });
       };
 
       mediaRecorderRef.current = recorder;
+      shadowRecorderRef.current = {
+        stop: async () => {
+          recorder.stop();
+          return new Blob();
+        },
+      };
       recorder.start();
       setShadowRecordingTerm(word.term);
       setShadowRecordingError(null);
@@ -1311,12 +1369,40 @@ function WordShadowingList({
                   <span>AI pronunciation score</span>
                   <p>{result.feedback}</p>
                   {result.transcript && <small>AI 识别：{result.transcript}</small>}
+                  <small>
+                    {result.source === "audio_ai" ? "音频 AI 分析" : "转写匹配估算"}
+                  </small>
                 </div>
+              </div>
+            )}
+            {result && (
+              <div className="pronunciation-breakdown">
+                <ScoreDetail label="发音" detail={result.details.pronunciation} />
+                <ScoreDetail label="重音" detail={result.details.stress} />
+                <ScoreDetail label="清晰度" detail={result.details.clarity} />
               </div>
             )}
           </article>
         );
       })}
+    </div>
+  );
+}
+
+function ScoreDetail({
+  label,
+  detail,
+}: {
+  label: string;
+  detail: { score: number; feedback: string };
+}) {
+  return (
+    <div className="score-detail">
+      <div>
+        <strong>{detail.score}</strong>
+        <span>{label}</span>
+      </div>
+      <p>{detail.feedback}</p>
     </div>
   );
 }
@@ -1410,6 +1496,33 @@ async function uploadRecording(blob: Blob, promptTitle: string) {
   }
 }
 
+async function uploadPronunciationRecording(blob: Blob, word: VocabularyItem) {
+  const form = new FormData();
+  const filename = blob.type.includes("wav") ? "shadowing.wav" : "shadowing.webm";
+  form.append("audio", blob, filename);
+  form.append("targetWord", word.term);
+  form.append("chineseGloss", word.chineseGloss);
+
+  try {
+    const response = await fetch("/api/audio/pronunciation", {
+      method: "POST",
+      body: form,
+    });
+
+    if (!response.ok) return null;
+
+    return (await response.json()) as {
+      transcript: string;
+      feedback: WordShadowingFeedback;
+      recording: RecentRecording;
+      household: HouseholdSpace;
+      usedAudioAssessment: boolean;
+    };
+  } catch {
+    return null;
+  }
+}
+
 async function speakBritish(text: string) {
   if (typeof window === "undefined" || !window.speechSynthesis) return;
 
@@ -1446,6 +1559,106 @@ async function speakBritish(text: string) {
   utterance.rate = 0.86;
   window.speechSynthesis.cancel();
   window.speechSynthesis.speak(utterance);
+}
+
+async function createWavRecorder(
+  stream: MediaStream,
+  onStop: (blob: Blob) => void | Promise<void>,
+) {
+  const AudioContextConstructor = getAudioContextConstructor();
+
+  if (!AudioContextConstructor) {
+    throw new Error("AudioContext is not available");
+  }
+
+  const audioContext = new AudioContextConstructor();
+  const source = audioContext.createMediaStreamSource(stream);
+  const processor = audioContext.createScriptProcessor(4096, 1, 1);
+  const mute = audioContext.createGain();
+  const chunks: Float32Array[] = [];
+  let stopped = false;
+
+  mute.gain.value = 0;
+  processor.onaudioprocess = (event) => {
+    if (stopped) return;
+    chunks.push(new Float32Array(event.inputBuffer.getChannelData(0)));
+  };
+
+  source.connect(processor);
+  processor.connect(mute);
+  mute.connect(audioContext.destination);
+
+  return {
+    stop: async () => {
+      if (stopped) {
+        return encodeWav(chunks, audioContext.sampleRate);
+      }
+
+      stopped = true;
+      source.disconnect();
+      processor.disconnect();
+      mute.disconnect();
+      stream.getTracks().forEach((track) => track.stop());
+      await audioContext.close();
+      const blob = encodeWav(chunks, audioContext.sampleRate);
+      await onStop(blob);
+      return blob;
+    },
+  };
+}
+
+function getAudioContextConstructor() {
+  if (typeof window === "undefined") return null;
+
+  return window.AudioContext ?? null;
+}
+
+function encodeWav(chunks: Float32Array[], sampleRate: number): Blob {
+  const samples = mergeAudioChunks(chunks);
+  const buffer = new ArrayBuffer(44 + samples.length * 2);
+  const view = new DataView(buffer);
+
+  writeAscii(view, 0, "RIFF");
+  view.setUint32(4, 36 + samples.length * 2, true);
+  writeAscii(view, 8, "WAVE");
+  writeAscii(view, 12, "fmt ");
+  view.setUint32(16, 16, true);
+  view.setUint16(20, 1, true);
+  view.setUint16(22, 1, true);
+  view.setUint32(24, sampleRate, true);
+  view.setUint32(28, sampleRate * 2, true);
+  view.setUint16(32, 2, true);
+  view.setUint16(34, 16, true);
+  writeAscii(view, 36, "data");
+  view.setUint32(40, samples.length * 2, true);
+
+  let offset = 44;
+  for (const sample of samples) {
+    const clamped = Math.max(-1, Math.min(1, sample));
+    view.setInt16(offset, clamped < 0 ? clamped * 0x8000 : clamped * 0x7fff, true);
+    offset += 2;
+  }
+
+  return new Blob([buffer], { type: "audio/wav" });
+}
+
+function mergeAudioChunks(chunks: Float32Array[]): Float32Array {
+  const length = chunks.reduce((total, chunk) => total + chunk.length, 0);
+  const samples = new Float32Array(length);
+  let offset = 0;
+
+  for (const chunk of chunks) {
+    samples.set(chunk, offset);
+    offset += chunk.length;
+  }
+
+  return samples;
+}
+
+function writeAscii(view: DataView, offset: number, value: string) {
+  for (let index = 0; index < value.length; index += 1) {
+    view.setUint8(offset + index, value.charCodeAt(index));
+  }
 }
 
 function toDateKey(date: Date): string {
