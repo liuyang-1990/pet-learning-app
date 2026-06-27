@@ -30,6 +30,9 @@ describe("PetPrototype", () => {
     expect(screen.getByText("Talking about school")).toBeInTheDocument();
     expect(screen.getByText("英音目标")).toBeInTheDocument();
     expect(screen.getByText("最多 2 次重录")).toBeInTheDocument();
+    expect(screen.queryByLabelText("跟读后输入识别到的英文")).not.toBeInTheDocument();
+    expect(screen.getAllByRole("button", { name: "录音评分" }).length).toBeGreaterThan(0);
+    expect(screen.getAllByText("自然口语例句").length).toBeGreaterThan(0);
     expect(screen.getByRole("button", { name: "随机切换 Part 2 图片" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Part 2 录音转文本" })).toBeInTheDocument();
     expect(screen.getByLabelText("图片描述回答")).toBeInTheDocument();

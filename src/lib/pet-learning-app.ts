@@ -178,12 +178,21 @@ export type Part1ConversationResult = {
 type WordShadowingInput = {
   word: string;
   spokenText: string;
+  chineseGloss?: string;
+};
+
+export type WordExample = {
+  sentence: string;
+  focusWord: string;
+  chinese: string;
 };
 
 export type WordShadowingFeedback = {
-  status: "clear" | "needs_practice";
+  status: "strong" | "okay" | "needs_practice";
+  score: number;
+  transcript: string;
   feedback: string;
-  modelPhrase: string;
+  example: WordExample;
 };
 
 export type SpeakingAttemptResult = {
@@ -473,15 +482,84 @@ export function continuePart1Conversation(
 export function assessWordShadowing(input: WordShadowingInput): WordShadowingFeedback {
   const target = normalizeSpokenText(input.word);
   const spoken = normalizeSpokenText(input.spokenText);
-  const clear = spoken.includes(target);
+  const score = scorePronunciationMatch(target, spoken);
+  const status =
+    score >= 85 ? "strong" : score >= 65 ? "okay" : "needs_practice";
+  const example = getWordExample({
+    term: input.word,
+    chineseGloss: input.chineseGloss ?? "",
+  });
 
   return {
-    status: clear ? "clear" : "needs_practice",
-    feedback: clear
-      ? `“${input.word}” 听起来比较清楚，可以放进句子里继续练。`
-      : `“${input.word}” 还不够清楚，请听英音示范后再跟读一次。`,
-    modelPhrase: `I can say ${input.word} clearly.`,
+    status,
+    score,
+    transcript: input.spokenText.trim(),
+    feedback: wordShadowingFeedbackText(input.word, score, input.spokenText),
+    example,
   };
+}
+
+export function getWordExample(word: VocabularyItem): WordExample {
+  const examples: Record<string, WordExample> = {
+    usually: {
+      focusWord: "usually",
+      sentence: "I usually grab a snack after school.",
+      chinese: "usually = 通常；我通常放学后吃点零食。",
+    },
+    because: {
+      focusWord: "because",
+      sentence: "I stayed home because I felt tired.",
+      chinese: "because = 因为；我因为觉得累，所以待在家里。",
+    },
+    environment: {
+      focusWord: "environment",
+      sentence: "We need a quiet environment to study.",
+      chinese: "environment = 环境；我们需要安静的环境学习。",
+    },
+    background: {
+      focusWord: "background",
+      sentence: "There is music playing in the background.",
+      chinese: "background = 背景；背景里有音乐在播放。",
+    },
+    picture: {
+      focusWord: "picture",
+      sentence: "Look at this picture on my phone.",
+      chinese: "picture = 图片；看我手机上的这张图片。",
+    },
+    library: {
+      focusWord: "library",
+      sentence: "Let's meet outside the library at four.",
+      chinese: "library = 图书馆；我们四点在图书馆外面见。",
+    },
+    homework: {
+      focusWord: "homework",
+      sentence: "I finished my homework before dinner.",
+      chinese: "homework = 家庭作业；我晚饭前完成了作业。",
+    },
+    classmate: {
+      focusWord: "classmate",
+      sentence: "My classmate helped me with the project.",
+      chinese: "classmate = 同学；我的同学帮我做了这个项目。",
+    },
+    subject: {
+      focusWord: "subject",
+      sentence: "Science is my favourite subject this year.",
+      chinese: "subject = 科目；科学是我今年最喜欢的科目。",
+    },
+  };
+  const key = normalizeSpokenText(word.term);
+
+  return (
+    examples[key] ?? {
+      focusWord: word.term,
+      sentence: `I heard the word ${word.term} in a conversation.`,
+      chinese: `${word.term} = ${displayWordGloss(word.chineseGloss)}；我在一段对话里听到了 ${word.term} 这个词。`,
+    }
+  );
+}
+
+export function displayWordGloss(gloss: string): string {
+  return gloss === "Cambridge B1/PET 官方词表" ? "PET 词汇" : gloss;
 }
 
 export function completeVocabularyReview(
@@ -844,6 +922,60 @@ function countWords(value: string): number {
 
 function normalizeSpokenText(value: string): string {
   return value.toLowerCase().replace(/[^a-z]+/g, "");
+}
+
+function scorePronunciationMatch(target: string, spoken: string): number {
+  if (!target || !spoken) return 35;
+  if (spoken === target) return 96;
+  if (spoken.includes(target)) return 90;
+
+  const similarity = similarityRatio(target, spoken);
+  if (similarity >= 0.86) return 78;
+  if (similarity >= 0.7) return 66;
+  if (similarity >= 0.52) return 52;
+  return 40;
+}
+
+function similarityRatio(left: string, right: string): number {
+  const distance = levenshteinDistance(left, right);
+  return 1 - distance / Math.max(left.length, right.length, 1);
+}
+
+function levenshteinDistance(left: string, right: string): number {
+  const previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+
+  for (let leftIndex = 0; leftIndex < left.length; leftIndex += 1) {
+    const current = [leftIndex + 1];
+
+    for (let rightIndex = 0; rightIndex < right.length; rightIndex += 1) {
+      const insertCost = current[rightIndex] + 1;
+      const deleteCost = previous[rightIndex + 1] + 1;
+      const replaceCost =
+        previous[rightIndex] + (left[leftIndex] === right[rightIndex] ? 0 : 1);
+
+      current.push(Math.min(insertCost, deleteCost, replaceCost));
+    }
+
+    previous.splice(0, previous.length, ...current);
+  }
+
+  return previous[right.length] ?? 0;
+}
+
+function wordShadowingFeedbackText(word: string, score: number, spokenText: string): string {
+  if (!spokenText.trim()) {
+    return `AI 没有稳定识别到 “${word}”。请靠近麦克风，再按英音示范重读一次。`;
+  }
+
+  if (score >= 85) {
+    return `“${word}” 识别比较清楚，可以继续放进完整句子里练。`;
+  }
+
+  if (score >= 65) {
+    return `“${word}” 大致能识别出来，但还可以把重音和结尾音再读清楚一点。`;
+  }
+
+  return `AI 听到的内容和 “${word}” 差距较大。先听英音，再慢速跟读一遍。`;
 }
 
 function mergeWeakWords(current: WeakWord[], incoming: WeakWord[]): WeakWord[] {

@@ -27,7 +27,9 @@ import {
   completeVocabularyReview,
   continuePart1Conversation,
   createDemoHousehold,
+  displayWordGloss,
   ensurePart2Image,
+  getWordExample,
   getPart2ImageChoices,
   getGuardianProgress,
   getLearnerHome,
@@ -72,8 +74,9 @@ export function PetPrototype() {
   const [part1Turns, setPart1Turns] = useState<Part1ConversationTurn[]>([]);
   const [part1FollowUp, setPart1FollowUp] = useState<string | null>(null);
   const [part1Feedback, setPart1Feedback] = useState<Part1ConversationResult | null>(null);
-  const [shadowInputs, setShadowInputs] = useState<Record<string, string>>({});
   const [shadowFeedback, setShadowFeedback] = useState<Record<string, WordShadowingFeedback>>({});
+  const [shadowRecordingTerm, setShadowRecordingTerm] = useState<string | null>(null);
+  const [shadowRecordingError, setShadowRecordingError] = useState<string | null>(null);
   const [isAiThinking, setIsAiThinking] = useState(false);
   const [recordingTarget, setRecordingTarget] = useState<RecordingTarget | null>(null);
   const [recordingError, setRecordingError] = useState<Record<RecordingTarget, string | null>>({
@@ -103,8 +106,9 @@ export function PetPrototype() {
     setPart1Turns([]);
     setPart1FollowUp(null);
     setPart1Feedback(null);
-    setShadowInputs({});
     setShadowFeedback({});
+    setShadowRecordingTerm(null);
+    setShadowRecordingError(null);
     setRecordingTarget(null);
     setRecordingUrls({ part1: null, part2: null });
     setRecordingError({ part1: null, part2: null });
@@ -216,16 +220,70 @@ export function PetPrototype() {
     setPart2ImageUrl(nextImage);
   };
 
-  const updateShadowInput = (word: string, value: string) => {
-    setShadowInputs((current) => ({ ...current, [word]: value }));
-  };
+  const scoreShadowing = async (word: VocabularyItem) => {
+    if (recordingTarget) {
+      setShadowRecordingError("请先结束 Part 1 或 Part 2 录音，再做单词评分。");
+      return;
+    }
 
-  const checkShadowing = (word: VocabularyItem) => {
-    const spokenText = shadowInputs[word.term] || word.term;
-    setShadowFeedback((current) => ({
-      ...current,
-      [word.term]: assessWordShadowing({ word: word.term, spokenText }),
-    }));
+    if (shadowRecordingTerm) {
+      mediaRecorderRef.current?.stop();
+      return;
+    }
+
+    if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === "undefined") {
+      setShadowRecordingError("当前浏览器不支持录音评分，可以先用英音示范跟读。");
+      setShadowFeedback((current) => ({
+        ...current,
+        [word.term]: assessWordShadowing({
+          word: word.term,
+          chineseGloss: word.chineseGloss,
+          spokenText: "",
+        }),
+      }));
+      return;
+    }
+
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      chunksRef.current = [];
+      const recorder = new MediaRecorder(stream);
+
+      recorder.ondataavailable = (event) => {
+        if (event.data.size > 0) {
+          chunksRef.current.push(event.data);
+        }
+      };
+      recorder.onstop = () => {
+        stream.getTracks().forEach((track) => track.stop());
+        const blob = new Blob(chunksRef.current, { type: recorder.mimeType || "audio/webm" });
+        setShadowRecordingTerm(null);
+        void uploadRecording(blob, `Shadowing: ${word.term}`).then((result) => {
+          const spokenText = result?.transcript ?? "";
+
+          if (result) {
+            setHousehold(result.household);
+          }
+
+          setShadowFeedback((current) => ({
+            ...current,
+            [word.term]: assessWordShadowing({
+              word: word.term,
+              chineseGloss: word.chineseGloss,
+              spokenText,
+            }),
+          }));
+        });
+      };
+
+      mediaRecorderRef.current = recorder;
+      recorder.start();
+      setShadowRecordingTerm(word.term);
+      setShadowRecordingError(null);
+    } catch {
+      setShadowRecordingTerm(null);
+      setShadowRecordingError("无法获取麦克风权限，可以检查浏览器权限后再试。");
+    }
   };
 
   const toggleRecording = async (target: RecordingTarget) => {
@@ -427,8 +485,9 @@ export function PetPrototype() {
               part1Turns={part1Turns}
               part1FollowUp={part1FollowUp}
               part1Feedback={part1Feedback}
-              shadowInputs={shadowInputs}
               shadowFeedback={shadowFeedback}
+              shadowRecordingTerm={shadowRecordingTerm}
+              shadowRecordingError={shadowRecordingError}
               recordingTarget={recordingTarget}
               recordingError={recordingError}
               recordingUrls={recordingUrls}
@@ -442,8 +501,7 @@ export function PetPrototype() {
               onToggleRecording={toggleRecording}
               onCompleteSession={completeSession}
               onSpeak={speakBritish}
-              onShadowInputChange={updateShadowInput}
-              onCheckShadowing={checkShadowing}
+              onScoreShadowing={scoreShadowing}
             />
           )}
 
@@ -540,8 +598,9 @@ function DailySessionView({
   part1Turns,
   part1FollowUp,
   part1Feedback,
-  shadowInputs,
   shadowFeedback,
+  shadowRecordingTerm,
+  shadowRecordingError,
   recordingTarget,
   recordingError,
   recordingUrls,
@@ -555,8 +614,7 @@ function DailySessionView({
   onToggleRecording,
   onCompleteSession,
   onSpeak,
-  onShadowInputChange,
-  onCheckShadowing,
+  onScoreShadowing,
 }: {
   session: DailySession | null;
   attemptNumber: number;
@@ -570,8 +628,9 @@ function DailySessionView({
   part1Turns: Part1ConversationTurn[];
   part1FollowUp: string | null;
   part1Feedback: Part1ConversationResult | null;
-  shadowInputs: Record<string, string>;
   shadowFeedback: Record<string, WordShadowingFeedback>;
+  shadowRecordingTerm: string | null;
+  shadowRecordingError: string | null;
   recordingTarget: RecordingTarget | null;
   recordingError: Record<RecordingTarget, string | null>;
   recordingUrls: Record<RecordingTarget, string | null>;
@@ -585,8 +644,7 @@ function DailySessionView({
   onToggleRecording: (target: RecordingTarget) => void;
   onCompleteSession: () => void;
   onSpeak: (text: string) => void;
-  onShadowInputChange: (word: string, value: string) => void;
-  onCheckShadowing: (word: VocabularyItem) => void;
+  onScoreShadowing: (word: VocabularyItem) => void;
 }) {
   if (!session) {
     return (
@@ -635,11 +693,11 @@ function DailySessionView({
             </div>
             <WordShadowingList
               words={newWords.words}
-              inputs={shadowInputs}
               feedback={shadowFeedback}
+              recordingTerm={shadowRecordingTerm}
+              recordingError={shadowRecordingError}
               onSpeak={onSpeak}
-              onInputChange={onShadowInputChange}
-              onCheck={onCheckShadowing}
+              onScore={onScoreShadowing}
             />
           </>
         )}
@@ -651,11 +709,11 @@ function DailySessionView({
             </div>
             <WordShadowingList
               words={warmup.words}
-              inputs={shadowInputs}
               feedback={shadowFeedback}
+              recordingTerm={shadowRecordingTerm}
+              recordingError={shadowRecordingError}
               onSpeak={onSpeak}
-              onInputChange={onShadowInputChange}
-              onCheck={onCheckShadowing}
+              onScore={onScoreShadowing}
             />
           </>
         )}
@@ -744,7 +802,7 @@ function DailySessionView({
               {feedback.weakWords.map((word) => (
                 <span className="chip" key={word.term}>
                   {word.term}
-                  <small>{word.chineseGloss}</small>
+                  <small>{displayWordGloss(word.chineseGloss)}</small>
                 </span>
               ))}
             </div>
@@ -821,7 +879,7 @@ function DailySessionView({
                   {part2Feedback.weakWords.map((word) => (
                     <span className="chip" key={word.term}>
                       {word.term}
-                      <small>{word.chineseGloss}</small>
+                      <small>{displayWordGloss(word.chineseGloss)}</small>
                     </span>
                   ))}
                 </div>
@@ -867,7 +925,7 @@ function VocabularyView({
             <article className="word-review" key={word.term}>
               <div>
                 <h3>{word.term}</h3>
-                <p>{word.chineseGloss}</p>
+                <p>{displayWordGloss(word.chineseGloss)}</p>
                 <span>{word.theme}</span>
               </div>
               <span className="word-status">新词</span>
@@ -892,7 +950,7 @@ function VocabularyView({
             <article className="word-review" key={word.term}>
               <div>
                 <h3>{word.term}</h3>
-                <p>{word.chineseGloss}</p>
+                <p>{displayWordGloss(word.chineseGloss)}</p>
                 <span>{weakReasonLabel(word.reason)} · {stageLabel(word.reviewStage)}</span>
               </div>
               <div className="split-actions">
@@ -1179,7 +1237,7 @@ function WordList({ words, compact = false }: { words: VocabularyItem[]; compact
       {words.map((word) => (
         <span className="chip" key={word.term}>
           {word.term}
-          <small>{word.chineseGloss}</small>
+          <small>{displayWordGloss(word.chineseGloss)}</small>
         </span>
       ))}
     </div>
@@ -1188,18 +1246,18 @@ function WordList({ words, compact = false }: { words: VocabularyItem[]; compact
 
 function WordShadowingList({
   words,
-  inputs,
   feedback,
+  recordingTerm,
+  recordingError,
   onSpeak,
-  onInputChange,
-  onCheck,
+  onScore,
 }: {
   words: VocabularyItem[];
-  inputs: Record<string, string>;
   feedback: Record<string, WordShadowingFeedback>;
+  recordingTerm: string | null;
+  recordingError: string | null;
   onSpeak: (text: string) => void;
-  onInputChange: (word: string, value: string) => void;
-  onCheck: (word: VocabularyItem) => void;
+  onScore: (word: VocabularyItem) => void;
 }) {
   if (words.length === 0) {
     return (
@@ -1212,43 +1270,49 @@ function WordShadowingList({
 
   return (
     <div className="shadow-list">
+      {recordingError && <p className="inline-error">{recordingError}</p>}
       {words.map((word) => {
         const result = feedback[word.term];
+        const example = result?.example ?? getWordExample(word);
+        const isRecording = recordingTerm === word.term;
 
         return (
           <article className="shadow-card" key={word.term}>
             <div className="shadow-word">
               <div>
                 <h3>{word.term}</h3>
-                <p>{word.chineseGloss}</p>
+                <p>{displayWordGloss(word.chineseGloss)}</p>
               </div>
               <button className="secondary-button" onClick={() => onSpeak(word.term)}>
                 <Volume2 size={18} />
                 英音
               </button>
             </div>
-            <label className="field compact-field">
-              <span>跟读后输入识别到的英文</span>
-              <input
-                value={inputs[word.term] ?? ""}
-                onChange={(event) => onInputChange(word.term, event.target.value)}
-                placeholder={word.term}
-              />
-            </label>
+            <div className="example-strip">
+              <span>自然口语例句</span>
+              <strong>{example.focusWord}</strong>
+              <p>{example.sentence}</p>
+              <small>{example.chinese}</small>
+            </div>
             <div className="split-actions">
-              <button className="secondary-button" onClick={() => onSpeak(`I can say ${word.term} clearly.`)}>
+              <button className="secondary-button" onClick={() => onSpeak(example.sentence)}>
                 <Play size={18} />
-                句子示范
+                播放例句
               </button>
-              <button className="primary-button" onClick={() => onCheck(word)}>
-                <CheckCircle2 size={18} />
-                跟读反馈
+              <button className={isRecording ? "danger-button" : "primary-button"} onClick={() => onScore(word)}>
+                <Mic size={18} />
+                {isRecording ? "停止评分" : "录音评分"}
               </button>
             </div>
             {result && (
-              <p className={result.status === "clear" ? "shadow-feedback clear" : "shadow-feedback needs-practice"}>
-                {result.feedback}
-              </p>
+              <div className={`shadow-score ${result.status}`}>
+                <strong>{result.score}</strong>
+                <div>
+                  <span>AI pronunciation score</span>
+                  <p>{result.feedback}</p>
+                  {result.transcript && <small>AI 识别：{result.transcript}</small>}
+                </div>
+              </div>
             )}
           </article>
         );

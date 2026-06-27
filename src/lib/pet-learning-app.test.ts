@@ -9,6 +9,7 @@ import {
   completeVocabularyReview,
   createDemoHousehold,
   ensurePart2Image,
+  getWordExample,
   getPart2ImageChoices,
   getGuardianProgress,
   getLearnerHome,
@@ -213,17 +214,36 @@ describe("PET Learning App", () => {
   it("gives word-level shadowing feedback for weak words", () => {
     const clear = assessWordShadowing({
       word: "usually",
+      chineseGloss: "通常",
       spokenText: "usually",
     });
     const unclear = assessWordShadowing({
       word: "environment",
+      chineseGloss: "环境",
       spokenText: "enviroment",
     });
+    const missed = assessWordShadowing({
+      word: "because",
+      chineseGloss: "因为",
+      spokenText: "",
+    });
 
-    expect(clear.status).toBe("clear");
-    expect(clear.feedback).toContain("清楚");
-    expect(unclear.status).toBe("needs_practice");
-    expect(unclear.feedback).toContain("再跟读");
+    expect(clear.status).toBe("strong");
+    expect(clear.score).toBeGreaterThanOrEqual(85);
+    expect(clear.example.sentence).toContain("usually");
+    expect(unclear.status).toBe("okay");
+    expect(unclear.score).toBeGreaterThanOrEqual(65);
+    expect(unclear.transcript).toBe("enviroment");
+    expect(missed.status).toBe("needs_practice");
+    expect(missed.feedback).toContain("没有稳定识别");
+  });
+
+  it("shows spoken examples with the word and Chinese meaning", () => {
+    const example = getWordExample({ term: "background", chineseGloss: "背景" });
+
+    expect(example.focusWord).toBe("background");
+    expect(example.sentence).toContain("background");
+    expect(example.chinese).toContain("背景");
   });
 
   it("provides a part 2 image and gives feedback on a picture description", () => {
