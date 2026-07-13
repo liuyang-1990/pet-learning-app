@@ -1,3 +1,5 @@
+import { reviewedWordExampleAudit } from "./generated/pet-word-example-audit";
+
 export type ReviewStage = "new" | "tomorrow" | "threeDaysLater" | "mastered";
 export type WeakWordReason = "pronunciation" | "recall" | "meaning" | "usage" | "spelling";
 
@@ -183,9 +185,11 @@ type WordShadowingInput = {
 };
 
 export type WordExample = {
-  sentence: string;
+  sentence: string | null;
   focusWord: string;
   chinese: string;
+  auditStatus?: "pass" | "needs_review";
+  auditReasons?: readonly string[];
 };
 
 export type PronunciationScoreDetail = {
@@ -239,6 +243,40 @@ type Part2AnswerInput = {
 const defaultDailyWeakWordLimit = 5;
 const defaultDailyNewWordCount = 5;
 const defaultWordTheme = "school";
+const builtInPart2ImageUrls = [
+  "https://images.unsplash.com/photo-1544776193-32d404ae608a?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1500835556837-99ac94a94552?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1586899028174-e7098604235b?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
+];
 
 export function createDemoHousehold(): HouseholdSpace {
   return {
@@ -259,6 +297,41 @@ export function createDemoHousehold(): HouseholdSpace {
       { term: "uniform", chineseGloss: "校服", theme: "school", source: "demo" },
       { term: "cousin", chineseGloss: "堂/表兄弟姐妹", theme: "family", source: "demo" },
       { term: "grandparent", chineseGloss: "祖父母/外祖父母", theme: "family", source: "demo" },
+      { term: "parent", chineseGloss: "父亲或母亲", theme: "family", source: "demo" },
+      { term: "relative", chineseGloss: "亲戚", theme: "family", source: "demo" },
+      { term: "neighbour", chineseGloss: "邻居", theme: "family", source: "demo" },
+      { term: "forest", chineseGloss: "森林", theme: "nature", source: "demo" },
+      { term: "river", chineseGloss: "河流", theme: "nature", source: "demo" },
+      { term: "mountain", chineseGloss: "山", theme: "nature", source: "demo" },
+      { term: "weather", chineseGloss: "天气", theme: "nature", source: "demo" },
+      { term: "beach", chineseGloss: "海滩", theme: "nature", source: "demo" },
+      { term: "recycle", chineseGloss: "回收利用", theme: "nature", source: "demo" },
+      { term: "wildlife", chineseGloss: "野生动物", theme: "nature", source: "demo" },
+      { term: "restaurant", chineseGloss: "餐馆", theme: "food", source: "demo" },
+      { term: "breakfast", chineseGloss: "早餐", theme: "food", source: "demo" },
+      { term: "vegetable", chineseGloss: "蔬菜", theme: "food", source: "demo" },
+      { term: "fruit", chineseGloss: "水果", theme: "food", source: "demo" },
+      { term: "sandwich", chineseGloss: "三明治", theme: "food", source: "demo" },
+      { term: "airport", chineseGloss: "机场", theme: "travel", source: "demo" },
+      { term: "station", chineseGloss: "车站", theme: "travel", source: "demo" },
+      { term: "ticket", chineseGloss: "票", theme: "travel", source: "demo" },
+      { term: "journey", chineseGloss: "旅行", theme: "travel", source: "demo" },
+      { term: "passport", chineseGloss: "护照", theme: "travel", source: "demo" },
+      { term: "football", chineseGloss: "足球", theme: "sport", source: "demo" },
+      { term: "swimming", chineseGloss: "游泳", theme: "sport", source: "demo" },
+      { term: "tennis", chineseGloss: "网球", theme: "sport", source: "demo" },
+      { term: "cycling", chineseGloss: "骑自行车", theme: "sport", source: "demo" },
+      { term: "race", chineseGloss: "比赛", theme: "sport", source: "demo" },
+      { term: "office", chineseGloss: "办公室", theme: "work", source: "demo" },
+      { term: "manager", chineseGloss: "经理", theme: "work", source: "demo" },
+      { term: "assistant", chineseGloss: "助手", theme: "work", source: "demo" },
+      { term: "engineer", chineseGloss: "工程师", theme: "work", source: "demo" },
+      { term: "meeting", chineseGloss: "会议", theme: "work", source: "demo" },
+      { term: "advice", chineseGloss: "建议", theme: "general", source: "demo" },
+      { term: "choice", chineseGloss: "选择", theme: "general", source: "demo" },
+      { term: "habit", chineseGloss: "习惯", theme: "general", source: "demo" },
+      { term: "reason", chineseGloss: "原因", theme: "general", source: "demo" },
+      { term: "example", chineseGloss: "例子", theme: "general", source: "demo" },
     ],
     seenWords: [
       {
@@ -323,7 +396,7 @@ export function createDemoHousehold(): HouseholdSpace {
         title: "Describe a park scene",
         question: "Look at the picture and describe what the people are doing.",
         part: "part_2",
-        imageUrl: createDefaultPart2ImageDataUrl(),
+        imageUrl: builtInPart2ImageUrls[0],
       },
     ],
   };
@@ -341,6 +414,24 @@ export function getLearnerHome(household: HouseholdSpace, now: Date): LearnerHom
     dailyWeakWords,
     canStartDailySession: true,
   };
+}
+
+export function normalizeVocabularyTerm(term: string): string {
+  const parts = term
+    .split("/")
+    .map((part) => part.trim().replace(/^[^a-zA-Z]+|[^a-zA-Z\s-]+$/g, ""))
+    .filter(Boolean);
+  const preferredPart =
+    parts.length > 1
+      ? parts.reduce((shortest, current) =>
+          current.length < shortest.length ? current : shortest,
+        )
+      : parts[0] ?? term;
+
+  return preferredPart
+    .replace(/^of the\s+/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 export function startDailySession(household: HouseholdSpace, now: Date): DailySession {
@@ -438,7 +529,28 @@ export function ensurePart2Image(prompt: Prompt): Prompt {
 
   return {
     ...prompt,
-    imageUrl: createDefaultPart2ImageDataUrl(),
+    imageUrl: builtInPart2ImageUrls[0],
+  };
+}
+
+export function initializePart2ImagePool(household: HouseholdSpace): HouseholdSpace {
+  let nextBuiltInImageIndex = 0;
+
+  return {
+    ...household,
+    presetPrompts: household.presetPrompts.map((prompt) => {
+      if (prompt.part !== "part_2" || !isLegacyGeneratedPart2Image(prompt.imageUrl)) {
+        return prompt;
+      }
+
+      const imageUrl = builtInPart2ImageUrls[nextBuiltInImageIndex % builtInPart2ImageUrls.length];
+      nextBuiltInImageIndex += 1;
+
+      return {
+        ...prompt,
+        imageUrl,
+      };
+    }),
   };
 }
 
@@ -448,10 +560,7 @@ export function getPart2ImageChoices(prompt: Prompt, prompts: Prompt[] = []): st
     ...prompts
       .filter((item) => item.part === "part_2")
       .map((item) => item.imageUrl),
-    createDefaultPart2ImageDataUrl(),
-    createPart2SceneImageDataUrl("Classroom activity", "#f6efe5", "#86b7d6", "#e7a45f"),
-    createPart2SceneImageDataUrl("Family kitchen", "#fff3c9", "#74a57f", "#d96c5f"),
-    createPart2SceneImageDataUrl("Sports day", "#e4f2ff", "#66b37a", "#557bb6"),
+    ...builtInPart2ImageUrls,
   ]);
 }
 
@@ -527,8 +636,35 @@ export function assessWordShadowing(input: WordShadowingInput): WordShadowingFee
   };
 }
 
-export function getWordExample(word: VocabularyItem): WordExample {
-  const examples: Record<string, WordExample> = {
+export function recordWordShadowingFeedback(
+  household: HouseholdSpace,
+  input: {
+    word: string;
+    chineseGloss: string;
+    feedback: WordShadowingFeedback;
+  },
+  now: Date,
+): HouseholdSpace {
+  if (input.feedback.status === "strong") {
+    return household;
+  }
+
+  return {
+    ...household,
+    weakWords: mergeWeakWords(household.weakWords, [
+      makeWeakWord(
+        input.word,
+        input.chineseGloss,
+        "new",
+        dateKey(now),
+        "pronunciation",
+      ),
+    ]),
+  };
+}
+
+export function getReviewedWordExamples(): Record<string, WordExample> {
+  return {
     class: {
       focusWord: "class",
       sentence: "I have maths class right after lunch.",
@@ -574,6 +710,16 @@ export function getWordExample(word: VocabularyItem): WordExample {
       sentence: "I stayed home because I felt tired.",
       chinese: "because = 因为；我因为觉得累，所以待在家里。",
     },
+    ability: {
+      focusWord: "ability",
+      sentence: "She has the ability to explain hard ideas clearly.",
+      chinese: "ability = 能力；她有能力把难懂的想法解释清楚。",
+    },
+    able: {
+      focusWord: "able",
+      sentence: "She is able to explain the answer clearly.",
+      chinese: "able = 能干的；能够的；她能够把答案解释清楚。",
+    },
     environment: {
       focusWord: "environment",
       sentence: "We need a quiet environment to study.",
@@ -588,6 +734,11 @@ export function getWordExample(word: VocabularyItem): WordExample {
       focusWord: "picture",
       sentence: "Look at this picture on my phone.",
       chinese: "picture = 图片；看我手机上的这张图片。",
+    },
+    book: {
+      focusWord: "book",
+      sentence: "I borrowed this book from the school library.",
+      chinese: "book = 书；我从学校图书馆借了这本书。",
     },
     library: {
       focusWord: "library",
@@ -639,129 +790,337 @@ export function getWordExample(word: VocabularyItem): WordExample {
       sentence: "Science is my favourite subject this year.",
       chinese: "subject = 科目；科学是我今年最喜欢的科目。",
     },
+    project: {
+      focusWord: "project",
+      sentence: "We finished our science project before lunch.",
+      chinese: "project = 项目/课题；我们午饭前完成了科学课题。",
+    },
+    experiment: {
+      focusWord: "experiment",
+      sentence: "We did a simple experiment with water in science class.",
+      chinese: "experiment = 实验；我们在科学课上做了一个简单的水实验。",
+    },
+    playground: {
+      focusWord: "playground",
+      sentence: "The playground gets really noisy after lunch.",
+      chinese: "playground = 操场；午饭后操场会变得很吵。",
+    },
+    break: {
+      focusWord: "break",
+      sentence: "I'll tell you what happened during the break.",
+      chinese: "break = 课间休息；我课间休息时再告诉你发生了什么。",
+    },
+    uniform: {
+      focusWord: "uniform",
+      sentence: "We don't have to wear our uniform on Friday.",
+      chinese: "uniform = 校服；我们星期五不用穿校服。",
+    },
+    cousin: {
+      focusWord: "cousin",
+      sentence: "My cousin is staying with us for the weekend.",
+      chinese: "cousin = 堂/表兄弟姐妹；我表亲周末住在我们家。",
+    },
+    grandparent: {
+      focusWord: "grandparent",
+      sentence: "I call my grandparent every Sunday evening.",
+      chinese: "grandparent = 祖父母/外祖父母；我每周日晚上给祖父母打电话。",
+    },
+    parent: {
+      focusWord: "parent",
+      sentence: "A parent needs to sign this form before the trip.",
+      chinese: "parent = 父亲或母亲；旅行前需要一位家长签这张表。",
+    },
+    relative: {
+      focusWord: "relative",
+      sentence: "We're visiting a relative who lives near the sea.",
+      chinese: "relative = 亲戚；我们要去看一位住在海边的亲戚。",
+    },
+    neighbour: {
+      focusWord: "neighbour",
+      sentence: "Our neighbour looked after the cat while we were away.",
+      chinese: "neighbour = 邻居；我们不在时邻居帮忙照看猫。",
+    },
+    forest: {
+      focusWord: "forest",
+      sentence: "It gets dark very quickly in the forest.",
+      chinese: "forest = 森林；森林里天黑得很快。",
+    },
+    river: {
+      focusWord: "river",
+      sentence: "The path follows the river all the way to the town.",
+      chinese: "river = 河流；这条小路沿着河一直通到镇上。",
+    },
+    mountain: {
+      focusWord: "mountain",
+      sentence: "You can see the mountain from our hotel window.",
+      chinese: "mountain = 山；从酒店窗户可以看到那座山。",
+    },
+    weather: {
+      focusWord: "weather",
+      sentence: "The weather changed just as we got to the park.",
+      chinese: "weather = 天气；我们刚到公园，天气就变了。",
+    },
+    climate: {
+      focusWord: "climate",
+      sentence: "The climate here is warm and wet for most of the year.",
+      chinese: "climate = 气候；这里一年中大部分时间气候温暖湿润。",
+    },
+    climatechange: {
+      focusWord: "climate change",
+      sentence: "Climate change is making some summers hotter.",
+      chinese: "climate change = 气候变化；气候变化正使一些夏天变得更热。",
+    },
+    sunny: {
+      focusWord: "sunny",
+      sentence: "It was sunny, so we had lunch outside.",
+      chinese: "sunny = 晴朗的；天气晴朗，所以我们在外面吃了午饭。",
+    },
+    weatherforecast: {
+      focusWord: "weather forecast",
+      sentence: "The weather forecast said it would rain later.",
+      chinese: "weather forecast = 天气预报；天气预报说晚些时候会下雨。",
+    },
+    natural: {
+      focusWord: "natural",
+      sentence: "The juice tasted natural, not too sweet.",
+      chinese: "natural = 自然的；天然的；果汁喝起来很自然，不太甜。",
+    },
+    beach: {
+      focusWord: "beach",
+      sentence: "The beach was almost empty in the morning.",
+      chinese: "beach = 海滩；早上海滩上几乎没有人。",
+    },
+    recycle: {
+      focusWord: "recycle",
+      sentence: "Our school asks everyone to recycle paper and plastic.",
+      chinese: "recycle = 回收利用；学校要求大家回收纸张和塑料。",
+    },
+    wildlife: {
+      focusWord: "wildlife",
+      sentence: "The guide told us not to disturb the wildlife.",
+      chinese: "wildlife = 野生动物；导游告诉我们不要打扰野生动物。",
+    },
+    tree: {
+      focusWord: "tree",
+      sentence: "There is a tall tree outside my bedroom window.",
+      chinese: "tree = 树；我卧室窗外有一棵高高的树。",
+    },
+    plant: {
+      focusWord: "plant",
+      sentence: "We watered the plant before we went to school.",
+      chinese: "plant = 植物；上学前我们给那棵植物浇了水。",
+    },
+    flower: {
+      focusWord: "flower",
+      sentence: "A small yellow flower grew beside the path.",
+      chinese: "flower = 花；小路旁长出了一朵黄色小花。",
+    },
+    grass: {
+      focusWord: "grass",
+      sentence: "The grass was still wet after the rain.",
+      chinese: "grass = 草；雨后草地还是湿的。",
+    },
+    lake: {
+      focusWord: "lake",
+      sentence: "We walked around the lake after lunch.",
+      chinese: "lake = 湖；午饭后我们绕着湖散步。",
+    },
+    sea: {
+      focusWord: "sea",
+      sentence: "The sea looked calm in the early morning.",
+      chinese: "sea = 海；清晨的大海看起来很平静。",
+    },
+    rain: {
+      focusWord: "rain",
+      sentence: "The rain stopped just before the match started.",
+      chinese: "rain = 雨；比赛开始前雨刚好停了。",
+    },
+    wind: {
+      focusWord: "wind",
+      sentence: "The wind blew my hat across the playground.",
+      chinese: "wind = 风；风把我的帽子吹到了操场另一边。",
+    },
+    cloud: {
+      focusWord: "cloud",
+      sentence: "A dark cloud moved across the sky.",
+      chinese: "cloud = 云；一朵乌云从天空飘过。",
+    },
+    sky: {
+      focusWord: "sky",
+      sentence: "The sky turned pink as we walked home.",
+      chinese: "sky = 天空；我们走回家时，天空变成了粉色。",
+    },
+    waste: {
+      focusWord: "waste",
+      sentence: "Please put the waste in the bin before we leave.",
+      chinese: "waste = 废物/垃圾；离开前请把垃圾放进垃圾桶。",
+    },
+    pollution: {
+      focusWord: "pollution",
+      sentence: "Traffic pollution is worse near the main road.",
+      chinese: "pollution = 污染；主路附近的交通污染更严重。",
+    },
+    planet: {
+      focusWord: "planet",
+      sentence: "We learned about each planet in science class.",
+      chinese: "planet = 行星；我们在科学课上学习了每一颗行星。",
+    },
+    earth: {
+      focusWord: "earth",
+      sentence: "The Earth goes around the sun.",
+      chinese: "earth = 地球；地球绕着太阳转。",
+    },
+    restaurant: {
+      focusWord: "restaurant",
+      sentence: "This restaurant is busy, but the food is worth the wait.",
+      chinese: "restaurant = 餐馆；这家餐馆很忙，但食物值得等。",
+    },
+    breakfast: {
+      focusWord: "breakfast",
+      sentence: "I missed breakfast because I woke up late.",
+      chinese: "breakfast = 早餐；我起晚了，所以没吃早餐。",
+    },
+    vegetable: {
+      focusWord: "vegetable",
+      sentence: "My little brother only likes one green vegetable.",
+      chinese: "vegetable = 蔬菜；我弟弟只喜欢一种绿色蔬菜。",
+    },
+    fruit: {
+      focusWord: "fruit",
+      sentence: "There's fresh fruit on the table if you're hungry.",
+      chinese: "fruit = 水果；如果你饿了，桌上有新鲜水果。",
+    },
+    sandwich: {
+      focusWord: "sandwich",
+      sentence: "I made a cheese sandwich for lunch.",
+      chinese: "sandwich = 三明治；我午饭做了一个奶酪三明治。",
+    },
+    airport: {
+      focusWord: "airport",
+      sentence: "We got to the airport two hours before the flight.",
+      chinese: "airport = 机场；我们提前两小时到了机场。",
+    },
+    station: {
+      focusWord: "station",
+      sentence: "I'll meet you outside the station at six.",
+      chinese: "station = 车站；我六点在车站外面见你。",
+    },
+    ticket: {
+      focusWord: "ticket",
+      sentence: "I bought the ticket online, so I don't need to queue.",
+      chinese: "ticket = 票；我在网上买了票，所以不用排队。",
+    },
+    journey: {
+      focusWord: "journey",
+      sentence: "The journey took longer than we expected.",
+      chinese: "journey = 旅行/行程；这段行程比我们预想的更久。",
+    },
+    passport: {
+      focusWord: "passport",
+      sentence: "Don't forget your passport before we leave.",
+      chinese: "passport = 护照；出发前别忘了带护照。",
+    },
+    football: {
+      focusWord: "football",
+      sentence: "We played football until it was too dark to see the ball.",
+      chinese: "football = 足球；我们一直踢足球，直到天黑得看不清球。",
+    },
+    swimming: {
+      focusWord: "swimming",
+      sentence: "Swimming helps me relax after a long day.",
+      chinese: "swimming = 游泳；忙了一天后，游泳能让我放松。",
+    },
+    tennis: {
+      focusWord: "tennis",
+      sentence: "She's taking tennis lessons every Saturday.",
+      chinese: "tennis = 网球；她每周六上网球课。",
+    },
+    cycling: {
+      focusWord: "cycling",
+      sentence: "Cycling to school is faster than taking the bus.",
+      chinese: "cycling = 骑自行车；骑车上学比坐公交更快。",
+    },
+    race: {
+      focusWord: "race",
+      sentence: "He was tired, but he finished the race.",
+      chinese: "race = 比赛；他很累，但完成了比赛。",
+    },
+    office: {
+      focusWord: "office",
+      sentence: "My mum works in an office near the station.",
+      chinese: "office = 办公室；我妈妈在车站附近的办公室工作。",
+    },
+    manager: {
+      focusWord: "manager",
+      sentence: "The manager came over and solved the problem quickly.",
+      chinese: "manager = 经理；经理走过来，很快解决了问题。",
+    },
+    assistant: {
+      focusWord: "assistant",
+      sentence: "The shop assistant helped me find the right size.",
+      chinese: "assistant = 助手/店员；店员帮我找到了合适的尺码。",
+    },
+    engineer: {
+      focusWord: "engineer",
+      sentence: "My uncle is an engineer who designs bridges.",
+      chinese: "engineer = 工程师；我叔叔是设计桥梁的工程师。",
+    },
+    meeting: {
+      focusWord: "meeting",
+      sentence: "The meeting ended early, so Dad came home before dinner.",
+      chinese: "meeting = 会议；会议提前结束了，所以爸爸晚饭前回家了。",
+    },
+    advice: {
+      focusWord: "advice",
+      sentence: "My teacher gave me some useful advice before the exam.",
+      chinese: "advice = 建议；考试前老师给了我一些有用的建议。",
+    },
+    choice: {
+      focusWord: "choice",
+      sentence: "It was a difficult choice, but I picked the blue one.",
+      chinese: "choice = 选择；这是个困难的选择，但我选了蓝色那个。",
+    },
+    habit: {
+      focusWord: "habit",
+      sentence: "Reading before bed has become a habit for me.",
+      chinese: "habit = 习惯；睡前阅读已经成了我的习惯。",
+    },
+    reason: {
+      focusWord: "reason",
+      sentence: "Tell me the real reason you were late.",
+      chinese: "reason = 原因；告诉我你迟到的真正原因。",
+    },
   };
+}
+
+export function getWordExample(word: VocabularyItem): WordExample {
+  const examples = getReviewedWordExamples();
   const term = cleanExampleTerm(word.term);
   const key = normalizeSpokenText(term);
+  const reviewed = examples[key];
+  const audit = reviewedWordExampleAudit[key as keyof typeof reviewedWordExampleAudit];
 
-  return (
-    examples[key] ?? {
-      focusWord: term,
-      ...makeNaturalFallbackExample(term, word.chineseGloss),
-    }
-  );
+  if (reviewed) {
+    return {
+      ...reviewed,
+      auditStatus: audit?.status,
+      auditReasons: audit?.reasons,
+    };
+  }
+
+  return {
+    focusWord: term,
+    sentence: null,
+    chinese: `${term} = ${displayWordGloss(word.chineseGloss)}`,
+  };
 }
 
 export function displayWordGloss(gloss: string): string {
-  return gloss === "Cambridge B1/PET 官方词表" ? "PET 词汇" : gloss;
+  return gloss === "Cambridge B1/PET 官方词表" ? "PET核心词汇" : gloss;
 }
 
 function cleanExampleTerm(term: string): string {
-  const parts = term
-    .split("/")
-    .map((part) => part.trim().replace(/^[^a-zA-Z]+|[^a-zA-Z\s-]+$/g, ""))
-    .filter(Boolean);
-  const preferredPart =
-    parts.length > 1
-      ? parts.reduce((shortest, current) =>
-          current.length < shortest.length ? current : shortest,
-        )
-      : parts[0] ?? term;
-
-  return preferredPart
-    .replace(/^of the\s+/i, "")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function makeNaturalFallbackExample(
-  term: string,
-  chineseGloss: string,
-): Omit<WordExample, "focusWord"> {
-  const normalized = normalizeSpokenText(term);
-  const displayGloss = displayWordGloss(chineseGloss);
-  const meaning =
-    displayGloss === "PET 词汇" || displayGloss === ""
-      ? "中文释义待补充"
-      : displayGloss;
-  const sentence = fallbackSentenceForTerm(term, normalized);
-
-  return {
-    sentence,
-    chinese: `${term} = ${meaning}；${translateFallbackSentence(term, sentence)}`,
-  };
-}
-
-function fallbackSentenceForTerm(term: string, normalized: string): string {
-  if (term.includes(" ")) {
-    return `I can talk about ${term} in my speaking answer.`;
-  }
-
-  if (normalized.endsWith("ly") && normalized.length > 4) {
-    return `She answered ${term} when the teacher asked her.`;
-  }
-
-  if (normalized.endsWith("ed") && normalized.length > 4) {
-    return `I felt really ${term} after the long lesson.`;
-  }
-
-  if (normalized.endsWith("ing") && normalized.length > 5) {
-    return `This activity is ${term}, so I want to try it again.`;
-  }
-
-  if (
-    normalized.endsWith("ful") ||
-    normalized.endsWith("ive") ||
-    normalized.endsWith("able") ||
-    normalized.endsWith("al")
-  ) {
-    return `That sounds really ${term}, but I need more time.`;
-  }
-
-  const templates = [
-    `My teacher asked us to write about ${term} today.`,
-    `I need to check the ${term} before class.`,
-    `Let's talk about the ${term} after school.`,
-    `I put the ${term} in my bag before I left.`,
-  ];
-  const index = normalized.charCodeAt(0) % templates.length || 0;
-
-  return templates[index];
-}
-
-function translateFallbackSentence(term: string, sentence: string): string {
-  if (sentence.includes("speaking answer")) {
-    return `我可以在口语回答里谈到 ${term}。`;
-  }
-
-  if (sentence.includes("answered")) {
-    return `老师问她时，她${term}地回答了。`;
-  }
-
-  if (sentence.includes("felt really")) {
-    return `上完很长的一节课后，我感到很${term}。`;
-  }
-
-  if (sentence.includes("activity")) {
-    return `这个活动很${term}，所以我想再试一次。`;
-  }
-
-  if (sentence.includes("sounds really")) {
-    return `那听起来很${term}，但我还需要更多时间。`;
-  }
-
-  if (sentence.includes("write about")) {
-    return `老师让我们今天写一写 ${term}。`;
-  }
-
-  if (sentence.includes("check the")) {
-    return `上课前我需要检查一下 ${term}。`;
-  }
-
-  if (sentence.includes("talk about")) {
-    return `我们放学后聊聊 ${term} 吧。`;
-  }
-
-  return `我离开前把 ${term} 放进了书包。`;
+  return normalizeVocabularyTerm(term);
 }
 
 export function completeVocabularyReview(
@@ -1030,11 +1389,12 @@ function selectDailyNewWords(household: HouseholdSpace, today: string): WordBank
   );
   const theme = household.settings?.currentWordTheme || defaultWordTheme;
   const blockedTerms = new Set([
-    ...(household.seenWords ?? []).map((word) => word.term.toLowerCase()),
-    ...(household.weakWords ?? []).map((word) => word.term.toLowerCase()),
+    ...(household.seenWords ?? []).map((word) => vocabularyLearningKey(word.term)),
+    ...(household.weakWords ?? []).map((word) => vocabularyLearningKey(word.term)),
   ]);
-  const unseenWords = (household.wordBank ?? []).filter(
-    (word) => !blockedTerms.has(word.term.toLowerCase()),
+  const wordBank = uniqueVocabularyLearningUnits(uniqueVocabularyItems(household.wordBank ?? []));
+  const unseenWords = wordBank.filter(
+    (word) => !blockedTerms.has(vocabularyLearningKey(word.term)),
   );
   const themed = unseenWords.filter((word) => word.theme === theme);
   const themedSelection = seededShuffle(themed, `${household.learnerName}:${today}:${theme}:new-words`);
@@ -1043,18 +1403,63 @@ function selectDailyNewWords(household: HouseholdSpace, today: string): WordBank
     return themedSelection.slice(0, limit);
   }
 
-  const selectedTerms = new Set(themedSelection.map((word) => word.term.toLowerCase()));
+  const selectedTerms = new Set(themedSelection.map((word) => vocabularyLearningKey(word.term)));
   const fallback = seededShuffle(
-    unseenWords.filter((word) => !selectedTerms.has(word.term.toLowerCase())),
+    unseenWords.filter((word) => !selectedTerms.has(vocabularyLearningKey(word.term))),
     `${household.learnerName}:${today}:fallback-new-words`,
   );
 
   return [...themedSelection, ...fallback].slice(0, limit);
 }
 
+function uniqueVocabularyItems(words: WordBankItem[]): WordBankItem[] {
+  const byTerm = new Map<string, WordBankItem>();
+
+  for (const word of words) {
+    const normalizedTerm = normalizeVocabularyTerm(word.term);
+    if (!normalizedTerm) continue;
+
+    const normalizedWord = {
+      ...word,
+      term: normalizedTerm,
+    };
+    const key = normalizedTerm.toLowerCase();
+    const existing = byTerm.get(key);
+
+    if (!existing || word.term === normalizedTerm && existing.chineseGloss === "Cambridge B1/PET 官方词表") {
+      byTerm.set(key, normalizedWord);
+    }
+  }
+
+  return Array.from(byTerm.values());
+}
+
+function uniqueVocabularyLearningUnits(words: WordBankItem[]): WordBankItem[] {
+  const byLearningKey = new Map<string, WordBankItem>();
+
+  for (const word of words) {
+    const key = vocabularyLearningKey(word.term);
+    const existing = byLearningKey.get(key);
+
+    if (!existing || word.term.split(" ").length > existing.term.split(" ").length) {
+      byLearningKey.set(key, word);
+    }
+  }
+
+  return Array.from(byLearningKey.values());
+}
+
+function vocabularyLearningKey(term: string): string {
+  const normalized = normalizeVocabularyTerm(term).toLowerCase();
+
+  return normalized === "climate" || normalized === "climate change"
+    ? "climate-change"
+    : normalized;
+}
+
 function countPracticeStreak(records: DailySessionRecord[], today: string): number {
   const completedDays = new Set(records.map((record) => record.completedOn));
-  let cursor = previousDateKey(today);
+  let cursor = completedDays.has(today) ? today : previousDateKey(today);
   let streak = 0;
 
   while (completedDays.has(cursor)) {
@@ -1373,65 +1778,8 @@ function uniqueValues(values: Array<string | undefined>): string[] {
   return Array.from(new Set(values.filter((value): value is string => Boolean(value))));
 }
 
-function createDefaultPart2ImageDataUrl() {
-  const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620">
-      <rect width="900" height="620" fill="#d9ecff"/>
-      <circle cx="760" cy="100" r="54" fill="#f8c95d"/>
-      <rect y="410" width="900" height="210" fill="#8ccf8a"/>
-      <path d="M0 415 C130 350 210 430 340 370 C480 300 560 420 700 360 C780 330 840 345 900 320 L900 430 L0 430 Z" fill="#6fbf7c"/>
-      <rect x="80" y="295" width="160" height="86" rx="12" fill="#b67a45"/>
-      <rect x="95" y="255" width="18" height="132" fill="#6e4b2a"/>
-      <rect x="210" y="255" width="18" height="132" fill="#6e4b2a"/>
-      <circle cx="515" cy="288" r="34" fill="#f0b38b"/>
-      <rect x="485" y="322" width="62" height="92" rx="18" fill="#4b78a8"/>
-      <line x1="492" y1="352" x2="430" y2="385" stroke="#2d425a" stroke-width="14" stroke-linecap="round"/>
-      <line x1="542" y1="352" x2="604" y2="376" stroke="#2d425a" stroke-width="14" stroke-linecap="round"/>
-      <line x1="500" y1="410" x2="472" y2="490" stroke="#283747" stroke-width="16" stroke-linecap="round"/>
-      <line x1="535" y1="410" x2="570" y2="490" stroke="#283747" stroke-width="16" stroke-linecap="round"/>
-      <circle cx="650" cy="318" r="28" fill="#f1c29c"/>
-      <rect x="622" y="348" width="56" height="78" rx="16" fill="#db6d55"/>
-      <line x1="626" y1="376" x2="585" y2="420" stroke="#7d332a" stroke-width="12" stroke-linecap="round"/>
-      <line x1="672" y1="376" x2="720" y2="410" stroke="#7d332a" stroke-width="12" stroke-linecap="round"/>
-      <circle cx="705" cy="410" r="27" fill="#ffffff" stroke="#333" stroke-width="4"/>
-      <path d="M125 260 C90 210 115 145 178 148 C230 150 257 204 235 257 Z" fill="#4f9d69"/>
-      <rect x="170" y="250" width="22" height="135" fill="#79553b"/>
-      <text x="450" y="570" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#24496c">Park scene</text>
-    </svg>`;
-
-  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
-}
-
-function createPart2SceneImageDataUrl(
-  label: string,
-  sky: string,
-  ground: string,
-  accent: string,
-) {
-  const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620">
-      <rect width="900" height="620" fill="${sky}"/>
-      <rect y="410" width="900" height="210" fill="${ground}"/>
-      <rect x="95" y="130" width="235" height="170" rx="18" fill="#ffffff" stroke="#2d425a" stroke-width="8"/>
-      <line x1="125" y1="178" x2="300" y2="178" stroke="${accent}" stroke-width="14" stroke-linecap="round"/>
-      <line x1="125" y1="226" x2="255" y2="226" stroke="#6d7f8f" stroke-width="12" stroke-linecap="round"/>
-      <circle cx="455" cy="270" r="35" fill="#efb88f"/>
-      <rect x="420" y="304" width="72" height="98" rx="20" fill="${accent}"/>
-      <line x1="430" y1="340" x2="365" y2="382" stroke="#6b3b2a" stroke-width="14" stroke-linecap="round"/>
-      <line x1="488" y1="340" x2="555" y2="382" stroke="#6b3b2a" stroke-width="14" stroke-linecap="round"/>
-      <line x1="438" y1="400" x2="405" y2="500" stroke="#2d425a" stroke-width="17" stroke-linecap="round"/>
-      <line x1="475" y1="400" x2="510" y2="500" stroke="#2d425a" stroke-width="17" stroke-linecap="round"/>
-      <circle cx="640" cy="292" r="32" fill="#f2c29d"/>
-      <rect x="610" y="324" width="65" height="96" rx="18" fill="#5d8cc1"/>
-      <line x1="616" y1="356" x2="560" y2="402" stroke="#70402c" stroke-width="13" stroke-linecap="round"/>
-      <line x1="669" y1="356" x2="730" y2="390" stroke="#70402c" stroke-width="13" stroke-linecap="round"/>
-      <ellipse cx="720" cy="450" rx="54" ry="20" fill="#ffffff" stroke="#2d425a" stroke-width="5"/>
-      <rect x="155" y="410" width="130" height="70" rx="10" fill="#b77a4d"/>
-      <rect x="185" y="350" width="70" height="62" rx="8" fill="#d9a15f"/>
-      <text x="450" y="570" text-anchor="middle" font-family="Arial" font-size="34" font-weight="700" fill="#24496c">${label}</text>
-    </svg>`;
-
-  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+function isLegacyGeneratedPart2Image(imageUrl: string | undefined): boolean {
+  return imageUrl?.startsWith("data:image/svg+xml") ?? false;
 }
 
 function nextReviewStage(stage: ReviewStage): ReviewStage {

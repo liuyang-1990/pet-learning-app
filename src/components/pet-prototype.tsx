@@ -33,6 +33,7 @@ import {
   getPart2ImageChoices,
   getGuardianProgress,
   getLearnerHome,
+  recordWordShadowingFeedback,
   submitPart2Answer,
   submitSpeakingAttempt,
   startDailySession,
@@ -53,21 +54,19 @@ import {
 } from "@/lib/pet-learning-app";
 
 type Tab = "home" | "session" | "vocabulary" | "guardian" | "content";
+type Role = "learner" | "guardian";
 type RecordingTarget = "part1" | "part2";
 
 export function PetPrototype() {
   const [household, setHousehold, syncState] = useServerHousehold();
+  const [role, setRole] = useState<Role | null>(null);
   const [activeTab, setActiveTab] = useState<Tab>("home");
   const [session, setSession] = useState<DailySession | null>(null);
   const [sessionStartedAt, setSessionStartedAt] = useState<Date | null>(null);
   const [attemptNumber, setAttemptNumber] = useState(1);
-  const [transcript, setTranscript] = useState(
-    "I like science because it is interesting and I usually learn new things.",
-  );
+  const [transcript, setTranscript] = useState("");
   const [feedback, setFeedback] = useState<SpeakingAttemptResult | null>(null);
-  const [part2Transcript, setPart2Transcript] = useState(
-    "In the picture, children are playing in a park and a woman is sitting on a bench.",
-  );
+  const [part2Transcript, setPart2Transcript] = useState("");
   const [part2Feedback, setPart2Feedback] = useState<SpeakingAttemptResult | null>(null);
   const [part2ImageUrl, setPart2ImageUrl] = useState<string | null>(null);
   const [isPart2Thinking, setIsPart2Thinking] = useState(false);
@@ -94,15 +93,37 @@ export function PetPrototype() {
 
   const learnerHome = useMemo(() => getLearnerHome(household, now), [household, now]);
   const guardianProgress = useMemo(() => getGuardianProgress(household, now), [household, now]);
+  const wordThemes = useMemo(
+    () => Array.from(new Set(household.wordBank.map((word) => word.theme))).sort(),
+    [household.wordBank],
+  );
+
+  const login = (nextRole: Role) => {
+    setRole(nextRole);
+    setActiveTab(nextRole === "learner" ? "home" : "guardian");
+    setSession(null);
+  };
+
+  const logout = () => {
+    setRole(null);
+    setActiveTab("home");
+    setSession(null);
+    setSessionStartedAt(null);
+    setFeedback(null);
+    setPart2Feedback(null);
+    setPart1Feedback(null);
+    setRecordingTarget(null);
+  };
 
   const startPractice = () => {
     const startedAt = new Date();
     setSession(startDailySession(household, startedAt));
     setSessionStartedAt(startedAt);
     setAttemptNumber(1);
+    setTranscript("");
     setFeedback(null);
     setPart2Feedback(null);
-    setPart2Transcript("In the picture, children are playing in a park and a woman is sitting on a bench.");
+    setPart2Transcript("");
     setPart2ImageUrl(null);
     setPart1Turns([]);
     setPart1FollowUp(null);
@@ -118,14 +139,16 @@ export function PetPrototype() {
 
   const submitAttempt = async () => {
     if (!session) return;
+    const part1 = session.steps.find((step) => step.kind === "speaking_part_1");
+    if (part1?.kind !== "speaking_part_1") return;
 
     let conversation = continuePart1Conversation(session, {
-      promptId: "part-1-school",
+      promptId: part1.prompt.id,
       learnerAnswer: transcript,
       previousTurns: part1Turns,
     });
     let attemptFeedback = submitSpeakingAttempt(session, {
-      promptId: "part-1-school",
+      promptId: part1.prompt.id,
       transcript,
       attemptNumber,
     });
@@ -137,7 +160,7 @@ export function PetPrototype() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           session,
-          promptId: "part-1-school",
+          promptId: part1.prompt.id,
           learnerAnswer: transcript,
           attemptNumber,
           previousTurns: part1Turns,
@@ -221,6 +244,30 @@ export function PetPrototype() {
     setPart2ImageUrl(nextImage);
   };
 
+  const applyLocalShadowingFeedback = (word: VocabularyItem) => {
+    const result = assessWordShadowing({
+      word: word.term,
+      chineseGloss: word.chineseGloss,
+      spokenText: "",
+    });
+
+    setShadowFeedback((current) => ({
+      ...current,
+      [word.term]: result,
+    }));
+    setHousehold((current) =>
+      recordWordShadowingFeedback(
+        current,
+        {
+          word: word.term,
+          chineseGloss: word.chineseGloss,
+          feedback: result,
+        },
+        new Date(),
+      ),
+    );
+  };
+
   const scoreShadowing = async (word: VocabularyItem) => {
     if (recordingTarget) {
       setShadowRecordingError("请先结束 Part 1 或 Part 2 录音，再做单词评分。");
@@ -234,14 +281,7 @@ export function PetPrototype() {
 
     if (!navigator.mediaDevices?.getUserMedia) {
       setShadowRecordingError("当前浏览器不支持录音评分，可以先用英音示范跟读。");
-      setShadowFeedback((current) => ({
-        ...current,
-        [word.term]: assessWordShadowing({
-          word: word.term,
-          chineseGloss: word.chineseGloss,
-          spokenText: "",
-        }),
-      }));
+      applyLocalShadowingFeedback(word);
       return;
     }
 
@@ -271,14 +311,7 @@ export function PetPrototype() {
           return;
         }
 
-        setShadowFeedback((current) => ({
-          ...current,
-          [word.term]: assessWordShadowing({
-            word: word.term,
-            chineseGloss: word.chineseGloss,
-            spokenText: "",
-          }),
-        }));
+        applyLocalShadowingFeedback(word);
       });
 
       shadowRecorderRef.current = recorder;
@@ -317,14 +350,7 @@ export function PetPrototype() {
             return;
           }
 
-          setShadowFeedback((current) => ({
-            ...current,
-            [word.term]: assessWordShadowing({
-              word: word.term,
-              chineseGloss: word.chineseGloss,
-              spokenText: "",
-            }),
-          }));
+          applyLocalShadowingFeedback(word);
         });
       };
 
@@ -438,7 +464,7 @@ export function PetPrototype() {
     setSessionStartedAt(null);
     setFeedback(null);
     setAttemptNumber(1);
-    setActiveTab("guardian");
+    setActiveTab(role === "guardian" ? "guardian" : "home");
   };
 
   const completeReview = (word: WeakWord, correct: boolean) => {
@@ -484,7 +510,7 @@ export function PetPrototype() {
     setSession(null);
     setFeedback(null);
     setAttemptNumber(1);
-    setActiveTab("home");
+    setActiveTab(role === "guardian" ? "guardian" : "home");
   };
 
   return (
@@ -493,43 +519,62 @@ export function PetPrototype() {
         <header className="top-bar">
           <div>
             <p className="eyebrow">PET Speaking</p>
-            <h1>今日练习</h1>
+            <h1>{role === "guardian" ? "家长中心" : role === "learner" ? "今日练习" : "家庭入口"}</h1>
           </div>
           <span className="sync-pill">{syncState}</span>
-          <button className="icon-button" aria-label="播放英音示范">
-            <Volume2 size={20} />
-          </button>
+          {role ? (
+            <button className="secondary-button top-action" onClick={logout}>
+              退出
+            </button>
+          ) : (
+            <button className="icon-button" aria-label="播放英音示范">
+              <Volume2 size={20} />
+            </button>
+          )}
         </header>
 
-        <nav className="tab-bar" aria-label="主导航">
-          <TabButton active={activeTab === "home"} icon={<Home size={18} />} onClick={() => setActiveTab("home")}>
-            首页
-          </TabButton>
-          <TabButton active={activeTab === "session"} icon={<Mic size={18} />} onClick={() => setActiveTab("session")}>
-            练习
-          </TabButton>
-          <TabButton active={activeTab === "vocabulary"} icon={<BookOpen size={18} />} onClick={() => setActiveTab("vocabulary")}>
-            单词
-          </TabButton>
-          <TabButton active={activeTab === "guardian"} icon={<BarChart3 size={18} />} onClick={() => setActiveTab("guardian")}>
-            进度
-          </TabButton>
-          <TabButton active={activeTab === "content"} icon={<FolderPlus size={18} />} onClick={() => setActiveTab("content")}>
-            内容
-          </TabButton>
-        </nav>
+        {role && (
+          <nav className={`tab-bar ${role === "guardian" ? "guardian-tabs" : "learner-tabs"}`} aria-label="主导航">
+            {role === "learner" && (
+              <>
+                <TabButton active={activeTab === "home"} icon={<Home size={18} />} onClick={() => setActiveTab("home")}>
+                  首页
+                </TabButton>
+                <TabButton active={activeTab === "session"} icon={<Mic size={18} />} onClick={() => setActiveTab("session")}>
+                  练习
+                </TabButton>
+                <TabButton active={activeTab === "vocabulary"} icon={<BookOpen size={18} />} onClick={() => setActiveTab("vocabulary")}>
+                  单词
+                </TabButton>
+              </>
+            )}
+            {role === "guardian" && (
+              <>
+                <TabButton active={activeTab === "guardian"} icon={<BarChart3 size={18} />} onClick={() => setActiveTab("guardian")}>
+                  进度
+                </TabButton>
+                <TabButton active={activeTab === "content"} icon={<FolderPlus size={18} />} onClick={() => setActiveTab("content")}>
+                  内容
+                </TabButton>
+              </>
+            )}
+          </nav>
+        )}
 
         <div className="screen">
-          {activeTab === "home" && (
+          {!role && <LoginView onLogin={login} />}
+
+          {role === "learner" && activeTab === "home" && (
             <LearnerHomeView
               dailyNewWords={learnerHome.dailyNewWords}
               dailyWeakWords={learnerHome.dailyWeakWords}
+              dailyWeakWordLimit={household.settings.dailyWeakWordLimit}
               practiceStreakDays={learnerHome.practiceStreakDays}
               onStart={startPractice}
             />
           )}
 
-          {activeTab === "session" && (
+          {role === "learner" && activeTab === "session" && (
             <DailySessionView
               session={session}
               attemptNumber={attemptNumber}
@@ -563,7 +608,7 @@ export function PetPrototype() {
             />
           )}
 
-          {activeTab === "vocabulary" && (
+          {role === "learner" && activeTab === "vocabulary" && (
             <VocabularyView
               wordBank={household.wordBank}
               seenWords={household.seenWords}
@@ -573,14 +618,15 @@ export function PetPrototype() {
             />
           )}
 
-          {activeTab === "guardian" && (
+          {role === "guardian" && activeTab === "guardian" && (
             <GuardianProgressView progress={guardianProgress} recordings={household.recentRecordings} />
           )}
 
-          {activeTab === "content" && (
+          {role === "guardian" && activeTab === "content" && (
             <GuardianContentView
               settings={household.settings}
               prompts={household.presetPrompts}
+              wordThemes={wordThemes}
               onAddTopicWord={addTopicWord}
               onAddPrompt={addPrompt}
               onUpdateDailyLimit={updateDailyLimit}
@@ -594,14 +640,40 @@ export function PetPrototype() {
   );
 }
 
+function LoginView({ onLogin }: { onLogin: (role: Role) => void }) {
+  return (
+    <div className="stack">
+      <section className="hero-panel login-panel">
+        <div>
+          <p className="eyebrow">Household Space</p>
+          <h2>选择入口</h2>
+          <p>小朋友进入练习；家长查看进度和管理内容。</p>
+        </div>
+        <div className="login-actions">
+          <button className="primary-button" onClick={() => onLogin("learner")}>
+            <Play size={18} />
+            Learner 登录
+          </button>
+          <button className="secondary-button" onClick={() => onLogin("guardian")}>
+            <BarChart3 size={18} />
+            Guardian 登录
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+}
+
 function LearnerHomeView({
   dailyNewWords,
   dailyWeakWords,
+  dailyWeakWordLimit,
   practiceStreakDays,
   onStart,
 }: {
   dailyNewWords: WordBankItem[];
   dailyWeakWords: WeakWord[];
+  dailyWeakWordLimit: number;
   practiceStreakDays: number;
   onStart: () => void;
 }) {
@@ -635,7 +707,7 @@ function LearnerHomeView({
       <section className="panel">
         <div className="section-title">
           <h2>今天的 Weak Words</h2>
-          <span>最多 5 个</span>
+          <span>最多 {dailyWeakWordLimit} 个</span>
         </div>
         <WordList words={dailyWeakWords} />
       </section>
@@ -704,6 +776,18 @@ function DailySessionView({
   onSpeak: (text: string) => void;
   onScoreShadowing: (word: VocabularyItem) => void;
 }) {
+  const [showPart1Hint, setShowPart1Hint] = useState(false);
+  const [showPart2Hint, setShowPart2Hint] = useState(false);
+
+  useEffect(() => {
+    setShowPart1Hint(false);
+    setShowPart2Hint(false);
+  }, [session?.id]);
+
+  useEffect(() => {
+    setShowPart1Hint(false);
+  }, [part1FollowUp]);
+
   if (!session) {
     return (
       <section className="empty-state">
@@ -782,18 +866,37 @@ function DailySessionView({
           <div className="prompt-head">
             <div>
               <p className="eyebrow">AI Examiner · Speaking Part 1</p>
-              <h2>{part1.prompt.title}</h2>
+              <h2>Speaking Part 1</h2>
             </div>
-            <span>最多 2 次重录</span>
+            <span>{part1.prompt.title}</span>
           </div>
-          <div className="conversation">
-            <div className="chat-row examiner">
-              <MessageCircle size={18} />
-              <p>{part1.prompt.question}</p>
-              <button className="icon-button compact-icon" aria-label="播放考官问题" onClick={() => onSpeak(part1.prompt.question)}>
+          <div className="examiner-flow">
+            <div className="listening-step">
+              <MessageCircle size={20} />
+              <div>
+                <strong>先听考官问题</strong>
+                <p>先听考官问题，再录音回答。听不清时再打开 Text Hint。</p>
+              </div>
+              <button className="icon-button compact-icon" aria-label="播放 Part 1 考官问题" onClick={() => onSpeak(currentQuestion)}>
                 <Volume2 size={16} />
               </button>
             </div>
+            <div className="hint-actions">
+              <button className="secondary-button" onClick={() => setShowPart1Hint((value) => !value)}>
+                <BookOpen size={18} />
+                {showPart1Hint ? "隐藏 Part 1 Text Hint" : "显示 Part 1 Text Hint"}
+              </button>
+              <span>最多 2 次重录</span>
+            </div>
+            {showPart1Hint && (
+              <div className="text-hint">
+                <strong>Text Hint</strong>
+                <p>{currentQuestion}</p>
+                <small>Text Hint Usage 只记录为听力支持，不扣分。</small>
+              </div>
+            )}
+          </div>
+          <div className="conversation">
             {part1Turns.map((turn) => (
               <div className="chat-pair" key={turn.id}>
                 <div className="chat-row learner">
@@ -803,7 +906,7 @@ function DailySessionView({
                 {turn.id === part1Turns.at(-1)?.id && part1FollowUp && (
                   <div className="chat-row examiner">
                     <MessageCircle size={18} />
-                    <p>{part1FollowUp}</p>
+                    <p>考官追问已准备，请先听音频。</p>
                     <button className="icon-button compact-icon" aria-label="播放追问" onClick={() => onSpeak(part1FollowUp)}>
                       <Volume2 size={16} />
                     </button>
@@ -812,11 +915,10 @@ function DailySessionView({
               </div>
             ))}
           </div>
-          <p className="prompt-question">{currentQuestion}</p>
           <div className="record-row">
             <button className={isPart1Recording ? "danger-button" : "secondary-button"} onClick={() => onToggleRecording("part1")}>
               <Mic size={18} />
-              {isPart1Recording ? "停止录音" : "Part 1 录音转文本"}
+              {isPart1Recording ? "停止 Part 1 录音" : "开始 Part 1 录音"}
             </button>
             <button className="secondary-button" onClick={onRetake} disabled={attemptNumber >= 3}>
               <RotateCcw size={18} />
@@ -831,7 +933,7 @@ function DailySessionView({
             </div>
           )}
           <label className="field">
-            <span>转写文本</span>
+            <span>确认 Part 1 转写</span>
             <textarea value={transcript} onChange={(event) => onTranscriptChange(event.target.value)} rows={4} />
           </label>
           <button className="primary-button full-width" onClick={onSubmit} disabled={isAiThinking || !transcript.trim()}>
@@ -876,24 +978,40 @@ function DailySessionView({
         <section className="practice-card">
           <div className="prompt-head">
             <div>
-              <p className="eyebrow">Speaking Part 2</p>
-              <h2>{part2.prompt.title}</h2>
+              <p className="eyebrow">AI Examiner · Speaking Part 2</p>
+              <h2>Speaking Part 2</h2>
             </div>
             <div className="icon-actions">
+              <span>{part2.prompt.title}</span>
               <button className="icon-button compact-icon" aria-label="随机切换 Part 2 图片" onClick={onShufflePart2Image}>
                 <Shuffle size={16} />
               </button>
-              <button className="icon-button compact-icon" aria-label="播放 Part 2 问题" onClick={() => onSpeak(part2.prompt.question)}>
+              <button className="icon-button compact-icon" aria-label="播放 Part 2 考官指令" onClick={() => onSpeak(part2.prompt.question)}>
                 <Volume2 size={16} />
               </button>
             </div>
           </div>
           {visiblePart2Prompt && <Part2Image prompt={visiblePart2Prompt} />}
-          <p className="prompt-question">{part2.prompt.question}</p>
+          <div className="examiner-flow">
+            <div className="hint-actions">
+              <button className="secondary-button" onClick={() => setShowPart2Hint((value) => !value)}>
+                <BookOpen size={18} />
+                {showPart2Hint ? "隐藏 Part 2 Text Hint" : "显示 Part 2 Text Hint"}
+              </button>
+              <span>无动态追问</span>
+            </div>
+            {showPart2Hint && (
+              <div className="text-hint">
+                <strong>Text Hint</strong>
+                <p>{part2.prompt.question}</p>
+                <small>Text Hint Usage 只记录为听力支持，不扣分。</small>
+              </div>
+            )}
+          </div>
           <div className="record-row">
             <button className={isPart2Recording ? "danger-button" : "secondary-button"} onClick={() => onToggleRecording("part2")}>
               <Mic size={18} />
-              {isPart2Recording ? "停止录音" : "Part 2 录音转文本"}
+              {isPart2Recording ? "停止 Part 2 录音" : "开始 Part 2 录音"}
             </button>
             <button
               className="secondary-button"
@@ -912,7 +1030,7 @@ function DailySessionView({
             </div>
           )}
           <label className="field">
-            <span>图片描述回答</span>
+            <span>确认 Part 2 转写</span>
             <textarea
               value={part2Transcript}
               onChange={(event) => onPart2TranscriptChange(event.target.value)}
@@ -1131,6 +1249,7 @@ function GuardianProgressView({
 function GuardianContentView({
   settings,
   prompts,
+  wordThemes,
   onAddTopicWord,
   onAddPrompt,
   onUpdateDailyLimit,
@@ -1139,6 +1258,7 @@ function GuardianContentView({
 }: {
   settings: HouseholdSettings;
   prompts: Prompt[];
+  wordThemes: string[];
   onAddTopicWord: (term: string, chineseGloss: string) => void;
   onAddPrompt: (input: { title: string; question: string; part: Prompt["part"]; imageUrl?: string }) => void;
   onUpdateDailyLimit: (dailyWeakWordLimit: number) => void;
@@ -1151,11 +1271,23 @@ function GuardianContentView({
   const [promptQuestion, setPromptQuestion] = useState("What do you usually do after school?");
   const [part, setPart] = useState<Prompt["part"]>("part_1");
   const [imagePreview, setImagePreview] = useState<string | undefined>();
+  const [wordThemeDraft, setWordThemeDraft] = useState(settings.currentWordTheme);
+  const [weakWordLimitDraft, setWeakWordLimitDraft] = useState(String(settings.dailyWeakWordLimit));
+
+  useEffect(() => {
+    setWordThemeDraft(settings.currentWordTheme);
+    setWeakWordLimitDraft(String(settings.dailyWeakWordLimit));
+  }, [settings.currentWordTheme, settings.dailyWeakWordLimit]);
 
   const saveWord = () => {
     onAddTopicWord(wordTerm, wordGloss);
     setWordTerm("");
     setWordGloss("");
+  };
+
+  const saveDailySettings = () => {
+    onUpdateWordTheme(wordThemeDraft);
+    onUpdateDailyLimit(Number(weakWordLimitDraft));
   };
 
   const savePrompt = () => {
@@ -1182,6 +1314,11 @@ function GuardianContentView({
     }
   };
 
+  const hasDailySettingsChanges =
+    wordThemeDraft !== settings.currentWordTheme ||
+    Number(weakWordLimitDraft) !== settings.dailyWeakWordLimit;
+  const themeOptions = Array.from(new Set([settings.currentWordTheme, ...wordThemes])).sort();
+
   return (
     <div className="stack">
       <section className="panel">
@@ -1191,8 +1328,8 @@ function GuardianContentView({
         </div>
         <label className="field">
           <span>当前 Word Theme</span>
-          <select value={settings.currentWordTheme} onChange={(event) => onUpdateWordTheme(event.target.value)}>
-            {["school", "family", "food", "travel", "sport", "work", "nature", "general"].map((theme) => (
+          <select value={wordThemeDraft} onChange={(event) => setWordThemeDraft(event.target.value)}>
+            {themeOptions.map((theme) => (
               <option key={theme} value={theme}>
                 {theme}
               </option>
@@ -1209,10 +1346,14 @@ function GuardianContentView({
             type="number"
             min={1}
             max={20}
-            value={settings.dailyWeakWordLimit}
-            onChange={(event) => onUpdateDailyLimit(Number(event.target.value))}
+            value={weakWordLimitDraft}
+            onChange={(event) => setWeakWordLimitDraft(event.target.value)}
           />
         </label>
+        <button className="primary-button full-width" onClick={saveDailySettings} disabled={!hasDailySettingsChanges}>
+          <CheckCircle2 size={18} />
+          保存 Daily 设置
+        </button>
       </section>
 
       <section className="panel">
@@ -1332,6 +1473,8 @@ function WordShadowingList({
       {words.map((word) => {
         const result = feedback[word.term];
         const example = result?.example ?? getWordExample(word);
+        const reviewedSentence = example.sentence;
+        const needsContentReview = example.auditStatus === "needs_review";
         const isRecording = recordingTerm === word.term;
 
         return (
@@ -1346,17 +1489,22 @@ function WordShadowingList({
                 英音
               </button>
             </div>
-            <div className="example-strip">
-              <span>自然口语例句</span>
-              <strong>{example.focusWord}</strong>
-              <p>{example.sentence}</p>
-              <small>{example.chinese}</small>
-            </div>
+            {reviewedSentence && (
+              <div className={needsContentReview ? "example-strip content-review-needed" : "example-strip"}>
+                <span>自然口语例句</span>
+                {needsContentReview && <span className="content-review-flag">需复核</span>}
+                <strong>{example.focusWord}</strong>
+                <p>{reviewedSentence}</p>
+                <small>{example.chinese}</small>
+              </div>
+            )}
             <div className="split-actions">
-              <button className="secondary-button" onClick={() => onSpeak(example.sentence)}>
-                <Play size={18} />
-                播放例句
-              </button>
+              {reviewedSentence && (
+                <button className="secondary-button" onClick={() => onSpeak(reviewedSentence)}>
+                  <Play size={18} />
+                  播放例句
+                </button>
+              )}
               <button className={isRecording ? "danger-button" : "primary-button"} onClick={() => onScore(word)}>
                 <Mic size={18} />
                 {isRecording ? "停止评分" : "录音评分"}
@@ -1430,6 +1578,13 @@ function useServerHousehold() {
   const [household, setHousehold] = useState<HouseholdSpace>(() => createDemoHousehold());
   const [loaded, setLoaded] = useState(false);
   const [syncState, setSyncState] = useState("连接中");
+  const householdRef = useRef(household);
+  const lastRemoteSnapshotRef = useRef("");
+  const saveInFlightRef = useRef(false);
+
+  useEffect(() => {
+    householdRef.current = household;
+  }, [household]);
 
   useEffect(() => {
     let cancelled = false;
@@ -1438,6 +1593,7 @@ function useServerHousehold() {
       .then((response) => response.json())
       .then((data: { household: HouseholdSpace }) => {
         if (cancelled) return;
+        lastRemoteSnapshotRef.current = JSON.stringify(data.household);
         setHousehold(data.household);
         setLoaded(true);
         setSyncState("已连接");
@@ -1456,15 +1612,60 @@ function useServerHousehold() {
   useEffect(() => {
     if (!loaded) return;
 
+    const refreshFromServer = () => {
+      if (saveInFlightRef.current) return;
+
+      fetch("/api/household")
+        .then((response) => response.json())
+        .then((data: { household: HouseholdSpace }) => {
+          const remoteSnapshot = JSON.stringify(data.household);
+          const localSnapshot = JSON.stringify(householdRef.current);
+
+          if (remoteSnapshot === lastRemoteSnapshotRef.current || remoteSnapshot === localSnapshot) {
+            lastRemoteSnapshotRef.current = remoteSnapshot;
+            return;
+          }
+
+          lastRemoteSnapshotRef.current = remoteSnapshot;
+          setHousehold(data.household);
+          setSyncState("已同步");
+        })
+        .catch(() => setSyncState("同步失败"));
+    };
+
+    window.addEventListener("focus", refreshFromServer);
+    const interval = window.setInterval(refreshFromServer, 2000);
+
+    return () => {
+      window.removeEventListener("focus", refreshFromServer);
+      window.clearInterval(interval);
+    };
+  }, [loaded]);
+
+  useEffect(() => {
+    if (!loaded) return;
+
+    const snapshot = JSON.stringify(household);
+    if (snapshot === lastRemoteSnapshotRef.current) return;
+
     const timeout = window.setTimeout(() => {
       setSyncState("保存中");
+      saveInFlightRef.current = true;
       fetch("/api/household", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ household }),
       })
-        .then(() => setSyncState("已保存"))
-        .catch(() => setSyncState("保存失败"));
+        .then((response) => response.json())
+        .then((data: { household: HouseholdSpace }) => {
+          lastRemoteSnapshotRef.current = JSON.stringify(data.household);
+          setHousehold(data.household);
+          setSyncState("已保存");
+        })
+        .catch(() => setSyncState("保存失败"))
+        .finally(() => {
+          saveInFlightRef.current = false;
+        });
     }, 450);
 
     return () => window.clearTimeout(timeout);

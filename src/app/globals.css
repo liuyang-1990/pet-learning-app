@@ -94,6 +94,12 @@ a {
   white-space: nowrap;
 }
 
+.top-action {
+  min-height: 34px;
+  padding: 0 10px;
+  font-size: 12px;
+}
+
 .top-bar h1,
 .hero-panel h2,
 .panel h2,
@@ -158,11 +164,18 @@ a {
 
 .tab-bar {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 6px;
   padding: 10px 12px;
   background: #f4f7f2;
   border-bottom: 1px solid var(--line);
+}
+
+.tab-bar.learner-tabs {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.tab-bar.guardian-tabs {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .tab {
@@ -217,6 +230,17 @@ a {
 
 .hero-panel .eyebrow {
   color: #f5d77b;
+}
+
+.login-panel {
+  min-height: 260px;
+  align-content: center;
+}
+
+.login-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
 }
 
 .primary-button {
@@ -362,6 +386,58 @@ a {
 
 .practice-card {
   border-color: rgba(75, 120, 168, 0.24);
+}
+
+.examiner-flow {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0 14px;
+}
+
+.listening-step {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  color: #24496c;
+  background: #f3f8ff;
+  border: 1px solid rgba(75, 120, 168, 0.22);
+}
+
+.listening-step p,
+.text-hint p {
+  margin: 4px 0 0;
+  line-height: 1.45;
+}
+
+.listening-step strong,
+.text-hint strong {
+  display: block;
+  line-height: 1.25;
+}
+
+.hint-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.hint-actions span,
+.text-hint small {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.text-hint {
+  padding: 12px;
+  border-radius: 8px;
+  color: var(--leaf-dark);
+  background: #eef7f1;
+  border: 1px solid rgba(47, 125, 89, 0.22);
 }
 
 .prompt-question {
@@ -598,6 +674,15 @@ a {
   gap: 4px;
   background: #f6f8fb;
   border: 1px solid rgba(75, 120, 168, 0.2);
+}
+
+.example-strip.content-review-needed {
+  background: #fff0ec;
+  border-color: rgba(219, 109, 85, 0.5);
+}
+
+.content-review-flag {
+  color: #9a3328 !important;
 }
 
 .example-strip span,

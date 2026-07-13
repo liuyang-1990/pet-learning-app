@@ -3,6 +3,8 @@ import path from "node:path";
 
 import {
   createDemoHousehold,
+  initializePart2ImagePool,
+  normalizeVocabularyTerm,
   type DailySessionRecord,
   type HouseholdSpace,
   type Prompt,
@@ -73,7 +75,7 @@ export function getHouseholdSpace(): HouseholdSpace {
     .filter((row) => !isLegacyWordBankRow(row))
     .map(mapWeakWord);
 
-  return {
+  return initializePart2ImagePool({
     learnerName: household?.learner_name ?? "Alex",
     settings: {
       dailyNewWordCount: household?.daily_new_word_count ?? 5,
@@ -120,19 +122,20 @@ export function getHouseholdSpace(): HouseholdSpace {
       )
       .all(householdId)
       .map(mapPrompt),
-  };
+  });
 }
 
 export function saveHouseholdSpace(household: HouseholdSpace) {
   const db = getDatabase();
+  const nextHousehold = initializePart2ImagePool(household);
 
   db.exec("BEGIN");
   try {
     db.prepare("UPDATE households SET learner_name = ?, daily_new_word_count = ?, daily_weak_word_limit = ?, current_word_theme = ?, updated_at = ? WHERE id = ?").run(
-      household.learnerName,
-      household.settings?.dailyNewWordCount ?? 5,
-      household.settings?.dailyWeakWordLimit ?? 5,
-      household.settings?.currentWordTheme ?? "school",
+      nextHousehold.learnerName,
+      nextHousehold.settings?.dailyNewWordCount ?? 5,
+      nextHousehold.settings?.dailyWeakWordLimit ?? 5,
+      nextHousehold.settings?.currentWordTheme ?? "school",
       new Date().toISOString(),
       householdId,
     );
@@ -145,25 +148,25 @@ export function saveHouseholdSpace(household: HouseholdSpace) {
     db.prepare("DELETE FROM daily_sessions WHERE household_id = ?").run(householdId);
     db.prepare("DELETE FROM recent_recordings WHERE household_id = ?").run(householdId);
 
-    for (const word of household.wordBank ?? []) {
+    for (const word of nextHousehold.wordBank ?? []) {
       insertWordBankItem(db, word);
     }
-    for (const word of household.seenWords ?? []) {
+    for (const word of nextHousehold.seenWords ?? []) {
       insertSeenWord(db, word);
     }
-    for (const word of household.weakWords) {
+    for (const word of nextHousehold.weakWords) {
       insertWeakWord(db, word);
     }
-    for (const mistake of household.wordMistakes ?? []) {
+    for (const mistake of nextHousehold.wordMistakes ?? []) {
       insertMistakeRecord(db, mistake);
     }
-    for (const prompt of household.presetPrompts) {
+    for (const prompt of nextHousehold.presetPrompts) {
       insertPrompt(db, prompt);
     }
-    for (const session of household.dailySessions) {
+    for (const session of nextHousehold.dailySessions) {
       insertDailySession(db, session);
     }
-    for (const recording of household.recentRecordings) {
+    for (const recording of nextHousehold.recentRecordings) {
       insertRecording(db, recording);
     }
 
@@ -291,10 +294,14 @@ function ensureSchema(db: SqliteDatabase) {
 function ensureSeedData(db: SqliteDatabase) {
   const existing = db.prepare("SELECT id FROM households WHERE id = ?").get(householdId);
 
-  if (existing) return;
+  if (existing) {
+    ensureBuiltInWordBank(db);
+    return;
+  }
 
   const now = new Date().toISOString();
   const demo = createDemoHousehold();
+  const officialVocabulary = loadOfficialPetVocabulary();
   db.prepare("INSERT INTO households (id, learner_name, entry_code, daily_new_word_count, daily_weak_word_limit, current_word_theme, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)").run(
     householdId,
     "Alex",
@@ -306,13 +313,33 @@ function ensureSeedData(db: SqliteDatabase) {
     now,
   );
 
-  for (const word of demo.wordBank) insertWordBankItem(db, word);
+  for (const word of officialVocabulary) insertWordBankItem(db, word);
   for (const word of demo.seenWords) insertSeenWord(db, word);
   for (const word of demo.weakWords) insertWeakWord(db, word);
   for (const mistake of demo.wordMistakes) insertMistakeRecord(db, mistake);
   for (const prompt of demo.presetPrompts) insertPrompt(db, prompt);
   for (const session of demo.dailySessions) insertDailySession(db, session);
   for (const recording of demo.recentRecordings) insertRecording(db, recording);
+}
+
+function ensureBuiltInWordBank(db: SqliteDatabase) {
+  const officialVocabulary = loadOfficialPetVocabulary();
+
+  for (const word of officialVocabulary) {
+    insertWordBankItemIfMissing(db, word);
+  }
+}
+
+function loadOfficialPetVocabulary(): WordBankItem[] {
+  const generatedPath = path.resolve(process.cwd(), "./src/lib/generated/pet-vocabulary.json");
+
+  if (!fs.existsSync(generatedPath)) {
+    return createDemoHousehold().wordBank;
+  }
+
+  const items = JSON.parse(fs.readFileSync(generatedPath, "utf8")) as WordBankItem[];
+
+  return items.filter((word) => word.term && word.theme && word.source);
 }
 
 function ensureColumn(db: SqliteDatabase, table: string, column: string, definition: string) {
@@ -338,6 +365,16 @@ function insertWordBankItem(db: SqliteDatabase, word: WordBankItem) {
     now,
     now,
   );
+}
+
+function insertWordBankItemIfMissing(db: SqliteDatabase, word: WordBankItem) {
+  const existing = db
+    .prepare("SELECT term FROM word_bank WHERE household_id = ? AND lower(term) = lower(?)")
+    .get(householdId, word.term);
+
+  if (existing) return;
+
+  insertWordBankItem(db, word);
 }
 
 function insertSeenWord(db: SqliteDatabase, word: SeenWord) {
@@ -459,10 +496,12 @@ function mapWordBankItem(row: unknown): WordBankItem {
     source: string;
   };
 
+  const term = normalizeVocabularyTerm(item.term);
+
   return {
-    term: item.term,
+    term,
     chineseGloss: item.chinese_gloss,
-    theme: item.theme,
+    theme: item.theme || inferWordTheme(term),
     source: item.source,
   };
 }
@@ -474,10 +513,12 @@ function mapLegacyWordBankItem(row: unknown): WordBankItem {
     source?: string;
   };
 
+  const term = normalizeVocabularyTerm(item.term);
+
   return {
-    term: item.term,
+    term,
     chineseGloss: item.chinese_gloss,
-    theme: inferWordTheme(item.term),
+    theme: inferWordTheme(term),
     source: item.source ?? "cambridge-b1-preliminary-vocabulary-list-2025",
   };
 }
@@ -572,9 +613,15 @@ function uniqueWordBankItems(words: WordBankItem[]): WordBankItem[] {
   const byTerm = new Map<string, WordBankItem>();
 
   for (const word of words) {
-    const key = word.term.toLowerCase();
-    if (!byTerm.has(key)) {
-      byTerm.set(key, word);
+    const term = normalizeVocabularyTerm(word.term);
+    if (!term) continue;
+
+    const key = term.toLowerCase();
+    const normalizedWord = { ...word, term };
+    const existing = byTerm.get(key);
+
+    if (!existing || word.term === term && existing.chineseGloss === "Cambridge B1/PET 官方词表") {
+      byTerm.set(key, normalizedWord);
     }
   }
 

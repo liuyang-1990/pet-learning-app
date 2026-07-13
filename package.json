@@ -8,6 +8,7 @@
     "start": "next start",
     "db:init": "node scripts/init-db.mjs",
     "seed:pet": "node scripts/import-pet-reference-data.mjs",
+    "audit:examples": "vite-node scripts/audit-reviewed-pet-examples.ts",
     "test": "vitest run",
     "test:watch": "vitest"
   },

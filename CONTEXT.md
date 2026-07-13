@@ -16,6 +16,22 @@ _Avoid_: User, admin, teacher
 Daily spoken-English practice for PET preparation, focused first on Cambridge B1 Preliminary Speaking Part 1 and Part 2.
 _Avoid_: Oral training, conversation module, speaking course
 
+**Daily Speaking Practice**:
+The Speaking Part 1 and Speaking Part 2 practice inside a Daily Session, designed for low-pressure repetition, AI follow-up, and improvement feedback rather than full exam simulation.
+_Avoid_: Mock Test, formal exam mode, scored speaking test
+
+**Spoken Examiner Flow**:
+A Daily Speaking Practice interaction where the AI examiner speaks the prompt or follow-up aloud first, so the learner practises listening comprehension before producing English output.
+_Avoid_: Text-only prompt, reading-first speaking practice, silent question card
+
+**Text Hint**:
+An optional written version of a spoken examiner prompt that the learner can reveal only after listening, used as support when the spoken question is not understood.
+_Avoid_: Default prompt text, reading mode, answer scaffold
+
+**Text Hint Usage**:
+A lightweight learning signal that the learner revealed a Text Hint during Daily Speaking Practice, used to inform listening-comprehension feedback without penalty or scoring.
+_Avoid_: Deduction, failure, cheating, wrong answer
+
 **Speaking Part 1**:
 The PET speaking interview task where the learner answers familiar personal questions about topics such as home, school, hobbies, routines, and preferences.
 _Avoid_: Self-introduction, chat
@@ -23,6 +39,10 @@ _Avoid_: Self-introduction, chat
 **Speaking Part 2**:
 The PET speaking photo-description task where the learner talks about a picture or scene using clear observation and location language.
 _Avoid_: Picture talk, image exercise
+
+**Picture Description Feedback**:
+Part 2 feedback focused on picture-description skills such as mentioning people, actions, places, visible objects, location language, and a connected B1-level description.
+_Avoid_: Generic speaking feedback, Part 1 interview feedback, grammar-only correction
 
 **Pronunciation Feedback**:
 Feedback that helps the learner notice spoken words that are unclear, mispronounced, or stressed unnaturally enough to affect comprehension.
@@ -35,6 +55,10 @@ _Avoid_: Phoneme-level correction, accent grading
 **British English Target**:
 The pronunciation and model-audio standard for speaking practice, using British English voices and feedback expectations.
 _Avoid_: American accent, mixed accent, accent preference
+
+**Examiner Voice**:
+The consistent spoken voice used by the AI examiner to deliver Speaking Part 1 questions, follow-ups, and Speaking Part 2 task instructions.
+_Avoid_: Word audio, generic TTS, pronunciation model audio
 
 **Vocabulary Review**:
 Short repeated practice of PET-relevant words selected from common exam topics and the learner's own speaking mistakes.
@@ -83,6 +107,18 @@ _Avoid_: Translation mode, Chinese answer
 **English Output**:
 The learner's spoken or written English answer during speaking and vocabulary practice.
 _Avoid_: Response, answer, translation
+
+**Recording-First Answer**:
+A Speaking Practice answer flow where the learner records spoken English first, then reviews and optionally edits the AI transcript before submission.
+_Avoid_: Text-first answer, typed response, silent drafting
+
+**Raw Transcript**:
+The unedited AI transcription produced from a learner recording, kept as evidence of what the speech recognizer heard.
+_Avoid_: Confirmed answer, final answer, learner text
+
+**Confirmed Answer**:
+The transcript after the learner or guardian has had a chance to correct obvious transcription errors, used for AI follow-up and feedback.
+_Avoid_: Raw transcript, original audio, draft text
 
 **Daily Session**:
 A 10-15 minute learning unit that combines weak-word review, PET speaking practice, and follow-up vocabulary practice.

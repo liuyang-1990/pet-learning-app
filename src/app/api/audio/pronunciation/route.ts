@@ -6,6 +6,7 @@ import { NextResponse } from "next/server";
 import {
   assessWordShadowing,
   purgeExpiredRecentRecordings,
+  recordWordShadowingFeedback,
   type RecentRecording,
 } from "@/lib/pet-learning-app";
 import { getHouseholdSpace, saveHouseholdSpace } from "@/server/database";
@@ -56,10 +57,19 @@ export async function POST(request: Request) {
     audioUrl: `/uploads/${filename}`,
     transcript,
   };
-  const household = purgeExpiredRecentRecordings(
+  const householdWithRecording = purgeExpiredRecentRecordings(
     {
       ...getHouseholdSpace(),
       recentRecordings: [recording, ...getHouseholdSpace().recentRecordings],
+    },
+    new Date(),
+  );
+  const household = recordWordShadowingFeedback(
+    householdWithRecording,
+    {
+      word: targetWord,
+      chineseGloss,
+      feedback,
     },
     new Date(),
   );

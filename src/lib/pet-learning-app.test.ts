@@ -1,4 +1,8 @@
+import fs from "node:fs";
+import path from "node:path";
 import { describe, expect, it } from "vitest";
+import { reviewedWordExampleAudit } from "./generated/pet-word-example-audit";
+import { generatedWordExamples } from "./generated/pet-word-examples";
 import {
   addGuardianPrompt,
   addGuardianTopicWord,
@@ -13,7 +17,10 @@ import {
   getPart2ImageChoices,
   getGuardianProgress,
   getLearnerHome,
+  getReviewedWordExamples,
+  initializePart2ImagePool,
   purgeExpiredRecentRecordings,
+  recordWordShadowingFeedback,
   submitPart2Answer,
   submitSpeakingAttempt,
   startDailySession,
@@ -21,6 +28,29 @@ import {
 } from "./pet-learning-app";
 
 describe("PET Learning App", () => {
+  it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
+    const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+      source: string;
+    }>;
+    const themes = new Set(words.map((word) => word.theme));
+
+    expect(words.length).toBeGreaterThan(3000);
+    expect(themes.size).toBeGreaterThan(20);
+    expect(themes.has("general")).toBe(false);
+    expect(themes.has("daily-life")).toBe(false);
+    expect(words.every((word) => word.theme && word.term === word.term.trim())).toBe(true);
+    expect(words.every((word) => /[\u4e00-\u9fff]/.test(word.chineseGloss))).toBe(true);
+    expect(words.every((word) => !word.chineseGloss.includes("Cambridge B1/PET 官方词表"))).toBe(true);
+    expect(words.every((word) => !word.chineseGloss.includes("中文释义待补充"))).toBe(true);
+    expect(words.find((word) => word.term === "sunny")?.chineseGloss).toContain("晴朗");
+    expect(words.some((word) => word.term === "of the school" || word.term === "of the school.")).toBe(false);
+    expect(words.every((word) => word.source === "cambridge-b1-preliminary-vocabulary-list-2025")).toBe(true);
+  });
+
   it("shows the learner what is due today and starts a daily session", () => {
     const household = createDemoHousehold();
 
@@ -58,6 +88,52 @@ describe("PET Learning App", () => {
       "environment",
       "usually",
     ]);
+  });
+
+  it("uses the selected nature theme for daily new words", () => {
+    const household = {
+      ...createDemoHousehold(),
+      settings: {
+        ...createDemoHousehold().settings,
+        currentWordTheme: "nature",
+      },
+    };
+
+    const home = getLearnerHome(household, new Date("2026-06-26T08:00:00+08:00"));
+    const terms = home.dailyNewWords.map((word) => word.term);
+
+    expect(home.dailyNewWords).toHaveLength(5);
+    expect(home.dailyNewWords.every((word) => word.theme === "nature")).toBe(true);
+    expect(terms).toEqual(
+      expect.arrayContaining(["wildlife", "beach", "recycle", "mountain", "weather"]),
+    );
+    expect(terms).not.toContain("subject");
+  });
+
+  it("counts climate and climate change as one learning unit", () => {
+    const household = {
+      ...createDemoHousehold(),
+      settings: {
+        ...createDemoHousehold().settings,
+        currentWordTheme: "nature",
+        dailyNewWordCount: 5,
+      },
+      wordBank: [
+        { term: "climate", chineseGloss: "气候", theme: "nature", source: "cambridge" },
+        { term: "climate change", chineseGloss: "气候变化", theme: "nature", source: "cambridge" },
+        { term: "weather", chineseGloss: "天气", theme: "nature", source: "cambridge" },
+      ],
+      seenWords: [],
+      weakWords: [],
+    };
+
+    const home = getLearnerHome(household, new Date("2026-06-26T08:00:00+08:00"));
+    const climateTerms = home.dailyNewWords.filter((word) =>
+      ["climate", "climate change"].includes(word.term),
+    );
+
+    expect(climateTerms).toHaveLength(1);
+    expect(home.dailyNewWords.map((word) => word.term)).toContain("weather");
   });
 
   it("limits retakes and turns a speaking attempt into actionable feedback", () => {
@@ -185,6 +261,32 @@ describe("PET Learning App", () => {
     expect(completed.recentRecordings.map((recording) => recording.audioUrl)).toContain(
       "blob:recent-recording",
     );
+    expect(getLearnerHome(completed, new Date("2026-06-26T08:30:00+08:00")).practiceStreakDays).toBe(5);
+  });
+
+  it("turns unclear word shadowing into a pronunciation weak word", () => {
+    const household = createDemoHousehold();
+    const feedback = assessWordShadowing({
+      word: "subject",
+      chineseGloss: "科目",
+      spokenText: "",
+    });
+
+    const updated = recordWordShadowingFeedback(
+      household,
+      {
+        word: "subject",
+        chineseGloss: "科目",
+        feedback,
+      },
+      new Date("2026-06-26T08:12:00+08:00"),
+    );
+
+    expect(updated.weakWords.find((word) => word.term === "subject")).toMatchObject({
+      chineseGloss: "科目",
+      reason: "pronunciation",
+      mastered: false,
+    });
   });
 
   it("continues speaking part 1 with examiner follow-up questions", () => {
@@ -268,6 +370,24 @@ describe("PET Learning App", () => {
       term: "examination / exam",
       chineseGloss: "考试",
     });
+    const schoolExample = getWordExample({
+      term: "of the school.",
+      chineseGloss: "Cambridge B1/PET 官方词表",
+    });
+    const weatherExample = getWordExample({ term: "weather", chineseGloss: "天气" });
+    const sunnyExample = getWordExample({
+      term: "sunny",
+      chineseGloss: "晴朗的",
+    });
+    const treeExample = getWordExample({ term: "tree", chineseGloss: "树" });
+    const wasteExample = getWordExample({ term: "waste", chineseGloss: "废物；浪费" });
+    const weatherForecastExample = getWordExample({
+      term: "weather forecast",
+      chineseGloss: "天气预报",
+    });
+    const naturalExample = getWordExample({ term: "natural", chineseGloss: "自然的；天然的" });
+    const climateExample = getWordExample({ term: "climate", chineseGloss: "气候" });
+    const climateChangeExample = getWordExample({ term: "climate change", chineseGloss: "气候变化" });
     const fallback = getWordExample({ term: "project", chineseGloss: "项目" });
 
     expect(example.focusWord).toBe("background");
@@ -275,9 +395,117 @@ describe("PET Learning App", () => {
     expect(example.chinese).toContain("背景");
     expect(examExample.focusWord).toBe("exam");
     expect(examExample.sentence).toContain("English exam");
+    expect(schoolExample.focusWord).toBe("school");
+    expect(schoolExample.sentence).toContain("school");
+    expect(weatherExample.sentence).toContain("weather");
+    expect(weatherExample.sentence).not.toContain("bag");
+    expect(sunnyExample.sentence).toContain("sunny");
+    expect(sunnyExample.chinese).toContain("晴朗");
+    expect(sunnyExample.chinese).not.toContain("中文释义待补充");
+    expect(sunnyExample.chinese).not.toContain("书包");
+    expect(treeExample.sentence).toBe("There is a tall tree outside my bedroom window.");
+    expect(treeExample.sentence).not.toContain("The word");
+    expect(wasteExample.sentence).toBe("Please put the waste in the bin before we leave.");
+    expect(wasteExample.sentence).not.toContain("reading homework");
+    expect(weatherForecastExample.sentence).toBe("The weather forecast said it would rain later.");
+    expect(weatherForecastExample.sentence).not.toContain("during our walk in the park");
+    expect(naturalExample.sentence).toBe("The juice tasted natural, not too sweet.");
+    expect(naturalExample.sentence).not.toContain("the natural");
+    expect(climateExample.sentence).toBe("The climate here is warm and wet for most of the year.");
+    expect(climateChangeExample.sentence).toBe("Climate change is making some summers hotter.");
     expect(fallback.sentence).not.toContain("I heard the word");
+    expect(fallback.sentence).not.toContain("The word");
+    expect(fallback.sentence).not.toContain("reading homework");
+    expect(fallback.sentence).not.toContain("Let's talk about");
+    expect(fallback.sentence).not.toContain("in my bag");
+    expect(fallback.chinese).not.toContain("书包");
     expect(fallback.sentence).toContain("project");
     expect(fallback.chinese).toContain("项目");
+  });
+
+  it("never presents unreviewed generated text as a natural PET example", () => {
+    const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      source: string;
+    }>;
+    const officialWords = words.filter((word) =>
+      word.source === "cambridge-b1-preliminary-vocabulary-list-2025",
+    );
+    const unreviewedWords = officialWords
+      .map((word) => ({ word, example: getWordExample(word) }))
+      .filter(({ example }) => example.sentence === null);
+    const invalidReviewedExamples = officialWords
+      .map((word) => ({ word, example: getWordExample(word) }))
+      .filter(({ word, example }) => {
+        if (!example.sentence) return false;
+
+        const focusKey = example.focusWord.toLowerCase().replace(/[^a-z]+/g, "");
+        const chineseSentence = example.chinese.split("；").slice(1).join("；");
+        const rawTermInChinese =
+          focusKey.length > 2 &&
+          new RegExp(`(^|[^a-z])${focusKey}([^a-z]|$)`, "i").test(chineseSentence);
+
+        return (
+          rawTermInChinese ||
+          word.chineseGloss.includes("白痴")
+        );
+      });
+
+    expect(officialWords).toHaveLength(words.length);
+    expect(generatedWordExamples).toEqual({});
+    expect(unreviewedWords.length).toBeGreaterThan(0);
+    expect(invalidReviewedExamples).toEqual([]);
+  });
+
+  it("only exposes reviewed example content to learners", () => {
+    expect(generatedWordExamples.ability).toBeUndefined();
+    expect(generatedWordExamples.able).toBeUndefined();
+
+    expect(getWordExample({ term: "ability", chineseGloss: "能力" })).toMatchObject({
+      sentence: "She has the ability to explain hard ideas clearly.",
+      chinese: "ability = 能力；她有能力把难懂的想法解释清楚。",
+    });
+    expect(getWordExample({ term: "able", chineseGloss: "能够的" })).toMatchObject({
+      sentence: "She is able to explain the answer clearly.",
+      chinese: "able = 能干的；能够的；她能够把答案解释清楚。",
+      auditStatus: "pass",
+    });
+  });
+
+  it("covers every learner-facing example with a Google translation audit", () => {
+    expect(Object.keys(reviewedWordExampleAudit).sort()).toEqual(
+      Object.keys(getReviewedWordExamples()).sort(),
+    );
+    expect(
+      Object.values(reviewedWordExampleAudit).filter((audit) => audit.status === "needs_review"),
+    ).toEqual([]);
+  });
+
+  it("normalizes duplicate vocabulary fragments before selecting daily new words", () => {
+    const household = {
+      ...createDemoHousehold(),
+      settings: {
+        ...createDemoHousehold().settings,
+        currentWordTheme: "school",
+      },
+      wordBank: [
+        { term: "of the school.", chineseGloss: "Cambridge B1/PET 官方词表", theme: "school", source: "cambridge" },
+        { term: "school", chineseGloss: "学校", theme: "school", source: "guardian" },
+        { term: "classroom", chineseGloss: "教室", theme: "school", source: "guardian" },
+      ],
+      seenWords: [],
+      weakWords: [],
+    };
+
+    const home = getLearnerHome(household, new Date("2026-06-26T08:00:00+08:00"));
+
+    expect(home.dailyNewWords.map((word) => word.term)).toEqual(
+      expect.arrayContaining(["school", "classroom"]),
+    );
+    expect(home.dailyNewWords.map((word) => word.term)).not.toContain("of the school.");
+    expect(home.dailyNewWords.filter((word) => word.term === "school")).toHaveLength(1);
   });
 
   it("provides a part 2 image and gives feedback on a picture description", () => {
@@ -286,8 +514,8 @@ describe("PET Learning App", () => {
     const part2 = session.steps.find((step) => step.kind === "speaking_part_2");
 
     expect(part2?.kind).toBe("speaking_part_2");
-    expect(part2?.kind === "speaking_part_2" && ensurePart2Image(part2.prompt).imageUrl).toContain(
-      "data:image/svg+xml",
+    expect(part2?.kind === "speaking_part_2" && ensurePart2Image(part2.prompt).imageUrl).toMatch(
+      /^https:\/\/images\.unsplash\.com\/photo-/,
     );
 
     const result = submitPart2Answer(session, {
@@ -310,7 +538,13 @@ describe("PET Learning App", () => {
     const prompt = household.presetPrompts.find((item) => item.part === "part_2");
 
     expect(prompt).toBeDefined();
-    expect(prompt && getPart2ImageChoices(prompt)).toHaveLength(4);
+    const builtInChoices = prompt ? getPart2ImageChoices(prompt) : [];
+
+    expect(builtInChoices).toHaveLength(32);
+    expect(builtInChoices.every((imageUrl) => imageUrl.startsWith("https://images.unsplash.com/photo-"))).toBe(
+      true,
+    );
+    expect(builtInChoices.some((imageUrl) => imageUrl.startsWith("data:image/svg+xml"))).toBe(false);
     expect(
       prompt &&
         getPart2ImageChoices(prompt, [
@@ -320,9 +554,36 @@ describe("PET Learning App", () => {
             title: "Extra image",
             question: "Look at the picture and describe what the people are doing.",
             part: "part_2",
-            imageUrl: "data:image/svg+xml;charset=utf-8,extra",
+            imageUrl: "data:image/png;base64,extra",
           },
         ]),
-    ).toHaveLength(5);
+    ).toHaveLength(33);
+  });
+
+  it("upgrades legacy generated part 2 images to the real-photo pool", () => {
+    const household = {
+      ...createDemoHousehold(),
+      presetPrompts: [
+        {
+          id: "part-2-legacy",
+          title: "Legacy generated scene",
+          question: "Look at the picture and describe what the people are doing.",
+          part: "part_2" as const,
+          imageUrl: "data:image/svg+xml;charset=utf-8,old-generated-scene",
+        },
+        {
+          id: "part-2-upload",
+          title: "Guardian uploaded scene",
+          question: "Look at the picture and describe what the people are doing.",
+          part: "part_2" as const,
+          imageUrl: "data:image/png;base64,guardian-upload",
+        },
+      ],
+    };
+
+    const upgraded = initializePart2ImagePool(household);
+
+    expect(upgraded.presetPrompts[0]?.imageUrl).toMatch(/^https:\/\/images\.unsplash\.com\/photo-/);
+    expect(upgraded.presetPrompts[1]?.imageUrl).toBe("data:image/png;base64,guardian-upload");
   });
 });
