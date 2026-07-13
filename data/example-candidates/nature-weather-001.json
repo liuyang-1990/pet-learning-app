@@ -48,7 +48,7 @@
     { "term": "wooden", "focusWord": "wooden", "sentence": "The children crossed a small wooden bridge.", "chinese": "wooden = 木制的；孩子们走过了一座小木桥。" },
     { "term": "world", "focusWord": "world", "sentence": "People around the world need clean water.", "chinese": "world = 世界；世界各地的人都需要干净的水。" },
     { "term": "bright", "focusWord": "bright", "sentence": "The morning was bright after the clouds disappeared.", "chinese": "bright = 明亮的；云散后，早晨变得很明亮。" },
-    { "term": "clear", "focusWord": "clear", "sentence": "The sky was clear, so we could see the stars.", "chinese": "clear = 晴朗的；天空晴朗，所以我们能看到星星。" },
+    { "term": "clear", "focusWord": "clear", "sentence": "The instructions were clear, so everyone understood.", "chinese": "clear = 清楚的；说明很清楚，所以每个人都听懂了。" },
     { "term": "deep", "focusWord": "deep", "sentence": "The lake is too deep for young swimmers.", "chinese": "deep = 深的；这个湖对年幼的游泳者来说太深了。" },
     { "term": "high", "focusWord": "high", "sentence": "The mountain looked high from the village.", "chinese": "high = 高的；从村子看，那座山显得很高。" },
     { "term": "low", "focusWord": "low", "sentence": "The sun was low when we walked home.", "chinese": "low = 低的；我们走回家时，太阳已经很低了。" }

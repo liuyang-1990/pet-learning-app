@@ -1177,8 +1177,8 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     },
     clear: {
       focusWord: "clear",
-      sentence: "The sky was clear, so we could see the stars.",
-      chinese: "clear = 晴朗的；天空晴朗，所以我们能看到星星。",
+      sentence: "The instructions were clear, so everyone understood.",
+      chinese: "clear = 清楚的；说明很清楚，所以每个人都听懂了。",
     },
     deep: {
       focusWord: "deep",

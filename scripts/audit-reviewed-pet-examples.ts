@@ -27,6 +27,9 @@ const manuallyConfirmedTerms = new Set([
   "sunny",
   "race",
   "waste",
+  "field",
+  "cool",
+  "rock",
 ]);
 
 async function main() {
