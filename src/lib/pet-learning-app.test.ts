@@ -27,6 +27,59 @@ import {
   updateDailyWeakWordLimit,
 } from "./pet-learning-app";
 
+const firstNatureWeatherBatch = [
+  { term: "cloudy", chineseGloss: "多云的；有愁容的；云的" },
+  { term: "crop", chineseGloss: "农作物；产量；平头" },
+  { term: "dust", chineseGloss: "灰尘；尘埃；粉末" },
+  { term: "dusty", chineseGloss: "灰尘多的；无聊的；含糊的" },
+  { term: "environmental", chineseGloss: "周围的；环境的；环保的" },
+  { term: "farm", chineseGloss: "农场；农田；耕种" },
+  { term: "field", chineseGloss: "领域；田地；场地" },
+  { term: "garden", chineseGloss: "花园；果园；菜园" },
+  { term: "hill", chineseGloss: "小山；丘陵；小土堆" },
+  { term: "island", chineseGloss: "岛；岛屿；孤立地区" },
+  { term: "moon", chineseGloss: "月亮；月球；月光" },
+  { term: "nature", chineseGloss: "自然；大自然；本性" },
+  { term: "ocean", chineseGloss: "海洋；广阔；许多" },
+  { term: "recycled", chineseGloss: "回收利用( recycle的过去式和过去分词 )；再利用；再次应用" },
+  { term: "season", chineseGloss: "季节；时节；当令期" },
+  { term: "snow", chineseGloss: "雪；积雪；下雪" },
+  { term: "star", chineseGloss: "星；恒星；星形物" },
+  { term: "sun", chineseGloss: "太阳；日；日光" },
+  { term: "thunder", chineseGloss: "雷；雷声；打雷" },
+  { term: "windy", chineseGloss: "多风的；风强的；腹胀的" },
+  { term: "air", chineseGloss: "空气；旋律；态度" },
+  { term: "clean", chineseGloss: "干净的；清白的；简洁的" },
+  { term: "cold", chineseGloss: "感冒；寒冷；寒冷的" },
+  { term: "cool", chineseGloss: "凉爽；凉爽的空气；凉爽的" },
+  { term: "dark", chineseGloss: "黑暗；夜；黄昏" },
+  { term: "dirty", chineseGloss: "肮脏的；卑鄙的；弄脏" },
+  { term: "dry", chineseGloss: "干的；无酒的；枯燥无味的" },
+  { term: "fresh", chineseGloss: "新鲜的；新奇的；另外的" },
+  { term: "green", chineseGloss: "绿色；绿色颜料；绿色的" },
+  { term: "ground", chineseGloss: "土地；战场；场地" },
+  { term: "hot", chineseGloss: "热的；热心的；辣的" },
+  { term: "land", chineseGloss: "陆地；地面；地界" },
+  { term: "light", chineseGloss: "光；光亮；灯" },
+  { term: "outdoor", chineseGloss: "户外的；屋外的；露天的" },
+  { term: "outside", chineseGloss: "外面；外表；外界" },
+  { term: "rock", chineseGloss: "岩石；岩礁；石头" },
+  { term: "space", chineseGloss: "位置；空间；距离" },
+  { term: "storm", chineseGloss: "暴风雨；骚动；风波" },
+  { term: "temperature", chineseGloss: "温度；发烧；热度" },
+  { term: "warm", chineseGloss: "暖和的；暖的；温暖的" },
+  { term: "wet", chineseGloss: "湿气；潮湿；水分" },
+  { term: "wild", chineseGloss: "荒野；荒地；野性的" },
+  { term: "wood", chineseGloss: "木材；木制品；植林于" },
+  { term: "wooden", chineseGloss: "木制的；呆笨的；木然的" },
+  { term: "world", chineseGloss: "世界；地球；宇宙" },
+  { term: "bright", chineseGloss: "明亮的；聪明的；鲜明的" },
+  { term: "clear", chineseGloss: "清楚的；明确的；澄清的" },
+  { term: "deep", chineseGloss: "深的；深入地；深渊" },
+  { term: "high", chineseGloss: "高度；高处；高的" },
+  { term: "low", chineseGloss: "低点；低价；低" },
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -421,6 +474,51 @@ describe("PET Learning App", () => {
     expect(fallback.chinese).not.toContain("书包");
     expect(fallback.sentence).toContain("project");
     expect(fallback.chinese).toContain("项目");
+  });
+
+  it("adds the first reviewed nature and weather example batch", () => {
+    const examples = firstNatureWeatherBatch.map((word) => ({
+      word,
+      example: getWordExample(word),
+    }));
+    const forbiddenPhrases = [
+      "I heard the word",
+      "I learned the word",
+      "The word",
+      "reading homework",
+      "Let's talk about",
+      "in my bag",
+      "the cloudy",
+    ];
+
+    expect(firstNatureWeatherBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(135);
+    expect(examples.map(({ example }) => example.sentence).filter(Boolean)).toHaveLength(50);
+
+    for (const { word, example } of examples) {
+      expect(example.focusWord.toLowerCase()).toContain(word.term.split(" ")[0]);
+      expect(example.chinese).toContain(word.term);
+      expect(example.chinese).toContain("；");
+      for (const phrase of forbiddenPhrases) {
+        expect(example.sentence).not.toContain(phrase);
+      }
+    }
+  });
+
+  it("uses reviewed learner-facing examples for cloudy and nearby weather words", () => {
+    expect(getWordExample({ term: "cloudy", chineseGloss: "多云的；有愁容的；云的" })).toMatchObject({
+      focusWord: "cloudy",
+      sentence: "It was cloudy, but it did not rain.",
+      chinese: "cloudy = 多云的；天气多云，但没有下雨。",
+    });
+    expect(getWordExample({ term: "windy", chineseGloss: "多风的；风强的；腹胀的" })).toMatchObject({
+      sentence: "It was windy, and my hair blew everywhere.",
+      chinese: "windy = 多风的；风很大，我的头发被吹得到处乱飞。",
+    });
+    expect(getWordExample({ term: "storm", chineseGloss: "暴风雨；骚动；风波" })).toMatchObject({
+      sentence: "The storm damaged two trees near our school.",
+      chinese: "storm = 暴风雨；暴风雨损坏了我们学校附近的两棵树。",
+    });
   });
 
   it("never presents unreviewed generated text as a natural PET example", () => {
