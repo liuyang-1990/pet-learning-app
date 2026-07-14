@@ -10,7 +10,7 @@ The official vocabulary data has too few entries tagged `school` to form a 50-wo
 
 ```text
 answer, article, bookcase, bookshelf, chapter, college, course, dictionary,
-education, essay, examination / exam, exercise, explain, grammar, learn, mark,
+education, essay, calendar, exercise, explain, grammar, learn, mark,
 maths / mathematics, mistake, note, notebook, paper, pencil, pencil case,
 pupil, read, reading, research, revise, science, spelling, study, teach,
 teaching, test, textbook, university, write, write down, calculator, computer,

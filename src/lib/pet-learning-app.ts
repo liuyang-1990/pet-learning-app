@@ -865,10 +865,10 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "I finished my essay about my favourite place.",
       chinese: "essay = 短文；我完成了关于我最喜欢的地方的短文。",
     },
-    examinationexam: {
-      focusWord: "examination / exam",
-      sentence: "The exam begins at nine o'clock on Monday.",
-      chinese: "examination / exam = 考试；考试在星期一九点开始。",
+    calendar: {
+      focusWord: "calendar",
+      sentence: "Our class calendar shows the dates of all the tests.",
+      chinese: "calendar = 日历；我们班的日历标出了所有测试的日期。",
     },
     exercise: {
       focusWord: "exercise",

@@ -82,7 +82,7 @@ const firstNatureWeatherBatch = [
 
 const schoolStudyBatch = [
   "answer", "article", "bookcase", "bookshelf", "chapter", "college", "course",
-  "dictionary", "education", "essay", "examination / exam", "exercise", "explain",
+  "dictionary", "education", "essay", "calendar", "exercise", "explain",
   "grammar", "learn", "mark", "maths / mathematics", "mistake", "note", "notebook",
   "paper", "pencil", "pencil case", "pupil", "read", "reading", "research", "revise",
   "science", "spelling", "study", "teach", "teaching", "test", "textbook", "university",
@@ -565,6 +565,30 @@ describe("PET Learning App", () => {
       sentence: "Can you translate this sentence into Chinese?",
       chinese: "translate = 翻译；你能把这个句子翻译成中文吗？",
     });
+  });
+
+  it("keeps the school study candidate ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/school-study-001.json",
+    );
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      entries: Array<{
+        term: string;
+        focusWord: string;
+        sentence: string;
+        chinese: string;
+      }>;
+    };
+
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
   });
 
   it("never presents unreviewed generated text as a natural PET example", () => {

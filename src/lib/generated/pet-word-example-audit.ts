@@ -119,6 +119,206 @@ export const reviewedWordExampleAudit = {
     "status": "pass",
     "reasons": []
   },
+  "answer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "article": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bookcase": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bookshelf": {
+    "status": "pass",
+    "reasons": []
+  },
+  "chapter": {
+    "status": "pass",
+    "reasons": []
+  },
+  "college": {
+    "status": "pass",
+    "reasons": []
+  },
+  "course": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dictionary": {
+    "status": "pass",
+    "reasons": []
+  },
+  "education": {
+    "status": "pass",
+    "reasons": []
+  },
+  "essay": {
+    "status": "pass",
+    "reasons": []
+  },
+  "calendar": {
+    "status": "pass",
+    "reasons": []
+  },
+  "exercise": {
+    "status": "pass",
+    "reasons": []
+  },
+  "explain": {
+    "status": "pass",
+    "reasons": []
+  },
+  "grammar": {
+    "status": "pass",
+    "reasons": []
+  },
+  "learn": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mark": {
+    "status": "pass",
+    "reasons": []
+  },
+  "maths": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mistake": {
+    "status": "pass",
+    "reasons": []
+  },
+  "note": {
+    "status": "pass",
+    "reasons": []
+  },
+  "notebook": {
+    "status": "pass",
+    "reasons": []
+  },
+  "paper": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pencil": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pencilcase": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pupil": {
+    "status": "pass",
+    "reasons": []
+  },
+  "read": {
+    "status": "pass",
+    "reasons": []
+  },
+  "reading": {
+    "status": "pass",
+    "reasons": []
+  },
+  "research": {
+    "status": "pass",
+    "reasons": []
+  },
+  "revise": {
+    "status": "pass",
+    "reasons": []
+  },
+  "science": {
+    "status": "pass",
+    "reasons": []
+  },
+  "spelling": {
+    "status": "pass",
+    "reasons": []
+  },
+  "study": {
+    "status": "pass",
+    "reasons": []
+  },
+  "teach": {
+    "status": "pass",
+    "reasons": []
+  },
+  "teaching": {
+    "status": "pass",
+    "reasons": []
+  },
+  "test": {
+    "status": "pass",
+    "reasons": []
+  },
+  "textbook": {
+    "status": "pass",
+    "reasons": []
+  },
+  "university": {
+    "status": "pass",
+    "reasons": []
+  },
+  "write": {
+    "status": "pass",
+    "reasons": []
+  },
+  "writedown": {
+    "status": "pass",
+    "reasons": []
+  },
+  "calculator": {
+    "status": "pass",
+    "reasons": []
+  },
+  "computer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "desk": {
+    "status": "pass",
+    "reasons": []
+  },
+  "document": {
+    "status": "pass",
+    "reasons": []
+  },
+  "file": {
+    "status": "pass",
+    "reasons": []
+  },
+  "keyboard": {
+    "status": "pass",
+    "reasons": []
+  },
+  "language": {
+    "status": "pass",
+    "reasons": []
+  },
+  "message": {
+    "status": "pass",
+    "reasons": []
+  },
+  "question": {
+    "status": "pass",
+    "reasons": []
+  },
+  "record": {
+    "status": "pass",
+    "reasons": []
+  },
+  "skill": {
+    "status": "pass",
+    "reasons": []
+  },
+  "translate": {
+    "status": "pass",
+    "reasons": []
+  },
   "cousin": {
     "status": "pass",
     "reasons": []
