@@ -1138,5 +1138,205 @@ export const reviewedWordExampleAudit = {
   "reason": {
     "status": "pass",
     "reasons": []
+  },
+  "fun": {
+    "status": "pass",
+    "reasons": []
+  },
+  "funny": {
+    "status": "pass",
+    "reasons": []
+  },
+  "glad": {
+    "status": "pass",
+    "reasons": []
+  },
+  "happy": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hate": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hope": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hopeless": {
+    "status": "pass",
+    "reasons": []
+  },
+  "horrible": {
+    "status": "pass",
+    "reasons": []
+  },
+  "inlove": {
+    "status": "pass",
+    "reasons": []
+  },
+  "like": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lonely": {
+    "status": "pass",
+    "reasons": []
+  },
+  "looklike": {
+    "status": "pass",
+    "reasons": []
+  },
+  "love": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mad": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mind": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mood": {
+    "status": "pass",
+    "reasons": []
+  },
+  "nervous": {
+    "status": "pass",
+    "reasons": []
+  },
+  "peace": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pleased": {
+    "status": "pass",
+    "reasons": []
+  },
+  "prefer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "proud": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sad": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shocking": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stress": {
+    "status": "pass",
+    "reasons": []
+  },
+  "surprise": {
+    "status": "pass",
+    "reasons": []
+  },
+  "surprised": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tired": {
+    "status": "pass",
+    "reasons": []
+  },
+  "trust": {
+    "status": "pass",
+    "reasons": []
+  },
+  "uncomfortable": {
+    "status": "pass",
+    "reasons": []
+  },
+  "unpleasant": {
+    "status": "pass",
+    "reasons": []
+  },
+  "wish": {
+    "status": "pass",
+    "reasons": []
+  },
+  "worried": {
+    "status": "pass",
+    "reasons": []
+  },
+  "amazed": {
+    "status": "pass",
+    "reasons": []
+  },
+  "amazing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "amusing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "annoyed": {
+    "status": "pass",
+    "reasons": []
+  },
+  "anxious": {
+    "status": "pass",
+    "reasons": []
+  },
+  "brave": {
+    "status": "pass",
+    "reasons": []
+  },
+  "calm": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cheerful": {
+    "status": "pass",
+    "reasons": []
+  },
+  "confident": {
+    "status": "pass",
+    "reasons": []
+  },
+  "delighted": {
+    "status": "pass",
+    "reasons": []
+  },
+  "depressed": {
+    "status": "pass",
+    "reasons": []
+  },
+  "disappointed": {
+    "status": "pass",
+    "reasons": []
+  },
+  "disappointing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "embarrassed": {
+    "status": "pass",
+    "reasons": []
+  },
+  "embarrassing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "exhausted": {
+    "status": "pass",
+    "reasons": []
+  },
+  "frightened": {
+    "status": "pass",
+    "reasons": []
+  },
+  "frightening": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

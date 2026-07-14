@@ -110,6 +110,16 @@ const familyPeopleFeelingsBatch = [
   "danger", "excited", "exciting", "fear", "feel like",
 ] as const;
 
+const feelingsReactionsBatch = [
+  "fun", "funny", "glad", "happy", "hate", "hope", "hopeless", "horrible",
+  "in love", "like", "lonely", "look like", "love", "mad", "mind", "mood",
+  "nervous", "peace", "pleased", "prefer", "proud", "sad", "shocking", "stress",
+  "surprise", "surprised", "tired", "trust", "uncomfortable", "unpleasant", "wish",
+  "worried", "amazed", "amazing", "amusing", "annoyed", "anxious", "brave", "calm",
+  "cheerful", "confident", "delighted", "depressed", "disappointed", "disappointing",
+  "embarrassed", "embarrassing", "exhausted", "frightened", "frightening",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -701,6 +711,60 @@ describe("PET Learning App", () => {
     expect(getWordExample({ term: "feel like", chineseGloss: "想要" })).toMatchObject({
       sentence: "I feel like having some hot soup.",
       chinese: "feel like = 想要；我想喝一些热汤。",
+    });
+  });
+
+  it("adds the reviewed feelings reactions example batch", () => {
+    const examples = feelingsReactionsBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(feelingsReactionsBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(335);
+    expect(examples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
+  });
+
+  it("keeps the feelings reactions ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/feelings-reactions-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for feelings reactions terms", () => {
+    expect(getWordExample({ term: "like", chineseGloss: "相似的；同样的；喜欢" })).toMatchObject({
+      sentence: "I like listening to music while I cook.",
+      chinese: "like = 喜欢；我喜欢做饭时听音乐。",
+    });
+    expect(getWordExample({ term: "look like", chineseGloss: "看起来相像" })).toMatchObject({
+      sentence: "You look like your mother when you smile.",
+      chinese: "look like = 看起来像；你微笑时看起来很像你妈妈。",
+    });
+    expect(getWordExample({ term: "mind", chineseGloss: "思想；愿望；智力" })).toMatchObject({
+      sentence: "I changed my mind and chose the red jacket.",
+      chinese: "mind = 想法；我改变了主意，选择了红色夹克。",
+    });
+    expect(getWordExample({ term: "mad", chineseGloss: "疯狂的；生气的" })).toMatchObject({
+      sentence: "Mum was mad at me for losing the house key.",
+      chinese: "mad = 生气的；我弄丢家门钥匙，妈妈很生我的气。",
+    });
+    expect(getWordExample({ term: "wish", chineseGloss: "希望；愿望；祝愿" })).toMatchObject({
+      sentence: "I wish I could stay on holiday for another week.",
+      chinese: "wish = 希望；我希望能再度假一个星期。",
     });
   });
 
