@@ -19,6 +19,12 @@ const cachePath = path.resolve(process.cwd(), "data/google-translation-audit-cac
 const outputPath = path.resolve(process.cwd(), "src/lib/generated/pet-word-example-audit.ts");
 const cache = readCache();
 const manuallyConfirmedTerms = new Set([
+  // These family and feelings examples use valid synonyms or context-dependent senses.
+  "mother", // mother / mum
+  "baby", // infant, not a term of affection
+  "male", // male animal / bird
+  "fear", // fear / being afraid
+  "feellike", // want to, not resemble
   // These home-context examples use valid senses or Chinese synonyms missed by gloss matching.
   "bath", // washing in a bath
   "flat", // apartment, not level
