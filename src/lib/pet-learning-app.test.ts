@@ -100,6 +100,16 @@ const homeFamilyBatch = [
   "window", "brother", "dad", "mum", "sister",
 ] as const;
 
+const familyPeopleFeelingsBatch = [
+  "aunt", "daughter", "family", "father", "grandfather", "grandmother",
+  "husband", "married", "mother", "son", "teenager", "uncle", "wife",
+  "adult", "baby", "boy", "child", "crowd", "female", "friend", "girl",
+  "group", "hero", "king", "Madam", "male", "man", "member", "Mr", "Mrs",
+  "Ms", "people", "person", "queen", "role", "woman", "afraid", "angry",
+  "ashamed", "awful", "bored", "boring", "bother", "comfortable", "confused",
+  "danger", "excited", "exciting", "fear", "feel like",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -645,6 +655,52 @@ describe("PET Learning App", () => {
     expect(getWordExample({ term: "mum", chineseGloss: "菊花；沉默；沉默的" })).toMatchObject({
       sentence: "My mum reads with me before bed.",
       chinese: "mum = 妈妈；我妈妈睡前和我一起阅读。",
+    });
+  });
+
+  it("adds the reviewed family people feelings example batch", () => {
+    const examples = familyPeopleFeelingsBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(familyPeopleFeelingsBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(285);
+    expect(examples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
+  });
+
+  it("keeps the family people feelings ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/family-people-feelings-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for family people feelings terms", () => {
+    expect(getWordExample({ term: "man", chineseGloss: "一把；少量" })).toMatchObject({
+      sentence: "A man helped us carry the heavy box.",
+      chinese: "man = 男人；一名男子帮我们搬了那个重箱子。",
+    });
+    expect(getWordExample({ term: "Madam", chineseGloss: "女士；夫人" })).toMatchObject({
+      sentence: "Excuse me, Madam, is this seat yours?",
+      chinese: "Madam = 女士；对不起，女士，这个座位是您的吗？",
+    });
+    expect(getWordExample({ term: "feel like", chineseGloss: "想要" })).toMatchObject({
+      sentence: "I feel like having some hot soup.",
+      chinese: "feel like = 想要；我想喝一些热汤。",
     });
   });
 

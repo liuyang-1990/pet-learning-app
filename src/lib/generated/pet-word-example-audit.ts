@@ -539,6 +539,206 @@ export const reviewedWordExampleAudit = {
     "status": "pass",
     "reasons": []
   },
+  "aunt": {
+    "status": "pass",
+    "reasons": []
+  },
+  "daughter": {
+    "status": "pass",
+    "reasons": []
+  },
+  "family": {
+    "status": "pass",
+    "reasons": []
+  },
+  "father": {
+    "status": "pass",
+    "reasons": []
+  },
+  "grandfather": {
+    "status": "pass",
+    "reasons": []
+  },
+  "grandmother": {
+    "status": "pass",
+    "reasons": []
+  },
+  "husband": {
+    "status": "pass",
+    "reasons": []
+  },
+  "married": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mother": {
+    "status": "pass",
+    "reasons": []
+  },
+  "son": {
+    "status": "pass",
+    "reasons": []
+  },
+  "teenager": {
+    "status": "pass",
+    "reasons": []
+  },
+  "uncle": {
+    "status": "pass",
+    "reasons": []
+  },
+  "wife": {
+    "status": "pass",
+    "reasons": []
+  },
+  "adult": {
+    "status": "pass",
+    "reasons": []
+  },
+  "baby": {
+    "status": "pass",
+    "reasons": []
+  },
+  "boy": {
+    "status": "pass",
+    "reasons": []
+  },
+  "child": {
+    "status": "pass",
+    "reasons": []
+  },
+  "crowd": {
+    "status": "pass",
+    "reasons": []
+  },
+  "female": {
+    "status": "pass",
+    "reasons": []
+  },
+  "friend": {
+    "status": "pass",
+    "reasons": []
+  },
+  "girl": {
+    "status": "pass",
+    "reasons": []
+  },
+  "group": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hero": {
+    "status": "pass",
+    "reasons": []
+  },
+  "king": {
+    "status": "pass",
+    "reasons": []
+  },
+  "madam": {
+    "status": "pass",
+    "reasons": []
+  },
+  "male": {
+    "status": "pass",
+    "reasons": []
+  },
+  "man": {
+    "status": "pass",
+    "reasons": []
+  },
+  "member": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mr": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mrs": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ms": {
+    "status": "pass",
+    "reasons": []
+  },
+  "people": {
+    "status": "pass",
+    "reasons": []
+  },
+  "person": {
+    "status": "pass",
+    "reasons": []
+  },
+  "queen": {
+    "status": "pass",
+    "reasons": []
+  },
+  "role": {
+    "status": "pass",
+    "reasons": []
+  },
+  "woman": {
+    "status": "pass",
+    "reasons": []
+  },
+  "afraid": {
+    "status": "pass",
+    "reasons": []
+  },
+  "angry": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ashamed": {
+    "status": "pass",
+    "reasons": []
+  },
+  "awful": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bored": {
+    "status": "pass",
+    "reasons": []
+  },
+  "boring": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bother": {
+    "status": "pass",
+    "reasons": []
+  },
+  "comfortable": {
+    "status": "pass",
+    "reasons": []
+  },
+  "confused": {
+    "status": "pass",
+    "reasons": []
+  },
+  "danger": {
+    "status": "pass",
+    "reasons": []
+  },
+  "excited": {
+    "status": "pass",
+    "reasons": []
+  },
+  "exciting": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fear": {
+    "status": "pass",
+    "reasons": []
+  },
+  "feellike": {
+    "status": "pass",
+    "reasons": []
+  },
   "forest": {
     "status": "pass",
     "reasons": []
