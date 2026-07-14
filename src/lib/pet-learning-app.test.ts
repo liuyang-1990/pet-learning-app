@@ -80,6 +80,16 @@ const firstNatureWeatherBatch = [
   { term: "low", chineseGloss: "低点；低价；低" },
 ] as const;
 
+const schoolStudyBatch = [
+  "answer", "article", "bookcase", "bookshelf", "chapter", "college", "course",
+  "dictionary", "education", "essay", "calendar", "exercise", "explain",
+  "grammar", "learn", "mark", "maths / mathematics", "mistake", "note", "notebook",
+  "paper", "pencil", "pencil case", "pupil", "read", "reading", "research", "revise",
+  "science", "spelling", "study", "teach", "teaching", "test", "textbook", "university",
+  "write", "write down", "calculator", "computer", "desk", "document", "file", "keyboard",
+  "language", "message", "question", "record", "skill", "translate",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -519,6 +529,66 @@ describe("PET Learning App", () => {
       sentence: "The storm damaged two trees near our school.",
       chinese: "storm = 暴风雨；暴风雨损坏了我们学校附近的两棵树。",
     });
+  });
+
+  it("adds the reviewed school and study example batch", () => {
+    const examples = schoolStudyBatch.map((term) => getWordExample({ term, chineseGloss: "" }));
+    const forbiddenPhrases = ["I heard the word", "I learned the word", "The word", "reading homework"];
+
+    expect(schoolStudyBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples())).toHaveLength(185);
+    expect(examples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
+
+    for (const [index, example] of examples.entries()) {
+      const aliases = schoolStudyBatch[index]
+        .split("/")
+        .map((alias) => alias.trim().split(" ")[0].toLowerCase());
+      expect(aliases.some((alias) => example.focusWord.toLowerCase().includes(alias))).toBe(true);
+      expect(example.chinese).toContain("；");
+      for (const phrase of forbiddenPhrases) expect(example.sentence).not.toContain(phrase);
+    }
+  });
+
+  it("uses school and study senses for ambiguous reviewed terms", () => {
+    expect(getWordExample({ term: "course", chineseGloss: "课程；路线；过程" })).toMatchObject({
+      focusWord: "course",
+      sentence: "This course teaches us how to write short essays.",
+      chinese: "course = 课程；这门课程教我们怎样写短文。",
+    });
+    expect(getWordExample({ term: "mark", chineseGloss: "标志；分数；马克" })).toMatchObject({
+      focusWord: "mark",
+      sentence: "I got a high mark in my science test.",
+      chinese: "mark = 分数；我的科学测试得了高分。",
+    });
+    expect(getWordExample({ term: "translate", chineseGloss: "翻译；解释；转化" })).toMatchObject({
+      focusWord: "translate",
+      sentence: "Can you translate this sentence into Chinese?",
+      chinese: "translate = 翻译；你能把这个句子翻译成中文吗？",
+    });
+  });
+
+  it("keeps the school study candidate ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/school-study-001.json",
+    );
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      entries: Array<{
+        term: string;
+        focusWord: string;
+        sentence: string;
+        chinese: string;
+      }>;
+    };
+
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
   });
 
   it("never presents unreviewed generated text as a natural PET example", () => {

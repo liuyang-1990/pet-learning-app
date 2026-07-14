@@ -19,6 +19,17 @@ const cachePath = path.resolve(process.cwd(), "data/google-translation-audit-cac
 const outputPath = path.resolve(process.cwd(), "src/lib/generated/pet-word-example-audit.ts");
 const cache = readCache();
 const manuallyConfirmedTerms = new Set([
+  // These school-context examples use valid non-default senses of polysemous terms.
+  "lesson", // class period, not a moral lesson
+  "break", // school break, not "to break"
+  "exercise", // grammar practice, not physical exercise
+  "mark", // test score, not a visible mark
+  "note", // study notes, not an annotation
+  "paper", // completed test paper, not material
+  "pupil", // student, not the eye part
+  "revise", // study before an exam, not edit text
+  "textbook", // school book
+  "message", // communication, not a note left behind
   "class",
   "classroom",
   "subject",

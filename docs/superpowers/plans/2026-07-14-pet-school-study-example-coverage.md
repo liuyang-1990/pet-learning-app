@@ -43,7 +43,7 @@
 ~~~ts
 const schoolStudyBatch = [
   "answer", "article", "bookcase", "bookshelf", "chapter", "college", "course",
-  "dictionary", "education", "essay", "examination / exam", "exercise", "explain",
+  "dictionary", "education", "essay", "calendar", "exercise", "explain",
   "grammar", "learn", "mark", "maths / mathematics", "mistake", "note", "notebook",
   "paper", "pencil", "pencil case", "pupil", "read", "reading", "research", "revise",
   "science", "spelling", "study", "teach", "teaching", "test", "textbook", "university",
@@ -128,7 +128,7 @@ Create a JSON object with batchId "school-study-001", status "promoted", and an 
 | dictionary | Use a dictionary when you do not know a word. | dictionary = 词典；不知道一个单词时就用词典。 |
 | education | Every child deserves a good education. | education = 教育；每个孩子都应得到良好的教育。 |
 | essay | I finished my essay about my favourite place. | essay = 短文；我完成了关于我最喜欢的地方的短文。 |
-| examination / exam | The exam begins at nine o'clock on Monday. | examination / exam = 考试；考试在星期一九点开始。 |
+| calendar | Our class calendar shows the dates of all the tests. | calendar = 日历；我们班的日历标出了所有测试的日期。 |
 | exercise | We did a grammar exercise before lunch. | exercise = 练习；午饭前我们做了一道语法练习。 |
 | explain | Please explain the question in a simpler way. | explain = 解释；请用更简单的方式解释这个问题。 |
 | grammar | This grammar rule is easy to remember. | grammar = 语法；这条语法规则很容易记住。 |
@@ -174,12 +174,12 @@ Create a JSON object with batchId "school-study-001", status "promoted", and an 
 Insert one entry for every term, using the table's exact focusWord, sentence, and Chinese value. Use the existing normalized property-key convention:
 
 ~~~ts
-    examinationexam: {
-      focusWord: "examination / exam",
-      sentence: "The exam begins at nine o'clock on Monday.",
-      chinese: "examination / exam = 考试；考试在星期一九点开始。",
+    calendar: {
+      focusWord: "calendar",
+      sentence: "Our class calendar shows the dates of all the tests.",
+      chinese: "calendar = 日历；我们班的日历标出了所有测试的日期。",
     },
-    mathsmathematics: {
+    maths: {
       focusWord: "maths / mathematics",
       sentence: "Maths is easier when I check every answer.",
       chinese: "maths / mathematics = 数学；我检查每个答案时，数学就更容易。",
@@ -256,4 +256,3 @@ git add -f data/example-candidates/school-study-001.json
 git add src/lib/pet-learning-app.ts
 git commit -m "test: audit school study example batch"
 ~~~
-
