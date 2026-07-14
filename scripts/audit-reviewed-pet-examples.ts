@@ -19,6 +19,14 @@ const cachePath = path.resolve(process.cwd(), "data/google-translation-audit-cac
 const outputPath = path.resolve(process.cwd(), "src/lib/generated/pet-word-example-audit.ts");
 const cache = readCache();
 const manuallyConfirmedTerms = new Set([
+  // These feelings examples use valid Chinese synonyms missed by gloss matching.
+  "mind", // idea / thought in "change my mind", not only intellect
+  "pleased", // satisfied / happy
+  "proud", // proud / feeling pride
+  "sad", // sad / sorrowful
+  "tired", // tired / fatigued
+  "annoyed", // annoyed / angry
+  "depressed", // depressed / low in mood
   // These family and feelings examples use valid synonyms or context-dependent senses.
   "mother", // mother / mum
   "baby", // infant, not a term of affection
