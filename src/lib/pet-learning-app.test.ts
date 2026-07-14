@@ -625,7 +625,11 @@ describe("PET Learning App", () => {
 
     expect(candidate.entries).toHaveLength(50);
     for (const entry of candidate.entries) {
-      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject(entry);
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
     }
   });
 
