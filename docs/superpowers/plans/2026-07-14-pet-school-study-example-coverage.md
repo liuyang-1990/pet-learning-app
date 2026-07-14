@@ -179,7 +179,7 @@ Insert one entry for every term, using the table's exact focusWord, sentence, an
       sentence: "The exam begins at nine o'clock on Monday.",
       chinese: "examination / exam = 考试；考试在星期一九点开始。",
     },
-    mathsmathematics: {
+    maths: {
       focusWord: "maths / mathematics",
       sentence: "Maths is easier when I check every answer.",
       chinese: "maths / mathematics = 数学；我检查每个答案时，数学就更容易。",
@@ -256,4 +256,3 @@ git add -f data/example-candidates/school-study-001.json
 git add src/lib/pet-learning-app.ts
 git commit -m "test: audit school study example batch"
 ~~~
-

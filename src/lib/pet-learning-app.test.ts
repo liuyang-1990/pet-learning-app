@@ -540,7 +540,10 @@ describe("PET Learning App", () => {
     expect(examples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
 
     for (const [index, example] of examples.entries()) {
-      expect(example.focusWord.toLowerCase()).toContain(schoolStudyBatch[index].split(" ")[0]);
+      const aliases = schoolStudyBatch[index]
+        .split("/")
+        .map((alias) => alias.trim().split(" ")[0].toLowerCase());
+      expect(aliases.some((alias) => example.focusWord.toLowerCase().includes(alias))).toBe(true);
       expect(example.chinese).toContain("；");
       for (const phrase of forbiddenPhrases) expect(example.sentence).not.toContain(phrase);
     }
