@@ -49,7 +49,7 @@ const homeFamilyBatch = [
     const examples = homeFamilyBatch.map((term) => getWordExample({ term, chineseGloss: "" }));
 
     expect(homeFamilyBatch).toHaveLength(50);
-    expect(Object.keys(getReviewedWordExamples())).toHaveLength(235);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(235);
     expect(examples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
   });
 

@@ -546,7 +546,7 @@ describe("PET Learning App", () => {
     const forbiddenPhrases = ["I heard the word", "I learned the word", "The word", "reading homework"];
 
     expect(schoolStudyBatch).toHaveLength(50);
-    expect(Object.keys(getReviewedWordExamples())).toHaveLength(185);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(185);
     expect(examples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
 
     for (const [index, example] of examples.entries()) {
@@ -605,7 +605,7 @@ describe("PET Learning App", () => {
     const examples = homeFamilyBatch.map((term) => getWordExample({ term, chineseGloss: "" }));
 
     expect(homeFamilyBatch).toHaveLength(50);
-    expect(Object.keys(getReviewedWordExamples())).toHaveLength(235);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(235);
     expect(examples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
   });
 

@@ -339,6 +339,206 @@ export const reviewedWordExampleAudit = {
     "status": "pass",
     "reasons": []
   },
+  "apartment": {
+    "status": "pass",
+    "reasons": []
+  },
+  "apartmentbuilding": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bath": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bathroom": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bed": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bedroom": {
+    "status": "pass",
+    "reasons": []
+  },
+  "blanket": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bottle": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bottlebank": {
+    "status": "pass",
+    "reasons": []
+  },
+  "carpet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "chair": {
+    "status": "pass",
+    "reasons": []
+  },
+  "changingroom": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cottage": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cupboard": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cushion": {
+    "status": "pass",
+    "reasons": []
+  },
+  "diningroom": {
+    "status": "pass",
+    "reasons": []
+  },
+  "door": {
+    "status": "pass",
+    "reasons": []
+  },
+  "flat": {
+    "status": "pass",
+    "reasons": []
+  },
+  "floor": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fork": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fridge": {
+    "status": "pass",
+    "reasons": []
+  },
+  "furniture": {
+    "status": "pass",
+    "reasons": []
+  },
+  "garage": {
+    "status": "pass",
+    "reasons": []
+  },
+  "guesthouse": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hall": {
+    "status": "pass",
+    "reasons": []
+  },
+  "home": {
+    "status": "pass",
+    "reasons": []
+  },
+  "house": {
+    "status": "pass",
+    "reasons": []
+  },
+  "housework": {
+    "status": "pass",
+    "reasons": []
+  },
+  "key": {
+    "status": "pass",
+    "reasons": []
+  },
+  "kitchen": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lamp": {
+    "status": "pass",
+    "reasons": []
+  },
+  "livingroom": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mirror": {
+    "status": "pass",
+    "reasons": []
+  },
+  "property": {
+    "status": "pass",
+    "reasons": []
+  },
+  "roof": {
+    "status": "pass",
+    "reasons": []
+  },
+  "room": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shelf": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shower": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sittingroom": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sofa": {
+    "status": "pass",
+    "reasons": []
+  },
+  "table": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tablecloth": {
+    "status": "pass",
+    "reasons": []
+  },
+  "toothpaste": {
+    "status": "pass",
+    "reasons": []
+  },
+  "waitingroom": {
+    "status": "pass",
+    "reasons": []
+  },
+  "wall": {
+    "status": "pass",
+    "reasons": []
+  },
+  "window": {
+    "status": "pass",
+    "reasons": []
+  },
+  "brother": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dad": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mum": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sister": {
+    "status": "pass",
+    "reasons": []
+  },
   "forest": {
     "status": "pass",
     "reasons": []
