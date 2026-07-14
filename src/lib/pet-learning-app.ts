@@ -1090,6 +1090,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "Our neighbour looked after the cat while we were away.",
       chinese: "neighbour = 邻居；我们不在时邻居帮忙照看猫。",
     },
+    apartment: {
+      focusWord: "apartment",
+      sentence: "My aunt lives in a small apartment near the park.",
+      chinese: "apartment = 公寓；我阿姨住在公园附近的一间小公寓里。",
+    },
+    apartmentbuilding: {
+      focusWord: "apartment building",
+      sentence: "The apartment building has a lift near the entrance.",
+      chinese: "apartment building = 公寓大楼；这栋公寓大楼在入口旁有一部电梯。",
+    },
+    bath: {
+      focusWord: "bath",
+      sentence: "I had a warm bath before bedtime.",
+      chinese: "bath = 沐浴；睡觉前我洗了个热水澡。",
+    },
+    bathroom: {
+      focusWord: "bathroom",
+      sentence: "The bathroom window was open after the shower.",
+      chinese: "bathroom = 浴室；淋浴后浴室的窗户开着。",
+    },
+    bed: {
+      focusWord: "bed",
+      sentence: "I made my bed before I went to school.",
+      chinese: "bed = 床；上学前我整理了床铺。",
+    },
+    bedroom: {
+      focusWord: "bedroom",
+      sentence: "My bedroom is quiet in the early morning.",
+      chinese: "bedroom = 卧室；清晨我的卧室很安静。",
+    },
+    blanket: {
+      focusWord: "blanket",
+      sentence: "Put another blanket on the bed because it is cold.",
+      chinese: "blanket = 毛毯；天冷了，在床上再放一条毛毯。",
+    },
+    bottle: {
+      focusWord: "bottle",
+      sentence: "Please put the empty bottle in the bin.",
+      chinese: "bottle = 瓶子；请把空瓶子放进垃圾箱。",
+    },
+    bottlebank: {
+      focusWord: "bottle bank",
+      sentence: "We took empty bottles to the bottle bank on Saturday.",
+      chinese: "bottle bank = 玻璃瓶回收站；星期六我们把空瓶子送到玻璃瓶回收站。",
+    },
+    carpet: {
+      focusWord: "carpet",
+      sentence: "The cat is sleeping on the blue carpet.",
+      chinese: "carpet = 地毯；猫正睡在蓝色地毯上。",
+    },
+    chair: {
+      focusWord: "chair",
+      sentence: "There is a chair beside my desk.",
+      chinese: "chair = 椅子；我的书桌旁有一把椅子。",
+    },
+    changingroom: {
+      focusWord: "changing room",
+      sentence: "Leave your coat in the changing room.",
+      chinese: "changing room = 更衣室；把外套留在更衣室里。",
+    },
+    cottage: {
+      focusWord: "cottage",
+      sentence: "We rented a small cottage by the sea.",
+      chinese: "cottage = 小屋；我们在海边租了一间小屋。",
+    },
+    cupboard: {
+      focusWord: "cupboard",
+      sentence: "The cups are in the cupboard above the sink.",
+      chinese: "cupboard = 碗柜；杯子在水槽上方的碗柜里。",
+    },
+    cushion: {
+      focusWord: "cushion",
+      sentence: "The sofa has two soft cushions.",
+      chinese: "cushion = 垫子；沙发上有两个柔软的垫子。",
+    },
+    diningroom: {
+      focusWord: "dining room",
+      sentence: "We eat dinner together in the dining room.",
+      chinese: "dining room = 饭厅；我们在饭厅一起吃晚饭。",
+    },
+    door: {
+      focusWord: "door",
+      sentence: "Please close the door when you leave the room.",
+      chinese: "door = 门；离开房间时请关门。",
+    },
+    flat: {
+      focusWord: "flat",
+      sentence: "Her flat is on the third floor.",
+      chinese: "flat = 公寓；她的公寓在三楼。",
+    },
+    floor: {
+      focusWord: "floor",
+      sentence: "My wet shoes made marks on the floor.",
+      chinese: "floor = 地板；我的湿鞋在地板上留下了印子。",
+    },
+    fork: {
+      focusWord: "fork",
+      sentence: "Use a fork to eat the salad.",
+      chinese: "fork = 叉子；用叉子吃沙拉。",
+    },
+    fridge: {
+      focusWord: "fridge",
+      sentence: "The milk is in the fridge.",
+      chinese: "fridge = 冰箱；牛奶在冰箱里。",
+    },
+    furniture: {
+      focusWord: "furniture",
+      sentence: "We chose new furniture for the living room.",
+      chinese: "furniture = 家具；我们为客厅挑选了新家具。",
+    },
+    garage: {
+      focusWord: "garage",
+      sentence: "Dad keeps his bicycle in the garage.",
+      chinese: "garage = 车库；爸爸把自行车放在车库里。",
+    },
+    guesthouse: {
+      focusWord: "guest-house",
+      sentence: "We stayed in a quiet guest-house near the beach.",
+      chinese: "guest-house = 招待所；我们住在海滩附近一家安静的招待所。",
+    },
+    hall: {
+      focusWord: "hall",
+      sentence: "Please leave your shoes in the hall.",
+      chinese: "hall = 门厅；请把鞋放在门厅里。",
+    },
+    home: {
+      focusWord: "home",
+      sentence: "I was happy to be home after the long journey.",
+      chinese: "home = 家；长途旅行后回到家我很高兴。",
+    },
+    house: {
+      focusWord: "house",
+      sentence: "Our house has a small garden behind it.",
+      chinese: "house = 房子；我们房子后面有一个小花园。",
+    },
+    housework: {
+      focusWord: "housework",
+      sentence: "We share the housework at weekends.",
+      chinese: "housework = 家务；周末我们分担家务。",
+    },
+    key: {
+      focusWord: "key",
+      sentence: "I cannot find the key to the front door.",
+      chinese: "key = 钥匙；我找不到前门的钥匙。",
+    },
+    kitchen: {
+      focusWord: "kitchen",
+      sentence: "Mum is making soup in the kitchen.",
+      chinese: "kitchen = 厨房；妈妈正在厨房里做汤。",
+    },
+    lamp: {
+      focusWord: "lamp",
+      sentence: "Turn on the lamp when it gets dark.",
+      chinese: "lamp = 灯；天黑时打开灯。",
+    },
+    livingroom: {
+      focusWord: "living room",
+      sentence: "We watched a film in the living room.",
+      chinese: "living room = 客厅；我们在客厅看了一部电影。",
+    },
+    mirror: {
+      focusWord: "mirror",
+      sentence: "I looked in the mirror before leaving home.",
+      chinese: "mirror = 镜子；离家前我照了照镜子。",
+    },
+    property: {
+      focusWord: "property",
+      sentence: "Their house is their most valuable property.",
+      chinese: "property = 财产；他们的房子是最有价值的财产。",
+    },
+    roof: {
+      focusWord: "roof",
+      sentence: "Rain was falling loudly on the roof.",
+      chinese: "roof = 屋顶；雨正大声地落在屋顶上。",
+    },
+    room: {
+      focusWord: "room",
+      sentence: "Is there enough room for another chair?",
+      chinese: "room = 空间；还有足够空间放另一把椅子吗？",
+    },
+    shelf: {
+      focusWord: "shelf",
+      sentence: "Put the photo on the top shelf.",
+      chinese: "shelf = 架子；把照片放在最上面的架子上。",
+    },
+    shower: {
+      focusWord: "shower",
+      sentence: "I took a quick shower before breakfast.",
+      chinese: "shower = 淋浴；早饭前我快速冲了个澡。",
+    },
+    sittingroom: {
+      focusWord: "sitting room",
+      sentence: "We played a game in the sitting room.",
+      chinese: "sitting room = 起居室；我们在起居室里玩了一个游戏。",
+    },
+    sofa: {
+      focusWord: "sofa",
+      sentence: "The dog jumped onto the sofa.",
+      chinese: "sofa = 沙发；狗跳到了沙发上。",
+    },
+    table: {
+      focusWord: "table",
+      sentence: "Please set the table for dinner.",
+      chinese: "table = 餐桌；请为晚饭摆好餐桌。",
+    },
+    tablecloth: {
+      focusWord: "table-cloth",
+      sentence: "The red table-cloth is clean and dry.",
+      chinese: "table-cloth = 台布；这块红色台布干净又干燥。",
+    },
+    toothpaste: {
+      focusWord: "toothpaste",
+      sentence: "I need more toothpaste for my toothbrush.",
+      chinese: "toothpaste = 牙膏；我的牙刷需要更多牙膏。",
+    },
+    waitingroom: {
+      focusWord: "waiting room",
+      sentence: "We waited in the waiting room before the dentist saw me.",
+      chinese: "waiting room = 等候室；牙医看我之前，我们在等候室等着。",
+    },
+    wall: {
+      focusWord: "wall",
+      sentence: "There is a family photo on the wall.",
+      chinese: "wall = 墙；墙上有一张全家福。",
+    },
+    window: {
+      focusWord: "window",
+      sentence: "Open the window to let in some fresh air.",
+      chinese: "window = 窗户；打开窗户让新鲜空气进来。",
+    },
+    brother: {
+      focusWord: "brother",
+      sentence: "My brother helps me carry the shopping bags.",
+      chinese: "brother = 兄弟；我哥哥帮我提购物袋。",
+    },
+    dad: {
+      focusWord: "dad",
+      sentence: "My dad cooks breakfast on Sundays.",
+      chinese: "dad = 爸爸；我爸爸星期天做早饭。",
+    },
+    mum: {
+      focusWord: "mum",
+      sentence: "My mum reads with me before bed.",
+      chinese: "mum = 妈妈；我妈妈睡前和我一起阅读。",
+    },
+    sister: {
+      focusWord: "sister",
+      sentence: "My sister keeps her books on the shelf.",
+      chinese: "sister = 姐妹；我姐姐把书放在架子上。",
+    },
     forest: {
       focusWord: "forest",
       sentence: "It gets dark very quickly in the forest.",

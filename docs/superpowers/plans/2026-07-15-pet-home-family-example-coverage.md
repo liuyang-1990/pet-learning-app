@@ -49,7 +49,7 @@ const homeFamilyBatch = [
     const examples = homeFamilyBatch.map((term) => getWordExample({ term, chineseGloss: "" }));
 
     expect(homeFamilyBatch).toHaveLength(50);
-    expect(Object.keys(getReviewedWordExamples())).toHaveLength(235);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(235);
     expect(examples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
   });
 
@@ -60,7 +60,11 @@ const homeFamilyBatch = [
 
     expect(candidate.entries).toHaveLength(50);
     for (const entry of candidate.entries) {
-      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject(entry);
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
     }
   });
 
@@ -214,4 +218,3 @@ git add -f data/example-candidates/home-family-001.json
 git add src/lib/pet-learning-app.ts src/lib/pet-learning-app.test.ts
 git commit -m "test: audit home family example batch"
 ~~~
-

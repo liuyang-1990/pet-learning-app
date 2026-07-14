@@ -19,6 +19,12 @@ const cachePath = path.resolve(process.cwd(), "data/google-translation-audit-cac
 const outputPath = path.resolve(process.cwd(), "src/lib/generated/pet-word-example-audit.ts");
 const cache = readCache();
 const manuallyConfirmedTerms = new Set([
+  // These home-context examples use valid senses or Chinese synonyms missed by gloss matching.
+  "bath", // washing in a bath
+  "flat", // apartment, not level
+  "guesthouse", // guest-house / lodging
+  "sittingroom", // sitting room / living room
+  "table", // dining table, not a data table
   // These school-context examples use valid non-default senses of polysemous terms.
   "lesson", // class period, not a moral lesson
   "break", // school break, not "to break"

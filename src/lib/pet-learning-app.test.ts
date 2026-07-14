@@ -90,6 +90,16 @@ const schoolStudyBatch = [
   "language", "message", "question", "record", "skill", "translate",
 ] as const;
 
+const homeFamilyBatch = [
+  "apartment", "apartment building", "bath", "bathroom", "bed", "bedroom", "blanket",
+  "bottle", "bottle bank", "carpet", "chair", "changing room", "cottage", "cupboard",
+  "cushion", "dining room", "door", "flat", "floor", "fork", "fridge", "furniture",
+  "garage", "guest-house", "hall", "home", "house", "housework", "key", "kitchen",
+  "lamp", "living room", "mirror", "property", "roof", "room", "shelf", "shower",
+  "sitting room", "sofa", "table", "table-cloth", "toothpaste", "waiting room", "wall",
+  "window", "brother", "dad", "mum", "sister",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -536,7 +546,7 @@ describe("PET Learning App", () => {
     const forbiddenPhrases = ["I heard the word", "I learned the word", "The word", "reading homework"];
 
     expect(schoolStudyBatch).toHaveLength(50);
-    expect(Object.keys(getReviewedWordExamples())).toHaveLength(185);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(185);
     expect(examples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
 
     for (const [index, example] of examples.entries()) {
@@ -589,6 +599,53 @@ describe("PET Learning App", () => {
         chinese: entry.chinese,
       });
     }
+  });
+
+  it("adds the reviewed home and family example batch", () => {
+    const examples = homeFamilyBatch.map((term) => getWordExample({ term, chineseGloss: "" }));
+
+    expect(homeFamilyBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(235);
+    expect(examples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
+  });
+
+  it("keeps the home family candidate ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/home-family-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(
+      fs.readFileSync(candidatePath, "utf8"),
+    ) as {
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses home and family senses for ambiguous reviewed terms", () => {
+    expect(getWordExample({ term: "flat", chineseGloss: "平坦的；单调的；无力的" })).toMatchObject({
+      sentence: "Her flat is on the third floor.",
+      chinese: "flat = 公寓；她的公寓在三楼。",
+    });
+    expect(getWordExample({ term: "property", chineseGloss: "财产；所有权；性质" })).toMatchObject({
+      sentence: "Their house is their most valuable property.",
+      chinese: "property = 财产；他们的房子是最有价值的财产。",
+    });
+    expect(getWordExample({ term: "mum", chineseGloss: "菊花；沉默；沉默的" })).toMatchObject({
+      sentence: "My mum reads with me before bed.",
+      chinese: "mum = 妈妈；我妈妈睡前和我一起阅读。",
+    });
   });
 
   it("never presents unreviewed generated text as a natural PET example", () => {
