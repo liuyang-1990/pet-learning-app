@@ -2340,6 +2340,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "The storm was frightening, but everyone stayed safe.",
       chinese: "frightening = 令人害怕的；暴风雨很吓人，但所有人都平安无事。",
     },
+    accident: {
+      focusWord: "accident",
+      sentence: "Tom broke his arm in a cycling accident.",
+      chinese: "accident = 事故；汤姆在一次骑车事故中摔断了手臂。",
+    },
+    ache: {
+      focusWord: "ache",
+      sentence: "I have a dull ache in my left shoulder.",
+      chinese: "ache = 疼痛；我的左肩隐隐作痛。",
+    },
+    arm: {
+      focusWord: "arm",
+      sentence: "He wore a bandage around his arm.",
+      chinese: "arm = 手臂；他的手臂上缠着绷带。",
+    },
+    blood: {
+      focusWord: "blood",
+      sentence: "The nurse took a small sample of blood.",
+      chinese: "blood = 血；护士采了一小份血样。",
+    },
+    body: {
+      focusWord: "body",
+      sentence: "Your body needs rest after hard exercise.",
+      chinese: "body = 身体；剧烈运动后，你的身体需要休息。",
+    },
+    byaccident: {
+      focusWord: "by accident",
+      sentence: "I took your coat by accident because ours look similar.",
+      chinese: "by accident = 不小心；我不小心拿了你的外套，因为我们的外套看起来很像。",
+    },
+    byhand: {
+      focusWord: "by hand",
+      sentence: "This wooden toy was painted by hand.",
+      chinese: "by hand = 手工；这个木制玩具是手工上色的。",
+    },
+    clinic: {
+      focusWord: "clinic",
+      sentence: "The doctor works at a small clinic near the station.",
+      chinese: "clinic = 诊所；医生在车站附近的一家小诊所工作。",
+    },
+    ear: {
+      focusWord: "ear",
+      sentence: "The doctor looked inside my ear.",
+      chinese: "ear = 耳朵；医生检查了我的耳朵里面。",
+    },
+    emergency: {
+      focusWord: "emergency",
+      sentence: "Call this number if there is an emergency.",
+      chinese: "emergency = 紧急情况；如有紧急情况，请拨打这个号码。",
+    },
+    eye: {
+      focusWord: "eye",
+      sentence: "Something flew into my eye while I was cycling.",
+      chinese: "eye = 眼睛；骑车时有东西飞进了我的眼睛。",
+    },
+    face: {
+      focusWord: "face",
+      sentence: "Wash your face before you go to bed.",
+      chinese: "face = 脸；睡觉前洗脸。",
+    },
+    facetoface: {
+      focusWord: "face to face",
+      sentence: "We discussed the problem face to face.",
+      chinese: "face to face = 面对面；我们面对面讨论了这个问题。",
+    },
+    finger: {
+      focusWord: "finger",
+      sentence: "I cut my finger while preparing dinner.",
+      chinese: "finger = 手指；准备晚饭时，我割伤了手指。",
+    },
+    fit: {
+      focusWord: "fit",
+      sentence: "These shoes fit me perfectly.",
+      chinese: "fit = 合身；这双鞋我穿着正合适。",
+    },
+    foot: {
+      focusWord: "foot",
+      sentence: "I hurt my foot during football practice.",
+      chinese: "foot = 脚；足球训练时我伤了脚。",
+    },
+    getfit: {
+      focusWord: "get fit",
+      sentence: "She joined a swimming club to get fit.",
+      chinese: "get fit = 强身健体；她加入游泳俱乐部来增强体质。",
+    },
+    hand: {
+      focusWord: "hand",
+      sentence: "Raise your hand if you know the answer.",
+      chinese: "hand = 手；如果你知道答案，请举手。",
+    },
+    handheld: {
+      focusWord: "hand-held",
+      sentence: "The guide used a hand-held radio to call for help.",
+      chinese: "hand-held = 手持式的；导游用手持对讲机呼救。",
+    },
+    handin: {
+      focusWord: "hand in",
+      sentence: "Please hand in the medical form before Friday.",
+      chinese: "hand in = 交上；请在星期五前交上医疗表格。",
+    },
+    handout: {
+      focusWord: "hand out",
+      sentence: "The nurse handed out masks at the entrance.",
+      chinese: "hand out = 分发；护士在入口处分发口罩。",
+    },
+    head: {
+      focusWord: "head",
+      sentence: "Wear a helmet to protect your head.",
+      chinese: "head = 头；戴头盔保护头部。",
+    },
+    health: {
+      focusWord: "health",
+      sentence: "Regular exercise is good for your health.",
+      chinese: "health = 健康；经常锻炼对健康有益。",
+    },
+    healthy: {
+      focusWord: "healthy",
+      sentence: "A healthy breakfast gives me energy for school.",
+      chinese: "healthy = 健康的；健康的早餐让我有精力上学。",
+    },
+    heart: {
+      focusWord: "heart",
+      sentence: "Exercise makes your heart stronger.",
+      chinese: "heart = 心脏；锻炼能让你的心脏更强健。",
+    },
+    hospital: {
+      focusWord: "hospital",
+      sentence: "She was taken to hospital after the accident.",
+      chinese: "hospital = 医院；事故发生后，她被送往医院。",
+    },
+    hurt: {
+      focusWord: "hurt",
+      sentence: "My knee still hurts when I climb stairs.",
+      chinese: "hurt = 疼；我爬楼梯时膝盖仍然会疼。",
+    },
+    ill: {
+      focusWord: "ill",
+      sentence: "Leo stayed home because he was ill.",
+      chinese: "ill = 生病的；利奥因为生病待在家里。",
+    },
+    knee: {
+      focusWord: "knee",
+      sentence: "I fell and hurt my knee.",
+      chinese: "knee = 膝盖；我摔倒伤了膝盖。",
+    },
+    lefthand: {
+      focusWord: "left-hand",
+      sentence: "Use the left-hand door to enter the clinic.",
+      chinese: "left-hand = 左边的；请从左边的门进入诊所。",
+    },
+    leg: {
+      focusWord: "leg",
+      sentence: "Her leg was sore after the long run.",
+      chinese: "leg = 腿；长跑后她的腿很酸痛。",
+    },
+    medicine: {
+      focusWord: "medicine",
+      sentence: "Take this medicine after breakfast.",
+      chinese: "medicine = 药；早餐后服用这种药。",
+    },
+    mouth: {
+      focusWord: "mouth",
+      sentence: "Cover your mouth when you cough.",
+      chinese: "mouth = 嘴；咳嗽时请捂住嘴。",
+    },
+    neck: {
+      focusWord: "neck",
+      sentence: "My neck felt stiff after the long journey.",
+      chinese: "neck = 脖子；长途旅行后我的脖子很僵硬。",
+    },
+    nose: {
+      focusWord: "nose",
+      sentence: "My nose is blocked because I have a cold.",
+      chinese: "nose = 鼻子；我感冒了，所以鼻子不通气。",
+    },
+    onfoot: {
+      focusWord: "on foot",
+      sentence: "The clinic is close enough to reach on foot.",
+      chinese: "on foot = 步行；诊所很近，可以步行到达。",
+    },
+    pain: {
+      focusWord: "pain",
+      sentence: "Tell the doctor where you feel the pain.",
+      chinese: "pain = 疼痛；告诉医生你哪里疼。",
+    },
+    pregnant: {
+      focusWord: "pregnant",
+      sentence: "The pregnant woman was offered a seat on the bus.",
+      chinese: "pregnant = 怀孕的；公交车上有人给那位孕妇让座。",
+    },
+    rescue: {
+      focusWord: "rescue",
+      sentence: "The mountain rescue team found the injured walker.",
+      chinese: "rescue = 救援；山地救援队找到了受伤的徒步者。",
+    },
+    righthand: {
+      focusWord: "right-hand",
+      sentence: "The pharmacy is on the right-hand side of the road.",
+      chinese: "right-hand = 右边的；药店在道路右侧。",
+    },
+    secondhand: {
+      focusWord: "second-hand",
+      sentence: "I bought a second-hand bicycle from my neighbour.",
+      chinese: "second-hand = 二手的；我从邻居那里买了一辆二手自行车。",
+    },
+    shoulder: {
+      focusWord: "shoulder",
+      sentence: "I carried the bag over my shoulder.",
+      chinese: "shoulder = 肩膀；我把包挎在肩上。",
+    },
+    sick: {
+      focusWord: "sick",
+      sentence: "I felt sick after eating too much cake.",
+      chinese: "sick = 恶心的；吃了太多蛋糕后，我觉得恶心。",
+    },
+    stomachache: {
+      focusWord: "stomach ache",
+      sentence: "I had a stomach ache after lunch.",
+      chinese: "stomach ache = 胃痛；午饭后我胃疼。",
+    },
+    tooth: {
+      focusWord: "tooth",
+      sentence: "I need to see a dentist because my tooth hurts.",
+      chinese: "tooth = 牙齿；我的牙疼，需要去看牙医。",
+    },
+    painful: {
+      focusWord: "painful",
+      sentence: "The cut was painful for several days.",
+      chinese: "painful = 疼痛的；这个伤口疼了好几天。",
+    },
+    patient: {
+      focusWord: "patient",
+      sentence: "The patient waited quietly to see the doctor.",
+      chinese: "patient = 病人；病人安静地等着看医生。",
+    },
+    sore: {
+      focusWord: "sore",
+      sentence: "My throat is sore, so it hurts to speak.",
+      chinese: "sore = 疼痛的；我喉咙痛，说话也疼。",
+    },
+    unfit: {
+      focusWord: "unfit",
+      sentence: "I felt unfit after months without exercise.",
+      chinese: "unfit = 身体不健康的；几个月没锻炼后，我觉得身体状态很差。",
+    },
+    unwell: {
+      focusWord: "unwell",
+      sentence: "Sara felt unwell and went home early.",
+      chinese: "unwell = 身体不适的；萨拉觉得不舒服，提前回家了。",
+    },
   };
 }
 
