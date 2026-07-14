@@ -120,6 +120,16 @@ const feelingsReactionsBatch = [
   "embarrassed", "embarrassing", "exhausted", "frightened", "frightening",
 ] as const;
 
+const healthBodyBatch = [
+  "accident", "ache", "arm", "blood", "body", "by accident", "by hand", "clinic",
+  "ear", "emergency", "eye", "face", "face to face", "finger", "fit", "foot",
+  "get fit", "hand", "hand-held", "hand in", "hand out", "head", "health", "healthy",
+  "heart", "hospital", "hurt", "ill", "knee", "left-hand", "leg", "medicine", "mouth",
+  "neck", "nose", "on foot", "pain", "pregnant", "rescue", "right-hand", "second-hand",
+  "shoulder", "sick", "stomach ache", "tooth / teeth", "painful", "patient", "sore",
+  "unfit", "unwell",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -765,6 +775,85 @@ describe("PET Learning App", () => {
     expect(getWordExample({ term: "wish", chineseGloss: "希望；愿望；祝愿" })).toMatchObject({
       sentence: "I wish I could stay on holiday for another week.",
       chinese: "wish = 希望；我希望能再度假一个星期。",
+    });
+  });
+
+  it("adds the reviewed health body batch and covers every health row", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const healthWords = words.filter((word) => word.theme === "health");
+    const selectedExamples = healthBodyBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+    const healthExamples = healthWords.map((word) => getWordExample(word));
+
+    expect(healthBodyBatch).toHaveLength(50);
+    expect(healthWords).toHaveLength(46);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(385);
+    expect(selectedExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
+    expect(healthExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(46);
+  });
+
+  it("keeps the health body ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/health-body-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses and normalized aliases for health body terms", () => {
+    const faceToFaceExample = {
+      focusWord: "face to face",
+      sentence: "We discussed the problem face to face.",
+      chinese: "face to face = 面对面；我们面对面讨论了这个问题。",
+    };
+    expect(getWordExample({ term: "face to face", chineseGloss: "面对面" })).toMatchObject(
+      faceToFaceExample,
+    );
+    expect(getWordExample({ term: "face-to-face", chineseGloss: "面对面" })).toMatchObject(
+      faceToFaceExample,
+    );
+    expect(getWordExample({ term: "fit", chineseGloss: "适宜；合身；发作" })).toMatchObject({
+      sentence: "These shoes fit me perfectly.",
+      chinese: "fit = 合身；这双鞋我穿着正合适。",
+    });
+    expect(getWordExample({ term: "hand in", chineseGloss: "交上；缴纳" })).toMatchObject({
+      sentence: "Please hand in the medical form before Friday.",
+      chinese: "hand in = 交上；请在星期五前交上医疗表格。",
+    });
+    expect(getWordExample({ term: "hand out", chineseGloss: "分发" })).toMatchObject({
+      sentence: "The nurse handed out masks at the entrance.",
+      chinese: "hand out = 分发；护士在入口处分发口罩。",
+    });
+    expect(getWordExample({ term: "patient", chineseGloss: "病人；忍耐的" })).toMatchObject({
+      sentence: "The patient waited quietly to see the doctor.",
+      chinese: "patient = 病人；病人安静地等着看医生。",
+    });
+    expect(getWordExample({ term: "tooth / teeth", chineseGloss: "牙齿" })).toMatchObject({
+      focusWord: "tooth",
+      sentence: "I need to see a dentist because my tooth hurts.",
+      chinese: "tooth = 牙齿；我的牙疼，需要去看牙医。",
     });
   });
 
