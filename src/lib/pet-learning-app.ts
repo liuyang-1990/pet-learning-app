@@ -1340,6 +1340,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "My sister keeps her books on the shelf.",
       chinese: "sister = 姐妹；我姐姐把书放在架子上。",
     },
+    aunt: {
+      focusWord: "aunt",
+      sentence: "My aunt visits us every Sunday afternoon.",
+      chinese: "aunt = 阿姨；我阿姨每个星期天下午来看我们。",
+    },
+    daughter: {
+      focusWord: "daughter",
+      sentence: "Their daughter started secondary school this year.",
+      chinese: "daughter = 女儿；他们的女儿今年开始上中学。",
+    },
+    family: {
+      focusWord: "family",
+      sentence: "My family eats dinner together every evening.",
+      chinese: "family = 家人；我的家人每天晚上一起吃晚饭。",
+    },
+    father: {
+      focusWord: "father",
+      sentence: "Her father drives her to school on rainy days.",
+      chinese: "father = 父亲；下雨天她父亲开车送她上学。",
+    },
+    grandfather: {
+      focusWord: "grandfather",
+      sentence: "My grandfather tells us funny stories about his childhood.",
+      chinese: "grandfather = 祖父；我祖父给我们讲他童年的趣事。",
+    },
+    grandmother: {
+      focusWord: "grandmother",
+      sentence: "His grandmother grows vegetables in her garden.",
+      chinese: "grandmother = 祖母；他的祖母在花园里种蔬菜。",
+    },
+    husband: {
+      focusWord: "husband",
+      sentence: "Her husband works at the hospital near our house.",
+      chinese: "husband = 丈夫；她丈夫在我们家附近的医院工作。",
+    },
+    married: {
+      focusWord: "married",
+      sentence: "They have been married for ten years.",
+      chinese: "married = 已婚的；他们已经结婚十年了。",
+    },
+    mother: {
+      focusWord: "mother",
+      sentence: "My mother taught me how to make soup.",
+      chinese: "mother = 母亲；我母亲教我怎样做汤。",
+    },
+    son: {
+      focusWord: "son",
+      sentence: "Their son plays basketball after school.",
+      chinese: "son = 儿子；他们的儿子放学后打篮球。",
+    },
+    teenager: {
+      focusWord: "teenager",
+      sentence: "The teenager saved money for a new bicycle.",
+      chinese: "teenager = 青少年；这名青少年攒钱买一辆新自行车。",
+    },
+    uncle: {
+      focusWord: "uncle",
+      sentence: "My uncle lives in a town by the sea.",
+      chinese: "uncle = 叔叔；我叔叔住在一个海边小镇。",
+    },
+    wife: {
+      focusWord: "wife",
+      sentence: "His wife is a science teacher.",
+      chinese: "wife = 妻子；他的妻子是一名科学老师。",
+    },
+    adult: {
+      focusWord: "adult",
+      sentence: "An adult must sign this form before the trip.",
+      chinese: "adult = 成年人；旅行前必须由一名成年人签署这张表。",
+    },
+    baby: {
+      focusWord: "baby",
+      sentence: "The baby fell asleep in the car.",
+      chinese: "baby = 婴儿；婴儿在车里睡着了。",
+    },
+    boy: {
+      focusWord: "boy",
+      sentence: "The boy returned the lost wallet to its owner.",
+      chinese: "boy = 男孩；那个男孩把丢失的钱包还给了失主。",
+    },
+    child: {
+      focusWord: "child",
+      sentence: "Every child needs a safe place to learn.",
+      chinese: "child = 孩子；每个孩子都需要一个安全的学习场所。",
+    },
+    crowd: {
+      focusWord: "crowd",
+      sentence: "A large crowd waited outside the stadium.",
+      chinese: "crowd = 人群；一大群人在体育场外等待。",
+    },
+    female: {
+      focusWord: "female",
+      sentence: "The female athlete won the final race.",
+      chinese: "female = 女性的；那位女运动员赢得了决赛。",
+    },
+    friend: {
+      focusWord: "friend",
+      sentence: "My friend helped me prepare for the exam.",
+      chinese: "friend = 朋友；我的朋友帮我准备考试。",
+    },
+    girl: {
+      focusWord: "girl",
+      sentence: "The girl found a quiet seat on the bus.",
+      chinese: "girl = 女孩；那个女孩在公共汽车上找到了一个安静的座位。",
+    },
+    group: {
+      focusWord: "group",
+      sentence: "Our group finished the project before lunch.",
+      chinese: "group = 小组；我们小组在午饭前完成了项目。",
+    },
+    hero: {
+      focusWord: "hero",
+      sentence: "The firefighter became a local hero after the rescue.",
+      chinese: "hero = 英雄；救援后，那名消防员成了当地英雄。",
+    },
+    king: {
+      focusWord: "king",
+      sentence: "The king lived in the old castle.",
+      chinese: "king = 国王；国王住在那座古老的城堡里。",
+    },
+    madam: {
+      focusWord: "Madam",
+      sentence: "Excuse me, Madam, is this seat yours?",
+      chinese: "Madam = 女士；对不起，女士，这个座位是您的吗？",
+    },
+    male: {
+      focusWord: "male",
+      sentence: "The male bird has bright blue feathers.",
+      chinese: "male = 雄性的；雄鸟有鲜蓝色的羽毛。",
+    },
+    man: {
+      focusWord: "man",
+      sentence: "A man helped us carry the heavy box.",
+      chinese: "man = 男人；一名男子帮我们搬了那个重箱子。",
+    },
+    member: {
+      focusWord: "member",
+      sentence: "Each member of the team received a medal.",
+      chinese: "member = 成员；队里的每个成员都获得了一枚奖牌。",
+    },
+    mr: {
+      focusWord: "Mr",
+      sentence: "Mr Brown teaches us English on Mondays.",
+      chinese: "Mr = 先生；布朗先生每星期一教我们英语。",
+    },
+    mrs: {
+      focusWord: "Mrs",
+      sentence: "Mrs Green lives in the flat above ours.",
+      chinese: "Mrs = 夫人；格林夫人住在我们楼上的公寓。",
+    },
+    ms: {
+      focusWord: "Ms",
+      sentence: "Ms Lee is the new school librarian.",
+      chinese: "Ms = 女士；李女士是学校新来的图书管理员。",
+    },
+    people: {
+      focusWord: "people",
+      sentence: "Many people use this park at weekends.",
+      chinese: "people = 人们；周末很多人使用这个公园。",
+    },
+    person: {
+      focusWord: "person",
+      sentence: "Only one person knew the correct answer.",
+      chinese: "person = 人；只有一个人知道正确答案。",
+    },
+    queen: {
+      focusWord: "queen",
+      sentence: "The queen opened the new hospital.",
+      chinese: "queen = 女王；女王为新医院揭幕。",
+    },
+    role: {
+      focusWord: "role",
+      sentence: "My role in the play is a young doctor.",
+      chinese: "role = 角色；我在戏剧中扮演一名年轻医生。",
+    },
+    woman: {
+      focusWord: "woman",
+      sentence: "The woman at the desk answered my question.",
+      chinese: "woman = 女人；桌旁的那位女士回答了我的问题。",
+    },
+    afraid: {
+      focusWord: "afraid",
+      sentence: "I was afraid when I heard the loud noise.",
+      chinese: "afraid = 害怕的；听到巨响时我很害怕。",
+    },
+    angry: {
+      focusWord: "angry",
+      sentence: "Dad was angry because I broke the window.",
+      chinese: "angry = 生气的；因为我打破了窗户，爸爸很生气。",
+    },
+    ashamed: {
+      focusWord: "ashamed",
+      sentence: "I felt ashamed after I told the lie.",
+      chinese: "ashamed = 惭愧的；说谎后我感到很惭愧。",
+    },
+    awful: {
+      focusWord: "awful",
+      sentence: "The soup tasted awful, so I could not finish it.",
+      chinese: "awful = 糟糕的；汤的味道很糟，所以我没能喝完。",
+    },
+    bored: {
+      focusWord: "bored",
+      sentence: "We felt bored during the long delay.",
+      chinese: "bored = 无聊的；长时间延误期间我们感到很无聊。",
+    },
+    boring: {
+      focusWord: "boring",
+      sentence: "The film was boring, and several people left early.",
+      chinese: "boring = 无聊的；电影很无聊，有几个人提前离开了。",
+    },
+    bother: {
+      focusWord: "bother",
+      sentence: "Does the noise from the road bother you?",
+      chinese: "bother = 烦扰；路上的噪音会打扰你吗？",
+    },
+    comfortable: {
+      focusWord: "comfortable",
+      sentence: "This chair is comfortable enough for reading.",
+      chinese: "comfortable = 舒服的；这把椅子坐着看书很舒服。",
+    },
+    confused: {
+      focusWord: "confused",
+      sentence: "I felt confused by the complicated instructions.",
+      chinese: "confused = 困惑的；复杂的说明让我感到困惑。",
+    },
+    danger: {
+      focusWord: "danger",
+      sentence: "The sign warned swimmers about the danger.",
+      chinese: "danger = 危险；标志提醒游泳者注意危险。",
+    },
+    excited: {
+      focusWord: "excited",
+      sentence: "The children were excited about the school trip.",
+      chinese: "excited = 兴奋的；孩子们对学校旅行感到兴奋。",
+    },
+    exciting: {
+      focusWord: "exciting",
+      sentence: "The final match was exciting until the last minute.",
+      chinese: "exciting = 令人兴奋的；决赛直到最后一分钟都很精彩。",
+    },
+    fear: {
+      focusWord: "fear",
+      sentence: "Her fear of dogs began when she was young.",
+      chinese: "fear = 害怕；她对狗的恐惧从小时候就开始了。",
+    },
+    feellike: {
+      focusWord: "feel like",
+      sentence: "I feel like having some hot soup.",
+      chinese: "feel like = 想要；我想喝一些热汤。",
+    },
     forest: {
       focusWord: "forest",
       sentence: "It gets dark very quickly in the forest.",
