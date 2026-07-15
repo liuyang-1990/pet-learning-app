@@ -2538,5 +2538,205 @@ export const reviewedWordExampleAudit = {
   "television": {
     "status": "pass",
     "reasons": []
+  },
+  "accountant": {
+    "status": "pass",
+    "reasons": []
+  },
+  "actor": {
+    "status": "pass",
+    "reasons": []
+  },
+  "actress": {
+    "status": "pass",
+    "reasons": []
+  },
+  "artist": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bookingoffice": {
+    "status": "pass",
+    "reasons": []
+  },
+  "business": {
+    "status": "pass",
+    "reasons": []
+  },
+  "businessman": {
+    "status": "pass",
+    "reasons": []
+  },
+  "businesswoman": {
+    "status": "pass",
+    "reasons": []
+  },
+  "career": {
+    "status": "pass",
+    "reasons": []
+  },
+  "chef": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cv": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dentist": {
+    "status": "pass",
+    "reasons": []
+  },
+  "designer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dr": {
+    "status": "pass",
+    "reasons": []
+  },
+  "email": {
+    "status": "pass",
+    "reasons": []
+  },
+  "factory": {
+    "status": "pass",
+    "reasons": []
+  },
+  "farmer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "job": {
+    "status": "pass",
+    "reasons": []
+  },
+  "journalist": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lawyer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mechanic": {
+    "status": "pass",
+    "reasons": []
+  },
+  "nurse": {
+    "status": "pass",
+    "reasons": []
+  },
+  "onbusiness": {
+    "status": "pass",
+    "reasons": []
+  },
+  "outofwork": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pilot": {
+    "status": "pass",
+    "reasons": []
+  },
+  "police": {
+    "status": "pass",
+    "reasons": []
+  },
+  "policeofficer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "postoffice": {
+    "status": "pass",
+    "reasons": []
+  },
+  "profession": {
+    "status": "pass",
+    "reasons": []
+  },
+  "professional": {
+    "status": "pass",
+    "reasons": []
+  },
+  "secretary": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shopassistant": {
+    "status": "pass",
+    "reasons": []
+  },
+  "staff": {
+    "status": "pass",
+    "reasons": []
+  },
+  "work": {
+    "status": "pass",
+    "reasons": []
+  },
+  "worker": {
+    "status": "pass",
+    "reasons": []
+  },
+  "workout": {
+    "status": "pass",
+    "reasons": []
+  },
+  "admission": {
+    "status": "pass",
+    "reasons": []
+  },
+  "agency": {
+    "status": "pass",
+    "reasons": []
+  },
+  "company": {
+    "status": "pass",
+    "reasons": []
+  },
+  "culture": {
+    "status": "pass",
+    "reasons": []
+  },
+  "custom": {
+    "status": "pass",
+    "reasons": []
+  },
+  "customs": {
+    "status": "pass",
+    "reasons": []
+  },
+  "government": {
+    "status": "pass",
+    "reasons": []
+  },
+  "industry": {
+    "status": "pass",
+    "reasons": []
+  },
+  "international": {
+    "status": "pass",
+    "reasons": []
+  },
+  "law": {
+    "status": "pass",
+    "reasons": []
+  },
+  "national": {
+    "status": "pass",
+    "reasons": []
+  },
+  "policeman": {
+    "status": "pass",
+    "reasons": []
+  },
+  "policewoman": {
+    "status": "pass",
+    "reasons": []
+  },
+  "politician": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

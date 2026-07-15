@@ -19,6 +19,15 @@ const cachePath = path.resolve(process.cwd(), "data/google-translation-audit-cac
 const outputPath = path.resolve(process.cwd(), "src/lib/generated/pet-word-example-audit.ts");
 const cache = readCache();
 const manuallyConfirmedTerms = new Set([
+  // These work and society examples use valid contextual senses or Chinese synonyms.
+  "business", // a commercial activity / business
+  "mechanic", // car mechanic / repair worker
+  "onbusiness", // travelling for work / on business
+  "police", // the police as an organisation investigating a theft
+  "workout", // calculate / figure out, not exercise
+  "custom", // a local tradition, not a customised product
+  // Both sentence directions preserve the harbour painting meaning.
+  "painting",
   // These entertainment examples use valid contextual senses or Chinese synonyms.
   "character", // a person in a story, not personality
   "mystery", // mystery / riddle
@@ -158,8 +167,8 @@ async function translateAll(texts: string[], source: string, target: string): Pr
     return !cached;
   }))];
 
-  for (let index = 0; index < pending.length; index += 12) {
-    const batch = pending.slice(index, index + 12);
+  for (let index = 0; index < pending.length; index += 4) {
+    const batch = pending.slice(index, index + 4);
     const results = translateBatch(batch, source, target);
     if (results.length !== batch.length) {
       throw new Error(`Google translation batch count mismatch: expected ${batch.length}, received ${results.length}`);
