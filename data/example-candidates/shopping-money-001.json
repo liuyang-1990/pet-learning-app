@@ -1,0 +1,306 @@
+{
+  "batchId": "shopping-money-001",
+  "status": "promoted",
+  "entries": [
+    {
+      "term": "buy",
+      "focusWord": "buy",
+      "sentence": "I need to buy a new notebook for school.",
+      "chinese": "buy = 购买；我需要为上学买一本新笔记本。"
+    },
+    {
+      "term": "cash",
+      "focusWord": "cash",
+      "sentence": "The café only accepts cash.",
+      "chinese": "cash = 现金；这家咖啡馆只收现金。"
+    },
+    {
+      "term": "cash machine",
+      "focusWord": "cash machine",
+      "sentence": "I took some money out of the cash machine.",
+      "chinese": "cash machine = 自动取款机；我从自动取款机取了一些钱。"
+    },
+    {
+      "term": "cheap",
+      "focusWord": "cheap",
+      "sentence": "These trainers were cheap but very comfortable.",
+      "chinese": "cheap = 便宜的；这双运动鞋很便宜，但穿着很舒服。"
+    },
+    {
+      "term": "cost",
+      "focusWord": "cost",
+      "sentence": "How much does this jacket cost?",
+      "chinese": "cost = 价钱；这件夹克多少钱？"
+    },
+    {
+      "term": "customer",
+      "focusWord": "customer",
+      "sentence": "The assistant helped a customer find the right size.",
+      "chinese": "customer = 顾客；店员帮助一位顾客找到了合适的尺码。"
+    },
+    {
+      "term": "department store",
+      "focusWord": "department store",
+      "sentence": "We bought the lamp at a department store.",
+      "chinese": "department store = 百货商店；我们在一家百货商店买了这盏灯。"
+    },
+    {
+      "term": "expensive",
+      "focusWord": "expensive",
+      "sentence": "That restaurant is too expensive for us.",
+      "chinese": "expensive = 昂贵的；那家餐馆对我们来说太贵了。"
+    },
+    {
+      "term": "for sale",
+      "focusWord": "for sale",
+      "sentence": "The old bicycle is for sale.",
+      "chinese": "for sale = 待售；那辆旧自行车正在出售。"
+    },
+    {
+      "term": "grocery store",
+      "focusWord": "grocery store",
+      "sentence": "I stopped at the grocery store to buy milk.",
+      "chinese": "grocery store = 食品店；我在食品店停下来买牛奶。"
+    },
+    {
+      "term": "in order",
+      "focusWord": "in order",
+      "sentence": "Please put the books in order by size.",
+      "chinese": "in order = 按顺序；请按大小顺序摆放这些书。"
+    },
+    {
+      "term": "in order to",
+      "focusWord": "in order to",
+      "sentence": "I saved money in order to buy a laptop.",
+      "chinese": "in order to = 为了；我存钱是为了买一台笔记本电脑。"
+    },
+    {
+      "term": "mall",
+      "focusWord": "mall",
+      "sentence": "We met near the entrance to the shopping mall.",
+      "chinese": "mall = 购物中心；我们在购物中心入口附近见面。"
+    },
+    {
+      "term": "market",
+      "focusWord": "market",
+      "sentence": "Fresh fruit is cheaper at the local market.",
+      "chinese": "market = 市场；当地市场的新鲜水果更便宜。"
+    },
+    {
+      "term": "on sale",
+      "focusWord": "on sale",
+      "sentence": "These shoes are on sale this week.",
+      "chinese": "on sale = 打折出售；这双鞋本周打折出售。"
+    },
+    {
+      "term": "order",
+      "focusWord": "order",
+      "sentence": "I ordered a birthday cake from the bakery.",
+      "chinese": "order = 订购；我从面包店订购了一个生日蛋糕。"
+    },
+    {
+      "term": "out of order",
+      "focusWord": "out of order",
+      "sentence": "The cash machine is out of order.",
+      "chinese": "out of order = 出故障；自动取款机坏了。"
+    },
+    {
+      "term": "parcel",
+      "focusWord": "parcel",
+      "sentence": "A parcel arrived for you this morning.",
+      "chinese": "parcel = 包裹；今天早上有你的一个包裹送到。"
+    },
+    {
+      "term": "pay",
+      "focusWord": "pay",
+      "sentence": "Can I pay by credit card?",
+      "chinese": "pay = 付款；我可以用信用卡付款吗？"
+    },
+    {
+      "term": "price",
+      "focusWord": "price",
+      "sentence": "The price of the ticket includes lunch.",
+      "chinese": "price = 价格；票价包含午餐。"
+    },
+    {
+      "term": "queue",
+      "focusWord": "queue",
+      "sentence": "We waited in a long queue at the checkout.",
+      "chinese": "queue = 队列；我们在收银台排了很长的队。"
+    },
+    {
+      "term": "receipt",
+      "focusWord": "receipt",
+      "sentence": "Keep the receipt in case you need to return the shirt.",
+      "chinese": "receipt = 收据；保留收据，以防你需要退掉这件衬衫。"
+    },
+    {
+      "term": "sale",
+      "focusWord": "sale",
+      "sentence": "The shop has a summer sale every July.",
+      "chinese": "sale = 促销；这家商店每年七月都有夏季促销。"
+    },
+    {
+      "term": "sell",
+      "focusWord": "sell",
+      "sentence": "They sell fresh bread every morning.",
+      "chinese": "sell = 出售；他们每天早上出售新鲜面包。"
+    },
+    {
+      "term": "shop",
+      "focusWord": "shop",
+      "sentence": "This shop closes at six on Saturdays.",
+      "chinese": "shop = 商店；这家商店星期六六点关门。"
+    },
+    {
+      "term": "shopping",
+      "focusWord": "shopping",
+      "sentence": "We went shopping for school clothes.",
+      "chinese": "shopping = 购物；我们去买上学穿的衣服。"
+    },
+    {
+      "term": "store",
+      "focusWord": "store",
+      "sentence": "The store offers free delivery on large items.",
+      "chinese": "store = 商店；这家商店为大件商品提供免费送货。"
+    },
+    {
+      "term": "supermarket",
+      "focusWord": "supermarket",
+      "sentence": "The supermarket is busy on Friday evenings.",
+      "chinese": "supermarket = 超市；超市星期五晚上很忙。"
+    },
+    {
+      "term": "account",
+      "focusWord": "account",
+      "sentence": "I checked the balance in my account before paying the bill.",
+      "chinese": "account = 账户；付账前我查看了账户余额。"
+    },
+    {
+      "term": "afford",
+      "focusWord": "afford",
+      "sentence": "We cannot afford a new car this year.",
+      "chinese": "afford = 买得起；今年我们买不起新车。"
+    },
+    {
+      "term": "bank",
+      "focusWord": "bank",
+      "sentence": "I went to the bank to change some money.",
+      "chinese": "bank = 银行；我去银行兑换了一些钱。"
+    },
+    {
+      "term": "bank account",
+      "focusWord": "bank account",
+      "sentence": "My wages are paid into my bank account.",
+      "chinese": "bank account = 银行账户；我的工资会存入银行账户。"
+    },
+    {
+      "term": "bill",
+      "focusWord": "bill",
+      "sentence": "Could we have the bill, please?",
+      "chinese": "bill = 账单；请给我们账单好吗？"
+    },
+    {
+      "term": "borrow",
+      "focusWord": "borrow",
+      "sentence": "Can I borrow ten pounds until tomorrow?",
+      "chinese": "borrow = 借入；我可以借十英镑到明天吗？"
+    },
+    {
+      "term": "cent",
+      "focusWord": "cent",
+      "sentence": "The stamp costs fifty cents.",
+      "chinese": "cent = 分；这枚邮票售价五十分。"
+    },
+    {
+      "term": "coin",
+      "focusWord": "coin",
+      "sentence": "I found a coin under the table.",
+      "chinese": "coin = 硬币；我在桌子下面发现了一枚硬币。"
+    },
+    {
+      "term": "dollar",
+      "focusWord": "dollar",
+      "sentence": "This sandwich costs five dollars.",
+      "chinese": "dollar = 美元；这个三明治五美元。"
+    },
+    {
+      "term": "euro",
+      "focusWord": "euro",
+      "sentence": "The museum ticket costs twelve euros.",
+      "chinese": "euro = 欧元；博物馆门票十二欧元。"
+    },
+    {
+      "term": "lend",
+      "focusWord": "lend",
+      "sentence": "Could you lend me some money for lunch?",
+      "chinese": "lend = 借给；你能借给我一些午饭钱吗？"
+    },
+    {
+      "term": "money",
+      "focusWord": "money",
+      "sentence": "I do not have enough money for both books.",
+      "chinese": "money = 钱；我的钱不够买这两本书。"
+    },
+    {
+      "term": "pocket money",
+      "focusWord": "pocket money",
+      "sentence": "Sam saves half of his pocket money each week.",
+      "chinese": "pocket money = 零用钱；萨姆每周把一半零用钱存起来。"
+    },
+    {
+      "term": "pound",
+      "focusWord": "pound",
+      "sentence": "The book only cost one pound.",
+      "chinese": "pound = 英镑；这本书只花了一英镑。"
+    },
+    {
+      "term": "save",
+      "focusWord": "save",
+      "sentence": "I am saving for a new phone.",
+      "chinese": "save = 存钱；我正在存钱买一部新手机。"
+    },
+    {
+      "term": "value",
+      "focusWord": "value",
+      "sentence": "This phone offers good value for the price.",
+      "chinese": "value = 价值；这部手机按这个价格来说很划算。"
+    },
+    {
+      "term": "worth",
+      "focusWord": "worth",
+      "sentence": "The painting is worth more than a thousand pounds.",
+      "chinese": "worth = 值...的；这幅画价值一千多英镑。"
+    },
+    {
+      "term": "change",
+      "focusWord": "change",
+      "sentence": "The cashier gave me the wrong change.",
+      "chinese": "change = 找回的零钱；收银员找错了零钱给我。"
+    },
+    {
+      "term": "credit card",
+      "focusWord": "credit card",
+      "sentence": "I used my credit card to book the hotel.",
+      "chinese": "credit card = 信用卡；我用信用卡预订了酒店。"
+    },
+    {
+      "term": "wallet",
+      "focusWord": "wallet",
+      "sentence": "I keep my bank cards in my wallet.",
+      "chinese": "wallet = 钱包；我把银行卡放在钱包里。"
+    },
+    {
+      "term": "discount",
+      "focusWord": "discount",
+      "sentence": "Students receive a ten percent discount.",
+      "chinese": "discount = 折扣；学生可享受九折优惠。"
+    },
+    {
+      "term": "cheque",
+      "focusWord": "cheque",
+      "sentence": "He paid the bill by cheque.",
+      "chinese": "cheque = 支票；他用支票付了账单。"
+    }
+  ]
+}
