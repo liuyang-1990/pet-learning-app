@@ -150,6 +150,16 @@ const technologyCommunicationBatch = [
   "meaning", "mention", "pronounce", "pronunciation", "reply", "text message",
 ] as const;
 
+const shoppingMoneyBatch = [
+  "buy", "cash", "cash machine", "cheap", "cost", "customer", "department store",
+  "expensive", "for sale", "grocery store", "in order", "in order to", "mall", "market",
+  "on sale", "order", "out of order", "parcel", "pay", "price", "queue", "receipt", "sale",
+  "sell", "shop", "shopping", "store", "supermarket", "account", "afford", "bank",
+  "bank account", "bill", "borrow", "cent", "coin", "dollar", "euro", "lend", "money",
+  "pocket money", "pound", "save", "value", "worth", "change", "credit card", "wallet",
+  "discount", "cheque",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -1016,6 +1026,81 @@ describe("PET Learning App", () => {
     expect(getWordExample({ term: "text message", chineseGloss: "正文消息" })).toMatchObject({
       sentence: "I sent Dad a text message when I arrived.",
       chinese: "text message = 短信；我到达时给爸爸发了一条短信。",
+    });
+  });
+
+  it("adds the reviewed shopping money batch and covers both complete themes", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const shoppingWords = words.filter((word) => word.theme === "shopping");
+    const moneyWords = words.filter((word) => word.theme === "money");
+    const selectedExamples = shoppingMoneyBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+    const themeExamples = [...shoppingWords, ...moneyWords].map((word) =>
+      getWordExample(word),
+    );
+
+    expect(shoppingMoneyBatch).toHaveLength(50);
+    expect(shoppingWords).toHaveLength(28);
+    expect(moneyWords).toHaveLength(17);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(535);
+    expect(selectedExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
+    expect(themeExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(45);
+  });
+
+  it("keeps the shopping money ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/shopping-money-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended shopping money senses for ambiguous terms", () => {
+    expect(getWordExample({ term: "mall", chineseGloss: "林荫路" })).toMatchObject({
+      sentence: "We met near the entrance to the shopping mall.",
+      chinese: "mall = 购物中心；我们在购物中心入口附近见面。",
+    });
+    expect(getWordExample({ term: "order", chineseGloss: "次序；命令" })).toMatchObject({
+      sentence: "I ordered a birthday cake from the bakery.",
+      chinese: "order = 订购；我从面包店订购了一个生日蛋糕。",
+    });
+    expect(getWordExample({ term: "account", chineseGloss: "报告；解释" })).toMatchObject({
+      sentence: "I checked the balance in my account before paying the bill.",
+      chinese: "account = 账户；付账前我查看了账户余额。",
+    });
+    expect(getWordExample({ term: "save", chineseGloss: "救球；解救" })).toMatchObject({
+      sentence: "I am saving for a new phone.",
+      chinese: "save = 存钱；我正在存钱买一部新手机。",
+    });
+    expect(getWordExample({ term: "pound", chineseGloss: "磅；英镑；重击" })).toMatchObject({
+      sentence: "The book only cost one pound.",
+      chinese: "pound = 英镑；这本书只花了一英镑。",
+    });
+    expect(getWordExample({ term: "change", chineseGloss: "变化；找头" })).toMatchObject({
+      sentence: "The cashier gave me the wrong change.",
+      chinese: "change = 找回的零钱；收银员找错了零钱给我。",
     });
   });
 
