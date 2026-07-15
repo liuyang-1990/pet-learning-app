@@ -2840,6 +2840,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "Our school trip to the science museum was excellent.",
       chinese: "trip = 旅行；学校组织的科学博物馆之行很棒。",
     },
+    app: {
+      focusWord: "app",
+      sentence: "I use a weather app to check tomorrow's forecast.",
+      chinese: "app = 应用程序；我用天气应用程序查看明天的天气预报。",
+    },
+    application: {
+      focusWord: "application",
+      sentence: "This application helps students practise new vocabulary.",
+      chinese: "application = 应用程序；这个应用程序帮助学生练习新词汇。",
+    },
+    camera: {
+      focusWord: "camera",
+      sentence: "This camera takes clear photos in low light.",
+      chinese: "camera = 相机；这台相机在光线暗时也能拍出清晰照片。",
+    },
+    cd: {
+      focusWord: "CD",
+      sentence: "This CD contains all the songs from the concert.",
+      chinese: "CD = 光盘；这张光盘收录了演唱会的所有歌曲。",
+    },
+    cellphone: {
+      focusWord: "cell phone",
+      sentence: "Please turn off your cell phone during the film.",
+      chinese: "cell phone = 手机；电影播放期间请关掉手机。",
+    },
+    digital: {
+      focusWord: "digital",
+      sentence: "We bought a digital clock for the kitchen.",
+      chinese: "digital = 数字式的；我们给厨房买了一个数字时钟。",
+    },
+    download: {
+      focusWord: "download",
+      sentence: "You can download the map before your trip.",
+      chinese: "download = 下载；旅行前你可以下载地图。",
+    },
+    dvd: {
+      focusWord: "DVD",
+      sentence: "We watched the film on DVD last night.",
+      chinese: "DVD = 数字视频光盘；我们昨晚用光盘看了这部电影。",
+    },
+    electronic: {
+      focusWord: "electronic",
+      sentence: "The library sends electronic reminders for late books.",
+      chinese: "electronic = 电子的；图书馆会发送电子提醒，通知逾期未还的书。",
+    },
+    internet: {
+      focusWord: "internet",
+      sentence: "The internet connection at the hotel was very slow.",
+      chinese: "internet = 互联网；酒店的网络连接很慢。",
+    },
+    laptop: {
+      focusWord: "laptop",
+      sentence: "I take my laptop to the library when I study.",
+      chinese: "laptop = 笔记本电脑；我学习时会把笔记本电脑带到图书馆。",
+    },
+    mobile: {
+      focusWord: "mobile",
+      sentence: "You can use the mobile version of the website.",
+      chinese: "mobile = 移动版的；你可以使用这个网站的移动版本。",
+    },
+    online: {
+      focusWord: "online",
+      sentence: "We booked our train tickets online.",
+      chinese: "online = 在线；我们在网上预订了火车票。",
+    },
+    password: {
+      focusWord: "password",
+      sentence: "Choose a password that is difficult to guess.",
+      chinese: "password = 密码；选择一个难以猜出的密码。",
+    },
+    pc: {
+      focusWord: "PC",
+      sentence: "The new software works on any modern PC.",
+      chinese: "PC = 个人电脑；这款新软件可以在任何现代个人电脑上运行。",
+    },
+    phone: {
+      focusWord: "phone",
+      sentence: "My phone ran out of battery on the way home.",
+      chinese: "phone = 手机；回家路上我的手机没电了。",
+    },
+    screen: {
+      focusWord: "screen",
+      sentence: "The words on the screen are too small to read.",
+      chinese: "screen = 屏幕；屏幕上的字太小，看不清。",
+    },
+    software: {
+      focusWord: "software",
+      sentence: "We installed new drawing software at school.",
+      chinese: "software = 软件；我们在学校安装了新的绘图软件。",
+    },
+    tablet: {
+      focusWord: "tablet",
+      sentence: "She reads electronic books on her tablet.",
+      chinese: "tablet = 平板电脑；她用平板电脑阅读电子书。",
+    },
+    technology: {
+      focusWord: "technology",
+      sentence: "Modern technology makes it easier to work from home.",
+      chinese: "technology = 技术；现代技术让居家办公更容易。",
+    },
+    upload: {
+      focusWord: "upload",
+      sentence: "Please upload your photo before Friday.",
+      chinese: "upload = 上传；请在星期五前上传你的照片。",
+    },
+    video: {
+      focusWord: "video",
+      sentence: "I made a short video of our school concert.",
+      chinese: "video = 视频；我为学校音乐会拍了一段短视频。",
+    },
+    videoclip: {
+      focusWord: "video clip",
+      sentence: "The teacher showed us a video clip about space.",
+      chinese: "video clip = 视频片段；老师给我们看了一段关于太空的视频。",
+    },
+    videogame: {
+      focusWord: "video game",
+      sentence: "This video game is more fun with two players.",
+      chinese: "video game = 电子游戏；这款电子游戏两个人玩更有趣。",
+    },
+    website: {
+      focusWord: "website",
+      sentence: "The museum website lists its opening times.",
+      chinese: "website = 网站；博物馆网站列出了开放时间。",
+    },
+    accent: {
+      focusWord: "accent",
+      sentence: "She speaks English with a strong French accent.",
+      chinese: "accent = 口音；她说英语时带有浓重的法国口音。",
+    },
+    advert: {
+      focusWord: "advert",
+      sentence: "I saw an advert for the new sports centre.",
+      chinese: "advert = 广告；我看到了一则新体育中心的广告。",
+    },
+    advertise: {
+      focusWord: "advertise",
+      sentence: "The café uses social media to advertise its lunches.",
+      chinese: "advertise = 做广告；咖啡馆利用社交媒体宣传午餐。",
+    },
+    advertisement: {
+      focusWord: "advertisement",
+      sentence: "The advertisement showed the price of each phone.",
+      chinese: "advertisement = 广告；这则广告展示了每款手机的价格。",
+    },
+    advise: {
+      focusWord: "advise",
+      sentence: "I advise you to save a copy of the document.",
+      chinese: "advise = 建议；我建议你保存一份文件副本。",
+    },
+    announce: {
+      focusWord: "announce",
+      sentence: "The school will announce the competition results tomorrow.",
+      chinese: "announce = 宣布；学校明天将公布比赛结果。",
+    },
+    announcement: {
+      focusWord: "announcement",
+      sentence: "We heard an announcement about the delayed train.",
+      chinese: "announcement = 公告；我们听到了一则关于火车晚点的通知。",
+    },
+    ask: {
+      focusWord: "ask",
+      sentence: "I asked the assistant how to reset my password.",
+      chinese: "ask = 询问；我问工作人员怎样重置密码。",
+    },
+    call: {
+      focusWord: "call",
+      sentence: "Please call me when your train arrives.",
+      chinese: "call = 打电话；火车到站时请给我打电话。",
+    },
+    confirm: {
+      focusWord: "confirm",
+      sentence: "Please confirm your email address before continuing.",
+      chinese: "confirm = 确认；继续操作前请确认你的电子邮箱地址。",
+    },
+    conversation: {
+      focusWord: "conversation",
+      sentence: "We had a long conversation about online safety.",
+      chinese: "conversation = 交谈；我们就网络安全进行了长时间交谈。",
+    },
+    describe: {
+      focusWord: "describe",
+      sentence: "Can you describe the person you saw?",
+      chinese: "describe = 描述；你能描述一下你看到的那个人吗？",
+    },
+    description: {
+      focusWord: "description",
+      sentence: "The hotel description says every room has internet access.",
+      chinese: "description = 描述；酒店说明写着每个房间都能上网。",
+    },
+    detail: {
+      focusWord: "detail",
+      sentence: "The website gives details about the course.",
+      chinese: "detail = 详情；网站提供了课程的详细信息。",
+    },
+    dialup: {
+      focusWord: "dial up",
+      sentence: "I used to dial up the internet through our phone line.",
+      chinese: "dial up = 拨号上网；我过去通过家里的电话线上网。",
+    },
+    discuss: {
+      focusWord: "discuss",
+      sentence: "We need to discuss the problem before replying.",
+      chinese: "discuss = 讨论；回复前我们需要讨论这个问题。",
+    },
+    enquiry: {
+      focusWord: "enquiry",
+      sentence: "Send your enquiry to the address on the website.",
+      chinese: "enquiry = 询问；请把你的咨询发送到网站上的地址。",
+    },
+    interview: {
+      focusWord: "interview",
+      sentence: "The reporter interviewed the actor after the show.",
+      chinese: "interview = 采访；演出结束后，记者采访了那位演员。",
+    },
+    letter: {
+      focusWord: "letter",
+      sentence: "I wrote a letter to thank my host family.",
+      chinese: "letter = 信；我写信感谢寄宿家庭。",
+    },
+    meaning: {
+      focusWord: "meaning",
+      sentence: "I checked the meaning of the word online.",
+      chinese: "meaning = 含义；我在网上查了这个词的含义。",
+    },
+    mention: {
+      focusWord: "mention",
+      sentence: "He forgot to mention the change of meeting time.",
+      chinese: "mention = 提到；他忘了提到会议时间的变更。",
+    },
+    pronounce: {
+      focusWord: "pronounce",
+      sentence: "How do you pronounce this name?",
+      chinese: "pronounce = 发音；这个名字怎么读？",
+    },
+    pronunciation: {
+      focusWord: "pronunciation",
+      sentence: "Listening to podcasts can improve your pronunciation.",
+      chinese: "pronunciation = 发音；听播客可以改善你的发音。",
+    },
+    reply: {
+      focusWord: "reply",
+      sentence: "I sent a quick reply to her message.",
+      chinese: "reply = 回复；我很快回复了她的消息。",
+    },
+    textmessage: {
+      focusWord: "text message",
+      sentence: "I sent Dad a text message when I arrived.",
+      chinese: "text message = 短信；我到达时给爸爸发了一条短信。",
+    },
   };
 }
 

@@ -1738,5 +1738,205 @@ export const reviewedWordExampleAudit = {
   "trip": {
     "status": "pass",
     "reasons": []
+  },
+  "app": {
+    "status": "pass",
+    "reasons": []
+  },
+  "application": {
+    "status": "pass",
+    "reasons": []
+  },
+  "camera": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cd": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cellphone": {
+    "status": "pass",
+    "reasons": []
+  },
+  "digital": {
+    "status": "pass",
+    "reasons": []
+  },
+  "download": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dvd": {
+    "status": "pass",
+    "reasons": []
+  },
+  "electronic": {
+    "status": "pass",
+    "reasons": []
+  },
+  "internet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "laptop": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mobile": {
+    "status": "pass",
+    "reasons": []
+  },
+  "online": {
+    "status": "pass",
+    "reasons": []
+  },
+  "password": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pc": {
+    "status": "pass",
+    "reasons": []
+  },
+  "phone": {
+    "status": "pass",
+    "reasons": []
+  },
+  "screen": {
+    "status": "pass",
+    "reasons": []
+  },
+  "software": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tablet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "technology": {
+    "status": "pass",
+    "reasons": []
+  },
+  "upload": {
+    "status": "pass",
+    "reasons": []
+  },
+  "video": {
+    "status": "pass",
+    "reasons": []
+  },
+  "videoclip": {
+    "status": "pass",
+    "reasons": []
+  },
+  "videogame": {
+    "status": "pass",
+    "reasons": []
+  },
+  "website": {
+    "status": "pass",
+    "reasons": []
+  },
+  "accent": {
+    "status": "pass",
+    "reasons": []
+  },
+  "advert": {
+    "status": "pass",
+    "reasons": []
+  },
+  "advertise": {
+    "status": "pass",
+    "reasons": []
+  },
+  "advertisement": {
+    "status": "pass",
+    "reasons": []
+  },
+  "advise": {
+    "status": "pass",
+    "reasons": []
+  },
+  "announce": {
+    "status": "pass",
+    "reasons": []
+  },
+  "announcement": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ask": {
+    "status": "pass",
+    "reasons": []
+  },
+  "call": {
+    "status": "pass",
+    "reasons": []
+  },
+  "confirm": {
+    "status": "pass",
+    "reasons": []
+  },
+  "conversation": {
+    "status": "pass",
+    "reasons": []
+  },
+  "describe": {
+    "status": "pass",
+    "reasons": []
+  },
+  "description": {
+    "status": "pass",
+    "reasons": []
+  },
+  "detail": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dialup": {
+    "status": "pass",
+    "reasons": []
+  },
+  "discuss": {
+    "status": "pass",
+    "reasons": []
+  },
+  "enquiry": {
+    "status": "pass",
+    "reasons": []
+  },
+  "interview": {
+    "status": "pass",
+    "reasons": []
+  },
+  "letter": {
+    "status": "pass",
+    "reasons": []
+  },
+  "meaning": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mention": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pronounce": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pronunciation": {
+    "status": "pass",
+    "reasons": []
+  },
+  "reply": {
+    "status": "pass",
+    "reasons": []
+  },
+  "textmessage": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

@@ -19,6 +19,9 @@ const cachePath = path.resolve(process.cwd(), "data/google-translation-audit-cac
 const outputPath = path.resolve(process.cwd(), "src/lib/generated/pet-word-example-audit.ts");
 const cache = readCache();
 const manuallyConfirmedTerms = new Set([
+  // These technology and communication examples use valid Chinese synonyms.
+  "phone", // phone / mobile phone
+  "detail", // detail / detailed information
   // These transport and travel examples use valid synonyms or contextual senses.
   "bus", // bus / public bus
   "flight", // scheduled flight, not flight in general

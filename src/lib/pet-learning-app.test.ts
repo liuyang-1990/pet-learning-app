@@ -140,6 +140,16 @@ const transportTravelBatch = [
   "suitcase", "tour guide", "tourist", "travel", "travel agent", "trip",
 ] as const;
 
+const technologyCommunicationBatch = [
+  "app", "application", "camera", "CD", "cell phone", "digital", "download", "DVD",
+  "electronic", "internet", "laptop", "mobile", "online", "password", "PC", "phone",
+  "screen", "software", "tablet", "technology", "upload", "video", "video clip",
+  "video game", "website", "accent", "advert", "advertise", "advertisement", "advise",
+  "announce", "announcement", "ask", "call", "confirm", "conversation", "describe",
+  "description", "detail", "dial up", "discuss", "enquiry", "interview", "letter",
+  "meaning", "mention", "pronounce", "pronunciation", "reply", "text message",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -935,6 +945,77 @@ describe("PET Learning App", () => {
     expect(getWordExample({ term: "trip", chineseGloss: "旅行；绊倒；摔倒" })).toMatchObject({
       sentence: "Our school trip to the science museum was excellent.",
       chinese: "trip = 旅行；学校组织的科学博物馆之行很棒。",
+    });
+  });
+
+  it("adds the reviewed technology communication batch and covers every technology row", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const technologyWords = words.filter((word) => word.theme === "technology");
+    const selectedExamples = technologyCommunicationBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+    const technologyExamples = technologyWords.map((word) => getWordExample(word));
+
+    expect(technologyCommunicationBatch).toHaveLength(50);
+    expect(technologyWords).toHaveLength(28);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(485);
+    expect(selectedExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
+    expect(technologyExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(28);
+  });
+
+  it("keeps the technology communication ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/technology-communication-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended technology communication senses for ambiguous terms", () => {
+    expect(getWordExample({ term: "application", chineseGloss: "应用；申请" })).toMatchObject({
+      sentence: "This application helps students practise new vocabulary.",
+      chinese: "application = 应用程序；这个应用程序帮助学生练习新词汇。",
+    });
+    expect(getWordExample({ term: "mobile", chineseGloss: "移动的；易变的" })).toMatchObject({
+      sentence: "You can use the mobile version of the website.",
+      chinese: "mobile = 移动版的；你可以使用这个网站的移动版本。",
+    });
+    expect(getWordExample({ term: "screen", chineseGloss: "幕；屏风" })).toMatchObject({
+      sentence: "The words on the screen are too small to read.",
+      chinese: "screen = 屏幕；屏幕上的字太小，看不清。",
+    });
+    expect(getWordExample({ term: "advert", chineseGloss: "引起注意；留意" })).toMatchObject({
+      sentence: "I saw an advert for the new sports centre.",
+      chinese: "advert = 广告；我看到了一则新体育中心的广告。",
+    });
+    expect(getWordExample({ term: "call", chineseGloss: "呼叫；访问；打电话" })).toMatchObject({
+      sentence: "Please call me when your train arrives.",
+      chinese: "call = 打电话；火车到站时请给我打电话。",
+    });
+    expect(getWordExample({ term: "text message", chineseGloss: "正文消息" })).toMatchObject({
+      sentence: "I sent Dad a text message when I arrived.",
+      chinese: "text message = 短信；我到达时给爸爸发了一条短信。",
     });
   });
 
