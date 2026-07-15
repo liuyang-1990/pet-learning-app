@@ -189,6 +189,15 @@ const workSocietyBatch = [
   "international", "law", "national", "policeman", "policewoman", "politician",
 ] as const;
 
+const clothingMaterialsBatch = [
+  "boot", "bracelet", "cap", "clothes", "clothing", "coat", "dress", "fashion", "glove",
+  "handbag", "hat", "jacket", "jeans", "necklace", "ring", "ring back", "ring up", "shirt",
+  "shoe", "skirt", "sock", "sweatshirt", "swimsuit", "tracksuit", "trousers", "T-shirt",
+  "underpants", "underwear", "wear", "wear out", "blank", "card", "cotton", "display",
+  "equipment", "goods", "ID card", "identity card", "leather", "lighter", "liquid",
+  "material", "metal", "object", "oil", "plastic", "silver", "stone", "wool", "toy",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -1355,6 +1364,91 @@ describe("PET Learning App", () => {
     expect(getWordExample({ term: "customs", chineseGloss: "海关；风俗" })).toMatchObject({
       sentence: "We showed our passports at customs.",
       chinese: "customs = 海关；我们在海关出示了护照。",
+    });
+  });
+
+  it("adds the reviewed clothing materials batch and completes both themes", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const clothingWords = words.filter((word) => word.theme === "clothing");
+    const materialWords = words.filter((word) => word.theme === "materials");
+    const selectedExamples = clothingMaterialsBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(clothingMaterialsBatch).toHaveLength(50);
+    expect(clothingWords).toHaveLength(31);
+    expect(materialWords).toHaveLength(24);
+    expect(Object.keys(getReviewedWordExamples())).toHaveLength(735);
+    expect(selectedExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
+    expect(clothingWords.every((word) => getWordExample(word).sentence !== null)).toBe(true);
+    expect(materialWords.every((word) => getWordExample(word).sentence !== null)).toBe(true);
+  });
+
+  it("keeps the clothing materials ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/clothing-materials-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended clothing materials senses for ambiguous terms", () => {
+    expect(getWordExample({ term: "dress", chineseGloss: "穿衣；连衣裙" })).toMatchObject({
+      sentence: "She chose a blue dress for the school dance.",
+      chinese: "dress = 连衣裙；她为学校舞会选了一条蓝色连衣裙。",
+    });
+    expect(getWordExample({ term: "ring", chineseGloss: "环；铃声；戒指" })).toMatchObject({
+      sentence: "He gave her a ring for her birthday.",
+      chinese: "ring = 戒指；他送给她一枚戒指作为生日礼物。",
+    });
+    expect(getWordExample({ term: "ring back", chineseGloss: "回电话" })).toMatchObject({
+      sentence: "I will ring you back after my class.",
+      chinese: "ring back = 回电话；我下课后会给你回电话。",
+    });
+    expect(getWordExample({ term: "ring up", chineseGloss: "打电话；结账" })).toMatchObject({
+      sentence: "Please ring up the hotel and check our booking.",
+      chinese: "ring up = 打电话；请给酒店打电话确认我们的预订。",
+    });
+    expect(getWordExample({ term: "wear out", chineseGloss: "用坏；磨损" })).toMatchObject({
+      sentence: "These cheap shoes may wear out quickly.",
+      chinese: "wear out = 磨坏；这些便宜的鞋可能很快就会磨坏。",
+    });
+    expect(getWordExample({ term: "blank", chineseGloss: "空白；空白的" })).toMatchObject({
+      sentence: "Leave this box blank if the question does not apply to you.",
+      chinese: "blank = 空白的；如果这个问题不适用于你，就把这一栏留空。",
+    });
+    expect(getWordExample({ term: "display", chineseGloss: "显示；展览" })).toMatchObject({
+      sentence: "The museum has a display of old toys.",
+      chinese: "display = 展览；博物馆有一个旧玩具展览。",
+    });
+    expect(getWordExample({ term: "lighter", chineseGloss: "更轻的；打火机" })).toMatchObject({
+      sentence: "Keep the lighter away from young children.",
+      chinese: "lighter = 打火机；让打火机远离年幼的孩子。",
+    });
+    expect(getWordExample({ term: "material", chineseGloss: "材料；重要的" })).toMatchObject({
+      sentence: "We chose a strong material for the school bags.",
+      chinese: "material = 材料；我们为书包选择了一种结实的材料。",
     });
   });
 
