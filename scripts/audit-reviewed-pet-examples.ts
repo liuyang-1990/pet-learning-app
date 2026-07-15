@@ -19,6 +19,12 @@ const cachePath = path.resolve(process.cwd(), "data/google-translation-audit-cac
 const outputPath = path.resolve(process.cwd(), "src/lib/generated/pet-word-example-audit.ts");
 const cache = readCache();
 const manuallyConfirmedTerms = new Set([
+  // These health examples use valid synonyms or context-dependent senses.
+  "byaccident", // accidentally / unintentionally
+  "hurt", // feel pain, not only become injured
+  "medicine", // medication, not only the field of medicine
+  "sick", // nauseous / feeling ill
+  "unfit", // physically out of condition, not unsuitable
   // These feelings examples use valid Chinese synonyms missed by gloss matching.
   "mind", // idea / thought in "change my mind", not only intellect
   "pleased", // satisfied / happy

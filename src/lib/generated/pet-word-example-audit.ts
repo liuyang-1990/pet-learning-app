@@ -1338,5 +1338,205 @@ export const reviewedWordExampleAudit = {
   "frightening": {
     "status": "pass",
     "reasons": []
+  },
+  "accident": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ache": {
+    "status": "pass",
+    "reasons": []
+  },
+  "arm": {
+    "status": "pass",
+    "reasons": []
+  },
+  "blood": {
+    "status": "pass",
+    "reasons": []
+  },
+  "body": {
+    "status": "pass",
+    "reasons": []
+  },
+  "byaccident": {
+    "status": "pass",
+    "reasons": []
+  },
+  "byhand": {
+    "status": "pass",
+    "reasons": []
+  },
+  "clinic": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ear": {
+    "status": "pass",
+    "reasons": []
+  },
+  "emergency": {
+    "status": "pass",
+    "reasons": []
+  },
+  "eye": {
+    "status": "pass",
+    "reasons": []
+  },
+  "face": {
+    "status": "pass",
+    "reasons": []
+  },
+  "facetoface": {
+    "status": "pass",
+    "reasons": []
+  },
+  "finger": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "foot": {
+    "status": "pass",
+    "reasons": []
+  },
+  "getfit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hand": {
+    "status": "pass",
+    "reasons": []
+  },
+  "handheld": {
+    "status": "pass",
+    "reasons": []
+  },
+  "handin": {
+    "status": "pass",
+    "reasons": []
+  },
+  "handout": {
+    "status": "pass",
+    "reasons": []
+  },
+  "head": {
+    "status": "pass",
+    "reasons": []
+  },
+  "health": {
+    "status": "pass",
+    "reasons": []
+  },
+  "healthy": {
+    "status": "pass",
+    "reasons": []
+  },
+  "heart": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hospital": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hurt": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ill": {
+    "status": "pass",
+    "reasons": []
+  },
+  "knee": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lefthand": {
+    "status": "pass",
+    "reasons": []
+  },
+  "leg": {
+    "status": "pass",
+    "reasons": []
+  },
+  "medicine": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mouth": {
+    "status": "pass",
+    "reasons": []
+  },
+  "neck": {
+    "status": "pass",
+    "reasons": []
+  },
+  "nose": {
+    "status": "pass",
+    "reasons": []
+  },
+  "onfoot": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pain": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pregnant": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rescue": {
+    "status": "pass",
+    "reasons": []
+  },
+  "righthand": {
+    "status": "pass",
+    "reasons": []
+  },
+  "secondhand": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shoulder": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sick": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stomachache": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tooth": {
+    "status": "pass",
+    "reasons": []
+  },
+  "painful": {
+    "status": "pass",
+    "reasons": []
+  },
+  "patient": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sore": {
+    "status": "pass",
+    "reasons": []
+  },
+  "unfit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "unwell": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;
