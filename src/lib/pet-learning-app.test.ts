@@ -169,6 +169,16 @@ const foodDiningBatch = [
   "recipe", "cook", "cooker", "kettle", "pan",
 ] as const;
 
+const entertainmentMediaBatch = [
+  "art", "audience", "board game", "character", "chat show", "cinema", "club", "comic",
+  "concert", "dance", "dancing", "detective", "drama", "draw", "drawing", "festival",
+  "film", "film maker", "firework", "gallery", "game", "headline", "hobby", "imagination",
+  "magazine", "movie", "movie theater", "museum", "music", "mystery", "newspaper", "novel",
+  "paint", "painting", "party", "poem", "pop", "program", "radio", "series", "show",
+  "show up", "song", "soundtrack", "stage", "story", "superhero", "talent", "talk show",
+  "television",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -1181,6 +1191,75 @@ describe("PET Learning App", () => {
     expect(getWordExample({ term: "cook", chineseGloss: "厨子；烹调" })).toMatchObject({
       sentence: "My uncle works as a cook in a hotel.",
       chinese: "cook = 厨师；我叔叔在一家酒店当厨师。",
+    });
+  });
+
+  it("adds the reviewed entertainment media batch and leaves only two theme rows", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const entertainmentWords = words.filter((word) => word.theme === "entertainment");
+    const selectedExamples = entertainmentMediaBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+    const missingEntertainmentTerms = entertainmentWords
+      .filter((word) => getWordExample(word).sentence === null)
+      .map((word) => word.term);
+
+    expect(entertainmentMediaBatch).toHaveLength(50);
+    expect(entertainmentWords).toHaveLength(54);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(635);
+    expect(selectedExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
+    expect(missingEntertainmentTerms).toEqual(["theatre", "toy"]);
+  });
+
+  it("keeps the entertainment media ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/entertainment-media-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended entertainment media senses for ambiguous terms", () => {
+    expect(getWordExample({ term: "art", chineseGloss: "冠词（article）" })).toMatchObject({
+      sentence: "We studied modern art at the gallery.",
+      chinese: "art = 艺术；我们在画廊学习了现代艺术。",
+    });
+    expect(getWordExample({ term: "character", chineseGloss: "个性；字符；人物" })).toMatchObject({
+      sentence: "My favourite character in the story is a brave girl.",
+      chinese: "character = 人物；故事中我最喜欢的人物是一个勇敢的女孩。",
+    });
+    expect(getWordExample({ term: "pop", chineseGloss: "砰然声；含气饮料" })).toMatchObject({
+      sentence: "My sister listens to pop on the radio.",
+      chinese: "pop = 流行音乐；我姐姐用收音机听流行音乐。",
+    });
+    expect(getWordExample({ term: "program", chineseGloss: "节目；程序" })).toMatchObject({
+      sentence: "My favourite science program starts at eight.",
+      chinese: "program = 节目；我最喜欢的科学节目八点开始。",
+    });
+    expect(getWordExample({ term: "show up", chineseGloss: "揭露；露面" })).toMatchObject({
+      sentence: "Ben promised to show up before the film began.",
+      chinese: "show up = 露面；本答应在电影开始前到场。",
     });
   });
 
