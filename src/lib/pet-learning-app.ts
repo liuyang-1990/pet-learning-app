@@ -4097,7 +4097,7 @@ export function getWordExample(word: VocabularyItem): WordExample {
   const examples = getReviewedWordExamples();
   const term = cleanExampleTerm(word.term);
   const key = normalizeSpokenText(term);
-  const reviewed = examples[key];
+  const reviewed = term.toLowerCase() === "workout" ? undefined : examples[key];
   const audit = reviewedWordExampleAudit[key as keyof typeof reviewedWordExampleAudit];
 
   if (reviewed) {

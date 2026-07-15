@@ -4,7 +4,7 @@
 
 **Goal:** Add 50 reviewed PET/B1 work and society examples and make all 42 official work-theme rows accessible.
 
-**Architecture:** Store approved content in `data/example-candidates/work-society-001.json` and promote identical entries into `getReviewedWordExamples()`. Tests prove that 50 unique normalized keys are added, including one `dr` entry that serves both official doctor/Dr row variants.
+**Architecture:** Store approved content in `data/example-candidates/work-society-001.json` and promote identical entries into `getReviewedWordExamples()`. Tests prove that 50 unique normalized keys are added, including one `dr` entry that serves both official doctor/Dr row variants. Lookup explicitly keeps the unreviewed noun `workout` hidden even though its letters collide with the reviewed phrasal verb `work out`.
 
 **Tech Stack:** Next.js 15, TypeScript, Vitest, Vite Node, Google Translate audit script.
 
@@ -12,6 +12,7 @@
 
 - Exactly 50 currently missing normalized terms: all 36 unique work keys and 14 society keys.
 - The `doctor / Dr` and `Dr / doctor` official rows share the normalized key `dr`; both become accessible through one reviewed entry.
+- The unrelated noun `workout` must not receive the `work out = 算出` example through compressed-key normalization.
 - The 37 currently missing work rows join 5 previously reviewed rows, so all 42 official work rows return reviewed sentences after this batch.
 - Reviewed registry coverage rises from at least 635 to at least 685; accessible official rows rise from 636 to 687.
 - Candidate data remains unimported by application code.
@@ -26,7 +27,7 @@
 
 - [ ] Add `workSocietyBatch` using the 50 table terms below.
 - [ ] Require all 50 selected keys and all 42 official work rows to return reviewed sentences, with registry count at least 685.
-- [ ] Add exact candidate-ledger alignment and sense assertions for `business`, `doctor / Dr`, `out of work`, `work out`, `admission`, `custom`, and `customs`.
+- [ ] Add exact candidate-ledger alignment and sense assertions for `business`, `doctor / Dr`, `out of work`, `work out`, `admission`, `custom`, and `customs`; assert that `workout` remains unreviewed.
 - [ ] Run `npm test -- src/lib/pet-learning-app.test.ts -t "work society"` and verify failure because content is absent.
 - [ ] Commit with `git commit -m "test: require work society batch"`.
 
