@@ -19,6 +19,15 @@ const cachePath = path.resolve(process.cwd(), "data/google-translation-audit-cac
 const outputPath = path.resolve(process.cwd(), "src/lib/generated/pet-word-example-audit.ts");
 const cache = readCache();
 const manuallyConfirmedTerms = new Set([
+  // These entertainment examples use valid contextual senses or Chinese synonyms.
+  "character", // a person in a story, not personality
+  "mystery", // mystery / riddle
+  "paint", // apply colour, not the noun "paint"
+  "show", // a talent performance, not the verb "display"
+  "showup", // arrive / appear
+  "soundtrack", // film music / original soundtrack
+  // Google's isolated gloss remained untranslated; both sentence directions match 青少年.
+  "teenager",
   // These food and dining examples use valid synonyms or contextual senses.
   "drink", // a beverage, not the verb "to drink"
   "potato", // potato / 马铃薯 / 土豆
@@ -185,7 +194,7 @@ function translateBatch(texts: string[], source: string, target: string): string
     try {
       body = execFileSync(
         "curl",
-        ["--fail", "--silent", "--show-error", "--retry", "4", "--retry-all-errors", "--retry-delay", "2", "--max-time", "30", url],
+        ["-4", "--http1.1", "--fail", "--silent", "--show-error", "--retry", "4", "--retry-all-errors", "--retry-delay", "2", "--max-time", "30", url],
         { encoding: "utf8" },
       );
       break;
