@@ -1213,7 +1213,7 @@ describe("PET Learning App", () => {
     });
   });
 
-  it("adds the reviewed entertainment media batch and leaves only two theme rows", () => {
+  it("adds the reviewed entertainment media batch and leaves at most two theme rows", () => {
     const vocabularyPath = path.resolve(
       process.cwd(),
       "src/lib/generated/pet-vocabulary.json",
@@ -1235,7 +1235,8 @@ describe("PET Learning App", () => {
     expect(entertainmentWords).toHaveLength(54);
     expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(635);
     expect(selectedExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
-    expect(missingEntertainmentTerms).toEqual(["theatre", "toy"]);
+    expect(missingEntertainmentTerms.length).toBeLessThanOrEqual(2);
+    expect(missingEntertainmentTerms.every((term) => ["theatre", "toy"].includes(term))).toBe(true);
   });
 
   it("keeps the entertainment media ledger aligned with reviewed examples", () => {

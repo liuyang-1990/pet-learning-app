@@ -19,6 +19,17 @@ const cachePath = path.resolve(process.cwd(), "data/google-translation-audit-cac
 const outputPath = path.resolve(process.cwd(), "src/lib/generated/pet-word-example-audit.ts");
 const cache = readCache();
 const manuallyConfirmedTerms = new Set([
+  // These clothing and materials examples use valid contextual senses or Chinese synonyms.
+  "boot", // footwear, not starting a computer
+  "clothing", // clothing / garments
+  "ring", // jewellery, not a circular shape
+  "wear", // have clothing on, not become worn
+  "display", // a museum exhibition, not a screen
+  "goods", // merchandise / products
+  "object", // a physical item, not an abstract object
+  // Google's isolated gloss remained untranslated; both sentence directions match.
+  "headteacher",
+  "land",
   // These work and society examples use valid contextual senses or Chinese synonyms.
   "business", // a commercial activity / business
   "mechanic", // car mechanic / repair worker
