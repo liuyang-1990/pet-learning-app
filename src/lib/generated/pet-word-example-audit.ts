@@ -1538,5 +1538,205 @@ export const reviewedWordExampleAudit = {
   "unwell": {
     "status": "pass",
     "reasons": []
+  },
+  "aeroplane": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bicycle": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bike": {
+    "status": "pass",
+    "reasons": []
+  },
+  "boat": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bus": {
+    "status": "pass",
+    "reasons": []
+  },
+  "busstation": {
+    "status": "pass",
+    "reasons": []
+  },
+  "busstop": {
+    "status": "pass",
+    "reasons": []
+  },
+  "car": {
+    "status": "pass",
+    "reasons": []
+  },
+  "carpark": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ferry": {
+    "status": "pass",
+    "reasons": []
+  },
+  "flight": {
+    "status": "pass",
+    "reasons": []
+  },
+  "gasstation": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lorry": {
+    "status": "pass",
+    "reasons": []
+  },
+  "motorbike": {
+    "status": "pass",
+    "reasons": []
+  },
+  "motorcycle": {
+    "status": "pass",
+    "reasons": []
+  },
+  "motorway": {
+    "status": "pass",
+    "reasons": []
+  },
+  "petrolstation": {
+    "status": "pass",
+    "reasons": []
+  },
+  "plane": {
+    "status": "pass",
+    "reasons": []
+  },
+  "platform": {
+    "status": "pass",
+    "reasons": []
+  },
+  "policestation": {
+    "status": "pass",
+    "reasons": []
+  },
+  "publictransport": {
+    "status": "pass",
+    "reasons": []
+  },
+  "road": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ship": {
+    "status": "pass",
+    "reasons": []
+  },
+  "subway": {
+    "status": "pass",
+    "reasons": []
+  },
+  "taxi": {
+    "status": "pass",
+    "reasons": []
+  },
+  "traffic": {
+    "status": "pass",
+    "reasons": []
+  },
+  "trafficlight": {
+    "status": "pass",
+    "reasons": []
+  },
+  "train": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tram": {
+    "status": "pass",
+    "reasons": []
+  },
+  "transport": {
+    "status": "pass",
+    "reasons": []
+  },
+  "underground": {
+    "status": "pass",
+    "reasons": []
+  },
+  "abroad": {
+    "status": "pass",
+    "reasons": []
+  },
+  "camping": {
+    "status": "pass",
+    "reasons": []
+  },
+  "guide": {
+    "status": "pass",
+    "reasons": []
+  },
+  "holiday": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hostel": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hotel": {
+    "status": "pass",
+    "reasons": []
+  },
+  "luggage": {
+    "status": "pass",
+    "reasons": []
+  },
+  "map": {
+    "status": "pass",
+    "reasons": []
+  },
+  "onholiday": {
+    "status": "pass",
+    "reasons": []
+  },
+  "onvacation": {
+    "status": "pass",
+    "reasons": []
+  },
+  "reservation": {
+    "status": "pass",
+    "reasons": []
+  },
+  "reserve": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sightseeing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "suitcase": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tourguide": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tourist": {
+    "status": "pass",
+    "reasons": []
+  },
+  "travel": {
+    "status": "pass",
+    "reasons": []
+  },
+  "travelagent": {
+    "status": "pass",
+    "reasons": []
+  },
+  "trip": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

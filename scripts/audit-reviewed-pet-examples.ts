@@ -19,6 +19,11 @@ const cachePath = path.resolve(process.cwd(), "data/google-translation-audit-cac
 const outputPath = path.resolve(process.cwd(), "src/lib/generated/pet-word-example-audit.ts");
 const cache = readCache();
 const manuallyConfirmedTerms = new Set([
+  // These transport and travel examples use valid synonyms or contextual senses.
+  "bus", // bus / public bus
+  "flight", // scheduled flight, not flight in general
+  "guide", // a tour guide, not a guidebook
+  "reserve", // book a seat, not keep in reserve
   // These health examples use valid synonyms or context-dependent senses.
   "byaccident", // accidentally / unintentionally
   "hurt", // feel pain, not only become injured
