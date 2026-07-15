@@ -1339,6 +1339,11 @@ describe("PET Learning App", () => {
       sentence: "We need to work out the total cost of the trip.",
       chinese: "work out = 算出；我们需要算出这次旅行的总费用。",
     });
+    expect(getWordExample({ term: "workout", chineseGloss: "锻炼；训练" })).toMatchObject({
+      focusWord: "workout",
+      sentence: null,
+      chinese: "workout = 锻炼；训练",
+    });
     expect(getWordExample({ term: "admission", chineseGloss: "承认；入场费" })).toMatchObject({
       sentence: "Admission to the museum is free on Sundays.",
       chinese: "admission = 入场；星期天博物馆免费入场。",
