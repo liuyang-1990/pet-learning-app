@@ -1938,5 +1938,205 @@ export const reviewedWordExampleAudit = {
   "textmessage": {
     "status": "pass",
     "reasons": []
+  },
+  "buy": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cash": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cashmachine": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cheap": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cost": {
+    "status": "pass",
+    "reasons": []
+  },
+  "customer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "departmentstore": {
+    "status": "pass",
+    "reasons": []
+  },
+  "expensive": {
+    "status": "pass",
+    "reasons": []
+  },
+  "forsale": {
+    "status": "pass",
+    "reasons": []
+  },
+  "grocerystore": {
+    "status": "pass",
+    "reasons": []
+  },
+  "inorder": {
+    "status": "pass",
+    "reasons": []
+  },
+  "inorderto": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mall": {
+    "status": "pass",
+    "reasons": []
+  },
+  "market": {
+    "status": "pass",
+    "reasons": []
+  },
+  "onsale": {
+    "status": "pass",
+    "reasons": []
+  },
+  "order": {
+    "status": "pass",
+    "reasons": []
+  },
+  "outoforder": {
+    "status": "pass",
+    "reasons": []
+  },
+  "parcel": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pay": {
+    "status": "pass",
+    "reasons": []
+  },
+  "price": {
+    "status": "pass",
+    "reasons": []
+  },
+  "queue": {
+    "status": "pass",
+    "reasons": []
+  },
+  "receipt": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sale": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sell": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shop": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shopping": {
+    "status": "pass",
+    "reasons": []
+  },
+  "store": {
+    "status": "pass",
+    "reasons": []
+  },
+  "supermarket": {
+    "status": "pass",
+    "reasons": []
+  },
+  "account": {
+    "status": "pass",
+    "reasons": []
+  },
+  "afford": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bank": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bankaccount": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bill": {
+    "status": "pass",
+    "reasons": []
+  },
+  "borrow": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cent": {
+    "status": "pass",
+    "reasons": []
+  },
+  "coin": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dollar": {
+    "status": "pass",
+    "reasons": []
+  },
+  "euro": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lend": {
+    "status": "pass",
+    "reasons": []
+  },
+  "money": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pocketmoney": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pound": {
+    "status": "pass",
+    "reasons": []
+  },
+  "save": {
+    "status": "pass",
+    "reasons": []
+  },
+  "value": {
+    "status": "pass",
+    "reasons": []
+  },
+  "worth": {
+    "status": "pass",
+    "reasons": []
+  },
+  "change": {
+    "status": "pass",
+    "reasons": []
+  },
+  "creditcard": {
+    "status": "pass",
+    "reasons": []
+  },
+  "wallet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "discount": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cheque": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

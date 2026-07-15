@@ -19,6 +19,13 @@ const cachePath = path.resolve(process.cwd(), "data/google-translation-audit-cac
 const outputPath = path.resolve(process.cwd(), "src/lib/generated/pet-word-example-audit.ts");
 const cache = readCache();
 const manuallyConfirmedTerms = new Set([
+  // These shopping and money examples use valid synonyms or contextual senses.
+  "cost", // price / amount something costs
+  "inorder", // arranged by size / in size order
+  "mall", // shopping centre / mall
+  "sell", // sell / offer for sale
+  "change", // money returned by a cashier, not transformation
+  "cheque", // bank cheque; isolated Google gloss incorrectly chose "check"
   // These technology and communication examples use valid Chinese synonyms.
   "phone", // phone / mobile phone
   "detail", // detail / detailed information
