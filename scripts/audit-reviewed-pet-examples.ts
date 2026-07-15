@@ -19,6 +19,10 @@ const cachePath = path.resolve(process.cwd(), "data/google-translation-audit-cac
 const outputPath = path.resolve(process.cwd(), "src/lib/generated/pet-word-example-audit.ts");
 const cache = readCache();
 const manuallyConfirmedTerms = new Set([
+  // These food and dining examples use valid synonyms or contextual senses.
+  "drink", // a beverage, not the verb "to drink"
+  "potato", // potato / 马铃薯 / 土豆
+  "cooker", // stove / cooking appliance
   // These shopping and money examples use valid synonyms or contextual senses.
   "cost", // price / amount something costs
   "inorder", // arranged by size / in size order

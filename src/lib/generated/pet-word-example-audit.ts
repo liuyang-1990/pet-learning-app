@@ -2138,5 +2138,205 @@ export const reviewedWordExampleAudit = {
   "cheque": {
     "status": "pass",
     "reasons": []
+  },
+  "bean": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bread": {
+    "status": "pass",
+    "reasons": []
+  },
+  "burger": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cake": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cheese": {
+    "status": "pass",
+    "reasons": []
+  },
+  "chicken": {
+    "status": "pass",
+    "reasons": []
+  },
+  "coffee": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dinner": {
+    "status": "pass",
+    "reasons": []
+  },
+  "drink": {
+    "status": "pass",
+    "reasons": []
+  },
+  "egg": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fastfood": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fish": {
+    "status": "pass",
+    "reasons": []
+  },
+  "food": {
+    "status": "pass",
+    "reasons": []
+  },
+  "frenchfries": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hungry": {
+    "status": "pass",
+    "reasons": []
+  },
+  "icecream": {
+    "status": "pass",
+    "reasons": []
+  },
+  "jam": {
+    "status": "pass",
+    "reasons": []
+  },
+  "juice": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lunch": {
+    "status": "pass",
+    "reasons": []
+  },
+  "meal": {
+    "status": "pass",
+    "reasons": []
+  },
+  "meat": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mineralwater": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pizza": {
+    "status": "pass",
+    "reasons": []
+  },
+  "potato": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rice": {
+    "status": "pass",
+    "reasons": []
+  },
+  "salad": {
+    "status": "pass",
+    "reasons": []
+  },
+  "salt": {
+    "status": "pass",
+    "reasons": []
+  },
+  "soup": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sugar": {
+    "status": "pass",
+    "reasons": []
+  },
+  "supper": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tea": {
+    "status": "pass",
+    "reasons": []
+  },
+  "thirsty": {
+    "status": "pass",
+    "reasons": []
+  },
+  "trafficjam": {
+    "status": "pass",
+    "reasons": []
+  },
+  "water": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bowl": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cup": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dish": {
+    "status": "pass",
+    "reasons": []
+  },
+  "glass": {
+    "status": "pass",
+    "reasons": []
+  },
+  "knife": {
+    "status": "pass",
+    "reasons": []
+  },
+  "menu": {
+    "status": "pass",
+    "reasons": []
+  },
+  "plate": {
+    "status": "pass",
+    "reasons": []
+  },
+  "spoon": {
+    "status": "pass",
+    "reasons": []
+  },
+  "waiter": {
+    "status": "pass",
+    "reasons": []
+  },
+  "waitress": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mug": {
+    "status": "pass",
+    "reasons": []
+  },
+  "recipe": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cook": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cooker": {
+    "status": "pass",
+    "reasons": []
+  },
+  "kettle": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pan": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

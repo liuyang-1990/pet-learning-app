@@ -1,0 +1,306 @@
+{
+  "batchId": "food-dining-001",
+  "status": "promoted",
+  "entries": [
+    {
+      "term": "bean",
+      "focusWord": "bean",
+      "sentence": "Add a few beans to the salad.",
+      "chinese": "bean = 豆子；在沙拉里加几颗豆子。"
+    },
+    {
+      "term": "bread",
+      "focusWord": "bread",
+      "sentence": "This bread is still warm from the oven.",
+      "chinese": "bread = 面包；这个面包刚出炉还热着。"
+    },
+    {
+      "term": "burger",
+      "focusWord": "burger",
+      "sentence": "I ordered a chicken burger and a salad.",
+      "chinese": "burger = 汉堡包；我点了一个鸡肉汉堡和一份沙拉。"
+    },
+    {
+      "term": "cake",
+      "focusWord": "cake",
+      "sentence": "Mum baked a chocolate cake for my birthday.",
+      "chinese": "cake = 蛋糕；妈妈为我的生日烤了一个巧克力蛋糕。"
+    },
+    {
+      "term": "cheese",
+      "focusWord": "cheese",
+      "sentence": "Would you like some cheese in your sandwich?",
+      "chinese": "cheese = 奶酪；你的三明治里要加些奶酪吗？"
+    },
+    {
+      "term": "chicken",
+      "focusWord": "chicken",
+      "sentence": "We had chicken and rice for dinner.",
+      "chinese": "chicken = 鸡肉；我们晚餐吃了鸡肉和米饭。"
+    },
+    {
+      "term": "coffee",
+      "focusWord": "coffee",
+      "sentence": "My dad drinks coffee without sugar.",
+      "chinese": "coffee = 咖啡；我爸爸喝咖啡不加糖。"
+    },
+    {
+      "term": "dinner",
+      "focusWord": "dinner",
+      "sentence": "We usually have dinner at seven.",
+      "chinese": "dinner = 晚餐；我们通常七点吃晚餐。"
+    },
+    {
+      "term": "drink",
+      "focusWord": "drink",
+      "sentence": "Would you like a cold drink with your meal?",
+      "chinese": "drink = 饮料；你用餐时想喝杯冷饮吗？"
+    },
+    {
+      "term": "egg",
+      "focusWord": "egg",
+      "sentence": "I boiled an egg for breakfast.",
+      "chinese": "egg = 鸡蛋；我早餐煮了一个鸡蛋。"
+    },
+    {
+      "term": "fast food",
+      "focusWord": "fast food",
+      "sentence": "Eating fast food every day is not healthy.",
+      "chinese": "fast food = 快餐；每天吃快餐不健康。"
+    },
+    {
+      "term": "fish",
+      "focusWord": "fish",
+      "sentence": "The restaurant serves fresh fish from the lake.",
+      "chinese": "fish = 鱼；这家餐馆供应湖里的鲜鱼。"
+    },
+    {
+      "term": "food",
+      "focusWord": "food",
+      "sentence": "We took enough food for the whole trip.",
+      "chinese": "food = 食物；我们带了足够整个旅程吃的食物。"
+    },
+    {
+      "term": "French fries",
+      "focusWord": "French fries",
+      "sentence": "The children shared a plate of French fries.",
+      "chinese": "French fries = 炸薯条；孩子们分着吃了一盘炸薯条。"
+    },
+    {
+      "term": "hungry",
+      "focusWord": "hungry",
+      "sentence": "I was hungry after swimming for an hour.",
+      "chinese": "hungry = 饥饿的；游了一个小时后我饿了。"
+    },
+    {
+      "term": "ice cream",
+      "focusWord": "ice cream",
+      "sentence": "We bought ice cream on the way to the beach.",
+      "chinese": "ice cream = 冰淇淋；去海滩的路上我们买了冰淇淋。"
+    },
+    {
+      "term": "jam",
+      "focusWord": "jam",
+      "sentence": "I spread strawberry jam on my toast.",
+      "chinese": "jam = 果酱；我在烤面包上抹了草莓果酱。"
+    },
+    {
+      "term": "juice",
+      "focusWord": "juice",
+      "sentence": "She poured some orange juice into a glass.",
+      "chinese": "juice = 果汁；她往玻璃杯里倒了一些橙汁。"
+    },
+    {
+      "term": "lunch",
+      "focusWord": "lunch",
+      "sentence": "I packed a sandwich for lunch.",
+      "chinese": "lunch = 午餐；我带了一个三明治当午餐。"
+    },
+    {
+      "term": "meal",
+      "focusWord": "meal",
+      "sentence": "Breakfast is the most important meal of my day.",
+      "chinese": "meal = 一餐；早餐是我一天中最重要的一餐。"
+    },
+    {
+      "term": "meat",
+      "focusWord": "meat",
+      "sentence": "This dish contains meat, so it is not vegetarian.",
+      "chinese": "meat = 肉；这道菜含肉，所以不是素食。"
+    },
+    {
+      "term": "mineral water",
+      "focusWord": "mineral water",
+      "sentence": "We ordered two bottles of mineral water.",
+      "chinese": "mineral water = 矿泉水；我们点了两瓶矿泉水。"
+    },
+    {
+      "term": "pizza",
+      "focusWord": "pizza",
+      "sentence": "We made pizza together on Saturday night.",
+      "chinese": "pizza = 披萨；星期六晚上我们一起做了披萨。"
+    },
+    {
+      "term": "potato",
+      "focusWord": "potato",
+      "sentence": "Cut the potato into small pieces before cooking it.",
+      "chinese": "potato = 土豆；烹饪前把土豆切成小块。"
+    },
+    {
+      "term": "rice",
+      "focusWord": "rice",
+      "sentence": "The rice will be ready in ten minutes.",
+      "chinese": "rice = 米饭；米饭十分钟后就好。"
+    },
+    {
+      "term": "salad",
+      "focusWord": "salad",
+      "sentence": "This salad has tomatoes, cheese, and olives.",
+      "chinese": "salad = 沙拉；这份沙拉里有西红柿、奶酪和橄榄。"
+    },
+    {
+      "term": "salt",
+      "focusWord": "salt",
+      "sentence": "Add a little salt to the soup.",
+      "chinese": "salt = 盐；在汤里加一点盐。"
+    },
+    {
+      "term": "soup",
+      "focusWord": "soup",
+      "sentence": "The vegetable soup warmed us up.",
+      "chinese": "soup = 汤；蔬菜汤让我们暖和起来。"
+    },
+    {
+      "term": "sugar",
+      "focusWord": "sugar",
+      "sentence": "There is too much sugar in this drink.",
+      "chinese": "sugar = 糖；这杯饮料里的糖太多了。"
+    },
+    {
+      "term": "supper",
+      "focusWord": "supper",
+      "sentence": "We had a light supper before the concert.",
+      "chinese": "supper = 晚餐；音乐会前我们吃了一顿简单的晚餐。"
+    },
+    {
+      "term": "tea",
+      "focusWord": "tea",
+      "sentence": "Would you like tea or coffee?",
+      "chinese": "tea = 茶；你想喝茶还是咖啡？"
+    },
+    {
+      "term": "thirsty",
+      "focusWord": "thirsty",
+      "sentence": "Take some water because the walk may make you thirsty.",
+      "chinese": "thirsty = 口渴的；带些水，因为走路可能会让你口渴。"
+    },
+    {
+      "term": "traffic jam",
+      "focusWord": "traffic jam",
+      "sentence": "We missed lunch because of a long traffic jam.",
+      "chinese": "traffic jam = 交通堵塞；我们因为长时间堵车错过了午餐。"
+    },
+    {
+      "term": "water",
+      "focusWord": "water",
+      "sentence": "Drink plenty of water after exercise.",
+      "chinese": "water = 水；运动后要多喝水。"
+    },
+    {
+      "term": "bowl",
+      "focusWord": "bowl",
+      "sentence": "She ate a bowl of soup for lunch.",
+      "chinese": "bowl = 碗；她午餐喝了一碗汤。"
+    },
+    {
+      "term": "cup",
+      "focusWord": "cup",
+      "sentence": "I made a cup of tea for Grandma.",
+      "chinese": "cup = 杯；我给奶奶泡了一杯茶。"
+    },
+    {
+      "term": "dish",
+      "focusWord": "dish",
+      "sentence": "This vegetable dish is easy to prepare.",
+      "chinese": "dish = 菜肴；这道蔬菜菜品很容易做。"
+    },
+    {
+      "term": "glass",
+      "focusWord": "glass",
+      "sentence": "He poured me a glass of water.",
+      "chinese": "glass = 玻璃杯；他给我倒了一杯水。"
+    },
+    {
+      "term": "knife",
+      "focusWord": "knife",
+      "sentence": "Use a sharp knife to cut the bread.",
+      "chinese": "knife = 刀；用一把锋利的刀切面包。"
+    },
+    {
+      "term": "menu",
+      "focusWord": "menu",
+      "sentence": "The waiter brought us the menu.",
+      "chinese": "menu = 菜单；服务员把菜单拿给我们。"
+    },
+    {
+      "term": "plate",
+      "focusWord": "plate",
+      "sentence": "Put the sandwiches on a large plate.",
+      "chinese": "plate = 盘子；把三明治放在一个大盘子里。"
+    },
+    {
+      "term": "spoon",
+      "focusWord": "spoon",
+      "sentence": "I need a spoon for my soup.",
+      "chinese": "spoon = 勺子；我喝汤需要一把勺子。"
+    },
+    {
+      "term": "waiter",
+      "focusWord": "waiter",
+      "sentence": "The waiter took our order.",
+      "chinese": "waiter = 男服务员；男服务员记下了我们点的菜。"
+    },
+    {
+      "term": "waitress",
+      "focusWord": "waitress",
+      "sentence": "The waitress brought us two coffees.",
+      "chinese": "waitress = 女服务员；女服务员给我们端来两杯咖啡。"
+    },
+    {
+      "term": "mug",
+      "focusWord": "mug",
+      "sentence": "He drinks hot chocolate from a large mug.",
+      "chinese": "mug = 马克杯；他用一个大马克杯喝热巧克力。"
+    },
+    {
+      "term": "recipe",
+      "focusWord": "recipe",
+      "sentence": "This recipe makes enough soup for four people.",
+      "chinese": "recipe = 食谱；这份食谱做出的汤够四个人喝。"
+    },
+    {
+      "term": "cook",
+      "focusWord": "cook",
+      "sentence": "My uncle works as a cook in a hotel.",
+      "chinese": "cook = 厨师；我叔叔在一家酒店当厨师。"
+    },
+    {
+      "term": "cooker",
+      "focusWord": "cooker",
+      "sentence": "Turn off the cooker when the soup is ready.",
+      "chinese": "cooker = 炉灶；汤煮好后关掉炉灶。"
+    },
+    {
+      "term": "kettle",
+      "focusWord": "kettle",
+      "sentence": "Put the kettle on and make some tea.",
+      "chinese": "kettle = 水壶；把水壶烧上，泡些茶。"
+    },
+    {
+      "term": "pan",
+      "focusWord": "pan",
+      "sentence": "Heat the oil in a large pan.",
+      "chinese": "pan = 平底锅；在一个大平底锅里把油加热。"
+    }
+  ]
+}
