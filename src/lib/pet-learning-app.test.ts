@@ -130,6 +130,16 @@ const healthBodyBatch = [
   "unfit", "unwell",
 ] as const;
 
+const transportTravelBatch = [
+  "aeroplane", "bicycle", "bike", "boat", "bus", "bus station", "bus stop", "car",
+  "car park", "ferry", "flight", "gas station", "lorry", "motorbike", "motorcycle",
+  "motorway", "petrol station", "plane", "platform", "police station", "public transport",
+  "road", "ship", "subway", "taxi", "traffic", "traffic light", "train", "tram",
+  "transport", "underground", "abroad", "camping", "guide", "holiday", "hostel", "hotel",
+  "luggage", "map", "on holiday", "on vacation", "reservation", "reserve", "sightseeing",
+  "suitcase", "tour guide", "tourist", "travel", "travel agent", "trip",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -854,6 +864,77 @@ describe("PET Learning App", () => {
       focusWord: "tooth",
       sentence: "I need to see a dentist because my tooth hurts.",
       chinese: "tooth = 牙齿；我的牙疼，需要去看牙医。",
+    });
+  });
+
+  it("adds the reviewed transport travel batch and covers every transport row", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const transportWords = words.filter((word) => word.theme === "transport");
+    const selectedExamples = transportTravelBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+    const transportExamples = transportWords.map((word) => getWordExample(word));
+
+    expect(transportTravelBatch).toHaveLength(50);
+    expect(transportWords).toHaveLength(33);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(435);
+    expect(selectedExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
+    expect(transportExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(33);
+  });
+
+  it("keeps the transport travel ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/transport-travel-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended transport travel senses for ambiguous terms", () => {
+    expect(getWordExample({ term: "flight", chineseGloss: "飞行；射程；逃走" })).toMatchObject({
+      sentence: "Our flight to Madrid leaves at six.",
+      chinese: "flight = 航班；我们飞往马德里的航班六点起飞。",
+    });
+    expect(getWordExample({ term: "plane", chineseGloss: "平面；扁平物；机翼" })).toMatchObject({
+      sentence: "We could see the mountains from the plane.",
+      chinese: "plane = 飞机；我们从飞机上能看到群山。",
+    });
+    expect(getWordExample({ term: "platform", chineseGloss: "站台；讲台" })).toMatchObject({
+      sentence: "The train to Oxford leaves from platform four.",
+      chinese: "platform = 站台；开往牛津的火车从四号站台出发。",
+    });
+    expect(getWordExample({ term: "transport", chineseGloss: "运输；激动" })).toMatchObject({
+      sentence: "The city needs better transport for its growing population.",
+      chinese: "transport = 交通运输；这座城市需要为不断增长的人口提供更好的交通服务。",
+    });
+    expect(getWordExample({ term: "reserve", chineseGloss: "储备品；后备军" })).toMatchObject({
+      sentence: "You should reserve your train seat in advance.",
+      chinese: "reserve = 预订；你应该提前预订火车座位。",
+    });
+    expect(getWordExample({ term: "trip", chineseGloss: "旅行；绊倒；摔倒" })).toMatchObject({
+      sentence: "Our school trip to the science museum was excellent.",
+      chinese: "trip = 旅行；学校组织的科学博物馆之行很棒。",
     });
   });
 
