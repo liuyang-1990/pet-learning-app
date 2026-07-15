@@ -3590,6 +3590,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "Heat the oil in a large pan.",
       chinese: "pan = 平底锅；在一个大平底锅里把油加热。",
     },
+    art: {
+      focusWord: "art",
+      sentence: "We studied modern art at the gallery.",
+      chinese: "art = 艺术；我们在画廊学习了现代艺术。",
+    },
+    audience: {
+      focusWord: "audience",
+      sentence: "The audience clapped loudly at the end of the show.",
+      chinese: "audience = 观众；演出结束时，观众热烈鼓掌。",
+    },
+    boardgame: {
+      focusWord: "board game",
+      sentence: "We played a board game after dinner.",
+      chinese: "board game = 棋盘游戏；晚饭后我们玩了一个棋盘游戏。",
+    },
+    character: {
+      focusWord: "character",
+      sentence: "My favourite character in the story is a brave girl.",
+      chinese: "character = 人物；故事中我最喜欢的人物是一个勇敢的女孩。",
+    },
+    chatshow: {
+      focusWord: "chat show",
+      sentence: "My parents watched a chat show last night.",
+      chinese: "chat show = 访谈节目；我父母昨晚看了一个访谈节目。",
+    },
+    cinema: {
+      focusWord: "cinema",
+      sentence: "Let us meet outside the cinema at seven.",
+      chinese: "cinema = 电影院；我们七点在电影院外见面吧。",
+    },
+    club: {
+      focusWord: "club",
+      sentence: "Mia joined the school photography club.",
+      chinese: "club = 俱乐部；米娅加入了学校摄影俱乐部。",
+    },
+    comic: {
+      focusWord: "comic",
+      sentence: "Leo reads a comic on the bus to school.",
+      chinese: "comic = 连环漫画；利奥在去学校的公交车上看连环漫画。",
+    },
+    concert: {
+      focusWord: "concert",
+      sentence: "The band gave a concert in the town hall.",
+      chinese: "concert = 音乐会；乐队在市政厅举办了一场音乐会。",
+    },
+    dance: {
+      focusWord: "dance",
+      sentence: "We learned a traditional dance at the festival.",
+      chinese: "dance = 舞蹈；我们在节日活动中学了一种传统舞蹈。",
+    },
+    dancing: {
+      focusWord: "dancing",
+      sentence: "Ella enjoys dancing with her friends.",
+      chinese: "dancing = 跳舞；埃拉喜欢和朋友们一起跳舞。",
+    },
+    detective: {
+      focusWord: "detective",
+      sentence: "The detective found an important clue in the room.",
+      chinese: "detective = 侦探；侦探在房间里发现了一条重要线索。",
+    },
+    drama: {
+      focusWord: "drama",
+      sentence: "Our school drama is about friendship.",
+      chinese: "drama = 戏剧；我们的校园戏剧讲的是友谊。",
+    },
+    draw: {
+      focusWord: "draw",
+      sentence: "Please draw a map of the route to your house.",
+      chinese: "draw = 画；请画一张去你家的路线图。",
+    },
+    drawing: {
+      focusWord: "drawing",
+      sentence: "Her drawing of the old bridge won a prize.",
+      chinese: "drawing = 图画；她画的那座老桥获得了奖项。",
+    },
+    festival: {
+      focusWord: "festival",
+      sentence: "Our town holds a music festival every summer.",
+      chinese: "festival = 节日活动；我们镇每年夏天都举办音乐节。",
+    },
+    film: {
+      focusWord: "film",
+      sentence: "We watched a funny film on Friday evening.",
+      chinese: "film = 电影；星期五晚上我们看了一部有趣的电影。",
+    },
+    filmmaker: {
+      focusWord: "film maker",
+      sentence: "The young film maker recorded life in the village.",
+      chinese: "film maker = 电影制作人；这位年轻的电影制作人记录了村里的生活。",
+    },
+    firework: {
+      focusWord: "firework",
+      sentence: "A bright firework exploded above the park.",
+      chinese: "firework = 烟花；一朵明亮的烟花在公园上空绽放。",
+    },
+    gallery: {
+      focusWord: "gallery",
+      sentence: "The local gallery displays paintings by young artists.",
+      chinese: "gallery = 画廊；当地画廊展出年轻艺术家的画作。",
+    },
+    game: {
+      focusWord: "game",
+      sentence: "This game is easy to learn but hard to win.",
+      chinese: "game = 游戏；这个游戏容易学，但很难获胜。",
+    },
+    headline: {
+      focusWord: "headline",
+      sentence: "The newspaper headline caught my attention.",
+      chinese: "headline = 大标题；报纸的大标题引起了我的注意。",
+    },
+    hobby: {
+      focusWord: "hobby",
+      sentence: "Photography is a relaxing hobby for me.",
+      chinese: "hobby = 爱好；摄影对我来说是一项令人放松的爱好。",
+    },
+    imagination: {
+      focusWord: "imagination",
+      sentence: "Use your imagination to finish the story.",
+      chinese: "imagination = 想象力；发挥你的想象力来完成这个故事。",
+    },
+    magazine: {
+      focusWord: "magazine",
+      sentence: "I read an article in a science magazine.",
+      chinese: "magazine = 杂志；我在一本科学杂志上读了一篇文章。",
+    },
+    movie: {
+      focusWord: "movie",
+      sentence: "The movie starts in ten minutes.",
+      chinese: "movie = 电影；电影十分钟后开始。",
+    },
+    movietheater: {
+      focusWord: "movie theater",
+      sentence: "There is a new movie theater near the station.",
+      chinese: "movie theater = 电影院；车站附近有一家新电影院。",
+    },
+    museum: {
+      focusWord: "museum",
+      sentence: "The museum has a room full of dinosaur bones.",
+      chinese: "museum = 博物馆；博物馆里有一个摆满恐龙骨骼的展厅。",
+    },
+    music: {
+      focusWord: "music",
+      sentence: "I listen to quiet music while I study.",
+      chinese: "music = 音乐；我学习时会听轻柔的音乐。",
+    },
+    mystery: {
+      focusWord: "mystery",
+      sentence: "Nobody could explain the mystery of the missing key.",
+      chinese: "mystery = 谜；没有人能解释钥匙失踪之谜。",
+    },
+    newspaper: {
+      focusWord: "newspaper",
+      sentence: "Dad reads the newspaper every morning.",
+      chinese: "newspaper = 报纸；爸爸每天早上读报纸。",
+    },
+    novel: {
+      focusWord: "novel",
+      sentence: "I am reading an adventure novel about two explorers.",
+      chinese: "novel = 小说；我正在读一本关于两位探险家的冒险小说。",
+    },
+    paint: {
+      focusWord: "paint",
+      sentence: "Paint the sky pale blue and the clouds white.",
+      chinese: "paint = 绘画；把天空涂成浅蓝色，把云朵涂成白色。",
+    },
+    painting: {
+      focusWord: "painting",
+      sentence: "This painting shows boats in a busy harbour.",
+      chinese: "painting = 画作；这幅画描绘了繁忙港口里的船只。",
+    },
+    party: {
+      focusWord: "party",
+      sentence: "We had a party for my cousin's birthday.",
+      chinese: "party = 聚会；我们为表弟的生日举办了聚会。",
+    },
+    poem: {
+      focusWord: "poem",
+      sentence: "She wrote a short poem about the sea.",
+      chinese: "poem = 诗；她写了一首关于大海的短诗。",
+    },
+    pop: {
+      focusWord: "pop",
+      sentence: "My sister listens to pop on the radio.",
+      chinese: "pop = 流行音乐；我姐姐用收音机听流行音乐。",
+    },
+    program: {
+      focusWord: "program",
+      sentence: "My favourite science program starts at eight.",
+      chinese: "program = 节目；我最喜欢的科学节目八点开始。",
+    },
+    radio: {
+      focusWord: "radio",
+      sentence: "We heard the weather report on the radio.",
+      chinese: "radio = 收音机；我们从收音机里听到了天气预报。",
+    },
+    series: {
+      focusWord: "series",
+      sentence: "We watched the first episode of the new series.",
+      chinese: "series = 系列节目；我们看了这部新系列节目的第一集。",
+    },
+    show: {
+      focusWord: "show",
+      sentence: "The school talent show begins at six.",
+      chinese: "show = 演出；学校才艺表演六点开始。",
+    },
+    showup: {
+      focusWord: "show up",
+      sentence: "Ben promised to show up before the film began.",
+      chinese: "show up = 露面；本答应在电影开始前到场。",
+    },
+    song: {
+      focusWord: "song",
+      sentence: "The choir sang a cheerful song.",
+      chinese: "song = 歌曲；合唱团唱了一首欢快的歌曲。",
+    },
+    soundtrack: {
+      focusWord: "soundtrack",
+      sentence: "The soundtrack made the final scene more exciting.",
+      chinese: "soundtrack = 电影配乐；电影配乐让最后一幕更加激动人心。",
+    },
+    stage: {
+      focusWord: "stage",
+      sentence: "The actors walked onto the stage together.",
+      chinese: "stage = 舞台；演员们一起走上舞台。",
+    },
+    story: {
+      focusWord: "story",
+      sentence: "Grandma told us a story about her childhood.",
+      chinese: "story = 故事；奶奶给我们讲了一个她童年时的故事。",
+    },
+    superhero: {
+      focusWord: "superhero",
+      sentence: "The superhero wears a red cape in the film.",
+      chinese: "superhero = 超级英雄；电影里的超级英雄披着红色斗篷。",
+    },
+    talent: {
+      focusWord: "talent",
+      sentence: "Nina has a talent for playing the piano.",
+      chinese: "talent = 才能；尼娜有弹钢琴的天赋。",
+    },
+    talkshow: {
+      focusWord: "talk show",
+      sentence: "The actor spoke about his new film on a talk show.",
+      chinese: "talk show = 访谈节目；这位演员在访谈节目中谈到了他的新电影。",
+    },
+    television: {
+      focusWord: "television",
+      sentence: "Please switch off the television before you leave.",
+      chinese: "television = 电视；离开前请关掉电视。",
+    },
   };
 }
 

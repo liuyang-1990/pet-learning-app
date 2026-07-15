@@ -4,14 +4,14 @@
 
 **Goal:** Add 50 reviewed PET/B1 entertainment and media examples, leaving only `theatre` and `toy` uncovered in the entertainment theme.
 
-**Architecture:** Store approved content in `data/example-candidates/entertainment-media-001.json` and promote identical entries into `getReviewedWordExamples()`. Tests use the official vocabulary JSON and runtime lookup to prove all selected entries are accessible and only two entertainment rows remain without reviewed examples.
+**Architecture:** Store approved content in `data/example-candidates/entertainment-media-001.json` and promote identical entries into `getReviewedWordExamples()`. Tests use the official vocabulary JSON and runtime lookup to prove all selected entries are accessible and only two of the 54 entertainment rows remain without reviewed examples.
 
 **Tech Stack:** Next.js 15, TypeScript, Vitest, Vite Node, Google Translate audit script.
 
 ## Global Constraints
 
 - Exactly 50 currently missing normalized terms from the `entertainment` theme.
-- Entertainment coverage rises from 0/52 to 50/52; only `theatre` and `toy` remain.
+- Entertainment coverage rises from 2/54 to 52/54; the previously reviewed rows are `book` and `chapter`, and only `theatre` and `toy` remain.
 - Reviewed registry coverage rises from at least 585 to at least 635.
 - Candidate data remains unimported by application code.
 - Every batch entry passes ledger alignment, bilingual audit, full tests, and production build.
@@ -24,7 +24,7 @@
 - Modify: `src/lib/pet-learning-app.test.ts`
 
 - [ ] Add `entertainmentMediaBatch` using the 50 table terms below.
-- [ ] Require all 50 selected terms to return reviewed sentences, with registry count at least 635 and entertainment coverage exactly 50/52.
+- [ ] Require all 50 selected terms to return reviewed sentences, with registry count at least 635 and entertainment coverage exactly 52/54.
 - [ ] Add exact candidate-ledger alignment and sense assertions for `art`, `character`, `pop`, `program`, and `show up`.
 - [ ] Run `npm test -- src/lib/pet-learning-app.test.ts -t "entertainment media"` and verify failure because content is absent.
 - [ ] Commit with `git commit -m "test: require entertainment media batch"`.

@@ -2338,5 +2338,205 @@ export const reviewedWordExampleAudit = {
   "pan": {
     "status": "pass",
     "reasons": []
+  },
+  "art": {
+    "status": "pass",
+    "reasons": []
+  },
+  "audience": {
+    "status": "pass",
+    "reasons": []
+  },
+  "boardgame": {
+    "status": "pass",
+    "reasons": []
+  },
+  "character": {
+    "status": "pass",
+    "reasons": []
+  },
+  "chatshow": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cinema": {
+    "status": "pass",
+    "reasons": []
+  },
+  "club": {
+    "status": "pass",
+    "reasons": []
+  },
+  "comic": {
+    "status": "pass",
+    "reasons": []
+  },
+  "concert": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dance": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dancing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "detective": {
+    "status": "pass",
+    "reasons": []
+  },
+  "drama": {
+    "status": "pass",
+    "reasons": []
+  },
+  "draw": {
+    "status": "pass",
+    "reasons": []
+  },
+  "drawing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "festival": {
+    "status": "pass",
+    "reasons": []
+  },
+  "film": {
+    "status": "pass",
+    "reasons": []
+  },
+  "filmmaker": {
+    "status": "pass",
+    "reasons": []
+  },
+  "firework": {
+    "status": "pass",
+    "reasons": []
+  },
+  "gallery": {
+    "status": "pass",
+    "reasons": []
+  },
+  "game": {
+    "status": "pass",
+    "reasons": []
+  },
+  "headline": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hobby": {
+    "status": "pass",
+    "reasons": []
+  },
+  "imagination": {
+    "status": "pass",
+    "reasons": []
+  },
+  "magazine": {
+    "status": "pass",
+    "reasons": []
+  },
+  "movie": {
+    "status": "pass",
+    "reasons": []
+  },
+  "movietheater": {
+    "status": "pass",
+    "reasons": []
+  },
+  "museum": {
+    "status": "pass",
+    "reasons": []
+  },
+  "music": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mystery": {
+    "status": "pass",
+    "reasons": []
+  },
+  "newspaper": {
+    "status": "pass",
+    "reasons": []
+  },
+  "novel": {
+    "status": "pass",
+    "reasons": []
+  },
+  "paint": {
+    "status": "pass",
+    "reasons": []
+  },
+  "painting": {
+    "status": "pass",
+    "reasons": []
+  },
+  "party": {
+    "status": "pass",
+    "reasons": []
+  },
+  "poem": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pop": {
+    "status": "pass",
+    "reasons": []
+  },
+  "program": {
+    "status": "pass",
+    "reasons": []
+  },
+  "radio": {
+    "status": "pass",
+    "reasons": []
+  },
+  "series": {
+    "status": "pass",
+    "reasons": []
+  },
+  "show": {
+    "status": "pass",
+    "reasons": []
+  },
+  "showup": {
+    "status": "pass",
+    "reasons": []
+  },
+  "song": {
+    "status": "pass",
+    "reasons": []
+  },
+  "soundtrack": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stage": {
+    "status": "pass",
+    "reasons": []
+  },
+  "story": {
+    "status": "pass",
+    "reasons": []
+  },
+  "superhero": {
+    "status": "pass",
+    "reasons": []
+  },
+  "talent": {
+    "status": "pass",
+    "reasons": []
+  },
+  "talkshow": {
+    "status": "pass",
+    "reasons": []
+  },
+  "television": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;
