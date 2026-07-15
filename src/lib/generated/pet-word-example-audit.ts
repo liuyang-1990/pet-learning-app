@@ -2738,5 +2738,205 @@ export const reviewedWordExampleAudit = {
   "politician": {
     "status": "pass",
     "reasons": []
+  },
+  "boot": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bracelet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cap": {
+    "status": "pass",
+    "reasons": []
+  },
+  "clothes": {
+    "status": "pass",
+    "reasons": []
+  },
+  "clothing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "coat": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dress": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fashion": {
+    "status": "pass",
+    "reasons": []
+  },
+  "glove": {
+    "status": "pass",
+    "reasons": []
+  },
+  "handbag": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hat": {
+    "status": "pass",
+    "reasons": []
+  },
+  "jacket": {
+    "status": "pass",
+    "reasons": []
+  },
+  "jeans": {
+    "status": "pass",
+    "reasons": []
+  },
+  "necklace": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ring": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ringback": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ringup": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shirt": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shoe": {
+    "status": "pass",
+    "reasons": []
+  },
+  "skirt": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sock": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sweatshirt": {
+    "status": "pass",
+    "reasons": []
+  },
+  "swimsuit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tracksuit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "trousers": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tshirt": {
+    "status": "pass",
+    "reasons": []
+  },
+  "underpants": {
+    "status": "pass",
+    "reasons": []
+  },
+  "underwear": {
+    "status": "pass",
+    "reasons": []
+  },
+  "wear": {
+    "status": "pass",
+    "reasons": []
+  },
+  "wearout": {
+    "status": "pass",
+    "reasons": []
+  },
+  "blank": {
+    "status": "pass",
+    "reasons": []
+  },
+  "card": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cotton": {
+    "status": "pass",
+    "reasons": []
+  },
+  "display": {
+    "status": "pass",
+    "reasons": []
+  },
+  "equipment": {
+    "status": "pass",
+    "reasons": []
+  },
+  "goods": {
+    "status": "pass",
+    "reasons": []
+  },
+  "idcard": {
+    "status": "pass",
+    "reasons": []
+  },
+  "identitycard": {
+    "status": "pass",
+    "reasons": []
+  },
+  "leather": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lighter": {
+    "status": "pass",
+    "reasons": []
+  },
+  "liquid": {
+    "status": "pass",
+    "reasons": []
+  },
+  "material": {
+    "status": "pass",
+    "reasons": []
+  },
+  "metal": {
+    "status": "pass",
+    "reasons": []
+  },
+  "object": {
+    "status": "pass",
+    "reasons": []
+  },
+  "oil": {
+    "status": "pass",
+    "reasons": []
+  },
+  "plastic": {
+    "status": "pass",
+    "reasons": []
+  },
+  "silver": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stone": {
+    "status": "pass",
+    "reasons": []
+  },
+  "wool": {
+    "status": "pass",
+    "reasons": []
+  },
+  "toy": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;
