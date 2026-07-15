@@ -160,6 +160,15 @@ const shoppingMoneyBatch = [
   "discount", "cheque",
 ] as const;
 
+const foodDiningBatch = [
+  "bean", "bread", "burger", "cake", "cheese", "chicken", "coffee", "dinner", "drink",
+  "egg", "fast food", "fish", "food", "French fries", "hungry", "ice cream", "jam", "juice",
+  "lunch", "meal", "meat", "mineral water", "pizza", "potato", "rice", "salad", "salt",
+  "soup", "sugar", "supper", "tea", "thirsty", "traffic jam", "water", "bowl", "cup",
+  "dish", "glass", "knife", "menu", "plate", "spoon", "waiter", "waitress", "mug",
+  "recipe", "cook", "cooker", "kettle", "pan",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -1101,6 +1110,77 @@ describe("PET Learning App", () => {
     expect(getWordExample({ term: "change", chineseGloss: "变化；找头" })).toMatchObject({
       sentence: "The cashier gave me the wrong change.",
       chinese: "change = 找回的零钱；收银员找错了零钱给我。",
+    });
+  });
+
+  it("adds the reviewed food dining batch and covers every food row", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const foodWords = words.filter((word) => word.theme === "food");
+    const selectedExamples = foodDiningBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+    const foodExamples = foodWords.map((word) => getWordExample(word));
+
+    expect(foodDiningBatch).toHaveLength(50);
+    expect(foodWords).toHaveLength(39);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(585);
+    expect(selectedExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
+    expect(foodExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(39);
+  });
+
+  it("keeps the food dining ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/food-dining-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended food dining senses for ambiguous terms", () => {
+    expect(getWordExample({ term: "drink", chineseGloss: "饮料；喝" })).toMatchObject({
+      sentence: "Would you like a cold drink with your meal?",
+      chinese: "drink = 饮料；你用餐时想喝杯冷饮吗？",
+    });
+    expect(getWordExample({ term: "meal", chineseGloss: "一餐；粗粉" })).toMatchObject({
+      sentence: "Breakfast is the most important meal of my day.",
+      chinese: "meal = 一餐；早餐是我一天中最重要的一餐。",
+    });
+    expect(getWordExample({ term: "traffic jam", chineseGloss: "交通阻塞" })).toMatchObject({
+      sentence: "We missed lunch because of a long traffic jam.",
+      chinese: "traffic jam = 交通堵塞；我们因为长时间堵车错过了午餐。",
+    });
+    expect(getWordExample({ term: "dish", chineseGloss: "盘子；菜肴" })).toMatchObject({
+      sentence: "This vegetable dish is easy to prepare.",
+      chinese: "dish = 菜肴；这道蔬菜菜品很容易做。",
+    });
+    expect(getWordExample({ term: "glass", chineseGloss: "玻璃；玻璃杯" })).toMatchObject({
+      sentence: "He poured me a glass of water.",
+      chinese: "glass = 玻璃杯；他给我倒了一杯水。",
+    });
+    expect(getWordExample({ term: "cook", chineseGloss: "厨子；烹调" })).toMatchObject({
+      sentence: "My uncle works as a cook in a hotel.",
+      chinese: "cook = 厨师；我叔叔在一家酒店当厨师。",
     });
   });
 
