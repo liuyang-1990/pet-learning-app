@@ -3840,6 +3840,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "Please switch off the television before you leave.",
       chinese: "television = 电视；离开前请关掉电视。",
     },
+    accountant: {
+      focusWord: "accountant",
+      sentence: "The accountant checked the company's bills.",
+      chinese: "accountant = 会计师；会计师核对了公司的账单。",
+    },
+    actor: {
+      focusWord: "actor",
+      sentence: "The actor played a young detective in the film.",
+      chinese: "actor = 男演员；这位男演员在电影中扮演一名年轻侦探。",
+    },
+    actress: {
+      focusWord: "actress",
+      sentence: "The actress spoke to the audience after the play.",
+      chinese: "actress = 女演员；演出后，这位女演员与观众交谈。",
+    },
+    artist: {
+      focusWord: "artist",
+      sentence: "A local artist painted this picture of the harbour.",
+      chinese: "artist = 艺术家；一位当地艺术家画了这幅港口图。",
+    },
+    bookingoffice: {
+      focusWord: "booking office",
+      sentence: "We collected our train tickets from the booking office.",
+      chinese: "booking office = 售票处；我们从售票处取了火车票。",
+    },
+    business: {
+      focusWord: "business",
+      sentence: "Her parents started a small food business.",
+      chinese: "business = 生意；她父母开创了一家小型食品生意。",
+    },
+    businessman: {
+      focusWord: "businessman",
+      sentence: "The businessman travelled abroad to meet a customer.",
+      chinese: "businessman = 男商人；这位男商人出国去见一位客户。",
+    },
+    businesswoman: {
+      focusWord: "businesswoman",
+      sentence: "The businesswoman opened her first shop at twenty-five.",
+      chinese: "businesswoman = 女商人；这位女商人二十五岁时开了第一家店。",
+    },
+    career: {
+      focusWord: "career",
+      sentence: "She hopes to have a career in medicine.",
+      chinese: "career = 职业生涯；她希望从事医疗工作。",
+    },
+    chef: {
+      focusWord: "chef",
+      sentence: "The chef prepared a special meal for the guests.",
+      chinese: "chef = 厨师；厨师为客人们准备了一顿特别的饭菜。",
+    },
+    cv: {
+      focusWord: "CV",
+      sentence: "Send your CV with the job application.",
+      chinese: "CV = 简历；请把简历和求职申请一起寄出。",
+    },
+    dentist: {
+      focusWord: "dentist",
+      sentence: "The dentist checked my teeth and gave me some advice.",
+      chinese: "dentist = 牙医；牙医检查了我的牙齿并给了我一些建议。",
+    },
+    designer: {
+      focusWord: "designer",
+      sentence: "The designer created a comfortable school uniform.",
+      chinese: "designer = 设计师；设计师设计了一套舒适的校服。",
+    },
+    dr: {
+      focusWord: "doctor",
+      sentence: "The doctor examined my injured arm.",
+      chinese: "doctor = 医生；医生检查了我受伤的手臂。",
+    },
+    email: {
+      focusWord: "email",
+      sentence: "I sent my manager an email about the meeting.",
+      chinese: "email = 电子邮件；我给经理发了一封关于会议的电子邮件。",
+    },
+    factory: {
+      focusWord: "factory",
+      sentence: "This factory produces parts for electric cars.",
+      chinese: "factory = 工厂；这家工厂生产电动汽车零件。",
+    },
+    farmer: {
+      focusWord: "farmer",
+      sentence: "The farmer grows vegetables and keeps chickens.",
+      chinese: "farmer = 农民；这位农民种蔬菜并养鸡。",
+    },
+    job: {
+      focusWord: "job",
+      sentence: "Mia applied for a summer job at the cafe.",
+      chinese: "job = 工作；米娅申请了咖啡馆的暑期工作。",
+    },
+    journalist: {
+      focusWord: "journalist",
+      sentence: "The journalist interviewed the winning athlete.",
+      chinese: "journalist = 记者；记者采访了获胜的运动员。",
+    },
+    lawyer: {
+      focusWord: "lawyer",
+      sentence: "The lawyer gave the family some legal advice.",
+      chinese: "lawyer = 律师；律师给了这家人一些法律建议。",
+    },
+    mechanic: {
+      focusWord: "mechanic",
+      sentence: "The mechanic repaired our car this morning.",
+      chinese: "mechanic = 修理工；修理工今天早上修好了我们的汽车。",
+    },
+    nurse: {
+      focusWord: "nurse",
+      sentence: "The nurse checked the patient's temperature.",
+      chinese: "nurse = 护士；护士测量了病人的体温。",
+    },
+    onbusiness: {
+      focusWord: "on business",
+      sentence: "My father is in Singapore on business this week.",
+      chinese: "on business = 因公；我父亲本周因公在新加坡。",
+    },
+    outofwork: {
+      focusWord: "out of work",
+      sentence: "Jack was out of work for two months.",
+      chinese: "out of work = 失业；杰克失业了两个月。",
+    },
+    pilot: {
+      focusWord: "pilot",
+      sentence: "The pilot landed the plane safely in heavy rain.",
+      chinese: "pilot = 飞行员；飞行员在大雨中安全降落了飞机。",
+    },
+    police: {
+      focusWord: "police",
+      sentence: "The police are investigating the stolen bicycles.",
+      chinese: "police = 警察；警方正在调查自行车失窃案。",
+    },
+    policeofficer: {
+      focusWord: "police officer",
+      sentence: "A police officer asked us to move the car.",
+      chinese: "police officer = 警察；一名警察让我们把车开走。",
+    },
+    postoffice: {
+      focusWord: "post office",
+      sentence: "I sent the parcel from the post office.",
+      chinese: "post office = 邮局；我从邮局寄出了包裹。",
+    },
+    profession: {
+      focusWord: "profession",
+      sentence: "Teaching is a profession that requires patience.",
+      chinese: "profession = 职业；教师是一种需要耐心的职业。",
+    },
+    professional: {
+      focusWord: "professional",
+      sentence: "Ask a professional to repair the broken cooker.",
+      chinese: "professional = 专业人士；请专业人士修理坏掉的炉灶。",
+    },
+    secretary: {
+      focusWord: "secretary",
+      sentence: "The secretary arranged a meeting for Friday.",
+      chinese: "secretary = 秘书；秘书安排了星期五的会议。",
+    },
+    shopassistant: {
+      focusWord: "shop assistant",
+      sentence: "The shop assistant helped me find the right size.",
+      chinese: "shop assistant = 店员；店员帮我找到了合适的尺码。",
+    },
+    staff: {
+      focusWord: "staff",
+      sentence: "The hotel staff were friendly and helpful.",
+      chinese: "staff = 全体员工；酒店员工友好又乐于助人。",
+    },
+    work: {
+      focusWord: "work",
+      sentence: "My mother starts work at eight every morning.",
+      chinese: "work = 工作；我妈妈每天早上八点开始工作。",
+    },
+    worker: {
+      focusWord: "worker",
+      sentence: "Each factory worker wears a safety helmet.",
+      chinese: "worker = 工人；每名工厂工人都戴安全帽。",
+    },
+    workout: {
+      focusWord: "work out",
+      sentence: "We need to work out the total cost of the trip.",
+      chinese: "work out = 算出；我们需要算出这次旅行的总费用。",
+    },
+    admission: {
+      focusWord: "admission",
+      sentence: "Admission to the museum is free on Sundays.",
+      chinese: "admission = 入场；星期天博物馆免费入场。",
+    },
+    agency: {
+      focusWord: "agency",
+      sentence: "She found the job through an employment agency.",
+      chinese: "agency = 中介机构；她通过一家职业介绍机构找到了工作。",
+    },
+    company: {
+      focusWord: "company",
+      sentence: "My uncle works for an international software company.",
+      chinese: "company = 公司；我叔叔在一家国际软件公司工作。",
+    },
+    culture: {
+      focusWord: "culture",
+      sentence: "Food is an important part of every culture.",
+      chinese: "culture = 文化；食物是每种文化的重要组成部分。",
+    },
+    custom: {
+      focusWord: "custom",
+      sentence: "Taking off your shoes indoors is a local custom.",
+      chinese: "custom = 风俗；进屋脱鞋是当地的风俗。",
+    },
+    customs: {
+      focusWord: "customs",
+      sentence: "We showed our passports at customs.",
+      chinese: "customs = 海关；我们在海关出示了护照。",
+    },
+    government: {
+      focusWord: "government",
+      sentence: "The government plans to build a new hospital.",
+      chinese: "government = 政府；政府计划建造一家新医院。",
+    },
+    industry: {
+      focusWord: "industry",
+      sentence: "Tourism is an important industry in this region.",
+      chinese: "industry = 行业；旅游业是这个地区的重要行业。",
+    },
+    international: {
+      focusWord: "international",
+      sentence: "Students from twelve countries attended the international conference.",
+      chinese: "international = 国际的；来自十二个国家的学生参加了这场国际会议。",
+    },
+    law: {
+      focusWord: "law",
+      sentence: "The law requires drivers to wear seat belts.",
+      chinese: "law = 法律；法律要求驾驶员系安全带。",
+    },
+    national: {
+      focusWord: "national",
+      sentence: "The national team trained before the match.",
+      chinese: "national = 国家的；国家队在比赛前进行了训练。",
+    },
+    policeman: {
+      focusWord: "policeman",
+      sentence: "The policeman directed traffic near the school.",
+      chinese: "policeman = 男警察；男警察在学校附近指挥交通。",
+    },
+    policewoman: {
+      focusWord: "policewoman",
+      sentence: "The policewoman found the missing child.",
+      chinese: "policewoman = 女警察；女警察找到了走失的孩子。",
+    },
+    politician: {
+      focusWord: "politician",
+      sentence: "The local politician answered questions about the new road.",
+      chinese: "politician = 政治家；当地政治家回答了有关新道路的问题。",
+    },
   };
 }
 

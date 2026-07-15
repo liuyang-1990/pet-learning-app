@@ -179,6 +179,16 @@ const entertainmentMediaBatch = [
   "television",
 ] as const;
 
+const workSocietyBatch = [
+  "accountant", "actor", "actress", "artist", "booking office", "business", "businessman",
+  "businesswoman", "career", "chef", "CV", "dentist", "designer", "doctor / Dr", "email",
+  "factory", "farmer", "job", "journalist", "lawyer", "mechanic", "nurse", "on business",
+  "out of work", "pilot", "police", "police officer", "post office", "profession",
+  "professional", "secretary", "shop assistant", "staff", "work", "worker", "work out",
+  "admission", "agency", "company", "culture", "custom", "customs", "government", "industry",
+  "international", "law", "national", "policeman", "policewoman", "politician",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -1260,6 +1270,86 @@ describe("PET Learning App", () => {
     expect(getWordExample({ term: "show up", chineseGloss: "揭露；露面" })).toMatchObject({
       sentence: "Ben promised to show up before the film began.",
       chinese: "show up = 露面；本答应在电影开始前到场。",
+    });
+  });
+
+  it("adds the reviewed work society batch and covers every work row", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const workWords = words.filter((word) => word.theme === "work");
+    const selectedExamples = workSocietyBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+    const workExamples = workWords.map((word) => getWordExample(word));
+
+    expect(workSocietyBatch).toHaveLength(50);
+    expect(workWords).toHaveLength(42);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(685);
+    expect(selectedExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
+    expect(workExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(42);
+  });
+
+  it("keeps the work society ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/work-society-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended work society senses for ambiguous terms", () => {
+    expect(getWordExample({ term: "business", chineseGloss: "事情；业务" })).toMatchObject({
+      sentence: "Her parents started a small food business.",
+      chinese: "business = 生意；她父母开创了一家小型食品生意。",
+    });
+    expect(getWordExample({ term: "doctor / Dr", chineseGloss: "医生；博士" })).toMatchObject({
+      focusWord: "doctor",
+      sentence: "The doctor examined my injured arm.",
+      chinese: "doctor = 医生；医生检查了我受伤的手臂。",
+    });
+    expect(getWordExample({ term: "Dr / doctor", chineseGloss: "变性反应" })).toMatchObject({
+      focusWord: "doctor",
+      sentence: "The doctor examined my injured arm.",
+    });
+    expect(getWordExample({ term: "out of work", chineseGloss: "机器有毛病" })).toMatchObject({
+      sentence: "Jack was out of work for two months.",
+      chinese: "out of work = 失业；杰克失业了两个月。",
+    });
+    expect(getWordExample({ term: "work out", chineseGloss: "设计出；计算出" })).toMatchObject({
+      sentence: "We need to work out the total cost of the trip.",
+      chinese: "work out = 算出；我们需要算出这次旅行的总费用。",
+    });
+    expect(getWordExample({ term: "admission", chineseGloss: "承认；入场费" })).toMatchObject({
+      sentence: "Admission to the museum is free on Sundays.",
+      chinese: "admission = 入场；星期天博物馆免费入场。",
+    });
+    expect(getWordExample({ term: "custom", chineseGloss: "风俗；海关" })).toMatchObject({
+      sentence: "Taking off your shoes indoors is a local custom.",
+      chinese: "custom = 风俗；进屋脱鞋是当地的风俗。",
+    });
+    expect(getWordExample({ term: "customs", chineseGloss: "海关；风俗" })).toMatchObject({
+      sentence: "We showed our passports at customs.",
+      chinese: "customs = 海关；我们在海关出示了护照。",
     });
   });
 
