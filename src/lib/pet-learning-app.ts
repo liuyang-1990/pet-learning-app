@@ -4590,6 +4590,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "The tourist information centre gave us a free map.",
       chinese: "tourist information centre = 游客信息中心；游客信息中心给了我们一张免费地图。",
     },
+    athlete: {
+      focusWord: "athlete",
+      sentence: "The athlete trains for two hours every morning.",
+      chinese: "athlete = 运动员；这名运动员每天早上训练两个小时。",
+    },
+    athletics: {
+      focusWord: "athletics",
+      sentence: "Athletics includes running, jumping, and throwing events.",
+      chinese: "athletics = 田径运动；田径运动包括跑、跳和投掷项目。",
+    },
+    baseball: {
+      focusWord: "baseball",
+      sentence: "We played baseball in the park after school.",
+      chinese: "baseball = 棒球；放学后我们在公园里打棒球。",
+    },
+    basketball: {
+      focusWord: "basketball",
+      sentence: "Our basketball practice starts at half past four.",
+      chinese: "basketball = 篮球；我们的篮球训练四点半开始。",
+    },
+    cdplayer: {
+      focusWord: "CD player",
+      sentence: "This old CD player still works well.",
+      chinese: "CD player = CD播放机；这台旧光盘播放机仍然很好用。",
+    },
+    coach: {
+      focusWord: "coach",
+      sentence: "The coach showed us a better way to pass the ball.",
+      chinese: "coach = 教练；教练向我们示范了更好的传球方法。",
+    },
+    dvdplayer: {
+      focusWord: "DVD player",
+      sentence: "Connect the DVD player to the television.",
+      chinese: "DVD player = DVD播放机；把光盘播放机连接到电视上。",
+    },
+    extremesport: {
+      focusWord: "extreme sport",
+      sentence: "Rock climbing can be a dangerous extreme sport.",
+      chinese: "extreme sport = 极限运动；攀岩可能是一项危险的极限运动。",
+    },
+    footballplayer: {
+      focusWord: "football player",
+      sentence: "The football player scored twice in the final.",
+      chinese: "football player = 足球运动员；这名足球运动员在决赛中进了两球。",
+    },
+    golf: {
+      focusWord: "golf",
+      sentence: "My grandfather plays golf on Sunday mornings.",
+      chinese: "golf = 高尔夫球；我祖父星期天早上打高尔夫球。",
+    },
+    gym: {
+      focusWord: "gym",
+      sentence: "I go to the gym after work on Tuesdays.",
+      chinese: "gym = 健身房；我星期二下班后去健身房。",
+    },
+    gymnastics: {
+      focusWord: "gymnastics",
+      sentence: "Gymnastics requires strength and balance.",
+      chinese: "gymnastics = 体操；体操需要力量和平衡能力。",
+    },
+    hockey: {
+      focusWord: "hockey",
+      sentence: "Our school hockey team won the match.",
+      chinese: "hockey = 曲棍球；我们学校的曲棍球队赢得了比赛。",
+    },
+    icehockey: {
+      focusWord: "ice hockey",
+      sentence: "Ice hockey players wear helmets and thick gloves.",
+      chinese: "ice hockey = 冰球；冰球运动员戴头盔和厚手套。",
+    },
+    iceskating: {
+      focusWord: "ice skating",
+      sentence: "We went ice skating on the frozen lake.",
+      chinese: "ice skating = 滑冰；我们去结冰的湖上滑冰了。",
+    },
+    match: {
+      focusWord: "match",
+      sentence: "The match ended with a score of two to one.",
+      chinese: "match = 比赛；比赛以二比一的比分结束。",
+    },
+    motorracing: {
+      focusWord: "motor-racing",
+      sentence: "Motor-racing drivers must react very quickly.",
+      chinese: "motor-racing = 赛车运动；赛车手必须反应非常迅速。",
+    },
+    player: {
+      focusWord: "player",
+      sentence: "Each player shook hands after the game.",
+      chinese: "player = 运动员；比赛后每位运动员都握了手。",
+    },
+    pool: {
+      focusWord: "pool",
+      sentence: "We played pool while we waited for the bus.",
+      chinese: "pool = 台球；等公交车时我们打了台球。",
+    },
+    racing: {
+      focusWord: "racing",
+      sentence: "Horse racing is popular in this region.",
+      chinese: "racing = 赛马；赛马在这个地区很受欢迎。",
+    },
+    rugby: {
+      focusWord: "rugby",
+      sentence: "Rugby players often pass the ball backwards.",
+      chinese: "rugby = 橄榄球；橄榄球运动员经常向后传球。",
+    },
+    skate: {
+      focusWord: "skate",
+      sentence: "Children can skate safely on this indoor rink.",
+      chinese: "skate = 滑冰；孩子们可以在这个室内冰场安全地滑冰。",
+    },
+    skating: {
+      focusWord: "skating",
+      sentence: "Skating is easier when the ice is smooth.",
+      chinese: "skating = 滑冰运动；冰面平滑时滑冰更容易。",
+    },
+    skiing: {
+      focusWord: "skiing",
+      sentence: "We learned skiing during our winter holiday.",
+      chinese: "skiing = 滑雪；我们寒假期间学习了滑雪。",
+    },
+    sport: {
+      focusWord: "sport",
+      sentence: "Swimming is my favourite sport.",
+      chinese: "sport = 运动；游泳是我最喜欢的运动。",
+    },
+    swim: {
+      focusWord: "swim",
+      sentence: "I swim ten lengths before breakfast.",
+      chinese: "swim = 游泳；我早餐前游十个来回。",
+    },
+    swimmingcostume: {
+      focusWord: "swimming costume",
+      sentence: "Her swimming costume was still wet after the lesson.",
+      chinese: "swimming costume = 泳衣；课程结束后她的泳衣还是湿的。",
+    },
+    swimmingpool: {
+      focusWord: "swimming pool",
+      sentence: "The swimming pool is closed for repairs today.",
+      chinese: "swimming pool = 游泳池；游泳池今天因维修而关闭。",
+    },
+    tabletennis: {
+      focusWord: "table tennis",
+      sentence: "We played table tennis in the youth club.",
+      chinese: "table tennis = 乒乓球；我们在青少年俱乐部打了乒乓球。",
+    },
+    team: {
+      focusWord: "team",
+      sentence: "Every member of the team arrived on time.",
+      chinese: "team = 队伍；队里的每名成员都准时到达。",
+    },
+    volleyball: {
+      focusWord: "volleyball",
+      sentence: "The students played volleyball on the beach.",
+      chinese: "volleyball = 排球；学生们在海滩上打排球。",
+    },
+    yoga: {
+      focusWord: "yoga",
+      sentence: "Yoga helps me relax after a busy day.",
+      chinese: "yoga = 瑜伽；瑜伽帮助我在忙碌一天后放松。",
+    },
+    amount: {
+      focusWord: "amount",
+      sentence: "Drink a small amount of water during each break.",
+      chinese: "amount = 数量；每次休息时喝少量的水。",
+    },
+    average: {
+      focusWord: "average",
+      sentence: "Her average score this season is eighty percent.",
+      chinese: "average = 平均数；她本赛季的平均得分是百分之八十。",
+    },
+    count: {
+      focusWord: "count",
+      sentence: "Count how many laps you can run in ten minutes.",
+      chinese: "count = 数数；数一数你十分钟能跑多少圈。",
+    },
+    degree: {
+      focusWord: "degree",
+      sentence: "The temperature fell by one degree during the race.",
+      chinese: "degree = 度；比赛期间气温下降了一度。",
+    },
+    depth: {
+      focusWord: "depth",
+      sentence: "The depth of this pool is two metres.",
+      chinese: "depth = 深度；这个泳池的深度是两米。",
+    },
+    double: {
+      focusWord: "double",
+      sentence: "We ran double the usual distance today.",
+      chinese: "double = 两倍的；我们今天跑了平常两倍的距离。",
+    },
+    half: {
+      focusWord: "half",
+      sentence: "Half of the team practised indoors.",
+      chinese: "half = 一半；队伍中有一半的人在室内训练。",
+    },
+    height: {
+      focusWord: "height",
+      sentence: "The height of the basketball hoop is fixed.",
+      chinese: "height = 高度；篮球架的高度是固定的。",
+    },
+    kilometre: {
+      focusWord: "kilometre",
+      sentence: "The final kilometre of the race was uphill.",
+      chinese: "kilometre = 千米；比赛最后一千米是上坡路。",
+    },
+    metre: {
+      focusWord: "metre",
+      sentence: "She won the race by less than a metre.",
+      chinese: "metre = 米；她以不到一米的优势赢得了比赛。",
+    },
+    mile: {
+      focusWord: "mile",
+      sentence: "He can run a mile in under seven minutes.",
+      chinese: "mile = 英里；他能在七分钟内跑完一英里。",
+    },
+    number: {
+      focusWord: "number",
+      sentence: "Write your race number on the form.",
+      chinese: "number = 号码；在表格上写下你的比赛号码。",
+    },
+    pair: {
+      focusWord: "pair",
+      sentence: "I need a new pair of running shoes.",
+      chinese: "pair = 一双；我需要一双新的跑鞋。",
+    },
+    percent: {
+      focusWord: "percent",
+      sentence: "About sixty percent of the class joined a sports club.",
+      chinese: "percent = 百分比；班里大约百分之六十的学生加入了体育俱乐部。",
+    },
+    point: {
+      focusWord: "point",
+      sentence: "Our team earned one point for the draw.",
+      chinese: "point = 分；我们队因平局获得了一分。",
+    },
+    quarter: {
+      focusWord: "quarter",
+      sentence: "The first quarter of the game was very close.",
+      chinese: "quarter = 四分之一；比赛的第一个四分之一时段双方比分很接近。",
+    },
+    score: {
+      focusWord: "score",
+      sentence: "The final score was three to two.",
+      chinese: "score = 比分；最终比分是三比二。",
+    },
+    total: {
+      focusWord: "total",
+      sentence: "Add the three times to find the total.",
+      chinese: "total = 总数；把三次用时相加得出总数。",
+    },
   };
 }
 
