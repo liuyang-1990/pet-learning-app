@@ -3338,5 +3338,205 @@ export const reviewedWordExampleAudit = {
   "total": {
     "status": "pass",
     "reasons": []
+  },
+  "afternoon": {
+    "status": "pass",
+    "reasons": []
+  },
+  "afterwards": {
+    "status": "pass",
+    "reasons": []
+  },
+  "age": {
+    "status": "pass",
+    "reasons": []
+  },
+  "aged": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ages": {
+    "status": "pass",
+    "reasons": []
+  },
+  "atthesametime": {
+    "status": "pass",
+    "reasons": []
+  },
+  "birthday": {
+    "status": "pass",
+    "reasons": []
+  },
+  "day": {
+    "status": "pass",
+    "reasons": []
+  },
+  "recently": {
+    "status": "pass",
+    "reasons": []
+  },
+  "early": {
+    "status": "pass",
+    "reasons": []
+  },
+  "evening": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fulltime": {
+    "status": "pass",
+    "reasons": []
+  },
+  "goodafternoon": {
+    "status": "pass",
+    "reasons": []
+  },
+  "goodevening": {
+    "status": "pass",
+    "reasons": []
+  },
+  "goodmorning": {
+    "status": "pass",
+    "reasons": []
+  },
+  "goodnight": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hour": {
+    "status": "pass",
+    "reasons": []
+  },
+  "immediately": {
+    "status": "pass",
+    "reasons": []
+  },
+  "intime": {
+    "status": "pass",
+    "reasons": []
+  },
+  "late": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lookafter": {
+    "status": "pass",
+    "reasons": []
+  },
+  "middleaged": {
+    "status": "pass",
+    "reasons": []
+  },
+  "minute": {
+    "status": "pass",
+    "reasons": []
+  },
+  "month": {
+    "status": "pass",
+    "reasons": []
+  },
+  "morning": {
+    "status": "pass",
+    "reasons": []
+  },
+  "night": {
+    "status": "pass",
+    "reasons": []
+  },
+  "occasion": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ontime": {
+    "status": "pass",
+    "reasons": []
+  },
+  "overnight": {
+    "status": "pass",
+    "reasons": []
+  },
+  "parttime": {
+    "status": "pass",
+    "reasons": []
+  },
+  "second": {
+    "status": "pass",
+    "reasons": []
+  },
+  "soon": {
+    "status": "pass",
+    "reasons": []
+  },
+  "time": {
+    "status": "pass",
+    "reasons": []
+  },
+  "today": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tomorrow": {
+    "status": "pass",
+    "reasons": []
+  },
+  "week": {
+    "status": "pass",
+    "reasons": []
+  },
+  "while": {
+    "status": "pass",
+    "reasons": []
+  },
+  "year": {
+    "status": "pass",
+    "reasons": []
+  },
+  "yesterday": {
+    "status": "pass",
+    "reasons": []
+  },
+  "circle": {
+    "status": "pass",
+    "reasons": []
+  },
+  "gram": {
+    "status": "pass",
+    "reasons": []
+  },
+  "halfprice": {
+    "status": "pass",
+    "reasons": []
+  },
+  "inhalf": {
+    "status": "pass",
+    "reasons": []
+  },
+  "intwo": {
+    "status": "pass",
+    "reasons": []
+  },
+  "litre": {
+    "status": "pass",
+    "reasons": []
+  },
+  "million": {
+    "status": "pass",
+    "reasons": []
+  },
+  "single": {
+    "status": "pass",
+    "reasons": []
+  },
+  "size": {
+    "status": "pass",
+    "reasons": []
+  },
+  "square": {
+    "status": "pass",
+    "reasons": []
+  },
+  "weight": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;
