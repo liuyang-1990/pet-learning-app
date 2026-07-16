@@ -19,6 +19,16 @@ const cachePath = path.resolve(process.cwd(), "data/google-translation-audit-cac
 const outputPath = path.resolve(process.cwd(), "src/lib/generated/pet-word-example-audit.ts");
 const cache = readCache();
 const manuallyConfirmedTerms = new Set([
+  // These sport and measurement examples use valid contextual senses or synonyms.
+  "player", // an athlete / player, not a video-game player
+  "pool", // the cue sport, not a swimming pool
+  "amount", // quantity, not an amount of money
+  "degree", // a temperature degree, not an academic degree
+  "double", // twice the distance
+  "kilometre", // kilometre / 公里 / 千米
+  "number", // a race number, not quantity
+  "point", // a point in a score
+  "quarter", // one period of a game
   // These place examples use valid contextual senses or Chinese synonyms.
   "area", // a district / area, not surface area
   "location", // a suitable place / location

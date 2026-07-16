@@ -4828,7 +4828,7 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     quarter: {
       focusWord: "quarter",
       sentence: "The first quarter of the game was very close.",
-      chinese: "quarter = 四分之一；比赛的第一个四分之一时段双方比分很接近。",
+      chinese: "quarter = 一节；比赛第一节双方比分很接近。",
     },
     score: {
       focusWord: "score",
