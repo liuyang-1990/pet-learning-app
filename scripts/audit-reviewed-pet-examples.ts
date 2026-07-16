@@ -104,6 +104,16 @@ const manuallyConfirmedTerms = new Set([
   "congratulations", // congratulations / best wishes
   "difference", // difference / distinction
   "expedition", // an organised research journey, not a military campaign
+  // These second-batch ideas examples use valid contextual senses or Chinese synonyms.
+  "fiction", // an invented story, not only a novel as a physical genre
+  "fitness", // physical condition, not a fitness activity
+  "happiness", // happiness / joy
+  "identification", // proof of identity, not the act of recognising something
+  "incase", // as a precaution / in case
+  "introduction", // an introductory section, not introducing a person
+  "operation", // a medical procedure, not operating a machine
+  "performance", // a live musical performance, not general performance quality
+  "pity", // regret / what a shame
   // These transport and travel examples use valid synonyms or contextual senses.
   "bus", // bus / public bus
   "flight", // scheduled flight, not flight in general

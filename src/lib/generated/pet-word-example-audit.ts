@@ -3938,5 +3938,205 @@ export const reviewedWordExampleAudit = {
   "experience": {
     "status": "pass",
     "reasons": []
+  },
+  "experienced": {
+    "status": "pass",
+    "reasons": []
+  },
+  "explanation": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fiction": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fitness": {
+    "status": "pass",
+    "reasons": []
+  },
+  "friendship": {
+    "status": "pass",
+    "reasons": []
+  },
+  "generation": {
+    "status": "pass",
+    "reasons": []
+  },
+  "glance": {
+    "status": "pass",
+    "reasons": []
+  },
+  "graduation": {
+    "status": "pass",
+    "reasons": []
+  },
+  "happiness": {
+    "status": "pass",
+    "reasons": []
+  },
+  "identification": {
+    "status": "pass",
+    "reasons": []
+  },
+  "illness": {
+    "status": "pass",
+    "reasons": []
+  },
+  "immigration": {
+    "status": "pass",
+    "reasons": []
+  },
+  "importance": {
+    "status": "pass",
+    "reasons": []
+  },
+  "improvement": {
+    "status": "pass",
+    "reasons": []
+  },
+  "inadvance": {
+    "status": "pass",
+    "reasons": []
+  },
+  "incase": {
+    "status": "pass",
+    "reasons": []
+  },
+  "influence": {
+    "status": "pass",
+    "reasons": []
+  },
+  "information": {
+    "status": "pass",
+    "reasons": []
+  },
+  "instance": {
+    "status": "pass",
+    "reasons": []
+  },
+  "instructions": {
+    "status": "pass",
+    "reasons": []
+  },
+  "instrument": {
+    "status": "pass",
+    "reasons": []
+  },
+  "introduction": {
+    "status": "pass",
+    "reasons": []
+  },
+  "invention": {
+    "status": "pass",
+    "reasons": []
+  },
+  "invitation": {
+    "status": "pass",
+    "reasons": []
+  },
+  "licence": {
+    "status": "pass",
+    "reasons": []
+  },
+  "matter": {
+    "status": "pass",
+    "reasons": []
+  },
+  "membership": {
+    "status": "pass",
+    "reasons": []
+  },
+  "method": {
+    "status": "pass",
+    "reasons": []
+  },
+  "moment": {
+    "status": "pass",
+    "reasons": []
+  },
+  "monument": {
+    "status": "pass",
+    "reasons": []
+  },
+  "nationality": {
+    "status": "pass",
+    "reasons": []
+  },
+  "occupation": {
+    "status": "pass",
+    "reasons": []
+  },
+  "operation": {
+    "status": "pass",
+    "reasons": []
+  },
+  "opportunity": {
+    "status": "pass",
+    "reasons": []
+  },
+  "option": {
+    "status": "pass",
+    "reasons": []
+  },
+  "organisation": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pavement": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pence": {
+    "status": "pass",
+    "reasons": []
+  },
+  "performance": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pity": {
+    "status": "pass",
+    "reasons": []
+  },
+  "population": {
+    "status": "pass",
+    "reasons": []
+  },
+  "position": {
+    "status": "pass",
+    "reasons": []
+  },
+  "possibility": {
+    "status": "pass",
+    "reasons": []
+  },
+  "power": {
+    "status": "pass",
+    "reasons": []
+  },
+  "preparation": {
+    "status": "pass",
+    "reasons": []
+  },
+  "prescription": {
+    "status": "pass",
+    "reasons": []
+  },
+  "presentation": {
+    "status": "pass",
+    "reasons": []
+  },
+  "production": {
+    "status": "pass",
+    "reasons": []
+  },
+  "qualification": {
+    "status": "pass",
+    "reasons": []
+  },
+  "quality": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;
