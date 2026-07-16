@@ -3138,5 +3138,205 @@ export const reviewedWordExampleAudit = {
   "touristinformationcentre": {
     "status": "pass",
     "reasons": []
+  },
+  "athlete": {
+    "status": "pass",
+    "reasons": []
+  },
+  "athletics": {
+    "status": "pass",
+    "reasons": []
+  },
+  "baseball": {
+    "status": "pass",
+    "reasons": []
+  },
+  "basketball": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cdplayer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "coach": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dvdplayer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "extremesport": {
+    "status": "pass",
+    "reasons": []
+  },
+  "footballplayer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "golf": {
+    "status": "pass",
+    "reasons": []
+  },
+  "gym": {
+    "status": "pass",
+    "reasons": []
+  },
+  "gymnastics": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hockey": {
+    "status": "pass",
+    "reasons": []
+  },
+  "icehockey": {
+    "status": "pass",
+    "reasons": []
+  },
+  "iceskating": {
+    "status": "pass",
+    "reasons": []
+  },
+  "match": {
+    "status": "pass",
+    "reasons": []
+  },
+  "motorracing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "player": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pool": {
+    "status": "pass",
+    "reasons": []
+  },
+  "racing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rugby": {
+    "status": "pass",
+    "reasons": []
+  },
+  "skate": {
+    "status": "pass",
+    "reasons": []
+  },
+  "skating": {
+    "status": "pass",
+    "reasons": []
+  },
+  "skiing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sport": {
+    "status": "pass",
+    "reasons": []
+  },
+  "swim": {
+    "status": "pass",
+    "reasons": []
+  },
+  "swimmingcostume": {
+    "status": "pass",
+    "reasons": []
+  },
+  "swimmingpool": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tabletennis": {
+    "status": "pass",
+    "reasons": []
+  },
+  "team": {
+    "status": "pass",
+    "reasons": []
+  },
+  "volleyball": {
+    "status": "pass",
+    "reasons": []
+  },
+  "yoga": {
+    "status": "pass",
+    "reasons": []
+  },
+  "amount": {
+    "status": "pass",
+    "reasons": []
+  },
+  "average": {
+    "status": "pass",
+    "reasons": []
+  },
+  "count": {
+    "status": "pass",
+    "reasons": []
+  },
+  "degree": {
+    "status": "pass",
+    "reasons": []
+  },
+  "depth": {
+    "status": "pass",
+    "reasons": []
+  },
+  "double": {
+    "status": "pass",
+    "reasons": []
+  },
+  "half": {
+    "status": "pass",
+    "reasons": []
+  },
+  "height": {
+    "status": "pass",
+    "reasons": []
+  },
+  "kilometre": {
+    "status": "pass",
+    "reasons": []
+  },
+  "metre": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mile": {
+    "status": "pass",
+    "reasons": []
+  },
+  "number": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pair": {
+    "status": "pass",
+    "reasons": []
+  },
+  "percent": {
+    "status": "pass",
+    "reasons": []
+  },
+  "point": {
+    "status": "pass",
+    "reasons": []
+  },
+  "quarter": {
+    "status": "pass",
+    "reasons": []
+  },
+  "score": {
+    "status": "pass",
+    "reasons": []
+  },
+  "total": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

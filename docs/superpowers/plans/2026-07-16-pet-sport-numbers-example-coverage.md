@@ -86,7 +86,7 @@ The ledger uses `batchId: sport-numbers-001`, `status: promoted`, and these exac
 | pair | pair | I need a new pair of running shoes. | pair = 一双；我需要一双新的跑鞋。 |
 | percent | percent | About sixty percent of the class joined a sports club. | percent = 百分比；班里大约百分之六十的学生加入了体育俱乐部。 |
 | point | point | Our team earned one point for the draw. | point = 分；我们队因平局获得了一分。 |
-| quarter | quarter | The first quarter of the game was very close. | quarter = 四分之一；比赛的第一个四分之一时段双方比分很接近。 |
+| quarter | quarter | The first quarter of the game was very close. | quarter = 一节；比赛第一节双方比分很接近。 |
 | score | score | The final score was three to two. | score = 比分；最终比分是三比二。 |
 | total | total | Add the three times to find the total. | total = 总数；把三次用时相加得出总数。 |
 
