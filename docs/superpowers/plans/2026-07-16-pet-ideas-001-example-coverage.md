@@ -55,7 +55,7 @@ The ledger uses `batchId: ideas-001`, `status: promoted`, and these exact entrie
 | case | case | In this case, taking the bus is quicker. | case = 情况；在这种情况下，乘公交车更快。 |
 | celebration | celebration | We had a small celebration after the exam. | celebration = 庆祝活动；考试后我们举行了一个小型庆祝活动。 |
 | celebrity | celebrity | A local celebrity opened the new theatre. | celebrity = 名人；一位当地名人为新剧院揭幕。 |
-| championship | championship | Our team won the national championship. | championship = 锦标赛；我们队赢得了全国锦标赛。 |
+| championship | championship | Our team won the national championship. | championship = 冠军称号；我们队赢得了全国冠军称号。 |
 | chance | chance | I had a chance to practise English with a visitor. | chance = 机会；我有机会和一位游客练习英语。 |
 | charity | charity | The concert raised money for a children's charity. | charity = 慈善机构；这场音乐会为一家儿童慈善机构筹款。 |
 | collection | collection | The museum has a collection of old photographs. | collection = 收藏品；博物馆收藏了一批老照片。 |

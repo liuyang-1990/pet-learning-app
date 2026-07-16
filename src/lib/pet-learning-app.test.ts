@@ -236,6 +236,17 @@ const communicationSmallThemesBatch = [
   "theatre", "main course", "of course", "studies", "movie star",
 ] as const;
 
+const ideasFirstBatch = [
+  "accommodation", "achievement", "action", "activity", "addition", "air conditioning",
+  "ambition", "ambulance", "appearance", "appointment", "argument", "arrangement", "attention",
+  "attraction", "cancel", "case", "celebration", "celebrity", "championship", "chance",
+  "charity", "collection", "comment", "communication", "competition", "composition", "condition",
+  "conference", "congratulations", "connection", "correction", "dancer", "defence", "department",
+  "destination", "development", "difference", "disappointment", "distance", "documentary",
+  "driving licence", "election", "electricity", "elementary", "employment", "entertainment",
+  "excitement", "exhibition", "expedition", "experience",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -1843,6 +1854,75 @@ describe("PET Learning App", () => {
       trade: ["Trade between the two countries has increased.", "trade = 贸易；两国之间的贸易增加了。"],
       "main course": ["I chose fish and rice for my main course.", "main course = 主菜；我选择鱼和米饭作为主菜。"],
       studies: ["Her studies take up most of her week.", "studies = 学业；她的学业占去了她一周的大部分时间。"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the first ideas reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const ideasWords = words.filter((word) => word.theme === "ideas");
+    const selectedExamples = ideasFirstBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(ideasFirstBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples())).toHaveLength(985);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(ideasWords).toHaveLength(133);
+    expect(ideasWords.filter((word) => getWordExample(word).sentence !== null)).toHaveLength(58);
+  });
+
+  it("keeps the first ideas ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/ideas-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("ideas-001");
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the first ideas batch", () => {
+    const expectedExamples = {
+      addition: ["The new sports hall is a useful addition to our school.", "addition = 新增事物；新体育馆是学校一项实用的新增设施。"],
+      appearance: ["The actor changed his appearance for the film.", "appearance = 外貌；这位演员为了电影改变了自己的外貌。"],
+      appointment: ["I have a dentist appointment at two o'clock.", "appointment = 预约；我预约了两点去看牙医。"],
+      argument: ["They had an argument about whose turn it was.", "argument = 争吵；他们为了轮到谁而争吵。"],
+      attraction: ["The castle is the town's main tourist attraction.", "attraction = 景点；这座城堡是镇上主要的旅游景点。"],
+      case: ["In this case, taking the bus is quicker.", "case = 情况；在这种情况下，乘公交车更快。"],
+      collection: ["The museum has a collection of old photographs.", "collection = 收藏品；博物馆收藏了一批老照片。"],
+      composition: ["We wrote a composition about our holidays.", "composition = 作文；我们写了一篇关于假期的作文。"],
+      condition: ["The bicycle is old but still in good condition.", "condition = 状况；这辆自行车虽然旧，但状况仍然很好。"],
+      connection: ["There is a direct train connection between the two cities.", "connection = 交通连接；这两座城市之间有直达列车相连。"],
+      defence: ["The team worked hard in defence during the second half.", "defence = 防守；球队在下半场努力防守。"],
+      elementary: ["The course teaches elementary French.", "elementary = 初级的；这门课程教授初级法语。"],
+      employment: ["The new factory will provide employment for local people.", "employment = 就业机会；新工厂将为当地人提供就业机会。"],
+      entertainment: ["The hotel offers live entertainment every evening.", "entertainment = 娱乐表演；这家酒店每晚都有现场娱乐表演。"],
+      expedition: ["They joined an expedition to study animals in the rainforest.", "expedition = 探险考察；他们参加了一次研究雨林动物的探险考察。"],
+      experience: ["Working at the cafe gave her useful experience.", "experience = 经验；在咖啡馆工作给了她有用的经验。"],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
