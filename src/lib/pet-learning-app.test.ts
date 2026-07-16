@@ -2224,6 +2224,9 @@ describe("PET Learning App", () => {
     expect(
       grammarWords.filter((word) => getWordExample(word).sentence !== null).length,
     ).toBeGreaterThanOrEqual(129);
+    expect(
+      getWordExample({ term: "made of / from / out of", chineseGloss: "由...制成" }).sentence,
+    ).toBeNull();
   });
 
   it("keeps the third grammar ledger aligned with reviewed examples", () => {

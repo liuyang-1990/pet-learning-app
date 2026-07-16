@@ -6598,6 +6598,7 @@ const reviewedExampleKeyOverrides: Record<string, string> = {
   "check-in": "checkinnoun",
   checkout: "checkoutnoun",
   "at / @": "atsymbol",
+  "made of / from / out of": "madeofmaterial",
 };
 
 export function getWordExample(word: VocabularyItem): WordExample {
