@@ -5433,7 +5433,7 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     "championship": {
       focusWord: "championship",
       sentence: "Our team won the national championship.",
-      chinese: "championship = 锦标赛；我们队赢得了全国锦标赛。",
+      chinese: "championship = 冠军称号；我们队赢得了全国冠军称号。",
     },
     "chance": {
       focusWord: "chance",

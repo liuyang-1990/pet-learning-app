@@ -93,6 +93,17 @@ const manuallyConfirmedTerms = new Set([
   "review", // study notes again, not write a critical review
   "understand", // understand / comprehend
   "studies", // school or university work, not research projects
+  // These ideas examples use valid contextual senses or Chinese synonyms.
+  "addition", // a useful new facility, not arithmetic
+  "ambition", // a positive career aspiration, not excessive ambition
+  "argument", // a disagreement, not a formal line of reasoning
+  "case", // a particular situation, not a legal case or container
+  "competition", // an organised contest, not competition as a general force
+  "composition", // a school essay, not the structure of an object
+  "condition", // physical state, not a requirement
+  "congratulations", // congratulations / best wishes
+  "difference", // difference / distinction
+  "expedition", // an organised research journey, not a military campaign
   // These transport and travel examples use valid synonyms or contextual senses.
   "bus", // bus / public bus
   "flight", // scheduled flight, not flight in general

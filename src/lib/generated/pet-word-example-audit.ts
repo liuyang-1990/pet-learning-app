@@ -3738,5 +3738,205 @@ export const reviewedWordExampleAudit = {
   "moviestar": {
     "status": "pass",
     "reasons": []
+  },
+  "accommodation": {
+    "status": "pass",
+    "reasons": []
+  },
+  "achievement": {
+    "status": "pass",
+    "reasons": []
+  },
+  "action": {
+    "status": "pass",
+    "reasons": []
+  },
+  "activity": {
+    "status": "pass",
+    "reasons": []
+  },
+  "addition": {
+    "status": "pass",
+    "reasons": []
+  },
+  "airconditioning": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ambition": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ambulance": {
+    "status": "pass",
+    "reasons": []
+  },
+  "appearance": {
+    "status": "pass",
+    "reasons": []
+  },
+  "appointment": {
+    "status": "pass",
+    "reasons": []
+  },
+  "argument": {
+    "status": "pass",
+    "reasons": []
+  },
+  "arrangement": {
+    "status": "pass",
+    "reasons": []
+  },
+  "attention": {
+    "status": "pass",
+    "reasons": []
+  },
+  "attraction": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cancel": {
+    "status": "pass",
+    "reasons": []
+  },
+  "case": {
+    "status": "pass",
+    "reasons": []
+  },
+  "celebration": {
+    "status": "pass",
+    "reasons": []
+  },
+  "celebrity": {
+    "status": "pass",
+    "reasons": []
+  },
+  "championship": {
+    "status": "pass",
+    "reasons": []
+  },
+  "chance": {
+    "status": "pass",
+    "reasons": []
+  },
+  "charity": {
+    "status": "pass",
+    "reasons": []
+  },
+  "collection": {
+    "status": "pass",
+    "reasons": []
+  },
+  "comment": {
+    "status": "pass",
+    "reasons": []
+  },
+  "communication": {
+    "status": "pass",
+    "reasons": []
+  },
+  "competition": {
+    "status": "pass",
+    "reasons": []
+  },
+  "composition": {
+    "status": "pass",
+    "reasons": []
+  },
+  "condition": {
+    "status": "pass",
+    "reasons": []
+  },
+  "conference": {
+    "status": "pass",
+    "reasons": []
+  },
+  "congratulations": {
+    "status": "pass",
+    "reasons": []
+  },
+  "connection": {
+    "status": "pass",
+    "reasons": []
+  },
+  "correction": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dancer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "defence": {
+    "status": "pass",
+    "reasons": []
+  },
+  "department": {
+    "status": "pass",
+    "reasons": []
+  },
+  "destination": {
+    "status": "pass",
+    "reasons": []
+  },
+  "development": {
+    "status": "pass",
+    "reasons": []
+  },
+  "difference": {
+    "status": "pass",
+    "reasons": []
+  },
+  "disappointment": {
+    "status": "pass",
+    "reasons": []
+  },
+  "distance": {
+    "status": "pass",
+    "reasons": []
+  },
+  "documentary": {
+    "status": "pass",
+    "reasons": []
+  },
+  "drivinglicence": {
+    "status": "pass",
+    "reasons": []
+  },
+  "election": {
+    "status": "pass",
+    "reasons": []
+  },
+  "electricity": {
+    "status": "pass",
+    "reasons": []
+  },
+  "elementary": {
+    "status": "pass",
+    "reasons": []
+  },
+  "employment": {
+    "status": "pass",
+    "reasons": []
+  },
+  "entertainment": {
+    "status": "pass",
+    "reasons": []
+  },
+  "excitement": {
+    "status": "pass",
+    "reasons": []
+  },
+  "exhibition": {
+    "status": "pass",
+    "reasons": []
+  },
+  "expedition": {
+    "status": "pass",
+    "reasons": []
+  },
+  "experience": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;
