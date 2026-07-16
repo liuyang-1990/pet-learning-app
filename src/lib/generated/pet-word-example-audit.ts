@@ -4538,5 +4538,205 @@ export const reviewedWordExampleAudit = {
   "completely": {
     "status": "pass",
     "reasons": []
+  },
+  "could": {
+    "status": "pass",
+    "reasons": []
+  },
+  "curiously": {
+    "status": "pass",
+    "reasons": []
+  },
+  "definitely": {
+    "status": "pass",
+    "reasons": []
+  },
+  "despite": {
+    "status": "pass",
+    "reasons": []
+  },
+  "directly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "do": {
+    "status": "pass",
+    "reasons": []
+  },
+  "down": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dozen": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dueto": {
+    "status": "pass",
+    "reasons": []
+  },
+  "during": {
+    "status": "pass",
+    "reasons": []
+  },
+  "each": {
+    "status": "pass",
+    "reasons": []
+  },
+  "easily": {
+    "status": "pass",
+    "reasons": []
+  },
+  "either": {
+    "status": "pass",
+    "reasons": []
+  },
+  "else": {
+    "status": "pass",
+    "reasons": []
+  },
+  "enough": {
+    "status": "pass",
+    "reasons": []
+  },
+  "especially": {
+    "status": "pass",
+    "reasons": []
+  },
+  "even": {
+    "status": "pass",
+    "reasons": []
+  },
+  "eventhough": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ever": {
+    "status": "pass",
+    "reasons": []
+  },
+  "every": {
+    "status": "pass",
+    "reasons": []
+  },
+  "everybody": {
+    "status": "pass",
+    "reasons": []
+  },
+  "everyone": {
+    "status": "pass",
+    "reasons": []
+  },
+  "everything": {
+    "status": "pass",
+    "reasons": []
+  },
+  "everywhere": {
+    "status": "pass",
+    "reasons": []
+  },
+  "exactly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "except": {
+    "status": "pass",
+    "reasons": []
+  },
+  "extremely": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fairly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "far": {
+    "status": "pass",
+    "reasons": []
+  },
+  "few": {
+    "status": "pass",
+    "reasons": []
+  },
+  "finally": {
+    "status": "pass",
+    "reasons": []
+  },
+  "for": {
+    "status": "pass",
+    "reasons": []
+  },
+  "forever": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fortunately": {
+    "status": "pass",
+    "reasons": []
+  },
+  "forward": {
+    "status": "pass",
+    "reasons": []
+  },
+  "frequently": {
+    "status": "pass",
+    "reasons": []
+  },
+  "from": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fully": {
+    "status": "pass",
+    "reasons": []
+  },
+  "further": {
+    "status": "pass",
+    "reasons": []
+  },
+  "generally": {
+    "status": "pass",
+    "reasons": []
+  },
+  "goodbye": {
+    "status": "pass",
+    "reasons": []
+  },
+  "happily": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hardly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "have": {
+    "status": "pass",
+    "reasons": []
+  },
+  "he": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hello": {
+    "status": "pass",
+    "reasons": []
+  },
+  "her": {
+    "status": "pass",
+    "reasons": []
+  },
+  "here": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hers": {
+    "status": "pass",
+    "reasons": []
+  },
+  "herself": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

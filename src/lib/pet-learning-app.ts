@@ -6340,6 +6340,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "The road was completely free of traffic at night.",
       chinese: "completely = 完全地；夜里这条路完全没有车辆。",
     },
+    "could": {
+      focusWord: "could",
+      sentence: "Could you open the window, please?",
+      chinese: "could = 可以；请问你可以打开窗户吗？",
+    },
+    "curiously": {
+      focusWord: "curiously",
+      sentence: "The child looked curiously inside the box.",
+      chinese: "curiously = 好奇地；这个孩子好奇地看着箱子里面。",
+    },
+    "definitely": {
+      focusWord: "definitely",
+      sentence: "I will definitely come to the concert.",
+      chinese: "definitely = 一定；我一定会来参加音乐会。",
+    },
+    "despite": {
+      focusWord: "despite",
+      sentence: "Despite the rain, we enjoyed the picnic.",
+      chinese: "despite = 尽管；尽管下雨，我们还是很享受野餐。",
+    },
+    "directly": {
+      focusWord: "directly",
+      sentence: "The bus goes directly from the airport to the city centre.",
+      chinese: "directly = 直接地；这趟公交车从机场直达市中心。",
+    },
+    "do": {
+      focusWord: "do",
+      sentence: "What do you usually do after school?",
+      chinese: "do = 做；你放学后通常做什么？",
+    },
+    "down": {
+      focusWord: "down",
+      sentence: "She walked down the stairs slowly.",
+      chinese: "down = 向下；她慢慢走下楼梯。",
+    },
+    "dozen": {
+      focusWord: "dozen",
+      sentence: "We bought a dozen eggs at the market.",
+      chinese: "dozen = 一打；我们在市场买了一打鸡蛋。",
+    },
+    "dueto": {
+      focusWord: "due to",
+      sentence: "The train was late due to heavy snow.",
+      chinese: "due to = 由于；火车由于大雪而晚点。",
+    },
+    "during": {
+      focusWord: "during",
+      sentence: "Please keep quiet during the film.",
+      chinese: "during = 在...期间；电影播放期间请保持安静。",
+    },
+    "each": {
+      focusWord: "each",
+      sentence: "Each student received a map.",
+      chinese: "each = 每个；每个学生都收到了一张地图。",
+    },
+    "easily": {
+      focusWord: "easily",
+      sentence: "You can easily reach the museum by bus.",
+      chinese: "easily = 容易地；乘公交车可以很容易地到达博物馆。",
+    },
+    "either": {
+      focusWord: "either",
+      sentence: "You can choose either the blue shirt or the green one.",
+      chinese: "either = 任一；你可以选择蓝衬衫或绿衬衫中的任意一件。",
+    },
+    "else": {
+      focusWord: "else",
+      sentence: "Would you like anything else?",
+      chinese: "else = 其他；你还想要其他东西吗？",
+    },
+    "enough": {
+      focusWord: "enough",
+      sentence: "We have enough food for everyone.",
+      chinese: "enough = 足够；我们有足够所有人吃的食物。",
+    },
+    "especially": {
+      focusWord: "especially",
+      sentence: "I enjoy outdoor sports, especially cycling.",
+      chinese: "especially = 尤其；我喜欢户外运动，尤其是骑自行车。",
+    },
+    "even": {
+      focusWord: "even",
+      sentence: "Even my little brother can solve this puzzle.",
+      chinese: "even = 甚至；甚至我弟弟也能解开这个谜题。",
+    },
+    "eventhough": {
+      focusWord: "even though",
+      sentence: "Even though she was tired, she finished her homework.",
+      chinese: "even though = 尽管；尽管她很累，还是完成了家庭作业。",
+    },
+    "ever": {
+      focusWord: "ever",
+      sentence: "Have you ever visited Scotland?",
+      chinese: "ever = 曾经；你曾经去过苏格兰吗？",
+    },
+    "every": {
+      focusWord: "every",
+      sentence: "The library is open every day.",
+      chinese: "every = 每一；图书馆每天都开放。",
+    },
+    "everybody": {
+      focusWord: "everybody",
+      sentence: "Everybody enjoyed the school concert.",
+      chinese: "everybody = 每个人；每个人都很喜欢学校音乐会。",
+    },
+    "everyone": {
+      focusWord: "everyone",
+      sentence: "Everyone must bring a pencil to the test.",
+      chinese: "everyone = 每个人；每个人参加考试时都必须带一支铅笔。",
+    },
+    "everything": {
+      focusWord: "everything",
+      sentence: "Everything is ready for the party.",
+      chinese: "everything = 一切；聚会的一切都准备好了。",
+    },
+    "everywhere": {
+      focusWord: "everywhere",
+      sentence: "There were colourful flowers everywhere.",
+      chinese: "everywhere = 到处；到处都是五颜六色的花。",
+    },
+    "exactly": {
+      focusWord: "exactly",
+      sentence: "The train arrived at exactly ten o'clock.",
+      chinese: "exactly = 恰好；火车恰好在十点到达。",
+    },
+    "except": {
+      focusWord: "except",
+      sentence: "Everyone came to the meeting except Sam.",
+      chinese: "except = 除...之外；除了萨姆，每个人都来参加会议了。",
+    },
+    "extremely": {
+      focusWord: "extremely",
+      sentence: "The mountain path was extremely steep.",
+      chinese: "extremely = 非常；这条山路非常陡峭。",
+    },
+    "fairly": {
+      focusWord: "fairly",
+      sentence: "The test was fairly easy.",
+      chinese: "fairly = 相当；这次考试相当容易。",
+    },
+    "far": {
+      focusWord: "far",
+      sentence: "How far is the station from here?",
+      chinese: "far = 多远；车站离这里有多远？",
+    },
+    "few": {
+      focusWord: "few",
+      sentence: "Only a few students chose the early class.",
+      chinese: "few = 少数；只有少数学生选择了早课。",
+    },
+    "finally": {
+      focusWord: "finally",
+      sentence: "We finally found the correct address.",
+      chinese: "finally = 终于；我们终于找到了正确的地址。",
+    },
+    "for": {
+      focusWord: "for",
+      sentence: "This present is for your birthday.",
+      chinese: "for = 为；这份礼物是为你的生日准备的。",
+    },
+    "forever": {
+      focusWord: "forever",
+      sentence: "I will remember this holiday forever.",
+      chinese: "forever = 永远；我会永远记住这个假期。",
+    },
+    "fortunately": {
+      focusWord: "fortunately",
+      sentence: "Fortunately, nobody was hurt in the accident.",
+      chinese: "fortunately = 幸运地；幸运的是，事故中没有人受伤。",
+    },
+    "forward": {
+      focusWord: "forward",
+      sentence: "Please step forward when your name is called.",
+      chinese: "forward = 向前；叫到你的名字时请向前一步。",
+    },
+    "frequently": {
+      focusWord: "frequently",
+      sentence: "Buses run frequently during the morning.",
+      chinese: "frequently = 频繁地；上午公交车班次频繁。",
+    },
+    "from": {
+      focusWord: "from",
+      sentence: "This train travels from London to Cambridge.",
+      chinese: "from = 从；这趟火车从伦敦开往剑桥。",
+    },
+    "fully": {
+      focusWord: "fully",
+      sentence: "The hotel is fully booked this weekend.",
+      chinese: "fully = 完全地；这家酒店本周末已经全部订满。",
+    },
+    "further": {
+      focusWord: "further",
+      sentence: "For further information, visit our website.",
+      chinese: "further = 更多的；如需更多信息，请访问我们的网站。",
+    },
+    "generally": {
+      focusWord: "generally",
+      sentence: "The weather is generally warm in May.",
+      chinese: "generally = 通常；五月的天气通常很暖和。",
+    },
+    "goodbye": {
+      focusWord: "goodbye",
+      sentence: "She waved goodbye before getting on the train.",
+      chinese: "goodbye = 再见；她上火车前挥手告别。",
+    },
+    "happily": {
+      focusWord: "happily",
+      sentence: "The children played happily in the garden.",
+      chinese: "happily = 快乐地；孩子们在花园里快乐地玩耍。",
+    },
+    "hardly": {
+      focusWord: "hardly",
+      sentence: "I could hardly hear the announcement.",
+      chinese: "hardly = 几乎不；我几乎听不见广播。",
+    },
+    "have": {
+      focusWord: "have",
+      sentence: "We have two tickets for the show.",
+      chinese: "have = 有；我们有两张演出的票。",
+    },
+    "he": {
+      focusWord: "he",
+      sentence: "He walks to school with his sister.",
+      chinese: "he = 他；他和妹妹一起步行去学校。",
+    },
+    "hello": {
+      focusWord: "hello",
+      sentence: "I smiled and said hello to the new student.",
+      chinese: "hello = 你好；我微笑着向新同学问好。",
+    },
+    "her": {
+      focusWord: "her",
+      sentence: "I gave her the book after class.",
+      chinese: "her = 她；我课后把书给了她。",
+    },
+    "here": {
+      focusWord: "here",
+      sentence: "Please wait here until the bus arrives.",
+      chinese: "here = 这里；请在这里等到公交车到达。",
+    },
+    "hers": {
+      focusWord: "hers",
+      sentence: "This blue jacket is hers.",
+      chinese: "hers = 她的；这件蓝色夹克是她的。",
+    },
+    "herself": {
+      focusWord: "herself",
+      sentence: "Maya made the cake herself.",
+      chinese: "herself = 她亲自；玛雅亲自做了蛋糕。",
+    },
   };
 }
 
@@ -6348,6 +6598,7 @@ const reviewedExampleKeyOverrides: Record<string, string> = {
   "check-in": "checkinnoun",
   checkout: "checkoutnoun",
   "at / @": "atsymbol",
+  "made of / from / out of": "madeofmaterial",
 };
 
 export function getWordExample(word: VocabularyItem): WordExample {
