@@ -4340,6 +4340,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "The child pushed a wooden toy train across the floor.",
       chinese: "toy = 玩具；孩子推着一列木制玩具火车穿过地板。",
     },
+    address: {
+      focusWord: "address",
+      sentence: "Write your home address at the top of the form.",
+      chinese: "address = 地址；在表格顶部写下你的家庭地址。",
+    },
+    area: {
+      focusWord: "area",
+      sentence: "This is a quiet area near the station.",
+      chinese: "area = 地区；这是车站附近一个安静的地区。",
+    },
+    building: {
+      focusWord: "building",
+      sentence: "The library is the oldest building in our town.",
+      chinese: "building = 建筑物；图书馆是我们镇上最古老的建筑物。",
+    },
+    centre: {
+      focusWord: "centre",
+      sentence: "The hotel is in the centre of the city.",
+      chinese: "centre = 中心；酒店位于市中心。",
+    },
+    city: {
+      focusWord: "city",
+      sentence: "More than a million people live in this city.",
+      chinese: "city = 城市；这座城市居住着一百多万人。",
+    },
+    corner: {
+      focusWord: "corner",
+      sentence: "I will meet you at the corner of King Street.",
+      chinese: "corner = 街角；我会在国王街的街角和你见面。",
+    },
+    country: {
+      focusWord: "country",
+      sentence: "Japan is a country in East Asia.",
+      chinese: "country = 国家；日本是东亚的一个国家。",
+    },
+    east: {
+      focusWord: "east",
+      sentence: "The sun rises in the east.",
+      chinese: "east = 东方；太阳从东方升起。",
+    },
+    entrance: {
+      focusWord: "entrance",
+      sentence: "We waited for our guide by the main entrance.",
+      chinese: "entrance = 入口；我们在正门入口旁等导游。",
+    },
+    exit: {
+      focusWord: "exit",
+      sentence: "The emergency exit is at the back of the hall.",
+      chinese: "exit = 出口；紧急出口在大厅后面。",
+    },
+    australia: {
+      focusWord: "Australia",
+      sentence: "My cousin moved to Australia last year.",
+      chinese: "Australia = 澳大利亚；我表哥去年搬到了澳大利亚。",
+    },
+    location: {
+      focusWord: "location",
+      sentence: "This beach is a perfect location for a picnic.",
+      chinese: "location = 地点；这个海滩是野餐的理想地点。",
+    },
+    neighbourhood: {
+      focusWord: "neighbourhood",
+      sentence: "There are several small parks in our neighbourhood.",
+      chinese: "neighbourhood = 社区；我们社区里有几个小公园。",
+    },
+    north: {
+      focusWord: "north",
+      sentence: "The mountains are in the north of the country.",
+      chinese: "north = 北部；这些山位于这个国家的北部。",
+    },
+    park: {
+      focusWord: "park",
+      sentence: "The children played football in the park.",
+      chinese: "park = 公园；孩子们在公园里踢足球。",
+    },
+    place: {
+      focusWord: "place",
+      sentence: "This cafe is a good place to study.",
+      chinese: "place = 地方；这家咖啡馆是学习的好地方。",
+    },
+    public: {
+      focusWord: "public",
+      sentence: "The garden is open to the public every day.",
+      chinese: "public = 公众；这个花园每天向公众开放。",
+    },
+    region: {
+      focusWord: "region",
+      sentence: "This region is famous for its lakes.",
+      chinese: "region = 地区；这个地区以湖泊闻名。",
+    },
+    south: {
+      focusWord: "south",
+      sentence: "They grow oranges in the south of Spain.",
+      chinese: "south = 南部；西班牙南部种植橙子。",
+    },
+    sportscentre: {
+      focusWord: "sports centre",
+      sentence: "We go swimming at the sports centre on Fridays.",
+      chinese: "sports centre = 体育中心；我们星期五去体育中心游泳。",
+    },
+    street: {
+      focusWord: "street",
+      sentence: "There is a post office across the street.",
+      chinese: "street = 街道；街对面有一家邮局。",
+    },
+    takeplace: {
+      focusWord: "take place",
+      sentence: "The school concert will take place on Thursday.",
+      chinese: "take place = 举行；学校音乐会将在星期四举行。",
+    },
+    town: {
+      focusWord: "town",
+      sentence: "Our town has a busy market on Saturdays.",
+      chinese: "town = 城镇；我们镇星期六有一个热闹的市场。",
+    },
+    village: {
+      focusWord: "village",
+      sentence: "Only two hundred people live in the village.",
+      chinese: "village = 村庄；这个村庄只有两百人居住。",
+    },
+    west: {
+      focusWord: "west",
+      sentence: "Dark clouds were moving in from the west.",
+      chinese: "west = 西方；乌云正从西方飘来。",
+    },
+    animal: {
+      focusWord: "animal",
+      sentence: "Every animal at the shelter needs a safe home.",
+      chinese: "animal = 动物；收容所里的每只动物都需要一个安全的家。",
+    },
+    ant: {
+      focusWord: "ant",
+      sentence: "An ant carried a leaf across the path.",
+      chinese: "ant = 蚂蚁；一只蚂蚁叼着叶子穿过小路。",
+    },
+    bear: {
+      focusWord: "bear",
+      sentence: "We saw a brown bear beside the river.",
+      chinese: "bear = 熊；我们在河边看到了一只棕熊。",
+    },
+    bee: {
+      focusWord: "bee",
+      sentence: "A bee landed on the yellow flower.",
+      chinese: "bee = 蜜蜂；一只蜜蜂落在黄色花朵上。",
+    },
+    bird: {
+      focusWord: "bird",
+      sentence: "A small bird built a nest in the tree.",
+      chinese: "bird = 鸟；一只小鸟在树上筑了巢。",
+    },
+    cat: {
+      focusWord: "cat",
+      sentence: "The cat was asleep under the kitchen table.",
+      chinese: "cat = 猫；那只猫在厨房桌子下面睡着了。",
+    },
+    cow: {
+      focusWord: "cow",
+      sentence: "The farmer feeds each cow early in the morning.",
+      chinese: "cow = 奶牛；农民一大早给每头奶牛喂食。",
+    },
+    dog: {
+      focusWord: "dog",
+      sentence: "Our dog waits by the door when I come home.",
+      chinese: "dog = 狗；我回家时，我们的狗会在门边等着。",
+    },
+    duck: {
+      focusWord: "duck",
+      sentence: "A duck swam across the pond with its young.",
+      chinese: "duck = 鸭子；一只鸭子带着幼鸭游过池塘。",
+    },
+    elephant: {
+      focusWord: "elephant",
+      sentence: "The elephant used its trunk to pick up the branch.",
+      chinese: "elephant = 大象；大象用鼻子捡起了树枝。",
+    },
+    giraffe: {
+      focusWord: "giraffe",
+      sentence: "The giraffe reached the leaves at the top of the tree.",
+      chinese: "giraffe = 长颈鹿；长颈鹿够到了树顶的叶子。",
+    },
+    horse: {
+      focusWord: "horse",
+      sentence: "She learned to ride a horse on the farm.",
+      chinese: "horse = 马；她在农场学会了骑马。",
+    },
+    insect: {
+      focusWord: "insect",
+      sentence: "This insect has bright green wings.",
+      chinese: "insect = 昆虫；这种昆虫有鲜绿色的翅膀。",
+    },
+    lion: {
+      focusWord: "lion",
+      sentence: "The lion rested in the shade during the afternoon.",
+      chinese: "lion = 狮子；狮子下午在阴凉处休息。",
+    },
+    monkey: {
+      focusWord: "monkey",
+      sentence: "The monkey climbed quickly to the top branch.",
+      chinese: "monkey = 猴子；猴子很快爬到了最高的树枝上。",
+    },
+    mouse: {
+      focusWord: "mouse",
+      sentence: "A tiny mouse ran behind the cupboard.",
+      chinese: "mouse = 老鼠；一只小老鼠跑到了碗柜后面。",
+    },
+    penguin: {
+      focusWord: "penguin",
+      sentence: "The penguin kept its egg warm on the ice.",
+      chinese: "penguin = 企鹅；企鹅在冰面上给蛋保暖。",
+    },
+    puppy: {
+      focusWord: "puppy",
+      sentence: "The puppy followed me around the garden.",
+      chinese: "puppy = 小狗；小狗跟着我在花园里到处走。",
+    },
+    rabbit: {
+      focusWord: "rabbit",
+      sentence: "The rabbit disappeared into a hole.",
+      chinese: "rabbit = 兔子；兔子消失在一个洞里。",
+    },
+    snake: {
+      focusWord: "snake",
+      sentence: "The snake lay quietly on a warm rock.",
+      chinese: "snake = 蛇；蛇安静地趴在一块温暖的岩石上。",
+    },
+    tiger: {
+      focusWord: "tiger",
+      sentence: "A tiger can move silently through tall grass.",
+      chinese: "tiger = 老虎；老虎能悄无声息地穿过高草。",
+    },
+    zebra: {
+      focusWord: "zebra",
+      sentence: "Each zebra has a different pattern of stripes.",
+      chinese: "zebra = 斑马；每匹斑马都有不同的条纹图案。",
+    },
+    guided: {
+      focusWord: "guided",
+      sentence: "We joined a guided tour of the old castle.",
+      chinese: "guided = 有导游的；我们参加了老城堡的导览游。",
+    },
+    tourism: {
+      focusWord: "tourism",
+      sentence: "Tourism provides many jobs in this coastal town.",
+      chinese: "tourism = 旅游业；旅游业为这个海滨小镇提供了许多工作。",
+    },
+    touristinformationcentre: {
+      focusWord: "tourist information centre",
+      sentence: "The tourist information centre gave us a free map.",
+      chinese: "tourist information centre = 游客信息中心；游客信息中心给了我们一张免费地图。",
+    },
   };
 }
 
