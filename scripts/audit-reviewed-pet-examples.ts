@@ -114,6 +114,16 @@ const manuallyConfirmedTerms = new Set([
   "operation", // a medical procedure, not operating a machine
   "performance", // a live musical performance, not general performance quality
   "pity", // regret / what a shame
+  // These ideas-tail and grammar examples use valid contextual senses or Chinese synonyms.
+  "registration", // online registration / sign-up
+  "romance", // a love story, not romance as an abstract feeling
+  "silence", // complete quiet, not refusing to speak
+  "absolutely", // completely / absolutely
+  "across", // crossing a bridge from one side to the other
+  "against", // leaning on a surface, not opposing something
+  "alike", // similar in appearance
+  "all", // every member of the student group
+  "also", // also / in addition
   // These transport and travel examples use valid synonyms or contextual senses.
   "bus", // bus / public bus
   "flight", // scheduled flight, not flight in general
