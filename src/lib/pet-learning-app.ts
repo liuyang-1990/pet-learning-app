@@ -4840,6 +4840,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "Add the three times to find the total.",
       chinese: "total = 总数；把三次用时相加得出总数。",
     },
+    afternoon: {
+      focusWord: "afternoon",
+      sentence: "I usually do my homework in the afternoon.",
+      chinese: "afternoon = 下午；我通常在下午做家庭作业。",
+    },
+    afterwards: {
+      focusWord: "afterwards",
+      sentence: "We watched the match and had dinner afterwards.",
+      chinese: "afterwards = 后来；我们看了比赛，之后吃了晚饭。",
+    },
+    age: {
+      focusWord: "age",
+      sentence: "She started learning the piano at the age of six.",
+      chinese: "age = 年龄；她六岁时开始学钢琴。",
+    },
+    aged: {
+      focusWord: "aged",
+      sentence: "The club is for children aged eight to twelve.",
+      chinese: "aged = 年龄为；这个俱乐部面向八到十二岁的儿童。",
+    },
+    ages: {
+      focusWord: "ages",
+      sentence: "We waited for ages before the bus arrived.",
+      chinese: "ages = 很长时间；公交车到来前我们等了很久。",
+    },
+    atthesametime: {
+      focusWord: "at the same time",
+      sentence: "The two runners crossed the line at the same time.",
+      chinese: "at the same time = 同时；两名跑步者同时越过终点线。",
+    },
+    birthday: {
+      focusWord: "birthday",
+      sentence: "We made a cake for Dad's birthday.",
+      chinese: "birthday = 生日；我们为爸爸的生日做了一个蛋糕。",
+    },
+    day: {
+      focusWord: "day",
+      sentence: "It rained all day on Monday.",
+      chinese: "day = 一天；星期一下了一整天的雨。",
+    },
+    recently: {
+      focusWord: "recently",
+      sentence: "I recently joined the school chess club.",
+      chinese: "recently = 最近；我最近加入了学校国际象棋俱乐部。",
+    },
+    early: {
+      focusWord: "early",
+      sentence: "We arrived early enough to choose good seats.",
+      chinese: "early = 早；我们到得够早，可以挑选好座位。",
+    },
+    evening: {
+      focusWord: "evening",
+      sentence: "I read for half an hour every evening.",
+      chinese: "evening = 晚上；我每天晚上读半个小时的书。",
+    },
+    fulltime: {
+      focusWord: "full time",
+      sentence: "My aunt works full time at the hospital.",
+      chinese: "full time = 全职；我阿姨在医院全职工作。",
+    },
+    goodafternoon: {
+      focusWord: "good afternoon",
+      sentence: "Good afternoon, Mrs Lee.",
+      chinese: "good afternoon = 下午好；李老师，下午好。",
+    },
+    goodevening: {
+      focusWord: "good evening",
+      sentence: "Good evening, everyone, and welcome to the show.",
+      chinese: "good evening = 晚上好；大家晚上好，欢迎观看演出。",
+    },
+    goodmorning: {
+      focusWord: "good morning",
+      sentence: "Good morning, Mr Brown.",
+      chinese: "good morning = 早上好；布朗先生，早上好。",
+    },
+    goodnight: {
+      focusWord: "good night",
+      sentence: "I said good night and went upstairs.",
+      chinese: "good night = 晚安；我说了晚安就上楼了。",
+    },
+    hour: {
+      focusWord: "hour",
+      sentence: "The journey takes about an hour.",
+      chinese: "hour = 小时；这段旅程大约需要一个小时。",
+    },
+    immediately: {
+      focusWord: "immediately",
+      sentence: "Please call me immediately if the plan changes.",
+      chinese: "immediately = 立即；如果计划有变化，请立即给我打电话。",
+    },
+    intime: {
+      focusWord: "in time",
+      sentence: "We reached the station in time to catch the train.",
+      chinese: "in time = 及时；我们及时赶到车站，搭上了火车。",
+    },
+    late: {
+      focusWord: "late",
+      sentence: "The bus was twenty minutes late this morning.",
+      chinese: "late = 迟到的；今天早上公交车晚了二十分钟。",
+    },
+    lookafter: {
+      focusWord: "look after",
+      sentence: "Can you look after my dog this weekend?",
+      chinese: "look after = 照顾；这个周末你能照顾我的狗吗？",
+    },
+    middleaged: {
+      focusWord: "middle-aged",
+      sentence: "A middle-aged woman helped us find the address.",
+      chinese: "middle-aged = 中年的；一位中年女士帮我们找到了地址。",
+    },
+    minute: {
+      focusWord: "minute",
+      sentence: "The film starts in one minute.",
+      chinese: "minute = 分钟；电影一分钟后开始。",
+    },
+    month: {
+      focusWord: "month",
+      sentence: "We visit our grandparents once a month.",
+      chinese: "month = 月；我们每个月看望祖父母一次。",
+    },
+    morning: {
+      focusWord: "morning",
+      sentence: "The streets are quiet early in the morning.",
+      chinese: "morning = 早晨；清晨时街道很安静。",
+    },
+    night: {
+      focusWord: "night",
+      sentence: "The temperature falls quickly at night.",
+      chinese: "night = 夜晚；夜晚气温下降得很快。",
+    },
+    occasion: {
+      focusWord: "occasion",
+      sentence: "On one occasion, we saw dolphins near the boat.",
+      chinese: "occasion = 一次；有一次，我们在船附近看到了海豚。",
+    },
+    ontime: {
+      focusWord: "on time",
+      sentence: "Everyone arrived on time for the meeting.",
+      chinese: "on time = 准时；每个人都准时到达参加会议。",
+    },
+    overnight: {
+      focusWord: "overnight",
+      sentence: "We stayed overnight in a small village.",
+      chinese: "overnight = 过夜；我们在一个小村庄住了一夜。",
+    },
+    parttime: {
+      focusWord: "part time",
+      sentence: "Leo works part time in a bookshop.",
+      chinese: "part time = 兼职；利奥在一家书店兼职工作。",
+    },
+    second: {
+      focusWord: "second",
+      sentence: "Wait a second while I find the key.",
+      chinese: "second = 秒；等一下，我找找钥匙。",
+    },
+    soon: {
+      focusWord: "soon",
+      sentence: "The rain stopped, and the sun came out soon afterwards.",
+      chinese: "soon = 很快；雨停了，很快太阳就出来了。",
+    },
+    time: {
+      focusWord: "time",
+      sentence: "What time does the museum close?",
+      chinese: "time = 时间；博物馆几点关门？",
+    },
+    today: {
+      focusWord: "today",
+      sentence: "I have a dentist appointment today.",
+      chinese: "today = 今天；我今天预约了看牙医。",
+    },
+    tomorrow: {
+      focusWord: "tomorrow",
+      sentence: "We will finish the project tomorrow.",
+      chinese: "tomorrow = 明天；我们明天会完成这个项目。",
+    },
+    week: {
+      focusWord: "week",
+      sentence: "Our team practises three times a week.",
+      chinese: "week = 星期；我们队每周训练三次。",
+    },
+    while: {
+      focusWord: "while",
+      sentence: "While I waited for the bus, I read a magazine.",
+      chinese: "while = 当...时；等公交车时，我看了一本杂志。",
+    },
+    year: {
+      focusWord: "year",
+      sentence: "My brother will start college next year.",
+      chinese: "year = 年；我哥哥明年将开始上大学。",
+    },
+    yesterday: {
+      focusWord: "yesterday",
+      sentence: "I returned the library book yesterday.",
+      chinese: "yesterday = 昨天；我昨天归还了图书馆的书。",
+    },
+    circle: {
+      focusWord: "circle",
+      sentence: "Draw a circle around the correct answer.",
+      chinese: "circle = 圆圈；在正确答案周围画一个圆圈。",
+    },
+    gram: {
+      focusWord: "gram",
+      sentence: "One gram is a very small unit of weight.",
+      chinese: "gram = 克；一克是很小的重量单位。",
+    },
+    halfprice: {
+      focusWord: "half-price",
+      sentence: "Student tickets are half-price on Mondays.",
+      chinese: "half-price = 半价的；学生票星期一半价。",
+    },
+    inhalf: {
+      focusWord: "in half",
+      sentence: "Cut the apple in half and share it.",
+      chinese: "in half = 分成两半；把苹果切成两半一起分享。",
+    },
+    intwo: {
+      focusWord: "in two",
+      sentence: "The old rope broke in two.",
+      chinese: "in two = 断成两截；那根旧绳子断成了两截。",
+    },
+    litre: {
+      focusWord: "litre",
+      sentence: "We took a litre of water on the walk.",
+      chinese: "litre = 升；我们徒步时带了一升水。",
+    },
+    million: {
+      focusWord: "million",
+      sentence: "More than a million people visit the museum each year.",
+      chinese: "million = 百万；每年有一百多万人参观这座博物馆。",
+    },
+    single: {
+      focusWord: "single",
+      sentence: "I need a single ticket to Oxford.",
+      chinese: "single = 单程的；我需要一张去牛津的单程票。",
+    },
+    size: {
+      focusWord: "size",
+      sentence: "Do you have these shoes in a larger size?",
+      chinese: "size = 尺码；这双鞋有更大的尺码吗？",
+    },
+    square: {
+      focusWord: "square",
+      sentence: "A square has four equal sides.",
+      chinese: "square = 正方形；正方形有四条相等的边。",
+    },
+    weight: {
+      focusWord: "weight",
+      sentence: "The maximum weight for this bag is ten kilograms.",
+      chinese: "weight = 重量；这个包的最大重量是十千克。",
+    },
   };
 }
 
