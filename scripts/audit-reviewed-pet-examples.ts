@@ -19,6 +19,11 @@ const cachePath = path.resolve(process.cwd(), "data/google-translation-audit-cac
 const outputPath = path.resolve(process.cwd(), "src/lib/generated/pet-word-example-audit.ts");
 const cache = readCache();
 const manuallyConfirmedTerms = new Set([
+  // These place examples use valid contextual senses or Chinese synonyms.
+  "area", // a district / area, not surface area
+  "location", // a suitable place / location
+  "neighbourhood", // local community / neighbourhood
+  "takeplace", // an event being held, not merely happening
   // These clothing and materials examples use valid contextual senses or Chinese synonyms.
   "boot", // footwear, not starting a computer
   "clothing", // clothing / garments
