@@ -19,6 +19,13 @@ const cachePath = path.resolve(process.cwd(), "data/google-translation-audit-cac
 const outputPath = path.resolve(process.cwd(), "src/lib/generated/pet-word-example-audit.ts");
 const cache = readCache();
 const manuallyConfirmedTerms = new Set([
+  // These time and number examples use valid contextual senses or synonyms.
+  "ages", // a very long time, not people's ages
+  "day", // day / 日 / 一天
+  "occasion", // one occurrence / one occasion
+  "second", // a brief moment / second, not ordinal "second"
+  "week", // week / 周 / 星期
+  "intwo", // split into two pieces
   // These sport and measurement examples use valid contextual senses or synonyms.
   "player", // an athlete / player, not a video-game player
   "pool", // the cue sport, not a swimming pool

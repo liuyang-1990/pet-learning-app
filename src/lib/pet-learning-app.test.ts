@@ -217,6 +217,15 @@ const sportNumbersBatch = [
   "quarter", "score", "total",
 ] as const;
 
+const timeNumbersBatch = [
+  "afternoon", "afterwards", "age", "aged", "ages", "at the same time", "birthday", "day",
+  "recently", "early", "evening", "full time", "good afternoon", "good evening", "good morning",
+  "good night", "hour", "immediately", "in time", "late", "look after", "middle-aged", "minute",
+  "month", "morning", "night", "occasion", "on time", "overnight", "part time", "second", "soon",
+  "time", "today", "tomorrow", "week", "while", "year", "yesterday", "circle", "gram",
+  "half-price", "in half", "in two", "litre", "million", "single", "size", "square", "weight",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -1640,6 +1649,105 @@ describe("PET Learning App", () => {
     expect(getWordExample({ term: "score", chineseGloss: "得分；比分" })).toMatchObject({
       sentence: "The final score was three to two.",
       chinese: "score = 比分；最终比分是三比二。",
+    });
+  });
+
+  it("adds the reviewed time numbers batch and completes the time theme", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const timeWords = words.filter((word) => word.theme === "time");
+    const selectedExamples = timeNumbersBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(timeNumbersBatch).toHaveLength(50);
+    expect(timeWords).toHaveLength(41);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(885);
+    expect(selectedExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
+    expect(timeWords.every((word) => getWordExample(word).sentence !== null)).toBe(true);
+    expect(getWordExample({ term: "full-time", chineseGloss: "全职" }).sentence).toBe(
+      "My aunt works full time at the hospital.",
+    );
+    expect(getWordExample({ term: "part-time", chineseGloss: "兼职" }).sentence).toBe(
+      "Leo works part time in a bookshop.",
+    );
+    expect(getWordExample({ term: "while / whilst", chineseGloss: "当...时" }).sentence).toBe(
+      "While I waited for the bus, I read a magazine.",
+    );
+  });
+
+  it("keeps the time numbers ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/time-numbers-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended time numbers senses for ambiguous terms", () => {
+    expect(getWordExample({ term: "age", chineseGloss: "年龄；时代" })).toMatchObject({
+      sentence: "She started learning the piano at the age of six.",
+      chinese: "age = 年龄；她六岁时开始学钢琴。",
+    });
+    expect(getWordExample({ term: "ages", chineseGloss: "很久；年龄" })).toMatchObject({
+      sentence: "We waited for ages before the bus arrived.",
+      chinese: "ages = 很长时间；公交车到来前我们等了很久。",
+    });
+    expect(getWordExample({ term: "in time", chineseGloss: "及时；最终" })).toMatchObject({
+      sentence: "We reached the station in time to catch the train.",
+      chinese: "in time = 及时；我们及时赶到车站，搭上了火车。",
+    });
+    expect(getWordExample({ term: "look after", chineseGloss: "照顾；目送" })).toMatchObject({
+      sentence: "Can you look after my dog this weekend?",
+      chinese: "look after = 照顾；这个周末你能照顾我的狗吗？",
+    });
+    expect(getWordExample({ term: "occasion", chineseGloss: "场合；机会" })).toMatchObject({
+      sentence: "On one occasion, we saw dolphins near the boat.",
+      chinese: "occasion = 一次；有一次，我们在船附近看到了海豚。",
+    });
+    expect(getWordExample({ term: "on time", chineseGloss: "准时" })).toMatchObject({
+      sentence: "Everyone arrived on time for the meeting.",
+      chinese: "on time = 准时；每个人都准时到达参加会议。",
+    });
+    expect(getWordExample({ term: "second", chineseGloss: "第二；秒" })).toMatchObject({
+      sentence: "Wait a second while I find the key.",
+      chinese: "second = 秒；等一下，我找找钥匙。",
+    });
+    expect(getWordExample({ term: "while", chineseGloss: "一会儿；当...时" })).toMatchObject({
+      sentence: "While I waited for the bus, I read a magazine.",
+      chinese: "while = 当...时；等公交车时，我看了一本杂志。",
+    });
+    expect(getWordExample({ term: "half-price", chineseGloss: "半价的" })).toMatchObject({
+      sentence: "Student tickets are half-price on Mondays.",
+      chinese: "half-price = 半价的；学生票星期一半价。",
+    });
+    expect(getWordExample({ term: "single", chineseGloss: "单一的；单程的" })).toMatchObject({
+      sentence: "I need a single ticket to Oxford.",
+      chinese: "single = 单程的；我需要一张去牛津的单程票。",
+    });
+    expect(getWordExample({ term: "square", chineseGloss: "广场；正方形" })).toMatchObject({
+      sentence: "A square has four equal sides.",
+      chinese: "square = 正方形；正方形有四条相等的边。",
     });
   });
 
