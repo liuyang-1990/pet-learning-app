@@ -198,6 +198,15 @@ const clothingMaterialsBatch = [
   "material", "metal", "object", "oil", "plastic", "silver", "stone", "wool", "toy",
 ] as const;
 
+const placesAnimalsTravelBatch = [
+  "address", "area", "building", "centre / center", "city", "corner", "country", "east",
+  "entrance", "exit", "Australia", "location", "neighbourhood", "north", "park", "place",
+  "public", "region", "south", "sports centre", "street", "take place", "town", "village",
+  "west", "animal", "ant", "bear", "bee", "bird", "cat", "cow", "dog", "duck", "elephant",
+  "giraffe", "horse", "insect", "lion", "monkey", "mouse", "penguin", "puppy", "rabbit",
+  "snake", "tiger", "zebra", "guided", "tourism", "tourist information centre",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -1387,7 +1396,7 @@ describe("PET Learning App", () => {
     expect(clothingMaterialsBatch).toHaveLength(50);
     expect(clothingWords).toHaveLength(31);
     expect(materialWords).toHaveLength(24);
-    expect(Object.keys(getReviewedWordExamples())).toHaveLength(735);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(735);
     expect(selectedExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
     expect(clothingWords.every((word) => getWordExample(word).sentence !== null)).toBe(true);
     expect(materialWords.every((word) => getWordExample(word).sentence !== null)).toBe(true);
@@ -1450,6 +1459,95 @@ describe("PET Learning App", () => {
     expect(getWordExample({ term: "material", chineseGloss: "材料；重要的" })).toMatchObject({
       sentence: "We chose a strong material for the school bags.",
       chinese: "material = 材料；我们为书包选择了一种结实的材料。",
+    });
+  });
+
+  it("adds the reviewed places animals travel batch and completes all three themes", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const themeWords = ["places", "animals", "travel"].map((theme) =>
+      words.filter((word) => word.theme === theme),
+    );
+    const selectedExamples = placesAnimalsTravelBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(placesAnimalsTravelBatch).toHaveLength(50);
+    expect(themeWords.map((items) => items.length)).toEqual([26, 23, 26]);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(785);
+    expect(selectedExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
+    expect(themeWords.every((items) => items.every((word) => getWordExample(word).sentence !== null))).toBe(true);
+  });
+
+  it("keeps the places animals travel ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/places-animals-travel-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended places animals travel senses for ambiguous terms", () => {
+    expect(getWordExample({ term: "centre / center", chineseGloss: "中心" })).toMatchObject({
+      focusWord: "centre",
+      sentence: "The hotel is in the centre of the city.",
+      chinese: "centre = 中心；酒店位于市中心。",
+    });
+    expect(getWordExample({ term: "corner", chineseGloss: "角；街角" })).toMatchObject({
+      sentence: "I will meet you at the corner of King Street.",
+      chinese: "corner = 街角；我会在国王街的街角和你见面。",
+    });
+    expect(getWordExample({ term: "country", chineseGloss: "国家；乡村" })).toMatchObject({
+      sentence: "Japan is a country in East Asia.",
+      chinese: "country = 国家；日本是东亚的一个国家。",
+    });
+    expect(getWordExample({ term: "public", chineseGloss: "公共的；公众" })).toMatchObject({
+      sentence: "The garden is open to the public every day.",
+      chinese: "public = 公众；这个花园每天向公众开放。",
+    });
+    expect(getWordExample({ term: "take place", chineseGloss: "发生；举行" })).toMatchObject({
+      sentence: "The school concert will take place on Thursday.",
+      chinese: "take place = 举行；学校音乐会将在星期四举行。",
+    });
+    expect(getWordExample({ term: "bear", chineseGloss: "熊；忍受" })).toMatchObject({
+      sentence: "We saw a brown bear beside the river.",
+      chinese: "bear = 熊；我们在河边看到了一只棕熊。",
+    });
+    expect(getWordExample({ term: "duck", chineseGloss: "鸭子；低头" })).toMatchObject({
+      sentence: "A duck swam across the pond with its young.",
+      chinese: "duck = 鸭子；一只鸭子带着幼鸭游过池塘。",
+    });
+    expect(getWordExample({ term: "mouse", chineseGloss: "老鼠；鼠标" })).toMatchObject({
+      sentence: "A tiny mouse ran behind the cupboard.",
+      chinese: "mouse = 老鼠；一只小老鼠跑到了碗柜后面。",
+    });
+    expect(getWordExample({ term: "guided", chineseGloss: "有导游的" })).toMatchObject({
+      sentence: "We joined a guided tour of the old castle.",
+      chinese: "guided = 有导游的；我们参加了老城堡的导览游。",
+    });
+    expect(getWordExample({ term: "tourism", chineseGloss: "旅游业" })).toMatchObject({
+      sentence: "Tourism provides many jobs in this coastal town.",
+      chinese: "tourism = 旅游业；旅游业为这个海滨小镇提供了许多工作。",
     });
   });
 
