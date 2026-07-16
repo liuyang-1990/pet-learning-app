@@ -207,6 +207,16 @@ const placesAnimalsTravelBatch = [
   "snake", "tiger", "zebra", "guided", "tourism", "tourist information centre",
 ] as const;
 
+const sportNumbersBatch = [
+  "athlete", "athletics", "baseball", "basketball", "CD player", "coach", "DVD player",
+  "extreme sport", "football player", "golf", "gym", "gymnastics", "hockey", "ice hockey",
+  "ice skating", "match", "motor-racing", "player", "pool", "racing", "rugby", "skate",
+  "skating", "skiing", "sport", "swim", "swimming costume", "swimming pool", "table tennis",
+  "team", "volleyball", "yoga", "amount", "average", "count", "degree", "depth", "double",
+  "half", "height", "kilometre", "metre", "mile", "number", "pair", "percent", "point",
+  "quarter", "score", "total",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -1548,6 +1558,88 @@ describe("PET Learning App", () => {
     expect(getWordExample({ term: "tourism", chineseGloss: "旅游业" })).toMatchObject({
       sentence: "Tourism provides many jobs in this coastal town.",
       chinese: "tourism = 旅游业；旅游业为这个海滨小镇提供了许多工作。",
+    });
+  });
+
+  it("adds the reviewed sport numbers batch and completes the sport theme", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const sportWords = words.filter((word) => word.theme === "sport");
+    const selectedExamples = sportNumbersBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(sportNumbersBatch).toHaveLength(50);
+    expect(sportWords).toHaveLength(36);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(835);
+    expect(selectedExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
+    expect(sportWords.every((word) => getWordExample(word).sentence !== null)).toBe(true);
+  });
+
+  it("keeps the sport numbers ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/sport-numbers-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended sport numbers senses for ambiguous terms", () => {
+    expect(getWordExample({ term: "coach", chineseGloss: "长途汽车；教练" })).toMatchObject({
+      sentence: "The coach showed us a better way to pass the ball.",
+      chinese: "coach = 教练；教练向我们示范了更好的传球方法。",
+    });
+    expect(getWordExample({ term: "pool", chineseGloss: "水池；台球" })).toMatchObject({
+      sentence: "We played pool while we waited for the bus.",
+      chinese: "pool = 台球；等公交车时我们打了台球。",
+    });
+    expect(getWordExample({ term: "player", chineseGloss: "运动员；播放器" })).toMatchObject({
+      sentence: "Each player shook hands after the game.",
+      chinese: "player = 运动员；比赛后每位运动员都握了手。",
+    });
+    expect(getWordExample({ term: "skate", chineseGloss: "滑冰；冰鞋" })).toMatchObject({
+      sentence: "Children can skate safely on this indoor rink.",
+      chinese: "skate = 滑冰；孩子们可以在这个室内冰场安全地滑冰。",
+    });
+    expect(getWordExample({ term: "amount", chineseGloss: "数量；总数" })).toMatchObject({
+      sentence: "Drink a small amount of water during each break.",
+      chinese: "amount = 数量；每次休息时喝少量的水。",
+    });
+    expect(getWordExample({ term: "average", chineseGloss: "平均数；平均的" })).toMatchObject({
+      sentence: "Her average score this season is eighty percent.",
+      chinese: "average = 平均数；她本赛季的平均得分是百分之八十。",
+    });
+    expect(getWordExample({ term: "double", chineseGloss: "双倍；两倍的" })).toMatchObject({
+      sentence: "We ran double the usual distance today.",
+      chinese: "double = 两倍的；我们今天跑了平常两倍的距离。",
+    });
+    expect(getWordExample({ term: "point", chineseGloss: "点；分" })).toMatchObject({
+      sentence: "Our team earned one point for the draw.",
+      chinese: "point = 分；我们队因平局获得了一分。",
+    });
+    expect(getWordExample({ term: "score", chineseGloss: "得分；比分" })).toMatchObject({
+      sentence: "The final score was three to two.",
+      chinese: "score = 比分；最终比分是三比二。",
     });
   });
 
