@@ -2938,5 +2938,205 @@ export const reviewedWordExampleAudit = {
   "toy": {
     "status": "pass",
     "reasons": []
+  },
+  "address": {
+    "status": "pass",
+    "reasons": []
+  },
+  "area": {
+    "status": "pass",
+    "reasons": []
+  },
+  "building": {
+    "status": "pass",
+    "reasons": []
+  },
+  "centre": {
+    "status": "pass",
+    "reasons": []
+  },
+  "city": {
+    "status": "pass",
+    "reasons": []
+  },
+  "corner": {
+    "status": "pass",
+    "reasons": []
+  },
+  "country": {
+    "status": "pass",
+    "reasons": []
+  },
+  "east": {
+    "status": "pass",
+    "reasons": []
+  },
+  "entrance": {
+    "status": "pass",
+    "reasons": []
+  },
+  "exit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "australia": {
+    "status": "pass",
+    "reasons": []
+  },
+  "location": {
+    "status": "pass",
+    "reasons": []
+  },
+  "neighbourhood": {
+    "status": "pass",
+    "reasons": []
+  },
+  "north": {
+    "status": "pass",
+    "reasons": []
+  },
+  "park": {
+    "status": "pass",
+    "reasons": []
+  },
+  "place": {
+    "status": "pass",
+    "reasons": []
+  },
+  "public": {
+    "status": "pass",
+    "reasons": []
+  },
+  "region": {
+    "status": "pass",
+    "reasons": []
+  },
+  "south": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sportscentre": {
+    "status": "pass",
+    "reasons": []
+  },
+  "street": {
+    "status": "pass",
+    "reasons": []
+  },
+  "takeplace": {
+    "status": "pass",
+    "reasons": []
+  },
+  "town": {
+    "status": "pass",
+    "reasons": []
+  },
+  "village": {
+    "status": "pass",
+    "reasons": []
+  },
+  "west": {
+    "status": "pass",
+    "reasons": []
+  },
+  "animal": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ant": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bear": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bee": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bird": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cat": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cow": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dog": {
+    "status": "pass",
+    "reasons": []
+  },
+  "duck": {
+    "status": "pass",
+    "reasons": []
+  },
+  "elephant": {
+    "status": "pass",
+    "reasons": []
+  },
+  "giraffe": {
+    "status": "pass",
+    "reasons": []
+  },
+  "horse": {
+    "status": "pass",
+    "reasons": []
+  },
+  "insect": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lion": {
+    "status": "pass",
+    "reasons": []
+  },
+  "monkey": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mouse": {
+    "status": "pass",
+    "reasons": []
+  },
+  "penguin": {
+    "status": "pass",
+    "reasons": []
+  },
+  "puppy": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rabbit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "snake": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tiger": {
+    "status": "pass",
+    "reasons": []
+  },
+  "zebra": {
+    "status": "pass",
+    "reasons": []
+  },
+  "guided": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tourism": {
+    "status": "pass",
+    "reasons": []
+  },
+  "touristinformationcentre": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

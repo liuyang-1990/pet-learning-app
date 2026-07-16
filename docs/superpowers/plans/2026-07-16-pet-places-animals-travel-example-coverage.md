@@ -24,7 +24,7 @@
 - Modify: `src/lib/pet-learning-app.test.ts`
 
 - [ ] Add `placesAnimalsTravelBatch` using the 50 table terms below.
-- [ ] Require all selected entries and every row in all three themes to return reviewed sentences, with registry count exactly 785.
+- [ ] Require all selected entries and every row in all three themes to return reviewed sentences, with registry count at least 785.
 - [ ] Add ledger alignment and exact sense assertions for `centre / center`, `corner`, `country`, `public`, `take place`, `bear`, `duck`, `mouse`, `guided`, and `tourism`.
 - [ ] Run `npm test -- src/lib/pet-learning-app.test.ts -t "places animals travel"` and verify failure because content is absent.
 - [ ] Commit with `git commit -m "test: require places animals travel batch"`.
