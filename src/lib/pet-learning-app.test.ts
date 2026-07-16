@@ -269,6 +269,16 @@ const ideasGrammarBatch = [
   "a.m", "among",
 ] as const;
 
+const grammarSecondBatch = [
+  "an", "and", "another", "any", "anybody", "anymore", "anyone", "anything", "anyway",
+  "anywhere", "apart", "apart from", "approximately", "around", "as", "as long as",
+  "as well", "at", "at all", "at first", "at last", "at least", "at once", "at present",
+  "away", "back", "backwards", "badly", "because of", "before", "behind", "below",
+  "beneath", "beside", "besides", "between", "beyond", "both", "but", "by", "by mistake",
+  "by name", "bye", "can", "something", "carefully", "certainly", "cheers", "clearly",
+  "completely",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -2100,6 +2110,81 @@ describe("PET Learning App", () => {
       altogether: ["There were twelve students altogether.", "altogether = 总共；总共有十二名学生。"],
       "a.m": ["The museum opens at nine a.m.", "a.m = 上午；博物馆上午九点开放。"],
       among: ["We found a quiet place among the trees.", "among = 在...之中；我们在树林中找到了一个安静的地方。"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the second grammar reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const grammarWords = words.filter((word) => word.theme === "grammar");
+    const selectedExamples = grammarSecondBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(grammarSecondBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1135);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(grammarWords).toHaveLength(338);
+    expect(
+      grammarWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(79);
+  });
+
+  it("keeps the second grammar ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/grammar-002.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("grammar-002");
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the second grammar batch", () => {
+    const expectedExamples = {
+      an: ["She ate an apple before school.", "an = 一个；她上学前吃了一个苹果。"],
+      anymore: ["We do not use that old computer anymore.", "anymore = 不再；我们不再使用那台旧电脑了。"],
+      anyway: ["It was raining, but we went for a walk anyway.", "anyway = 无论如何；虽然下雨了，但我们还是去散步了。"],
+      apart: ["The two houses are only a few metres apart.", "apart = 相距；这两栋房子只相距几米。"],
+      "apart from": ["Apart from the rain, we had a wonderful holiday.", "apart from = 除...之外；除了下雨之外，我们度过了一个美好的假期。"],
+      around: ["We walked around the lake after lunch.", "around = 绕着；午饭后我们绕着湖散步。"],
+      as: ["She works as a nurse at the local hospital.", "as = 作为；她在当地医院当护士。"],
+      "as long as": ["You can borrow my bike as long as you return it today.", "as long as = 只要；只要你今天归还，就可以借我的自行车。"],
+      "at all": ["I was not tired at all after the walk.", "at all = 一点也不；散步后我一点也不累。"],
+      away: ["The beach is only five minutes away.", "away = 相距；海滩离这里只有五分钟路程。"],
+      back: ["Please put the book back on the shelf.", "back = 回原处；请把书放回书架。"],
+      badly: ["The team played badly in the first half.", "badly = 糟糕地；球队上半场表现得很差。"],
+      besides: ["Besides English, she also speaks French.", "besides = 除...之外还；除了英语，她还会说法语。"],
+      beyond: ["The path continues beyond the bridge.", "beyond = 在...另一边；这条小路延伸到桥的另一边。"],
+      but: ["The room is small but comfortable.", "but = 但是；房间很小，但是很舒适。"],
+      by: ["We travelled to Oxford by train.", "by = 乘；我们乘火车去了牛津。"],
+      "by mistake": ["I took your bag by mistake.", "by mistake = 错误地；我不小心拿错了你的包。"],
+      "by name": ["The teacher knows every student by name.", "by name = 知道名字；老师知道每个学生的名字。"],
+      cheers: ["Cheers for helping me with the boxes.", "cheers = 谢谢；谢谢你帮我搬箱子。"],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
