@@ -5340,6 +5340,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "The movie star signed autographs outside the cinema.",
       chinese: "movie star = 电影明星；这位电影明星在电影院外签名。",
     },
+    "accommodation": {
+      focusWord: "accommodation",
+      sentence: "Our hotel provides comfortable accommodation near the beach.",
+      chinese: "accommodation = 住宿；我们的酒店在海滩附近提供舒适的住宿。",
+    },
+    "achievement": {
+      focusWord: "achievement",
+      sentence: "Finishing the race was a great achievement for Mia.",
+      chinese: "achievement = 成就；完成比赛对米娅来说是一项很大的成就。",
+    },
+    "action": {
+      focusWord: "action",
+      sentence: "The school took action to reduce plastic waste.",
+      chinese: "action = 行动；学校采取行动减少塑料垃圾。",
+    },
+    "activity": {
+      focusWord: "activity",
+      sentence: "Swimming is my favourite summer activity.",
+      chinese: "activity = 活动；游泳是我最喜欢的夏季活动。",
+    },
+    "addition": {
+      focusWord: "addition",
+      sentence: "The new sports hall is a useful addition to our school.",
+      chinese: "addition = 新增事物；新体育馆是学校一项实用的新增设施。",
+    },
+    "airconditioning": {
+      focusWord: "air conditioning",
+      sentence: "The air conditioning kept the classroom cool.",
+      chinese: "air conditioning = 空调；空调让教室保持凉爽。",
+    },
+    "ambition": {
+      focusWord: "ambition",
+      sentence: "Her ambition is to become a doctor.",
+      chinese: "ambition = 志向；她的志向是成为一名医生。",
+    },
+    "ambulance": {
+      focusWord: "ambulance",
+      sentence: "An ambulance arrived within five minutes.",
+      chinese: "ambulance = 救护车；一辆救护车在五分钟内赶到了。",
+    },
+    "appearance": {
+      focusWord: "appearance",
+      sentence: "The actor changed his appearance for the film.",
+      chinese: "appearance = 外貌；这位演员为了电影改变了自己的外貌。",
+    },
+    "appointment": {
+      focusWord: "appointment",
+      sentence: "I have a dentist appointment at two o'clock.",
+      chinese: "appointment = 预约；我预约了两点去看牙医。",
+    },
+    "argument": {
+      focusWord: "argument",
+      sentence: "They had an argument about whose turn it was.",
+      chinese: "argument = 争吵；他们为了轮到谁而争吵。",
+    },
+    "arrangement": {
+      focusWord: "arrangement",
+      sentence: "We made an arrangement to meet outside the station.",
+      chinese: "arrangement = 安排；我们安排在车站外见面。",
+    },
+    "attention": {
+      focusWord: "attention",
+      sentence: "Please pay attention to the safety instructions.",
+      chinese: "attention = 注意；请注意安全说明。",
+    },
+    "attraction": {
+      focusWord: "attraction",
+      sentence: "The castle is the town's main tourist attraction.",
+      chinese: "attraction = 景点；这座城堡是镇上主要的旅游景点。",
+    },
+    "cancel": {
+      focusWord: "cancel",
+      sentence: "They had to cancel the match because of the storm.",
+      chinese: "cancel = 取消；他们因为暴风雨不得不取消比赛。",
+    },
+    "case": {
+      focusWord: "case",
+      sentence: "In this case, taking the bus is quicker.",
+      chinese: "case = 情况；在这种情况下，乘公交车更快。",
+    },
+    "celebration": {
+      focusWord: "celebration",
+      sentence: "We had a small celebration after the exam.",
+      chinese: "celebration = 庆祝活动；考试后我们举行了一个小型庆祝活动。",
+    },
+    "celebrity": {
+      focusWord: "celebrity",
+      sentence: "A local celebrity opened the new theatre.",
+      chinese: "celebrity = 名人；一位当地名人为新剧院揭幕。",
+    },
+    "championship": {
+      focusWord: "championship",
+      sentence: "Our team won the national championship.",
+      chinese: "championship = 锦标赛；我们队赢得了全国锦标赛。",
+    },
+    "chance": {
+      focusWord: "chance",
+      sentence: "I had a chance to practise English with a visitor.",
+      chinese: "chance = 机会；我有机会和一位游客练习英语。",
+    },
+    "charity": {
+      focusWord: "charity",
+      sentence: "The concert raised money for a children's charity.",
+      chinese: "charity = 慈善机构；这场音乐会为一家儿童慈善机构筹款。",
+    },
+    "collection": {
+      focusWord: "collection",
+      sentence: "The museum has a collection of old photographs.",
+      chinese: "collection = 收藏品；博物馆收藏了一批老照片。",
+    },
+    "comment": {
+      focusWord: "comment",
+      sentence: "The teacher wrote a helpful comment on my essay.",
+      chinese: "comment = 评语；老师在我的作文上写了一条有帮助的评语。",
+    },
+    "communication": {
+      focusWord: "communication",
+      sentence: "Good communication helps the team work well together.",
+      chinese: "communication = 沟通；良好的沟通有助于团队顺利合作。",
+    },
+    "competition": {
+      focusWord: "competition",
+      sentence: "Leo entered a photography competition.",
+      chinese: "competition = 比赛；利奥参加了一场摄影比赛。",
+    },
+    "composition": {
+      focusWord: "composition",
+      sentence: "We wrote a composition about our holidays.",
+      chinese: "composition = 作文；我们写了一篇关于假期的作文。",
+    },
+    "condition": {
+      focusWord: "condition",
+      sentence: "The bicycle is old but still in good condition.",
+      chinese: "condition = 状况；这辆自行车虽然旧，但状况仍然很好。",
+    },
+    "conference": {
+      focusWord: "conference",
+      sentence: "Our teachers attended an education conference in London.",
+      chinese: "conference = 会议；我们的老师在伦敦参加了一场教育会议。",
+    },
+    "congratulations": {
+      focusWord: "congratulations",
+      sentence: "Congratulations on passing your driving test!",
+      chinese: "congratulations = 祝贺；祝贺你通过驾驶考试！",
+    },
+    "connection": {
+      focusWord: "connection",
+      sentence: "There is a direct train connection between the two cities.",
+      chinese: "connection = 交通连接；这两座城市之间有直达列车相连。",
+    },
+    "correction": {
+      focusWord: "correction",
+      sentence: "Please make this correction before you print the poster.",
+      chinese: "correction = 改正；打印海报前请改正这个地方。",
+    },
+    "dancer": {
+      focusWord: "dancer",
+      sentence: "The dancer practised every morning before the show.",
+      chinese: "dancer = 舞者；这位舞者在演出前每天早上练习。",
+    },
+    "defence": {
+      focusWord: "defence",
+      sentence: "The team worked hard in defence during the second half.",
+      chinese: "defence = 防守；球队在下半场努力防守。",
+    },
+    "department": {
+      focusWord: "department",
+      sentence: "You can find tents in the camping department.",
+      chinese: "department = 部门；你可以在露营用品部门找到帐篷。",
+    },
+    "destination": {
+      focusWord: "destination",
+      sentence: "Paris was the final destination on our trip.",
+      chinese: "destination = 目的地；巴黎是我们旅程的最终目的地。",
+    },
+    "development": {
+      focusWord: "development",
+      sentence: "This course supports the development of practical skills.",
+      chinese: "development = 发展；这门课程有助于发展实用技能。",
+    },
+    "difference": {
+      focusWord: "difference",
+      sentence: "There is a big difference between the two pictures.",
+      chinese: "difference = 区别；这两幅图片之间有很大区别。",
+    },
+    "disappointment": {
+      focusWord: "disappointment",
+      sentence: "Missing the final was a great disappointment.",
+      chinese: "disappointment = 失望之事；错过决赛是一件非常令人失望的事。",
+    },
+    "distance": {
+      focusWord: "distance",
+      sentence: "The distance from our house to school is two kilometres.",
+      chinese: "distance = 距离；从我们家到学校的距离是两公里。",
+    },
+    "documentary": {
+      focusWord: "documentary",
+      sentence: "We watched a documentary about ocean wildlife.",
+      chinese: "documentary = 纪录片；我们看了一部关于海洋野生动物的纪录片。",
+    },
+    "drivinglicence": {
+      focusWord: "driving licence",
+      sentence: "You need a driving licence to rent this car.",
+      chinese: "driving licence = 驾驶执照；租这辆车需要驾驶执照。",
+    },
+    "election": {
+      focusWord: "election",
+      sentence: "Students voted for their class representative in the election.",
+      chinese: "election = 选举；学生们在选举中投票选出班级代表。",
+    },
+    "electricity": {
+      focusWord: "electricity",
+      sentence: "The storm cut off the electricity for an hour.",
+      chinese: "electricity = 电力；暴风雨导致停电一小时。",
+    },
+    "elementary": {
+      focusWord: "elementary",
+      sentence: "The course teaches elementary French.",
+      chinese: "elementary = 初级的；这门课程教授初级法语。",
+    },
+    "employment": {
+      focusWord: "employment",
+      sentence: "The new factory will provide employment for local people.",
+      chinese: "employment = 就业机会；新工厂将为当地人提供就业机会。",
+    },
+    "entertainment": {
+      focusWord: "entertainment",
+      sentence: "The hotel offers live entertainment every evening.",
+      chinese: "entertainment = 娱乐表演；这家酒店每晚都有现场娱乐表演。",
+    },
+    "excitement": {
+      focusWord: "excitement",
+      sentence: "The children shouted with excitement when the band appeared.",
+      chinese: "excitement = 兴奋；乐队出现时，孩子们兴奋地叫了起来。",
+    },
+    "exhibition": {
+      focusWord: "exhibition",
+      sentence: "The gallery is holding an exhibition of student art.",
+      chinese: "exhibition = 展览；这家画廊正在举办学生艺术展。",
+    },
+    "expedition": {
+      focusWord: "expedition",
+      sentence: "They joined an expedition to study animals in the rainforest.",
+      chinese: "expedition = 探险考察；他们参加了一次研究雨林动物的探险考察。",
+    },
+    "experience": {
+      focusWord: "experience",
+      sentence: "Working at the cafe gave her useful experience.",
+      chinese: "experience = 经验；在咖啡馆工作给了她有用的经验。",
+    },
   };
 }
 
