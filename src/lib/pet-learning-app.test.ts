@@ -279,6 +279,15 @@ const grammarSecondBatch = [
   "completely",
 ] as const;
 
+const grammarThirdBatch = [
+  "could", "curiously", "definitely", "despite", "directly", "do", "down", "dozen",
+  "due to", "during", "each", "easily", "either", "else", "enough", "especially", "even",
+  "even though", "ever", "every", "everybody", "everyone", "everything", "everywhere",
+  "exactly", "except", "extremely", "fairly", "far", "few", "finally", "for", "forever",
+  "fortunately", "forward", "frequently", "from", "fully", "further", "generally",
+  "goodbye", "happily", "hardly", "have", "he", "hello", "her", "here", "hers", "herself",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -2186,6 +2195,82 @@ describe("PET Learning App", () => {
       "by mistake": ["I took your bag by mistake.", "by mistake = 错误地；我不小心拿错了你的包。"],
       "by name": ["The teacher knows every student by name.", "by name = 知道名字；老师知道每个学生的名字。"],
       cheers: ["Cheers for helping me with the boxes.", "cheers = 谢谢；谢谢你帮我搬箱子。"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the third grammar reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const grammarWords = words.filter((word) => word.theme === "grammar");
+    const selectedExamples = grammarThirdBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(grammarThirdBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1185);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(grammarWords).toHaveLength(338);
+    expect(
+      grammarWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(129);
+  });
+
+  it("keeps the third grammar ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/grammar-003.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("grammar-003");
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the third grammar batch", () => {
+    const expectedExamples = {
+      could: ["Could you open the window, please?", "could = 可以；请问你可以打开窗户吗？"],
+      despite: ["Despite the rain, we enjoyed the picnic.", "despite = 尽管；尽管下雨，我们还是很享受野餐。"],
+      directly: ["The bus goes directly from the airport to the city centre.", "directly = 直接地；这趟公交车从机场直达市中心。"],
+      down: ["She walked down the stairs slowly.", "down = 向下；她慢慢走下楼梯。"],
+      dozen: ["We bought a dozen eggs at the market.", "dozen = 一打；我们在市场买了一打鸡蛋。"],
+      "due to": ["The train was late due to heavy snow.", "due to = 由于；火车由于大雪而晚点。"],
+      either: ["You can choose either the blue shirt or the green one.", "either = 任一；你可以选择蓝衬衫或绿衬衫中的任意一件。"],
+      even: ["Even my little brother can solve this puzzle.", "even = 甚至；甚至我弟弟也能解开这个谜题。"],
+      "even though": ["Even though she was tired, she finished her homework.", "even though = 尽管；尽管她很累，还是完成了家庭作业。"],
+      ever: ["Have you ever visited Scotland?", "ever = 曾经；你曾经去过苏格兰吗？"],
+      except: ["Everyone came to the meeting except Sam.", "except = 除...之外；除了萨姆，每个人都来参加会议了。"],
+      fairly: ["The test was fairly easy.", "fairly = 相当；这次考试相当容易。"],
+      far: ["How far is the station from here?", "far = 多远；车站离这里有多远？"],
+      few: ["Only a few students chose the early class.", "few = 少数；只有少数学生选择了早课。"],
+      forward: ["Please step forward when your name is called.", "forward = 向前；叫到你的名字时请向前一步。"],
+      fully: ["The hotel is fully booked this weekend.", "fully = 完全地；这家酒店本周末已经全部订满。"],
+      further: ["For further information, visit our website.", "further = 更多的；如需更多信息，请访问我们的网站。"],
+      hardly: ["I could hardly hear the announcement.", "hardly = 几乎不；我几乎听不见广播。"],
+      hers: ["This blue jacket is hers.", "hers = 她的；这件蓝色夹克是她的。"],
+      herself: ["Maya made the cake herself.", "herself = 她亲自；玛雅亲自做了蛋糕。"],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
