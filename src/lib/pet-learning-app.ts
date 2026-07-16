@@ -5590,6 +5590,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "Working at the cafe gave her useful experience.",
       chinese: "experience = 经验；在咖啡馆工作给了她有用的经验。",
     },
+    "experienced": {
+      focusWord: "experienced",
+      sentence: "We need an experienced guide for the mountain walk.",
+      chinese: "experienced = 有经验的；这次山间徒步需要一位有经验的向导。",
+    },
+    "explanation": {
+      focusWord: "explanation",
+      sentence: "Her explanation made the difficult rule easy to understand.",
+      chinese: "explanation = 解释；她的解释让这条复杂的规则变得容易理解。",
+    },
+    "fiction": {
+      focusWord: "fiction",
+      sentence: "This story is fiction, but it feels realistic.",
+      chinese: "fiction = 虚构故事；这个故事是虚构的，但感觉很真实。",
+    },
+    "fitness": {
+      focusWord: "fitness",
+      sentence: "Cycling to school has improved my fitness.",
+      chinese: "fitness = 体能；骑自行车上学提高了我的体能。",
+    },
+    "friendship": {
+      focusWord: "friendship",
+      sentence: "Their friendship began on the first day of school.",
+      chinese: "friendship = 友谊；他们的友谊始于开学第一天。",
+    },
+    "generation": {
+      focusWord: "generation",
+      sentence: "People of my grandparents' generation wrote more letters.",
+      chinese: "generation = 一代人；我祖父母那一代人写更多书信。",
+    },
+    "glance": {
+      focusWord: "glance",
+      sentence: "I took a quick glance at the timetable.",
+      chinese: "glance = 一瞥；我快速看了一眼时间表。",
+    },
+    "graduation": {
+      focusWord: "graduation",
+      sentence: "Her family came to the graduation ceremony.",
+      chinese: "graduation = 毕业典礼；她的家人来参加毕业典礼。",
+    },
+    "happiness": {
+      focusWord: "happiness",
+      sentence: "Spending time with friends brings me happiness.",
+      chinese: "happiness = 快乐；和朋友共度时光给我带来快乐。",
+    },
+    "identification": {
+      focusWord: "identification",
+      sentence: "You must show identification before entering the building.",
+      chinese: "identification = 身份证明；进入大楼前必须出示身份证明。",
+    },
+    "illness": {
+      focusWord: "illness",
+      sentence: "He missed two weeks of school because of an illness.",
+      chinese: "illness = 疾病；他因为生病缺了两周课。",
+    },
+    "immigration": {
+      focusWord: "immigration",
+      sentence: "The museum has an exhibition about immigration to the city.",
+      chinese: "immigration = 移民；博物馆有一个关于移民来到这座城市的展览。",
+    },
+    "importance": {
+      focusWord: "importance",
+      sentence: "The coach explained the importance of regular practice.",
+      chinese: "importance = 重要性；教练解释了定期训练的重要性。",
+    },
+    "improvement": {
+      focusWord: "improvement",
+      sentence: "There has been a clear improvement in her pronunciation.",
+      chinese: "improvement = 进步；她的发音有了明显进步。",
+    },
+    "inadvance": {
+      focusWord: "in advance",
+      sentence: "Book your tickets in advance to get a lower price.",
+      chinese: "in advance = 提前；提前订票可以获得更低的价格。",
+    },
+    "incase": {
+      focusWord: "in case",
+      sentence: "Take an umbrella in case it rains later.",
+      chinese: "in case = 以防；带把伞，以防稍后下雨。",
+    },
+    "influence": {
+      focusWord: "influence",
+      sentence: "Music has a strong influence on his paintings.",
+      chinese: "influence = 影响；音乐对他的绘画有很大影响。",
+    },
+    "information": {
+      focusWord: "information",
+      sentence: "The website provides useful information about the course.",
+      chinese: "information = 信息；这个网站提供有关课程的实用信息。",
+    },
+    "instance": {
+      focusWord: "instance",
+      sentence: "For instance, you could travel by train instead.",
+      chinese: "instance = 例子；例如，你可以改乘火车。",
+    },
+    "instructions": {
+      focusWord: "instructions",
+      sentence: "Read the instructions before using the machine.",
+      chinese: "instructions = 使用说明；使用机器前请阅读说明。",
+    },
+    "instrument": {
+      focusWord: "instrument",
+      sentence: "The piano was the first instrument she learned to play.",
+      chinese: "instrument = 乐器；钢琴是她学会演奏的第一种乐器。",
+    },
+    "introduction": {
+      focusWord: "introduction",
+      sentence: "The book begins with a short introduction to the subject.",
+      chinese: "introduction = 导论；这本书以一段简短的主题导论开篇。",
+    },
+    "invention": {
+      focusWord: "invention",
+      sentence: "The bicycle was an important invention.",
+      chinese: "invention = 发明；自行车是一项重要发明。",
+    },
+    "invitation": {
+      focusWord: "invitation",
+      sentence: "I received an invitation to Maya's birthday party.",
+      chinese: "invitation = 邀请函；我收到了玛雅生日聚会的邀请函。",
+    },
+    "licence": {
+      focusWord: "licence",
+      sentence: "The restaurant has a licence to serve food outdoors.",
+      chinese: "licence = 许可证；这家餐厅有在户外供应食物的许可证。",
+    },
+    "matter": {
+      focusWord: "matter",
+      sentence: "We discussed the matter after class.",
+      chinese: "matter = 事情；我们课后讨论了这件事。",
+    },
+    "membership": {
+      focusWord: "membership",
+      sentence: "Gym membership costs twenty pounds a month.",
+      chinese: "membership = 会员资格；健身房会员资格每月收费二十英镑。",
+    },
+    "method": {
+      focusWord: "method",
+      sentence: "This method makes new words easier to remember.",
+      chinese: "method = 方法；这种方法让新单词更容易记住。",
+    },
+    "moment": {
+      focusWord: "moment",
+      sentence: "Please wait a moment while I check your booking.",
+      chinese: "moment = 片刻；请稍等片刻，我查看一下你的预订。",
+    },
+    "monument": {
+      focusWord: "monument",
+      sentence: "The monument was built to remember local soldiers.",
+      chinese: "monument = 纪念碑；这座纪念碑是为纪念当地士兵而建的。",
+    },
+    "nationality": {
+      focusWord: "nationality",
+      sentence: "The form asks for your name and nationality.",
+      chinese: "nationality = 国籍；表格要求填写你的姓名和国籍。",
+    },
+    "occupation": {
+      focusWord: "occupation",
+      sentence: "Please write your occupation on the application form.",
+      chinese: "occupation = 职业；请在申请表上填写你的职业。",
+    },
+    "operation": {
+      focusWord: "operation",
+      sentence: "My grandfather is recovering after his knee operation.",
+      chinese: "operation = 手术；我祖父做完膝盖手术后正在康复。",
+    },
+    "opportunity": {
+      focusWord: "opportunity",
+      sentence: "The school trip gave us an opportunity to practise French.",
+      chinese: "opportunity = 机会；学校旅行给了我们练习法语的机会。",
+    },
+    "option": {
+      focusWord: "option",
+      sentence: "Taking the early train is our best option.",
+      chinese: "option = 选择；乘早班火车是我们最好的选择。",
+    },
+    "organisation": {
+      focusWord: "organisation",
+      sentence: "She works for an organisation that protects wildlife.",
+      chinese: "organisation = 组织；她为一个保护野生动物的组织工作。",
+    },
+    "pavement": {
+      focusWord: "pavement",
+      sentence: "Keep your bicycle off the pavement.",
+      chinese: "pavement = 人行道；不要在人行道上骑自行车。",
+    },
+    "pence": {
+      focusWord: "pence",
+      sentence: "The postcard cost ninety pence.",
+      chinese: "pence = 便士；这张明信片售价九十便士。",
+    },
+    "performance": {
+      focusWord: "performance",
+      sentence: "The audience enjoyed the band's final performance.",
+      chinese: "performance = 演出；观众很喜欢乐队的最后一场演出。",
+    },
+    "pity": {
+      focusWord: "pity",
+      sentence: "It is a pity that you cannot come with us.",
+      chinese: "pity = 遗憾；你不能和我们一起来，真遗憾。",
+    },
+    "population": {
+      focusWord: "population",
+      sentence: "The town has a population of about twenty thousand.",
+      chinese: "population = 人口；这个镇大约有两万人口。",
+    },
+    "position": {
+      focusWord: "position",
+      sentence: "Move the chair into a more comfortable position.",
+      chinese: "position = 位置；把椅子移到一个更舒适的位置。",
+    },
+    "possibility": {
+      focusWord: "possibility",
+      sentence: "There is a possibility that the flight will be delayed.",
+      chinese: "possibility = 可能性；航班有可能延误。",
+    },
+    "power": {
+      focusWord: "power",
+      sentence: "The storm left the village without power.",
+      chinese: "power = 电力；暴风雨导致村庄停电。",
+    },
+    "preparation": {
+      focusWord: "preparation",
+      sentence: "Good preparation helped us finish the project on time.",
+      chinese: "preparation = 准备；充分的准备帮助我们按时完成项目。",
+    },
+    "prescription": {
+      focusWord: "prescription",
+      sentence: "The doctor gave me a prescription for some medicine.",
+      chinese: "prescription = 处方；医生给我开了一张药物处方。",
+    },
+    "presentation": {
+      focusWord: "presentation",
+      sentence: "Nina gave a presentation about climate change.",
+      chinese: "presentation = 演讲；尼娜做了一场关于气候变化的演讲。",
+    },
+    "production": {
+      focusWord: "production",
+      sentence: "The factory increased its production of bicycles.",
+      chinese: "production = 产量；这家工厂提高了自行车产量。",
+    },
+    "qualification": {
+      focusWord: "qualification",
+      sentence: "A teaching qualification is required for this job.",
+      chinese: "qualification = 资格证书；这份工作要求具备教师资格证书。",
+    },
+    "quality": {
+      focusWord: "quality",
+      sentence: "The quality of the food was excellent.",
+      chinese: "quality = 质量；食物的质量非常好。",
+    },
   };
 }
 
