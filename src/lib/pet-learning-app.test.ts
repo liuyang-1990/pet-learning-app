@@ -247,6 +247,17 @@ const ideasFirstBatch = [
   "excitement", "exhibition", "expedition", "experience",
 ] as const;
 
+const ideasSecondBatch = [
+  "experienced", "explanation", "fiction", "fitness", "friendship", "generation", "glance",
+  "graduation", "happiness", "identification", "illness", "immigration", "importance",
+  "improvement", "in advance", "in case", "influence", "information", "instance",
+  "instructions", "instrument", "introduction", "invention", "invitation", "licence", "matter",
+  "membership", "method", "moment", "monument", "nationality", "occupation", "operation",
+  "opportunity", "option", "organisation", "pavement", "pence", "performance", "pity",
+  "population", "position", "possibility", "power", "preparation", "prescription", "presentation",
+  "production", "qualification", "quality",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -1923,6 +1934,78 @@ describe("PET Learning App", () => {
       entertainment: ["The hotel offers live entertainment every evening.", "entertainment = 娱乐表演；这家酒店每晚都有现场娱乐表演。"],
       expedition: ["They joined an expedition to study animals in the rainforest.", "expedition = 探险考察；他们参加了一次研究雨林动物的探险考察。"],
       experience: ["Working at the cafe gave her useful experience.", "experience = 经验；在咖啡馆工作给了她有用的经验。"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the second ideas reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const ideasWords = words.filter((word) => word.theme === "ideas");
+    const selectedExamples = ideasSecondBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(ideasSecondBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples())).toHaveLength(1035);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(ideasWords).toHaveLength(133);
+    expect(ideasWords.filter((word) => getWordExample(word).sentence !== null)).toHaveLength(108);
+  });
+
+  it("keeps the second ideas ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/ideas-002.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("ideas-002");
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the second ideas batch", () => {
+    const expectedExamples = {
+      fiction: ["This story is fiction, but it feels realistic.", "fiction = 虚构故事；这个故事是虚构的，但感觉很真实。"],
+      fitness: ["Cycling to school has improved my fitness.", "fitness = 体能；骑自行车上学提高了我的体能。"],
+      generation: ["People of my grandparents' generation wrote more letters.", "generation = 一代人；我祖父母那一代人写更多书信。"],
+      identification: ["You must show identification before entering the building.", "identification = 身份证明；进入大楼前必须出示身份证明。"],
+      "in advance": ["Book your tickets in advance to get a lower price.", "in advance = 提前；提前订票可以获得更低的价格。"],
+      "in case": ["Take an umbrella in case it rains later.", "in case = 以防；带把伞，以防稍后下雨。"],
+      instance: ["For instance, you could travel by train instead.", "instance = 例子；例如，你可以改乘火车。"],
+      instrument: ["The piano was the first instrument she learned to play.", "instrument = 乐器；钢琴是她学会演奏的第一种乐器。"],
+      matter: ["We discussed the matter after class.", "matter = 事情；我们课后讨论了这件事。"],
+      occupation: ["Please write your occupation on the application form.", "occupation = 职业；请在申请表上填写你的职业。"],
+      operation: ["My grandfather is recovering after his knee operation.", "operation = 手术；我祖父做完膝盖手术后正在康复。"],
+      option: ["Taking the early train is our best option.", "option = 选择；乘早班火车是我们最好的选择。"],
+      performance: ["The audience enjoyed the band's final performance.", "performance = 演出；观众很喜欢乐队的最后一场演出。"],
+      power: ["The storm left the village without power.", "power = 电力；暴风雨导致村庄停电。"],
+      presentation: ["Nina gave a presentation about climate change.", "presentation = 演讲；尼娜做了一场关于气候变化的演讲。"],
+      production: ["The factory increased its production of bicycles.", "production = 产量；这家工厂提高了自行车产量。"],
+      qualification: ["A teaching qualification is required for this job.", "qualification = 资格证书；这份工作要求具备教师资格证书。"],
+      quality: ["The quality of the food was excellent.", "quality = 质量；食物的质量非常好。"],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
