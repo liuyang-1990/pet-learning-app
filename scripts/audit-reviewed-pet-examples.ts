@@ -134,6 +134,23 @@ const manuallyConfirmedTerms = new Set([
   "by", // travelling by means of a train
   "certainly", // definitely / certainly
   "cheers", // informal British thanks, not a toast
+  // These third-batch grammar examples use valid contextual senses or Chinese synonyms.
+  "definitely", // definitely / certainly
+  "dozen", // exactly twelve, expressed as 一打
+  "either", // either one of two choices
+  "else", // something additional, not "otherwise"
+  "eventhough", // although / even though
+  "everybody", // everybody / everyone
+  "everyone", // everyone / each person
+  "exactly", // at precisely ten o'clock
+  "extremely", // extremely / very
+  "fairly", // moderately / quite, not in a fair manner
+  "few", // a small number of students
+  "finally", // eventually / at last
+  "frequently", // at short intervals / frequently
+  "from", // the starting point of a journey
+  "further", // additional information, not greater distance
+  "generally", // usually / in general
   // These transport and travel examples use valid synonyms or contextual senses.
   "bus", // bus / public bus
   "flight", // scheduled flight, not flight in general
