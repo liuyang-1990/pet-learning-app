@@ -226,6 +226,16 @@ const timeNumbersBatch = [
   "half-price", "in half", "in two", "litre", "million", "single", "size", "square", "weight",
 ] as const;
 
+const communicationSmallThemesBatch = [
+  "base on", "be over", "break down", "break in", "break up", "call for", "call in",
+  "check in", "check out", "chill out", "cross out", "cut up", "deal with", "fill in",
+  "fill up", "hang out", "hang up", "knock down", "lie down", "pass on", "recommend",
+  "review", "say", "sentence", "sit down", "speak", "split up", "talk", "tell", "thank",
+  "thank you", "throw away", "tidy up", "understand", "wake up", "wash up", "word",
+  "no one", "shape", "politics", "relationship", "rule", "society", "trade", "traditional",
+  "theatre", "main course", "of course", "studies", "movie star",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -1749,6 +1759,95 @@ describe("PET Learning App", () => {
       sentence: "A square has four equal sides.",
       chinese: "square = 正方形；正方形有四条相等的边。",
     });
+  });
+
+  it("adds the reviewed communication small themes batch and completes six themes", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const completedThemes = [
+      ["communication", 70],
+      ["numbers", 32],
+      ["society", 20],
+      ["entertainment", 54],
+      ["school", 21],
+      ["nature", 47],
+    ] as const;
+    const selectedExamples = communicationSmallThemesBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(communicationSmallThemesBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(935);
+    expect(selectedExamples.map((example) => example.sentence).filter(Boolean)).toHaveLength(50);
+    for (const [theme, expectedCount] of completedThemes) {
+      const themeWords = words.filter((word) => word.theme === theme);
+      expect(themeWords).toHaveLength(expectedCount);
+      expect(themeWords.every((word) => getWordExample(word).sentence !== null)).toBe(true);
+    }
+    expect(getWordExample({ term: "check-in", chineseGloss: "报到；签到" })).toMatchObject({
+      focusWord: "check-in",
+      sentence: null,
+      chinese: "check-in = 报到；签到",
+    });
+    expect(getWordExample({ term: "checkout", chineseGloss: "结帐台；检验" })).toMatchObject({
+      focusWord: "checkout",
+      sentence: null,
+      chinese: "checkout = 结帐台；检验",
+    });
+    expect(getWordExample({ term: "workout", chineseGloss: "锻炼；训练" })).toMatchObject({
+      focusWord: "workout",
+      sentence: null,
+      chinese: "workout = 锻炼；训练",
+    });
+  });
+
+  it("keeps the communication small themes ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/communication-small-themes-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended communication small themes senses for ambiguous terms", () => {
+    const expectedExamples = {
+      "base on": ["Base your answer on information in the text.", "base on = 以...为依据；根据课文中的信息回答。"],
+      "break down": ["Our car broke down on the way to the airport.", "break down = 出故障；我们的汽车在去机场的路上坏了。"],
+      "break up": ["Mia and Ben decided to break up.", "break up = 分手；米娅和本决定分手。"],
+      "check in": ["We need to check in at the hotel before six.", "check in = 办理入住；我们需要在六点前到酒店办理入住。"],
+      "check out": ["Guests must check out of the hotel by eleven.", "check out = 退房；客人必须在十一点前退房。"],
+      "hang up": ["Do not hang up until I find the address.", "hang up = 挂断电话；在我找到地址前别挂电话。"],
+      "split up": ["The teacher split us up into four groups.", "split up = 分组；老师把我们分成了四组。"],
+      shape: ["The table is round in shape.", "shape = 形状；这张桌子的形状是圆的。"],
+      rule: ["Our school has a rule against using phones in class.", "rule = 规则；我们学校规定课堂上不能使用手机。"],
+      trade: ["Trade between the two countries has increased.", "trade = 贸易；两国之间的贸易增加了。"],
+      "main course": ["I chose fish and rice for my main course.", "main course = 主菜；我选择鱼和米饭作为主菜。"],
+      studies: ["Her studies take up most of her week.", "studies = 学业；她的学业占去了她一周的大部分时间。"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
   });
 
   it("never presents unreviewed generated text as a natural PET example", () => {

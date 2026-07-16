@@ -84,6 +84,15 @@ const manuallyConfirmedTerms = new Set([
   // These technology and communication examples use valid Chinese synonyms.
   "phone", // phone / mobile phone
   "detail", // detail / detailed information
+  // These communication examples use valid contextual senses or Chinese synonyms.
+  "baseon", // use information as the basis for an answer
+  "breakdown", // a car stops working, not an emotional collapse
+  "chillout", // relax, not only calm down
+  "knockdown", // demolish a wall, not knock over a person
+  "passon", // relay a message
+  "review", // study notes again, not write a critical review
+  "understand", // understand / comprehend
+  "studies", // school or university work, not research projects
   // These transport and travel examples use valid synonyms or contextual senses.
   "bus", // bus / public bus
   "flight", // scheduled flight, not flight in general

@@ -5090,14 +5090,270 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "The maximum weight for this bag is ten kilograms.",
       chinese: "weight = 重量；这个包的最大重量是十千克。",
     },
+    baseon: {
+      focusWord: "base on",
+      sentence: "Base your answer on information in the text.",
+      chinese: "base on = 以...为依据；根据课文中的信息回答。",
+    },
+    beover: {
+      focusWord: "be over",
+      sentence: "The lesson will be over at three thirty.",
+      chinese: "be over = 结束；这节课三点半结束。",
+    },
+    breakdown: {
+      focusWord: "break down",
+      sentence: "Our car broke down on the way to the airport.",
+      chinese: "break down = 出故障；我们的汽车在去机场的路上坏了。",
+    },
+    breakin: {
+      focusWord: "break in",
+      sentence: "Someone tried to break in through the kitchen window.",
+      chinese: "break in = 闯入；有人试图从厨房窗户闯进来。",
+    },
+    breakup: {
+      focusWord: "break up",
+      sentence: "Mia and Ben decided to break up.",
+      chinese: "break up = 分手；米娅和本决定分手。",
+    },
+    callfor: {
+      focusWord: "call for",
+      sentence: "The injured walker called for help.",
+      chinese: "call for = 呼救；受伤的徒步者大声呼救。",
+    },
+    callin: {
+      focusWord: "call in",
+      sentence: "Sam had to call in sick this morning.",
+      chinese: "call in = 打电话通知；萨姆今天早上不得不打电话请病假。",
+    },
+    checkin: {
+      focusWord: "check in",
+      sentence: "We need to check in at the hotel before six.",
+      chinese: "check in = 办理入住；我们需要在六点前到酒店办理入住。",
+    },
+    checkout: {
+      focusWord: "check out",
+      sentence: "Guests must check out of the hotel by eleven.",
+      chinese: "check out = 退房；客人必须在十一点前退房。",
+    },
+    chillout: {
+      focusWord: "chill out",
+      sentence: "I like to chill out with music after school.",
+      chinese: "chill out = 放松；放学后我喜欢听音乐放松。",
+    },
+    crossout: {
+      focusWord: "cross out",
+      sentence: "Cross out the word that does not belong.",
+      chinese: "cross out = 划掉；划掉不属于这一组的单词。",
+    },
+    cutup: {
+      focusWord: "cut up",
+      sentence: "Cut up the vegetables before adding them to the soup.",
+      chinese: "cut up = 切碎；把蔬菜切碎后再放进汤里。",
+    },
+    dealwith: {
+      focusWord: "deal with",
+      sentence: "We need to deal with this problem today.",
+      chinese: "deal with = 处理；我们今天需要处理这个问题。",
+    },
+    fillin: {
+      focusWord: "fill in",
+      sentence: "Please fill in every box on the form.",
+      chinese: "fill in = 填写；请填写表格上的每一栏。",
+    },
+    fillup: {
+      focusWord: "fill up",
+      sentence: "Fill up your water bottle before the walk.",
+      chinese: "fill up = 装满；徒步前把你的水瓶装满。",
+    },
+    hangout: {
+      focusWord: "hang out",
+      sentence: "We often hang out at the sports centre.",
+      chinese: "hang out = 闲逛；我们经常在体育中心一起消磨时间。",
+    },
+    hangup: {
+      focusWord: "hang up",
+      sentence: "Do not hang up until I find the address.",
+      chinese: "hang up = 挂断电话；在我找到地址前别挂电话。",
+    },
+    knockdown: {
+      focusWord: "knock down",
+      sentence: "The builders knocked down the old wall.",
+      chinese: "knock down = 拆除；建筑工人拆掉了那面旧墙。",
+    },
+    liedown: {
+      focusWord: "lie down",
+      sentence: "You should lie down if you feel dizzy.",
+      chinese: "lie down = 躺下；如果你感到头晕，就应该躺下。",
+    },
+    passon: {
+      focusWord: "pass on",
+      sentence: "Please pass on this message to your sister.",
+      chinese: "pass on = 转告；请把这条消息转告给你妹妹。",
+    },
+    recommend: {
+      focusWord: "recommend",
+      sentence: "I recommend the vegetable soup at this cafe.",
+      chinese: "recommend = 推荐；我推荐这家咖啡馆的蔬菜汤。",
+    },
+    review: {
+      focusWord: "review",
+      sentence: "Review your notes before the test.",
+      chinese: "review = 复习；考试前复习你的笔记。",
+    },
+    say: {
+      focusWord: "say",
+      sentence: "Please say your name clearly.",
+      chinese: "say = 说；请清楚地说出你的名字。",
+    },
+    sentence: {
+      focusWord: "sentence",
+      sentence: "Write one sentence about the picture.",
+      chinese: "sentence = 句子；写一个描述这幅图片的句子。",
+    },
+    sitdown: {
+      focusWord: "sit down",
+      sentence: "Please sit down beside your partner.",
+      chinese: "sit down = 坐下；请坐在你的搭档旁边。",
+    },
+    speak: {
+      focusWord: "speak",
+      sentence: "Could you speak more slowly, please?",
+      chinese: "speak = 说话；请问你能说慢一点吗？",
+    },
+    splitup: {
+      focusWord: "split up",
+      sentence: "The teacher split us up into four groups.",
+      chinese: "split up = 分组；老师把我们分成了四组。",
+    },
+    talk: {
+      focusWord: "talk",
+      sentence: "We need to talk about tomorrow's trip.",
+      chinese: "talk = 交谈；我们需要谈谈明天的旅行。",
+    },
+    tell: {
+      focusWord: "tell",
+      sentence: "Tell me what happened after the match.",
+      chinese: "tell = 告诉；告诉我比赛后发生了什么。",
+    },
+    thank: {
+      focusWord: "thank",
+      sentence: "I wrote to thank her for the present.",
+      chinese: "thank = 感谢；我写信感谢她送的礼物。",
+    },
+    thankyou: {
+      focusWord: "thank you",
+      sentence: "Thank you for helping me carry the boxes.",
+      chinese: "thank you = 谢谢；谢谢你帮我搬这些箱子。",
+    },
+    throwaway: {
+      focusWord: "throw away",
+      sentence: "Do not throw away bottles that can be recycled.",
+      chinese: "throw away = 扔掉；不要扔掉可以回收的瓶子。",
+    },
+    tidyup: {
+      focusWord: "tidy up",
+      sentence: "Please tidy up your room before dinner.",
+      chinese: "tidy up = 整理；晚饭前请整理好你的房间。",
+    },
+    understand: {
+      focusWord: "understand",
+      sentence: "I understand the question now.",
+      chinese: "understand = 理解；我现在明白这个问题了。",
+    },
+    wakeup: {
+      focusWord: "wake up",
+      sentence: "I usually wake up before my alarm rings.",
+      chinese: "wake up = 醒来；我通常在闹钟响之前醒来。",
+    },
+    washup: {
+      focusWord: "wash up",
+      sentence: "I will wash up after we finish dinner.",
+      chinese: "wash up = 洗餐具；我们吃完晚饭后我来洗餐具。",
+    },
+    word: {
+      focusWord: "word",
+      sentence: "Look up the new word in your dictionary.",
+      chinese: "word = 单词；在字典里查一下这个新单词。",
+    },
+    noone: {
+      focusWord: "no one",
+      sentence: "No one knew the answer to the final question.",
+      chinese: "no one = 没有人；没有人知道最后一个问题的答案。",
+    },
+    shape: {
+      focusWord: "shape",
+      sentence: "The table is round in shape.",
+      chinese: "shape = 形状；这张桌子的形状是圆的。",
+    },
+    politics: {
+      focusWord: "politics",
+      sentence: "Her brother studies politics at university.",
+      chinese: "politics = 政治学；她哥哥在大学学习政治学。",
+    },
+    relationship: {
+      focusWord: "relationship",
+      sentence: "I have a good relationship with my neighbours.",
+      chinese: "relationship = 关系；我和邻居关系很好。",
+    },
+    rule: {
+      focusWord: "rule",
+      sentence: "Our school has a rule against using phones in class.",
+      chinese: "rule = 规则；我们学校规定课堂上不能使用手机。",
+    },
+    society: {
+      focusWord: "society",
+      sentence: "Education is important for the whole society.",
+      chinese: "society = 社会；教育对整个社会都很重要。",
+    },
+    trade: {
+      focusWord: "trade",
+      sentence: "Trade between the two countries has increased.",
+      chinese: "trade = 贸易；两国之间的贸易增加了。",
+    },
+    traditional: {
+      focusWord: "traditional",
+      sentence: "The dancers wore traditional clothing.",
+      chinese: "traditional = 传统的；舞者们穿着传统服装。",
+    },
+    theatre: {
+      focusWord: "theatre",
+      sentence: "We watched a comedy at the theatre.",
+      chinese: "theatre = 剧院；我们在剧院看了一部喜剧。",
+    },
+    maincourse: {
+      focusWord: "main course",
+      sentence: "I chose fish and rice for my main course.",
+      chinese: "main course = 主菜；我选择鱼和米饭作为主菜。",
+    },
+    ofcourse: {
+      focusWord: "of course",
+      sentence: "Of course you can borrow my dictionary.",
+      chinese: "of course = 当然；你当然可以借我的字典。",
+    },
+    studies: {
+      focusWord: "studies",
+      sentence: "Her studies take up most of her week.",
+      chinese: "studies = 学业；她的学业占去了她一周的大部分时间。",
+    },
+    moviestar: {
+      focusWord: "movie star",
+      sentence: "The movie star signed autographs outside the cinema.",
+      chinese: "movie star = 电影明星；这位电影明星在电影院外签名。",
+    },
   };
 }
+
+const reviewedExampleKeyOverrides: Record<string, string> = {
+  workout: "workoutnoun",
+  "check-in": "checkinnoun",
+  checkout: "checkoutnoun",
+};
 
 export function getWordExample(word: VocabularyItem): WordExample {
   const examples = getReviewedWordExamples();
   const term = cleanExampleTerm(word.term);
-  const key = normalizeSpokenText(term);
-  const reviewed = term.toLowerCase() === "workout" ? undefined : examples[key];
+  const key = reviewedExampleKeyOverrides[term.toLowerCase()] ?? normalizeSpokenText(term);
+  const reviewed = examples[key];
   const audit = reviewedWordExampleAudit[key as keyof typeof reviewedWordExampleAudit];
 
   if (reviewed) {
