@@ -1,0 +1,306 @@
+{
+  "batchId": "grammar-002",
+  "status": "promoted",
+  "entries": [
+    {
+      "term": "an",
+      "focusWord": "an",
+      "sentence": "She ate an apple before school.",
+      "chinese": "an = 一个；她上学前吃了一个苹果。"
+    },
+    {
+      "term": "and",
+      "focusWord": "and",
+      "sentence": "Mia and Leo walked to school together.",
+      "chinese": "and = 和；米娅和利奥一起步行去学校。"
+    },
+    {
+      "term": "another",
+      "focusWord": "another",
+      "sentence": "Could I have another glass of water?",
+      "chinese": "another = 另一个；可以再给我一杯水吗？"
+    },
+    {
+      "term": "any",
+      "focusWord": "any",
+      "sentence": "Do you have any questions about the trip?",
+      "chinese": "any = 任何；你对这次旅行有任何问题吗？"
+    },
+    {
+      "term": "anybody",
+      "focusWord": "anybody",
+      "sentence": "Is anybody sitting in this seat?",
+      "chinese": "anybody = 任何人；这个座位有人坐吗？"
+    },
+    {
+      "term": "anymore",
+      "focusWord": "anymore",
+      "sentence": "We do not use that old computer anymore.",
+      "chinese": "anymore = 不再；我们不再使用那台旧电脑了。"
+    },
+    {
+      "term": "anyone",
+      "focusWord": "anyone",
+      "sentence": "Anyone can join the school art club.",
+      "chinese": "anyone = 任何人；任何人都可以加入学校艺术社团。"
+    },
+    {
+      "term": "anything",
+      "focusWord": "anything",
+      "sentence": "Did you buy anything at the market?",
+      "chinese": "anything = 任何东西；你在市场买东西了吗？"
+    },
+    {
+      "term": "anyway",
+      "focusWord": "anyway",
+      "sentence": "It was raining, but we went for a walk anyway.",
+      "chinese": "anyway = 无论如何；虽然下雨了，但我们还是去散步了。"
+    },
+    {
+      "term": "anywhere",
+      "focusWord": "anywhere",
+      "sentence": "You can sit anywhere in the room.",
+      "chinese": "anywhere = 任何地方；你可以坐在房间里的任何地方。"
+    },
+    {
+      "term": "apart",
+      "focusWord": "apart",
+      "sentence": "The two houses are only a few metres apart.",
+      "chinese": "apart = 相距；这两栋房子只相距几米。"
+    },
+    {
+      "term": "apart from",
+      "focusWord": "apart from",
+      "sentence": "Apart from the rain, we had a wonderful holiday.",
+      "chinese": "apart from = 除...之外；除了下雨之外，我们度过了一个美好的假期。"
+    },
+    {
+      "term": "approximately",
+      "focusWord": "approximately",
+      "sentence": "The journey takes approximately forty minutes.",
+      "chinese": "approximately = 大约；这段旅程大约需要四十分钟。"
+    },
+    {
+      "term": "around",
+      "focusWord": "around",
+      "sentence": "We walked around the lake after lunch.",
+      "chinese": "around = 绕着；午饭后我们绕着湖散步。"
+    },
+    {
+      "term": "as",
+      "focusWord": "as",
+      "sentence": "She works as a nurse at the local hospital.",
+      "chinese": "as = 作为；她在当地医院当护士。"
+    },
+    {
+      "term": "as long as",
+      "focusWord": "as long as",
+      "sentence": "You can borrow my bike as long as you return it today.",
+      "chinese": "as long as = 只要；只要你今天归还，就可以借我的自行车。"
+    },
+    {
+      "term": "as well",
+      "focusWord": "as well",
+      "sentence": "Tom plays football and swims as well.",
+      "chinese": "as well = 也；汤姆踢足球，也游泳。"
+    },
+    {
+      "term": "at",
+      "focusWord": "at",
+      "sentence": "Meet me at the station at six.",
+      "chinese": "at = 在；六点在车站和我见面。"
+    },
+    {
+      "term": "at all",
+      "focusWord": "at all",
+      "sentence": "I was not tired at all after the walk.",
+      "chinese": "at all = 一点也不；散步后我一点也不累。"
+    },
+    {
+      "term": "at first",
+      "focusWord": "at first",
+      "sentence": "At first, the new rules seemed confusing.",
+      "chinese": "at first = 起初；起初，这些新规则似乎令人困惑。"
+    },
+    {
+      "term": "at last",
+      "focusWord": "at last",
+      "sentence": "The bus arrived at last.",
+      "chinese": "at last = 终于；公交车终于到了。"
+    },
+    {
+      "term": "at least",
+      "focusWord": "at least",
+      "sentence": "Try to read for at least twenty minutes a day.",
+      "chinese": "at least = 至少；尽量每天阅读至少二十分钟。"
+    },
+    {
+      "term": "at once",
+      "focusWord": "at once",
+      "sentence": "Please call the doctor at once.",
+      "chinese": "at once = 立刻；请立刻给医生打电话。"
+    },
+    {
+      "term": "at present",
+      "focusWord": "at present",
+      "sentence": "The museum is closed at present.",
+      "chinese": "at present = 目前；博物馆目前不开放。"
+    },
+    {
+      "term": "away",
+      "focusWord": "away",
+      "sentence": "The beach is only five minutes away.",
+      "chinese": "away = 相距；海滩离这里只有五分钟路程。"
+    },
+    {
+      "term": "back",
+      "focusWord": "back",
+      "sentence": "Please put the book back on the shelf.",
+      "chinese": "back = 回原处；请把书放回书架。"
+    },
+    {
+      "term": "backwards",
+      "focusWord": "backwards",
+      "sentence": "He took two steps backwards.",
+      "chinese": "backwards = 向后；他向后退了两步。"
+    },
+    {
+      "term": "badly",
+      "focusWord": "badly",
+      "sentence": "The team played badly in the first half.",
+      "chinese": "badly = 糟糕地；球队上半场表现得很差。"
+    },
+    {
+      "term": "because of",
+      "focusWord": "because of",
+      "sentence": "The match was cancelled because of the snow.",
+      "chinese": "because of = 因为；比赛因为下雪而取消了。"
+    },
+    {
+      "term": "before",
+      "focusWord": "before",
+      "sentence": "Wash your hands before dinner.",
+      "chinese": "before = 在...之前；晚饭前洗手。"
+    },
+    {
+      "term": "behind",
+      "focusWord": "behind",
+      "sentence": "The car park is behind the hotel.",
+      "chinese": "behind = 在...后面；停车场在酒店后面。"
+    },
+    {
+      "term": "below",
+      "focusWord": "below",
+      "sentence": "Please write your answer below the picture.",
+      "chinese": "below = 在下面；请把答案写在图片下面。"
+    },
+    {
+      "term": "beneath",
+      "focusWord": "beneath",
+      "sentence": "The keys were hidden beneath a pile of papers.",
+      "chinese": "beneath = 在...下方；钥匙藏在一堆纸下面。"
+    },
+    {
+      "term": "beside",
+      "focusWord": "beside",
+      "sentence": "Come and sit beside me.",
+      "chinese": "beside = 在旁边；过来坐在我旁边。"
+    },
+    {
+      "term": "besides",
+      "focusWord": "besides",
+      "sentence": "Besides English, she also speaks French.",
+      "chinese": "besides = 除...之外还；除了英语，她还会说法语。"
+    },
+    {
+      "term": "between",
+      "focusWord": "between",
+      "sentence": "The cafe is between the bank and the post office.",
+      "chinese": "between = 在...之间；咖啡馆在银行和邮局之间。"
+    },
+    {
+      "term": "beyond",
+      "focusWord": "beyond",
+      "sentence": "The path continues beyond the bridge.",
+      "chinese": "beyond = 在...另一边；这条小路延伸到桥的另一边。"
+    },
+    {
+      "term": "both",
+      "focusWord": "both",
+      "sentence": "Both answers are correct.",
+      "chinese": "both = 两者都；两个答案都正确。"
+    },
+    {
+      "term": "but",
+      "focusWord": "but",
+      "sentence": "The room is small but comfortable.",
+      "chinese": "but = 但是；房间很小，但是很舒适。"
+    },
+    {
+      "term": "by",
+      "focusWord": "by",
+      "sentence": "We travelled to Oxford by train.",
+      "chinese": "by = 乘；我们乘火车去了牛津。"
+    },
+    {
+      "term": "by mistake",
+      "focusWord": "by mistake",
+      "sentence": "I took your bag by mistake.",
+      "chinese": "by mistake = 错误地；我不小心拿错了你的包。"
+    },
+    {
+      "term": "by name",
+      "focusWord": "by name",
+      "sentence": "The teacher knows every student by name.",
+      "chinese": "by name = 知道名字；老师知道每个学生的名字。"
+    },
+    {
+      "term": "bye",
+      "focusWord": "bye",
+      "sentence": "Bye, see you tomorrow!",
+      "chinese": "bye = 再见；再见，明天见！"
+    },
+    {
+      "term": "can",
+      "focusWord": "can",
+      "sentence": "You can borrow my dictionary.",
+      "chinese": "can = 可以；你可以借我的字典。"
+    },
+    {
+      "term": "something",
+      "focusWord": "something",
+      "sentence": "There is something interesting in this box.",
+      "chinese": "something = 某物；这个箱子里有件有趣的东西。"
+    },
+    {
+      "term": "carefully",
+      "focusWord": "carefully",
+      "sentence": "Read the question carefully before answering.",
+      "chinese": "carefully = 仔细地；回答前仔细阅读问题。"
+    },
+    {
+      "term": "certainly",
+      "focusWord": "certainly",
+      "sentence": "I will certainly help you with the project.",
+      "chinese": "certainly = 一定；我一定会帮你完成这个项目。"
+    },
+    {
+      "term": "cheers",
+      "focusWord": "cheers",
+      "sentence": "Cheers for helping me with the boxes.",
+      "chinese": "cheers = 谢谢；谢谢你帮我搬箱子。"
+    },
+    {
+      "term": "clearly",
+      "focusWord": "clearly",
+      "sentence": "Please speak clearly during the recording.",
+      "chinese": "clearly = 清楚地；录音时请清楚地说话。"
+    },
+    {
+      "term": "completely",
+      "focusWord": "completely",
+      "sentence": "The road was completely free of traffic at night.",
+      "chinese": "completely = 完全地；夜里这条路完全没有车辆。"
+    }
+  ]
+}

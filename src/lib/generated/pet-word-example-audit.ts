@@ -4338,5 +4338,205 @@ export const reviewedWordExampleAudit = {
   "among": {
     "status": "pass",
     "reasons": []
+  },
+  "an": {
+    "status": "pass",
+    "reasons": []
+  },
+  "and": {
+    "status": "pass",
+    "reasons": []
+  },
+  "another": {
+    "status": "pass",
+    "reasons": []
+  },
+  "any": {
+    "status": "pass",
+    "reasons": []
+  },
+  "anybody": {
+    "status": "pass",
+    "reasons": []
+  },
+  "anymore": {
+    "status": "pass",
+    "reasons": []
+  },
+  "anyone": {
+    "status": "pass",
+    "reasons": []
+  },
+  "anything": {
+    "status": "pass",
+    "reasons": []
+  },
+  "anyway": {
+    "status": "pass",
+    "reasons": []
+  },
+  "anywhere": {
+    "status": "pass",
+    "reasons": []
+  },
+  "apart": {
+    "status": "pass",
+    "reasons": []
+  },
+  "apartfrom": {
+    "status": "pass",
+    "reasons": []
+  },
+  "approximately": {
+    "status": "pass",
+    "reasons": []
+  },
+  "around": {
+    "status": "pass",
+    "reasons": []
+  },
+  "as": {
+    "status": "pass",
+    "reasons": []
+  },
+  "aslongas": {
+    "status": "pass",
+    "reasons": []
+  },
+  "aswell": {
+    "status": "pass",
+    "reasons": []
+  },
+  "at": {
+    "status": "pass",
+    "reasons": []
+  },
+  "atall": {
+    "status": "pass",
+    "reasons": []
+  },
+  "atfirst": {
+    "status": "pass",
+    "reasons": []
+  },
+  "atlast": {
+    "status": "pass",
+    "reasons": []
+  },
+  "atleast": {
+    "status": "pass",
+    "reasons": []
+  },
+  "atonce": {
+    "status": "pass",
+    "reasons": []
+  },
+  "atpresent": {
+    "status": "pass",
+    "reasons": []
+  },
+  "away": {
+    "status": "pass",
+    "reasons": []
+  },
+  "back": {
+    "status": "pass",
+    "reasons": []
+  },
+  "backwards": {
+    "status": "pass",
+    "reasons": []
+  },
+  "badly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "becauseof": {
+    "status": "pass",
+    "reasons": []
+  },
+  "before": {
+    "status": "pass",
+    "reasons": []
+  },
+  "behind": {
+    "status": "pass",
+    "reasons": []
+  },
+  "below": {
+    "status": "pass",
+    "reasons": []
+  },
+  "beneath": {
+    "status": "pass",
+    "reasons": []
+  },
+  "beside": {
+    "status": "pass",
+    "reasons": []
+  },
+  "besides": {
+    "status": "pass",
+    "reasons": []
+  },
+  "between": {
+    "status": "pass",
+    "reasons": []
+  },
+  "beyond": {
+    "status": "pass",
+    "reasons": []
+  },
+  "both": {
+    "status": "pass",
+    "reasons": []
+  },
+  "but": {
+    "status": "pass",
+    "reasons": []
+  },
+  "by": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bymistake": {
+    "status": "pass",
+    "reasons": []
+  },
+  "byname": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bye": {
+    "status": "pass",
+    "reasons": []
+  },
+  "can": {
+    "status": "pass",
+    "reasons": []
+  },
+  "something": {
+    "status": "pass",
+    "reasons": []
+  },
+  "carefully": {
+    "status": "pass",
+    "reasons": []
+  },
+  "certainly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cheers": {
+    "status": "pass",
+    "reasons": []
+  },
+  "clearly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "completely": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

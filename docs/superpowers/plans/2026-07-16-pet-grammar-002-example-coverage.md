@@ -86,7 +86,7 @@ The ledger uses `batchId: grammar-002`, `status: promoted`, and these exact entr
 | certainly | certainly | I will certainly help you with the project. | certainly = 一定；我一定会帮你完成这个项目。 |
 | cheers | cheers | Cheers for helping me with the boxes. | cheers = 谢谢；谢谢你帮我搬箱子。 |
 | clearly | clearly | Please speak clearly during the recording. | clearly = 清楚地；录音时请清楚地说话。 |
-| completely | completely | The road was completely empty at night. | completely = 完全地；夜里这条路完全没有车辆。 |
+| completely | completely | The road was completely free of traffic at night. | completely = 完全地；夜里这条路完全没有车辆。 |
 
 - [ ] Create the ledger from all 50 rows.
 - [ ] Promote every row with the normalized key used by `getWordExample()`.
