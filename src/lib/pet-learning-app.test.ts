@@ -258,6 +258,17 @@ const ideasSecondBatch = [
   "production", "qualification", "quality",
 ] as const;
 
+const ideasGrammarBatch = [
+  "quantity", "questionnaire", "reality", "reception", "receptionist", "refreshments",
+  "registration", "relation", "relaxation", "result", "retirement", "romance",
+  "science fiction", "secret", "section", "security", "security guard", "silence",
+  "situation", "solution", "spaceship", "suggestion", "tournament", "translation",
+  "unemployment", "a / an", "about", "above", "absolutely", "according to", "across",
+  "actually", "after", "again", "against", "ago", "ahead", "alike", "all", "almost",
+  "alone", "along", "aloud", "already", "also", "although", "altogether", "always",
+  "a.m", "among",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -2010,6 +2021,85 @@ describe("PET Learning App", () => {
       production: ["The factory increased its production of bicycles.", "production = 产量；这家工厂提高了自行车产量。"],
       qualification: ["A teaching qualification is required for this job.", "qualification = 资格证书；这份工作要求具备教师资格证书。"],
       quality: ["The quality of the food was excellent.", "quality = 质量；食物的质量非常好。"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the ideas grammar reviewed batch and completes ideas", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const ideasWords = words.filter((word) => word.theme === "ideas");
+    const grammarWords = words.filter((word) => word.theme === "grammar");
+    const selectedExamples = ideasGrammarBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(ideasGrammarBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1085);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(ideasWords).toHaveLength(133);
+    expect(ideasWords.every((word) => getWordExample(word).sentence !== null)).toBe(true);
+    expect(grammarWords).toHaveLength(338);
+    expect(
+      grammarWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(29);
+  });
+
+  it("keeps the ideas grammar ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/ideas-003-grammar-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("ideas-003-grammar-001");
+    expect(candidate.entries).toHaveLength(50);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the ideas grammar batch", () => {
+    const expectedExamples = {
+      reception: ["Ask for the key at reception when you arrive.", "reception = 接待处；到达时请去接待处领取钥匙。"],
+      relation: ["The report explains the relation between exercise and sleep.", "relation = 关系；这份报告解释了运动与睡眠之间的关系。"],
+      romance: ["The film is a romance set in Paris.", "romance = 爱情故事；这部电影是一个以巴黎为背景的爱情故事。"],
+      security: ["The hotel has good security at night.", "security = 安保措施；这家酒店夜间的安保措施很好。"],
+      silence: ["There was complete silence during the exam.", "silence = 安静；考试期间一片安静。"],
+      solution: ["We found a simple solution to the problem.", "solution = 解决办法；我们找到了这个问题的简单解决办法。"],
+      translation: ["I read an English translation of the novel.", "translation = 译本；我读了这部小说的英文译本。"],
+      "a / an": ["I saw a dog and an elephant at the zoo.", "a / an = 一个；我在动物园看到一只狗和一头大象。"],
+      about: ["We talked about our plans for the weekend.", "about = 关于；我们谈了周末的计划。"],
+      above: ["The clock hangs above the classroom door.", "above = 在上方；时钟挂在教室门的上方。"],
+      "according to": ["According to the timetable, the train leaves at nine.", "according to = 根据；根据时间表，火车九点出发。"],
+      against: ["Do not lean your bicycle against the window.", "against = 倚靠；不要把自行车靠在窗户上。"],
+      ahead: ["Go straight ahead and turn left at the bank.", "ahead = 向前；一直向前走，在银行处左转。"],
+      alike: ["The twins look alike, but they have different interests.", "alike = 相像；这对双胞胎看起来很像，但兴趣不同。"],
+      along: ["We cycled along the river.", "along = 沿着；我们沿着河骑自行车。"],
+      aloud: ["Please read the first paragraph aloud.", "aloud = 出声地；请出声朗读第一段。"],
+      although: ["Although it was raining, we continued the match.", "although = 虽然；虽然下着雨，我们还是继续了比赛。"],
+      altogether: ["There were twelve students altogether.", "altogether = 总共；总共有十二名学生。"],
+      "a.m": ["The museum opens at nine a.m.", "a.m = 上午；博物馆上午九点开放。"],
+      among: ["We found a quiet place among the trees.", "among = 在...之中；我们在树林中找到了一个安静的地方。"],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {

@@ -5840,6 +5840,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "The quality of the food was excellent.",
       chinese: "quality = 质量；食物的质量非常好。",
     },
+    "quantity": {
+      focusWord: "quantity",
+      sentence: "Use only a small quantity of salt in the soup.",
+      chinese: "quantity = 数量；这道汤里只放少量盐。",
+    },
+    "questionnaire": {
+      focusWord: "questionnaire",
+      sentence: "Please complete the questionnaire after the course.",
+      chinese: "questionnaire = 问卷；课程结束后请完成这份问卷。",
+    },
+    "reality": {
+      focusWord: "reality",
+      sentence: "Her dream of becoming a pilot became a reality.",
+      chinese: "reality = 现实；她成为飞行员的梦想变成了现实。",
+    },
+    "reception": {
+      focusWord: "reception",
+      sentence: "Ask for the key at reception when you arrive.",
+      chinese: "reception = 接待处；到达时请去接待处领取钥匙。",
+    },
+    "receptionist": {
+      focusWord: "receptionist",
+      sentence: "The receptionist booked a taxi for us.",
+      chinese: "receptionist = 接待员；接待员为我们预订了一辆出租车。",
+    },
+    "refreshments": {
+      focusWord: "refreshments",
+      sentence: "Light refreshments will be served after the meeting.",
+      chinese: "refreshments = 茶点；会议结束后将提供简单茶点。",
+    },
+    "registration": {
+      focusWord: "registration",
+      sentence: "Online registration closes on Friday.",
+      chinese: "registration = 注册；网上注册将于星期五截止。",
+    },
+    "relation": {
+      focusWord: "relation",
+      sentence: "The report explains the relation between exercise and sleep.",
+      chinese: "relation = 关系；这份报告解释了运动与睡眠之间的关系。",
+    },
+    "relaxation": {
+      focusWord: "relaxation",
+      sentence: "I listen to quiet music for relaxation.",
+      chinese: "relaxation = 放松；我听轻柔的音乐来放松。",
+    },
+    "result": {
+      focusWord: "result",
+      sentence: "The test result will arrive by email.",
+      chinese: "result = 结果；考试结果将通过电子邮件发送。",
+    },
+    "retirement": {
+      focusWord: "retirement",
+      sentence: "My grandfather plans to travel after retirement.",
+      chinese: "retirement = 退休；我祖父计划退休后去旅行。",
+    },
+    "romance": {
+      focusWord: "romance",
+      sentence: "The film is a romance set in Paris.",
+      chinese: "romance = 爱情故事；这部电影是一个以巴黎为背景的爱情故事。",
+    },
+    "sciencefiction": {
+      focusWord: "science fiction",
+      sentence: "My brother enjoys science fiction about life on other planets.",
+      chinese: "science fiction = 科幻小说；我弟弟喜欢关于其他星球生命的科幻小说。",
+    },
+    "secret": {
+      focusWord: "secret",
+      sentence: "Can you keep this plan a secret?",
+      chinese: "secret = 秘密；你能对这个计划保密吗？",
+    },
+    "section": {
+      focusWord: "section",
+      sentence: "Read the final section of the article.",
+      chinese: "section = 部分；阅读这篇文章的最后一部分。",
+    },
+    "security": {
+      focusWord: "security",
+      sentence: "The hotel has good security at night.",
+      chinese: "security = 安保措施；这家酒店夜间的安保措施很好。",
+    },
+    "securityguard": {
+      focusWord: "security guard",
+      sentence: "The security guard showed us the emergency exit.",
+      chinese: "security guard = 保安；保安向我们指出了紧急出口。",
+    },
+    "silence": {
+      focusWord: "silence",
+      sentence: "There was complete silence during the exam.",
+      chinese: "silence = 安静；考试期间一片安静。",
+    },
+    "situation": {
+      focusWord: "situation",
+      sentence: "We stayed calm in a difficult situation.",
+      chinese: "situation = 情况；我们在困难的情况下保持冷静。",
+    },
+    "solution": {
+      focusWord: "solution",
+      sentence: "We found a simple solution to the problem.",
+      chinese: "solution = 解决办法；我们找到了这个问题的简单解决办法。",
+    },
+    "spaceship": {
+      focusWord: "spaceship",
+      sentence: "The spaceship landed safely on the moon.",
+      chinese: "spaceship = 宇宙飞船；宇宙飞船安全降落在月球上。",
+    },
+    "suggestion": {
+      focusWord: "suggestion",
+      sentence: "Ella made a useful suggestion for the school trip.",
+      chinese: "suggestion = 建议；埃拉为学校旅行提出了一条有用的建议。",
+    },
+    "tournament": {
+      focusWord: "tournament",
+      sentence: "Our school is hosting a chess tournament.",
+      chinese: "tournament = 锦标赛；我们学校正在举办国际象棋锦标赛。",
+    },
+    "translation": {
+      focusWord: "translation",
+      sentence: "I read an English translation of the novel.",
+      chinese: "translation = 译本；我读了这部小说的英文译本。",
+    },
+    "unemployment": {
+      focusWord: "unemployment",
+      sentence: "The new jobs helped reduce unemployment in the town.",
+      chinese: "unemployment = 失业；这些新工作帮助减少了镇上的失业现象。",
+    },
+    "a": {
+      focusWord: "a / an",
+      sentence: "I saw a dog and an elephant at the zoo.",
+      chinese: "a / an = 一个；我在动物园看到一只狗和一头大象。",
+    },
+    "about": {
+      focusWord: "about",
+      sentence: "We talked about our plans for the weekend.",
+      chinese: "about = 关于；我们谈了周末的计划。",
+    },
+    "above": {
+      focusWord: "above",
+      sentence: "The clock hangs above the classroom door.",
+      chinese: "above = 在上方；时钟挂在教室门的上方。",
+    },
+    "absolutely": {
+      focusWord: "absolutely",
+      sentence: "You are absolutely right about the answer.",
+      chinese: "absolutely = 完全地；你的答案完全正确。",
+    },
+    "accordingto": {
+      focusWord: "according to",
+      sentence: "According to the timetable, the train leaves at nine.",
+      chinese: "according to = 根据；根据时间表，火车九点出发。",
+    },
+    "across": {
+      focusWord: "across",
+      sentence: "We walked across the bridge to the station.",
+      chinese: "across = 穿过；我们穿过桥走到车站。",
+    },
+    "actually": {
+      focusWord: "actually",
+      sentence: "I thought the cafe was closed, but it is actually open.",
+      chinese: "actually = 实际上；我以为咖啡馆关门了，但它实际上还开着。",
+    },
+    "after": {
+      focusWord: "after",
+      sentence: "We went for a walk after dinner.",
+      chinese: "after = 在...之后；晚饭后我们去散步了。",
+    },
+    "again": {
+      focusWord: "again",
+      sentence: "Could you say that again, please?",
+      chinese: "again = 再一次；请问你能再说一次吗？",
+    },
+    "against": {
+      focusWord: "against",
+      sentence: "Do not lean your bicycle against the window.",
+      chinese: "against = 倚靠；不要把自行车靠在窗户上。",
+    },
+    "ago": {
+      focusWord: "ago",
+      sentence: "We moved here three years ago.",
+      chinese: "ago = 以前；我们三年前搬到这里。",
+    },
+    "ahead": {
+      focusWord: "ahead",
+      sentence: "Go straight ahead and turn left at the bank.",
+      chinese: "ahead = 向前；一直向前走，在银行处左转。",
+    },
+    "alike": {
+      focusWord: "alike",
+      sentence: "The twins look alike, but they have different interests.",
+      chinese: "alike = 相像；这对双胞胎看起来很像，但兴趣不同。",
+    },
+    "all": {
+      focusWord: "all",
+      sentence: "All the students finished the test on time.",
+      chinese: "all = 所有的；所有学生都按时完成了考试。",
+    },
+    "almost": {
+      focusWord: "almost",
+      sentence: "It is almost time to leave.",
+      chinese: "almost = 几乎；差不多该离开了。",
+    },
+    "alone": {
+      focusWord: "alone",
+      sentence: "I do not like walking home alone at night.",
+      chinese: "alone = 独自；我不喜欢夜里独自走回家。",
+    },
+    "along": {
+      focusWord: "along",
+      sentence: "We cycled along the river.",
+      chinese: "along = 沿着；我们沿着河骑自行车。",
+    },
+    "aloud": {
+      focusWord: "aloud",
+      sentence: "Please read the first paragraph aloud.",
+      chinese: "aloud = 出声地；请出声朗读第一段。",
+    },
+    "already": {
+      focusWord: "already",
+      sentence: "I have already finished my homework.",
+      chinese: "already = 已经；我已经完成家庭作业了。",
+    },
+    "also": {
+      focusWord: "also",
+      sentence: "The hotel has a pool and also offers free breakfast.",
+      chinese: "also = 也；这家酒店有游泳池，也提供免费早餐。",
+    },
+    "although": {
+      focusWord: "although",
+      sentence: "Although it was raining, we continued the match.",
+      chinese: "although = 虽然；虽然下着雨，我们还是继续了比赛。",
+    },
+    "altogether": {
+      focusWord: "altogether",
+      sentence: "There were twelve students altogether.",
+      chinese: "altogether = 总共；总共有十二名学生。",
+    },
+    "always": {
+      focusWord: "always",
+      sentence: "My bus always arrives at eight.",
+      chinese: "always = 总是；我的公交车总是在八点到达。",
+    },
+    "am": {
+      focusWord: "a.m",
+      sentence: "The museum opens at nine a.m.",
+      chinese: "a.m = 上午；博物馆上午九点开放。",
+    },
+    "among": {
+      focusWord: "among",
+      sentence: "We found a quiet place among the trees.",
+      chinese: "among = 在...之中；我们在树林中找到了一个安静的地方。",
+    },
   };
 }
 
