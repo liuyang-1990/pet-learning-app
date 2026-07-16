@@ -2139,6 +2139,7 @@ describe("PET Learning App", () => {
     expect(
       grammarWords.filter((word) => getWordExample(word).sentence !== null).length,
     ).toBeGreaterThanOrEqual(79);
+    expect(getWordExample({ term: "at / @", chineseGloss: "at符号" }).sentence).toBeNull();
   });
 
   it("keeps the second grammar ledger aligned with reviewed examples", () => {

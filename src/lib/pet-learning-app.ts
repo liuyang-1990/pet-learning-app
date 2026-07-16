@@ -6347,12 +6347,14 @@ const reviewedExampleKeyOverrides: Record<string, string> = {
   workout: "workoutnoun",
   "check-in": "checkinnoun",
   checkout: "checkoutnoun",
+  "at / @": "atsymbol",
 };
 
 export function getWordExample(word: VocabularyItem): WordExample {
   const examples = getReviewedWordExamples();
   const term = cleanExampleTerm(word.term);
-  const key = reviewedExampleKeyOverrides[term.toLowerCase()] ?? normalizeSpokenText(term);
+  const exactTerm = word.term.trim().toLowerCase();
+  const key = reviewedExampleKeyOverrides[exactTerm] ?? normalizeSpokenText(term);
   const reviewed = examples[key];
   const audit = reviewedWordExampleAudit[key as keyof typeof reviewedWordExampleAudit];
 
