@@ -6337,7 +6337,7 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     },
     "completely": {
       focusWord: "completely",
-      sentence: "The road was completely empty at night.",
+      sentence: "The road was completely free of traffic at night.",
       chinese: "completely = 完全地；夜里这条路完全没有车辆。",
     },
   };

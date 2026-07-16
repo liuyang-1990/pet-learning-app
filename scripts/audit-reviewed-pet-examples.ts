@@ -124,6 +124,16 @@ const manuallyConfirmedTerms = new Set([
   "alike", // similar in appearance
   "all", // every member of the student group
   "also", // also / in addition
+  // These second-batch grammar examples use valid contextual senses or Chinese synonyms.
+  "apart", // separated by a measured distance
+  "around", // following a route around the lake
+  "aswell", // also / too
+  "atlast", // finally, after waiting
+  "away", // a measured travel time from here
+  "beyond", // on the farther side of the bridge
+  "by", // travelling by means of a train
+  "certainly", // definitely / certainly
+  "cheers", // informal British thanks, not a toast
   // These transport and travel examples use valid synonyms or contextual senses.
   "bus", // bus / public bus
   "flight", // scheduled flight, not flight in general
