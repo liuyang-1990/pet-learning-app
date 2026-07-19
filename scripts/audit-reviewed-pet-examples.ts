@@ -151,6 +151,13 @@ const manuallyConfirmedTerms = new Set([
   "from", // the starting point of a journey
   "further", // additional information, not greater distance
   "generally", // usually / in general
+  // These fourth-batch grammar examples use valid contextual senses or Chinese synonyms.
+  "hey", // hey / hi, expressed naturally as 嗨 rather than Google's 嘿
+  "hi", // hi / hello, expressed as 你好 rather than Google's 嗨
+  "incredibly", // an intensifier meaning extremely / 非常 in this sentence
+  "instead", // choosing walking as the alternative / 改为步行
+  "itself", // the reflexive sense "by itself" / 自己
+  "just", // the recent-perfect sense / 刚刚, not "only"
   // These transport and travel examples use valid synonyms or contextual senses.
   "bus", // bus / public bus
   "flight", // scheduled flight, not flight in general

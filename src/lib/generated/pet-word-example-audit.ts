@@ -4738,5 +4738,205 @@ export const reviewedWordExampleAudit = {
   "herself": {
     "status": "pass",
     "reasons": []
+  },
+  "hey": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hi": {
+    "status": "pass",
+    "reasons": []
+  },
+  "him": {
+    "status": "pass",
+    "reasons": []
+  },
+  "himself": {
+    "status": "pass",
+    "reasons": []
+  },
+  "his": {
+    "status": "pass",
+    "reasons": []
+  },
+  "honestly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hopefully": {
+    "status": "pass",
+    "reasons": []
+  },
+  "how": {
+    "status": "pass",
+    "reasons": []
+  },
+  "however": {
+    "status": "pass",
+    "reasons": []
+  },
+  "howmuch": {
+    "status": "pass",
+    "reasons": []
+  },
+  "if": {
+    "status": "pass",
+    "reasons": []
+  },
+  "in": {
+    "status": "pass",
+    "reasons": []
+  },
+  "including": {
+    "status": "pass",
+    "reasons": []
+  },
+  "incredibly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "indeed": {
+    "status": "pass",
+    "reasons": []
+  },
+  "indoors": {
+    "status": "pass",
+    "reasons": []
+  },
+  "infact": {
+    "status": "pass",
+    "reasons": []
+  },
+  "infrontof": {
+    "status": "pass",
+    "reasons": []
+  },
+  "inink": {
+    "status": "pass",
+    "reasons": []
+  },
+  "inpencil": {
+    "status": "pass",
+    "reasons": []
+  },
+  "inside": {
+    "status": "pass",
+    "reasons": []
+  },
+  "instead": {
+    "status": "pass",
+    "reasons": []
+  },
+  "intheend": {
+    "status": "pass",
+    "reasons": []
+  },
+  "into": {
+    "status": "pass",
+    "reasons": []
+  },
+  "it": {
+    "status": "pass",
+    "reasons": []
+  },
+  "its": {
+    "status": "pass",
+    "reasons": []
+  },
+  "itself": {
+    "status": "pass",
+    "reasons": []
+  },
+  "just": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lately": {
+    "status": "pass",
+    "reasons": []
+  },
+  "less": {
+    "status": "pass",
+    "reasons": []
+  },
+  "loudly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "luckily": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mainly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "many": {
+    "status": "pass",
+    "reasons": []
+  },
+  "may": {
+    "status": "pass",
+    "reasons": []
+  },
+  "maybe": {
+    "status": "pass",
+    "reasons": []
+  },
+  "me": {
+    "status": "pass",
+    "reasons": []
+  },
+  "meanwhile": {
+    "status": "pass",
+    "reasons": []
+  },
+  "might": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mine": {
+    "status": "pass",
+    "reasons": []
+  },
+  "minus": {
+    "status": "pass",
+    "reasons": []
+  },
+  "more": {
+    "status": "pass",
+    "reasons": []
+  },
+  "most": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mostly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "much": {
+    "status": "pass",
+    "reasons": []
+  },
+  "must": {
+    "status": "pass",
+    "reasons": []
+  },
+  "my": {
+    "status": "pass",
+    "reasons": []
+  },
+  "myself": {
+    "status": "pass",
+    "reasons": []
+  },
+  "near": {
+    "status": "pass",
+    "reasons": []
+  },
+  "nearly": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;
