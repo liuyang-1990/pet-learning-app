@@ -2406,6 +2406,9 @@ describe("PET Learning App", () => {
     expect(
       getWordExample({ term: "made of / from / out of", chineseGloss: "由...制成" }).sentence,
     ).toBeNull();
+    expect(
+      getWordExample({ term: "step forward / back / out", chineseGloss: "向前、向后或出去" }).sentence,
+    ).toBeNull();
   });
 
   it("keeps the fifth grammar ledger aligned with reviewed examples", () => {

@@ -158,6 +158,16 @@ const manuallyConfirmedTerms = new Set([
   "instead", // choosing walking as the alternative / 改为步行
   "itself", // the reflexive sense "by itself" / 自己
   "just", // the recent-perfect sense / 刚刚, not "only"
+  // These fifth-batch grammar examples use valid contextual senses or Chinese synonyms.
+  "no", // the determiner sense "no milk" / 没有牛奶, not the isolated negative 不
+  "none", // not one of the keys / 一个也没有
+  "nowhere", // no place to sit / 没有地方坐
+  "ohdear", // the exclamation 哎呀 / oh dear, not a term of address
+  "only", // the restrictive determiner 只有, not merely 仅 as an isolated adverb
+  "other", // the other member of a pair / 另一个
+  "outof", // movement from inside a bag / 从...里面, not "because of"
+  "own", // the possessive adjective 自己的, not the verb "possess"
+  "particularly", // especially / 尤其
   // These transport and travel examples use valid synonyms or contextual senses.
   "bus", // bus / public bus
   "flight", // scheduled flight, not flight in general
