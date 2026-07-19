@@ -288,6 +288,15 @@ const grammarThirdBatch = [
   "goodbye", "happily", "hardly", "have", "he", "hello", "her", "here", "hers", "herself",
 ] as const;
 
+const grammarFourthBatch = [
+  "hey", "hi", "him", "himself", "his", "honestly", "hopefully", "how", "however",
+  "how much", "if", "in", "including", "incredibly", "indeed", "indoors", "in fact",
+  "in front of", "in ink", "in pencil", "inside", "instead", "in the end", "into", "IT",
+  "its", "itself", "just", "lately", "less", "loudly", "luckily", "mainly", "many", "may",
+  "maybe", "me", "meanwhile", "might", "mine", "minus", "more", "most", "mostly", "much",
+  "must", "my", "myself", "near", "nearly",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -2274,6 +2283,88 @@ describe("PET Learning App", () => {
       hardly: ["I could hardly hear the announcement.", "hardly = 几乎不；我几乎听不见广播。"],
       hers: ["This blue jacket is hers.", "hers = 她的；这件蓝色夹克是她的。"],
       herself: ["Maya made the cake herself.", "herself = 她亲自；玛雅亲自做了蛋糕。"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the fourth grammar reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const grammarWords = words.filter((word) => word.theme === "grammar");
+    const selectedExamples = grammarFourthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(grammarFourthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1235);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(grammarWords).toHaveLength(338);
+    expect(
+      grammarWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(179);
+    expect(
+      getWordExample({ term: "made of / from / out of", chineseGloss: "由...制成" }).sentence,
+    ).toBeNull();
+  });
+
+  it("keeps the fourth grammar ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/grammar-004.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("grammar-004");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(grammarFourthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the fourth grammar batch", () => {
+    const expectedExamples = {
+      honestly: ["Honestly, I did not enjoy the film.", "honestly = 说实话；说实话，我不喜欢这部电影。"],
+      hopefully: ["Hopefully, the weather will improve tomorrow.", "hopefully = 希望；希望明天天气会好转。"],
+      however: ["The hotel was expensive; however, the service was excellent.", "however = 然而；这家酒店很贵，然而服务非常好。"],
+      in: ["The keys are in my bag.", "in = 在...里面；钥匙在我的包里。"],
+      including: ["Ten students, including Mia, joined the trip.", "including = 包括；包括米娅在内的十名学生参加了旅行。"],
+      indoors: ["We stayed indoors because of the storm.", "indoors = 在室内；因为暴风雨，我们待在室内。"],
+      "in ink": ["Please complete the form in ink.", "in ink = 用墨水；请用墨水填写表格。"],
+      "in pencil": ["Write your first draft in pencil.", "in pencil = 用铅笔；用铅笔写初稿。"],
+      instead: ["The bus was full, so we walked instead.", "instead = 改为；公交车满了，所以我们改为步行。"],
+      IT: ["It is raining outside.", "it = 它；外面正在下雨。"],
+      just: ["I have just finished my homework.", "just = 刚刚；我刚刚完成家庭作业。"],
+      less: ["This bag costs less than the other one.", "less = 更少；这个包比另一个便宜。"],
+      may: ["You may leave when you finish the test.", "may = 可以；完成考试后你可以离开。"],
+      me: ["Could you help me carry this box?", "me = 我；你能帮我搬这个箱子吗？"],
+      meanwhile: ["Dad cooked dinner; meanwhile, I set the table.", "meanwhile = 同时；爸爸做晚饭，同时我摆餐具。"],
+      might: ["It might rain this afternoon.", "might = 可能；今天下午可能会下雨。"],
+      mine: ["The seat by the window is mine.", "mine = 我的；窗边的座位是我的。"],
+      minus: ["Ten minus three equals seven.", "minus = 减；十减三等于七。"],
+      most: ["Most students walk to school.", "most = 大多数；大多数学生步行去学校。"],
+      much: ["How much water should I add?", "much = 多少；我应该加多少水？"],
+      near: ["Our hotel is near the station.", "near = 在附近；我们的酒店在车站附近。"],
+      nearly: ["It is nearly time for lunch.", "nearly = 几乎；快到午饭时间了。"],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
