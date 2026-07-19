@@ -297,6 +297,15 @@ const grammarFourthBatch = [
   "must", "my", "myself", "near", "nearly",
 ] as const;
 
+const grammarFifthBatch = [
+  "neither", "never", "next to", "no", "nobody", "none", "normally", "not", "nothing",
+  "now", "nowadays", "nowhere", "obviously", "occasionally", "o’clock", "of", "off", "often",
+  "oh", "oh dear", "on", "on board", "once", "one", "on fire", "only", "on purpose",
+  "on request", "onto", "or", "other", "otherwise", "ought", "our", "ours", "ourselves",
+  "out", "outdoors", "out of", "out of date", "over", "own", "pardon", "partly",
+  "particularly", "per", "perfectly", "perhaps", "personally", "please",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -2365,6 +2374,89 @@ describe("PET Learning App", () => {
       much: ["How much water should I add?", "much = 多少；我应该加多少水？"],
       near: ["Our hotel is near the station.", "near = 在附近；我们的酒店在车站附近。"],
       nearly: ["It is nearly time for lunch.", "nearly = 几乎；快到午饭时间了。"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the fifth grammar reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const grammarWords = words.filter((word) => word.theme === "grammar");
+    const selectedExamples = grammarFifthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(grammarFifthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1285);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(grammarWords).toHaveLength(338);
+    expect(
+      grammarWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(229);
+    expect(
+      getWordExample({ term: "made of / from / out of", chineseGloss: "由...制成" }).sentence,
+    ).toBeNull();
+  });
+
+  it("keeps the fifth grammar ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/grammar-005.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("grammar-005");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(grammarFifthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the fifth grammar batch", () => {
+    const expectedExamples = {
+      neither: ["Neither answer is correct.", "neither = 两个都不；两个答案都不正确。"],
+      "next to": ["The pharmacy is next to the bank.", "next to = 在...旁边；药店在银行旁边。"],
+      no: ["There is no milk left in the fridge.", "no = 没有；冰箱里没有牛奶了。"],
+      none: ["None of these keys opens the door.", "none = 一个也没有；这些钥匙一个也打不开门。"],
+      "o’clock": ["The lesson starts at eight o'clock.", "o'clock = 点钟；课程八点开始。"],
+      of: ["I would like a cup of tea.", "of = ...的；我想喝一杯茶。"],
+      off: ["Please turn off the lights.", "off = 关闭；请关灯。"],
+      "oh dear": ["Oh dear, we have missed the last train.", "oh dear = 哎呀；哎呀，我们错过末班火车了。"],
+      "on board": ["All the passengers are now on board.", "on board = 在车船飞机上；所有乘客现在都已登乘。"],
+      once: ["I go swimming once a week.", "once = 一次；我每周游泳一次。"],
+      "on fire": ["The old building was on fire.", "on fire = 着火；那栋旧楼着火了。"],
+      only: ["Only members can use the gym.", "only = 只有；只有会员可以使用健身房。"],
+      "on request": ["Extra towels are available on request.", "on request = 应要求；如有需要可以提供额外毛巾。"],
+      otherwise: ["Leave now, otherwise you will miss the bus.", "otherwise = 否则；现在就走，否则你会错过公交车。"],
+      ought: ["You ought to apologise to her.", "ought = 应该；你应该向她道歉。"],
+      ourselves: ["We painted the room ourselves.", "ourselves = 我们亲自；我们亲自粉刷了房间。"],
+      out: ["She went out after dinner.", "out = 出去；她晚饭后出去了。"],
+      "out of": ["He took a notebook out of his bag.", "out of = 从...里面；他从包里拿出一本笔记本。"],
+      over: ["The lesson is over at four o'clock.", "over = 结束；课程四点结束。"],
+      pardon: ["Pardon me, could you repeat that?", "pardon = 请原谅；请原谅，你能再说一遍吗？"],
+      per: ["Tickets cost twelve pounds per person.", "per = 每；票价为每人十二英镑。"],
+      perfectly: ["I can hear you perfectly.", "perfectly = 完全地；我能完全听清你说话。"],
+      personally: ["I personally prefer the earlier train.", "personally = 就个人而言；就个人而言，我更喜欢较早的火车。"],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
