@@ -1,0 +1,307 @@
+{
+  "batchId": "grammar-004",
+  "status": "promoted",
+  "entries": [
+    {
+      "term": "hey",
+      "focusWord": "hey",
+      "sentence": "Hey, wait for me!",
+      "chinese": "hey = 嗨；嗨，等等我！"
+    },
+    {
+      "term": "hi",
+      "focusWord": "hi",
+      "sentence": "Hi, my name is Leo.",
+      "chinese": "hi = 你好；你好，我叫利奥。"
+    },
+    {
+      "term": "him",
+      "focusWord": "him",
+      "sentence": "I met him outside the library.",
+      "chinese": "him = 他；我在图书馆外遇见了他。"
+    },
+    {
+      "term": "himself",
+      "focusWord": "himself",
+      "sentence": "Ben fixed the bicycle himself.",
+      "chinese": "himself = 他亲自；本亲自修好了自行车。"
+    },
+    {
+      "term": "his",
+      "focusWord": "his",
+      "sentence": "That red backpack is his.",
+      "chinese": "his = 他的；那个红色背包是他的。"
+    },
+    {
+      "term": "honestly",
+      "focusWord": "honestly",
+      "sentence": "Honestly, I did not enjoy the film.",
+      "chinese": "honestly = 说实话；说实话，我不喜欢这部电影。"
+    },
+    {
+      "term": "hopefully",
+      "focusWord": "hopefully",
+      "sentence": "Hopefully, the weather will improve tomorrow.",
+      "chinese": "hopefully = 希望；希望明天天气会好转。"
+    },
+    {
+      "term": "how",
+      "focusWord": "how",
+      "sentence": "How did you travel to the island?",
+      "chinese": "how = 如何；你是如何去那座岛的？"
+    },
+    {
+      "term": "however",
+      "focusWord": "however",
+      "sentence": "The hotel was expensive; however, the service was excellent.",
+      "chinese": "however = 然而；这家酒店很贵，然而服务非常好。"
+    },
+    {
+      "term": "how much",
+      "focusWord": "how much",
+      "sentence": "How much does this jacket cost?",
+      "chinese": "how much = 多少钱；这件夹克多少钱？"
+    },
+    {
+      "term": "if",
+      "focusWord": "if",
+      "sentence": "Call me if you need any help.",
+      "chinese": "if = 如果；如果你需要帮助，请给我打电话。"
+    },
+    {
+      "term": "in",
+      "focusWord": "in",
+      "sentence": "The keys are in my bag.",
+      "chinese": "in = 在...里面；钥匙在我的包里。"
+    },
+    {
+      "term": "including",
+      "focusWord": "including",
+      "sentence": "Ten students, including Mia, joined the trip.",
+      "chinese": "including = 包括；包括米娅在内的十名学生参加了旅行。"
+    },
+    {
+      "term": "incredibly",
+      "focusWord": "incredibly",
+      "sentence": "The view from the mountain was incredibly beautiful.",
+      "chinese": "incredibly = 非常；山上的景色非常美丽。"
+    },
+    {
+      "term": "indeed",
+      "focusWord": "indeed",
+      "sentence": "The exam was difficult indeed.",
+      "chinese": "indeed = 的确；这次考试的确很难。"
+    },
+    {
+      "term": "indoors",
+      "focusWord": "indoors",
+      "sentence": "We stayed indoors because of the storm.",
+      "chinese": "indoors = 在室内；因为暴风雨，我们待在室内。"
+    },
+    {
+      "term": "in fact",
+      "focusWord": "in fact",
+      "sentence": "I thought Leo was French, but in fact he is Belgian.",
+      "chinese": "in fact = 事实上；我以为利奥是法国人，但事实上他是比利时人。"
+    },
+    {
+      "term": "in front of",
+      "focusWord": "in front of",
+      "sentence": "There is a bus stop in front of the school.",
+      "chinese": "in front of = 在...前面；学校前面有一个公交车站。"
+    },
+    {
+      "term": "in ink",
+      "focusWord": "in ink",
+      "sentence": "Please complete the form in ink.",
+      "chinese": "in ink = 用墨水；请用墨水填写表格。"
+    },
+    {
+      "term": "in pencil",
+      "focusWord": "in pencil",
+      "sentence": "Write your first draft in pencil.",
+      "chinese": "in pencil = 用铅笔；用铅笔写初稿。"
+    },
+    {
+      "term": "inside",
+      "focusWord": "inside",
+      "sentence": "It was warm inside the cafe.",
+      "chinese": "inside = 在里面；咖啡馆里面很暖和。"
+    },
+    {
+      "term": "instead",
+      "focusWord": "instead",
+      "sentence": "The bus was full, so we walked instead.",
+      "chinese": "instead = 改为；公交车满了，所以我们改为步行。"
+    },
+    {
+      "term": "in the end",
+      "focusWord": "in the end",
+      "sentence": "In the end, we chose the smaller hotel.",
+      "chinese": "in the end = 最后；最后，我们选择了较小的酒店。"
+    },
+    {
+      "term": "into",
+      "focusWord": "into",
+      "sentence": "She put the books into her bag.",
+      "chinese": "into = 进入；她把书放进了包里。"
+    },
+    {
+      "term": "IT",
+      "focusWord": "it",
+      "sentence": "It is raining outside.",
+      "chinese": "it = 它；外面正在下雨。"
+    },
+    {
+      "term": "its",
+      "focusWord": "its",
+      "sentence": "The dog wagged its tail happily.",
+      "chinese": "its = 它的；那只狗高兴地摇着尾巴。"
+    },
+    {
+      "term": "itself",
+      "focusWord": "itself",
+      "sentence": "The door closed by itself.",
+      "chinese": "itself = 它自己；门自己关上了。"
+    },
+    {
+      "term": "just",
+      "focusWord": "just",
+      "sentence": "I have just finished my homework.",
+      "chinese": "just = 刚刚；我刚刚完成家庭作业。"
+    },
+    {
+      "term": "lately",
+      "focusWord": "lately",
+      "sentence": "Have you seen Maya lately?",
+      "chinese": "lately = 最近；你最近见过玛雅吗？"
+    },
+    {
+      "term": "less",
+      "focusWord": "less",
+      "sentence": "This bag costs less than the other one.",
+      "chinese": "less = 更少；这个包比另一个便宜。"
+    },
+    {
+      "term": "loudly",
+      "focusWord": "loudly",
+      "sentence": "The audience cheered loudly after the song.",
+      "chinese": "loudly = 大声地；歌曲结束后，观众大声欢呼。"
+    },
+    {
+      "term": "luckily",
+      "focusWord": "luckily",
+      "sentence": "Luckily, we caught the last bus.",
+      "chinese": "luckily = 幸运地；幸运的是，我们赶上了末班公交车。"
+    },
+    {
+      "term": "mainly",
+      "focusWord": "mainly",
+      "sentence": "The course is mainly for beginners.",
+      "chinese": "mainly = 主要地；这门课程主要面向初学者。"
+    },
+    {
+      "term": "many",
+      "focusWord": "many",
+      "sentence": "Many people visit the castle each year.",
+      "chinese": "many = 许多；每年有许多人参观这座城堡。"
+    },
+    {
+      "term": "may",
+      "focusWord": "may",
+      "sentence": "You may leave when you finish the test.",
+      "chinese": "may = 可以；完成考试后你可以离开。"
+    },
+    {
+      "term": "maybe",
+      "focusWord": "maybe",
+      "sentence": "Maybe we can meet after lunch.",
+      "chinese": "maybe = 也许；也许我们可以午饭后见面。"
+    },
+    {
+      "term": "me",
+      "focusWord": "me",
+      "sentence": "Could you help me carry this box?",
+      "chinese": "me = 我；你能帮我搬这个箱子吗？"
+    },
+    {
+      "term": "meanwhile",
+      "focusWord": "meanwhile",
+      "sentence": "Dad cooked dinner; meanwhile, I set the table.",
+      "chinese": "meanwhile = 同时；爸爸做晚饭，同时我摆餐具。"
+    },
+    {
+      "term": "might",
+      "focusWord": "might",
+      "sentence": "It might rain this afternoon.",
+      "chinese": "might = 可能；今天下午可能会下雨。"
+    },
+    {
+      "term": "mine",
+      "focusWord": "mine",
+      "sentence": "The seat by the window is mine.",
+      "chinese": "mine = 我的；窗边的座位是我的。"
+    },
+    {
+      "term": "minus",
+      "focusWord": "minus",
+      "sentence": "Ten minus three equals seven.",
+      "chinese": "minus = 减；十减三等于七。"
+    },
+    {
+      "term": "more",
+      "focusWord": "more",
+      "sentence": "We need more chairs for the meeting.",
+      "chinese": "more = 更多；会议需要更多椅子。"
+    },
+    {
+      "term": "most",
+      "focusWord": "most",
+      "sentence": "Most students walk to school.",
+      "chinese": "most = 大多数；大多数学生步行去学校。"
+    },
+    {
+      "term": "mostly",
+      "focusWord": "mostly",
+      "sentence": "The audience was mostly teenagers.",
+      "chinese": "mostly = 大多；观众大多是青少年。"
+    },
+    {
+      "term": "much",
+      "focusWord": "much",
+      "sentence": "How much water should I add?",
+      "chinese": "much = 多少；我应该加多少水？"
+    },
+    {
+      "term": "must",
+      "focusWord": "must",
+      "sentence": "You must wear a helmet when cycling.",
+      "chinese": "must = 必须；骑自行车时必须戴头盔。"
+    },
+    {
+      "term": "my",
+      "focusWord": "my",
+      "sentence": "My sister lives in London.",
+      "chinese": "my = 我的；我姐姐住在伦敦。"
+    },
+    {
+      "term": "myself",
+      "focusWord": "myself",
+      "sentence": "I made this card myself.",
+      "chinese": "myself = 我亲自；这张卡片是我亲自做的。"
+    },
+    {
+      "term": "near",
+      "focusWord": "near",
+      "sentence": "Our hotel is near the station.",
+      "chinese": "near = 在附近；我们的酒店在车站附近。"
+    },
+    {
+      "term": "nearly",
+      "focusWord": "nearly",
+      "sentence": "It is nearly time for lunch.",
+      "chinese": "nearly = 几乎；快到午饭时间了。"
+    }
+  ]
+}
+
