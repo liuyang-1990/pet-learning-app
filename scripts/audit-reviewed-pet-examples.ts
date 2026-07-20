@@ -168,6 +168,11 @@ const manuallyConfirmedTerms = new Set([
   "outof", // movement from inside a bag / 从...里面, not "because of"
   "own", // the possessive adjective 自己的, not the verb "possess"
   "particularly", // especially / 尤其
+  // These sixth-batch grammar examples use valid contextual senses or grammar labels.
+  "shall", // the suggestion form "shall we" / 要不要
+  "such", // the degree construction "such a beautiful day" / 如此
+  "terribly", // the intensifier "terribly sorry" / 非常, not "in a terrible way"
+  "the", // the definite-article grammar label 定冠词; Chinese naturally omits it in the sentence
   // These transport and travel examples use valid synonyms or contextual senses.
   "bus", // bus / public bus
   "flight", // scheduled flight, not flight in general

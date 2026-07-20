@@ -5138,5 +5138,205 @@ export const reviewedWordExampleAudit = {
   "please": {
     "status": "pass",
     "reasons": []
+  },
+  "plenty": {
+    "status": "pass",
+    "reasons": []
+  },
+  "plus": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pm": {
+    "status": "pass",
+    "reasons": []
+  },
+  "possibly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "previously": {
+    "status": "pass",
+    "reasons": []
+  },
+  "probably": {
+    "status": "pass",
+    "reasons": []
+  },
+  "properly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "quickly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "quietly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "quite": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rarely": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rather": {
+    "status": "pass",
+    "reasons": []
+  },
+  "really": {
+    "status": "pass",
+    "reasons": []
+  },
+  "reasonably": {
+    "status": "pass",
+    "reasons": []
+  },
+  "regarding": {
+    "status": "pass",
+    "reasons": []
+  },
+  "regularly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "safely": {
+    "status": "pass",
+    "reasons": []
+  },
+  "seriously": {
+    "status": "pass",
+    "reasons": []
+  },
+  "several": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shall": {
+    "status": "pass",
+    "reasons": []
+  },
+  "she": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shortly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "should": {
+    "status": "pass",
+    "reasons": []
+  },
+  "since": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sincerely": {
+    "status": "pass",
+    "reasons": []
+  },
+  "slightly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "slowly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "so": {
+    "status": "pass",
+    "reasons": []
+  },
+  "some": {
+    "status": "pass",
+    "reasons": []
+  },
+  "somebody": {
+    "status": "pass",
+    "reasons": []
+  },
+  "somehow": {
+    "status": "pass",
+    "reasons": []
+  },
+  "someone": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sometimes": {
+    "status": "pass",
+    "reasons": []
+  },
+  "somewhere": {
+    "status": "pass",
+    "reasons": []
+  },
+  "specially": {
+    "status": "pass",
+    "reasons": []
+  },
+  "still": {
+    "status": "pass",
+    "reasons": []
+  },
+  "such": {
+    "status": "pass",
+    "reasons": []
+  },
+  "suddenly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "terribly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "than": {
+    "status": "pass",
+    "reasons": []
+  },
+  "thanks": {
+    "status": "pass",
+    "reasons": []
+  },
+  "that": {
+    "status": "pass",
+    "reasons": []
+  },
+  "the": {
+    "status": "pass",
+    "reasons": []
+  },
+  "their": {
+    "status": "pass",
+    "reasons": []
+  },
+  "theirs": {
+    "status": "pass",
+    "reasons": []
+  },
+  "them": {
+    "status": "pass",
+    "reasons": []
+  },
+  "themselves": {
+    "status": "pass",
+    "reasons": []
+  },
+  "then": {
+    "status": "pass",
+    "reasons": []
+  },
+  "there": {
+    "status": "pass",
+    "reasons": []
+  },
+  "therefore": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;
