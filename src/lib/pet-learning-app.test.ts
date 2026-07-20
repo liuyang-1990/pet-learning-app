@@ -306,6 +306,15 @@ const grammarFifthBatch = [
   "particularly", "per", "perfectly", "perhaps", "personally", "please",
 ] as const;
 
+const grammarSixthBatch = [
+  "plenty", "plus", "p.m", "possibly", "previously", "probably", "properly", "quickly",
+  "quietly", "quite", "rarely", "rather", "really", "reasonably", "regarding", "regularly",
+  "safely", "seriously", "several", "shall", "she", "shortly", "should", "since", "sincerely",
+  "slightly", "slowly", "so", "some", "somebody", "somehow", "someone", "sometimes",
+  "somewhere", "specially", "still", "such", "suddenly", "terribly", "than", "thanks", "that",
+  "the", "their", "theirs", "them", "themselves", "then", "there", "therefore",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -2460,6 +2469,86 @@ describe("PET Learning App", () => {
       per: ["Tickets cost twelve pounds per person.", "per = 每；票价为每人十二英镑。"],
       perfectly: ["I can hear you perfectly.", "perfectly = 完全地；我能完全听清你说话。"],
       personally: ["I personally prefer the earlier train.", "personally = 就个人而言；就个人而言，我更喜欢较早的火车。"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the sixth grammar reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const grammarWords = words.filter((word) => word.theme === "grammar");
+    const selectedExamples = grammarSixthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(grammarSixthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1335);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(grammarWords).toHaveLength(338);
+    expect(
+      grammarWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(279);
+    expect(
+      getWordExample({ term: "step forward / back / out", chineseGloss: "向前、向后或出去" }).sentence,
+    ).toBeNull();
+  });
+
+  it("keeps the sixth grammar ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/grammar-006.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("grammar-006");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(grammarSixthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the sixth grammar batch", () => {
+    const expectedExamples = {
+      plenty: ["We have plenty of time before the train leaves.", "plenty = 充足；火车出发前我们有充足的时间。"],
+      plus: ["Two plus three equals five.", "plus = 加；二加三等于五。"],
+      "p.m": ["The library closes at six p.m.", "p.m = 下午；图书馆下午六点关门。"],
+      properly: ["Make sure the door is closed properly.", "properly = 正确地；确保门已正确关好。"],
+      quite: ["The film was quite interesting.", "quite = 相当；这部电影相当有趣。"],
+      rather: ["The room is rather small.", "rather = 相当；这个房间相当小。"],
+      regarding: ["I am writing regarding your course.", "regarding = 关于；我写信是想咨询你们的课程。"],
+      shall: ["Shall we meet outside the cinema?", "shall = 要不要；我们要不要在电影院外见面？"],
+      since: ["I have lived here since 2022.", "since = 自从；我从2022年起就住在这里。"],
+      so: ["It was late, so we took a taxi.", "so = 所以；天晚了，所以我们乘了出租车。"],
+      somebody: ["Somebody left a bag on the bus.", "somebody = 有人；有人把包落在公交车上了。"],
+      somewhere: ["Let us find somewhere quiet to study.", "somewhere = 某个地方；我们找个安静的地方学习吧。"],
+      specially: ["This cake was specially made for you.", "specially = 特意地；这个蛋糕是特意为你做的。"],
+      still: ["It is still raining outside.", "still = 仍然；外面仍然在下雨。"],
+      such: ["It was such a beautiful day.", "such = 如此；那是如此美好的一天。"],
+      terribly: ["I am terribly sorry about the mistake.", "terribly = 非常；对于这个错误我非常抱歉。"],
+      the: ["Please close the door.", "the = 定冠词；请关上门。"],
+      theirs: ["The bicycles by the gate are theirs.", "theirs = 他们的；门边的自行车是他们的。"],
+      themselves: ["They made the costumes themselves.", "themselves = 他们亲自；他们亲自制作了服装。"],
+      therefore: ["The road was closed; therefore, we took another route.", "therefore = 因此；道路封闭了，因此我们走了另一条路线。"],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
