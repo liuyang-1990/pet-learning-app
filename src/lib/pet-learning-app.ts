@@ -7340,6 +7340,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "The road was closed; therefore, we took another route.",
       chinese: "therefore = 因此；道路封闭了，因此我们走了另一条路线。",
     },
+    "these": {
+      focusWord: "these",
+      sentence: "These shoes are too small.",
+      chinese: "these = 这些；这些鞋太小了。",
+    },
+    "they": {
+      focusWord: "they",
+      sentence: "They are waiting outside.",
+      chinese: "they = 他们；他们正在外面等候。",
+    },
+    "this": {
+      focusWord: "this",
+      sentence: "This book belongs to Ella.",
+      chinese: "this = 这本；这本书是埃拉的。",
+    },
+    "those": {
+      focusWord: "those",
+      sentence: "Those mountains are beautiful.",
+      chinese: "those = 那些；那些山很美。",
+    },
+    "though": {
+      focusWord: "though",
+      sentence: "Though it was cold, we went swimming.",
+      chinese: "though = 虽然；虽然天气很冷，我们还是去游泳了。",
+    },
+    "till": {
+      focusWord: "till",
+      sentence: "Wait here till I come back.",
+      chinese: "till = 直到；在这里等到我回来。",
+    },
+    "to": {
+      focusWord: "to",
+      sentence: "We walked to the station.",
+      chinese: "to = 到；我们步行到了车站。",
+    },
+    "together": {
+      focusWord: "together",
+      sentence: "We cooked dinner together.",
+      chinese: "together = 一起；我们一起做了晚饭。",
+    },
+    "tonight": {
+      focusWord: "tonight",
+      sentence: "We are seeing a film tonight.",
+      chinese: "tonight = 今晚；我们今晚要去看电影。",
+    },
+    "too": {
+      focusWord: "too",
+      sentence: "This bag is too heavy.",
+      chinese: "too = 太；这个包太重了。",
+    },
+    "totally": {
+      focusWord: "totally",
+      sentence: "I totally agree with you.",
+      chinese: "totally = 完全；我完全同意你的看法。",
+    },
+    "toward": {
+      focusWord: "toward",
+      sentence: "She walked toward the entrance.",
+      chinese: "toward = 朝向；她朝入口走去。",
+    },
+    "twice": {
+      focusWord: "twice",
+      sentence: "I have visited Rome twice.",
+      chinese: "twice = 两次；我去过罗马两次。",
+    },
+    "typically": {
+      focusWord: "typically",
+      sentence: "The journey typically takes an hour.",
+      chinese: "typically = 通常；这段旅程通常需要一个小时。",
+    },
+    "under": {
+      focusWord: "under",
+      sentence: "Your shoes are under the bed.",
+      chinese: "under = 在...下面；你的鞋在床下面。",
+    },
+    "underneath": {
+      focusWord: "underneath",
+      sentence: "The cat is hiding underneath the table.",
+      chinese: "underneath = 在...下面；猫正躲在桌子下面。",
+    },
+    "unfortunately": {
+      focusWord: "unfortunately",
+      sentence: "Unfortunately, the museum was closed.",
+      chinese: "unfortunately = 不幸的是；不幸的是，博物馆关门了。",
+    },
+    "unless": {
+      focusWord: "unless",
+      sentence: "You cannot enter unless you have a ticket.",
+      chinese: "unless = 除非；除非你有票，否则不能进入。",
+    },
+    "until": {
+      focusWord: "until",
+      sentence: "The library is open until eight.",
+      chinese: "until = 直到；图书馆开放到八点。",
+    },
+    "unusual": {
+      focusWord: "unusual",
+      sentence: "It is unusual to see snow here in April.",
+      chinese: "unusual = 不寻常的；四月在这里看到雪并不寻常。",
+    },
+    "up": {
+      focusWord: "up",
+      sentence: "She ran up the stairs.",
+      chinese: "up = 向上；她跑上了楼梯。",
+    },
+    "upon": {
+      focusWord: "upon",
+      sentence: "The book was lying upon the table.",
+      chinese: "upon = 在...上；书放在桌子上。",
+    },
+    "upto": {
+      focusWord: "up to",
+      sentence: "This lift can carry up to eight people.",
+      chinese: "up to = 最多；这部电梯最多可载八人。",
+    },
+    "uptodate": {
+      focusWord: "up to date",
+      sentence: "This map is not up to date.",
+      chinese: "up to date = 最新的；这张地图不是最新的。",
+    },
+    "urgently": {
+      focusWord: "urgently",
+      sentence: "The hospital urgently needs more nurses.",
+      chinese: "urgently = 迫切地；这家医院迫切需要更多护士。",
+    },
+    "us": {
+      focusWord: "us",
+      sentence: "Please send us the details.",
+      chinese: "us = 我们；请把详细信息发给我们。",
+    },
+    "usedto": {
+      focusWord: "used to",
+      sentence: "We used to live near the sea.",
+      chinese: "used to = 过去常常；我们过去住在海边。",
+    },
+    "v": {
+      focusWord: "versus",
+      sentence: "The final is Brazil versus Spain.",
+      chinese: "versus = 对阵；决赛由巴西对阵西班牙。",
+    },
+    "very": {
+      focusWord: "very",
+      sentence: "This book is very useful.",
+      chinese: "very = 非常；这本书非常有用。",
+    },
+    "via": {
+      focusWord: "via",
+      sentence: "Please send the document via email.",
+      chinese: "via = 通过；请通过电子邮件发送文件。",
+    },
+    "we": {
+      focusWord: "we",
+      sentence: "We live near the park.",
+      chinese: "we = 我们；我们住在公园附近。",
+    },
+    "welldone": {
+      focusWord: "well done",
+      sentence: "Well done, you passed the exam!",
+      chinese: "well done = 做得好；做得好，你通过考试了！",
+    },
+    "wellmade": {
+      focusWord: "well made",
+      sentence: "This jacket is well made and should last for years.",
+      chinese: "well made = 做工精良；这件夹克做工精良，应该能穿很多年。",
+    },
+    "what": {
+      focusWord: "what",
+      sentence: "What are you looking for?",
+      chinese: "what = 什么；你在找什么？",
+    },
+    "whatever": {
+      focusWord: "whatever",
+      sentence: "Choose whatever you like.",
+      chinese: "whatever = 无论什么；选择任何你喜欢的东西。",
+    },
+    "when": {
+      focusWord: "when",
+      sentence: "When does the shop close?",
+      chinese: "when = 什么时候；商店什么时候关门？",
+    },
+    "whenever": {
+      focusWord: "whenever",
+      sentence: "Call me whenever you need help.",
+      chinese: "whenever = 无论何时；无论何时需要帮助都可以给我打电话。",
+    },
+    "where": {
+      focusWord: "where",
+      sentence: "Where did you buy that coat?",
+      chinese: "where = 在哪里；你在哪里买的那件外套？",
+    },
+    "wherever": {
+      focusWord: "wherever",
+      sentence: "You can sit wherever you like.",
+      chinese: "wherever = 无论哪里；你喜欢坐哪里都可以。",
+    },
+    "whether": {
+      focusWord: "whether",
+      sentence: "I do not know whether he will come.",
+      chinese: "whether = 是否；我不知道他是否会来。",
+    },
+    "which": {
+      focusWord: "which",
+      sentence: "Which bus goes to the airport?",
+      chinese: "which = 哪一辆；哪一辆公交车去机场？",
+    },
+    "who": {
+      focusWord: "who",
+      sentence: "Who is your English teacher?",
+      chinese: "who = 谁；谁是你的英语老师？",
+    },
+    "whole": {
+      focusWord: "whole",
+      sentence: "We spent the whole day at the beach.",
+      chinese: "whole = 整个；我们在海滩度过了整整一天。",
+    },
+    "whose": {
+      focusWord: "whose",
+      sentence: "Whose phone is this?",
+      chinese: "whose = 谁的；这是谁的手机？",
+    },
+    "why": {
+      focusWord: "why",
+      sentence: "Why are you laughing?",
+      chinese: "why = 为什么；你为什么笑？",
+    },
+    "will": {
+      focusWord: "will",
+      sentence: "I will call you tomorrow.",
+      chinese: "will = 将会；我明天会给你打电话。",
+    },
+    "with": {
+      focusWord: "with",
+      sentence: "I went to the cinema with my friends.",
+      chinese: "with = 和...一起；我和朋友们一起去了电影院。",
+    },
+    "within": {
+      focusWord: "within",
+      sentence: "Please reply within five days.",
+      chinese: "within = 在...以内；请在五天内回复。",
+    },
+    "without": {
+      focusWord: "without",
+      sentence: "He left without saying goodbye.",
+      chinese: "without = 没有；他没有告别就离开了。",
+    },
+    "would": {
+      focusWord: "would",
+      sentence: "Would you like a cup of tea?",
+      chinese: "would = 愿意；你想喝杯茶吗？",
+    },
   };
 }
 
