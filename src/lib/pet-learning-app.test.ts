@@ -324,6 +324,10 @@ const grammarSeventhBatch = [
   "whose", "why", "will", "with", "within", "without", "would",
 ] as const;
 
+const grammarEighthBatch = [
+  "wow", "yeah", "yes", "yet", "you", "you know", "your", "yours", "yourself",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -2638,6 +2642,72 @@ describe("PET Learning App", () => {
       within: ["Please reply within five days.", "within = 在...以内；请在五天内回复。"],
       without: ["He left without saying goodbye.", "without = 没有；他没有告别就离开了。"],
       would: ["Would you like a cup of tea?", "would = 愿意；你想喝杯茶吗？"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the final grammar reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const grammarWords = words.filter((word) => word.theme === "grammar");
+    const selectedExamples = grammarEighthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(grammarEighthBatch).toHaveLength(9);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1394);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(grammarWords).toHaveLength(338);
+    expect(
+      grammarWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBe(338);
+  });
+
+  it("keeps the final grammar ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/grammar-008.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("grammar-008");
+    expect(candidate.entries).toHaveLength(9);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(grammarEighthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the final grammar batch", () => {
+    const expectedExamples = {
+      wow: ["Wow, this view is amazing!", "wow = 哇；哇，这里的景色太棒了！"],
+      yeah: ["Yeah, I can help you tomorrow.", "yeah = 是的；是的，我明天可以帮你。"],
+      yes: ["Yes, I have finished my homework.", "yes = 是的；是的，我已经完成家庭作业了。"],
+      yet: ["Have you finished your homework yet?", "yet = 还；你完成家庭作业了吗？"],
+      you: ["You can sit here.", "you = 你；你可以坐在这里。"],
+      "you know": ["You know, this is a difficult decision.", "you know = 你知道的；你知道的，这是一个艰难的决定。"],
+      your: ["Is this your jacket?", "your = 你的；这是你的夹克吗？"],
+      yours: ["This umbrella is yours.", "yours = 你的；这把伞是你的。"],
+      yourself: ["Did you make this cake yourself?", "yourself = 你亲自；这个蛋糕是你亲自做的吗？"],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
