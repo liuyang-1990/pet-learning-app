@@ -173,6 +173,15 @@ const manuallyConfirmedTerms = new Set([
   "such", // the degree construction "such a beautiful day" / 如此
   "terribly", // the intensifier "terribly sorry" / 非常, not "in a terrible way"
   "the", // the definite-article grammar label 定冠词; Chinese naturally omits it in the sentence
+  // These seventh-batch grammar examples use valid contextual senses or Chinese synonyms.
+  "too", // excessive degree / 太, not the additive sense "also"
+  "usedto", // past habit / 过去常常, not "be accustomed to"
+  "v", // versus in a sports fixture / 对阵
+  "when", // the question word 什么时候, not only the conjunction "when"
+  "whenever", // at any time / 无论何时
+  "which", // selecting one bus / 哪一辆
+  "with", // accompaniment / 和...一起
+  "would", // the polite offer "would you like" / 想要
   // These transport and travel examples use valid synonyms or contextual senses.
   "bus", // bus / public bus
   "flight", // scheduled flight, not flight in general

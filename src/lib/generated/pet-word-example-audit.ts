@@ -5338,5 +5338,205 @@ export const reviewedWordExampleAudit = {
   "therefore": {
     "status": "pass",
     "reasons": []
+  },
+  "these": {
+    "status": "pass",
+    "reasons": []
+  },
+  "they": {
+    "status": "pass",
+    "reasons": []
+  },
+  "this": {
+    "status": "pass",
+    "reasons": []
+  },
+  "those": {
+    "status": "pass",
+    "reasons": []
+  },
+  "though": {
+    "status": "pass",
+    "reasons": []
+  },
+  "till": {
+    "status": "pass",
+    "reasons": []
+  },
+  "to": {
+    "status": "pass",
+    "reasons": []
+  },
+  "together": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tonight": {
+    "status": "pass",
+    "reasons": []
+  },
+  "too": {
+    "status": "pass",
+    "reasons": []
+  },
+  "totally": {
+    "status": "pass",
+    "reasons": []
+  },
+  "toward": {
+    "status": "pass",
+    "reasons": []
+  },
+  "twice": {
+    "status": "pass",
+    "reasons": []
+  },
+  "typically": {
+    "status": "pass",
+    "reasons": []
+  },
+  "under": {
+    "status": "pass",
+    "reasons": []
+  },
+  "underneath": {
+    "status": "pass",
+    "reasons": []
+  },
+  "unfortunately": {
+    "status": "pass",
+    "reasons": []
+  },
+  "unless": {
+    "status": "pass",
+    "reasons": []
+  },
+  "until": {
+    "status": "pass",
+    "reasons": []
+  },
+  "unusual": {
+    "status": "pass",
+    "reasons": []
+  },
+  "up": {
+    "status": "pass",
+    "reasons": []
+  },
+  "upon": {
+    "status": "pass",
+    "reasons": []
+  },
+  "upto": {
+    "status": "pass",
+    "reasons": []
+  },
+  "uptodate": {
+    "status": "pass",
+    "reasons": []
+  },
+  "urgently": {
+    "status": "pass",
+    "reasons": []
+  },
+  "us": {
+    "status": "pass",
+    "reasons": []
+  },
+  "usedto": {
+    "status": "pass",
+    "reasons": []
+  },
+  "v": {
+    "status": "pass",
+    "reasons": []
+  },
+  "very": {
+    "status": "pass",
+    "reasons": []
+  },
+  "via": {
+    "status": "pass",
+    "reasons": []
+  },
+  "we": {
+    "status": "pass",
+    "reasons": []
+  },
+  "welldone": {
+    "status": "pass",
+    "reasons": []
+  },
+  "wellmade": {
+    "status": "pass",
+    "reasons": []
+  },
+  "what": {
+    "status": "pass",
+    "reasons": []
+  },
+  "whatever": {
+    "status": "pass",
+    "reasons": []
+  },
+  "when": {
+    "status": "pass",
+    "reasons": []
+  },
+  "whenever": {
+    "status": "pass",
+    "reasons": []
+  },
+  "where": {
+    "status": "pass",
+    "reasons": []
+  },
+  "wherever": {
+    "status": "pass",
+    "reasons": []
+  },
+  "whether": {
+    "status": "pass",
+    "reasons": []
+  },
+  "which": {
+    "status": "pass",
+    "reasons": []
+  },
+  "who": {
+    "status": "pass",
+    "reasons": []
+  },
+  "whole": {
+    "status": "pass",
+    "reasons": []
+  },
+  "whose": {
+    "status": "pass",
+    "reasons": []
+  },
+  "why": {
+    "status": "pass",
+    "reasons": []
+  },
+  "will": {
+    "status": "pass",
+    "reasons": []
+  },
+  "with": {
+    "status": "pass",
+    "reasons": []
+  },
+  "within": {
+    "status": "pass",
+    "reasons": []
+  },
+  "without": {
+    "status": "pass",
+    "reasons": []
+  },
+  "would": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;
