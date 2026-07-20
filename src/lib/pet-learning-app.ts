@@ -7090,6 +7090,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "Please close the window.",
       chinese: "please = 请；请关上窗户。",
     },
+    "plenty": {
+      focusWord: "plenty",
+      sentence: "We have plenty of time before the train leaves.",
+      chinese: "plenty = 充足；火车出发前我们有充足的时间。",
+    },
+    "plus": {
+      focusWord: "plus",
+      sentence: "Two plus three equals five.",
+      chinese: "plus = 加；二加三等于五。",
+    },
+    "pm": {
+      focusWord: "p.m",
+      sentence: "The library closes at six p.m.",
+      chinese: "p.m = 下午；图书馆下午六点关门。",
+    },
+    "possibly": {
+      focusWord: "possibly",
+      sentence: "We could possibly finish the work today.",
+      chinese: "possibly = 可能；我们可能今天完成这项工作。",
+    },
+    "previously": {
+      focusWord: "previously",
+      sentence: "This shop was previously a bank.",
+      chinese: "previously = 以前；这家商店以前是一家银行。",
+    },
+    "probably": {
+      focusWord: "probably",
+      sentence: "It will probably rain tomorrow.",
+      chinese: "probably = 很可能；明天很可能会下雨。",
+    },
+    "properly": {
+      focusWord: "properly",
+      sentence: "Make sure the door is closed properly.",
+      chinese: "properly = 正确地；确保门已正确关好。",
+    },
+    "quickly": {
+      focusWord: "quickly",
+      sentence: "She finished her breakfast quickly.",
+      chinese: "quickly = 很快地；她很快吃完了早餐。",
+    },
+    "quietly": {
+      focusWord: "quietly",
+      sentence: "Please speak quietly in the library.",
+      chinese: "quietly = 轻声地；请在图书馆里轻声说话。",
+    },
+    "quite": {
+      focusWord: "quite",
+      sentence: "The film was quite interesting.",
+      chinese: "quite = 相当；这部电影相当有趣。",
+    },
+    "rarely": {
+      focusWord: "rarely",
+      sentence: "We rarely eat fast food.",
+      chinese: "rarely = 很少；我们很少吃快餐。",
+    },
+    "rather": {
+      focusWord: "rather",
+      sentence: "The room is rather small.",
+      chinese: "rather = 相当；这个房间相当小。",
+    },
+    "really": {
+      focusWord: "really",
+      sentence: "I really enjoyed the concert.",
+      chinese: "really = 真的；我真的很喜欢这场音乐会。",
+    },
+    "reasonably": {
+      focusWord: "reasonably",
+      sentence: "The hotel is reasonably priced.",
+      chinese: "reasonably = 合理地；这家酒店定价合理。",
+    },
+    "regarding": {
+      focusWord: "regarding",
+      sentence: "I am writing regarding your course.",
+      chinese: "regarding = 关于；我写信是想咨询你们的课程。",
+    },
+    "regularly": {
+      focusWord: "regularly",
+      sentence: "I exercise regularly after work.",
+      chinese: "regularly = 定期地；我下班后定期锻炼。",
+    },
+    "safely": {
+      focusWord: "safely",
+      sentence: "We arrived home safely.",
+      chinese: "safely = 安全地；我们安全到家了。",
+    },
+    "seriously": {
+      focusWord: "seriously",
+      sentence: "You should take this warning seriously.",
+      chinese: "seriously = 认真地；你应该认真对待这个警告。",
+    },
+    "several": {
+      focusWord: "several",
+      sentence: "Several students joined the club.",
+      chinese: "several = 几个；几个学生加入了俱乐部。",
+    },
+    "shall": {
+      focusWord: "shall",
+      sentence: "Shall we meet outside the cinema?",
+      chinese: "shall = 要不要；我们要不要在电影院外见面？",
+    },
+    "she": {
+      focusWord: "she",
+      sentence: "She is waiting at the bus stop.",
+      chinese: "she = 她；她正在公交车站等候。",
+    },
+    "shortly": {
+      focusWord: "shortly",
+      sentence: "The train will arrive shortly.",
+      chinese: "shortly = 不久；火车很快就会到达。",
+    },
+    "should": {
+      focusWord: "should",
+      sentence: "You should drink more water.",
+      chinese: "should = 应该；你应该多喝水。",
+    },
+    "since": {
+      focusWord: "since",
+      sentence: "I have lived here since 2022.",
+      chinese: "since = 自从；我从2022年起就住在这里。",
+    },
+    "sincerely": {
+      focusWord: "sincerely",
+      sentence: "I sincerely hope you can come.",
+      chinese: "sincerely = 真诚地；我真诚地希望你能来。",
+    },
+    "slightly": {
+      focusWord: "slightly",
+      sentence: "This bag is slightly heavier than mine.",
+      chinese: "slightly = 稍微；这个包比我的稍微重一点。",
+    },
+    "slowly": {
+      focusWord: "slowly",
+      sentence: "Please drive slowly near the school.",
+      chinese: "slowly = 慢慢地；请在学校附近慢慢开车。",
+    },
+    "so": {
+      focusWord: "so",
+      sentence: "It was late, so we took a taxi.",
+      chinese: "so = 所以；天晚了，所以我们乘了出租车。",
+    },
+    "some": {
+      focusWord: "some",
+      sentence: "Would you like some cake?",
+      chinese: "some = 一些；你想吃一些蛋糕吗？",
+    },
+    "somebody": {
+      focusWord: "somebody",
+      sentence: "Somebody left a bag on the bus.",
+      chinese: "somebody = 有人；有人把包落在公交车上了。",
+    },
+    "somehow": {
+      focusWord: "somehow",
+      sentence: "We somehow found the right path.",
+      chinese: "somehow = 不知怎么地；我们不知怎么地找到了正确的小路。",
+    },
+    "someone": {
+      focusWord: "someone",
+      sentence: "Someone is waiting for you outside.",
+      chinese: "someone = 有人；有人在外面等你。",
+    },
+    "sometimes": {
+      focusWord: "sometimes",
+      sentence: "I sometimes walk to school.",
+      chinese: "sometimes = 有时；我有时步行去学校。",
+    },
+    "somewhere": {
+      focusWord: "somewhere",
+      sentence: "Let us find somewhere quiet to study.",
+      chinese: "somewhere = 某个地方；我们找个安静的地方学习吧。",
+    },
+    "specially": {
+      focusWord: "specially",
+      sentence: "This cake was specially made for you.",
+      chinese: "specially = 特意地；这个蛋糕是特意为你做的。",
+    },
+    "still": {
+      focusWord: "still",
+      sentence: "It is still raining outside.",
+      chinese: "still = 仍然；外面仍然在下雨。",
+    },
+    "such": {
+      focusWord: "such",
+      sentence: "It was such a beautiful day.",
+      chinese: "such = 如此；那是如此美好的一天。",
+    },
+    "suddenly": {
+      focusWord: "suddenly",
+      sentence: "The lights suddenly went out.",
+      chinese: "suddenly = 突然；灯突然熄灭了。",
+    },
+    "terribly": {
+      focusWord: "terribly",
+      sentence: "I am terribly sorry about the mistake.",
+      chinese: "terribly = 非常；对于这个错误我非常抱歉。",
+    },
+    "than": {
+      focusWord: "than",
+      sentence: "My sister is taller than me.",
+      chinese: "than = 比；我姐姐比我高。",
+    },
+    "thanks": {
+      focusWord: "thanks",
+      sentence: "Thanks for helping me.",
+      chinese: "thanks = 谢谢；谢谢你帮助我。",
+    },
+    "that": {
+      focusWord: "that",
+      sentence: "That house belongs to my uncle.",
+      chinese: "that = 那个；那栋房子是我叔叔的。",
+    },
+    "the": {
+      focusWord: "the",
+      sentence: "Please close the door.",
+      chinese: "the = 定冠词；请关上门。",
+    },
+    "their": {
+      focusWord: "their",
+      sentence: "The students put their bags under the desks.",
+      chinese: "their = 他们的；学生们把他们的包放在课桌下面。",
+    },
+    "theirs": {
+      focusWord: "theirs",
+      sentence: "The bicycles by the gate are theirs.",
+      chinese: "theirs = 他们的；门边的自行车是他们的。",
+    },
+    "them": {
+      focusWord: "them",
+      sentence: "I saw them at the station.",
+      chinese: "them = 他们；我在车站看见了他们。",
+    },
+    "themselves": {
+      focusWord: "themselves",
+      sentence: "They made the costumes themselves.",
+      chinese: "themselves = 他们亲自；他们亲自制作了服装。",
+    },
+    "then": {
+      focusWord: "then",
+      sentence: "Finish your homework, then you can play.",
+      chinese: "then = 然后；完成家庭作业，然后你就可以玩了。",
+    },
+    "there": {
+      focusWord: "there",
+      sentence: "Put the box over there.",
+      chinese: "there = 那里；把箱子放到那里。",
+    },
+    "therefore": {
+      focusWord: "therefore",
+      sentence: "The road was closed; therefore, we took another route.",
+      chinese: "therefore = 因此；道路封闭了，因此我们走了另一条路线。",
+    },
   };
 }
 
