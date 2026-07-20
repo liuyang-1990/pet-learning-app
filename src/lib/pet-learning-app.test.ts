@@ -315,6 +315,15 @@ const grammarSixthBatch = [
   "the", "their", "theirs", "them", "themselves", "then", "there", "therefore",
 ] as const;
 
+const grammarSeventhBatch = [
+  "these", "they", "this", "those", "though", "till", "to", "together", "tonight", "too",
+  "totally", "toward", "twice", "typically", "under", "underneath", "unfortunately",
+  "unless", "until", "unusual", "up", "upon", "up to", "up to date", "urgently", "us",
+  "used to", "v / versus", "very", "via", "we", "well done", "well made / well-made", "what",
+  "whatever", "when", "whenever", "where", "wherever", "whether", "which", "who", "whole",
+  "whose", "why", "will", "with", "within", "without", "would",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -2549,6 +2558,86 @@ describe("PET Learning App", () => {
       theirs: ["The bicycles by the gate are theirs.", "theirs = 他们的；门边的自行车是他们的。"],
       themselves: ["They made the costumes themselves.", "themselves = 他们亲自；他们亲自制作了服装。"],
       therefore: ["The road was closed; therefore, we took another route.", "therefore = 因此；道路封闭了，因此我们走了另一条路线。"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the seventh grammar reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const grammarWords = words.filter((word) => word.theme === "grammar");
+    const selectedExamples = grammarSeventhBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(grammarSeventhBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1385);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(grammarWords).toHaveLength(338);
+    expect(
+      grammarWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(329);
+    expect(
+      getWordExample({ term: "step forward / back / out", chineseGloss: "向前、向后或出去" }).sentence,
+    ).toBeNull();
+  });
+
+  it("keeps the seventh grammar ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/grammar-007.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("grammar-007");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(grammarSeventhBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the seventh grammar batch", () => {
+    const expectedExamples = {
+      though: ["Though it was cold, we went swimming.", "though = 虽然；虽然天气很冷，我们还是去游泳了。"],
+      till: ["Wait here till I come back.", "till = 直到；在这里等到我回来。"],
+      too: ["This bag is too heavy.", "too = 太；这个包太重了。"],
+      toward: ["She walked toward the entrance.", "toward = 朝向；她朝入口走去。"],
+      typically: ["The journey typically takes an hour.", "typically = 通常；这段旅程通常需要一个小时。"],
+      unless: ["You cannot enter unless you have a ticket.", "unless = 除非；除非你有票，否则不能进入。"],
+      unusual: ["It is unusual to see snow here in April.", "unusual = 不寻常的；四月在这里看到雪并不寻常。"],
+      upon: ["The book was lying upon the table.", "upon = 在...上；书放在桌子上。"],
+      "up to": ["This lift can carry up to eight people.", "up to = 最多；这部电梯最多可载八人。"],
+      "used to": ["We used to live near the sea.", "used to = 过去常常；我们过去住在海边。"],
+      "v / versus": ["The final is Brazil versus Spain.", "versus = 对阵；决赛由巴西对阵西班牙。"],
+      "well made / well-made": ["This jacket is well made and should last for years.", "well made = 做工精良；这件夹克做工精良，应该能穿很多年。"],
+      whatever: ["Choose whatever you like.", "whatever = 无论什么；选择任何你喜欢的东西。"],
+      whenever: ["Call me whenever you need help.", "whenever = 无论何时；无论何时需要帮助都可以给我打电话。"],
+      wherever: ["You can sit wherever you like.", "wherever = 无论哪里；你喜欢坐哪里都可以。"],
+      whether: ["I do not know whether he will come.", "whether = 是否；我不知道他是否会来。"],
+      whole: ["We spent the whole day at the beach.", "whole = 整个；我们在海滩度过了整整一天。"],
+      within: ["Please reply within five days.", "within = 在...以内；请在五天内回复。"],
+      without: ["He left without saying goodbye.", "without = 没有；他没有告别就离开了。"],
+      would: ["Would you like a cup of tea?", "would = 愿意；你想喝杯茶吗？"],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
