@@ -5574,5 +5574,205 @@ export const reviewedWordExampleAudit = {
   "yourself": {
     "status": "pass",
     "reasons": []
+  },
+  "access": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ad": {
+    "status": "pass",
+    "reasons": []
+  },
+  "advantage": {
+    "status": "pass",
+    "reasons": []
+  },
+  "adventure": {
+    "status": "pass",
+    "reasons": []
+  },
+  "aim": {
+    "status": "pass",
+    "reasons": []
+  },
+  "airforce": {
+    "status": "pass",
+    "reasons": []
+  },
+  "airline": {
+    "status": "pass",
+    "reasons": []
+  },
+  "alarm": {
+    "status": "pass",
+    "reasons": []
+  },
+  "alarmclock": {
+    "status": "pass",
+    "reasons": []
+  },
+  "album": {
+    "status": "pass",
+    "reasons": []
+  },
+  "alphabet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ankle": {
+    "status": "pass",
+    "reasons": []
+  },
+  "anniversary": {
+    "status": "pass",
+    "reasons": []
+  },
+  "answerphone": {
+    "status": "pass",
+    "reasons": []
+  },
+  "apology": {
+    "status": "pass",
+    "reasons": []
+  },
+  "apple": {
+    "status": "pass",
+    "reasons": []
+  },
+  "architect": {
+    "status": "pass",
+    "reasons": []
+  },
+  "architecture": {
+    "status": "pass",
+    "reasons": []
+  },
+  "arithmetic": {
+    "status": "pass",
+    "reasons": []
+  },
+  "armchair": {
+    "status": "pass",
+    "reasons": []
+  },
+  "army": {
+    "status": "pass",
+    "reasons": []
+  },
+  "arrival": {
+    "status": "pass",
+    "reasons": []
+  },
+  "aspirin": {
+    "status": "pass",
+    "reasons": []
+  },
+  "astronaut": {
+    "status": "pass",
+    "reasons": []
+  },
+  "atsymbol": {
+    "status": "pass",
+    "reasons": []
+  },
+  "atmosphere": {
+    "status": "pass",
+    "reasons": []
+  },
+  "attack": {
+    "status": "pass",
+    "reasons": []
+  },
+  "attitude": {
+    "status": "pass",
+    "reasons": []
+  },
+  "author": {
+    "status": "pass",
+    "reasons": []
+  },
+  "autumn": {
+    "status": "pass",
+    "reasons": []
+  },
+  "babysitter": {
+    "status": "pass",
+    "reasons": []
+  },
+  "backpack": {
+    "status": "pass",
+    "reasons": []
+  },
+  "backpacker": {
+    "status": "pass",
+    "reasons": []
+  },
+  "backpacking": {
+    "status": "pass",
+    "reasons": []
+  },
+  "badminton": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bag": {
+    "status": "pass",
+    "reasons": []
+  },
+  "baggage": {
+    "status": "pass",
+    "reasons": []
+  },
+  "baker": {
+    "status": "pass",
+    "reasons": []
+  },
+  "balcony": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ball": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ballet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "balloon": {
+    "status": "pass",
+    "reasons": []
+  },
+  "banana": {
+    "status": "pass",
+    "reasons": []
+  },
+  "band": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bandage": {
+    "status": "pass",
+    "reasons": []
+  },
+  "banker": {
+    "status": "pass",
+    "reasons": []
+  },
+  "banking": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bar": {
+    "status": "pass",
+    "reasons": []
+  },
+  "barbecue": {
+    "status": "pass",
+    "reasons": []
+  },
+  "barber": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

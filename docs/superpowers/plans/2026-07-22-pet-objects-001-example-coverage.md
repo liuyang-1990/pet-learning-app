@@ -46,9 +46,9 @@ The ledger uses `batchId: objects-001`, `status: promoted`, and these exact entr
 | aim | aim | My aim is to pass the exam. | aim = 目标；我的目标是通过考试。 |
 | air force | air force | Her brother joined the air force last year. | air force = 空军；她哥哥去年加入了空军。 |
 | airline | airline | This airline flies to Madrid every day. | airline = 航空公司；这家航空公司每天都有航班飞往马德里。 |
-| alarm | alarm | The alarm woke us up at six. | alarm = 闹钟；闹钟在六点把我们叫醒了。 |
+| alarm | alarm | The fire alarm rang loudly. | alarm = 警报器；火警警报器大声响了。 |
 | alarm clock | alarm clock | I put my alarm clock beside my bed. | alarm clock = 闹钟；我把闹钟放在床边。 |
-| album | album | She showed me her holiday photo album. | album = 相册；她给我看了她的假日相册。 |
+| album | album | His new album has ten songs. | album = 专辑；他的新专辑有十首歌。 |
 | alphabet | alphabet | Children learn the alphabet at school. | alphabet = 字母表；孩子们在学校学习字母表。 |
 | ankle | ankle | He hurt his ankle during the match. | ankle = 脚踝；他在比赛中伤了脚踝。 |
 | anniversary | anniversary | They celebrated their wedding anniversary. | anniversary = 周年纪念日；他们庆祝了结婚周年纪念日。 |

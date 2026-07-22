@@ -7672,8 +7672,8 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     },
     "alarm": {
       focusWord: "alarm",
-      sentence: "The alarm woke us up at six.",
-      chinese: "alarm = 闹钟；闹钟在六点把我们叫醒了。",
+      sentence: "The fire alarm rang loudly.",
+      chinese: "alarm = 警报器；火警警报器大声响了。",
     },
     "alarmclock": {
       focusWord: "alarm clock",
@@ -7682,8 +7682,8 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     },
     "album": {
       focusWord: "album",
-      sentence: "She showed me her holiday photo album.",
-      chinese: "album = 相册；她给我看了她的假日相册。",
+      sentence: "His new album has ten songs.",
+      chinese: "album = 专辑；他的新专辑有十首歌。",
     },
     "alphabet": {
       focusWord: "alphabet",

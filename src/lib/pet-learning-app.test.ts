@@ -2198,7 +2198,11 @@ describe("PET Learning App", () => {
     expect(
       grammarWords.filter((word) => getWordExample(word).sentence !== null).length,
     ).toBeGreaterThanOrEqual(79);
-    expect(getWordExample({ term: "at / @", chineseGloss: "at符号" }).sentence).toBeNull();
+    expect(getWordExample({ term: "at / @", chineseGloss: "at符号" })).toMatchObject({
+      focusWord: "at sign",
+      sentence: "Write the at sign between your name and the website.",
+      chinese: "at sign = @符号；在你的名字和网站之间写上@符号。",
+    });
   });
 
   it("keeps the second grammar ledger aligned with reviewed examples", () => {
@@ -2778,7 +2782,7 @@ describe("PET Learning App", () => {
       access: ["You need a password to get access to the website.", "access = 访问权限；你需要密码才能访问这个网站。"],
       ad: ["I saw an ad for a new bike.", "ad = 广告；我看到了一则新自行车的广告。"],
       aim: ["My aim is to pass the exam.", "aim = 目标；我的目标是通过考试。"],
-      alarm: ["The alarm woke us up at six.", "alarm = 闹钟；闹钟在六点把我们叫醒了。"],
+      alarm: ["The fire alarm rang loudly.", "alarm = 警报器；火警警报器大声响了。"],
       "at / @": ["Write the at sign between your name and the website.", "at sign = @符号；在你的名字和网站之间写上@符号。"],
       attack: ["The team started a strong attack.", "attack = 进攻；球队发动了一次强有力的进攻。"],
       band: ["The school band played at the concert.", "band = 乐队；学校乐队在音乐会上演奏。"],

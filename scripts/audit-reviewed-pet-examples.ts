@@ -235,6 +235,9 @@ const manuallyConfirmedTerms = new Set([
   "field",
   "cool",
   "rock",
+  // These first-batch objects examples use valid contextual senses or symbols.
+  "atsymbol", // at sign / @ symbol; isolated Google gloss mistranslates it as a location phrase
+  "baker", // a person who makes or sells bread; isolated Google gloss treats it as the surname Baker
 ]);
 
 async function main() {
