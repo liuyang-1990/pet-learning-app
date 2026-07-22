@@ -401,6 +401,17 @@ const objectsSeventhBatch = [
   "gate", "geography", "gift", "girlfriend", "glasses", "global warming",
 ] as const;
 
+const objectsEighthBatch = [
+  "goalkeeper", "goat", "grade", "graduate", "grandchild", "grandad",
+  "granddaughter", "grandma", "grandpa", "grandson", "granny", "grant",
+  "grape", "graphics", "greeting", "grill", "groom", "guard", "guest",
+  "guidebook", "guitar", "guitarist", "gum", "gun", "guy", "hair",
+  "haircut", "hairdresser", "hairdryer", "handkerchief", "handlebars",
+  "handwriting", "harbour", "hardware", "headache", "headphones", "heat",
+  "heater", "heating", "heel", "helicopter", "helmet", "herb", "heroine",
+  "hip hop", "history", "hit", "hole", "homepage", "honey",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -3283,6 +3294,103 @@ describe("PET Learning App", () => {
       "global warming": [
         "Global warming is changing the climate.",
         "global warming = 全球变暖；全球变暖正在改变气候。",
+      ],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the eighth objects reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const objectsWords = words.filter((word) => word.theme === "objects");
+    const selectedExamples = objectsEighthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(objectsEighthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1794);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(objectsWords).toHaveLength(972);
+    expect(
+      objectsWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(454);
+  });
+
+  it("keeps the eighth objects ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/objects-008.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("objects-008");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(objectsEighthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the eighth objects batch", () => {
+    const expectedExamples = {
+      grade: [
+        "She got a high grade in science.",
+        "grade = 成绩；她科学课得了高分。",
+      ],
+      graduate: [
+        "The graduate found a job in a bank.",
+        "graduate = 毕业生；这名毕业生在银行找到了一份工作。",
+      ],
+      grant: [
+        "The school received a grant for new computers.",
+        "grant = 补助金；学校收到了一笔购买新电脑的补助金。",
+      ],
+      grill: [
+        "Cook the fish under the grill for ten minutes.",
+        "grill = 烤架；把鱼放在烤架下烤十分钟。",
+      ],
+      guard: [
+        "A guard checked our tickets at the gate.",
+        "guard = 警卫；一名警卫在门口检查了我们的票。",
+      ],
+      gum: [
+        "She bought a packet of chewing gum.",
+        "gum = 口香糖；她买了一包口香糖。",
+      ],
+      hardware: [
+        "The shop sells computer hardware.",
+        "hardware = 硬件；这家商店出售电脑硬件。",
+      ],
+      heat: [
+        "The heat from the fire warmed the room.",
+        "heat = 热量；火的热量让房间暖和起来。",
+      ],
+      hit: [
+        "The song became a hit last summer.",
+        "hit = 热门作品；这首歌去年夏天成了热门作品。",
+      ],
+      homepage: [
+        "The homepage has a search box.",
+        "homepage = 主页；主页上有一个搜索框。",
       ],
     } as const;
 
