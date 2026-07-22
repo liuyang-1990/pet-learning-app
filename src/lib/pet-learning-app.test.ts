@@ -370,6 +370,16 @@ const objectsFourthBatch = [
   "costume", "cough",
 ] as const;
 
+const objectsFifthBatch = [
+  "countryside", "couple", "courage", "court", "cover", "crash", "creature",
+  "credit", "crew", "cricket", "crime", "criminal", "cross", "crossing",
+  "crossroads", "cruise", "cry", "cucumber", "cure", "currency", "curriculum",
+  "curry", "curtain", "cut", "cycle", "cyclist", "damage", "data", "date",
+  "death", "decision", "decrease", "defeat", "delay", "delivery", "demand",
+  "departure", "deposit", "desert", "design", "dessert", "diagram", "diary",
+  "diet", "difficulty", "diploma", "director", "dirt", "disadvantage", "disc / disk",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -3014,6 +3024,71 @@ describe("PET Learning App", () => {
       contact: ["Add my email as a contact.", "contact = 联系人；把我的电子邮件添加为联系人。"],
       contents: ["Check the contents of the box.", "contents = 内容物；检查盒子里的内容物。"],
       control: ["The driver lost control of the car.", "control = 控制；司机失去了对汽车的控制。"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the fifth objects reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const objectsWords = words.filter((word) => word.theme === "objects");
+    const selectedExamples = objectsFifthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(objectsFifthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1644);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(objectsWords).toHaveLength(972);
+    expect(
+      objectsWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(304);
+  });
+
+  it("keeps the fifth objects ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/objects-005.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("objects-005");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(objectsFifthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the fifth objects batch", () => {
+    const expectedExamples = {
+      court: ["We played tennis on the new court.", "court = 球场；我们在新球场上打网球。"],
+      cover: ["The book cover is bright red.", "cover = 封面；这本书的封面是鲜红色的。"],
+      cricket: ["Cricket is popular in many schools.", "cricket = 板球；板球在许多学校很受欢迎。"],
+      date: ["Write the date at the top of the page.", "date = 日期；把日期写在页面顶部。"],
+      deposit: ["We paid a small deposit for the room.", "deposit = 定金；我们为房间付了一小笔定金。"],
+      desert: ["The desert is very cold at night.", "desert = 沙漠；沙漠夜晚非常寒冷。"],
+      dessert: ["We had ice cream for dessert.", "dessert = 甜点；我们甜点吃了冰淇淋。"],
+      "disc / disk": ["The computer saved the file on a disk.", "disc = 磁盘；电脑把文件保存在磁盘上。"],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
