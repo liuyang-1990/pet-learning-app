@@ -328,6 +328,16 @@ const grammarEighthBatch = [
   "wow", "yeah", "yes", "yet", "you", "you know", "your", "yours", "yourself",
 ] as const;
 
+const objectsFirstBatch = [
+  "access", "ad", "advantage", "adventure", "aim", "air force", "airline", "alarm",
+  "alarm clock", "album", "alphabet", "ankle", "anniversary", "answerphone",
+  "apology", "apple", "architect", "architecture", "Arithmetic", "armchair", "army",
+  "arrival", "aspirin", "astronaut", "at / @", "atmosphere", "attack", "attitude",
+  "author", "autumn", "babysitter", "backpack", "backpacker", "backpacking",
+  "badminton", "bag", "baggage", "baker", "balcony", "ball", "ballet", "balloon",
+  "banana", "band", "bandage", "banker", "banking", "bar", "barbecue", "barber",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -2708,6 +2718,71 @@ describe("PET Learning App", () => {
       your: ["Is this your jacket?", "your = 你的；这是你的夹克吗？"],
       yours: ["This umbrella is yours.", "yours = 你的；这把伞是你的。"],
       yourself: ["Did you make this cake yourself?", "yourself = 你亲自；这个蛋糕是你亲自做的吗？"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the first objects reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const objectsWords = words.filter((word) => word.theme === "objects");
+    const selectedExamples = objectsFirstBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(objectsFirstBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1444);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(objectsWords).toHaveLength(972);
+    expect(
+      objectsWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(104);
+  });
+
+  it("keeps the first objects ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/objects-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("objects-001");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(objectsFirstBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the first objects batch", () => {
+    const expectedExamples = {
+      access: ["You need a password to get access to the website.", "access = 访问权限；你需要密码才能访问这个网站。"],
+      ad: ["I saw an ad for a new bike.", "ad = 广告；我看到了一则新自行车的广告。"],
+      aim: ["My aim is to pass the exam.", "aim = 目标；我的目标是通过考试。"],
+      alarm: ["The alarm woke us up at six.", "alarm = 闹钟；闹钟在六点把我们叫醒了。"],
+      "at / @": ["Write the at sign between your name and the website.", "at sign = @符号；在你的名字和网站之间写上@符号。"],
+      attack: ["The team started a strong attack.", "attack = 进攻；球队发动了一次强有力的进攻。"],
+      band: ["The school band played at the concert.", "band = 乐队；学校乐队在音乐会上演奏。"],
+      bar: ["We met at a small bar near the station.", "bar = 酒吧；我们在车站附近的一家小酒吧见面。"],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
