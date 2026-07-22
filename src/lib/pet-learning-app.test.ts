@@ -338,6 +338,16 @@ const objectsFirstBatch = [
   "banana", "band", "bandage", "banker", "banking", "bar", "barbecue", "barber",
 ] as const;
 
+const objectsSecondBatch = [
+  "bargain", "basin", "basket", "bat", "bathing suit", "bathtub", "battery",
+  "battle", "bay", "beard", "beauty", "beef", "beginner", "beginning",
+  "behaviour", "bell", "belt", "benefit", "bestseller", "bin", "biography",
+  "biology", "birth", "biscuit", "bit", "blackboard", "block", "blog",
+  "blogger", "blouse", "board", "boarding pass", "bomb", "bone", "booking",
+  "bookshop", "bookstore", "border", "boss", "box", "boxing", "boyfriend",
+  "brain", "brake", "branch", "breath", "breeze", "bride", "bridge", "broccoli",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -2787,6 +2797,71 @@ describe("PET Learning App", () => {
       attack: ["The team started a strong attack.", "attack = 进攻；球队发动了一次强有力的进攻。"],
       band: ["The school band played at the concert.", "band = 乐队；学校乐队在音乐会上演奏。"],
       bar: ["We met at a small bar near the station.", "bar = 酒吧；我们在车站附近的一家小酒吧见面。"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the second objects reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const objectsWords = words.filter((word) => word.theme === "objects");
+    const selectedExamples = objectsSecondBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(objectsSecondBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1494);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(objectsWords).toHaveLength(972);
+    expect(
+      objectsWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(154);
+  });
+
+  it("keeps the second objects ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/objects-002.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("objects-002");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(objectsSecondBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the second objects batch", () => {
+    const expectedExamples = {
+      bargain: ["This jacket was a real bargain in the sale.", "bargain = 便宜货；这件夹克在促销中真是便宜货。"],
+      bat: ["He hit the ball with a bat.", "bat = 球棒；他用球棒击球。"],
+      benefit: ["One benefit of cycling is fresh air.", "benefit = 好处；骑自行车的一个好处是能呼吸新鲜空气。"],
+      block: ["He put a block of wood under the door.", "block = 块；他把一块木头放在门下面。"],
+      board: ["Write your answers on the board.", "board = 板；把你的答案写在板上。"],
+      booking: ["I made a booking for two rooms.", "booking = 预订；我预订了两个房间。"],
+      boss: ["My boss approved the plan.", "boss = 老板；我的老板批准了这个计划。"],
+      brake: ["The bike brake needs fixing.", "brake = 刹车；这辆自行车的刹车需要修理。"],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
