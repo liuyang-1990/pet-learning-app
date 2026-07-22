@@ -380,6 +380,17 @@ const objectsFifthBatch = [
   "diet", "difficulty", "diploma", "director", "dirt", "disadvantage", "disc / disk",
 ] as const;
 
+const objectsSixthBatch = [
+  "disc jockey", "disco", "discovery", "discussion", "disease", "dishwasher",
+  "disk", "district", "diver", "diving", "doll", "dolphin", "donkey", "dot",
+  "doubt", "drawer", "dream", "drive", "driver", "license", "drugstore",
+  "drum", "dustbin", "duty", "duvet", "earache", "earring", "economics",
+  "edge", "effect", "effort", "elbow", "elevator", "embassy", "employee",
+  "employer", "ending", "enemy", "energy", "engine", "engineering", "entry",
+  "envelope", "episode", "eraser", "event", "exchange", "exchange rate",
+  "excuse", "expert",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -3089,6 +3100,92 @@ describe("PET Learning App", () => {
       desert: ["The desert is very cold at night.", "desert = 沙漠；沙漠夜晚非常寒冷。"],
       dessert: ["We had ice cream for dessert.", "dessert = 甜点；我们甜点吃了冰淇淋。"],
       "disc / disk": ["The computer saved the file on a disk.", "disc = 磁盘；电脑把文件保存在磁盘上。"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the sixth objects reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const objectsWords = words.filter((word) => word.theme === "objects");
+    const selectedExamples = objectsSixthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(objectsSixthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1694);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(objectsWords).toHaveLength(972);
+    expect(
+      objectsWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(354);
+  });
+
+  it("keeps the sixth objects ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/objects-006.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("objects-006");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(objectsSixthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the sixth objects batch", () => {
+    const expectedExamples = {
+      "disc jockey": [
+        "The disc jockey played music at the party.",
+        "disc jockey = 唱片骑师；唱片骑师在聚会上播放音乐。",
+      ],
+      disk: ["Save the photos on this disk.", "disk = 磁盘；把照片保存在这张磁盘上。"],
+      drive: [
+        "The drive to the lake took two hours.",
+        "drive = 车程；去湖边的车程花了两个小时。",
+      ],
+      license: [
+        "You need a license to drive a car.",
+        "license = 执照；开车需要执照。",
+      ],
+      entry: [
+        "The museum entry is free for children.",
+        "entry = 入场；儿童可以免费入场博物馆。",
+      ],
+      exchange: [
+        "The student exchange lasted two weeks.",
+        "exchange = 交换；这次学生交换持续了两周。",
+      ],
+      "exchange rate": [
+        "Check the exchange rate before you travel.",
+        "exchange rate = 汇率；旅行前查看汇率。",
+      ],
+      excuse: [
+        "He gave a weak excuse for being late.",
+        "excuse = 借口；他为迟到找了一个站不住脚的借口。",
+      ],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
