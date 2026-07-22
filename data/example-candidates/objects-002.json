@@ -1,0 +1,306 @@
+{
+  "batchId": "objects-002",
+  "status": "promoted",
+  "entries": [
+    {
+      "term": "bargain",
+      "focusWord": "bargain",
+      "sentence": "This jacket was a real bargain in the sale.",
+      "chinese": "bargain = 便宜货；这件夹克在促销中真是便宜货。"
+    },
+    {
+      "term": "basin",
+      "focusWord": "basin",
+      "sentence": "Wash your hands in the basin.",
+      "chinese": "basin = 洗手盆；在洗手盆里洗手。"
+    },
+    {
+      "term": "basket",
+      "focusWord": "basket",
+      "sentence": "She carried the apples in a basket.",
+      "chinese": "basket = 篮子；她用篮子装苹果。"
+    },
+    {
+      "term": "bat",
+      "focusWord": "bat",
+      "sentence": "He hit the ball with a bat.",
+      "chinese": "bat = 球棒；他用球棒击球。"
+    },
+    {
+      "term": "bathing suit",
+      "focusWord": "bathing suit",
+      "sentence": "Pack your bathing suit for the beach.",
+      "chinese": "bathing suit = 泳衣；去海滩时带上你的泳衣。"
+    },
+    {
+      "term": "bathtub",
+      "focusWord": "bathtub",
+      "sentence": "The bathtub was full of warm water.",
+      "chinese": "bathtub = 浴缸；浴缸里装满了温水。"
+    },
+    {
+      "term": "battery",
+      "focusWord": "battery",
+      "sentence": "The camera needs a new battery.",
+      "chinese": "battery = 电池；这台相机需要一块新电池。"
+    },
+    {
+      "term": "battle",
+      "focusWord": "battle",
+      "sentence": "The battle lasted all night.",
+      "chinese": "battle = 战斗；这场战斗持续了一整夜。"
+    },
+    {
+      "term": "bay",
+      "focusWord": "bay",
+      "sentence": "The hotel looks over the bay.",
+      "chinese": "bay = 海湾；这家酒店俯瞰海湾。"
+    },
+    {
+      "term": "beard",
+      "focusWord": "beard",
+      "sentence": "My uncle has a short beard.",
+      "chinese": "beard = 胡子；我叔叔留着短胡子。"
+    },
+    {
+      "term": "beauty",
+      "focusWord": "beauty",
+      "sentence": "We enjoyed the beauty of the mountains.",
+      "chinese": "beauty = 美；我们欣赏了群山的美。"
+    },
+    {
+      "term": "beef",
+      "focusWord": "beef",
+      "sentence": "I ordered beef with rice.",
+      "chinese": "beef = 牛肉；我点了牛肉配米饭。"
+    },
+    {
+      "term": "beginner",
+      "focusWord": "beginner",
+      "sentence": "This course is good for a beginner.",
+      "chinese": "beginner = 初学者；这门课适合初学者。"
+    },
+    {
+      "term": "beginning",
+      "focusWord": "beginning",
+      "sentence": "The beginning of the film was funny.",
+      "chinese": "beginning = 开头；这部电影的开头很有趣。"
+    },
+    {
+      "term": "behaviour",
+      "focusWord": "behaviour",
+      "sentence": "His behaviour in class was excellent.",
+      "chinese": "behaviour = 行为；他在课堂上的行为很棒。"
+    },
+    {
+      "term": "bell",
+      "focusWord": "bell",
+      "sentence": "The school bell rang at nine.",
+      "chinese": "bell = 铃；学校铃声在九点响了。"
+    },
+    {
+      "term": "belt",
+      "focusWord": "belt",
+      "sentence": "He wears a black belt with his jeans.",
+      "chinese": "belt = 腰带；他穿牛仔裤时系一条黑色腰带。"
+    },
+    {
+      "term": "benefit",
+      "focusWord": "benefit",
+      "sentence": "One benefit of cycling is fresh air.",
+      "chinese": "benefit = 好处；骑自行车的一个好处是能呼吸新鲜空气。"
+    },
+    {
+      "term": "bestseller",
+      "focusWord": "bestseller",
+      "sentence": "Her first book became a bestseller.",
+      "chinese": "bestseller = 畅销书；她的第一本书成了畅销书。"
+    },
+    {
+      "term": "bin",
+      "focusWord": "bin",
+      "sentence": "Put the paper in the recycling bin.",
+      "chinese": "bin = 垃圾桶；把纸放进回收垃圾桶。"
+    },
+    {
+      "term": "biography",
+      "focusWord": "biography",
+      "sentence": "I read a biography of a famous singer.",
+      "chinese": "biography = 传记；我读了一本著名歌手的传记。"
+    },
+    {
+      "term": "biology",
+      "focusWord": "biology",
+      "sentence": "Biology teaches us about plants and animals.",
+      "chinese": "biology = 生物学；生物学教我们了解植物和动物。"
+    },
+    {
+      "term": "birth",
+      "focusWord": "birth",
+      "sentence": "The birth of the baby made everyone happy.",
+      "chinese": "birth = 出生；宝宝的出生让大家都很高兴。"
+    },
+    {
+      "term": "biscuit",
+      "focusWord": "biscuit",
+      "sentence": "Would you like a biscuit with your tea?",
+      "chinese": "biscuit = 饼干；你想喝茶时吃块饼干吗？"
+    },
+    {
+      "term": "bit",
+      "focusWord": "bit",
+      "sentence": "I need a bit of help with this bag.",
+      "chinese": "bit = 一点；这个包我需要一点帮助。"
+    },
+    {
+      "term": "blackboard",
+      "focusWord": "blackboard",
+      "sentence": "The teacher wrote the date on the blackboard.",
+      "chinese": "blackboard = 黑板；老师把日期写在黑板上。"
+    },
+    {
+      "term": "block",
+      "focusWord": "block",
+      "sentence": "He put a block of wood under the door.",
+      "chinese": "block = 块；他把一块木头放在门下面。"
+    },
+    {
+      "term": "blog",
+      "focusWord": "blog",
+      "sentence": "She writes a travel blog.",
+      "chinese": "blog = 博客；她写一个旅行博客。"
+    },
+    {
+      "term": "blogger",
+      "focusWord": "blogger",
+      "sentence": "The blogger shared photos of the city.",
+      "chinese": "blogger = 博主；这位博主分享了这座城市的照片。"
+    },
+    {
+      "term": "blouse",
+      "focusWord": "blouse",
+      "sentence": "She wore a blue blouse to work.",
+      "chinese": "blouse = 女衬衫；她穿了一件蓝色女衬衫去上班。"
+    },
+    {
+      "term": "board",
+      "focusWord": "board",
+      "sentence": "Write your answers on the board.",
+      "chinese": "board = 板；把你的答案写在板上。"
+    },
+    {
+      "term": "boarding pass",
+      "focusWord": "boarding pass",
+      "sentence": "Show your boarding pass at the gate.",
+      "chinese": "boarding pass = 登机牌；在登机口出示你的登机牌。"
+    },
+    {
+      "term": "bomb",
+      "focusWord": "bomb",
+      "sentence": "The old bomb was removed safely.",
+      "chinese": "bomb = 炸弹；那枚旧炸弹被安全移走了。"
+    },
+    {
+      "term": "bone",
+      "focusWord": "bone",
+      "sentence": "The dog found a bone in the garden.",
+      "chinese": "bone = 骨头；狗在花园里找到了一根骨头。"
+    },
+    {
+      "term": "booking",
+      "focusWord": "booking",
+      "sentence": "I made a booking for two rooms.",
+      "chinese": "booking = 预订；我预订了两个房间。"
+    },
+    {
+      "term": "bookshop",
+      "focusWord": "bookshop",
+      "sentence": "I bought a novel at the bookshop.",
+      "chinese": "bookshop = 书店；我在书店买了一本小说。"
+    },
+    {
+      "term": "bookstore",
+      "focusWord": "bookstore",
+      "sentence": "The bookstore closes at eight.",
+      "chinese": "bookstore = 书店；这家书店八点关门。"
+    },
+    {
+      "term": "border",
+      "focusWord": "border",
+      "sentence": "The river forms the border between the two countries.",
+      "chinese": "border = 边界；这条河形成了两国之间的边界。"
+    },
+    {
+      "term": "boss",
+      "focusWord": "boss",
+      "sentence": "My boss approved the plan.",
+      "chinese": "boss = 老板；我的老板批准了这个计划。"
+    },
+    {
+      "term": "box",
+      "focusWord": "box",
+      "sentence": "Put the toys in the box.",
+      "chinese": "box = 盒子；把玩具放进盒子里。"
+    },
+    {
+      "term": "boxing",
+      "focusWord": "boxing",
+      "sentence": "Boxing is popular at the sports centre.",
+      "chinese": "boxing = 拳击；拳击在体育中心很受欢迎。"
+    },
+    {
+      "term": "boyfriend",
+      "focusWord": "boyfriend",
+      "sentence": "Her boyfriend is studying music.",
+      "chinese": "boyfriend = 男朋友；她的男朋友正在学习音乐。"
+    },
+    {
+      "term": "brain",
+      "focusWord": "brain",
+      "sentence": "Your brain needs rest after a long exam.",
+      "chinese": "brain = 大脑；长时间考试后你的大脑需要休息。"
+    },
+    {
+      "term": "brake",
+      "focusWord": "brake",
+      "sentence": "The bike brake needs fixing.",
+      "chinese": "brake = 刹车；这辆自行车的刹车需要修理。"
+    },
+    {
+      "term": "branch",
+      "focusWord": "branch",
+      "sentence": "A branch fell from the tree.",
+      "chinese": "branch = 树枝；一根树枝从树上掉了下来。"
+    },
+    {
+      "term": "breath",
+      "focusWord": "breath",
+      "sentence": "Take a deep breath before you speak.",
+      "chinese": "breath = 呼吸；说话前深呼吸。"
+    },
+    {
+      "term": "breeze",
+      "focusWord": "breeze",
+      "sentence": "A cool breeze came through the window.",
+      "chinese": "breeze = 微风；一阵凉爽的微风从窗户吹进来。"
+    },
+    {
+      "term": "bride",
+      "focusWord": "bride",
+      "sentence": "The bride smiled during the ceremony.",
+      "chinese": "bride = 新娘；新娘在仪式上微笑。"
+    },
+    {
+      "term": "bridge",
+      "focusWord": "bridge",
+      "sentence": "We crossed the old bridge on foot.",
+      "chinese": "bridge = 桥；我们步行穿过了那座老桥。"
+    },
+    {
+      "term": "broccoli",
+      "focusWord": "broccoli",
+      "sentence": "Broccoli is my sister's favourite vegetable.",
+      "chinese": "broccoli = 西兰花；西兰花是我妹妹最喜欢的蔬菜。"
+    }
+  ]
+}
