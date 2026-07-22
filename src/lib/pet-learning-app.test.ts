@@ -359,6 +359,17 @@ const objectsThirdBatch = [
   "channel", "charge",
 ] as const;
 
+const objectsFourthBatch = [
+  "chat", "chatroom", "check", "check-in", "checkout", "cheek", "chemist",
+  "chemistry", "chess", "chest of drawers", "childhood", "chilli", "chin",
+  "chip", "chocolate", "circus", "cleaner", "click", "cliff", "climbing",
+  "clock", "clown", "coast", "coconut", "cod", "cola", "collar", "colleague",
+  "colour", "comb", "comedy", "comfort", "comma", "competitor", "complaint",
+  "conclusion", "consonant", "contact", "contents", "contest", "continent",
+  "contract", "control", "cookery", "cookie", "cooking", "copy", "corn",
+  "costume", "cough",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -2938,6 +2949,71 @@ describe("PET Learning App", () => {
       challenge: ["Climbing the hill was a real challenge.", "challenge = 挑战；爬这座山真是一次挑战。"],
       channel: ["Change the channel if the film is boring.", "channel = 频道；如果电影无聊就换个频道。"],
       charge: ["There is no charge for museum entry.", "charge = 费用；博物馆入场不收费。"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the fourth objects reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const objectsWords = words.filter((word) => word.theme === "objects");
+    const selectedExamples = objectsFourthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(objectsFourthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1594);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(objectsWords).toHaveLength(972);
+    expect(
+      objectsWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(254);
+  });
+
+  it("keeps the fourth objects ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/objects-004.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("objects-004");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(objectsFourthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the fourth objects batch", () => {
+    const expectedExamples = {
+      check: ["The mechanic did a quick check of the brakes.", "check = 检查；机械师快速检查了刹车。"],
+      "check-in": ["Online check-in opens twenty-four hours before the flight.", "check-in = 登机手续；网上登机手续在航班起飞前二十四小时开放。"],
+      checkout: ["The checkout is near the front door.", "checkout = 收银台；收银台在前门附近。"],
+      chemist: ["The chemist tested the water in the lab.", "chemist = 化学家；化学家在实验室检测了水。"],
+      chip: ["She ate one potato chip before dinner.", "chip = 薯片；晚饭前她吃了一片薯片。"],
+      contact: ["Add my email as a contact.", "contact = 联系人；把我的电子邮件添加为联系人。"],
+      contents: ["Check the contents of the box.", "contents = 内容物；检查盒子里的内容物。"],
+      control: ["The driver lost control of the car.", "control = 控制；司机失去了对汽车的控制。"],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
