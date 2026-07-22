@@ -47,7 +47,7 @@ The ledger uses `batchId: objects-003`, `status: promoted`, and these exact entr
 | bull | bull | The bull stood in the field. | bull = 公牛；那头公牛站在田里。 |
 | bunch | bunch | She bought a bunch of flowers. | bunch = 一束；她买了一束花。 |
 | bush | bush | A small bush grew beside the path. | bush = 灌木；小路旁长着一丛小灌木。 |
-| butcher | butcher | The butcher cut the meat carefully. | butcher = 肉贩；肉贩仔细地切肉。 |
+| butcher | butcher | The butcher cut the meat carefully. | butcher = 屠夫；屠夫仔细地切肉。 |
 | butter | butter | Spread some butter on the bread. | butter = 黄油；在面包上抹些黄油。 |
 | butterfly | butterfly | A butterfly landed on the flower. | butterfly = 蝴蝶；一只蝴蝶落在花上。 |
 | button | button | Press the red button to start. | button = 按钮；按红色按钮开始。 |
@@ -71,7 +71,7 @@ The ledger uses `batchId: objects-003`, `status: promoted`, and these exact entr
 | captain | captain | The captain thanked the team after the match. | captain = 队长；比赛后队长感谢了全队。 |
 | care | care | The old house needs a lot of care. | care = 照料；这座老房子需要大量照料。 |
 | carrot | carrot | Cut the carrot into small pieces. | carrot = 胡萝卜；把胡萝卜切成小块。 |
-| cartoon | cartoon | We watched a funny cartoon on TV. | cartoon = 动画片；我们在电视上看了一部有趣的动画片。 |
+| cartoon | cartoon | We watched a funny cartoon on TV. | cartoon = 卡通片；我们在电视上看了一部有趣的卡通片。 |
 | cashpoint | cashpoint | There is a cashpoint outside the bank. | cashpoint = 自动取款机；银行外面有一台自动取款机。 |
 | castle | castle | The castle is on top of the hill. | castle = 城堡；城堡在山顶上。 |
 | cathedral | cathedral | The cathedral has beautiful windows. | cathedral = 大教堂；这座大教堂有美丽的窗户。 |
@@ -81,8 +81,8 @@ The ledger uses `batchId: objects-003`, `status: promoted`, and these exact entr
 | centimetre | centimetre | The pencil is one centimetre longer than mine. | centimetre = 厘米；这支铅笔比我的长一厘米。 |
 | central heating | central heating | The central heating keeps the house warm. | central heating = 中央供暖；中央供暖让房子保持温暖。 |
 | century | century | This bridge was built last century. | century = 世纪；这座桥建于上个世纪。 |
-| cereal | cereal | I usually have cereal for breakfast. | cereal = 麦片；我通常早餐吃麦片。 |
-| ceremony | ceremony | The prize ceremony began at noon. | ceremony = 典礼；颁奖典礼在中午开始。 |
+| cereal | cereal | I usually have cereal for breakfast. | cereal = 谷物；我通常早餐吃麦片。 |
+| ceremony | ceremony | The prize ceremony began at noon. | ceremony = 仪式；颁奖仪式在中午开始。 |
 | certificate | certificate | She received a certificate for the course. | certificate = 证书；她获得了这门课程的证书。 |
 | chain | chain | He locked the bike with a chain. | chain = 链条；他用链条锁住自行车。 |
 | challenge | challenge | Climbing the hill was a real challenge. | challenge = 挑战；爬这座山真是一次挑战。 |

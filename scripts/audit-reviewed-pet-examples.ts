@@ -243,6 +243,9 @@ const manuallyConfirmedTerms = new Set([
   "bat", // sports equipment, not the animal
   "board", // a classroom writing board, not a company board
   "branch", // part of a tree, not a bank branch
+  // These third-batch objects examples use valid contextual senses of polysemous words.
+  "bush", // a shrub, not the surname Bush
+  "cab", // a taxi, not a vehicle driver's compartment
 ]);
 
 async function main() {

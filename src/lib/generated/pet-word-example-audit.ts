@@ -5974,5 +5974,205 @@ export const reviewedWordExampleAudit = {
   "broccoli": {
     "status": "pass",
     "reasons": []
+  },
+  "brochure": {
+    "status": "pass",
+    "reasons": []
+  },
+  "brush": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bucket": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bug": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bulb": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bull": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bunch": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bush": {
+    "status": "pass",
+    "reasons": []
+  },
+  "butcher": {
+    "status": "pass",
+    "reasons": []
+  },
+  "butter": {
+    "status": "pass",
+    "reasons": []
+  },
+  "butterfly": {
+    "status": "pass",
+    "reasons": []
+  },
+  "button": {
+    "status": "pass",
+    "reasons": []
+  },
+  "buyer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cab": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cabbage": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cabin": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cabinet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cable": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cafe": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cafeteria": {
+    "status": "pass",
+    "reasons": []
+  },
+  "calf": {
+    "status": "pass",
+    "reasons": []
+  },
+  "camel": {
+    "status": "pass",
+    "reasons": []
+  },
+  "camp": {
+    "status": "pass",
+    "reasons": []
+  },
+  "campsite": {
+    "status": "pass",
+    "reasons": []
+  },
+  "canal": {
+    "status": "pass",
+    "reasons": []
+  },
+  "candidate": {
+    "status": "pass",
+    "reasons": []
+  },
+  "candle": {
+    "status": "pass",
+    "reasons": []
+  },
+  "candy": {
+    "status": "pass",
+    "reasons": []
+  },
+  "canteen": {
+    "status": "pass",
+    "reasons": []
+  },
+  "captain": {
+    "status": "pass",
+    "reasons": []
+  },
+  "care": {
+    "status": "pass",
+    "reasons": []
+  },
+  "carrot": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cartoon": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cashpoint": {
+    "status": "pass",
+    "reasons": []
+  },
+  "castle": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cathedral": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cattle": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cave": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ceiling": {
+    "status": "pass",
+    "reasons": []
+  },
+  "centimetre": {
+    "status": "pass",
+    "reasons": []
+  },
+  "centralheating": {
+    "status": "pass",
+    "reasons": []
+  },
+  "century": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cereal": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ceremony": {
+    "status": "pass",
+    "reasons": []
+  },
+  "certificate": {
+    "status": "pass",
+    "reasons": []
+  },
+  "chain": {
+    "status": "pass",
+    "reasons": []
+  },
+  "challenge": {
+    "status": "pass",
+    "reasons": []
+  },
+  "champion": {
+    "status": "pass",
+    "reasons": []
+  },
+  "channel": {
+    "status": "pass",
+    "reasons": []
+  },
+  "charge": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

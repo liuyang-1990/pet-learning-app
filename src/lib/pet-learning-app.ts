@@ -8178,7 +8178,7 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     "butcher": {
       focusWord: "butcher",
       sentence: "The butcher cut the meat carefully.",
-      chinese: "butcher = 肉贩；肉贩仔细地切肉。",
+      chinese: "butcher = 屠夫；屠夫仔细地切肉。",
     },
     "butter": {
       focusWord: "butter",
@@ -8298,7 +8298,7 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     "cartoon": {
       focusWord: "cartoon",
       sentence: "We watched a funny cartoon on TV.",
-      chinese: "cartoon = 动画片；我们在电视上看了一部有趣的动画片。",
+      chinese: "cartoon = 卡通片；我们在电视上看了一部有趣的卡通片。",
     },
     "cashpoint": {
       focusWord: "cashpoint",
@@ -8348,12 +8348,12 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     "cereal": {
       focusWord: "cereal",
       sentence: "I usually have cereal for breakfast.",
-      chinese: "cereal = 麦片；我通常早餐吃麦片。",
+      chinese: "cereal = 谷物；我通常早餐吃麦片。",
     },
     "ceremony": {
       focusWord: "ceremony",
       sentence: "The prize ceremony began at noon.",
-      chinese: "ceremony = 典礼；颁奖典礼在中午开始。",
+      chinese: "ceremony = 仪式；颁奖仪式在中午开始。",
     },
     "certificate": {
       focusWord: "certificate",
