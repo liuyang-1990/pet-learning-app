@@ -8885,6 +8885,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "The computer saved the file on a disk.",
       chinese: "disc = 磁盘；电脑把文件保存在磁盘上。",
     },
+    "discjockey": {
+      focusWord: "disc jockey",
+      sentence: "The disc jockey played music at the party.",
+      chinese: "disc jockey = 唱片骑师；唱片骑师在聚会上播放音乐。",
+    },
+    "disco": {
+      focusWord: "disco",
+      sentence: "The hotel has a small disco downstairs.",
+      chinese: "disco = 迪斯科舞厅；酒店楼下有一个小迪斯科舞厅。",
+    },
+    "discovery": {
+      focusWord: "discovery",
+      sentence: "The discovery of the old map excited the class.",
+      chinese: "discovery = 发现；旧地图的发现让全班很兴奋。",
+    },
+    "discussion": {
+      focusWord: "discussion",
+      sentence: "We had a discussion about the school trip.",
+      chinese: "discussion = 讨论；我们讨论了学校旅行。",
+    },
+    "disease": {
+      focusWord: "disease",
+      sentence: "This disease spreads quickly in winter.",
+      chinese: "disease = 疾病；这种疾病在冬天传播很快。",
+    },
+    "dishwasher": {
+      focusWord: "dishwasher",
+      sentence: "Put the plates in the dishwasher.",
+      chinese: "dishwasher = 洗碗机；把盘子放进洗碗机。",
+    },
+    "disk": {
+      focusWord: "disk",
+      sentence: "Save the photos on this disk.",
+      chinese: "disk = 磁盘；把照片保存在这张磁盘上。",
+    },
+    "district": {
+      focusWord: "district",
+      sentence: "This district has many small shops.",
+      chinese: "district = 区；这个区有许多小商店。",
+    },
+    "diver": {
+      focusWord: "diver",
+      sentence: "The diver found a shell under the water.",
+      chinese: "diver = 潜水员；潜水员在水下发现了一个贝壳。",
+    },
+    "diving": {
+      focusWord: "diving",
+      sentence: "Diving is popular on this island.",
+      chinese: "diving = 潜水；潜水在这座岛上很受欢迎。",
+    },
+    "doll": {
+      focusWord: "doll",
+      sentence: "The child put the doll on the bed.",
+      chinese: "doll = 玩偶；孩子把玩偶放在床上。",
+    },
+    "dolphin": {
+      focusWord: "dolphin",
+      sentence: "A dolphin swam beside the boat.",
+      chinese: "dolphin = 海豚；一只海豚在船旁游动。",
+    },
+    "donkey": {
+      focusWord: "donkey",
+      sentence: "The donkey carried bags up the hill.",
+      chinese: "donkey = 驴；驴把袋子驮上山。",
+    },
+    "dot": {
+      focusWord: "dot",
+      sentence: "Put a dot above the letter i.",
+      chinese: "dot = 点；在字母 i 上方加一个点。",
+    },
+    "doubt": {
+      focusWord: "doubt",
+      sentence: "I had no doubt that she was right.",
+      chinese: "doubt = 怀疑；我毫不怀疑她是对的。",
+    },
+    "drawer": {
+      focusWord: "drawer",
+      sentence: "The keys are in the top drawer.",
+      chinese: "drawer = 抽屉；钥匙在最上面的抽屉里。",
+    },
+    "dream": {
+      focusWord: "dream",
+      sentence: "His dream is to become a pilot.",
+      chinese: "dream = 梦想；他的梦想是成为一名飞行员。",
+    },
+    "drive": {
+      focusWord: "drive",
+      sentence: "The drive to the lake took two hours.",
+      chinese: "drive = 车程；去湖边的车程花了两个小时。",
+    },
+    "driver": {
+      focusWord: "driver",
+      sentence: "The driver stopped at the red light.",
+      chinese: "driver = 司机；司机在红灯前停下。",
+    },
+    "license": {
+      focusWord: "license",
+      sentence: "You need a license to drive a car.",
+      chinese: "license = 执照；开车需要执照。",
+    },
+    "drugstore": {
+      focusWord: "drugstore",
+      sentence: "The drugstore sells medicine and shampoo.",
+      chinese: "drugstore = 药店；药店出售药品和洗发水。",
+    },
+    "drum": {
+      focusWord: "drum",
+      sentence: "He played the drum in the school band.",
+      chinese: "drum = 鼓；他在学校乐队里打鼓。",
+    },
+    "dustbin": {
+      focusWord: "dustbin",
+      sentence: "Throw the empty bottle in the dustbin.",
+      chinese: "dustbin = 垃圾桶；把空瓶扔进垃圾桶。",
+    },
+    "duty": {
+      focusWord: "duty",
+      sentence: "It is my duty to lock the classroom.",
+      chinese: "duty = 责任；锁教室是我的责任。",
+    },
+    "duvet": {
+      focusWord: "duvet",
+      sentence: "The duvet kept me warm all night.",
+      chinese: "duvet = 羽绒被；羽绒被让我整晚都很暖和。",
+    },
+    "earache": {
+      focusWord: "earache",
+      sentence: "She stayed home because of an earache.",
+      chinese: "earache = 耳痛；她因为耳痛待在家里。",
+    },
+    "earring": {
+      focusWord: "earring",
+      sentence: "She lost one silver earring.",
+      chinese: "earring = 耳环；她丢了一只银耳环。",
+    },
+    "economics": {
+      focusWord: "economics",
+      sentence: "Economics helps us understand money and trade.",
+      chinese: "economics = 经济学；经济学帮助我们理解金钱和贸易。",
+    },
+    "edge": {
+      focusWord: "edge",
+      sentence: "Do not stand too close to the edge.",
+      chinese: "edge = 边缘；不要站得离边缘太近。",
+    },
+    "effect": {
+      focusWord: "effect",
+      sentence: "The medicine had a strong effect.",
+      chinese: "effect = 效果；这种药效果很强。",
+    },
+    "effort": {
+      focusWord: "effort",
+      sentence: "Your effort made the project better.",
+      chinese: "effort = 努力；你的努力让这个项目更好了。",
+    },
+    "elbow": {
+      focusWord: "elbow",
+      sentence: "He hurt his elbow during basketball practice.",
+      chinese: "elbow = 肘部；他在篮球训练中伤了肘部。",
+    },
+    "elevator": {
+      focusWord: "elevator",
+      sentence: "Take the elevator to the fifth floor.",
+      chinese: "elevator = 电梯；乘电梯到五楼。",
+    },
+    "embassy": {
+      focusWord: "embassy",
+      sentence: "The embassy is closed on Sunday.",
+      chinese: "embassy = 大使馆；大使馆星期日关闭。",
+    },
+    "employee": {
+      focusWord: "employee",
+      sentence: "Every employee must wear an ID card.",
+      chinese: "employee = 雇员；每位雇员都必须佩戴身份证件。",
+    },
+    "employer": {
+      focusWord: "employer",
+      sentence: "Her employer offered a training course.",
+      chinese: "employer = 雇主；她的雇主提供了一门培训课程。",
+    },
+    "ending": {
+      focusWord: "ending",
+      sentence: "The ending of the story surprised me.",
+      chinese: "ending = 结尾；这个故事的结尾让我很惊讶。",
+    },
+    "enemy": {
+      focusWord: "enemy",
+      sentence: "In the game, the enemy hides behind the wall.",
+      chinese: "enemy = 敌人；在游戏中，敌人躲在墙后。",
+    },
+    "energy": {
+      focusWord: "energy",
+      sentence: "Solar energy can heat water.",
+      chinese: "energy = 能源；太阳能可以加热水。",
+    },
+    "engine": {
+      focusWord: "engine",
+      sentence: "The car engine sounded strange.",
+      chinese: "engine = 发动机；汽车发动机听起来很奇怪。",
+    },
+    "engineering": {
+      focusWord: "engineering",
+      sentence: "Engineering is a popular university subject.",
+      chinese: "engineering = 工程学；工程学是一门受欢迎的大学科目。",
+    },
+    "entry": {
+      focusWord: "entry",
+      sentence: "The museum entry is free for children.",
+      chinese: "entry = 入场；儿童可以免费入场博物馆。",
+    },
+    "envelope": {
+      focusWord: "envelope",
+      sentence: "Put the letter in an envelope.",
+      chinese: "envelope = 信封；把信放进信封里。",
+    },
+    "episode": {
+      focusWord: "episode",
+      sentence: "The next episode starts at eight.",
+      chinese: "episode = 一集；下一集八点开始。",
+    },
+    "eraser": {
+      focusWord: "eraser",
+      sentence: "Use an eraser to remove the pencil mark.",
+      chinese: "eraser = 橡皮；用橡皮擦掉铅笔痕迹。",
+    },
+    "event": {
+      focusWord: "event",
+      sentence: "The sports event begins at nine.",
+      chinese: "event = 活动；体育活动九点开始。",
+    },
+    "exchange": {
+      focusWord: "exchange",
+      sentence: "The student exchange lasted two weeks.",
+      chinese: "exchange = 交换；这次学生交换持续了两周。",
+    },
+    "exchangerate": {
+      focusWord: "exchange rate",
+      sentence: "Check the exchange rate before you travel.",
+      chinese: "exchange rate = 汇率；旅行前查看汇率。",
+    },
+    "excuse": {
+      focusWord: "excuse",
+      sentence: "He gave a weak excuse for being late.",
+      chinese: "excuse = 借口；他为迟到找了一个站不住脚的借口。",
+    },
+    "expert": {
+      focusWord: "expert",
+      sentence: "An expert checked the old painting.",
+      chinese: "expert = 专家；一位专家检查了那幅旧画。",
+    },
   };
 }
 
