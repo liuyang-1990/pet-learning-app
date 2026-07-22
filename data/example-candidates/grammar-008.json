@@ -1,0 +1,61 @@
+{
+  "batchId": "grammar-008",
+  "status": "promoted",
+  "entries": [
+    {
+      "term": "wow",
+      "focusWord": "wow",
+      "sentence": "Wow, this view is amazing!",
+      "chinese": "wow = 哇；哇，这里的景色太棒了！"
+    },
+    {
+      "term": "yeah",
+      "focusWord": "yeah",
+      "sentence": "Yeah, I can help you tomorrow.",
+      "chinese": "yeah = 是的；是的，我明天可以帮你。"
+    },
+    {
+      "term": "yes",
+      "focusWord": "yes",
+      "sentence": "Yes, I have finished my homework.",
+      "chinese": "yes = 是的；是的，我已经完成家庭作业了。"
+    },
+    {
+      "term": "yet",
+      "focusWord": "yet",
+      "sentence": "Have you finished your homework yet?",
+      "chinese": "yet = 还；你完成家庭作业了吗？"
+    },
+    {
+      "term": "you",
+      "focusWord": "you",
+      "sentence": "You can sit here.",
+      "chinese": "you = 你；你可以坐在这里。"
+    },
+    {
+      "term": "you know",
+      "focusWord": "you know",
+      "sentence": "You know, this is a difficult decision.",
+      "chinese": "you know = 你知道的；你知道的，这是一个艰难的决定。"
+    },
+    {
+      "term": "your",
+      "focusWord": "your",
+      "sentence": "Is this your jacket?",
+      "chinese": "your = 你的；这是你的夹克吗？"
+    },
+    {
+      "term": "yours",
+      "focusWord": "yours",
+      "sentence": "This umbrella is yours.",
+      "chinese": "yours = 你的；这把伞是你的。"
+    },
+    {
+      "term": "yourself",
+      "focusWord": "yourself",
+      "sentence": "Did you make this cake yourself?",
+      "chinese": "yourself = 你亲自；这个蛋糕是你亲自做的吗？"
+    }
+  ]
+}
+

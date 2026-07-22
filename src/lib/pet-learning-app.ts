@@ -7590,6 +7590,51 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "Would you like a cup of tea?",
       chinese: "would = 愿意；你想喝杯茶吗？",
     },
+    "wow": {
+      focusWord: "wow",
+      sentence: "Wow, this view is amazing!",
+      chinese: "wow = 哇；哇，这里的景色太棒了！",
+    },
+    "yeah": {
+      focusWord: "yeah",
+      sentence: "Yeah, I can help you tomorrow.",
+      chinese: "yeah = 是的；是的，我明天可以帮你。",
+    },
+    "yes": {
+      focusWord: "yes",
+      sentence: "Yes, I have finished my homework.",
+      chinese: "yes = 是的；是的，我已经完成家庭作业了。",
+    },
+    "yet": {
+      focusWord: "yet",
+      sentence: "Have you finished your homework yet?",
+      chinese: "yet = 还；你完成家庭作业了吗？",
+    },
+    "you": {
+      focusWord: "you",
+      sentence: "You can sit here.",
+      chinese: "you = 你；你可以坐在这里。",
+    },
+    "youknow": {
+      focusWord: "you know",
+      sentence: "You know, this is a difficult decision.",
+      chinese: "you know = 你知道的；你知道的，这是一个艰难的决定。",
+    },
+    "your": {
+      focusWord: "your",
+      sentence: "Is this your jacket?",
+      chinese: "your = 你的；这是你的夹克吗？",
+    },
+    "yours": {
+      focusWord: "yours",
+      sentence: "This umbrella is yours.",
+      chinese: "yours = 你的；这把伞是你的。",
+    },
+    "yourself": {
+      focusWord: "yourself",
+      sentence: "Did you make this cake yourself?",
+      chinese: "yourself = 你亲自；这个蛋糕是你亲自做的吗？",
+    },
   };
 }
 
