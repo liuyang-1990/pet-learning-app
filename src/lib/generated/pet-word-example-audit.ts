@@ -5774,5 +5774,205 @@ export const reviewedWordExampleAudit = {
   "barber": {
     "status": "pass",
     "reasons": []
+  },
+  "bargain": {
+    "status": "pass",
+    "reasons": []
+  },
+  "basin": {
+    "status": "pass",
+    "reasons": []
+  },
+  "basket": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bat": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bathingsuit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bathtub": {
+    "status": "pass",
+    "reasons": []
+  },
+  "battery": {
+    "status": "pass",
+    "reasons": []
+  },
+  "battle": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bay": {
+    "status": "pass",
+    "reasons": []
+  },
+  "beard": {
+    "status": "pass",
+    "reasons": []
+  },
+  "beauty": {
+    "status": "pass",
+    "reasons": []
+  },
+  "beef": {
+    "status": "pass",
+    "reasons": []
+  },
+  "beginner": {
+    "status": "pass",
+    "reasons": []
+  },
+  "beginning": {
+    "status": "pass",
+    "reasons": []
+  },
+  "behaviour": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bell": {
+    "status": "pass",
+    "reasons": []
+  },
+  "belt": {
+    "status": "pass",
+    "reasons": []
+  },
+  "benefit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bestseller": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bin": {
+    "status": "pass",
+    "reasons": []
+  },
+  "biography": {
+    "status": "pass",
+    "reasons": []
+  },
+  "biology": {
+    "status": "pass",
+    "reasons": []
+  },
+  "birth": {
+    "status": "pass",
+    "reasons": []
+  },
+  "biscuit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "blackboard": {
+    "status": "pass",
+    "reasons": []
+  },
+  "block": {
+    "status": "pass",
+    "reasons": []
+  },
+  "blog": {
+    "status": "pass",
+    "reasons": []
+  },
+  "blogger": {
+    "status": "pass",
+    "reasons": []
+  },
+  "blouse": {
+    "status": "pass",
+    "reasons": []
+  },
+  "board": {
+    "status": "pass",
+    "reasons": []
+  },
+  "boardingpass": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bomb": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bone": {
+    "status": "pass",
+    "reasons": []
+  },
+  "booking": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bookshop": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bookstore": {
+    "status": "pass",
+    "reasons": []
+  },
+  "border": {
+    "status": "pass",
+    "reasons": []
+  },
+  "boss": {
+    "status": "pass",
+    "reasons": []
+  },
+  "box": {
+    "status": "pass",
+    "reasons": []
+  },
+  "boxing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "boyfriend": {
+    "status": "pass",
+    "reasons": []
+  },
+  "brain": {
+    "status": "pass",
+    "reasons": []
+  },
+  "brake": {
+    "status": "pass",
+    "reasons": []
+  },
+  "branch": {
+    "status": "pass",
+    "reasons": []
+  },
+  "breath": {
+    "status": "pass",
+    "reasons": []
+  },
+  "breeze": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bride": {
+    "status": "pass",
+    "reasons": []
+  },
+  "bridge": {
+    "status": "pass",
+    "reasons": []
+  },
+  "broccoli": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

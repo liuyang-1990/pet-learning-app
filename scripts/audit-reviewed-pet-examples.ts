@@ -238,6 +238,11 @@ const manuallyConfirmedTerms = new Set([
   // These first-batch objects examples use valid contextual senses or symbols.
   "atsymbol", // at sign / @ symbol; isolated Google gloss mistranslates it as a location phrase
   "baker", // a person who makes or sells bread; isolated Google gloss treats it as the surname Baker
+  // These second-batch objects examples use valid contextual senses of polysemous words.
+  "bargain", // a cheap purchase / good deal, not the verb "negotiate"
+  "bat", // sports equipment, not the animal
+  "board", // a classroom writing board, not a company board
+  "branch", // part of a tree, not a bank branch
 ]);
 
 async function main() {
