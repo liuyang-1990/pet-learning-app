@@ -9135,6 +9135,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "An expert checked the old painting.",
       chinese: "expert = 专家；一位专家检查了那幅旧画。",
     },
+    "explorer": {
+      focusWord: "explorer",
+      sentence: "The explorer crossed the desert on foot.",
+      chinese: "explorer = 探险家；探险家徒步穿过了沙漠。",
+    },
+    "facilities": {
+      focusWord: "facilities",
+      sentence: "The campsite has good facilities for families.",
+      chinese: "facilities = 设施；这个露营地有适合家庭的良好设施。",
+    },
+    "fact": {
+      focusWord: "fact",
+      sentence: "It is a fact that water freezes at zero degrees.",
+      chinese: "fact = 事实；水在零度结冰是一个事实。",
+    },
+    "fan": {
+      focusWord: "fan",
+      sentence: "A fan kept the room cool.",
+      chinese: "fan = 风扇；一台风扇让房间保持凉爽。",
+    },
+    "fare": {
+      focusWord: "fare",
+      sentence: "The bus fare is two pounds.",
+      chinese: "fare = 车费；公交车费是两英镑。",
+    },
+    "farming": {
+      focusWord: "farming",
+      sentence: "Farming is hard work in dry weather.",
+      chinese: "farming = 农业；干燥天气里的农业工作很辛苦。",
+    },
+    "farmland": {
+      focusWord: "farmland",
+      sentence: "The new road crosses farmland.",
+      chinese: "farmland = 农田；这条新路穿过农田。",
+    },
+    "fault": {
+      focusWord: "fault",
+      sentence: "The accident was not my fault.",
+      chinese: "fault = 过错；这次事故不是我的过错。",
+    },
+    "favour": {
+      focusWord: "favour",
+      sentence: "Can you do me a favour after class?",
+      chinese: "favour = 帮忙；下课后你能帮我一个忙吗？",
+    },
+    "fee": {
+      focusWord: "fee",
+      sentence: "The course fee includes books.",
+      chinese: "fee = 费用；课程费用包括书本。",
+    },
+    "feeling": {
+      focusWord: "feeling",
+      sentence: "I had a strange feeling before the exam.",
+      chinese: "feeling = 感觉；考试前我有一种奇怪的感觉。",
+    },
+    "fever": {
+      focusWord: "fever",
+      sentence: "A high fever kept him in bed.",
+      chinese: "fever = 发烧；高烧让他卧床休息。",
+    },
+    "fight": {
+      focusWord: "fight",
+      sentence: "The fight started outside the stadium.",
+      chinese: "fight = 打架；打架发生在体育场外。",
+    },
+    "figure": {
+      focusWord: "figure",
+      sentence: "This figure shows how many students came.",
+      chinese: "figure = 数字；这个数字显示来了多少学生。",
+    },
+    "fire": {
+      focusWord: "fire",
+      sentence: "The fire damaged two houses.",
+      chinese: "fire = 火灾；这场火灾损坏了两所房子。",
+    },
+    "firefighter": {
+      focusWord: "firefighter",
+      sentence: "The firefighter rescued a child from the house.",
+      chinese: "firefighter = 消防员；消防员从房子里救出一个孩子。",
+    },
+    "firm": {
+      focusWord: "firm",
+      sentence: "My aunt works for a large firm.",
+      chinese: "firm = 公司；我姑姑在一家大公司工作。",
+    },
+    "firstname": {
+      focusWord: "first name",
+      sentence: "Write your first name on the form.",
+      chinese: "first name = 名；把你的名写在表格上。",
+    },
+    "fishing": {
+      focusWord: "fishing",
+      sentence: "Fishing is not allowed in this river.",
+      chinese: "fishing = 钓鱼；这条河里不允许钓鱼。",
+    },
+    "flag": {
+      focusWord: "flag",
+      sentence: "The flag flew above the school gate.",
+      chinese: "flag = 旗帜；旗帜在学校大门上方飘扬。",
+    },
+    "flavour": {
+      focusWord: "flavour",
+      sentence: "Strawberry is my favourite ice cream flavour.",
+      chinese: "flavour = 味道；草莓是我最喜欢的冰淇淋味道。",
+    },
+    "flood": {
+      focusWord: "flood",
+      sentence: "The flood covered the road with water.",
+      chinese: "flood = 洪水；洪水淹没了道路。",
+    },
+    "flour": {
+      focusWord: "flour",
+      sentence: "Mix the flour with warm water.",
+      chinese: "flour = 面粉；把面粉和温水混合。",
+    },
+    "flu": {
+      focusWord: "flu",
+      sentence: "He missed school because of the flu.",
+      chinese: "flu = 流感；他因为流感没去上学。",
+    },
+    "flute": {
+      focusWord: "flute",
+      sentence: "She plays the flute in the school band.",
+      chinese: "flute = 长笛；她在学校乐队里吹长笛。",
+    },
+    "fog": {
+      focusWord: "fog",
+      sentence: "Thick fog delayed the morning train.",
+      chinese: "fog = 雾；浓雾延误了早班火车。",
+    },
+    "fool": {
+      focusWord: "fool",
+      sentence: "Do not be a fool near deep water.",
+      chinese: "fool = 傻瓜；在深水附近不要犯傻。",
+    },
+    "footballer": {
+      focusWord: "footballer",
+      sentence: "The footballer scored in the final minute.",
+      chinese: "footballer = 足球运动员；足球运动员在最后一分钟进球。",
+    },
+    "forecast": {
+      focusWord: "forecast",
+      sentence: "The weather forecast says it will rain.",
+      chinese: "forecast = 预报；天气预报说会下雨。",
+    },
+    "foreigner": {
+      focusWord: "foreigner",
+      sentence: "The guide helped the foreigner buy a ticket.",
+      chinese: "foreigner = 外国人；导游帮那位外国人买票。",
+    },
+    "form": {
+      focusWord: "form",
+      sentence: "Fill in this form before the lesson.",
+      chinese: "form = 表格；上课前填写这张表格。",
+    },
+    "fortnight": {
+      focusWord: "fortnight",
+      sentence: "My cousin stayed with us for a fortnight.",
+      chinese: "fortnight = 两周；我表弟和我们住了两周。",
+    },
+    "fountain": {
+      focusWord: "fountain",
+      sentence: "There is a fountain in the town square.",
+      chinese: "fountain = 喷泉；城镇广场上有一座喷泉。",
+    },
+    "frame": {
+      focusWord: "frame",
+      sentence: "The photo is in a wooden frame.",
+      chinese: "frame = 相框；照片装在木制相框里。",
+    },
+    "freezer": {
+      focusWord: "freezer",
+      sentence: "Put the ice cream in the freezer.",
+      chinese: "freezer = 冰柜；把冰淇淋放进冰柜。",
+    },
+    "frog": {
+      focusWord: "frog",
+      sentence: "A green frog jumped into the pond.",
+      chinese: "frog = 青蛙；一只绿色青蛙跳进池塘。",
+    },
+    "fryingpan": {
+      focusWord: "frying pan",
+      sentence: "Heat the oil in a frying pan.",
+      chinese: "frying pan = 煎锅；在煎锅里加热油。",
+    },
+    "fuel": {
+      focusWord: "fuel",
+      sentence: "This car uses less fuel than our old one.",
+      chinese: "fuel = 燃料；这辆车比我们的旧车耗油更少。",
+    },
+    "fullstop": {
+      focusWord: "full stop",
+      sentence: "Put a full stop at the end of the sentence.",
+      chinese: "full stop = 句号；在句末加一个句号。",
+    },
+    "fur": {
+      focusWord: "fur",
+      sentence: "The cat's fur was soft and warm.",
+      chinese: "fur = 毛；猫的毛柔软又暖和。",
+    },
+    "gale": {
+      focusWord: "gale",
+      sentence: "A gale blew down several trees.",
+      chinese: "gale = 大风；一阵大风吹倒了几棵树。",
+    },
+    "gap": {
+      focusWord: "gap",
+      sentence: "There is a small gap between the doors.",
+      chinese: "gap = 缝隙；两扇门之间有一条小缝。",
+    },
+    "garlic": {
+      focusWord: "garlic",
+      sentence: "Add garlic to the soup.",
+      chinese: "garlic = 大蒜；往汤里加大蒜。",
+    },
+    "gas": {
+      focusWord: "gas",
+      sentence: "Gas is used for cooking in this house.",
+      chinese: "gas = 煤气；这所房子用煤气做饭。",
+    },
+    "gate": {
+      focusWord: "gate",
+      sentence: "Meet me at the front gate.",
+      chinese: "gate = 大门；在前门和我见面。",
+    },
+    "geography": {
+      focusWord: "geography",
+      sentence: "Geography teaches us about countries and rivers.",
+      chinese: "geography = 地理；地理教我们了解国家和河流。",
+    },
+    "gift": {
+      focusWord: "gift",
+      sentence: "I bought a gift for my sister.",
+      chinese: "gift = 礼物；我给妹妹买了一份礼物。",
+    },
+    "girlfriend": {
+      focusWord: "girlfriend",
+      sentence: "His girlfriend is waiting outside the cinema.",
+      chinese: "girlfriend = 女朋友；他的女朋友在电影院外面等。",
+    },
+    "glasses": {
+      focusWord: "glasses",
+      sentence: "I need my glasses to read the menu.",
+      chinese: "glasses = 眼镜；我需要戴眼镜才能看菜单。",
+    },
+    "globalwarming": {
+      focusWord: "global warming",
+      sentence: "Global warming is changing the climate.",
+      chinese: "global warming = 全球变暖；全球变暖正在改变气候。",
+    },
   };
 }
 
