@@ -412,6 +412,17 @@ const objectsEighthBatch = [
   "hip hop", "history", "hit", "hole", "homepage", "honey",
 ] as const;
 
+const objectsNinthBatch = [
+  "honeymoon", "hoodie", "housewife", "hug", "humour / humor", "hunger",
+  "hurry", "hut", "ice", "ice skates", "ID", "idea", "inch", "ingredient",
+  "initial", "ink", "inquiry", "instructor", "interest", "interval",
+  "interviewer", "inventor", "iron", "ironing", "issue", "item", "jail",
+  "jar", "jazz", "jet", "jewellery", "jogging", "joke", "judge", "jug",
+  "jump", "jumper", "jungle", "kangaroo", "keeper", "kick", "kid",
+  "kilogramme", "kiss", "kit", "kite", "kitten", "knowledge", "label",
+  "laboratory",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -3391,6 +3402,103 @@ describe("PET Learning App", () => {
       homepage: [
         "The homepage has a search box.",
         "homepage = 主页；主页上有一个搜索框。",
+      ],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the ninth objects reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const objectsWords = words.filter((word) => word.theme === "objects");
+    const selectedExamples = objectsNinthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(objectsNinthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1844);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(objectsWords).toHaveLength(972);
+    expect(
+      objectsWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(504);
+  });
+
+  it("keeps the ninth objects ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/objects-009.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("objects-009");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(objectsNinthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the ninth objects batch", () => {
+    const expectedExamples = {
+      "humour / humor": [
+        "The film has a lot of gentle humor.",
+        "humor = 幽默；这部电影有许多温和的幽默。",
+      ],
+      ID: [
+        "Show your ID at the entrance.",
+        "ID = 身份证件；在入口处出示你的身份证件。",
+      ],
+      initial: [
+        "Write your initial at the top of the page.",
+        "initial = 首字母；把你的首字母写在页面顶部。",
+      ],
+      interest: [
+        "She showed interest in photography.",
+        "interest = 兴趣；她表现出对摄影的兴趣。",
+      ],
+      iron: [
+        "The iron was too hot for the shirt.",
+        "iron = 熨斗；熨斗对这件衬衫来说太烫了。",
+      ],
+      issue: [
+        "The latest issue of the magazine is out.",
+        "issue = 期号；这本杂志的最新一期出版了。",
+      ],
+      jumper: [
+        "She wore a warm jumper in class.",
+        "jumper = 套头毛衣；她在课堂上穿了一件暖和的套头毛衣。",
+      ],
+      keeper: [
+        "The zoo keeper fed the lions.",
+        "keeper = 饲养员；动物园饲养员喂了狮子。",
+      ],
+      kit: [
+        "The first-aid kit is in the kitchen.",
+        "kit = 工具包；急救包在厨房里。",
+      ],
+      label: [
+        "Read the label before you wash the shirt.",
+        "label = 标签；洗衬衫前阅读标签。",
       ],
     } as const;
 
