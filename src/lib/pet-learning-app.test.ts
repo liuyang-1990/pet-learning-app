@@ -423,6 +423,16 @@ const objectsNinthBatch = [
   "laboratory",
 ] as const;
 
+const objectsTenthBatch = [
+  "lack", "ladder", "lady", "lamb", "landscape", "laundry", "leader", "leaf",
+  "league", "lecture", "lecturer", "left", "leisure", "lemon", "lemonade",
+  "length", "lettuce", "level", "librarian", "lie", "life", "lift",
+  "lightning", "limit", "line", "link", "lip", "literature", "litter",
+  "load", "loan", "lock", "locker", "logo", "lots / a lot", "lottery",
+  "luck", "lunchtime", "luxury", "machine", "mail", "mango", "marriage",
+  "mate", "melon", "memory", "mess", "microphone", "microwave", "midday",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -3500,6 +3510,79 @@ describe("PET Learning App", () => {
         "Read the label before you wash the shirt.",
         "label = 标签；洗衬衫前阅读标签。",
       ],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the tenth objects reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const objectsWords = words.filter((word) => word.theme === "objects");
+    const selectedExamples = objectsTenthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(objectsTenthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1894);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(objectsWords).toHaveLength(972);
+    expect(
+      objectsWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(554);
+  });
+
+  it("keeps the tenth objects ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/objects-010.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("objects-010");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(objectsTenthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the tenth objects batch", () => {
+    const expectedExamples = {
+      left: ["Keep to the left on this path.", "left = 左边；在这条路上靠左走。"],
+      lie: ["His lie caused a lot of trouble.", "lie = 谎言；他的谎言造成了许多麻烦。"],
+      life: ["Village life is quiet here.", "life = 生活；这里的乡村生活很安静。"],
+      lift: ["Take the lift to the sixth floor.", "lift = 电梯；乘电梯到六楼。"],
+      line: [
+        "Draw a straight line across the page.",
+        "line = 线；在页面上画一条直线。",
+      ],
+      link: ["Click the link to open the map.", "link = 链接；点击链接打开地图。"],
+      litter: ["Please put litter in the bin.", "litter = 垃圾；请把垃圾放进垃圾桶。"],
+      load: ["The truck carried a heavy load.", "load = 负载；卡车载着很重的货物。"],
+      "lots / a lot": [
+        "Lots of people waited outside.",
+        "lots = 许多；许多人在外面等待。",
+      ],
+      mail: ["The mail arrived before breakfast.", "mail = 邮件；邮件在早餐前到了。"],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
