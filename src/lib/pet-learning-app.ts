@@ -9885,6 +9885,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "The students worked in the science laboratory.",
       chinese: "laboratory = 实验室；学生们在科学实验室工作。",
     },
+    "lack": {
+      focusWord: "lack",
+      sentence: "A lack of sleep made him tired.",
+      chinese: "lack = 缺乏；缺乏睡眠让他很累。",
+    },
+    "ladder": {
+      focusWord: "ladder",
+      sentence: "The ladder reached the top window.",
+      chinese: "ladder = 梯子；梯子够到了最上面的窗户。",
+    },
+    "lady": {
+      focusWord: "lady",
+      sentence: "The lady at the desk smiled.",
+      chinese: "lady = 女士；桌边那位女士笑了。",
+    },
+    "lamb": {
+      focusWord: "lamb",
+      sentence: "The lamb followed its mother.",
+      chinese: "lamb = 小羊；小羊跟着它的妈妈。",
+    },
+    "landscape": {
+      focusWord: "landscape",
+      sentence: "The painting shows a mountain landscape.",
+      chinese: "landscape = 风景；这幅画展示了山地风景。",
+    },
+    "laundry": {
+      focusWord: "laundry",
+      sentence: "The laundry is still wet.",
+      chinese: "laundry = 洗好的衣物；洗好的衣物还湿着。",
+    },
+    "leader": {
+      focusWord: "leader",
+      sentence: "The team leader explained the plan.",
+      chinese: "leader = 领导者；队长解释了计划。",
+    },
+    "leaf": {
+      focusWord: "leaf",
+      sentence: "A red leaf fell onto the path.",
+      chinese: "leaf = 叶子；一片红叶落到小路上。",
+    },
+    "league": {
+      focusWord: "league",
+      sentence: "Their team joined a new league.",
+      chinese: "league = 联赛；他们的球队加入了一个新联赛。",
+    },
+    "lecture": {
+      focusWord: "lecture",
+      sentence: "The lecture lasted one hour.",
+      chinese: "lecture = 讲座；这场讲座持续了一个小时。",
+    },
+    "lecturer": {
+      focusWord: "lecturer",
+      sentence: "The lecturer answered every question.",
+      chinese: "lecturer = 讲师；讲师回答了每个问题。",
+    },
+    "left": {
+      focusWord: "left",
+      sentence: "Keep to the left on this path.",
+      chinese: "left = 左边；在这条路上靠左走。",
+    },
+    "leisure": {
+      focusWord: "leisure",
+      sentence: "Reading is her favourite leisure activity.",
+      chinese: "leisure = 休闲；阅读是她最喜欢的休闲活动。",
+    },
+    "lemon": {
+      focusWord: "lemon",
+      sentence: "Add a slice of lemon to the water.",
+      chinese: "lemon = 柠檬；往水里加一片柠檬。",
+    },
+    "lemonade": {
+      focusWord: "lemonade",
+      sentence: "We drank cold lemonade in the garden.",
+      chinese: "lemonade = 柠檬水；我们在花园里喝了冰柠檬水。",
+    },
+    "length": {
+      focusWord: "length",
+      sentence: "Measure the length of the table.",
+      chinese: "length = 长度；测量桌子的长度。",
+    },
+    "lettuce": {
+      focusWord: "lettuce",
+      sentence: "Put lettuce in the sandwich.",
+      chinese: "lettuce = 生菜；把生菜放进三明治。",
+    },
+    "level": {
+      focusWord: "level",
+      sentence: "The game has ten levels.",
+      chinese: "level = 关卡；这个游戏有十个关卡。",
+    },
+    "librarian": {
+      focusWord: "librarian",
+      sentence: "The librarian helped me find a book.",
+      chinese: "librarian = 图书管理员；图书管理员帮我找到了一本书。",
+    },
+    "lie": {
+      focusWord: "lie",
+      sentence: "His lie caused a lot of trouble.",
+      chinese: "lie = 谎言；他的谎言造成了许多麻烦。",
+    },
+    "life": {
+      focusWord: "life",
+      sentence: "Village life is quiet here.",
+      chinese: "life = 生活；这里的乡村生活很安静。",
+    },
+    "lift": {
+      focusWord: "lift",
+      sentence: "Take the lift to the sixth floor.",
+      chinese: "lift = 电梯；乘电梯到六楼。",
+    },
+    "lightning": {
+      focusWord: "lightning",
+      sentence: "Lightning lit up the sky.",
+      chinese: "lightning = 闪电；闪电照亮了天空。",
+    },
+    "limit": {
+      focusWord: "limit",
+      sentence: "The speed limit is thirty kilometres an hour.",
+      chinese: "limit = 限制；限速是每小时三十公里。",
+    },
+    "line": {
+      focusWord: "line",
+      sentence: "Draw a straight line across the page.",
+      chinese: "line = 线；在页面上画一条直线。",
+    },
+    "link": {
+      focusWord: "link",
+      sentence: "Click the link to open the map.",
+      chinese: "link = 链接；点击链接打开地图。",
+    },
+    "lip": {
+      focusWord: "lip",
+      sentence: "She had a cut on her lip.",
+      chinese: "lip = 嘴唇；她嘴唇上有一道伤口。",
+    },
+    "literature": {
+      focusWord: "literature",
+      sentence: "Literature was his best subject.",
+      chinese: "literature = 文学；文学是他最擅长的科目。",
+    },
+    "litter": {
+      focusWord: "litter",
+      sentence: "Please put litter in the bin.",
+      chinese: "litter = 垃圾；请把垃圾放进垃圾桶。",
+    },
+    "load": {
+      focusWord: "load",
+      sentence: "The truck carried a heavy load.",
+      chinese: "load = 负载；卡车载着很重的货物。",
+    },
+    "loan": {
+      focusWord: "loan",
+      sentence: "She got a loan to buy a car.",
+      chinese: "loan = 贷款；她获得贷款买车。",
+    },
+    "lock": {
+      focusWord: "lock",
+      sentence: "The lock on the door is new.",
+      chinese: "lock = 锁；门上的锁是新的。",
+    },
+    "locker": {
+      focusWord: "locker",
+      sentence: "Put your bag in the locker.",
+      chinese: "locker = 储物柜；把你的包放进储物柜。",
+    },
+    "logo": {
+      focusWord: "logo",
+      sentence: "The company logo is green.",
+      chinese: "logo = 标志；公司的标志是绿色的。",
+    },
+    "lots": {
+      focusWord: "lots",
+      sentence: "Lots of people waited outside.",
+      chinese: "lots = 许多；许多人在外面等待。",
+    },
+    "lottery": {
+      focusWord: "lottery",
+      sentence: "He won a small prize in the lottery.",
+      chinese: "lottery = 彩票；他在彩票中赢了一个小奖。",
+    },
+    "luck": {
+      focusWord: "luck",
+      sentence: "Good luck helped us find the hotel.",
+      chinese: "luck = 运气；好运帮我们找到了酒店。",
+    },
+    "lunchtime": {
+      focusWord: "lunchtime",
+      sentence: "Lunchtime starts at twelve thirty.",
+      chinese: "lunchtime = 午餐时间；午餐时间十二点半开始。",
+    },
+    "luxury": {
+      focusWord: "luxury",
+      sentence: "A private pool is a luxury.",
+      chinese: "luxury = 奢侈品；私人游泳池是一种奢侈品。",
+    },
+    "machine": {
+      focusWord: "machine",
+      sentence: "This machine prints tickets.",
+      chinese: "machine = 机器；这台机器打印票。",
+    },
+    "mail": {
+      focusWord: "mail",
+      sentence: "The mail arrived before breakfast.",
+      chinese: "mail = 邮件；邮件在早餐前到了。",
+    },
+    "mango": {
+      focusWord: "mango",
+      sentence: "The mango was sweet and soft.",
+      chinese: "mango = 芒果；这个芒果又甜又软。",
+    },
+    "marriage": {
+      focusWord: "marriage",
+      sentence: "Their marriage lasted fifty years.",
+      chinese: "marriage = 婚姻；他们的婚姻持续了五十年。",
+    },
+    "mate": {
+      focusWord: "mate",
+      sentence: "My mate helped me carry the boxes.",
+      chinese: "mate = 朋友；我的朋友帮我搬箱子。",
+    },
+    "melon": {
+      focusWord: "melon",
+      sentence: "We shared a cold melon after lunch.",
+      chinese: "melon = 甜瓜；午饭后我们分吃了一个冰甜瓜。",
+    },
+    "memory": {
+      focusWord: "memory",
+      sentence: "The trip is a happy memory.",
+      chinese: "memory = 记忆；这次旅行是一段快乐的记忆。",
+    },
+    "mess": {
+      focusWord: "mess",
+      sentence: "The kitchen was a mess after dinner.",
+      chinese: "mess = 混乱；晚饭后厨房一片混乱。",
+    },
+    "microphone": {
+      focusWord: "microphone",
+      sentence: "Speak clearly into the microphone.",
+      chinese: "microphone = 麦克风；对着麦克风清楚地说话。",
+    },
+    "microwave": {
+      focusWord: "microwave",
+      sentence: "Heat the soup in the microwave.",
+      chinese: "microwave = 微波炉；用微波炉加热汤。",
+    },
+    "midday": {
+      focusWord: "midday",
+      sentence: "We arrived at midday.",
+      chinese: "midday = 中午；我们中午到达。",
+    },
   };
 }
 
