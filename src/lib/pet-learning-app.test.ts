@@ -391,6 +391,16 @@ const objectsSixthBatch = [
   "excuse", "expert",
 ] as const;
 
+const objectsSeventhBatch = [
+  "explorer", "facilities", "fact", "fan", "fare", "farming", "farmland",
+  "fault", "favour", "fee", "feeling", "fever", "fight", "figure", "fire",
+  "firefighter", "firm", "first name", "fishing", "flag", "flavour", "flood",
+  "flour", "flu", "flute", "fog", "fool", "footballer", "forecast",
+  "foreigner", "form", "fortnight", "fountain", "frame", "freezer", "frog",
+  "frying pan", "fuel", "full stop", "fur", "gale", "gap", "garlic", "gas",
+  "gate", "geography", "gift", "girlfriend", "glasses", "global warming",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -3185,6 +3195,94 @@ describe("PET Learning App", () => {
       excuse: [
         "He gave a weak excuse for being late.",
         "excuse = 借口；他为迟到找了一个站不住脚的借口。",
+      ],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the seventh objects reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const objectsWords = words.filter((word) => word.theme === "objects");
+    const selectedExamples = objectsSeventhBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(objectsSeventhBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1744);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(objectsWords).toHaveLength(972);
+    expect(
+      objectsWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(404);
+  });
+
+  it("keeps the seventh objects ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/objects-007.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("objects-007");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(objectsSeventhBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the seventh objects batch", () => {
+    const expectedExamples = {
+      fan: ["A fan kept the room cool.", "fan = 风扇；一台风扇让房间保持凉爽。"],
+      fare: ["The bus fare is two pounds.", "fare = 车费；公交车费是两英镑。"],
+      fault: [
+        "The accident was not my fault.",
+        "fault = 过错；这次事故不是我的过错。",
+      ],
+      favour: [
+        "Can you do me a favour after class?",
+        "favour = 帮忙；下课后你能帮我一个忙吗？",
+      ],
+      figure: [
+        "This figure shows how many students came.",
+        "figure = 数字；这个数字显示来了多少学生。",
+      ],
+      firm: ["My aunt works for a large firm.", "firm = 公司；我姑姑在一家大公司工作。"],
+      form: [
+        "Fill in this form before the lesson.",
+        "form = 表格；上课前填写这张表格。",
+      ],
+      "full stop": [
+        "Put a full stop at the end of the sentence.",
+        "full stop = 句号；在句末加一个句号。",
+      ],
+      glasses: [
+        "I need my glasses to read the menu.",
+        "glasses = 眼镜；我需要戴眼镜才能看菜单。",
+      ],
+      "global warming": [
+        "Global warming is changing the climate.",
+        "global warming = 全球变暖；全球变暖正在改变气候。",
       ],
     } as const;
 
