@@ -246,6 +246,12 @@ const manuallyConfirmedTerms = new Set([
   // These third-batch objects examples use valid contextual senses of polysemous words.
   "bush", // a shrub, not the surname Bush
   "cab", // a taxi, not a vehicle driver's compartment
+  // These fifth-batch objects examples use valid contextual noun senses.
+  "court", // a sports court, not a law court
+  "crash", // a car accident, not a computer crash
+  "crossing", // a pedestrian crossing, not the gerund "crossing"
+  "cruise", // a holiday by ship, not the verb "cruise"
+  "cut", // a small wound, not the verb "cut"
 ]);
 
 async function main() {

@@ -40,11 +40,11 @@ The ledger uses `batchId: objects-005`, `status: promoted`, and these exact entr
 | Term | Focus Word | Sentence | Chinese |
 | --- | --- | --- | --- |
 | countryside | countryside | My grandparents live in the countryside. | countryside = 乡村；我的祖父母住在乡村。 |
-| couple | couple | A young couple sat near the window. | couple = 夫妇；一对年轻夫妇坐在窗边。 |
+| couple | couple | A young couple sat near the window. | couple = 情侣；一对年轻情侣坐在窗边。 |
 | courage | courage | She showed courage during the difficult race. | courage = 勇气；她在艰难的比赛中表现出了勇气。 |
 | court | court | We played tennis on the new court. | court = 球场；我们在新球场上打网球。 |
 | cover | cover | The book cover is bright red. | cover = 封面；这本书的封面是鲜红色的。 |
-| crash | crash | No one was hurt in the car crash. | crash = 撞车事故；这起汽车撞车事故中没有人受伤。 |
+| crash | crash | No one was hurt in the car crash. | crash = 车祸；这起车祸中没有人受伤。 |
 | creature | creature | The strange sea creature moved slowly. | creature = 生物；那只奇怪的海洋生物慢慢移动。 |
 | credit | credit | You can pay by credit at this shop. | credit = 信用付款；你可以在这家商店用信用付款。 |
 | crew | crew | The ship's crew worked all night. | crew = 船员；船员们工作了一整夜。 |
@@ -54,8 +54,8 @@ The ledger uses `batchId: objects-005`, `status: promoted`, and these exact entr
 | cross | cross | There is a red cross on the first-aid box. | cross = 十字；急救箱上有一个红十字。 |
 | crossing | crossing | Use the crossing to get to the other side. | crossing = 人行横道；使用人行横道到达另一边。 |
 | crossroads | crossroads | Turn left at the crossroads. | crossroads = 十字路口；在十字路口左转。 |
-| cruise | cruise | They booked a cruise around the islands. | cruise = 邮轮旅行；他们预订了环岛邮轮旅行。 |
-| cry | cry | I heard a cry from the next room. | cry = 叫声；我听到隔壁房间传来一声叫喊。 |
+| cruise | cruise | They booked a cruise around the islands. | cruise = 游轮旅行；他们预订了环岛游轮旅行。 |
+| cry | cry | I heard a cry from the next room. | cry = 哭声；我听到隔壁房间传来哭声。 |
 | cucumber | cucumber | Add some cucumber to the salad. | cucumber = 黄瓜；往沙拉里加些黄瓜。 |
 | cure | cure | Doctors are still looking for a cure. | cure = 治疗方法；医生们仍在寻找一种治疗方法。 |
 | currency | currency | The euro is the currency in France. | currency = 货币；欧元是法国的货币。 |
@@ -70,10 +70,10 @@ The ledger uses `batchId: objects-005`, `status: promoted`, and these exact entr
 | date | date | Write the date at the top of the page. | date = 日期；把日期写在页面顶部。 |
 | death | death | The story is about the death of a king. | death = 死亡；这个故事讲的是一位国王的死亡。 |
 | decision | decision | We made a decision after lunch. | decision = 决定；午饭后我们做了决定。 |
-| decrease | decrease | There was a decrease in ticket sales. | decrease = 下降；票务销售出现了下降。 |
+| decrease | decrease | There was a decrease in ticket sales. | decrease = 减少；门票销量有所减少。 |
 | defeat | defeat | The team accepted its defeat calmly. | defeat = 失败；球队平静地接受了失败。 |
 | delay | delay | The train delay lasted twenty minutes. | delay = 延误；火车延误持续了二十分钟。 |
-| delivery | delivery | The delivery arrived before dinner. | delivery = 递送；这次递送在晚饭前到了。 |
+| delivery | delivery | The delivery arrived before dinner. | delivery = 送货；这次送货在晚饭前到了。 |
 | demand | demand | There is high demand for this phone. | demand = 需求；这款手机需求很高。 |
 | departure | departure | Our departure was at seven in the morning. | departure = 出发；我们的出发时间是早上七点。 |
 | deposit | deposit | We paid a small deposit for the room. | deposit = 定金；我们为房间付了一小笔定金。 |
@@ -86,8 +86,8 @@ The ledger uses `batchId: objects-005`, `status: promoted`, and these exact entr
 | difficulty | difficulty | He had difficulty finding the address. | difficulty = 困难；他找这个地址时遇到了困难。 |
 | diploma | diploma | She received her diploma in June. | diploma = 文凭；她在六月收到了文凭。 |
 | director | director | The director spoke to the actors. | director = 导演；导演和演员们讲话。 |
-| dirt | dirt | There was dirt on my shoes. | dirt = 泥土；我的鞋上有泥土。 |
-| disadvantage | disadvantage | A long journey is the main disadvantage. | disadvantage = 缺点；路途遥远是主要缺点。 |
+| dirt | dirt | There was dirt on my shoes. | dirt = 污垢；我的鞋上有污垢。 |
+| disadvantage | disadvantage | A long journey is the main disadvantage. | disadvantage = 劣势；路途遥远是主要劣势。 |
 | disc / disk | disc | The computer saved the file on a disk. | disc = 磁盘；电脑把文件保存在磁盘上。 |
 
 - [ ] Create the ledger from all 50 rows.

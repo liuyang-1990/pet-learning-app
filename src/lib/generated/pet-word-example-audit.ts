@@ -6374,5 +6374,205 @@ export const reviewedWordExampleAudit = {
   "cough": {
     "status": "pass",
     "reasons": []
+  },
+  "countryside": {
+    "status": "pass",
+    "reasons": []
+  },
+  "couple": {
+    "status": "pass",
+    "reasons": []
+  },
+  "courage": {
+    "status": "pass",
+    "reasons": []
+  },
+  "court": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cover": {
+    "status": "pass",
+    "reasons": []
+  },
+  "crash": {
+    "status": "pass",
+    "reasons": []
+  },
+  "creature": {
+    "status": "pass",
+    "reasons": []
+  },
+  "credit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "crew": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cricket": {
+    "status": "pass",
+    "reasons": []
+  },
+  "crime": {
+    "status": "pass",
+    "reasons": []
+  },
+  "criminal": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cross": {
+    "status": "pass",
+    "reasons": []
+  },
+  "crossing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "crossroads": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cruise": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cry": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cucumber": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cure": {
+    "status": "pass",
+    "reasons": []
+  },
+  "currency": {
+    "status": "pass",
+    "reasons": []
+  },
+  "curriculum": {
+    "status": "pass",
+    "reasons": []
+  },
+  "curry": {
+    "status": "pass",
+    "reasons": []
+  },
+  "curtain": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cut": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cycle": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cyclist": {
+    "status": "pass",
+    "reasons": []
+  },
+  "damage": {
+    "status": "pass",
+    "reasons": []
+  },
+  "data": {
+    "status": "pass",
+    "reasons": []
+  },
+  "date": {
+    "status": "pass",
+    "reasons": []
+  },
+  "death": {
+    "status": "pass",
+    "reasons": []
+  },
+  "decision": {
+    "status": "pass",
+    "reasons": []
+  },
+  "decrease": {
+    "status": "pass",
+    "reasons": []
+  },
+  "defeat": {
+    "status": "pass",
+    "reasons": []
+  },
+  "delay": {
+    "status": "pass",
+    "reasons": []
+  },
+  "delivery": {
+    "status": "pass",
+    "reasons": []
+  },
+  "demand": {
+    "status": "pass",
+    "reasons": []
+  },
+  "departure": {
+    "status": "pass",
+    "reasons": []
+  },
+  "deposit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "desert": {
+    "status": "pass",
+    "reasons": []
+  },
+  "design": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dessert": {
+    "status": "pass",
+    "reasons": []
+  },
+  "diagram": {
+    "status": "pass",
+    "reasons": []
+  },
+  "diary": {
+    "status": "pass",
+    "reasons": []
+  },
+  "diet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "difficulty": {
+    "status": "pass",
+    "reasons": []
+  },
+  "diploma": {
+    "status": "pass",
+    "reasons": []
+  },
+  "director": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dirt": {
+    "status": "pass",
+    "reasons": []
+  },
+  "disadvantage": {
+    "status": "pass",
+    "reasons": []
+  },
+  "disc": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

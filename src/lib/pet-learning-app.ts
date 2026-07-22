@@ -8643,7 +8643,7 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     "couple": {
       focusWord: "couple",
       sentence: "A young couple sat near the window.",
-      chinese: "couple = 夫妇；一对年轻夫妇坐在窗边。",
+      chinese: "couple = 情侣；一对年轻情侣坐在窗边。",
     },
     "courage": {
       focusWord: "courage",
@@ -8663,7 +8663,7 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     "crash": {
       focusWord: "crash",
       sentence: "No one was hurt in the car crash.",
-      chinese: "crash = 撞车事故；这起汽车撞车事故中没有人受伤。",
+      chinese: "crash = 车祸；这起车祸中没有人受伤。",
     },
     "creature": {
       focusWord: "creature",
@@ -8713,12 +8713,12 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     "cruise": {
       focusWord: "cruise",
       sentence: "They booked a cruise around the islands.",
-      chinese: "cruise = 邮轮旅行；他们预订了环岛邮轮旅行。",
+      chinese: "cruise = 游轮旅行；他们预订了环岛游轮旅行。",
     },
     "cry": {
       focusWord: "cry",
       sentence: "I heard a cry from the next room.",
-      chinese: "cry = 叫声；我听到隔壁房间传来一声叫喊。",
+      chinese: "cry = 哭声；我听到隔壁房间传来哭声。",
     },
     "cucumber": {
       focusWord: "cucumber",
@@ -8793,7 +8793,7 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     "decrease": {
       focusWord: "decrease",
       sentence: "There was a decrease in ticket sales.",
-      chinese: "decrease = 下降；票务销售出现了下降。",
+      chinese: "decrease = 减少；门票销量有所减少。",
     },
     "defeat": {
       focusWord: "defeat",
@@ -8808,7 +8808,7 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     "delivery": {
       focusWord: "delivery",
       sentence: "The delivery arrived before dinner.",
-      chinese: "delivery = 递送；这次递送在晚饭前到了。",
+      chinese: "delivery = 送货；这次送货在晚饭前到了。",
     },
     "demand": {
       focusWord: "demand",
@@ -8873,12 +8873,12 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     "dirt": {
       focusWord: "dirt",
       sentence: "There was dirt on my shoes.",
-      chinese: "dirt = 泥土；我的鞋上有泥土。",
+      chinese: "dirt = 污垢；我的鞋上有污垢。",
     },
     "disadvantage": {
       focusWord: "disadvantage",
       sentence: "A long journey is the main disadvantage.",
-      chinese: "disadvantage = 缺点；路途遥远是主要缺点。",
+      chinese: "disadvantage = 劣势；路途遥远是主要劣势。",
     },
     "disc": {
       focusWord: "disc",
