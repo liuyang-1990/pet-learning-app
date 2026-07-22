@@ -1927,13 +1927,13 @@ describe("PET Learning App", () => {
     }
     expect(getWordExample({ term: "check-in", chineseGloss: "报到；签到" })).toMatchObject({
       focusWord: "check-in",
-      sentence: null,
-      chinese: "check-in = 报到；签到",
+      sentence: "Online check-in opens twenty-four hours before the flight.",
+      chinese: "check-in = 登机手续；网上登机手续在航班起飞前二十四小时开放。",
     });
     expect(getWordExample({ term: "checkout", chineseGloss: "结帐台；检验" })).toMatchObject({
       focusWord: "checkout",
-      sentence: null,
-      chinese: "checkout = 结帐台；检验",
+      sentence: "The checkout is near the front door.",
+      chinese: "checkout = 收银台；收银台在前门附近。",
     });
     expect(getWordExample({ term: "workout", chineseGloss: "锻炼；训练" })).toMatchObject({
       focusWord: "workout",

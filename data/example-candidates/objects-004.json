@@ -1,0 +1,306 @@
+{
+  "batchId": "objects-004",
+  "status": "promoted",
+  "entries": [
+    {
+      "term": "chat",
+      "focusWord": "chat",
+      "sentence": "We had a short chat after class.",
+      "chinese": "chat = 聊天；课后我们简短地聊了一会儿。"
+    },
+    {
+      "term": "chatroom",
+      "focusWord": "chatroom",
+      "sentence": "The teacher opened a safe chatroom for the class.",
+      "chinese": "chatroom = 聊天室；老师为班级开了一个安全的聊天室。"
+    },
+    {
+      "term": "check",
+      "focusWord": "check",
+      "sentence": "The mechanic did a quick check of the brakes.",
+      "chinese": "check = 检查；机械师快速检查了刹车。"
+    },
+    {
+      "term": "check-in",
+      "focusWord": "check-in",
+      "sentence": "Online check-in opens twenty-four hours before the flight.",
+      "chinese": "check-in = 登机手续；网上登机手续在航班起飞前二十四小时开放。"
+    },
+    {
+      "term": "checkout",
+      "focusWord": "checkout",
+      "sentence": "The checkout is near the front door.",
+      "chinese": "checkout = 收银台；收银台在前门附近。"
+    },
+    {
+      "term": "cheek",
+      "focusWord": "cheek",
+      "sentence": "A tear ran down her cheek.",
+      "chinese": "cheek = 脸颊；一滴眼泪顺着她的脸颊流下。"
+    },
+    {
+      "term": "chemist",
+      "focusWord": "chemist",
+      "sentence": "The chemist tested the water in the lab.",
+      "chinese": "chemist = 化学家；化学家在实验室检测了水。"
+    },
+    {
+      "term": "chemistry",
+      "focusWord": "chemistry",
+      "sentence": "Chemistry is difficult but interesting.",
+      "chinese": "chemistry = 化学；化学很难但很有趣。"
+    },
+    {
+      "term": "chess",
+      "focusWord": "chess",
+      "sentence": "We played chess during the break.",
+      "chinese": "chess = 国际象棋；休息时我们下了国际象棋。"
+    },
+    {
+      "term": "chest of drawers",
+      "focusWord": "chest of drawers",
+      "sentence": "Put your socks in the chest of drawers.",
+      "chinese": "chest of drawers = 五斗柜；把你的袜子放进五斗柜里。"
+    },
+    {
+      "term": "childhood",
+      "focusWord": "childhood",
+      "sentence": "She spent her childhood near the sea.",
+      "chinese": "childhood = 童年；她在海边度过了童年。"
+    },
+    {
+      "term": "chilli",
+      "focusWord": "chilli",
+      "sentence": "This chilli is too hot for me.",
+      "chinese": "chilli = 辣椒；这个辣椒对我来说太辣了。"
+    },
+    {
+      "term": "chin",
+      "focusWord": "chin",
+      "sentence": "He cut his chin when he fell.",
+      "chinese": "chin = 下巴；他摔倒时划伤了下巴。"
+    },
+    {
+      "term": "chip",
+      "focusWord": "chip",
+      "sentence": "She ate one potato chip before dinner.",
+      "chinese": "chip = 薯片；晚饭前她吃了一片薯片。"
+    },
+    {
+      "term": "chocolate",
+      "focusWord": "chocolate",
+      "sentence": "I bought a bar of chocolate.",
+      "chinese": "chocolate = 巧克力；我买了一块巧克力。"
+    },
+    {
+      "term": "circus",
+      "focusWord": "circus",
+      "sentence": "The circus came to town in spring.",
+      "chinese": "circus = 马戏团；春天马戏团来到了镇上。"
+    },
+    {
+      "term": "cleaner",
+      "focusWord": "cleaner",
+      "sentence": "The cleaner washed the classroom floor.",
+      "chinese": "cleaner = 清洁工；清洁工清洗了教室地板。"
+    },
+    {
+      "term": "click",
+      "focusWord": "click",
+      "sentence": "I heard a click when the door closed.",
+      "chinese": "click = 咔哒声；门关上时我听到一声咔哒响。"
+    },
+    {
+      "term": "cliff",
+      "focusWord": "cliff",
+      "sentence": "The path goes along the top of the cliff.",
+      "chinese": "cliff = 悬崖；这条小路沿着悬崖顶延伸。"
+    },
+    {
+      "term": "climbing",
+      "focusWord": "climbing",
+      "sentence": "Climbing is safer with a teacher.",
+      "chinese": "climbing = 攀岩；有老师指导时攀岩更安全。"
+    },
+    {
+      "term": "clock",
+      "focusWord": "clock",
+      "sentence": "The clock on the wall is slow.",
+      "chinese": "clock = 时钟；墙上的时钟慢了。"
+    },
+    {
+      "term": "clown",
+      "focusWord": "clown",
+      "sentence": "The clown made the children laugh.",
+      "chinese": "clown = 小丑；小丑逗孩子们笑了。"
+    },
+    {
+      "term": "coast",
+      "focusWord": "coast",
+      "sentence": "We drove along the coast at sunset.",
+      "chinese": "coast = 海岸；日落时我们沿着海岸开车。"
+    },
+    {
+      "term": "coconut",
+      "focusWord": "coconut",
+      "sentence": "She drank juice from a coconut.",
+      "chinese": "coconut = 椰子；她喝了椰子里的汁。"
+    },
+    {
+      "term": "cod",
+      "focusWord": "cod",
+      "sentence": "Cod is often served with chips.",
+      "chinese": "cod = 鳕鱼；鳕鱼常和薯条一起上桌。"
+    },
+    {
+      "term": "cola",
+      "focusWord": "cola",
+      "sentence": "He ordered a cola with his meal.",
+      "chinese": "cola = 可乐；他点餐时要了一杯可乐。"
+    },
+    {
+      "term": "collar",
+      "focusWord": "collar",
+      "sentence": "The shirt has a white collar.",
+      "chinese": "collar = 衣领；这件衬衫有白色衣领。"
+    },
+    {
+      "term": "colleague",
+      "focusWord": "colleague",
+      "sentence": "My colleague helped me finish the report.",
+      "chinese": "colleague = 同事；我的同事帮我完成了报告。"
+    },
+    {
+      "term": "colour",
+      "focusWord": "colour",
+      "sentence": "Blue is my favourite colour.",
+      "chinese": "colour = 颜色；蓝色是我最喜欢的颜色。"
+    },
+    {
+      "term": "comb",
+      "focusWord": "comb",
+      "sentence": "I keep a comb in my bag.",
+      "chinese": "comb = 梳子；我包里放着一把梳子。"
+    },
+    {
+      "term": "comedy",
+      "focusWord": "comedy",
+      "sentence": "We watched a comedy on Friday night.",
+      "chinese": "comedy = 喜剧；星期五晚上我们看了一部喜剧。"
+    },
+    {
+      "term": "comfort",
+      "focusWord": "comfort",
+      "sentence": "The soft blanket gave her comfort.",
+      "chinese": "comfort = 安慰；柔软的毯子给了她安慰。"
+    },
+    {
+      "term": "comma",
+      "focusWord": "comma",
+      "sentence": "Put a comma after the first word.",
+      "chinese": "comma = 逗号；在第一个词后面加一个逗号。"
+    },
+    {
+      "term": "competitor",
+      "focusWord": "competitor",
+      "sentence": "Each competitor wore a number.",
+      "chinese": "competitor = 参赛者；每位参赛者都戴着号码。"
+    },
+    {
+      "term": "complaint",
+      "focusWord": "complaint",
+      "sentence": "The hotel received a complaint about the noise.",
+      "chinese": "complaint = 投诉；酒店收到了一起关于噪音的投诉。"
+    },
+    {
+      "term": "conclusion",
+      "focusWord": "conclusion",
+      "sentence": "Write a short conclusion at the end.",
+      "chinese": "conclusion = 结论；在结尾写一个简短结论。"
+    },
+    {
+      "term": "consonant",
+      "focusWord": "consonant",
+      "sentence": "The letter b is a consonant.",
+      "chinese": "consonant = 辅音；字母 b 是一个辅音。"
+    },
+    {
+      "term": "contact",
+      "focusWord": "contact",
+      "sentence": "Add my email as a contact.",
+      "chinese": "contact = 联系人；把我的电子邮件添加为联系人。"
+    },
+    {
+      "term": "contents",
+      "focusWord": "contents",
+      "sentence": "Check the contents of the box.",
+      "chinese": "contents = 内容物；检查盒子里的内容物。"
+    },
+    {
+      "term": "contest",
+      "focusWord": "contest",
+      "sentence": "She won first prize in the writing contest.",
+      "chinese": "contest = 比赛；她在写作比赛中获得了一等奖。"
+    },
+    {
+      "term": "continent",
+      "focusWord": "continent",
+      "sentence": "Asia is the largest continent.",
+      "chinese": "continent = 大洲；亚洲是最大的大洲。"
+    },
+    {
+      "term": "contract",
+      "focusWord": "contract",
+      "sentence": "Read the contract before you sign it.",
+      "chinese": "contract = 合同；签字前先阅读合同。"
+    },
+    {
+      "term": "control",
+      "focusWord": "control",
+      "sentence": "The driver lost control of the car.",
+      "chinese": "control = 控制；司机失去了对汽车的控制。"
+    },
+    {
+      "term": "cookery",
+      "focusWord": "cookery",
+      "sentence": "Cookery lessons teach simple meals.",
+      "chinese": "cookery = 烹饪；烹饪课教授简单餐食。"
+    },
+    {
+      "term": "cookie",
+      "focusWord": "cookie",
+      "sentence": "I saved a cookie for my brother.",
+      "chinese": "cookie = 曲奇饼；我给弟弟留了一块曲奇饼。"
+    },
+    {
+      "term": "cooking",
+      "focusWord": "cooking",
+      "sentence": "Her cooking smells wonderful.",
+      "chinese": "cooking = 烹饪；她做饭的味道很香。"
+    },
+    {
+      "term": "copy",
+      "focusWord": "copy",
+      "sentence": "Please send me a copy of the form.",
+      "chinese": "copy = 复印件；请给我一份表格复印件。"
+    },
+    {
+      "term": "corn",
+      "focusWord": "corn",
+      "sentence": "We had corn with dinner.",
+      "chinese": "corn = 玉米；我们晚饭吃了玉米。"
+    },
+    {
+      "term": "costume",
+      "focusWord": "costume",
+      "sentence": "He wore a pirate costume to the party.",
+      "chinese": "costume = 服装；他穿着海盗服装去参加聚会。"
+    },
+    {
+      "term": "cough",
+      "focusWord": "cough",
+      "sentence": "She has a bad cough today.",
+      "chinese": "cough = 咳嗽；她今天咳嗽得很厉害。"
+    }
+  ]
+}
