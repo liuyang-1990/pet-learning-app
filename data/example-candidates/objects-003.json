@@ -1,0 +1,306 @@
+{
+  "batchId": "objects-003",
+  "status": "promoted",
+  "entries": [
+    {
+      "term": "brochure",
+      "focusWord": "brochure",
+      "sentence": "Pick up a brochure at the tourist office.",
+      "chinese": "brochure = 小册子；在旅游办公室拿一本小册子。"
+    },
+    {
+      "term": "brush",
+      "focusWord": "brush",
+      "sentence": "Use this brush to clean your shoes.",
+      "chinese": "brush = 刷子；用这把刷子清洁你的鞋。"
+    },
+    {
+      "term": "bucket",
+      "focusWord": "bucket",
+      "sentence": "Fill the bucket with water.",
+      "chinese": "bucket = 桶；把桶装满水。"
+    },
+    {
+      "term": "bug",
+      "focusWord": "bug",
+      "sentence": "The computer game has a small bug.",
+      "chinese": "bug = 程序错误；这个电脑游戏有一个小程序错误。"
+    },
+    {
+      "term": "bulb",
+      "focusWord": "bulb",
+      "sentence": "We need a new bulb for the lamp.",
+      "chinese": "bulb = 灯泡；这盏灯需要一个新灯泡。"
+    },
+    {
+      "term": "bull",
+      "focusWord": "bull",
+      "sentence": "The bull stood in the field.",
+      "chinese": "bull = 公牛；那头公牛站在田里。"
+    },
+    {
+      "term": "bunch",
+      "focusWord": "bunch",
+      "sentence": "She bought a bunch of flowers.",
+      "chinese": "bunch = 一束；她买了一束花。"
+    },
+    {
+      "term": "bush",
+      "focusWord": "bush",
+      "sentence": "A small bush grew beside the path.",
+      "chinese": "bush = 灌木；小路旁长着一丛小灌木。"
+    },
+    {
+      "term": "butcher",
+      "focusWord": "butcher",
+      "sentence": "The butcher cut the meat carefully.",
+      "chinese": "butcher = 肉贩；肉贩仔细地切肉。"
+    },
+    {
+      "term": "butter",
+      "focusWord": "butter",
+      "sentence": "Spread some butter on the bread.",
+      "chinese": "butter = 黄油；在面包上抹些黄油。"
+    },
+    {
+      "term": "butterfly",
+      "focusWord": "butterfly",
+      "sentence": "A butterfly landed on the flower.",
+      "chinese": "butterfly = 蝴蝶；一只蝴蝶落在花上。"
+    },
+    {
+      "term": "button",
+      "focusWord": "button",
+      "sentence": "Press the red button to start.",
+      "chinese": "button = 按钮；按红色按钮开始。"
+    },
+    {
+      "term": "buyer",
+      "focusWord": "buyer",
+      "sentence": "The buyer asked about the price.",
+      "chinese": "buyer = 买家；买家询问了价格。"
+    },
+    {
+      "term": "cab",
+      "focusWord": "cab",
+      "sentence": "We took a cab to the station.",
+      "chinese": "cab = 出租车；我们乘出租车去了车站。"
+    },
+    {
+      "term": "cabbage",
+      "focusWord": "cabbage",
+      "sentence": "Add the cabbage to the soup.",
+      "chinese": "cabbage = 卷心菜；把卷心菜加进汤里。"
+    },
+    {
+      "term": "cabin",
+      "focusWord": "cabin",
+      "sentence": "We stayed in a small cabin by the lake.",
+      "chinese": "cabin = 小木屋；我们住在湖边的一间小木屋里。"
+    },
+    {
+      "term": "cabinet",
+      "focusWord": "cabinet",
+      "sentence": "The plates are in the kitchen cabinet.",
+      "chinese": "cabinet = 橱柜；盘子在厨房橱柜里。"
+    },
+    {
+      "term": "cable",
+      "focusWord": "cable",
+      "sentence": "The cable connects the screen to the computer.",
+      "chinese": "cable = 电缆；这根电缆把屏幕连接到电脑上。"
+    },
+    {
+      "term": "café / cafe",
+      "focusWord": "cafe",
+      "sentence": "Let's meet at the cafe after school.",
+      "chinese": "cafe = 咖啡馆；我们放学后在咖啡馆见面吧。"
+    },
+    {
+      "term": "cafeteria",
+      "focusWord": "cafeteria",
+      "sentence": "Students eat lunch in the cafeteria.",
+      "chinese": "cafeteria = 自助餐厅；学生们在自助餐厅吃午饭。"
+    },
+    {
+      "term": "calf",
+      "focusWord": "calf",
+      "sentence": "The young calf stayed close to its mother.",
+      "chinese": "calf = 小牛；小牛紧挨着它的妈妈。"
+    },
+    {
+      "term": "camel",
+      "focusWord": "camel",
+      "sentence": "A camel can carry heavy bags in the desert.",
+      "chinese": "camel = 骆驼；骆驼能在沙漠里驮重包。"
+    },
+    {
+      "term": "camp",
+      "focusWord": "camp",
+      "sentence": "The summer camp starts in July.",
+      "chinese": "camp = 营地；夏令营在七月开始。"
+    },
+    {
+      "term": "campsite",
+      "focusWord": "campsite",
+      "sentence": "Our campsite was near the river.",
+      "chinese": "campsite = 露营地；我们的露营地在河边。"
+    },
+    {
+      "term": "canal",
+      "focusWord": "canal",
+      "sentence": "We walked along the canal in the evening.",
+      "chinese": "canal = 运河；晚上我们沿着运河散步。"
+    },
+    {
+      "term": "candidate",
+      "focusWord": "candidate",
+      "sentence": "Each candidate gave a short speech.",
+      "chinese": "candidate = 候选人；每位候选人都做了简短演讲。"
+    },
+    {
+      "term": "candle",
+      "focusWord": "candle",
+      "sentence": "She lit a candle during the power cut.",
+      "chinese": "candle = 蜡烛；停电时她点了一支蜡烛。"
+    },
+    {
+      "term": "candy",
+      "focusWord": "candy",
+      "sentence": "The children shared a bag of candy.",
+      "chinese": "candy = 糖果；孩子们分享了一袋糖果。"
+    },
+    {
+      "term": "canteen",
+      "focusWord": "canteen",
+      "sentence": "The canteen sells hot meals at lunchtime.",
+      "chinese": "canteen = 食堂；食堂午餐时间卖热饭。"
+    },
+    {
+      "term": "captain",
+      "focusWord": "captain",
+      "sentence": "The captain thanked the team after the match.",
+      "chinese": "captain = 队长；比赛后队长感谢了全队。"
+    },
+    {
+      "term": "care",
+      "focusWord": "care",
+      "sentence": "The old house needs a lot of care.",
+      "chinese": "care = 照料；这座老房子需要大量照料。"
+    },
+    {
+      "term": "carrot",
+      "focusWord": "carrot",
+      "sentence": "Cut the carrot into small pieces.",
+      "chinese": "carrot = 胡萝卜；把胡萝卜切成小块。"
+    },
+    {
+      "term": "cartoon",
+      "focusWord": "cartoon",
+      "sentence": "We watched a funny cartoon on TV.",
+      "chinese": "cartoon = 动画片；我们在电视上看了一部有趣的动画片。"
+    },
+    {
+      "term": "cashpoint",
+      "focusWord": "cashpoint",
+      "sentence": "There is a cashpoint outside the bank.",
+      "chinese": "cashpoint = 自动取款机；银行外面有一台自动取款机。"
+    },
+    {
+      "term": "castle",
+      "focusWord": "castle",
+      "sentence": "The castle is on top of the hill.",
+      "chinese": "castle = 城堡；城堡在山顶上。"
+    },
+    {
+      "term": "cathedral",
+      "focusWord": "cathedral",
+      "sentence": "The cathedral has beautiful windows.",
+      "chinese": "cathedral = 大教堂；这座大教堂有美丽的窗户。"
+    },
+    {
+      "term": "cattle",
+      "focusWord": "cattle",
+      "sentence": "The farmer keeps cattle on the farm.",
+      "chinese": "cattle = 牛群；农民在农场养牛群。"
+    },
+    {
+      "term": "cave",
+      "focusWord": "cave",
+      "sentence": "We explored a dark cave near the beach.",
+      "chinese": "cave = 洞穴；我们探索了海滩附近的一个黑暗洞穴。"
+    },
+    {
+      "term": "ceiling",
+      "focusWord": "ceiling",
+      "sentence": "The lamp hangs from the ceiling.",
+      "chinese": "ceiling = 天花板；灯从天花板上垂下来。"
+    },
+    {
+      "term": "centimetre",
+      "focusWord": "centimetre",
+      "sentence": "The pencil is one centimetre longer than mine.",
+      "chinese": "centimetre = 厘米；这支铅笔比我的长一厘米。"
+    },
+    {
+      "term": "central heating",
+      "focusWord": "central heating",
+      "sentence": "The central heating keeps the house warm.",
+      "chinese": "central heating = 中央供暖；中央供暖让房子保持温暖。"
+    },
+    {
+      "term": "century",
+      "focusWord": "century",
+      "sentence": "This bridge was built last century.",
+      "chinese": "century = 世纪；这座桥建于上个世纪。"
+    },
+    {
+      "term": "cereal",
+      "focusWord": "cereal",
+      "sentence": "I usually have cereal for breakfast.",
+      "chinese": "cereal = 麦片；我通常早餐吃麦片。"
+    },
+    {
+      "term": "ceremony",
+      "focusWord": "ceremony",
+      "sentence": "The prize ceremony began at noon.",
+      "chinese": "ceremony = 典礼；颁奖典礼在中午开始。"
+    },
+    {
+      "term": "certificate",
+      "focusWord": "certificate",
+      "sentence": "She received a certificate for the course.",
+      "chinese": "certificate = 证书；她获得了这门课程的证书。"
+    },
+    {
+      "term": "chain",
+      "focusWord": "chain",
+      "sentence": "He locked the bike with a chain.",
+      "chinese": "chain = 链条；他用链条锁住自行车。"
+    },
+    {
+      "term": "challenge",
+      "focusWord": "challenge",
+      "sentence": "Climbing the hill was a real challenge.",
+      "chinese": "challenge = 挑战；爬这座山真是一次挑战。"
+    },
+    {
+      "term": "champion",
+      "focusWord": "champion",
+      "sentence": "The champion held up the gold cup.",
+      "chinese": "champion = 冠军；冠军举起了金杯。"
+    },
+    {
+      "term": "channel",
+      "focusWord": "channel",
+      "sentence": "Change the channel if the film is boring.",
+      "chinese": "channel = 频道；如果电影无聊就换个频道。"
+    },
+    {
+      "term": "charge",
+      "focusWord": "charge",
+      "sentence": "There is no charge for museum entry.",
+      "chinese": "charge = 费用；博物馆入场不收费。"
+    }
+  ]
+}
