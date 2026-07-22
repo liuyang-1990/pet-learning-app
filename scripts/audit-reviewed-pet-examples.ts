@@ -258,6 +258,15 @@ const manuallyConfirmedTerms = new Set([
   "entry", // museum admission / entry, not a dictionary entry
   "episode", // one episode of a show, not a plot incident
   "event", // a sports event / organised activity, not only a generic incident
+  // These seventh-batch objects examples use valid contextual noun senses.
+  "fare", // bus fare / ticket price, expressed as 车费 in context
+  "fault", // responsibility for a problem, not a mechanical fault
+  "favour", // do someone a favour / help, not preference
+  "fight", // a physical fight, naturally expressed as 打架
+  "figure", // a number in reported data, not a picture or body shape
+  "firm", // a company, not the adjective "firm"
+  "form", // a document to fill in, not shape or type
+  "gap", // a small physical opening, not an abstract difference
 ]);
 
 async function main() {

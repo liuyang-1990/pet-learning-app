@@ -6774,5 +6774,205 @@ export const reviewedWordExampleAudit = {
   "expert": {
     "status": "pass",
     "reasons": []
+  },
+  "explorer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "facilities": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fact": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fan": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fare": {
+    "status": "pass",
+    "reasons": []
+  },
+  "farming": {
+    "status": "pass",
+    "reasons": []
+  },
+  "farmland": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fault": {
+    "status": "pass",
+    "reasons": []
+  },
+  "favour": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fee": {
+    "status": "pass",
+    "reasons": []
+  },
+  "feeling": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fever": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fight": {
+    "status": "pass",
+    "reasons": []
+  },
+  "figure": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fire": {
+    "status": "pass",
+    "reasons": []
+  },
+  "firefighter": {
+    "status": "pass",
+    "reasons": []
+  },
+  "firm": {
+    "status": "pass",
+    "reasons": []
+  },
+  "firstname": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fishing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "flag": {
+    "status": "pass",
+    "reasons": []
+  },
+  "flavour": {
+    "status": "pass",
+    "reasons": []
+  },
+  "flood": {
+    "status": "pass",
+    "reasons": []
+  },
+  "flour": {
+    "status": "pass",
+    "reasons": []
+  },
+  "flu": {
+    "status": "pass",
+    "reasons": []
+  },
+  "flute": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fog": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fool": {
+    "status": "pass",
+    "reasons": []
+  },
+  "footballer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "forecast": {
+    "status": "pass",
+    "reasons": []
+  },
+  "foreigner": {
+    "status": "pass",
+    "reasons": []
+  },
+  "form": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fortnight": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fountain": {
+    "status": "pass",
+    "reasons": []
+  },
+  "frame": {
+    "status": "pass",
+    "reasons": []
+  },
+  "freezer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "frog": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fryingpan": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fuel": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fullstop": {
+    "status": "pass",
+    "reasons": []
+  },
+  "fur": {
+    "status": "pass",
+    "reasons": []
+  },
+  "gale": {
+    "status": "pass",
+    "reasons": []
+  },
+  "gap": {
+    "status": "pass",
+    "reasons": []
+  },
+  "garlic": {
+    "status": "pass",
+    "reasons": []
+  },
+  "gas": {
+    "status": "pass",
+    "reasons": []
+  },
+  "gate": {
+    "status": "pass",
+    "reasons": []
+  },
+  "geography": {
+    "status": "pass",
+    "reasons": []
+  },
+  "gift": {
+    "status": "pass",
+    "reasons": []
+  },
+  "girlfriend": {
+    "status": "pass",
+    "reasons": []
+  },
+  "glasses": {
+    "status": "pass",
+    "reasons": []
+  },
+  "globalwarming": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;
