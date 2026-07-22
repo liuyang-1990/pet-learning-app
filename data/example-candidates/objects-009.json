@@ -1,0 +1,306 @@
+{
+  "batchId": "objects-009",
+  "status": "promoted",
+  "entries": [
+    {
+      "term": "honeymoon",
+      "focusWord": "honeymoon",
+      "sentence": "They spent their honeymoon in Greece.",
+      "chinese": "honeymoon = 蜜月；他们在希腊度蜜月。"
+    },
+    {
+      "term": "hoodie",
+      "focusWord": "hoodie",
+      "sentence": "He wore a blue hoodie to school.",
+      "chinese": "hoodie = 连帽衫；他穿着一件蓝色连帽衫去学校。"
+    },
+    {
+      "term": "housewife",
+      "focusWord": "housewife",
+      "sentence": "The housewife planned meals for the week.",
+      "chinese": "housewife = 家庭主妇；这位家庭主妇计划了一周的饭菜。"
+    },
+    {
+      "term": "hug",
+      "focusWord": "hug",
+      "sentence": "She gave her brother a big hug.",
+      "chinese": "hug = 拥抱；她给了弟弟一个大大的拥抱。"
+    },
+    {
+      "term": "humour / humor",
+      "focusWord": "humor",
+      "sentence": "The film has a lot of gentle humor.",
+      "chinese": "humor = 幽默；这部电影有许多温和的幽默。"
+    },
+    {
+      "term": "hunger",
+      "focusWord": "hunger",
+      "sentence": "Hunger made the children quiet.",
+      "chinese": "hunger = 饥饿；饥饿让孩子们安静下来。"
+    },
+    {
+      "term": "hurry",
+      "focusWord": "hurry",
+      "sentence": "We were in a hurry after breakfast.",
+      "chinese": "hurry = 匆忙；早饭后我们很匆忙。"
+    },
+    {
+      "term": "hut",
+      "focusWord": "hut",
+      "sentence": "The old hut stood near the forest.",
+      "chinese": "hut = 小屋；旧小屋在森林附近。"
+    },
+    {
+      "term": "ice",
+      "focusWord": "ice",
+      "sentence": "There was ice on the road this morning.",
+      "chinese": "ice = 冰；今天早上路上有冰。"
+    },
+    {
+      "term": "ice skates",
+      "focusWord": "ice skates",
+      "sentence": "She put on her ice skates at the rink.",
+      "chinese": "ice skates = 冰鞋；她在溜冰场穿上冰鞋。"
+    },
+    {
+      "term": "ID",
+      "focusWord": "ID",
+      "sentence": "Show your ID at the entrance.",
+      "chinese": "ID = 身份证件；在入口处出示你的身份证件。"
+    },
+    {
+      "term": "idea",
+      "focusWord": "idea",
+      "sentence": "That is a good idea for the project.",
+      "chinese": "idea = 想法；这是这个项目的一个好想法。"
+    },
+    {
+      "term": "inch",
+      "focusWord": "inch",
+      "sentence": "The shelf is one inch too wide.",
+      "chinese": "inch = 英寸；这个架子宽了一英寸。"
+    },
+    {
+      "term": "ingredient",
+      "focusWord": "ingredient",
+      "sentence": "Sugar is the main ingredient in this cake.",
+      "chinese": "ingredient = 原料；糖是这个蛋糕的主要原料。"
+    },
+    {
+      "term": "initial",
+      "focusWord": "initial",
+      "sentence": "Write your initial at the top of the page.",
+      "chinese": "initial = 首字母；把你的首字母写在页面顶部。"
+    },
+    {
+      "term": "ink",
+      "focusWord": "ink",
+      "sentence": "The printer needs black ink.",
+      "chinese": "ink = 墨水；打印机需要黑色墨水。"
+    },
+    {
+      "term": "inquiry",
+      "focusWord": "inquiry",
+      "sentence": "The office answered my inquiry by email.",
+      "chinese": "inquiry = 询问；办公室通过电子邮件回答了我的询问。"
+    },
+    {
+      "term": "instructor",
+      "focusWord": "instructor",
+      "sentence": "The ski instructor helped the beginners.",
+      "chinese": "instructor = 教练；滑雪教练帮助了初学者。"
+    },
+    {
+      "term": "interest",
+      "focusWord": "interest",
+      "sentence": "She showed interest in photography.",
+      "chinese": "interest = 兴趣；她表现出对摄影的兴趣。"
+    },
+    {
+      "term": "interval",
+      "focusWord": "interval",
+      "sentence": "We bought drinks during the interval.",
+      "chinese": "interval = 中场休息；我们在中场休息时买了饮料。"
+    },
+    {
+      "term": "interviewer",
+      "focusWord": "interviewer",
+      "sentence": "The interviewer asked about my experience.",
+      "chinese": "interviewer = 面试官；面试官询问了我的经验。"
+    },
+    {
+      "term": "inventor",
+      "focusWord": "inventor",
+      "sentence": "The inventor showed us a new machine.",
+      "chinese": "inventor = 发明家；发明家向我们展示了一台新机器。"
+    },
+    {
+      "term": "iron",
+      "focusWord": "iron",
+      "sentence": "The iron was too hot for the shirt.",
+      "chinese": "iron = 熨斗；熨斗对这件衬衫来说太烫了。"
+    },
+    {
+      "term": "ironing",
+      "focusWord": "ironing",
+      "sentence": "I finished the ironing before dinner.",
+      "chinese": "ironing = 熨衣服；我晚饭前熨完了衣服。"
+    },
+    {
+      "term": "issue",
+      "focusWord": "issue",
+      "sentence": "The latest issue of the magazine is out.",
+      "chinese": "issue = 期号；这本杂志的最新一期出版了。"
+    },
+    {
+      "term": "item",
+      "focusWord": "item",
+      "sentence": "Choose one item from the menu.",
+      "chinese": "item = 项目；从菜单中选择一项。"
+    },
+    {
+      "term": "jail",
+      "focusWord": "jail",
+      "sentence": "The thief spent a night in jail.",
+      "chinese": "jail = 监狱；小偷在监狱里待了一晚。"
+    },
+    {
+      "term": "jar",
+      "focusWord": "jar",
+      "sentence": "Open the jar of strawberry jam.",
+      "chinese": "jar = 罐子；打开那罐草莓酱。"
+    },
+    {
+      "term": "jazz",
+      "focusWord": "jazz",
+      "sentence": "Jazz was playing in the cafe.",
+      "chinese": "jazz = 爵士乐；咖啡馆里播放着爵士乐。"
+    },
+    {
+      "term": "jet",
+      "focusWord": "jet",
+      "sentence": "A jet flew high above the clouds.",
+      "chinese": "jet = 喷气式飞机；一架喷气式飞机在云层上方高飞。"
+    },
+    {
+      "term": "jewellery",
+      "focusWord": "jewellery",
+      "sentence": "She keeps her jewellery in a small box.",
+      "chinese": "jewellery = 珠宝；她把珠宝放在一个小盒子里。"
+    },
+    {
+      "term": "jogging",
+      "focusWord": "jogging",
+      "sentence": "Jogging before breakfast wakes me up.",
+      "chinese": "jogging = 慢跑；早饭前慢跑让我清醒。"
+    },
+    {
+      "term": "joke",
+      "focusWord": "joke",
+      "sentence": "His joke made everyone laugh.",
+      "chinese": "joke = 笑话；他的笑话让大家都笑了。"
+    },
+    {
+      "term": "judge",
+      "focusWord": "judge",
+      "sentence": "The judge listened to both teams.",
+      "chinese": "judge = 裁判；裁判听取了两队的意见。"
+    },
+    {
+      "term": "jug",
+      "focusWord": "jug",
+      "sentence": "Pour the milk into the jug.",
+      "chinese": "jug = 壶；把牛奶倒进壶里。"
+    },
+    {
+      "term": "jump",
+      "focusWord": "jump",
+      "sentence": "The horse made a high jump.",
+      "chinese": "jump = 跳跃；那匹马做了一个高跳。"
+    },
+    {
+      "term": "jumper",
+      "focusWord": "jumper",
+      "sentence": "She wore a warm jumper in class.",
+      "chinese": "jumper = 套头毛衣；她在课堂上穿了一件暖和的套头毛衣。"
+    },
+    {
+      "term": "jungle",
+      "focusWord": "jungle",
+      "sentence": "The jungle was full of strange sounds.",
+      "chinese": "jungle = 丛林；丛林里充满了奇怪的声音。"
+    },
+    {
+      "term": "kangaroo",
+      "focusWord": "kangaroo",
+      "sentence": "A kangaroo crossed the road slowly.",
+      "chinese": "kangaroo = 袋鼠；一只袋鼠慢慢穿过马路。"
+    },
+    {
+      "term": "keeper",
+      "focusWord": "keeper",
+      "sentence": "The zoo keeper fed the lions.",
+      "chinese": "keeper = 饲养员；动物园饲养员喂了狮子。"
+    },
+    {
+      "term": "kick",
+      "focusWord": "kick",
+      "sentence": "His kick sent the ball into the goal.",
+      "chinese": "kick = 踢；他的一脚把球送进了球门。"
+    },
+    {
+      "term": "kid",
+      "focusWord": "kid",
+      "sentence": "The kid carried a red backpack.",
+      "chinese": "kid = 孩子；那个孩子背着一个红色背包。"
+    },
+    {
+      "term": "kilogramme",
+      "focusWord": "kilogramme",
+      "sentence": "This bag weighs one kilogramme.",
+      "chinese": "kilogramme = 千克；这个袋子重一千克。"
+    },
+    {
+      "term": "kiss",
+      "focusWord": "kiss",
+      "sentence": "She gave the baby a kiss.",
+      "chinese": "kiss = 吻；她亲了宝宝一下。"
+    },
+    {
+      "term": "kit",
+      "focusWord": "kit",
+      "sentence": "The first-aid kit is in the kitchen.",
+      "chinese": "kit = 工具包；急救包在厨房里。"
+    },
+    {
+      "term": "kite",
+      "focusWord": "kite",
+      "sentence": "The kite flew over the beach.",
+      "chinese": "kite = 风筝；风筝在海滩上空飞翔。"
+    },
+    {
+      "term": "kitten",
+      "focusWord": "kitten",
+      "sentence": "The kitten slept in a basket.",
+      "chinese": "kitten = 小猫；小猫睡在篮子里。"
+    },
+    {
+      "term": "knowledge",
+      "focusWord": "knowledge",
+      "sentence": "Her knowledge of history is excellent.",
+      "chinese": "knowledge = 知识；她的历史知识非常出色。"
+    },
+    {
+      "term": "label",
+      "focusWord": "label",
+      "sentence": "Read the label before you wash the shirt.",
+      "chinese": "label = 标签；洗衬衫前阅读标签。"
+    },
+    {
+      "term": "laboratory",
+      "focusWord": "laboratory",
+      "sentence": "The students worked in the science laboratory.",
+      "chinese": "laboratory = 实验室；学生们在科学实验室工作。"
+    }
+  ]
+}
