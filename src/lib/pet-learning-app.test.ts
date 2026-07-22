@@ -348,6 +348,17 @@ const objectsSecondBatch = [
   "brain", "brake", "branch", "breath", "breeze", "bride", "bridge", "broccoli",
 ] as const;
 
+const objectsThirdBatch = [
+  "brochure", "brush", "bucket", "bug", "bulb", "bull", "bunch", "bush",
+  "butcher", "butter", "butterfly", "button", "buyer", "cab", "cabbage",
+  "cabin", "cabinet", "cable", "café / cafe", "cafeteria", "calf", "camel",
+  "camp", "campsite", "canal", "candidate", "candle", "candy", "canteen",
+  "captain", "care", "carrot", "cartoon", "cashpoint", "castle", "cathedral",
+  "cattle", "cave", "ceiling", "centimetre", "central heating", "century",
+  "cereal", "ceremony", "certificate", "chain", "challenge", "champion",
+  "channel", "charge",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -2862,6 +2873,71 @@ describe("PET Learning App", () => {
       booking: ["I made a booking for two rooms.", "booking = 预订；我预订了两个房间。"],
       boss: ["My boss approved the plan.", "boss = 老板；我的老板批准了这个计划。"],
       brake: ["The bike brake needs fixing.", "brake = 刹车；这辆自行车的刹车需要修理。"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the third objects reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const objectsWords = words.filter((word) => word.theme === "objects");
+    const selectedExamples = objectsThirdBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(objectsThirdBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1544);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(objectsWords).toHaveLength(972);
+    expect(
+      objectsWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(204);
+  });
+
+  it("keeps the third objects ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/objects-003.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("objects-003");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(objectsThirdBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the third objects batch", () => {
+    const expectedExamples = {
+      brochure: ["Pick up a brochure at the tourist office.", "brochure = 小册子；在旅游办公室拿一本小册子。"],
+      bug: ["The computer game has a small bug.", "bug = 程序错误；这个电脑游戏有一个小程序错误。"],
+      "café / cafe": ["Let's meet at the cafe after school.", "cafe = 咖啡馆；我们放学后在咖啡馆见面吧。"],
+      calf: ["The young calf stayed close to its mother.", "calf = 小牛；小牛紧挨着它的妈妈。"],
+      care: ["The old house needs a lot of care.", "care = 照料；这座老房子需要大量照料。"],
+      challenge: ["Climbing the hill was a real challenge.", "challenge = 挑战；爬这座山真是一次挑战。"],
+      channel: ["Change the channel if the film is boring.", "channel = 频道；如果电影无聊就换个频道。"],
+      charge: ["There is no charge for museum entry.", "charge = 费用；博物馆入场不收费。"],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
