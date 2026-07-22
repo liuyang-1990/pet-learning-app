@@ -6974,5 +6974,205 @@ export const reviewedWordExampleAudit = {
   "globalwarming": {
     "status": "pass",
     "reasons": []
+  },
+  "goalkeeper": {
+    "status": "pass",
+    "reasons": []
+  },
+  "goat": {
+    "status": "pass",
+    "reasons": []
+  },
+  "grade": {
+    "status": "pass",
+    "reasons": []
+  },
+  "graduate": {
+    "status": "pass",
+    "reasons": []
+  },
+  "grandchild": {
+    "status": "pass",
+    "reasons": []
+  },
+  "grandad": {
+    "status": "pass",
+    "reasons": []
+  },
+  "granddaughter": {
+    "status": "pass",
+    "reasons": []
+  },
+  "grandma": {
+    "status": "pass",
+    "reasons": []
+  },
+  "grandpa": {
+    "status": "pass",
+    "reasons": []
+  },
+  "grandson": {
+    "status": "pass",
+    "reasons": []
+  },
+  "granny": {
+    "status": "pass",
+    "reasons": []
+  },
+  "grant": {
+    "status": "pass",
+    "reasons": []
+  },
+  "grape": {
+    "status": "pass",
+    "reasons": []
+  },
+  "graphics": {
+    "status": "pass",
+    "reasons": []
+  },
+  "greeting": {
+    "status": "pass",
+    "reasons": []
+  },
+  "grill": {
+    "status": "pass",
+    "reasons": []
+  },
+  "groom": {
+    "status": "pass",
+    "reasons": []
+  },
+  "guard": {
+    "status": "pass",
+    "reasons": []
+  },
+  "guest": {
+    "status": "pass",
+    "reasons": []
+  },
+  "guidebook": {
+    "status": "pass",
+    "reasons": []
+  },
+  "guitar": {
+    "status": "pass",
+    "reasons": []
+  },
+  "guitarist": {
+    "status": "pass",
+    "reasons": []
+  },
+  "gum": {
+    "status": "pass",
+    "reasons": []
+  },
+  "gun": {
+    "status": "pass",
+    "reasons": []
+  },
+  "guy": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hair": {
+    "status": "pass",
+    "reasons": []
+  },
+  "haircut": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hairdresser": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hairdryer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "handkerchief": {
+    "status": "pass",
+    "reasons": []
+  },
+  "handlebars": {
+    "status": "pass",
+    "reasons": []
+  },
+  "handwriting": {
+    "status": "pass",
+    "reasons": []
+  },
+  "harbour": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hardware": {
+    "status": "pass",
+    "reasons": []
+  },
+  "headache": {
+    "status": "pass",
+    "reasons": []
+  },
+  "headphones": {
+    "status": "pass",
+    "reasons": []
+  },
+  "heat": {
+    "status": "pass",
+    "reasons": []
+  },
+  "heater": {
+    "status": "pass",
+    "reasons": []
+  },
+  "heating": {
+    "status": "pass",
+    "reasons": []
+  },
+  "heel": {
+    "status": "pass",
+    "reasons": []
+  },
+  "helicopter": {
+    "status": "pass",
+    "reasons": []
+  },
+  "helmet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "herb": {
+    "status": "pass",
+    "reasons": []
+  },
+  "heroine": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hiphop": {
+    "status": "pass",
+    "reasons": []
+  },
+  "history": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hole": {
+    "status": "pass",
+    "reasons": []
+  },
+  "homepage": {
+    "status": "pass",
+    "reasons": []
+  },
+  "honey": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

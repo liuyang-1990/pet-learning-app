@@ -267,6 +267,12 @@ const manuallyConfirmedTerms = new Set([
   "firm", // a company, not the adjective "firm"
   "form", // a document to fill in, not shape or type
   "gap", // a small physical opening, not an abstract difference
+  // These eighth-batch objects examples use valid contextual senses or synonyms.
+  "grade", // a school mark / grade, not only a level
+  "grant", // a noun meaning funding, not the verb "grant"
+  "handwriting", // handwriting / written script, naturally expressed as 笔迹
+  "heater", // a room heater / heating device, naturally expressed as 暖气 in context
+  "hit", // a popular song, not the verb "hit"
 ]);
 
 async function main() {
