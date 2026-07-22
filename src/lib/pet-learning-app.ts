@@ -8408,7 +8408,7 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     "checkoutnoun": {
       focusWord: "checkout",
       sentence: "The checkout is near the front door.",
-      chinese: "checkout = 收银台；收银台在前门附近。",
+      chinese: "checkout = 结账台；结账台在前门附近。",
     },
     "cheek": {
       focusWord: "cheek",
@@ -8472,8 +8472,8 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     },
     "click": {
       focusWord: "click",
-      sentence: "I heard a click when the door closed.",
-      chinese: "click = 咔哒声；门关上时我听到一声咔哒响。",
+      sentence: "Click the blue button to open the page.",
+      chinese: "click = 点击；点击蓝色按钮打开页面。",
     },
     "cliff": {
       focusWord: "cliff",
@@ -8543,7 +8543,7 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     "comfort": {
       focusWord: "comfort",
       sentence: "The soft blanket gave her comfort.",
-      chinese: "comfort = 安慰；柔软的毯子给了她安慰。",
+      chinese: "comfort = 舒适感；柔软的毯子给了她舒适感。",
     },
     "comma": {
       focusWord: "comma",
@@ -8552,8 +8552,8 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     },
     "competitor": {
       focusWord: "competitor",
-      sentence: "Each competitor wore a number.",
-      chinese: "competitor = 参赛者；每位参赛者都戴着号码。",
+      sentence: "Our main competitor sells cheaper bikes.",
+      chinese: "competitor = 竞争对手；我们的主要竞争对手卖更便宜的自行车。",
     },
     "complaint": {
       focusWord: "complaint",

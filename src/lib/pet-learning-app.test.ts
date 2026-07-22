@@ -1933,7 +1933,7 @@ describe("PET Learning App", () => {
     expect(getWordExample({ term: "checkout", chineseGloss: "结帐台；检验" })).toMatchObject({
       focusWord: "checkout",
       sentence: "The checkout is near the front door.",
-      chinese: "checkout = 收银台；收银台在前门附近。",
+      chinese: "checkout = 结账台；结账台在前门附近。",
     });
     expect(getWordExample({ term: "workout", chineseGloss: "锻炼；训练" })).toMatchObject({
       focusWord: "workout",
@@ -3008,7 +3008,7 @@ describe("PET Learning App", () => {
     const expectedExamples = {
       check: ["The mechanic did a quick check of the brakes.", "check = 检查；机械师快速检查了刹车。"],
       "check-in": ["Online check-in opens twenty-four hours before the flight.", "check-in = 登机手续；网上登机手续在航班起飞前二十四小时开放。"],
-      checkout: ["The checkout is near the front door.", "checkout = 收银台；收银台在前门附近。"],
+      checkout: ["The checkout is near the front door.", "checkout = 结账台；结账台在前门附近。"],
       chemist: ["The chemist tested the water in the lab.", "chemist = 化学家；化学家在实验室检测了水。"],
       chip: ["She ate one potato chip before dinner.", "chip = 薯片；晚饭前她吃了一片薯片。"],
       contact: ["Add my email as a contact.", "contact = 联系人；把我的电子邮件添加为联系人。"],

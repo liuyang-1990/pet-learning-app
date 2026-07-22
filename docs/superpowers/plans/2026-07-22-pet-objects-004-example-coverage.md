@@ -45,7 +45,7 @@ The ledger uses `batchId: objects-004`, `status: promoted`, and these exact entr
 | chatroom | chatroom | The teacher opened a safe chatroom for the class. | chatroom = 聊天室；老师为班级开了一个安全的聊天室。 |
 | check | check | The mechanic did a quick check of the brakes. | check = 检查；机械师快速检查了刹车。 |
 | check-in | check-in | Online check-in opens twenty-four hours before the flight. | check-in = 登机手续；网上登机手续在航班起飞前二十四小时开放。 |
-| checkout | checkout | The checkout is near the front door. | checkout = 收银台；收银台在前门附近。 |
+| checkout | checkout | The checkout is near the front door. | checkout = 结账台；结账台在前门附近。 |
 | cheek | cheek | A tear ran down her cheek. | cheek = 脸颊；一滴眼泪顺着她的脸颊流下。 |
 | chemist | chemist | The chemist tested the water in the lab. | chemist = 化学家；化学家在实验室检测了水。 |
 | chemistry | chemistry | Chemistry is difficult but interesting. | chemistry = 化学；化学很难但很有趣。 |
@@ -58,7 +58,7 @@ The ledger uses `batchId: objects-004`, `status: promoted`, and these exact entr
 | chocolate | chocolate | I bought a bar of chocolate. | chocolate = 巧克力；我买了一块巧克力。 |
 | circus | circus | The circus came to town in spring. | circus = 马戏团；春天马戏团来到了镇上。 |
 | cleaner | cleaner | The cleaner washed the classroom floor. | cleaner = 清洁工；清洁工清洗了教室地板。 |
-| click | click | I heard a click when the door closed. | click = 咔哒声；门关上时我听到一声咔哒响。 |
+| click | click | Click the blue button to open the page. | click = 点击；点击蓝色按钮打开页面。 |
 | cliff | cliff | The path goes along the top of the cliff. | cliff = 悬崖；这条小路沿着悬崖顶延伸。 |
 | climbing | climbing | Climbing is safer with a teacher. | climbing = 攀岩；有老师指导时攀岩更安全。 |
 | clock | clock | The clock on the wall is slow. | clock = 时钟；墙上的时钟慢了。 |
@@ -72,9 +72,9 @@ The ledger uses `batchId: objects-004`, `status: promoted`, and these exact entr
 | colour | colour | Blue is my favourite colour. | colour = 颜色；蓝色是我最喜欢的颜色。 |
 | comb | comb | I keep a comb in my bag. | comb = 梳子；我包里放着一把梳子。 |
 | comedy | comedy | We watched a comedy on Friday night. | comedy = 喜剧；星期五晚上我们看了一部喜剧。 |
-| comfort | comfort | The soft blanket gave her comfort. | comfort = 安慰；柔软的毯子给了她安慰。 |
+| comfort | comfort | The soft blanket gave her comfort. | comfort = 舒适感；柔软的毯子给了她舒适感。 |
 | comma | comma | Put a comma after the first word. | comma = 逗号；在第一个词后面加一个逗号。 |
-| competitor | competitor | Each competitor wore a number. | competitor = 参赛者；每位参赛者都戴着号码。 |
+| competitor | competitor | Our main competitor sells cheaper bikes. | competitor = 竞争对手；我们的主要竞争对手卖更便宜的自行车。 |
 | complaint | complaint | The hotel received a complaint about the noise. | complaint = 投诉；酒店收到了一起关于噪音的投诉。 |
 | conclusion | conclusion | Write a short conclusion at the end. | conclusion = 结论；在结尾写一个简短结论。 |
 | consonant | consonant | The letter b is a consonant. | consonant = 辅音；字母 b 是一个辅音。 |

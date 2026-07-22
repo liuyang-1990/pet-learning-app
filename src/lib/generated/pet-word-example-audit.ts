@@ -6174,5 +6174,205 @@ export const reviewedWordExampleAudit = {
   "charge": {
     "status": "pass",
     "reasons": []
+  },
+  "chat": {
+    "status": "pass",
+    "reasons": []
+  },
+  "chatroom": {
+    "status": "pass",
+    "reasons": []
+  },
+  "check": {
+    "status": "pass",
+    "reasons": []
+  },
+  "checkinnoun": {
+    "status": "pass",
+    "reasons": []
+  },
+  "checkoutnoun": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cheek": {
+    "status": "pass",
+    "reasons": []
+  },
+  "chemist": {
+    "status": "pass",
+    "reasons": []
+  },
+  "chemistry": {
+    "status": "pass",
+    "reasons": []
+  },
+  "chess": {
+    "status": "pass",
+    "reasons": []
+  },
+  "chestofdrawers": {
+    "status": "pass",
+    "reasons": []
+  },
+  "childhood": {
+    "status": "pass",
+    "reasons": []
+  },
+  "chilli": {
+    "status": "pass",
+    "reasons": []
+  },
+  "chin": {
+    "status": "pass",
+    "reasons": []
+  },
+  "chip": {
+    "status": "pass",
+    "reasons": []
+  },
+  "chocolate": {
+    "status": "pass",
+    "reasons": []
+  },
+  "circus": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cleaner": {
+    "status": "pass",
+    "reasons": []
+  },
+  "click": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cliff": {
+    "status": "pass",
+    "reasons": []
+  },
+  "climbing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "clock": {
+    "status": "pass",
+    "reasons": []
+  },
+  "clown": {
+    "status": "pass",
+    "reasons": []
+  },
+  "coast": {
+    "status": "pass",
+    "reasons": []
+  },
+  "coconut": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cod": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cola": {
+    "status": "pass",
+    "reasons": []
+  },
+  "collar": {
+    "status": "pass",
+    "reasons": []
+  },
+  "colleague": {
+    "status": "pass",
+    "reasons": []
+  },
+  "colour": {
+    "status": "pass",
+    "reasons": []
+  },
+  "comb": {
+    "status": "pass",
+    "reasons": []
+  },
+  "comedy": {
+    "status": "pass",
+    "reasons": []
+  },
+  "comfort": {
+    "status": "pass",
+    "reasons": []
+  },
+  "comma": {
+    "status": "pass",
+    "reasons": []
+  },
+  "competitor": {
+    "status": "pass",
+    "reasons": []
+  },
+  "complaint": {
+    "status": "pass",
+    "reasons": []
+  },
+  "conclusion": {
+    "status": "pass",
+    "reasons": []
+  },
+  "consonant": {
+    "status": "pass",
+    "reasons": []
+  },
+  "contact": {
+    "status": "pass",
+    "reasons": []
+  },
+  "contents": {
+    "status": "pass",
+    "reasons": []
+  },
+  "contest": {
+    "status": "pass",
+    "reasons": []
+  },
+  "continent": {
+    "status": "pass",
+    "reasons": []
+  },
+  "contract": {
+    "status": "pass",
+    "reasons": []
+  },
+  "control": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cookery": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cookie": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cooking": {
+    "status": "pass",
+    "reasons": []
+  },
+  "copy": {
+    "status": "pass",
+    "reasons": []
+  },
+  "corn": {
+    "status": "pass",
+    "reasons": []
+  },
+  "costume": {
+    "status": "pass",
+    "reasons": []
+  },
+  "cough": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;
