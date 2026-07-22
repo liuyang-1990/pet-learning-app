@@ -6574,5 +6574,205 @@ export const reviewedWordExampleAudit = {
   "disc": {
     "status": "pass",
     "reasons": []
+  },
+  "discjockey": {
+    "status": "pass",
+    "reasons": []
+  },
+  "disco": {
+    "status": "pass",
+    "reasons": []
+  },
+  "discovery": {
+    "status": "pass",
+    "reasons": []
+  },
+  "discussion": {
+    "status": "pass",
+    "reasons": []
+  },
+  "disease": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dishwasher": {
+    "status": "pass",
+    "reasons": []
+  },
+  "disk": {
+    "status": "pass",
+    "reasons": []
+  },
+  "district": {
+    "status": "pass",
+    "reasons": []
+  },
+  "diver": {
+    "status": "pass",
+    "reasons": []
+  },
+  "diving": {
+    "status": "pass",
+    "reasons": []
+  },
+  "doll": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dolphin": {
+    "status": "pass",
+    "reasons": []
+  },
+  "donkey": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dot": {
+    "status": "pass",
+    "reasons": []
+  },
+  "doubt": {
+    "status": "pass",
+    "reasons": []
+  },
+  "drawer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dream": {
+    "status": "pass",
+    "reasons": []
+  },
+  "drive": {
+    "status": "pass",
+    "reasons": []
+  },
+  "driver": {
+    "status": "pass",
+    "reasons": []
+  },
+  "license": {
+    "status": "pass",
+    "reasons": []
+  },
+  "drugstore": {
+    "status": "pass",
+    "reasons": []
+  },
+  "drum": {
+    "status": "pass",
+    "reasons": []
+  },
+  "dustbin": {
+    "status": "pass",
+    "reasons": []
+  },
+  "duty": {
+    "status": "pass",
+    "reasons": []
+  },
+  "duvet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "earache": {
+    "status": "pass",
+    "reasons": []
+  },
+  "earring": {
+    "status": "pass",
+    "reasons": []
+  },
+  "economics": {
+    "status": "pass",
+    "reasons": []
+  },
+  "edge": {
+    "status": "pass",
+    "reasons": []
+  },
+  "effect": {
+    "status": "pass",
+    "reasons": []
+  },
+  "effort": {
+    "status": "pass",
+    "reasons": []
+  },
+  "elbow": {
+    "status": "pass",
+    "reasons": []
+  },
+  "elevator": {
+    "status": "pass",
+    "reasons": []
+  },
+  "embassy": {
+    "status": "pass",
+    "reasons": []
+  },
+  "employee": {
+    "status": "pass",
+    "reasons": []
+  },
+  "employer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ending": {
+    "status": "pass",
+    "reasons": []
+  },
+  "enemy": {
+    "status": "pass",
+    "reasons": []
+  },
+  "energy": {
+    "status": "pass",
+    "reasons": []
+  },
+  "engine": {
+    "status": "pass",
+    "reasons": []
+  },
+  "engineering": {
+    "status": "pass",
+    "reasons": []
+  },
+  "entry": {
+    "status": "pass",
+    "reasons": []
+  },
+  "envelope": {
+    "status": "pass",
+    "reasons": []
+  },
+  "episode": {
+    "status": "pass",
+    "reasons": []
+  },
+  "eraser": {
+    "status": "pass",
+    "reasons": []
+  },
+  "event": {
+    "status": "pass",
+    "reasons": []
+  },
+  "exchange": {
+    "status": "pass",
+    "reasons": []
+  },
+  "exchangerate": {
+    "status": "pass",
+    "reasons": []
+  },
+  "excuse": {
+    "status": "pass",
+    "reasons": []
+  },
+  "expert": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

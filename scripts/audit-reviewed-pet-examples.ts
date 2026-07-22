@@ -252,6 +252,12 @@ const manuallyConfirmedTerms = new Set([
   "crossing", // a pedestrian crossing, not the gerund "crossing"
   "cruise", // a holiday by ship, not the verb "cruise"
   "cut", // a small wound, not the verb "cut"
+  // These sixth-batch objects examples use valid synonyms or contextual noun senses.
+  "doll", // doll / toy figure, expressed naturally as 玩偶 rather than Google's 娃娃
+  "license", // a driver's license; 执照 and 许可证 are valid contextual synonyms
+  "entry", // museum admission / entry, not a dictionary entry
+  "episode", // one episode of a show, not a plot incident
+  "event", // a sports event / organised activity, not only a generic incident
 ]);
 
 async function main() {
