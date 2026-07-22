@@ -7174,5 +7174,205 @@ export const reviewedWordExampleAudit = {
   "honey": {
     "status": "pass",
     "reasons": []
+  },
+  "honeymoon": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hoodie": {
+    "status": "pass",
+    "reasons": []
+  },
+  "housewife": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hug": {
+    "status": "pass",
+    "reasons": []
+  },
+  "humor": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hunger": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hurry": {
+    "status": "pass",
+    "reasons": []
+  },
+  "hut": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ice": {
+    "status": "pass",
+    "reasons": []
+  },
+  "iceskates": {
+    "status": "pass",
+    "reasons": []
+  },
+  "id": {
+    "status": "pass",
+    "reasons": []
+  },
+  "idea": {
+    "status": "pass",
+    "reasons": []
+  },
+  "inch": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ingredient": {
+    "status": "pass",
+    "reasons": []
+  },
+  "initial": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ink": {
+    "status": "pass",
+    "reasons": []
+  },
+  "inquiry": {
+    "status": "pass",
+    "reasons": []
+  },
+  "instructor": {
+    "status": "pass",
+    "reasons": []
+  },
+  "interest": {
+    "status": "pass",
+    "reasons": []
+  },
+  "interval": {
+    "status": "pass",
+    "reasons": []
+  },
+  "interviewer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "inventor": {
+    "status": "pass",
+    "reasons": []
+  },
+  "iron": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ironing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "issue": {
+    "status": "pass",
+    "reasons": []
+  },
+  "item": {
+    "status": "pass",
+    "reasons": []
+  },
+  "jail": {
+    "status": "pass",
+    "reasons": []
+  },
+  "jar": {
+    "status": "pass",
+    "reasons": []
+  },
+  "jazz": {
+    "status": "pass",
+    "reasons": []
+  },
+  "jet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "jewellery": {
+    "status": "pass",
+    "reasons": []
+  },
+  "jogging": {
+    "status": "pass",
+    "reasons": []
+  },
+  "joke": {
+    "status": "pass",
+    "reasons": []
+  },
+  "judge": {
+    "status": "pass",
+    "reasons": []
+  },
+  "jug": {
+    "status": "pass",
+    "reasons": []
+  },
+  "jump": {
+    "status": "pass",
+    "reasons": []
+  },
+  "jumper": {
+    "status": "pass",
+    "reasons": []
+  },
+  "jungle": {
+    "status": "pass",
+    "reasons": []
+  },
+  "kangaroo": {
+    "status": "pass",
+    "reasons": []
+  },
+  "keeper": {
+    "status": "pass",
+    "reasons": []
+  },
+  "kick": {
+    "status": "pass",
+    "reasons": []
+  },
+  "kid": {
+    "status": "pass",
+    "reasons": []
+  },
+  "kilogramme": {
+    "status": "pass",
+    "reasons": []
+  },
+  "kiss": {
+    "status": "pass",
+    "reasons": []
+  },
+  "kit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "kite": {
+    "status": "pass",
+    "reasons": []
+  },
+  "kitten": {
+    "status": "pass",
+    "reasons": []
+  },
+  "knowledge": {
+    "status": "pass",
+    "reasons": []
+  },
+  "label": {
+    "status": "pass",
+    "reasons": []
+  },
+  "laboratory": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

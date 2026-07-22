@@ -273,6 +273,17 @@ const manuallyConfirmedTerms = new Set([
   "handwriting", // handwriting / written script, naturally expressed as 笔迹
   "heater", // a room heater / heating device, naturally expressed as 暖气 in context
   "hit", // a popular song, not the verb "hit"
+  // These ninth-batch objects examples use valid contextual senses or synonyms.
+  "hurry", // the noun phrase "in a hurry", not the imperative "hurry!"
+  "ingredient", // ingredient / cake material, expressed as 原料 in context
+  "initial", // a first letter, not the adjective "initial"
+  "instructor", // sports instructor / coach, expressed naturally as 教练
+  "interval", // a break in a performance or match, not just a time interval
+  "iron", // the appliance for clothes, not the metal
+  "issue", // an issue of a magazine, not a problem
+  "judge", // a competition judge / referee, not a court judge
+  "kilogramme", // kilogramme / kilogram / 千克 / 公斤
+  "kit", // first-aid kit / 急救包, not a generic set
 ]);
 
 async function main() {
