@@ -9385,6 +9385,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "Global warming is changing the climate.",
       chinese: "global warming = 全球变暖；全球变暖正在改变气候。",
     },
+    "goalkeeper": {
+      focusWord: "goalkeeper",
+      sentence: "The goalkeeper caught the ball easily.",
+      chinese: "goalkeeper = 守门员；守门员轻松接住了球。",
+    },
+    "goat": {
+      focusWord: "goat",
+      sentence: "A goat stood on the hill.",
+      chinese: "goat = 山羊；一只山羊站在山坡上。",
+    },
+    "grade": {
+      focusWord: "grade",
+      sentence: "She got a high grade in science.",
+      chinese: "grade = 成绩；她科学课得了高分。",
+    },
+    "graduate": {
+      focusWord: "graduate",
+      sentence: "The graduate found a job in a bank.",
+      chinese: "graduate = 毕业生；这名毕业生在银行找到了一份工作。",
+    },
+    "grandchild": {
+      focusWord: "grandchild",
+      sentence: "Their first grandchild was born in May.",
+      chinese: "grandchild = 孙辈；他们的第一个孙辈在五月出生。",
+    },
+    "grandad": {
+      focusWord: "grandad",
+      sentence: "My grandad grows tomatoes in his garden.",
+      chinese: "grandad = 爷爷；我爷爷在花园里种西红柿。",
+    },
+    "granddaughter": {
+      focusWord: "granddaughter",
+      sentence: "Her granddaughter plays the violin.",
+      chinese: "granddaughter = 孙女；她的孙女拉小提琴。",
+    },
+    "grandma": {
+      focusWord: "grandma",
+      sentence: "Grandma made soup for lunch.",
+      chinese: "grandma = 奶奶；奶奶午饭做了汤。",
+    },
+    "grandpa": {
+      focusWord: "grandpa",
+      sentence: "Grandpa told us a funny story.",
+      chinese: "grandpa = 爷爷；爷爷给我们讲了一个有趣的故事。",
+    },
+    "grandson": {
+      focusWord: "grandson",
+      sentence: "Their grandson studies in London.",
+      chinese: "grandson = 孙子；他们的孙子在伦敦学习。",
+    },
+    "granny": {
+      focusWord: "granny",
+      sentence: "Granny sent me a birthday card.",
+      chinese: "granny = 奶奶；奶奶寄给我一张生日卡。",
+    },
+    "grant": {
+      focusWord: "grant",
+      sentence: "The school received a grant for new computers.",
+      chinese: "grant = 补助金；学校收到了一笔购买新电脑的补助金。",
+    },
+    "grape": {
+      focusWord: "grape",
+      sentence: "She ate one green grape.",
+      chinese: "grape = 葡萄；她吃了一颗绿色葡萄。",
+    },
+    "graphics": {
+      focusWord: "graphics",
+      sentence: "The game has bright graphics.",
+      chinese: "graphics = 图形；这个游戏有明亮的图形。",
+    },
+    "greeting": {
+      focusWord: "greeting",
+      sentence: "He gave us a warm greeting at the door.",
+      chinese: "greeting = 问候；他在门口热情地问候了我们。",
+    },
+    "grill": {
+      focusWord: "grill",
+      sentence: "Cook the fish under the grill for ten minutes.",
+      chinese: "grill = 烤架；把鱼放在烤架下烤十分钟。",
+    },
+    "groom": {
+      focusWord: "groom",
+      sentence: "The groom arrived before the bride.",
+      chinese: "groom = 新郎；新郎比新娘先到。",
+    },
+    "guard": {
+      focusWord: "guard",
+      sentence: "A guard checked our tickets at the gate.",
+      chinese: "guard = 警卫；一名警卫在门口检查了我们的票。",
+    },
+    "guest": {
+      focusWord: "guest",
+      sentence: "Each guest received a small gift.",
+      chinese: "guest = 客人；每位客人都收到了一份小礼物。",
+    },
+    "guidebook": {
+      focusWord: "guidebook",
+      sentence: "The guidebook lists cheap hotels.",
+      chinese: "guidebook = 旅行指南；这本旅行指南列出了便宜的酒店。",
+    },
+    "guitar": {
+      focusWord: "guitar",
+      sentence: "He brought his guitar to the picnic.",
+      chinese: "guitar = 吉他；他把吉他带到了野餐。",
+    },
+    "guitarist": {
+      focusWord: "guitarist",
+      sentence: "The guitarist played a slow song.",
+      chinese: "guitarist = 吉他手；吉他手弹了一首慢歌。",
+    },
+    "gum": {
+      focusWord: "gum",
+      sentence: "She bought a packet of chewing gum.",
+      chinese: "gum = 口香糖；她买了一包口香糖。",
+    },
+    "gun": {
+      focusWord: "gun",
+      sentence: "The museum displayed an old gun.",
+      chinese: "gun = 枪；博物馆展出了一把旧枪。",
+    },
+    "guy": {
+      focusWord: "guy",
+      sentence: "The guy at the desk was very helpful.",
+      chinese: "guy = 家伙；桌边那个家伙很乐于助人。",
+    },
+    "hair": {
+      focusWord: "hair",
+      sentence: "Her hair is short and curly.",
+      chinese: "hair = 头发；她的头发短而卷。",
+    },
+    "haircut": {
+      focusWord: "haircut",
+      sentence: "He got a haircut before the interview.",
+      chinese: "haircut = 理发；他面试前理了发。",
+    },
+    "hairdresser": {
+      focusWord: "hairdresser",
+      sentence: "The hairdresser cut my hair carefully.",
+      chinese: "hairdresser = 理发师；理发师仔细地给我剪头发。",
+    },
+    "hairdryer": {
+      focusWord: "hairdryer",
+      sentence: "Use the hairdryer after your shower.",
+      chinese: "hairdryer = 吹风机；洗澡后用吹风机。",
+    },
+    "handkerchief": {
+      focusWord: "handkerchief",
+      sentence: "He kept a clean handkerchief in his pocket.",
+      chinese: "handkerchief = 手帕；他口袋里放着一块干净的手帕。",
+    },
+    "handlebars": {
+      focusWord: "handlebars",
+      sentence: "Hold the handlebars when you ride.",
+      chinese: "handlebars = 车把；骑车时握住车把。",
+    },
+    "handwriting": {
+      focusWord: "handwriting",
+      sentence: "Your handwriting is easy to read.",
+      chinese: "handwriting = 笔迹；你的笔迹很容易读。",
+    },
+    "harbour": {
+      focusWord: "harbour",
+      sentence: "Fishing boats filled the harbour.",
+      chinese: "harbour = 港口；渔船停满了港口。",
+    },
+    "hardware": {
+      focusWord: "hardware",
+      sentence: "The shop sells computer hardware.",
+      chinese: "hardware = 硬件；这家商店出售电脑硬件。",
+    },
+    "headache": {
+      focusWord: "headache",
+      sentence: "A bad headache made her lie down.",
+      chinese: "headache = 头痛；严重头痛让她躺了下来。",
+    },
+    "headphones": {
+      focusWord: "headphones",
+      sentence: "Put on headphones before you listen.",
+      chinese: "headphones = 耳机；听之前戴上耳机。",
+    },
+    "heat": {
+      focusWord: "heat",
+      sentence: "The heat from the fire warmed the room.",
+      chinese: "heat = 热量；火的热量让房间暖和起来。",
+    },
+    "heater": {
+      focusWord: "heater",
+      sentence: "The heater stopped working last night.",
+      chinese: "heater = 暖气；暖气昨晚停止工作了。",
+    },
+    "heating": {
+      focusWord: "heating",
+      sentence: "The heating comes on at six.",
+      chinese: "heating = 供暖；供暖六点开始。",
+    },
+    "heel": {
+      focusWord: "heel",
+      sentence: "The heel of my shoe is broken.",
+      chinese: "heel = 鞋跟；我的鞋跟坏了。",
+    },
+    "helicopter": {
+      focusWord: "helicopter",
+      sentence: "A helicopter landed near the hospital.",
+      chinese: "helicopter = 直升机；一架直升机降落在医院附近。",
+    },
+    "helmet": {
+      focusWord: "helmet",
+      sentence: "Wear a helmet when you cycle.",
+      chinese: "helmet = 头盔；骑车时戴头盔。",
+    },
+    "herb": {
+      focusWord: "herb",
+      sentence: "This herb smells like lemon.",
+      chinese: "herb = 香草；这种香草闻起来像柠檬。",
+    },
+    "heroine": {
+      focusWord: "heroine",
+      sentence: "The heroine saves the village in the story.",
+      chinese: "heroine = 女主角；故事中的女主角拯救了村庄。",
+    },
+    "hiphop": {
+      focusWord: "hip hop",
+      sentence: "Hip hop is popular with many teenagers.",
+      chinese: "hip hop = 嘻哈音乐；嘻哈音乐很受许多青少年欢迎。",
+    },
+    "history": {
+      focusWord: "history",
+      sentence: "History was his favourite subject.",
+      chinese: "history = 历史；历史是他最喜欢的科目。",
+    },
+    "hit": {
+      focusWord: "hit",
+      sentence: "The song became a hit last summer.",
+      chinese: "hit = 热门作品；这首歌去年夏天成了热门作品。",
+    },
+    "hole": {
+      focusWord: "hole",
+      sentence: "There is a hole in my sock.",
+      chinese: "hole = 洞；我的袜子上有一个洞。",
+    },
+    "homepage": {
+      focusWord: "homepage",
+      sentence: "The homepage has a search box.",
+      chinese: "homepage = 主页；主页上有一个搜索框。",
+    },
+    "honey": {
+      focusWord: "honey",
+      sentence: "Add a spoonful of honey to the tea.",
+      chinese: "honey = 蜂蜜；往茶里加一勺蜂蜜。",
+    },
   };
 }
 
