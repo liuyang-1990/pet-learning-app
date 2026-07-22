@@ -5538,5 +5538,41 @@ export const reviewedWordExampleAudit = {
   "would": {
     "status": "pass",
     "reasons": []
+  },
+  "wow": {
+    "status": "pass",
+    "reasons": []
+  },
+  "yeah": {
+    "status": "pass",
+    "reasons": []
+  },
+  "yes": {
+    "status": "pass",
+    "reasons": []
+  },
+  "yet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "you": {
+    "status": "pass",
+    "reasons": []
+  },
+  "youknow": {
+    "status": "pass",
+    "reasons": []
+  },
+  "your": {
+    "status": "pass",
+    "reasons": []
+  },
+  "yours": {
+    "status": "pass",
+    "reasons": []
+  },
+  "yourself": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;
