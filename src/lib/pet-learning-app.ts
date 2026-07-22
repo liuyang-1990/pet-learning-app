@@ -8635,6 +8635,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "She has a bad cough today.",
       chinese: "cough = 咳嗽；她今天咳嗽得很厉害。",
     },
+    "countryside": {
+      focusWord: "countryside",
+      sentence: "My grandparents live in the countryside.",
+      chinese: "countryside = 乡村；我的祖父母住在乡村。",
+    },
+    "couple": {
+      focusWord: "couple",
+      sentence: "A young couple sat near the window.",
+      chinese: "couple = 夫妇；一对年轻夫妇坐在窗边。",
+    },
+    "courage": {
+      focusWord: "courage",
+      sentence: "She showed courage during the difficult race.",
+      chinese: "courage = 勇气；她在艰难的比赛中表现出了勇气。",
+    },
+    "court": {
+      focusWord: "court",
+      sentence: "We played tennis on the new court.",
+      chinese: "court = 球场；我们在新球场上打网球。",
+    },
+    "cover": {
+      focusWord: "cover",
+      sentence: "The book cover is bright red.",
+      chinese: "cover = 封面；这本书的封面是鲜红色的。",
+    },
+    "crash": {
+      focusWord: "crash",
+      sentence: "No one was hurt in the car crash.",
+      chinese: "crash = 撞车事故；这起汽车撞车事故中没有人受伤。",
+    },
+    "creature": {
+      focusWord: "creature",
+      sentence: "The strange sea creature moved slowly.",
+      chinese: "creature = 生物；那只奇怪的海洋生物慢慢移动。",
+    },
+    "credit": {
+      focusWord: "credit",
+      sentence: "You can pay by credit at this shop.",
+      chinese: "credit = 信用付款；你可以在这家商店用信用付款。",
+    },
+    "crew": {
+      focusWord: "crew",
+      sentence: "The ship's crew worked all night.",
+      chinese: "crew = 船员；船员们工作了一整夜。",
+    },
+    "cricket": {
+      focusWord: "cricket",
+      sentence: "Cricket is popular in many schools.",
+      chinese: "cricket = 板球；板球在许多学校很受欢迎。",
+    },
+    "crime": {
+      focusWord: "crime",
+      sentence: "The police are investigating the crime.",
+      chinese: "crime = 犯罪；警方正在调查这起犯罪。",
+    },
+    "criminal": {
+      focusWord: "criminal",
+      sentence: "The criminal left the city by train.",
+      chinese: "criminal = 罪犯；罪犯乘火车离开了这座城市。",
+    },
+    "cross": {
+      focusWord: "cross",
+      sentence: "There is a red cross on the first-aid box.",
+      chinese: "cross = 十字；急救箱上有一个红十字。",
+    },
+    "crossing": {
+      focusWord: "crossing",
+      sentence: "Use the crossing to get to the other side.",
+      chinese: "crossing = 人行横道；使用人行横道到达另一边。",
+    },
+    "crossroads": {
+      focusWord: "crossroads",
+      sentence: "Turn left at the crossroads.",
+      chinese: "crossroads = 十字路口；在十字路口左转。",
+    },
+    "cruise": {
+      focusWord: "cruise",
+      sentence: "They booked a cruise around the islands.",
+      chinese: "cruise = 邮轮旅行；他们预订了环岛邮轮旅行。",
+    },
+    "cry": {
+      focusWord: "cry",
+      sentence: "I heard a cry from the next room.",
+      chinese: "cry = 叫声；我听到隔壁房间传来一声叫喊。",
+    },
+    "cucumber": {
+      focusWord: "cucumber",
+      sentence: "Add some cucumber to the salad.",
+      chinese: "cucumber = 黄瓜；往沙拉里加些黄瓜。",
+    },
+    "cure": {
+      focusWord: "cure",
+      sentence: "Doctors are still looking for a cure.",
+      chinese: "cure = 治疗方法；医生们仍在寻找一种治疗方法。",
+    },
+    "currency": {
+      focusWord: "currency",
+      sentence: "The euro is the currency in France.",
+      chinese: "currency = 货币；欧元是法国的货币。",
+    },
+    "curriculum": {
+      focusWord: "curriculum",
+      sentence: "Music is part of the school curriculum.",
+      chinese: "curriculum = 课程；音乐是学校课程的一部分。",
+    },
+    "curry": {
+      focusWord: "curry",
+      sentence: "This vegetable curry is not too hot.",
+      chinese: "curry = 咖喱；这份蔬菜咖喱不太辣。",
+    },
+    "curtain": {
+      focusWord: "curtain",
+      sentence: "Close the curtain before you sleep.",
+      chinese: "curtain = 窗帘；睡觉前拉上窗帘。",
+    },
+    "cut": {
+      focusWord: "cut",
+      sentence: "He had a small cut on his finger.",
+      chinese: "cut = 伤口；他的手指上有一个小伤口。",
+    },
+    "cycle": {
+      focusWord: "cycle",
+      sentence: "This diagram shows the water cycle.",
+      chinese: "cycle = 循环；这张图展示了水循环。",
+    },
+    "cyclist": {
+      focusWord: "cyclist",
+      sentence: "The cyclist wore a bright yellow jacket.",
+      chinese: "cyclist = 骑自行车的人；骑自行车的人穿着亮黄色夹克。",
+    },
+    "damage": {
+      focusWord: "damage",
+      sentence: "The storm caused damage to the roof.",
+      chinese: "damage = 损坏；暴风雨造成了屋顶损坏。",
+    },
+    "data": {
+      focusWord: "data",
+      sentence: "The app stores the data safely.",
+      chinese: "data = 数据；这个应用安全地存储数据。",
+    },
+    "date": {
+      focusWord: "date",
+      sentence: "Write the date at the top of the page.",
+      chinese: "date = 日期；把日期写在页面顶部。",
+    },
+    "death": {
+      focusWord: "death",
+      sentence: "The story is about the death of a king.",
+      chinese: "death = 死亡；这个故事讲的是一位国王的死亡。",
+    },
+    "decision": {
+      focusWord: "decision",
+      sentence: "We made a decision after lunch.",
+      chinese: "decision = 决定；午饭后我们做了决定。",
+    },
+    "decrease": {
+      focusWord: "decrease",
+      sentence: "There was a decrease in ticket sales.",
+      chinese: "decrease = 下降；票务销售出现了下降。",
+    },
+    "defeat": {
+      focusWord: "defeat",
+      sentence: "The team accepted its defeat calmly.",
+      chinese: "defeat = 失败；球队平静地接受了失败。",
+    },
+    "delay": {
+      focusWord: "delay",
+      sentence: "The train delay lasted twenty minutes.",
+      chinese: "delay = 延误；火车延误持续了二十分钟。",
+    },
+    "delivery": {
+      focusWord: "delivery",
+      sentence: "The delivery arrived before dinner.",
+      chinese: "delivery = 递送；这次递送在晚饭前到了。",
+    },
+    "demand": {
+      focusWord: "demand",
+      sentence: "There is high demand for this phone.",
+      chinese: "demand = 需求；这款手机需求很高。",
+    },
+    "departure": {
+      focusWord: "departure",
+      sentence: "Our departure was at seven in the morning.",
+      chinese: "departure = 出发；我们的出发时间是早上七点。",
+    },
+    "deposit": {
+      focusWord: "deposit",
+      sentence: "We paid a small deposit for the room.",
+      chinese: "deposit = 定金；我们为房间付了一小笔定金。",
+    },
+    "desert": {
+      focusWord: "desert",
+      sentence: "The desert is very cold at night.",
+      chinese: "desert = 沙漠；沙漠夜晚非常寒冷。",
+    },
+    "design": {
+      focusWord: "design",
+      sentence: "I like the simple design of this phone.",
+      chinese: "design = 设计；我喜欢这部手机的简洁设计。",
+    },
+    "dessert": {
+      focusWord: "dessert",
+      sentence: "We had ice cream for dessert.",
+      chinese: "dessert = 甜点；我们甜点吃了冰淇淋。",
+    },
+    "diagram": {
+      focusWord: "diagram",
+      sentence: "The diagram explains how the machine works.",
+      chinese: "diagram = 图表；这张图表解释了机器如何工作。",
+    },
+    "diary": {
+      focusWord: "diary",
+      sentence: "She writes in her diary every night.",
+      chinese: "diary = 日记；她每天晚上写日记。",
+    },
+    "diet": {
+      focusWord: "diet",
+      sentence: "A healthy diet includes fruit and vegetables.",
+      chinese: "diet = 饮食；健康饮食包括水果和蔬菜。",
+    },
+    "difficulty": {
+      focusWord: "difficulty",
+      sentence: "He had difficulty finding the address.",
+      chinese: "difficulty = 困难；他找这个地址时遇到了困难。",
+    },
+    "diploma": {
+      focusWord: "diploma",
+      sentence: "She received her diploma in June.",
+      chinese: "diploma = 文凭；她在六月收到了文凭。",
+    },
+    "director": {
+      focusWord: "director",
+      sentence: "The director spoke to the actors.",
+      chinese: "director = 导演；导演和演员们讲话。",
+    },
+    "dirt": {
+      focusWord: "dirt",
+      sentence: "There was dirt on my shoes.",
+      chinese: "dirt = 泥土；我的鞋上有泥土。",
+    },
+    "disadvantage": {
+      focusWord: "disadvantage",
+      sentence: "A long journey is the main disadvantage.",
+      chinese: "disadvantage = 缺点；路途遥远是主要缺点。",
+    },
+    "disc": {
+      focusWord: "disc",
+      sentence: "The computer saved the file on a disk.",
+      chinese: "disc = 磁盘；电脑把文件保存在磁盘上。",
+    },
   };
 }
 
