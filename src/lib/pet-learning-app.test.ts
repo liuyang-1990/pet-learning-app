@@ -476,6 +476,36 @@ const objectsFourteenthBatch = [
   "scissors", "scooter", "scream", "sculpture", "search", "seaside", "seat",
 ] as const;
 
+const objectsFifteenthBatch = [
+  "seat belt", "selfie", "sense", "server", "service", "session", "sex",
+  "shade", "shadow", "shame", "shampoo", "shark", "sheep", "sheet", "shock",
+  "shopper", "shore", "shorts", "shout", "side", "sight", "sign", "signal",
+  "signature", "signpost", "singer", "singing", "sink", "sir", "site",
+  "skateboard", "skateboarding", "ski", "skin", "sleep", "sleeve", "slice",
+  "slide", "smartphone", "smell", "smile", "smoke", "smoking", "snack",
+  "snowboard", "snowboarding", "snowfall", "soap", "soap opera", "soccer",
+] as const;
+
+const objectsSixteenthBatch = [
+  "social media", "soldier", "solve", "soul", "sound", "souvenir", "speaker",
+  "species", "speech", "speed", "spice", "spinach", "spite", "spot", "spy",
+  "squash", "stadium", "stairs", "stall", "stamp", "statue", "steak", "step",
+  "stick", "stomach", "stranger", "strawberry", "stream", "strike", "stripe",
+  "studio", "stuff", "style", "success", "suit", "sum", "sunglasses",
+  "sunrise", "sunset", "sunshine", "support", "exams", "supporter",
+  "surfboard", "surfing", "surname", "sweater", "swimmer", "switch", "system",
+] as const;
+
+const objectsSeventeenthBatch = [
+  "takeaway", "tap", "taste", "tax", "tear", "technique", "telephone", "tense",
+  "tent", "term", "text", "thief", "thing", "thought", "thriller", "throat",
+  "thumb", "thunderstorm", "tick", "tie", "tights", "timetable", "tin", "tip",
+  "tissue", "title", "toast", "toe", "toilet", "tomato", "tongue",
+  "toothache", "toothbrush", "topic", "torch", "tour", "towel", "tower",
+  "track", "trainer", "training", "trash can", "trend", "trick", "trouble",
+  "trunk", "trumpet", "truth", "tube", "tuna",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -3974,6 +4004,241 @@ describe("PET Learning App", () => {
         "The search for the lost dog lasted all night.",
         "search = 搜索；寻找走失狗的搜索持续了一整夜。",
       ],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the fifteenth objects reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const objectsWords = words.filter((word) => word.theme === "objects");
+    const selectedExamples = objectsFifteenthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(objectsFifteenthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(2144);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(objectsWords).toHaveLength(972);
+    expect(
+      objectsWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(804);
+  });
+
+  it("keeps the fifteenth objects ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/objects-015.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("objects-015");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(objectsFifteenthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the fifteenth objects batch", () => {
+    const expectedExamples = {
+      sense: ["This map gave me a sense of direction.", "sense = 感觉；这张地图给了我方向感。"],
+      server: ["The server brought our drinks.", "server = 服务员；服务员端来了我们的饮料。"],
+      sex: ["The form asks for your name and sex.", "sex = 性别；表格要求填写你的姓名和性别。"],
+      shame: ["It was a shame to miss the show.", "shame = 遗憾；错过演出真是遗憾。"],
+      sight: [
+        "The castle was an amazing sight.",
+        "sight = 景象；那座城堡是一幅令人惊叹的景象。",
+      ],
+      sign: ["The sign says no parking.", "sign = 标志牌；标志牌上写着禁止停车。"],
+      signal: [
+        "Wait for the traffic signal.",
+        "signal = 信号灯；等待交通信号灯。",
+      ],
+      site: ["The building site was closed.", "site = 工地；建筑工地关闭了。"],
+      sleep: ["A good sleep helped her feel better.", "sleep = 睡眠；好好睡一觉让她感觉好多了。"],
+      slide: [
+        "The children played on the slide.",
+        "slide = 滑梯；孩子们在滑梯上玩。",
+      ],
+      smoke: ["Smoke came from the kitchen.", "smoke = 烟；烟从厨房里冒出来。"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the sixteenth objects reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const objectsWords = words.filter((word) => word.theme === "objects");
+    const selectedExamples = objectsSixteenthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(objectsSixteenthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(2194);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(objectsWords).toHaveLength(972);
+    expect(
+      objectsWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(854);
+  });
+
+  it("keeps the sixteenth objects ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/objects-016.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("objects-016");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(objectsSixteenthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the sixteenth objects batch", () => {
+    const expectedExamples = {
+      solve: ["We must solve this puzzle together.", "solve = 解决；我们必须一起解决这个谜题。"],
+      sound: ["The sound of rain woke me.", "sound = 声音；雨声把我吵醒了。"],
+      speaker: [
+        "The speaker on my phone is broken.",
+        "speaker = 扬声器；我手机上的扬声器坏了。",
+      ],
+      spite: ["He spoke without spite.", "spite = 恶意；他说话时没有恶意。"],
+      spot: ["There is a spot on your shirt.", "spot = 斑点；你的衬衫上有一个斑点。"],
+      squash: ["We played squash after school.", "squash = 壁球；放学后我们打了壁球。"],
+      stall: [
+        "The fruit stall opened early.",
+        "stall = 摊位；水果摊很早就开了。",
+      ],
+      strike: [
+        "The bus strike lasted two days.",
+        "strike = 罢工；公交罢工持续了两天。",
+      ],
+      stuff: ["Put your stuff in this bag.", "stuff = 东西；把你的东西放进这个包里。"],
+      support: [
+        "Your support helped the team.",
+        "support = 支持；你的支持帮助了团队。",
+      ],
+      switch: [
+        "Press the switch to turn on the light.",
+        "switch = 开关；按下开关打开灯。",
+      ],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the seventeenth objects reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const objectsWords = words.filter((word) => word.theme === "objects");
+    const selectedExamples = objectsSeventeenthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(objectsSeventeenthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(2244);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(objectsWords).toHaveLength(972);
+    expect(
+      objectsWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(904);
+  });
+
+  it("keeps the seventeenth objects ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/objects-017.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("objects-017");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(objectsSeventeenthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the seventeenth objects batch", () => {
+    const expectedExamples = {
+      takeaway: ["We ordered a takeaway for dinner.", "takeaway = 外卖；我们晚餐点了外卖。"],
+      tap: ["Turn off the tap after washing.", "tap = 水龙头；洗完后关上水龙头。"],
+      tear: ["A tear ran down her face.", "tear = 眼泪；一滴眼泪从她脸上流下来。"],
+      tense: [
+        "The past tense is used in this sentence.",
+        "tense = 时态；这个句子使用了过去时态。",
+      ],
+      text: ["I sent a text to my sister.", "text = 短信；我给姐姐发了一条短信。"],
+      tick: ["Put a tick next to the answer.", "tick = 对号；在答案旁边打一个对号。"],
+      tip: ["He left a tip for the waiter.", "tip = 小费；他给服务员留了小费。"],
+      title: ["The title of the story is short.", "title = 标题；这个故事的标题很短。"],
+      toast: ["I had toast for breakfast.", "toast = 烤面包片；我早餐吃了烤面包片。"],
+      torch: ["Take a torch for the dark path.", "torch = 手电筒；带上手电筒走那条黑路。"],
+      trunk: [
+        "The trunk of the tree was wide.",
+        "trunk = 树干；这棵树的树干很宽。",
+      ],
+      tube: ["The paint came in a small tube.", "tube = 管；颜料装在一支小管里。"],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
