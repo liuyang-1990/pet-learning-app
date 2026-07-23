@@ -433,6 +433,17 @@ const objectsTenthBatch = [
   "mate", "melon", "memory", "mess", "microphone", "microwave", "midday",
 ] as const;
 
+const objectsEleventhBatch = [
+  "middle", "midnight", "milk", "millimetre", "model", "monster", "mosquito",
+  "moustache", "mushroom", "musician", "name", "nephew", "nest", "net",
+  "network", "news", "niece", "nightclub", "nightlife", "nightmare", "noise",
+  "noon", "notepaper", "notice", "noticeboard", "novelist", "officer",
+  "olive", "omelette", "onion", "opening hours", "opera", "operator",
+  "opinion", "orchestra", "oven", "owner", "packet", "page", "painter",
+  "palace", "pants", "paragraph", "parking", "parking lot", "parrot", "part",
+  "partner", "pass", "passenger",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -3583,6 +3594,91 @@ describe("PET Learning App", () => {
         "lots = 许多；许多人在外面等待。",
       ],
       mail: ["The mail arrived before breakfast.", "mail = 邮件；邮件在早餐前到了。"],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the eleventh objects reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const objectsWords = words.filter((word) => word.theme === "objects");
+    const selectedExamples = objectsEleventhBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(objectsEleventhBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1944);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(objectsWords).toHaveLength(972);
+    expect(
+      objectsWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(604);
+  });
+
+  it("keeps the eleventh objects ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/objects-011.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("objects-011");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(objectsEleventhBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the eleventh objects batch", () => {
+    const expectedExamples = {
+      model: ["He built a model of a plane.", "model = 模型；他做了一个飞机模型。"],
+      net: ["The ball hit the tennis net.", "net = 网；球打到了网球网。"],
+      network: [
+        "The office network stopped working.",
+        "network = 网络；办公室网络停止工作了。",
+      ],
+      news: [
+        "The news about the storm worried us.",
+        "news = 新闻；关于暴风雨的新闻让我们担心。",
+      ],
+      notice: ["A notice on the door said closed.", "notice = 通知；门上的通知写着关闭。"],
+      "opening hours": [
+        "Check the opening hours before you visit.",
+        "opening hours = 营业时间；参观前查看营业时间。",
+      ],
+      operator: [
+        "The telephone operator connected the call.",
+        "operator = 接线员；电话接线员接通了电话。",
+      ],
+      pants: ["These pants are too long for me.", "pants = 裤子；这条裤子对我来说太长了。"],
+      "parking lot": [
+        "The parking lot was full by noon.",
+        "parking lot = 停车场；停车场到中午就满了。",
+      ],
+      pass: [
+        "You need a pass to enter the building.",
+        "pass = 通行证；进入这栋楼需要通行证。",
+      ],
     } as const;
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
