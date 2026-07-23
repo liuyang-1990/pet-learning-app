@@ -444,6 +444,17 @@ const objectsEleventhBatch = [
   "partner", "pass", "passenger",
 ] as const;
 
+const objectsTwelfthBatch = [
+  "pasta", "path", "pattern", "pea", "peach", "peak", "peanut", "pear",
+  "pedestrian", "pen", "penfriend", "penny", "pepper", "performer",
+  "perfume", "period", "permission", "pet", "petrol", "pharmacy", "photo",
+  "photocopy", "photograph", "photographer", "photography", "phrase",
+  "physics", "piano", "picnic", "pie", "piece", "pig", "pile", "pill",
+  "pillow", "pin", "pineapple", "pipe", "pirate", "pitch", "play",
+  "pleasure", "plot", "plug", "pocket", "podcast", "poet", "poetry", "port",
+  "post",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -3678,6 +3689,89 @@ describe("PET Learning App", () => {
       pass: [
         "You need a pass to enter the building.",
         "pass = 通行证；进入这栋楼需要通行证。",
+      ],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the twelfth objects reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const objectsWords = words.filter((word) => word.theme === "objects");
+    const selectedExamples = objectsTwelfthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(objectsTwelfthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(1994);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(objectsWords).toHaveLength(972);
+    expect(
+      objectsWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(654);
+  });
+
+  it("keeps the twelfth objects ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/objects-012.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("objects-012");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(objectsTwelfthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the twelfth objects batch", () => {
+    const expectedExamples = {
+      period: [
+        "The first period starts at nine.",
+        "period = 课时；第一节课九点开始。",
+      ],
+      pet: ["My pet sleeps beside my bed.", "pet = 宠物；我的宠物睡在我的床边。"],
+      photo: ["I took a photo of the river.", "photo = 照片；我拍了一张河流的照片。"],
+      photograph: [
+        "The photograph shows my old school.",
+        "photograph = 照片；这张照片展示了我的旧学校。",
+      ],
+      piece: ["Take one piece of cake.", "piece = 块；拿一块蛋糕。"],
+      pin: [
+        "Use a pin to hold the note on the board.",
+        "pin = 图钉；用图钉把便条固定在板上。",
+      ],
+      pitch: [
+        "The football pitch was wet after the rain.",
+        "pitch = 球场；雨后足球场很湿。",
+      ],
+      play: ["The school play starts tonight.", "play = 戏剧；学校戏剧今晚开始。"],
+      plot: ["The plot of the film was simple.", "plot = 情节；这部电影的情节很简单。"],
+      port: ["The ship left the port at dawn.", "port = 港口；船在黎明时离开港口。"],
+      post: [
+        "The morning post brought two letters.",
+        "post = 邮件；早上的邮件送来了两封信。",
       ],
     } as const;
 
