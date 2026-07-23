@@ -8174,5 +8174,205 @@ export const reviewedWordExampleAudit = {
   "report": {
     "status": "pass",
     "reasons": []
+  },
+  "reporter": {
+    "status": "pass",
+    "reasons": []
+  },
+  "request": {
+    "status": "pass",
+    "reasons": []
+  },
+  "resort": {
+    "status": "pass",
+    "reasons": []
+  },
+  "respect": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rest": {
+    "status": "pass",
+    "reasons": []
+  },
+  "revision": {
+    "status": "pass",
+    "reasons": []
+  },
+  "reward": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ride": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rider": {
+    "status": "pass",
+    "reasons": []
+  },
+  "riding": {
+    "status": "pass",
+    "reasons": []
+  },
+  "robot": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rocket": {
+    "status": "pass",
+    "reasons": []
+  },
+  "roll": {
+    "status": "pass",
+    "reasons": []
+  },
+  "roommate": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rope": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rose": {
+    "status": "pass",
+    "reasons": []
+  },
+  "roundabout": {
+    "status": "pass",
+    "reasons": []
+  },
+  "route": {
+    "status": "pass",
+    "reasons": []
+  },
+  "routine": {
+    "status": "pass",
+    "reasons": []
+  },
+  "row": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rubber": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rubbish": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rug": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ruin": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ruler": {
+    "status": "pass",
+    "reasons": []
+  },
+  "runner": {
+    "status": "pass",
+    "reasons": []
+  },
+  "running": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sail": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sailing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sailor": {
+    "status": "pass",
+    "reasons": []
+  },
+  "salary": {
+    "status": "pass",
+    "reasons": []
+  },
+  "salesman": {
+    "status": "pass",
+    "reasons": []
+  },
+  "salmon": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sand": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sandal": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sauce": {
+    "status": "pass",
+    "reasons": []
+  },
+  "saucepan": {
+    "status": "pass",
+    "reasons": []
+  },
+  "saucer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sausage": {
+    "status": "pass",
+    "reasons": []
+  },
+  "scarf": {
+    "status": "pass",
+    "reasons": []
+  },
+  "scene": {
+    "status": "pass",
+    "reasons": []
+  },
+  "scenery": {
+    "status": "pass",
+    "reasons": []
+  },
+  "scientist": {
+    "status": "pass",
+    "reasons": []
+  },
+  "scissors": {
+    "status": "pass",
+    "reasons": []
+  },
+  "scooter": {
+    "status": "pass",
+    "reasons": []
+  },
+  "scream": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sculpture": {
+    "status": "pass",
+    "reasons": []
+  },
+  "search": {
+    "status": "pass",
+    "reasons": []
+  },
+  "seaside": {
+    "status": "pass",
+    "reasons": []
+  },
+  "seat": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

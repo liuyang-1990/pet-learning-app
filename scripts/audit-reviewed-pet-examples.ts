@@ -303,6 +303,15 @@ const manuallyConfirmedTerms = new Set([
   "pump", // a bicycle pump, expressed as 打气筒 in context
   "rail", // a handrail, not a railway
   "range", // a selection / variety of goods, not only a scope
+  // These fourteenth-batch objects examples use valid contextual noun senses or synonyms.
+  "revision", // British exam revision / study before an exam, not editing text
+  "roll", // a bread roll, not the verb/noun meaning "roll up"
+  "routine", // routine / regular set of actions, expressed naturally as 常规
+  "row", // a row of seats, expressed as 排
+  "sailing", // the activity of sailing, not only travelling by ship
+  "salary", // salary / wages, expressed naturally as 薪水
+  "saucepan", // saucepan / cooking pan; back translation preserves the cooking vessel
+  "saucer", // saucer / small plate under a cup
 ]);
 
 async function main() {
