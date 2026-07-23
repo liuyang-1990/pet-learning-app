@@ -7374,5 +7374,205 @@ export const reviewedWordExampleAudit = {
   "laboratory": {
     "status": "pass",
     "reasons": []
+  },
+  "lack": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ladder": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lady": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lamb": {
+    "status": "pass",
+    "reasons": []
+  },
+  "landscape": {
+    "status": "pass",
+    "reasons": []
+  },
+  "laundry": {
+    "status": "pass",
+    "reasons": []
+  },
+  "leader": {
+    "status": "pass",
+    "reasons": []
+  },
+  "leaf": {
+    "status": "pass",
+    "reasons": []
+  },
+  "league": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lecture": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lecturer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "left": {
+    "status": "pass",
+    "reasons": []
+  },
+  "leisure": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lemon": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lemonade": {
+    "status": "pass",
+    "reasons": []
+  },
+  "length": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lettuce": {
+    "status": "pass",
+    "reasons": []
+  },
+  "level": {
+    "status": "pass",
+    "reasons": []
+  },
+  "librarian": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lie": {
+    "status": "pass",
+    "reasons": []
+  },
+  "life": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lift": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lightning": {
+    "status": "pass",
+    "reasons": []
+  },
+  "limit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "line": {
+    "status": "pass",
+    "reasons": []
+  },
+  "link": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lip": {
+    "status": "pass",
+    "reasons": []
+  },
+  "literature": {
+    "status": "pass",
+    "reasons": []
+  },
+  "litter": {
+    "status": "pass",
+    "reasons": []
+  },
+  "load": {
+    "status": "pass",
+    "reasons": []
+  },
+  "loan": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lock": {
+    "status": "pass",
+    "reasons": []
+  },
+  "locker": {
+    "status": "pass",
+    "reasons": []
+  },
+  "logo": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lots": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lottery": {
+    "status": "pass",
+    "reasons": []
+  },
+  "luck": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lunchtime": {
+    "status": "pass",
+    "reasons": []
+  },
+  "luxury": {
+    "status": "pass",
+    "reasons": []
+  },
+  "machine": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mail": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mango": {
+    "status": "pass",
+    "reasons": []
+  },
+  "marriage": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mate": {
+    "status": "pass",
+    "reasons": []
+  },
+  "melon": {
+    "status": "pass",
+    "reasons": []
+  },
+  "memory": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mess": {
+    "status": "pass",
+    "reasons": []
+  },
+  "microphone": {
+    "status": "pass",
+    "reasons": []
+  },
+  "microwave": {
+    "status": "pass",
+    "reasons": []
+  },
+  "midday": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

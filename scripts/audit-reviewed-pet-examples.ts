@@ -284,6 +284,10 @@ const manuallyConfirmedTerms = new Set([
   "judge", // a competition judge / referee, not a court judge
   "kilogramme", // kilogramme / kilogram / 千克 / 公斤
   "kit", // first-aid kit / 急救包, not a generic set
+  // These tenth-batch objects examples use valid contextual senses or synonyms.
+  "level", // a game level, expressed as 关卡 in context
+  "lots", // the quantifier "lots of", not land lots
+  "mate", // British informal friend, not a partner
 ]);
 
 async function main() {
