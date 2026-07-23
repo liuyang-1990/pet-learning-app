@@ -1,0 +1,306 @@
+{
+  "batchId": "qualities-003",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "extra",
+      "focusWord": "extra",
+      "sentence": "Take an extra jacket.",
+      "chinese": "extra = 额外的；带上一件额外的夹克。"
+    },
+    {
+      "term": "extraordinary",
+      "focusWord": "extraordinary",
+      "sentence": "The singer had an extraordinary voice.",
+      "chinese": "extraordinary = 非凡的；那位歌手有非凡的嗓音。"
+    },
+    {
+      "term": "fair",
+      "focusWord": "fair",
+      "sentence": "The referee made a fair decision.",
+      "chinese": "fair = 公平的；裁判做出了公平的决定。"
+    },
+    {
+      "term": "false",
+      "focusWord": "false",
+      "sentence": "The story was false.",
+      "chinese": "false = 错误的；这个故事是假的。"
+    },
+    {
+      "term": "familiar",
+      "focusWord": "familiar",
+      "sentence": "The street looked familiar.",
+      "chinese": "familiar = 熟悉的；这条街看起来很熟悉。"
+    },
+    {
+      "term": "famous",
+      "focusWord": "famous",
+      "sentence": "A famous actor visited our school.",
+      "chinese": "famous = 著名的；一位著名演员参观了我们学校。"
+    },
+    {
+      "term": "fantastic",
+      "focusWord": "fantastic",
+      "sentence": "The concert was fantastic.",
+      "chinese": "fantastic = 极好的；音乐会棒极了。"
+    },
+    {
+      "term": "fashionable",
+      "focusWord": "fashionable",
+      "sentence": "Those shoes are fashionable.",
+      "chinese": "fashionable = 时髦的；那双鞋很时髦。"
+    },
+    {
+      "term": "fast",
+      "focusWord": "fast",
+      "sentence": "The fast train arrived early.",
+      "chinese": "fast = 快的；快车提前到达了。"
+    },
+    {
+      "term": "fat",
+      "focusWord": "fat",
+      "sentence": "The fat cat slept on the sofa.",
+      "chinese": "fat = 胖的；那只胖猫睡在沙发上。"
+    },
+    {
+      "term": "favourite",
+      "focusWord": "favourite",
+      "sentence": "Blue is my favourite colour.",
+      "chinese": "favourite = 最喜欢的；蓝色是我最喜欢的颜色。"
+    },
+    {
+      "term": "final",
+      "focusWord": "final",
+      "sentence": "The final question was easy.",
+      "chinese": "final = 最后的；最后一个问题很容易。"
+    },
+    {
+      "term": "financial",
+      "focusWord": "financial",
+      "sentence": "The family needed financial advice.",
+      "chinese": "financial = 财务的；这家人需要财务建议。"
+    },
+    {
+      "term": "fine",
+      "focusWord": "fine",
+      "sentence": "I'm fine after the rest.",
+      "chinese": "fine = 好的；休息后我很好。"
+    },
+    {
+      "term": "first",
+      "focusWord": "first",
+      "sentence": "Her first lesson starts at nine.",
+      "chinese": "first = 第一的；她的第一节课九点开始。"
+    },
+    {
+      "term": "foggy",
+      "focusWord": "foggy",
+      "sentence": "It was foggy near the river.",
+      "chinese": "foggy = 有雾的；河边有雾。"
+    },
+    {
+      "term": "folk",
+      "focusWord": "folk",
+      "sentence": "We listened to folk music.",
+      "chinese": "folk = 民间的；我们听了民间音乐。"
+    },
+    {
+      "term": "following",
+      "focusWord": "following",
+      "sentence": "Read the following sentence.",
+      "chinese": "following = 接下来的；阅读接下来的句子。"
+    },
+    {
+      "term": "fond",
+      "focusWord": "fond",
+      "sentence": "She is fond of classical music.",
+      "chinese": "fond = 喜爱的；她喜爱古典音乐。"
+    },
+    {
+      "term": "forbidden",
+      "focusWord": "forbidden",
+      "sentence": "Swimming is forbidden here.",
+      "chinese": "forbidden = 禁止的；这里禁止游泳。"
+    },
+    {
+      "term": "foreign",
+      "focusWord": "foreign",
+      "sentence": "He enjoys foreign films.",
+      "chinese": "foreign = 外国的；他喜欢外国电影。"
+    },
+    {
+      "term": "former",
+      "focusWord": "former",
+      "sentence": "My former teacher lives nearby.",
+      "chinese": "former = 以前的；我以前的老师住在附近。"
+    },
+    {
+      "term": "free",
+      "focusWord": "free",
+      "sentence": "The museum is free on Sundays.",
+      "chinese": "free = 免费的；博物馆星期天免费。"
+    },
+    {
+      "term": "freezing",
+      "focusWord": "freezing",
+      "sentence": "The water was freezing.",
+      "chinese": "freezing = 极冷的；水冰冷刺骨。"
+    },
+    {
+      "term": "frequent",
+      "focusWord": "frequent",
+      "sentence": "Frequent rain delayed the work.",
+      "chinese": "frequent = 频繁的；频繁下雨耽误了工作。"
+    },
+    {
+      "term": "fried",
+      "focusWord": "fried",
+      "sentence": "He ordered fried fish.",
+      "chinese": "fried = 油炸的；他点了炸鱼。"
+    },
+    {
+      "term": "friendly",
+      "focusWord": "friendly",
+      "sentence": "The hotel staff were friendly.",
+      "chinese": "friendly = 友好的；酒店员工很友好。"
+    },
+    {
+      "term": "front",
+      "focusWord": "front",
+      "sentence": "Use the front door.",
+      "chinese": "front = 前面的；使用前门。"
+    },
+    {
+      "term": "frozen",
+      "focusWord": "frozen",
+      "sentence": "We bought frozen peas.",
+      "chinese": "frozen = 冷冻的；我们买了冷冻豌豆。"
+    },
+    {
+      "term": "full",
+      "focusWord": "full",
+      "sentence": "The bus was full.",
+      "chinese": "full = 满的；公交车满员了。"
+    },
+    {
+      "term": "furthest",
+      "focusWord": "furthest",
+      "sentence": "The furthest village is twenty kilometres away.",
+      "chinese": "furthest = 最远的；最远的村庄在二十公里外。"
+    },
+    {
+      "term": "future",
+      "focusWord": "future",
+      "sentence": "Future plans depend on the weather.",
+      "chinese": "future = 未来的；未来计划取决于天气。"
+    },
+    {
+      "term": "general",
+      "focusWord": "general",
+      "sentence": "The general idea is clear.",
+      "chinese": "general = 大体的；大体意思很清楚。"
+    },
+    {
+      "term": "generous",
+      "focusWord": "generous",
+      "sentence": "Her generous gift helped the club.",
+      "chinese": "generous = 慷慨的；她慷慨的礼物帮助了俱乐部。"
+    },
+    {
+      "term": "gentle",
+      "focusWord": "gentle",
+      "sentence": "The nurse had a gentle voice.",
+      "chinese": "gentle = 温柔的；护士声音温柔。"
+    },
+    {
+      "term": "giant",
+      "focusWord": "giant",
+      "sentence": "A giant screen showed the match.",
+      "chinese": "giant = 巨大的；一块巨大屏幕播放了比赛。"
+    },
+    {
+      "term": "golden",
+      "focusWord": "golden",
+      "sentence": "The golden leaves covered the path.",
+      "chinese": "golden = 金色的；金色树叶覆盖了小路。"
+    },
+    {
+      "term": "good",
+      "focusWord": "good",
+      "sentence": "That is a good idea.",
+      "chinese": "good = 好的；那是个好主意。"
+    },
+    {
+      "term": "good-looking",
+      "focusWord": "good-looking",
+      "sentence": "The good-looking actor smiled at the camera.",
+      "chinese": "good-looking = 好看的；那位好看的演员对着镜头微笑。"
+    },
+    {
+      "term": "gorgeous",
+      "focusWord": "gorgeous",
+      "sentence": "She wore a gorgeous dress.",
+      "chinese": "gorgeous = 漂亮的；她穿了一条漂亮的连衣裙。"
+    },
+    {
+      "term": "grateful",
+      "focusWord": "grateful",
+      "sentence": "I am grateful for your help.",
+      "chinese": "grateful = 感激的；我很感激你的帮助。"
+    },
+    {
+      "term": "great",
+      "focusWord": "great",
+      "sentence": "We had a great holiday.",
+      "chinese": "great = 很棒的；我们度过了一个很棒的假期。"
+    },
+    {
+      "term": "grey",
+      "focusWord": "grey",
+      "sentence": "Grey clouds covered the sky.",
+      "chinese": "grey = 灰色的；灰色云层遮住了天空。"
+    },
+    {
+      "term": "grilled",
+      "focusWord": "grilled",
+      "sentence": "The grilled chicken smelled delicious.",
+      "chinese": "grilled = 烤的；烤鸡闻起来很香。"
+    },
+    {
+      "term": "guilty",
+      "focusWord": "guilty",
+      "sentence": "He felt guilty about the broken window.",
+      "chinese": "guilty = 内疚的；他对打破窗户感到内疚。"
+    },
+    {
+      "term": "handsome",
+      "focusWord": "handsome",
+      "sentence": "The handsome prince rode a horse.",
+      "chinese": "handsome = 英俊的；英俊的王子骑着马。"
+    },
+    {
+      "term": "hard",
+      "focusWord": "hard",
+      "sentence": "The exam was hard.",
+      "chinese": "hard = 困难的；考试很难。"
+    },
+    {
+      "term": "heavy",
+      "focusWord": "heavy",
+      "sentence": "The heavy bag hurt my shoulder.",
+      "chinese": "heavy = 重的；沉重的包弄疼了我的肩膀。"
+    },
+    {
+      "term": "hidden",
+      "focusWord": "hidden",
+      "sentence": "The hidden key was under the mat.",
+      "chinese": "hidden = 隐藏的；隐藏的钥匙在垫子下面。"
+    },
+    {
+      "term": "high jump",
+      "focusWord": "high jump",
+      "sentence": "The high jump event starts at noon.",
+      "chinese": "high jump = 跳高；跳高项目中午开始。"
+    }
+  ]
+}

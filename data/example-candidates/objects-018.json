@@ -1,0 +1,306 @@
+{
+  "batchId": "objects-018",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "tune",
+      "focusWord": "tune",
+      "sentence": "The tune was easy to remember.",
+      "chinese": "tune = 曲调；这段曲调很容易记住。"
+    },
+    {
+      "term": "tunnel",
+      "focusWord": "tunnel",
+      "sentence": "The train went through a long tunnel.",
+      "chinese": "tunnel = 隧道；火车穿过了一条长隧道。"
+    },
+    {
+      "term": "turkey",
+      "focusWord": "turkey",
+      "sentence": "We ate turkey for lunch.",
+      "chinese": "turkey = 火鸡肉；我们午饭吃了火鸡肉。"
+    },
+    {
+      "term": "turning",
+      "focusWord": "turning",
+      "sentence": "Take the next turning on the left.",
+      "chinese": "turning = 转弯处；在下一个转弯处向左转。"
+    },
+    {
+      "term": "twin",
+      "focusWord": "twin",
+      "sentence": "My twin wears glasses.",
+      "chinese": "twin = 双胞胎之一；我的双胞胎兄弟戴眼镜。"
+    },
+    {
+      "term": "type",
+      "focusWord": "type",
+      "sentence": "This type of music is loud.",
+      "chinese": "type = 类型；这种类型的音乐很响。"
+    },
+    {
+      "term": "tyre",
+      "focusWord": "tyre",
+      "sentence": "The car has a flat tyre.",
+      "chinese": "tyre = 轮胎；这辆车有一个轮胎瘪了。"
+    },
+    {
+      "term": "umbrella",
+      "focusWord": "umbrella",
+      "sentence": "Take an umbrella because it may rain.",
+      "chinese": "umbrella = 雨伞；带上雨伞，因为可能会下雨。"
+    },
+    {
+      "term": "unhappy",
+      "focusWord": "unhappy",
+      "sentence": "His unhappy face worried me.",
+      "chinese": "unhappy = 不高兴的；他不高兴的脸让我担心。"
+    },
+    {
+      "term": "union",
+      "focusWord": "union",
+      "sentence": "The student union organized a party.",
+      "chinese": "union = 联合会；学生会组织了一场聚会。"
+    },
+    {
+      "term": "unit",
+      "focusWord": "unit",
+      "sentence": "This unit of the book is about travel.",
+      "chinese": "unit = 单元；这本书的这个单元是关于旅行的。"
+    },
+    {
+      "term": "universe",
+      "focusWord": "universe",
+      "sentence": "Stars fill the universe.",
+      "chinese": "universe = 宇宙；星星布满宇宙。"
+    },
+    {
+      "term": "user",
+      "focusWord": "user",
+      "sentence": "Each user needs a password.",
+      "chinese": "user = 用户；每个用户都需要一个密码。"
+    },
+    {
+      "term": "valley",
+      "focusWord": "valley",
+      "sentence": "The valley was green after the rain.",
+      "chinese": "valley = 山谷；雨后山谷一片翠绿。"
+    },
+    {
+      "term": "van",
+      "focusWord": "van",
+      "sentence": "The delivery van stopped outside.",
+      "chinese": "van = 小货车；送货小货车停在外面。"
+    },
+    {
+      "term": "vanilla",
+      "focusWord": "vanilla",
+      "sentence": "Vanilla is my favourite ice cream flavour.",
+      "chinese": "vanilla = 香草；香草是我最喜欢的冰淇淋口味。"
+    },
+    {
+      "term": "variety",
+      "focusWord": "variety",
+      "sentence": "The shop sells a variety of hats.",
+      "chinese": "variety = 种类；这家商店出售各种帽子。"
+    },
+    {
+      "term": "vase",
+      "focusWord": "vase",
+      "sentence": "Put the flowers in the vase.",
+      "chinese": "vase = 花瓶；把花放进花瓶里。"
+    },
+    {
+      "term": "vegetarian",
+      "focusWord": "vegetarian",
+      "sentence": "The vegetarian ordered mushroom pasta.",
+      "chinese": "vegetarian = 素食者；素食者点了蘑菇意面。"
+    },
+    {
+      "term": "vehicle",
+      "focusWord": "vehicle",
+      "sentence": "This vehicle carries eight people.",
+      "chinese": "vehicle = 车辆；这辆车能载八个人。"
+    },
+    {
+      "term": "version",
+      "focusWord": "version",
+      "sentence": "I downloaded the latest version.",
+      "chinese": "version = 版本；我下载了最新版本。"
+    },
+    {
+      "term": "vet",
+      "focusWord": "vet",
+      "sentence": "The vet checked our cat.",
+      "chinese": "vet = 兽医；兽医检查了我们的猫。"
+    },
+    {
+      "term": "view",
+      "focusWord": "view",
+      "sentence": "The hotel room has a sea view.",
+      "chinese": "view = 景色；这间酒店房间能看到海景。"
+    },
+    {
+      "term": "violin",
+      "focusWord": "violin",
+      "sentence": "She plays the violin after school.",
+      "chinese": "violin = 小提琴；她放学后拉小提琴。"
+    },
+    {
+      "term": "virus",
+      "focusWord": "virus",
+      "sentence": "A virus made his computer slow.",
+      "chinese": "virus = 病毒；病毒让他的电脑变慢了。"
+    },
+    {
+      "term": "visa",
+      "focusWord": "visa",
+      "sentence": "You need a visa to enter the country.",
+      "chinese": "visa = 签证；进入这个国家需要签证。"
+    },
+    {
+      "term": "visitor",
+      "focusWord": "visitor",
+      "sentence": "The visitor signed the book.",
+      "chinese": "visitor = 访客；访客在本子上签了名。"
+    },
+    {
+      "term": "voice",
+      "focusWord": "voice",
+      "sentence": "Her voice was soft and calm.",
+      "chinese": "voice = 声音；她的声音轻柔而平静。"
+    },
+    {
+      "term": "volume",
+      "focusWord": "volume",
+      "sentence": "Turn down the volume of the radio.",
+      "chinese": "volume = 音量；把收音机的音量调低。"
+    },
+    {
+      "term": "volunteer",
+      "focusWord": "volunteer",
+      "sentence": "A volunteer helped at the race.",
+      "chinese": "volunteer = 志愿者；一名志愿者在比赛中帮忙。"
+    },
+    {
+      "term": "vote",
+      "focusWord": "vote",
+      "sentence": "Each student has one vote.",
+      "chinese": "vote = 选票；每个学生有一张选票。"
+    },
+    {
+      "term": "vowel",
+      "focusWord": "vowel",
+      "sentence": "A is a vowel in English.",
+      "chinese": "vowel = 元音字母；A 是英语里的元音字母。"
+    },
+    {
+      "term": "wage",
+      "focusWord": "wage",
+      "sentence": "The weekly wage was low.",
+      "chinese": "wage = 工资；周工资很低。"
+    },
+    {
+      "term": "walking",
+      "focusWord": "walking",
+      "sentence": "Walking is good exercise.",
+      "chinese": "walking = 步行；步行是很好的锻炼。"
+    },
+    {
+      "term": "war",
+      "focusWord": "war",
+      "sentence": "The museum has photos from the war.",
+      "chinese": "war = 战争；博物馆有战争时期的照片。"
+    },
+    {
+      "term": "wardrobe",
+      "focusWord": "wardrobe",
+      "sentence": "Her dresses hung in the wardrobe.",
+      "chinese": "wardrobe = 衣柜；她的连衣裙挂在衣柜里。"
+    },
+    {
+      "term": "warning",
+      "focusWord": "warning",
+      "sentence": "The warning was printed in red.",
+      "chinese": "warning = 警告；警告用红色印着。"
+    },
+    {
+      "term": "wash",
+      "focusWord": "wash",
+      "sentence": "This shirt needs a wash.",
+      "chinese": "wash = 洗涤；这件衬衫需要洗一下。"
+    },
+    {
+      "term": "washing machine",
+      "focusWord": "washing machine",
+      "sentence": "The washing machine is noisy.",
+      "chinese": "washing machine = 洗衣机；这台洗衣机很吵。"
+    },
+    {
+      "term": "washing-up",
+      "focusWord": "washing-up",
+      "sentence": "The washing-up was left in the sink.",
+      "chinese": "washing-up = 洗碗；要洗的碗盘留在了水槽里。"
+    },
+    {
+      "term": "waterfall",
+      "focusWord": "waterfall",
+      "sentence": "We took photos of the waterfall.",
+      "chinese": "waterfall = 瀑布；我们拍了瀑布的照片。"
+    },
+    {
+      "term": "wave",
+      "focusWord": "wave",
+      "sentence": "A large wave hit the rocks.",
+      "chinese": "wave = 海浪；一个大浪拍打着岩石。"
+    },
+    {
+      "term": "way",
+      "focusWord": "way",
+      "sentence": "This way leads to the station.",
+      "chinese": "way = 路；这条路通向车站。"
+    },
+    {
+      "term": "web",
+      "focusWord": "web",
+      "sentence": "A spider's web hung in the corner.",
+      "chinese": "web = 网；角落里挂着一张蜘蛛网。"
+    },
+    {
+      "term": "webcam",
+      "focusWord": "webcam",
+      "sentence": "My webcam stopped working during the call.",
+      "chinese": "webcam = 网络摄像头；通话时我的网络摄像头坏了。"
+    },
+    {
+      "term": "web page",
+      "focusWord": "web page",
+      "sentence": "The web page loaded slowly.",
+      "chinese": "web page = 网页；这个网页加载得很慢。"
+    },
+    {
+      "term": "wedding",
+      "focusWord": "wedding",
+      "sentence": "The wedding was in June.",
+      "chinese": "wedding = 婚礼；婚礼在六月举行。"
+    },
+    {
+      "term": "weekday",
+      "focusWord": "weekday",
+      "sentence": "Monday is a weekday.",
+      "chinese": "weekday = 工作日；星期一是工作日。"
+    },
+    {
+      "term": "weekend",
+      "focusWord": "weekend",
+      "sentence": "We went camping at the weekend.",
+      "chinese": "weekend = 周末；我们周末去露营了。"
+    },
+    {
+      "term": "welcome",
+      "focusWord": "welcome",
+      "sentence": "The warm welcome made us happy.",
+      "chinese": "welcome = 欢迎；热情的欢迎让我们很高兴。"
+    }
+  ]
+}

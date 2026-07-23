@@ -1,0 +1,306 @@
+{
+  "batchId": "qualities-002",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "close",
+      "focusWord": "close",
+      "sentence": "The station is close to our hotel.",
+      "chinese": "close = 近的；车站离我们的酒店很近。"
+    },
+    {
+      "term": "closed",
+      "focusWord": "closed",
+      "sentence": "The library is closed on Mondays.",
+      "chinese": "closed = 关闭的；图书馆星期一关闭。"
+    },
+    {
+      "term": "colourful",
+      "focusWord": "colourful",
+      "sentence": "She wore a colourful dress.",
+      "chinese": "colourful = 色彩鲜艳的；她穿了一条色彩鲜艳的连衣裙。"
+    },
+    {
+      "term": "complicated",
+      "focusWord": "complicated",
+      "sentence": "The instructions were complicated.",
+      "chinese": "complicated = 复杂的；说明很复杂。"
+    },
+    {
+      "term": "confusing",
+      "focusWord": "confusing",
+      "sentence": "The map was confusing.",
+      "chinese": "confusing = 令人困惑的；这张地图令人困惑。"
+    },
+    {
+      "term": "convenient",
+      "focusWord": "convenient",
+      "sentence": "The new bus stop is convenient.",
+      "chinese": "convenient = 方便的；新的公交站很方便。"
+    },
+    {
+      "term": "correct",
+      "focusWord": "correct",
+      "sentence": "Your answer is correct.",
+      "chinese": "correct = 正确的；你的答案是正确的。"
+    },
+    {
+      "term": "cosy",
+      "focusWord": "cosy",
+      "sentence": "The small room felt cosy.",
+      "chinese": "cosy = 舒适的；这个小房间让人觉得舒适。"
+    },
+    {
+      "term": "cream",
+      "focusWord": "cream",
+      "sentence": "She wore a cream scarf.",
+      "chinese": "cream = 奶油色的；她戴了一条奶油色围巾。"
+    },
+    {
+      "term": "creative",
+      "focusWord": "creative",
+      "sentence": "The creative student made a poster.",
+      "chinese": "creative = 有创造力的；有创造力的学生做了一张海报。"
+    },
+    {
+      "term": "crowded",
+      "focusWord": "crowded",
+      "sentence": "The train was crowded.",
+      "chinese": "crowded = 拥挤的；火车很拥挤。"
+    },
+    {
+      "term": "cruel",
+      "focusWord": "cruel",
+      "sentence": "The cruel joke upset him.",
+      "chinese": "cruel = 残忍的；这个残忍的玩笑让他难过。"
+    },
+    {
+      "term": "cultural",
+      "focusWord": "cultural",
+      "sentence": "The city has many cultural events.",
+      "chinese": "cultural = 文化的；这座城市有许多文化活动。"
+    },
+    {
+      "term": "curious",
+      "focusWord": "curious",
+      "sentence": "The curious child asked many questions.",
+      "chinese": "curious = 好奇的；好奇的孩子问了很多问题。"
+    },
+    {
+      "term": "curly",
+      "focusWord": "curly",
+      "sentence": "She has curly hair.",
+      "chinese": "curly = 卷曲的；她有卷发。"
+    },
+    {
+      "term": "cute",
+      "focusWord": "cute",
+      "sentence": "The puppy is cute.",
+      "chinese": "cute = 可爱的；这只小狗很可爱。"
+    },
+    {
+      "term": "daily",
+      "focusWord": "daily",
+      "sentence": "Daily exercise keeps him healthy.",
+      "chinese": "daily = 每日的；每日锻炼让他保持健康。"
+    },
+    {
+      "term": "damaged",
+      "focusWord": "damaged",
+      "sentence": "The damaged phone would not start.",
+      "chinese": "damaged = 损坏的；损坏的手机无法启动。"
+    },
+    {
+      "term": "dangerous",
+      "focusWord": "dangerous",
+      "sentence": "The road is dangerous at night.",
+      "chinese": "dangerous = 危险的；这条路夜里很危险。"
+    },
+    {
+      "term": "dead",
+      "focusWord": "dead",
+      "sentence": "The plant was dead after the heat.",
+      "chinese": "dead = 死的；高温之后那株植物死了。"
+    },
+    {
+      "term": "deaf",
+      "focusWord": "deaf",
+      "sentence": "The deaf student used sign language.",
+      "chinese": "deaf = 失聪的；失聪的学生使用手语。"
+    },
+    {
+      "term": "dear",
+      "focusWord": "dear",
+      "sentence": "Dear Grandma, thank you for the gift.",
+      "chinese": "dear = 亲爱的；亲爱的奶奶，谢谢您的礼物。"
+    },
+    {
+      "term": "delayed",
+      "focusWord": "delayed",
+      "sentence": "The delayed flight arrived at midnight.",
+      "chinese": "delayed = 延误的；延误的航班午夜抵达。"
+    },
+    {
+      "term": "delicious",
+      "focusWord": "delicious",
+      "sentence": "The soup was delicious.",
+      "chinese": "delicious = 美味的；这汤很美味。"
+    },
+    {
+      "term": "different",
+      "focusWord": "different",
+      "sentence": "We chose different colours.",
+      "chinese": "different = 不同的；我们选择了不同的颜色。"
+    },
+    {
+      "term": "difficult",
+      "focusWord": "difficult",
+      "sentence": "The exam was difficult.",
+      "chinese": "difficult = 困难的；考试很难。"
+    },
+    {
+      "term": "direct",
+      "focusWord": "direct",
+      "sentence": "We took a direct train to London.",
+      "chinese": "direct = 直达的；我们乘直达火车去了伦敦。"
+    },
+    {
+      "term": "disabled",
+      "focusWord": "disabled",
+      "sentence": "The disabled athlete won a medal.",
+      "chinese": "disabled = 残疾的；那位残疾运动员赢得了奖牌。"
+    },
+    {
+      "term": "disgusting",
+      "focusWord": "disgusting",
+      "sentence": "The old milk smelled disgusting.",
+      "chinese": "disgusting = 令人恶心的；过期牛奶闻起来令人恶心。"
+    },
+    {
+      "term": "downstairs",
+      "focusWord": "downstairs",
+      "sentence": "The downstairs bathroom is small.",
+      "chinese": "downstairs = 楼下的；楼下的浴室很小。"
+    },
+    {
+      "term": "dressed",
+      "focusWord": "dressed",
+      "sentence": "The children were dressed for the party.",
+      "chinese": "dressed = 穿着衣服的；孩子们穿好衣服准备参加聚会。"
+    },
+    {
+      "term": "due",
+      "focusWord": "due",
+      "sentence": "The homework is due tomorrow.",
+      "chinese": "due = 到期的；作业明天到期。"
+    },
+    {
+      "term": "dull",
+      "focusWord": "dull",
+      "sentence": "The lecture was dull.",
+      "chinese": "dull = 乏味的；讲座很乏味。"
+    },
+    {
+      "term": "duty-free",
+      "focusWord": "duty-free",
+      "sentence": "She bought duty-free perfume at the airport.",
+      "chinese": "duty-free = 免税的；她在机场买了免税香水。"
+    },
+    {
+      "term": "eastern",
+      "focusWord": "eastern",
+      "sentence": "The eastern gate opens first.",
+      "chinese": "eastern = 东部的；东门最先开放。"
+    },
+    {
+      "term": "easy",
+      "focusWord": "easy",
+      "sentence": "This question is easy.",
+      "chinese": "easy = 容易的；这个问题很容易。"
+    },
+    {
+      "term": "easygoing",
+      "focusWord": "easygoing",
+      "sentence": "Our new teacher is easygoing.",
+      "chinese": "easygoing = 随和的；我们的新老师很随和。"
+    },
+    {
+      "term": "efficient",
+      "focusWord": "efficient",
+      "sentence": "The efficient system saves time.",
+      "chinese": "efficient = 高效的；高效的系统节省时间。"
+    },
+    {
+      "term": "elder",
+      "focusWord": "elder",
+      "sentence": "My elder brother studies medicine.",
+      "chinese": "elder = 年长的；我的哥哥学医。"
+    },
+    {
+      "term": "elderly",
+      "focusWord": "elderly",
+      "sentence": "An elderly woman sat near the door.",
+      "chinese": "elderly = 年老的；一位老妇人坐在门附近。"
+    },
+    {
+      "term": "electric",
+      "focusWord": "electric",
+      "sentence": "The electric car is quiet.",
+      "chinese": "electric = 电动的；这辆电动车很安静。"
+    },
+    {
+      "term": "electrical",
+      "focusWord": "electrical",
+      "sentence": "The electrical equipment must stay dry.",
+      "chinese": "electrical = 电气的；电气设备必须保持干燥。"
+    },
+    {
+      "term": "empty",
+      "focusWord": "empty",
+      "sentence": "The bottle was empty.",
+      "chinese": "empty = 空的；瓶子是空的。"
+    },
+    {
+      "term": "engaged",
+      "focusWord": "engaged",
+      "sentence": "My cousin is engaged to a doctor.",
+      "chinese": "engaged = 订婚的；我的表姐和一名医生订婚了。"
+    },
+    {
+      "term": "enjoyable",
+      "focusWord": "enjoyable",
+      "sentence": "The trip was enjoyable.",
+      "chinese": "enjoyable = 令人愉快的；这次旅行令人愉快。"
+    },
+    {
+      "term": "enormous",
+      "focusWord": "enormous",
+      "sentence": "An enormous ship entered the port.",
+      "chinese": "enormous = 巨大的；一艘巨大的船驶入港口。"
+    },
+    {
+      "term": "equal",
+      "focusWord": "equal",
+      "sentence": "The two teams had equal scores.",
+      "chinese": "equal = 相等的；两队得分相等。"
+    },
+    {
+      "term": "essential",
+      "focusWord": "essential",
+      "sentence": "Water is essential for life.",
+      "chinese": "essential = 必要的；水对生命是必要的。"
+    },
+    {
+      "term": "exact",
+      "focusWord": "exact",
+      "sentence": "Tell me the exact time.",
+      "chinese": "exact = 精确的；告诉我精确时间。"
+    },
+    {
+      "term": "excellent",
+      "focusWord": "excellent",
+      "sentence": "Her English is excellent.",
+      "chinese": "excellent = 优秀的；她的英语很优秀。"
+    }
+  ]
+}

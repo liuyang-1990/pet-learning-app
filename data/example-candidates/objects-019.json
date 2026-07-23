@@ -1,0 +1,114 @@
+{
+  "batchId": "objects-019",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "wetsuit / wet suit",
+      "focusWord": "wetsuit",
+      "sentence": "The surfer wore a black wetsuit.",
+      "chinese": "wetsuit = 潜水服；冲浪者穿着黑色潜水服。"
+    },
+    {
+      "term": "whale",
+      "focusWord": "whale",
+      "sentence": "A whale rose beside the boat.",
+      "chinese": "whale = 鲸；一头鲸在船旁浮出水面。"
+    },
+    {
+      "term": "wheel",
+      "focusWord": "wheel",
+      "sentence": "The wheel of my bike is bent.",
+      "chinese": "wheel = 轮子；我的自行车轮子弯了。"
+    },
+    {
+      "term": "wheelchair",
+      "focusWord": "wheelchair",
+      "sentence": "The museum entrance is wide enough for a wheelchair.",
+      "chinese": "wheelchair = 轮椅；博物馆入口宽到足够轮椅通过。"
+    },
+    {
+      "term": "windscreen",
+      "focusWord": "windscreen",
+      "sentence": "Rain covered the car windscreen.",
+      "chinese": "windscreen = 挡风玻璃；雨水覆盖了汽车挡风玻璃。"
+    },
+    {
+      "term": "windsurfing",
+      "focusWord": "windsurfing",
+      "sentence": "Windsurfing is popular on this lake.",
+      "chinese": "windsurfing = 风帆冲浪；风帆冲浪在这个湖上很受欢迎。"
+    },
+    {
+      "term": "wing",
+      "focusWord": "wing",
+      "sentence": "The bird hurt one wing.",
+      "chinese": "wing = 翅膀；那只鸟伤了一只翅膀。"
+    },
+    {
+      "term": "winner",
+      "focusWord": "winner",
+      "sentence": "The winner received a silver cup.",
+      "chinese": "winner = 获胜者；获胜者得到了一只银杯。"
+    },
+    {
+      "term": "workout",
+      "focusWord": "workout",
+      "sentence": "The short workout made me tired.",
+      "chinese": "workout = 锻炼；短时间锻炼让我累了。"
+    },
+    {
+      "term": "worry",
+      "focusWord": "worry",
+      "sentence": "Money was her main worry.",
+      "chinese": "worry = 担心的事；钱是她主要担心的事。"
+    },
+    {
+      "term": "writer",
+      "focusWord": "writer",
+      "sentence": "The writer signed my book.",
+      "chinese": "writer = 作家；作家在我的书上签了名。"
+    },
+    {
+      "term": "writing",
+      "focusWord": "writing",
+      "sentence": "Her writing is clear and neat.",
+      "chinese": "writing = 字迹；她的字迹清楚整洁。"
+    },
+    {
+      "term": "yard",
+      "focusWord": "yard",
+      "sentence": "The children played in the yard.",
+      "chinese": "yard = 院子；孩子们在院子里玩。"
+    },
+    {
+      "term": "yogurt",
+      "focusWord": "yogurt",
+      "sentence": "I ate yogurt with fruit.",
+      "chinese": "yogurt = 酸奶；我吃了水果酸奶。"
+    },
+    {
+      "term": "youth",
+      "focusWord": "youth",
+      "sentence": "The club works with local youth.",
+      "chinese": "youth = 青年；这个俱乐部与当地青年合作。"
+    },
+    {
+      "term": "zero",
+      "focusWord": "zero",
+      "sentence": "The score was zero at half-time.",
+      "chinese": "zero = 零；半场时比分是零。"
+    },
+    {
+      "term": "zone",
+      "focusWord": "zone",
+      "sentence": "This is a quiet zone.",
+      "chinese": "zone = 区域；这是安静区域。"
+    },
+    {
+      "term": "zoo",
+      "focusWord": "zoo",
+      "sentence": "The zoo has two new penguins.",
+      "chinese": "zoo = 动物园；动物园有两只新企鹅。"
+    }
+  ]
+}

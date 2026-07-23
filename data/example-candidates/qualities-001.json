@@ -1,0 +1,306 @@
+{
+  "batchId": "qualities-001",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "absent",
+      "focusWord": "absent",
+      "sentence": "The absent student missed the test.",
+      "chinese": "absent = 缺席的；缺席的学生错过了考试。"
+    },
+    {
+      "term": "acceptable",
+      "focusWord": "acceptable",
+      "sentence": "This answer is acceptable.",
+      "chinese": "acceptable = 可接受的；这个答案可以接受。"
+    },
+    {
+      "term": "accurate",
+      "focusWord": "accurate",
+      "sentence": "The map is accurate.",
+      "chinese": "accurate = 准确的；这张地图很准确。"
+    },
+    {
+      "term": "active",
+      "focusWord": "active",
+      "sentence": "My grandfather is still active.",
+      "chinese": "active = 活跃的；我的祖父仍然很活跃。"
+    },
+    {
+      "term": "advanced",
+      "focusWord": "advanced",
+      "sentence": "She joined an advanced English class.",
+      "chinese": "advanced = 高级的；她参加了高级英语班。"
+    },
+    {
+      "term": "alive",
+      "focusWord": "alive",
+      "sentence": "The fish was still alive.",
+      "chinese": "alive = 活着的；那条鱼还活着。"
+    },
+    {
+      "term": "all right / alright",
+      "focusWord": "alright",
+      "sentence": "Don't worry; everything is alright.",
+      "chinese": "alright = 没问题；别担心，一切都没问题。"
+    },
+    {
+      "term": "ancient",
+      "focusWord": "ancient",
+      "sentence": "We visited an ancient temple.",
+      "chinese": "ancient = 古老的；我们参观了一座古老的寺庙。"
+    },
+    {
+      "term": "annual",
+      "focusWord": "annual",
+      "sentence": "The annual school concert is in May.",
+      "chinese": "annual = 年度的；学校年度音乐会在五月举行。"
+    },
+    {
+      "term": "antique",
+      "focusWord": "antique",
+      "sentence": "She bought an antique clock.",
+      "chinese": "antique = 古董的；她买了一个古董钟。"
+    },
+    {
+      "term": "asleep",
+      "focusWord": "asleep",
+      "sentence": "The baby is asleep.",
+      "chinese": "asleep = 睡着的；宝宝睡着了。"
+    },
+    {
+      "term": "attractive",
+      "focusWord": "attractive",
+      "sentence": "The poster has an attractive design.",
+      "chinese": "attractive = 有吸引力的；这张海报设计得很有吸引力。"
+    },
+    {
+      "term": "available",
+      "focusWord": "available",
+      "sentence": "Tickets are available online.",
+      "chinese": "available = 可获得的；门票可以在网上买到。"
+    },
+    {
+      "term": "awake",
+      "focusWord": "awake",
+      "sentence": "I was awake at midnight.",
+      "chinese": "awake = 醒着的；午夜时我还醒着。"
+    },
+    {
+      "term": "awesome",
+      "focusWord": "awesome",
+      "sentence": "The view from the hill was awesome.",
+      "chinese": "awesome = 极好的；山上的景色极好。"
+    },
+    {
+      "term": "bad",
+      "focusWord": "bad",
+      "sentence": "The weather was bad yesterday.",
+      "chinese": "bad = 糟糕的；昨天天气很糟糕。"
+    },
+    {
+      "term": "bald",
+      "focusWord": "bald",
+      "sentence": "The bald man wore a hat.",
+      "chinese": "bald = 秃头的；那个秃头男人戴着帽子。"
+    },
+    {
+      "term": "basic",
+      "focusWord": "basic",
+      "sentence": "This course teaches basic grammar.",
+      "chinese": "basic = 基本的；这门课程教授基本语法。"
+    },
+    {
+      "term": "beautiful",
+      "focusWord": "beautiful",
+      "sentence": "The garden is beautiful in spring.",
+      "chinese": "beautiful = 美丽的；春天的花园很美。"
+    },
+    {
+      "term": "best",
+      "focusWord": "best",
+      "sentence": "This is the best answer.",
+      "chinese": "best = 最好的；这是最好的答案。"
+    },
+    {
+      "term": "better",
+      "focusWord": "better",
+      "sentence": "She feels better today.",
+      "chinese": "better = 更好的；她今天感觉好多了。"
+    },
+    {
+      "term": "big",
+      "focusWord": "big",
+      "sentence": "They live in a big house.",
+      "chinese": "big = 大的；他们住在一所大房子里。"
+    },
+    {
+      "term": "bitter",
+      "focusWord": "bitter",
+      "sentence": "The coffee tastes bitter.",
+      "chinese": "bitter = 苦的；这杯咖啡尝起来很苦。"
+    },
+    {
+      "term": "black",
+      "focusWord": "black",
+      "sentence": "She wore a black coat.",
+      "chinese": "black = 黑色的；她穿了一件黑色外套。"
+    },
+    {
+      "term": "blind",
+      "focusWord": "blind",
+      "sentence": "The blind singer performed beautifully.",
+      "chinese": "blind = 失明的；那位失明的歌手表演得很美。"
+    },
+    {
+      "term": "blond",
+      "focusWord": "blond",
+      "sentence": "The blond child waved at us.",
+      "chinese": "blond = 金发的；那个金发孩子向我们挥手。"
+    },
+    {
+      "term": "blue",
+      "focusWord": "blue",
+      "sentence": "He chose a blue shirt.",
+      "chinese": "blue = 蓝色的；他选了一件蓝色衬衫。"
+    },
+    {
+      "term": "boiled",
+      "focusWord": "boiled",
+      "sentence": "We ate boiled potatoes.",
+      "chinese": "boiled = 煮熟的；我们吃了煮熟的土豆。"
+    },
+    {
+      "term": "bold",
+      "focusWord": "bold",
+      "sentence": "The bold title was easy to read.",
+      "chinese": "bold = 粗体的；粗体标题很容易阅读。"
+    },
+    {
+      "term": "born",
+      "focusWord": "born",
+      "sentence": "She was born in April.",
+      "chinese": "born = 出生的；她出生在四月。"
+    },
+    {
+      "term": "bossy",
+      "focusWord": "bossy",
+      "sentence": "His bossy sister told everyone what to do.",
+      "chinese": "bossy = 专横的；他专横的姐姐指挥每个人做事。"
+    },
+    {
+      "term": "bottom",
+      "focusWord": "bottom",
+      "sentence": "Sign on the bottom line.",
+      "chinese": "bottom = 底部的；在底部那一行签名。"
+    },
+    {
+      "term": "brand new",
+      "focusWord": "brand new",
+      "sentence": "She bought a brand new bike.",
+      "chinese": "brand new = 崭新的；她买了一辆崭新的自行车。"
+    },
+    {
+      "term": "brief",
+      "focusWord": "brief",
+      "sentence": "The teacher gave a brief explanation.",
+      "chinese": "brief = 简短的；老师做了简短的解释。"
+    },
+    {
+      "term": "brilliant",
+      "focusWord": "brilliant",
+      "sentence": "His idea was brilliant.",
+      "chinese": "brilliant = 出色的；他的想法很出色。"
+    },
+    {
+      "term": "broad",
+      "focusWord": "broad",
+      "sentence": "A broad path led to the lake.",
+      "chinese": "broad = 宽阔的；一条宽阔的小路通向湖边。"
+    },
+    {
+      "term": "broken",
+      "focusWord": "broken",
+      "sentence": "The broken chair was in the corner.",
+      "chinese": "broken = 坏了的；坏椅子在角落里。"
+    },
+    {
+      "term": "brown",
+      "focusWord": "brown",
+      "sentence": "The dog has brown ears.",
+      "chinese": "brown = 棕色的；这只狗有棕色耳朵。"
+    },
+    {
+      "term": "burning",
+      "focusWord": "burning",
+      "sentence": "The burning candle lit the room.",
+      "chinese": "burning = 燃烧的；燃烧的蜡烛照亮了房间。"
+    },
+    {
+      "term": "busy",
+      "focusWord": "busy",
+      "sentence": "The cafe was busy at lunchtime.",
+      "chinese": "busy = 忙碌的；午餐时间咖啡馆很忙。"
+    },
+    {
+      "term": "capital",
+      "focusWord": "capital",
+      "sentence": "London is the capital city of the UK.",
+      "chinese": "capital = 首都的；伦敦是英国的首都城市。"
+    },
+    {
+      "term": "cardboard",
+      "focusWord": "cardboard",
+      "sentence": "The cardboard box was light.",
+      "chinese": "cardboard = 纸板的；这个纸板箱很轻。"
+    },
+    {
+      "term": "careful",
+      "focusWord": "careful",
+      "sentence": "Be careful on the icy road.",
+      "chinese": "careful = 小心的；在结冰的路上要小心。"
+    },
+    {
+      "term": "careless",
+      "focusWord": "careless",
+      "sentence": "A careless mistake cost him a mark.",
+      "chinese": "careless = 粗心的；一个粗心的错误让他丢了一分。"
+    },
+    {
+      "term": "casual",
+      "focusWord": "casual",
+      "sentence": "Wear casual clothes to the picnic.",
+      "chinese": "casual = 休闲的；野餐时穿休闲衣服。"
+    },
+    {
+      "term": "central",
+      "focusWord": "central",
+      "sentence": "Our hotel is in a central area.",
+      "chinese": "central = 中心的；我们的酒店在中心区域。"
+    },
+    {
+      "term": "certain",
+      "focusWord": "certain",
+      "sentence": "I am certain that the shop is open.",
+      "chinese": "certain = 确信的；我确信商店开着。"
+    },
+    {
+      "term": "challenging",
+      "focusWord": "challenging",
+      "sentence": "The mountain walk was challenging.",
+      "chinese": "challenging = 有挑战性的；这次山路徒步很有挑战性。"
+    },
+    {
+      "term": "charming",
+      "focusWord": "charming",
+      "sentence": "The village has a charming square.",
+      "chinese": "charming = 迷人的；这个村庄有一个迷人的广场。"
+    },
+    {
+      "term": "clever",
+      "focusWord": "clever",
+      "sentence": "The clever child solved the puzzle.",
+      "chinese": "clever = 聪明的；聪明的孩子解开了谜题。"
+    }
+  ]
+}
