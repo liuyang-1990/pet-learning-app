@@ -1,56 +1,306 @@
 {
   "batchId": "objects-015",
-  "status": "draft",
+  "status": "promoted",
   "entries": [
-    { "term": "seat belt", "focusWord": "seat belt", "sentence": "Please fasten your seat belt before the car moves.", "chinese": "seat belt = 安全带；汽车开动前请系好安全带。" },
-    { "term": "selfie", "focusWord": "selfie", "sentence": "She took a selfie at the concert.", "chinese": "selfie = 自拍照；她在音乐会上拍了一张自拍照。" },
-    { "term": "sense", "focusWord": "sense", "sentence": "This map gave me a sense of direction.", "chinese": "sense = 感觉；这张地图给了我方向感。" },
-    { "term": "server", "focusWord": "server", "sentence": "The server brought our drinks.", "chinese": "server = 服务员；服务员端来了我们的饮料。" },
-    { "term": "service", "focusWord": "service", "sentence": "The restaurant service was quick.", "chinese": "service = 服务；这家餐馆的服务很快。" },
-    { "term": "session", "focusWord": "session", "sentence": "The training session lasted an hour.", "chinese": "session = 一节课；这节训练课持续了一小时。" },
-    { "term": "sex", "focusWord": "sex", "sentence": "The form asks for your name and sex.", "chinese": "sex = 性别；表格要求填写你的姓名和性别。" },
-    { "term": "shade", "focusWord": "shade", "sentence": "We sat in the shade of a tree.", "chinese": "shade = 阴凉处；我们坐在树荫下。" },
-    { "term": "shadow", "focusWord": "shadow", "sentence": "The lamp made a long shadow.", "chinese": "shadow = 影子；灯投下了长长的影子。" },
-    { "term": "shame", "focusWord": "shame", "sentence": "It was a shame to miss the show.", "chinese": "shame = 遗憾；错过演出真是遗憾。" },
-    { "term": "shampoo", "focusWord": "shampoo", "sentence": "This shampoo smells of lemon.", "chinese": "shampoo = 洗发水；这种洗发水有柠檬味。" },
-    { "term": "shark", "focusWord": "shark", "sentence": "A shark swam near the boat.", "chinese": "shark = 鲨鱼；一条鲨鱼游到船附近。" },
-    { "term": "sheep", "focusWord": "sheep", "sentence": "The sheep were eating grass.", "chinese": "sheep = 羊；羊群正在吃草。" },
-    { "term": "sheet", "focusWord": "sheet", "sentence": "Put a clean sheet on the bed.", "chinese": "sheet = 床单；把干净床单铺在床上。" },
-    { "term": "shock", "focusWord": "shock", "sentence": "The bad news was a shock.", "chinese": "shock = 震惊；这个坏消息令人震惊。" },
-    { "term": "shopper", "focusWord": "shopper", "sentence": "The shopper carried two bags.", "chinese": "shopper = 购物者；购物者提着两个袋子。" },
-    { "term": "shore", "focusWord": "shore", "sentence": "We walked along the shore.", "chinese": "shore = 岸边；我们沿着岸边散步。" },
-    { "term": "shorts", "focusWord": "shorts", "sentence": "He wore shorts on the beach.", "chinese": "shorts = 短裤；他在海滩上穿着短裤。" },
-    { "term": "shout", "focusWord": "shout", "sentence": "We heard a shout from the garden.", "chinese": "shout = 喊声；我们听见花园里传来一声喊叫。" },
-    { "term": "side", "focusWord": "side", "sentence": "Park on the left side of the road.", "chinese": "side = 一边；把车停在路的左边。" },
-    { "term": "sight", "focusWord": "sight", "sentence": "The castle was an amazing sight.", "chinese": "sight = 景象；那座城堡是一幅令人惊叹的景象。" },
-    { "term": "sign", "focusWord": "sign", "sentence": "The sign says no parking.", "chinese": "sign = 标志牌；标志牌上写着禁止停车。" },
-    { "term": "signal", "focusWord": "signal", "sentence": "Wait for the traffic signal.", "chinese": "signal = 信号灯；等待交通信号灯。" },
-    { "term": "signature", "focusWord": "signature", "sentence": "Write your signature at the bottom.", "chinese": "signature = 签名；在底部写下你的签名。" },
-    { "term": "signpost", "focusWord": "signpost", "sentence": "The signpost points to the museum.", "chinese": "signpost = 路标；路标指向博物馆。" },
-    { "term": "singer", "focusWord": "singer", "sentence": "The singer had a clear voice.", "chinese": "singer = 歌手；那位歌手声音清亮。" },
-    { "term": "singing", "focusWord": "singing", "sentence": "Her singing filled the hall.", "chinese": "singing = 歌唱；她的歌声充满了大厅。" },
-    { "term": "sink", "focusWord": "sink", "sentence": "Wash your hands at the sink.", "chinese": "sink = 水槽；在水槽边洗手。" },
-    { "term": "sir", "focusWord": "sir", "sentence": "Excuse me, sir, is this your bag?", "chinese": "sir = 先生；先生，打扰一下，这是您的包吗？" },
-    { "term": "site", "focusWord": "site", "sentence": "The building site was closed.", "chinese": "site = 工地；建筑工地关闭了。" },
-    { "term": "skateboard", "focusWord": "skateboard", "sentence": "His skateboard is under the stairs.", "chinese": "skateboard = 滑板；他的滑板在楼梯下面。" },
-    { "term": "skateboarding", "focusWord": "skateboarding", "sentence": "Skateboarding is popular in the park.", "chinese": "skateboarding = 滑板运动；滑板运动在公园里很受欢迎。" },
-    { "term": "ski", "focusWord": "ski", "sentence": "One ski was beside the door.", "chinese": "ski = 滑雪板；一只滑雪板在门旁边。" },
-    { "term": "skin", "focusWord": "skin", "sentence": "Use cream on dry skin.", "chinese": "skin = 皮肤；在干燥的皮肤上涂乳霜。" },
-    { "term": "sleep", "focusWord": "sleep", "sentence": "A good sleep helped her feel better.", "chinese": "sleep = 睡眠；好好睡一觉让她感觉好多了。" },
-    { "term": "sleeve", "focusWord": "sleeve", "sentence": "The sleeve of my jacket is torn.", "chinese": "sleeve = 袖子；我夹克的袖子破了。" },
-    { "term": "slice", "focusWord": "slice", "sentence": "He ate a slice of pizza.", "chinese": "slice = 片；他吃了一片披萨。" },
-    { "term": "slide", "focusWord": "slide", "sentence": "The children played on the slide.", "chinese": "slide = 滑梯；孩子们在滑梯上玩。" },
-    { "term": "smartphone", "focusWord": "smartphone", "sentence": "Her smartphone was in her pocket.", "chinese": "smartphone = 智能手机；她的智能手机在口袋里。" },
-    { "term": "smell", "focusWord": "smell", "sentence": "The smell of fresh bread filled the shop.", "chinese": "smell = 气味；新鲜面包的气味充满了商店。" },
-    { "term": "smile", "focusWord": "smile", "sentence": "Her smile made everyone feel welcome.", "chinese": "smile = 微笑；她的微笑让大家觉得受欢迎。" },
-    { "term": "smoke", "focusWord": "smoke", "sentence": "Smoke came from the kitchen.", "chinese": "smoke = 烟；烟从厨房里冒出来。" },
-    { "term": "smoking", "focusWord": "smoking", "sentence": "Smoking is not allowed here.", "chinese": "smoking = 吸烟；这里不允许吸烟。" },
-    { "term": "snack", "focusWord": "snack", "sentence": "I packed a snack for the journey.", "chinese": "snack = 小吃；我为旅途装了一份小吃。" },
-    { "term": "snowboard", "focusWord": "snowboard", "sentence": "His snowboard was bright green.", "chinese": "snowboard = 滑雪板；他的单板滑雪板是亮绿色的。" },
-    { "term": "snowboarding", "focusWord": "snowboarding", "sentence": "Snowboarding looks exciting.", "chinese": "snowboarding = 单板滑雪；单板滑雪看起来很刺激。" },
-    { "term": "snowfall", "focusWord": "snowfall", "sentence": "Heavy snowfall closed the road.", "chinese": "snowfall = 降雪；大雪封闭了道路。" },
-    { "term": "soap", "focusWord": "soap", "sentence": "There is soap beside the sink.", "chinese": "soap = 肥皂；水槽旁边有肥皂。" },
-    { "term": "soap opera", "focusWord": "soap opera", "sentence": "My aunt watches a soap opera every evening.", "chinese": "soap opera = 肥皂剧；我阿姨每天晚上看一部肥皂剧。" },
-    { "term": "soccer", "focusWord": "soccer", "sentence": "Soccer is played by many children.", "chinese": "soccer = 足球；许多孩子踢足球。" }
+    {
+      "term": "seat belt",
+      "focusWord": "seat belt",
+      "sentence": "Please fasten your seat belt before the car moves.",
+      "chinese": "seat belt = 安全带；汽车开动前请系好安全带。"
+    },
+    {
+      "term": "selfie",
+      "focusWord": "selfie",
+      "sentence": "She took a selfie at the concert.",
+      "chinese": "selfie = 自拍照；她在音乐会上拍了一张自拍照。"
+    },
+    {
+      "term": "sense",
+      "focusWord": "sense",
+      "sentence": "This map gave me a sense of direction.",
+      "chinese": "sense = 感觉；这张地图给了我方向感。"
+    },
+    {
+      "term": "server",
+      "focusWord": "server",
+      "sentence": "The server brought our drinks.",
+      "chinese": "server = 服务员；服务员端来了我们的饮料。"
+    },
+    {
+      "term": "service",
+      "focusWord": "service",
+      "sentence": "The restaurant service was quick.",
+      "chinese": "service = 服务；这家餐馆的服务很快。"
+    },
+    {
+      "term": "session",
+      "focusWord": "session",
+      "sentence": "The training session lasted an hour.",
+      "chinese": "session = 一节课；这节训练课持续了一小时。"
+    },
+    {
+      "term": "sex",
+      "focusWord": "sex",
+      "sentence": "The form asks for your name and sex.",
+      "chinese": "sex = 性别；表格要求填写你的姓名和性别。"
+    },
+    {
+      "term": "shade",
+      "focusWord": "shade",
+      "sentence": "We sat in the shade of a tree.",
+      "chinese": "shade = 阴凉处；我们坐在树荫下。"
+    },
+    {
+      "term": "shadow",
+      "focusWord": "shadow",
+      "sentence": "The lamp made a long shadow.",
+      "chinese": "shadow = 影子；灯投下了长长的影子。"
+    },
+    {
+      "term": "shame",
+      "focusWord": "shame",
+      "sentence": "It was a shame to miss the show.",
+      "chinese": "shame = 遗憾；错过演出真是遗憾。"
+    },
+    {
+      "term": "shampoo",
+      "focusWord": "shampoo",
+      "sentence": "This shampoo smells of lemon.",
+      "chinese": "shampoo = 洗发水；这种洗发水有柠檬味。"
+    },
+    {
+      "term": "shark",
+      "focusWord": "shark",
+      "sentence": "A shark swam near the boat.",
+      "chinese": "shark = 鲨鱼；一条鲨鱼游到船附近。"
+    },
+    {
+      "term": "sheep",
+      "focusWord": "sheep",
+      "sentence": "The sheep were eating grass.",
+      "chinese": "sheep = 羊；羊群正在吃草。"
+    },
+    {
+      "term": "sheet",
+      "focusWord": "sheet",
+      "sentence": "Put a clean sheet on the bed.",
+      "chinese": "sheet = 床单；把干净床单铺在床上。"
+    },
+    {
+      "term": "shock",
+      "focusWord": "shock",
+      "sentence": "The bad news was a shock.",
+      "chinese": "shock = 震惊；这个坏消息令人震惊。"
+    },
+    {
+      "term": "shopper",
+      "focusWord": "shopper",
+      "sentence": "The shopper carried two bags.",
+      "chinese": "shopper = 购物者；购物者提着两个袋子。"
+    },
+    {
+      "term": "shore",
+      "focusWord": "shore",
+      "sentence": "We walked along the shore.",
+      "chinese": "shore = 岸边；我们沿着岸边散步。"
+    },
+    {
+      "term": "shorts",
+      "focusWord": "shorts",
+      "sentence": "He wore shorts on the beach.",
+      "chinese": "shorts = 短裤；他在海滩上穿着短裤。"
+    },
+    {
+      "term": "shout",
+      "focusWord": "shout",
+      "sentence": "We heard a shout from the garden.",
+      "chinese": "shout = 喊声；我们听见花园里传来一声喊叫。"
+    },
+    {
+      "term": "side",
+      "focusWord": "side",
+      "sentence": "Park on the left side of the road.",
+      "chinese": "side = 一边；把车停在路的左边。"
+    },
+    {
+      "term": "sight",
+      "focusWord": "sight",
+      "sentence": "The castle was an amazing sight.",
+      "chinese": "sight = 景象；那座城堡是一幅令人惊叹的景象。"
+    },
+    {
+      "term": "sign",
+      "focusWord": "sign",
+      "sentence": "The sign says no parking.",
+      "chinese": "sign = 标志牌；标志牌上写着禁止停车。"
+    },
+    {
+      "term": "signal",
+      "focusWord": "signal",
+      "sentence": "Wait for the traffic signal.",
+      "chinese": "signal = 信号灯；等待交通信号灯。"
+    },
+    {
+      "term": "signature",
+      "focusWord": "signature",
+      "sentence": "Write your signature at the bottom.",
+      "chinese": "signature = 签名；在底部写下你的签名。"
+    },
+    {
+      "term": "signpost",
+      "focusWord": "signpost",
+      "sentence": "The signpost points to the museum.",
+      "chinese": "signpost = 路标；路标指向博物馆。"
+    },
+    {
+      "term": "singer",
+      "focusWord": "singer",
+      "sentence": "The singer had a clear voice.",
+      "chinese": "singer = 歌手；那位歌手声音清亮。"
+    },
+    {
+      "term": "singing",
+      "focusWord": "singing",
+      "sentence": "Her singing filled the hall.",
+      "chinese": "singing = 歌唱；她的歌声充满了大厅。"
+    },
+    {
+      "term": "sink",
+      "focusWord": "sink",
+      "sentence": "Wash your hands at the sink.",
+      "chinese": "sink = 水槽；在水槽边洗手。"
+    },
+    {
+      "term": "sir",
+      "focusWord": "sir",
+      "sentence": "Excuse me, sir, is this your bag?",
+      "chinese": "sir = 先生；先生，打扰一下，这是您的包吗？"
+    },
+    {
+      "term": "site",
+      "focusWord": "site",
+      "sentence": "The building site was closed.",
+      "chinese": "site = 工地；建筑工地关闭了。"
+    },
+    {
+      "term": "skateboard",
+      "focusWord": "skateboard",
+      "sentence": "His skateboard is under the stairs.",
+      "chinese": "skateboard = 滑板；他的滑板在楼梯下面。"
+    },
+    {
+      "term": "skateboarding",
+      "focusWord": "skateboarding",
+      "sentence": "Skateboarding is popular in the park.",
+      "chinese": "skateboarding = 滑板运动；滑板运动在公园里很受欢迎。"
+    },
+    {
+      "term": "ski",
+      "focusWord": "ski",
+      "sentence": "One ski was beside the door.",
+      "chinese": "ski = 滑雪板；一只滑雪板在门旁边。"
+    },
+    {
+      "term": "skin",
+      "focusWord": "skin",
+      "sentence": "Use cream on dry skin.",
+      "chinese": "skin = 皮肤；在干燥的皮肤上涂乳霜。"
+    },
+    {
+      "term": "sleep",
+      "focusWord": "sleep",
+      "sentence": "A good sleep helped her feel better.",
+      "chinese": "sleep = 睡眠；好好睡一觉让她感觉好多了。"
+    },
+    {
+      "term": "sleeve",
+      "focusWord": "sleeve",
+      "sentence": "The sleeve of my jacket is torn.",
+      "chinese": "sleeve = 袖子；我夹克的袖子破了。"
+    },
+    {
+      "term": "slice",
+      "focusWord": "slice",
+      "sentence": "He ate a slice of pizza.",
+      "chinese": "slice = 片；他吃了一片披萨。"
+    },
+    {
+      "term": "slide",
+      "focusWord": "slide",
+      "sentence": "The children played on the slide.",
+      "chinese": "slide = 滑梯；孩子们在滑梯上玩。"
+    },
+    {
+      "term": "smartphone",
+      "focusWord": "smartphone",
+      "sentence": "Her smartphone was in her pocket.",
+      "chinese": "smartphone = 智能手机；她的智能手机在口袋里。"
+    },
+    {
+      "term": "smell",
+      "focusWord": "smell",
+      "sentence": "The smell of fresh bread filled the shop.",
+      "chinese": "smell = 气味；新鲜面包的气味充满了商店。"
+    },
+    {
+      "term": "smile",
+      "focusWord": "smile",
+      "sentence": "Her smile made everyone feel welcome.",
+      "chinese": "smile = 微笑；她的微笑让大家觉得受欢迎。"
+    },
+    {
+      "term": "smoke",
+      "focusWord": "smoke",
+      "sentence": "Smoke came from the kitchen.",
+      "chinese": "smoke = 烟；烟从厨房里冒出来。"
+    },
+    {
+      "term": "smoking",
+      "focusWord": "smoking",
+      "sentence": "Smoking is not allowed here.",
+      "chinese": "smoking = 吸烟；这里不允许吸烟。"
+    },
+    {
+      "term": "snack",
+      "focusWord": "snack",
+      "sentence": "I packed a snack for the journey.",
+      "chinese": "snack = 小吃；我为旅途装了一份小吃。"
+    },
+    {
+      "term": "snowboard",
+      "focusWord": "snowboard",
+      "sentence": "His snowboard was bright green.",
+      "chinese": "snowboard = 滑雪板；他的单板滑雪板是亮绿色的。"
+    },
+    {
+      "term": "snowboarding",
+      "focusWord": "snowboarding",
+      "sentence": "Snowboarding looks exciting.",
+      "chinese": "snowboarding = 单板滑雪；单板滑雪看起来很刺激。"
+    },
+    {
+      "term": "snowfall",
+      "focusWord": "snowfall",
+      "sentence": "Heavy snowfall closed the road.",
+      "chinese": "snowfall = 降雪；大雪封闭了道路。"
+    },
+    {
+      "term": "soap",
+      "focusWord": "soap",
+      "sentence": "There is soap beside the sink.",
+      "chinese": "soap = 肥皂；水槽旁边有肥皂。"
+    },
+    {
+      "term": "soap opera",
+      "focusWord": "soap opera",
+      "sentence": "My aunt watches a soap opera every evening.",
+      "chinese": "soap opera = 肥皂剧；我阿姨每天晚上看一部肥皂剧。"
+    },
+    {
+      "term": "soccer",
+      "focusWord": "soccer",
+      "sentence": "Soccer is played by many children.",
+      "chinese": "soccer = 足球；许多孩子踢足球。"
+    }
   ]
 }

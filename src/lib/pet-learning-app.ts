@@ -11135,6 +11135,756 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "This seat is near the window.",
       chinese: "seat = 座位；这个座位靠近窗户。",
     },
+    seatbelt: {
+      focusWord: "seat belt",
+      sentence: "Please fasten your seat belt before the car moves.",
+      chinese: "seat belt = 安全带；汽车开动前请系好安全带。",
+    },
+    selfie: {
+      focusWord: "selfie",
+      sentence: "She took a selfie at the concert.",
+      chinese: "selfie = 自拍照；她在音乐会上拍了一张自拍照。",
+    },
+    sense: {
+      focusWord: "sense",
+      sentence: "This map gave me a sense of direction.",
+      chinese: "sense = 感觉；这张地图给了我方向感。",
+    },
+    server: {
+      focusWord: "server",
+      sentence: "The server brought our drinks.",
+      chinese: "server = 服务员；服务员端来了我们的饮料。",
+    },
+    service: {
+      focusWord: "service",
+      sentence: "The restaurant service was quick.",
+      chinese: "service = 服务；这家餐馆的服务很快。",
+    },
+    session: {
+      focusWord: "session",
+      sentence: "The training session lasted an hour.",
+      chinese: "session = 一节课；这节训练课持续了一小时。",
+    },
+    sex: {
+      focusWord: "sex",
+      sentence: "The form asks for your name and sex.",
+      chinese: "sex = 性别；表格要求填写你的姓名和性别。",
+    },
+    shade: {
+      focusWord: "shade",
+      sentence: "We sat in the shade of a tree.",
+      chinese: "shade = 阴凉处；我们坐在树荫下。",
+    },
+    shadow: {
+      focusWord: "shadow",
+      sentence: "The lamp made a long shadow.",
+      chinese: "shadow = 影子；灯投下了长长的影子。",
+    },
+    shame: {
+      focusWord: "shame",
+      sentence: "It was a shame to miss the show.",
+      chinese: "shame = 遗憾；错过演出真是遗憾。",
+    },
+    shampoo: {
+      focusWord: "shampoo",
+      sentence: "This shampoo smells of lemon.",
+      chinese: "shampoo = 洗发水；这种洗发水有柠檬味。",
+    },
+    shark: {
+      focusWord: "shark",
+      sentence: "A shark swam near the boat.",
+      chinese: "shark = 鲨鱼；一条鲨鱼游到船附近。",
+    },
+    sheep: {
+      focusWord: "sheep",
+      sentence: "The sheep were eating grass.",
+      chinese: "sheep = 羊；羊群正在吃草。",
+    },
+    sheet: {
+      focusWord: "sheet",
+      sentence: "Put a clean sheet on the bed.",
+      chinese: "sheet = 床单；把干净床单铺在床上。",
+    },
+    shock: {
+      focusWord: "shock",
+      sentence: "The bad news was a shock.",
+      chinese: "shock = 震惊；这个坏消息令人震惊。",
+    },
+    shopper: {
+      focusWord: "shopper",
+      sentence: "The shopper carried two bags.",
+      chinese: "shopper = 购物者；购物者提着两个袋子。",
+    },
+    shore: {
+      focusWord: "shore",
+      sentence: "We walked along the shore.",
+      chinese: "shore = 岸边；我们沿着岸边散步。",
+    },
+    shorts: {
+      focusWord: "shorts",
+      sentence: "He wore shorts on the beach.",
+      chinese: "shorts = 短裤；他在海滩上穿着短裤。",
+    },
+    shout: {
+      focusWord: "shout",
+      sentence: "We heard a shout from the garden.",
+      chinese: "shout = 喊声；我们听见花园里传来一声喊叫。",
+    },
+    side: {
+      focusWord: "side",
+      sentence: "Park on the left side of the road.",
+      chinese: "side = 一边；把车停在路的左边。",
+    },
+    sight: {
+      focusWord: "sight",
+      sentence: "The castle was an amazing sight.",
+      chinese: "sight = 景象；那座城堡是一幅令人惊叹的景象。",
+    },
+    sign: {
+      focusWord: "sign",
+      sentence: "The sign says no parking.",
+      chinese: "sign = 标志牌；标志牌上写着禁止停车。",
+    },
+    signal: {
+      focusWord: "signal",
+      sentence: "Wait for the traffic signal.",
+      chinese: "signal = 信号灯；等待交通信号灯。",
+    },
+    signature: {
+      focusWord: "signature",
+      sentence: "Write your signature at the bottom.",
+      chinese: "signature = 签名；在底部写下你的签名。",
+    },
+    signpost: {
+      focusWord: "signpost",
+      sentence: "The signpost points to the museum.",
+      chinese: "signpost = 路标；路标指向博物馆。",
+    },
+    singer: {
+      focusWord: "singer",
+      sentence: "The singer had a clear voice.",
+      chinese: "singer = 歌手；那位歌手声音清亮。",
+    },
+    singing: {
+      focusWord: "singing",
+      sentence: "Her singing filled the hall.",
+      chinese: "singing = 歌唱；她的歌声充满了大厅。",
+    },
+    sink: {
+      focusWord: "sink",
+      sentence: "Wash your hands at the sink.",
+      chinese: "sink = 水槽；在水槽边洗手。",
+    },
+    sir: {
+      focusWord: "sir",
+      sentence: "Excuse me, sir, is this your bag?",
+      chinese: "sir = 先生；先生，打扰一下，这是您的包吗？",
+    },
+    site: {
+      focusWord: "site",
+      sentence: "The building site was closed.",
+      chinese: "site = 工地；建筑工地关闭了。",
+    },
+    skateboard: {
+      focusWord: "skateboard",
+      sentence: "His skateboard is under the stairs.",
+      chinese: "skateboard = 滑板；他的滑板在楼梯下面。",
+    },
+    skateboarding: {
+      focusWord: "skateboarding",
+      sentence: "Skateboarding is popular in the park.",
+      chinese: "skateboarding = 滑板运动；滑板运动在公园里很受欢迎。",
+    },
+    ski: {
+      focusWord: "ski",
+      sentence: "One ski was beside the door.",
+      chinese: "ski = 滑雪板；一只滑雪板在门旁边。",
+    },
+    skin: {
+      focusWord: "skin",
+      sentence: "Use cream on dry skin.",
+      chinese: "skin = 皮肤；在干燥的皮肤上涂乳霜。",
+    },
+    sleep: {
+      focusWord: "sleep",
+      sentence: "A good sleep helped her feel better.",
+      chinese: "sleep = 睡眠；好好睡一觉让她感觉好多了。",
+    },
+    sleeve: {
+      focusWord: "sleeve",
+      sentence: "The sleeve of my jacket is torn.",
+      chinese: "sleeve = 袖子；我夹克的袖子破了。",
+    },
+    slice: {
+      focusWord: "slice",
+      sentence: "He ate a slice of pizza.",
+      chinese: "slice = 片；他吃了一片披萨。",
+    },
+    slide: {
+      focusWord: "slide",
+      sentence: "The children played on the slide.",
+      chinese: "slide = 滑梯；孩子们在滑梯上玩。",
+    },
+    smartphone: {
+      focusWord: "smartphone",
+      sentence: "Her smartphone was in her pocket.",
+      chinese: "smartphone = 智能手机；她的智能手机在口袋里。",
+    },
+    smell: {
+      focusWord: "smell",
+      sentence: "The smell of fresh bread filled the shop.",
+      chinese: "smell = 气味；新鲜面包的气味充满了商店。",
+    },
+    smile: {
+      focusWord: "smile",
+      sentence: "Her smile made everyone feel welcome.",
+      chinese: "smile = 微笑；她的微笑让大家觉得受欢迎。",
+    },
+    smoke: {
+      focusWord: "smoke",
+      sentence: "Smoke came from the kitchen.",
+      chinese: "smoke = 烟；烟从厨房里冒出来。",
+    },
+    smoking: {
+      focusWord: "smoking",
+      sentence: "Smoking is not allowed here.",
+      chinese: "smoking = 吸烟；这里不允许吸烟。",
+    },
+    snack: {
+      focusWord: "snack",
+      sentence: "I packed a snack for the journey.",
+      chinese: "snack = 小吃；我为旅途装了一份小吃。",
+    },
+    snowboard: {
+      focusWord: "snowboard",
+      sentence: "His snowboard was bright green.",
+      chinese: "snowboard = 滑雪板；他的单板滑雪板是亮绿色的。",
+    },
+    snowboarding: {
+      focusWord: "snowboarding",
+      sentence: "Snowboarding looks exciting.",
+      chinese: "snowboarding = 单板滑雪；单板滑雪看起来很刺激。",
+    },
+    snowfall: {
+      focusWord: "snowfall",
+      sentence: "Heavy snowfall closed the road.",
+      chinese: "snowfall = 降雪；大雪封闭了道路。",
+    },
+    soap: {
+      focusWord: "soap",
+      sentence: "There is soap beside the sink.",
+      chinese: "soap = 肥皂；水槽旁边有肥皂。",
+    },
+    soapopera: {
+      focusWord: "soap opera",
+      sentence: "My aunt watches a soap opera every evening.",
+      chinese: "soap opera = 肥皂剧；我阿姨每天晚上看一部肥皂剧。",
+    },
+    soccer: {
+      focusWord: "soccer",
+      sentence: "Soccer is played by many children.",
+      chinese: "soccer = 足球；许多孩子踢足球。",
+    },
+    socialmedia: {
+      focusWord: "social media",
+      sentence: "Social media helped us share the news.",
+      chinese: "social media = 社交媒体；社交媒体帮助我们分享了消息。",
+    },
+    soldier: {
+      focusWord: "soldier",
+      sentence: "The soldier guarded the bridge.",
+      chinese: "soldier = 士兵；士兵守卫着桥。",
+    },
+    solve: {
+      focusWord: "solve",
+      sentence: "We must solve this puzzle together.",
+      chinese: "solve = 解决；我们必须一起解决这个谜题。",
+    },
+    soul: {
+      focusWord: "soul",
+      sentence: "Music lifted his soul.",
+      chinese: "soul = 心灵；音乐振奋了他的心灵。",
+    },
+    sound: {
+      focusWord: "sound",
+      sentence: "The sound of rain woke me.",
+      chinese: "sound = 声音；雨声把我吵醒了。",
+    },
+    souvenir: {
+      focusWord: "souvenir",
+      sentence: "I bought a souvenir from the museum.",
+      chinese: "souvenir = 纪念品；我从博物馆买了一件纪念品。",
+    },
+    speaker: {
+      focusWord: "speaker",
+      sentence: "The speaker on my phone is broken.",
+      chinese: "speaker = 扬声器；我手机上的扬声器坏了。",
+    },
+    species: {
+      focusWord: "species",
+      sentence: "This species of bird lives near rivers.",
+      chinese: "species = 物种；这种鸟类生活在河流附近。",
+    },
+    speech: {
+      focusWord: "speech",
+      sentence: "Her speech was about clean water.",
+      chinese: "speech = 演讲；她的演讲是关于清洁用水的。",
+    },
+    speed: {
+      focusWord: "speed",
+      sentence: "The car's speed was too high.",
+      chinese: "speed = 速度；汽车的速度太快了。",
+    },
+    spice: {
+      focusWord: "spice",
+      sentence: "This spice makes the soup hot.",
+      chinese: "spice = 香料；这种香料让汤变辣。",
+    },
+    spinach: {
+      focusWord: "spinach",
+      sentence: "Spinach is good in a salad.",
+      chinese: "spinach = 菠菜；菠菜放在沙拉里很好吃。",
+    },
+    spite: {
+      focusWord: "spite",
+      sentence: "He spoke without spite.",
+      chinese: "spite = 恶意；他说话时没有恶意。",
+    },
+    spot: {
+      focusWord: "spot",
+      sentence: "There is a spot on your shirt.",
+      chinese: "spot = 斑点；你的衬衫上有一个斑点。",
+    },
+    spy: {
+      focusWord: "spy",
+      sentence: "The spy hid the message in a book.",
+      chinese: "spy = 间谍；间谍把信息藏在一本书里。",
+    },
+    squash: {
+      focusWord: "squash",
+      sentence: "We played squash after school.",
+      chinese: "squash = 壁球；放学后我们打了壁球。",
+    },
+    stadium: {
+      focusWord: "stadium",
+      sentence: "The stadium was full of fans.",
+      chinese: "stadium = 体育场；体育场里坐满了球迷。",
+    },
+    stairs: {
+      focusWord: "stairs",
+      sentence: "The stairs are next to the lift.",
+      chinese: "stairs = 楼梯；楼梯在电梯旁边。",
+    },
+    stall: {
+      focusWord: "stall",
+      sentence: "The fruit stall opened early.",
+      chinese: "stall = 摊位；水果摊很早就开了。",
+    },
+    stamp: {
+      focusWord: "stamp",
+      sentence: "Put a stamp on the envelope.",
+      chinese: "stamp = 邮票；在信封上贴一张邮票。",
+    },
+    statue: {
+      focusWord: "statue",
+      sentence: "A bronze statue stands in the square.",
+      chinese: "statue = 雕像；一座青铜雕像矗立在广场上。",
+    },
+    steak: {
+      focusWord: "steak",
+      sentence: "He ordered steak with chips.",
+      chinese: "steak = 牛排；他点了牛排配薯条。",
+    },
+    step: {
+      focusWord: "step",
+      sentence: "Watch the last step on the stairs.",
+      chinese: "step = 台阶；小心楼梯上的最后一级台阶。",
+    },
+    stick: {
+      focusWord: "stick",
+      sentence: "The dog carried a stick.",
+      chinese: "stick = 木棍；狗叼着一根木棍。",
+    },
+    stomach: {
+      focusWord: "stomach",
+      sentence: "My stomach hurt after lunch.",
+      chinese: "stomach = 胃；午饭后我的胃疼。",
+    },
+    stranger: {
+      focusWord: "stranger",
+      sentence: "A stranger asked for directions.",
+      chinese: "stranger = 陌生人；一个陌生人问路。",
+    },
+    strawberry: {
+      focusWord: "strawberry",
+      sentence: "She put a strawberry on the cake.",
+      chinese: "strawberry = 草莓；她把一颗草莓放在蛋糕上。",
+    },
+    stream: {
+      focusWord: "stream",
+      sentence: "A small stream ran behind the house.",
+      chinese: "stream = 小溪；一条小溪从房子后面流过。",
+    },
+    strike: {
+      focusWord: "strike",
+      sentence: "The bus strike lasted two days.",
+      chinese: "strike = 罢工；公交罢工持续了两天。",
+    },
+    stripe: {
+      focusWord: "stripe",
+      sentence: "The shirt has a blue stripe.",
+      chinese: "stripe = 条纹；这件衬衫有一条蓝色条纹。",
+    },
+    studio: {
+      focusWord: "studio",
+      sentence: "The band recorded music in a studio.",
+      chinese: "studio = 录音室；乐队在录音室录制音乐。",
+    },
+    stuff: {
+      focusWord: "stuff",
+      sentence: "Put your stuff in this bag.",
+      chinese: "stuff = 东西；把你的东西放进这个包里。",
+    },
+    style: {
+      focusWord: "style",
+      sentence: "I like the style of this jacket.",
+      chinese: "style = 款式；我喜欢这件夹克的款式。",
+    },
+    success: {
+      focusWord: "success",
+      sentence: "The concert was a great success.",
+      chinese: "success = 成功；音乐会非常成功。",
+    },
+    suit: {
+      focusWord: "suit",
+      sentence: "He wore a dark suit to the interview.",
+      chinese: "suit = 西装；他穿深色西装去面试。",
+    },
+    sum: {
+      focusWord: "sum",
+      sentence: "The sum was written on the board.",
+      chinese: "sum = 算式；算式写在黑板上。",
+    },
+    sunglasses: {
+      focusWord: "sunglasses",
+      sentence: "She wore sunglasses at the beach.",
+      chinese: "sunglasses = 太阳镜；她在海滩上戴着太阳镜。",
+    },
+    sunrise: {
+      focusWord: "sunrise",
+      sentence: "We watched the sunrise from the hill.",
+      chinese: "sunrise = 日出；我们从山上看日出。",
+    },
+    sunset: {
+      focusWord: "sunset",
+      sentence: "The sunset turned the sky orange.",
+      chinese: "sunset = 日落；日落把天空染成橙色。",
+    },
+    sunshine: {
+      focusWord: "sunshine",
+      sentence: "The room was full of sunshine.",
+      chinese: "sunshine = 阳光；房间里充满了阳光。",
+    },
+    support: {
+      focusWord: "support",
+      sentence: "Your support helped the team.",
+      chinese: "support = 支持；你的支持帮助了团队。",
+    },
+    exams: {
+      focusWord: "exams",
+      sentence: "The exams start next Monday.",
+      chinese: "exams = 考试；考试下周一开始。",
+    },
+    supporter: {
+      focusWord: "supporter",
+      sentence: "Every supporter wore the team's scarf.",
+      chinese: "supporter = 支持者；每个支持者都戴着球队围巾。",
+    },
+    surfboard: {
+      focusWord: "surfboard",
+      sentence: "The surfboard was on the roof of the car.",
+      chinese: "surfboard = 冲浪板；冲浪板在汽车车顶上。",
+    },
+    surfing: {
+      focusWord: "surfing",
+      sentence: "Surfing is difficult in calm water.",
+      chinese: "surfing = 冲浪；在平静的水面上冲浪很难。",
+    },
+    surname: {
+      focusWord: "surname",
+      sentence: "Write your surname in capital letters.",
+      chinese: "surname = 姓；用大写字母写下你的姓。",
+    },
+    sweater: {
+      focusWord: "sweater",
+      sentence: "This wool sweater is warm.",
+      chinese: "sweater = 毛衣；这件羊毛衫很暖和。",
+    },
+    swimmer: {
+      focusWord: "swimmer",
+      sentence: "The swimmer crossed the lake.",
+      chinese: "swimmer = 游泳者；游泳者游过了湖。",
+    },
+    switch: {
+      focusWord: "switch",
+      sentence: "Press the switch to turn on the light.",
+      chinese: "switch = 开关；按下开关打开灯。",
+    },
+    system: {
+      focusWord: "system",
+      sentence: "The new ticket system is easy to use.",
+      chinese: "system = 系统；新的售票系统很容易使用。",
+    },
+    takeaway: {
+      focusWord: "takeaway",
+      sentence: "We ordered a takeaway for dinner.",
+      chinese: "takeaway = 外卖；我们晚餐点了外卖。",
+    },
+    tap: {
+      focusWord: "tap",
+      sentence: "Turn off the tap after washing.",
+      chinese: "tap = 水龙头；洗完后关上水龙头。",
+    },
+    taste: {
+      focusWord: "taste",
+      sentence: "This soup has a salty taste.",
+      chinese: "taste = 味道；这汤有咸味。",
+    },
+    tax: {
+      focusWord: "tax",
+      sentence: "The price includes tax.",
+      chinese: "tax = 税；价格包含税。",
+    },
+    tear: {
+      focusWord: "tear",
+      sentence: "A tear ran down her face.",
+      chinese: "tear = 眼泪；一滴眼泪从她脸上流下来。",
+    },
+    technique: {
+      focusWord: "technique",
+      sentence: "This technique helps beginners swim.",
+      chinese: "technique = 技巧；这种技巧帮助初学者游泳。",
+    },
+    telephone: {
+      focusWord: "telephone",
+      sentence: "The telephone rang during dinner.",
+      chinese: "telephone = 电话；电话在晚餐时响了。",
+    },
+    tense: {
+      focusWord: "tense",
+      sentence: "The past tense is used in this sentence.",
+      chinese: "tense = 时态；这个句子使用了过去时态。",
+    },
+    tent: {
+      focusWord: "tent",
+      sentence: "Our tent stayed dry in the rain.",
+      chinese: "tent = 帐篷；我们的帐篷在雨中保持干燥。",
+    },
+    term: {
+      focusWord: "term",
+      sentence: "The school term ends in July.",
+      chinese: "term = 学期；这个学期七月结束。",
+    },
+    text: {
+      focusWord: "text",
+      sentence: "I sent a text to my sister.",
+      chinese: "text = 短信；我给姐姐发了一条短信。",
+    },
+    thief: {
+      focusWord: "thief",
+      sentence: "The thief took a bicycle.",
+      chinese: "thief = 小偷；小偷偷走了一辆自行车。",
+    },
+    thing: {
+      focusWord: "thing",
+      sentence: "This thing belongs in the kitchen.",
+      chinese: "thing = 东西；这个东西应该放在厨房。",
+    },
+    thought: {
+      focusWord: "thought",
+      sentence: "The thought made him smile.",
+      chinese: "thought = 想法；这个想法让他笑了。",
+    },
+    thriller: {
+      focusWord: "thriller",
+      sentence: "She borrowed a thriller from the library.",
+      chinese: "thriller = 惊险小说；她从图书馆借了一本惊险小说。",
+    },
+    throat: {
+      focusWord: "throat",
+      sentence: "My throat hurts when I swallow.",
+      chinese: "throat = 喉咙；我吞咽时喉咙疼。",
+    },
+    thumb: {
+      focusWord: "thumb",
+      sentence: "He cut his thumb while cooking.",
+      chinese: "thumb = 拇指；他做饭时割伤了拇指。",
+    },
+    thunderstorm: {
+      focusWord: "thunderstorm",
+      sentence: "A thunderstorm arrived after lunch.",
+      chinese: "thunderstorm = 雷暴；午饭后来了雷暴。",
+    },
+    tick: {
+      focusWord: "tick",
+      sentence: "Put a tick next to the answer.",
+      chinese: "tick = 对号；在答案旁边打一个对号。",
+    },
+    tie: {
+      focusWord: "tie",
+      sentence: "He chose a blue tie for the wedding.",
+      chinese: "tie = 领带；他为婚礼选了一条蓝色领带。",
+    },
+    tights: {
+      focusWord: "tights",
+      sentence: "She wore black tights with her dress.",
+      chinese: "tights = 连裤袜；她穿黑色连裤袜配连衣裙。",
+    },
+    timetable: {
+      focusWord: "timetable",
+      sentence: "The bus timetable is on the wall.",
+      chinese: "timetable = 时间表；公交时间表在墙上。",
+    },
+    tin: {
+      focusWord: "tin",
+      sentence: "Open a tin of beans for lunch.",
+      chinese: "tin = 罐头；午饭打开一罐豆子。",
+    },
+    tip: {
+      focusWord: "tip",
+      sentence: "He left a tip for the waiter.",
+      chinese: "tip = 小费；他给服务员留了小费。",
+    },
+    tissue: {
+      focusWord: "tissue",
+      sentence: "Take a tissue from the box.",
+      chinese: "tissue = 纸巾；从盒子里拿一张纸巾。",
+    },
+    title: {
+      focusWord: "title",
+      sentence: "The title of the story is short.",
+      chinese: "title = 标题；这个故事的标题很短。",
+    },
+    toast: {
+      focusWord: "toast",
+      sentence: "I had toast for breakfast.",
+      chinese: "toast = 烤面包片；我早餐吃了烤面包片。",
+    },
+    toe: {
+      focusWord: "toe",
+      sentence: "I hurt my toe on the table leg.",
+      chinese: "toe = 脚趾；我的脚趾撞到了桌腿。",
+    },
+    toilet: {
+      focusWord: "toilet",
+      sentence: "The toilet is at the end of the hall.",
+      chinese: "toilet = 厕所；厕所在大厅尽头。",
+    },
+    tomato: {
+      focusWord: "tomato",
+      sentence: "Slice the tomato for the salad.",
+      chinese: "tomato = 番茄；把番茄切片放进沙拉。",
+    },
+    tongue: {
+      focusWord: "tongue",
+      sentence: "The hot tea burned my tongue.",
+      chinese: "tongue = 舌头；热茶烫到了我的舌头。",
+    },
+    toothache: {
+      focusWord: "toothache",
+      sentence: "A toothache kept him awake.",
+      chinese: "toothache = 牙痛；牙痛让他睡不着。",
+    },
+    toothbrush: {
+      focusWord: "toothbrush",
+      sentence: "Pack a toothbrush for the trip.",
+      chinese: "toothbrush = 牙刷；旅行时带上一把牙刷。",
+    },
+    topic: {
+      focusWord: "topic",
+      sentence: "Our topic today is healthy food.",
+      chinese: "topic = 话题；我们今天的话题是健康食物。",
+    },
+    torch: {
+      focusWord: "torch",
+      sentence: "Take a torch for the dark path.",
+      chinese: "torch = 手电筒；带上手电筒走那条黑路。",
+    },
+    tour: {
+      focusWord: "tour",
+      sentence: "The city tour starts at ten.",
+      chinese: "tour = 游览；城市游览十点开始。",
+    },
+    towel: {
+      focusWord: "towel",
+      sentence: "Hang the wet towel by the window.",
+      chinese: "towel = 毛巾；把湿毛巾挂在窗边。",
+    },
+    tower: {
+      focusWord: "tower",
+      sentence: "The old tower overlooks the river.",
+      chinese: "tower = 塔；那座古塔俯瞰着河流。",
+    },
+    track: {
+      focusWord: "track",
+      sentence: "The runners waited on the track.",
+      chinese: "track = 跑道；跑步者在跑道上等待。",
+    },
+    trainer: {
+      focusWord: "trainer",
+      sentence: "The trainer showed us a warm-up exercise.",
+      chinese: "trainer = 教练；教练给我们示范了热身练习。",
+    },
+    training: {
+      focusWord: "training",
+      sentence: "Training starts at six every morning.",
+      chinese: "training = 训练；训练每天早上六点开始。",
+    },
+    trashcan: {
+      focusWord: "trash can",
+      sentence: "Put the paper in the trash can.",
+      chinese: "trash can = 垃圾桶；把纸放进垃圾桶。",
+    },
+    trend: {
+      focusWord: "trend",
+      sentence: "This fashion trend began last year.",
+      chinese: "trend = 趋势；这种时尚趋势去年开始。",
+    },
+    trick: {
+      focusWord: "trick",
+      sentence: "The card trick surprised the children.",
+      chinese: "trick = 戏法；纸牌戏法让孩子们很惊讶。",
+    },
+    trouble: {
+      focusWord: "trouble",
+      sentence: "The broken lock caused trouble.",
+      chinese: "trouble = 麻烦；坏掉的锁造成了麻烦。",
+    },
+    trunk: {
+      focusWord: "trunk",
+      sentence: "The trunk of the tree was wide.",
+      chinese: "trunk = 树干；这棵树的树干很宽。",
+    },
+    trumpet: {
+      focusWord: "trumpet",
+      sentence: "He plays the trumpet in the band.",
+      chinese: "trumpet = 小号；他在乐队里吹小号。",
+    },
+    truth: {
+      focusWord: "truth",
+      sentence: "The truth was hard to explain.",
+      chinese: "truth = 真相；真相很难解释。",
+    },
+    tube: {
+      focusWord: "tube",
+      sentence: "The paint came in a small tube.",
+      chinese: "tube = 管；颜料装在一支小管里。",
+    },
+    tuna: {
+      focusWord: "tuna",
+      sentence: "Tuna tastes good in a sandwich.",
+      chinese: "tuna = 金枪鱼；金枪鱼夹在三明治里很好吃。",
+    },
   };
 }
 

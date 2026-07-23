@@ -9,6 +9,6 @@
 ## Tasks
 
 - [x] Add RED tests for the 50 terms from `seat belt` through `soccer`.
-- [ ] Add `data/example-candidates/objects-015.json` with promoted entries.
-- [ ] Promote identical entries into `src/lib/pet-learning-app.ts`.
+- [x] Add `data/example-candidates/objects-015.json` with promoted entries.
+- [x] Promote identical entries into `src/lib/pet-learning-app.ts`.
 - [ ] Verify targeted tests, bilingual audit, full tests, build, coverage, push, and production HTTP 200.
