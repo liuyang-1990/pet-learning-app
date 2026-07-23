@@ -455,6 +455,17 @@ const objectsTwelfthBatch = [
   "post",
 ] as const;
 
+const objectsThirteenthBatch = [
+  "postcard", "poster", "postman", "pot", "pottery", "powder", "practice",
+  "prayer", "presenter", "president", "prince", "princess", "printer",
+  "prison", "prisoner", "prize", "problem", "product", "professor",
+  "programmer", "progress", "promise", "publisher", "pullover", "pump",
+  "purpose", "purse", "push", "puzzle", "pyjamas", "quiz", "racket", "rail",
+  "railroad", "railway", "raincoat", "rainforest", "range", "rap", "reader",
+  "recording", "recycling", "refrigerator", "refund", "regards", "regret",
+  "religion", "remote control", "rent", "report",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -3772,6 +3783,94 @@ describe("PET Learning App", () => {
       post: [
         "The morning post brought two letters.",
         "post = 邮件；早上的邮件送来了两封信。",
+      ],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the thirteenth objects reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const objectsWords = words.filter((word) => word.theme === "objects");
+    const selectedExamples = objectsThirteenthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(objectsThirteenthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(2044);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(objectsWords).toHaveLength(972);
+    expect(
+      objectsWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(704);
+  });
+
+  it("keeps the thirteenth objects ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/objects-013.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("objects-013");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(objectsThirteenthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the thirteenth objects batch", () => {
+    const expectedExamples = {
+      practice: [
+        "Daily practice helped her piano playing.",
+        "practice = 练习；每天练习帮助了她的钢琴演奏。",
+      ],
+      presenter: [
+        "The presenter introduced the next singer.",
+        "presenter = 主持人；主持人介绍了下一位歌手。",
+      ],
+      progress: [
+        "The teacher was pleased with my progress.",
+        "progress = 进步；老师对我的进步很满意。",
+      ],
+      promise: [
+        "He made a promise to return the book.",
+        "promise = 承诺；他承诺归还那本书。",
+      ],
+      pump: ["The bike pump is in the garage.", "pump = 打气筒；自行车打气筒在车库里。"],
+      range: [
+        "The shop sells a wide range of shoes.",
+        "range = 种类；这家商店出售种类很多的鞋。",
+      ],
+      rap: ["Rap is popular with many students.", "rap = 说唱音乐；说唱音乐很受许多学生欢迎。"],
+      regards: [
+        "Please give my regards to your parents.",
+        "regards = 问候；请代我向你的父母问好。",
+      ],
+      rent: ["The monthly rent is eight hundred pounds.", "rent = 租金；月租金是八百英镑。"],
+      report: [
+        "The report explains the accident clearly.",
+        "report = 报告；这份报告清楚地解释了事故。",
       ],
     } as const;
 
