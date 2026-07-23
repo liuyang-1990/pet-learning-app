@@ -10135,6 +10135,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "We arrived at midday.",
       chinese: "midday = 中午；我们中午到达。",
     },
+    "middle": {
+      focusWord: "middle",
+      sentence: "Put the vase in the middle of the table.",
+      chinese: "middle = 中间；把花瓶放在桌子中间。",
+    },
+    "midnight": {
+      focusWord: "midnight",
+      sentence: "The train arrived at midnight.",
+      chinese: "midnight = 午夜；火车午夜到达。",
+    },
+    "milk": {
+      focusWord: "milk",
+      sentence: "Pour some milk into the glass.",
+      chinese: "milk = 牛奶；往杯子里倒些牛奶。",
+    },
+    "millimetre": {
+      focusWord: "millimetre",
+      sentence: "The gap is only one millimetre wide.",
+      chinese: "millimetre = 毫米；这个缝隙只有一毫米宽。",
+    },
+    "model": {
+      focusWord: "model",
+      sentence: "He built a model of a plane.",
+      chinese: "model = 模型；他做了一个飞机模型。",
+    },
+    "monster": {
+      focusWord: "monster",
+      sentence: "The monster in the story lived in a cave.",
+      chinese: "monster = 怪物；故事里的怪物住在洞穴里。",
+    },
+    "mosquito": {
+      focusWord: "mosquito",
+      sentence: "A mosquito bit my arm.",
+      chinese: "mosquito = 蚊子；一只蚊子咬了我的胳膊。",
+    },
+    "moustache": {
+      focusWord: "moustache",
+      sentence: "His moustache made him look older.",
+      chinese: "moustache = 胡子；他的胡子让他看起来更老。",
+    },
+    "mushroom": {
+      focusWord: "mushroom",
+      sentence: "Add mushrooms to the soup.",
+      chinese: "mushroom = 蘑菇；往汤里加蘑菇。",
+    },
+    "musician": {
+      focusWord: "musician",
+      sentence: "The musician played outside the station.",
+      chinese: "musician = 音乐家；音乐家在车站外演奏。",
+    },
+    "name": {
+      focusWord: "name",
+      sentence: "Write your name on the ticket.",
+      chinese: "name = 名字；把你的名字写在票上。",
+    },
+    "nephew": {
+      focusWord: "nephew",
+      sentence: "My nephew is learning to swim.",
+      chinese: "nephew = 侄子；我的侄子正在学游泳。",
+    },
+    "nest": {
+      focusWord: "nest",
+      sentence: "A bird built a nest in the tree.",
+      chinese: "nest = 巢；一只鸟在树上筑了巢。",
+    },
+    "net": {
+      focusWord: "net",
+      sentence: "The ball hit the tennis net.",
+      chinese: "net = 网；球打到了网球网。",
+    },
+    "network": {
+      focusWord: "network",
+      sentence: "The office network stopped working.",
+      chinese: "network = 网络；办公室网络停止工作了。",
+    },
+    "news": {
+      focusWord: "news",
+      sentence: "The news about the storm worried us.",
+      chinese: "news = 新闻；关于暴风雨的新闻让我们担心。",
+    },
+    "niece": {
+      focusWord: "niece",
+      sentence: "My niece drew a picture for me.",
+      chinese: "niece = 侄女；我的侄女给我画了一幅画。",
+    },
+    "nightclub": {
+      focusWord: "nightclub",
+      sentence: "The nightclub opens at ten.",
+      chinese: "nightclub = 夜总会；夜总会十点开门。",
+    },
+    "nightlife": {
+      focusWord: "nightlife",
+      sentence: "The city has exciting nightlife.",
+      chinese: "nightlife = 夜生活；这座城市有令人兴奋的夜生活。",
+    },
+    "nightmare": {
+      focusWord: "nightmare",
+      sentence: "The nightmare woke him up.",
+      chinese: "nightmare = 噩梦；噩梦把他惊醒了。",
+    },
+    "noise": {
+      focusWord: "noise",
+      sentence: "The noise from the road was loud.",
+      chinese: "noise = 噪音；路上传来的噪音很大。",
+    },
+    "noon": {
+      focusWord: "noon",
+      sentence: "The meeting starts at noon.",
+      chinese: "noon = 中午；会议中午开始。",
+    },
+    "notepaper": {
+      focusWord: "notepaper",
+      sentence: "She wrote the address on notepaper.",
+      chinese: "notepaper = 便条纸；她把地址写在便条纸上。",
+    },
+    "notice": {
+      focusWord: "notice",
+      sentence: "A notice on the door said closed.",
+      chinese: "notice = 通知；门上的通知写着关闭。",
+    },
+    "noticeboard": {
+      focusWord: "noticeboard",
+      sentence: "The timetable is on the noticeboard.",
+      chinese: "noticeboard = 公告板；时间表在公告板上。",
+    },
+    "novelist": {
+      focusWord: "novelist",
+      sentence: "The novelist signed books after the talk.",
+      chinese: "novelist = 小说家；小说家在讲座后签书。",
+    },
+    "officer": {
+      focusWord: "officer",
+      sentence: "A police officer helped us cross the road.",
+      chinese: "officer = 警官；一名警官帮我们过马路。",
+    },
+    "olive": {
+      focusWord: "olive",
+      sentence: "Put one olive on each pizza.",
+      chinese: "olive = 橄榄；每个披萨上放一颗橄榄。",
+    },
+    "omelette": {
+      focusWord: "omelette",
+      sentence: "She made an omelette for breakfast.",
+      chinese: "omelette = 煎蛋卷；她早餐做了一个煎蛋卷。",
+    },
+    "onion": {
+      focusWord: "onion",
+      sentence: "Cut the onion into small pieces.",
+      chinese: "onion = 洋葱；把洋葱切成小块。",
+    },
+    "openinghours": {
+      focusWord: "opening hours",
+      sentence: "Check the opening hours before you visit.",
+      chinese: "opening hours = 营业时间；参观前查看营业时间。",
+    },
+    "opera": {
+      focusWord: "opera",
+      sentence: "We saw an opera at the theatre.",
+      chinese: "opera = 歌剧；我们在剧院看了一场歌剧。",
+    },
+    "operator": {
+      focusWord: "operator",
+      sentence: "The telephone operator connected the call.",
+      chinese: "operator = 接线员；电话接线员接通了电话。",
+    },
+    "opinion": {
+      focusWord: "opinion",
+      sentence: "Everyone gave an opinion about the plan.",
+      chinese: "opinion = 意见；每个人都对计划发表了意见。",
+    },
+    "orchestra": {
+      focusWord: "orchestra",
+      sentence: "The orchestra played for two hours.",
+      chinese: "orchestra = 管弦乐队；管弦乐队演奏了两个小时。",
+    },
+    "oven": {
+      focusWord: "oven",
+      sentence: "Put the bread in the oven.",
+      chinese: "oven = 烤箱；把面包放进烤箱。",
+    },
+    "owner": {
+      focusWord: "owner",
+      sentence: "The owner of the shop was friendly.",
+      chinese: "owner = 主人；商店主人很友好。",
+    },
+    "packet": {
+      focusWord: "packet",
+      sentence: "I bought a packet of biscuits.",
+      chinese: "packet = 包；我买了一包饼干。",
+    },
+    "page": {
+      focusWord: "page",
+      sentence: "Turn to page twenty.",
+      chinese: "page = 页；翻到第二十页。",
+    },
+    "painter": {
+      focusWord: "painter",
+      sentence: "The painter used bright colours.",
+      chinese: "painter = 画家；画家使用了明亮的颜色。",
+    },
+    "palace": {
+      focusWord: "palace",
+      sentence: "The palace garden is open to visitors.",
+      chinese: "palace = 宫殿；宫殿花园向游客开放。",
+    },
+    "pants": {
+      focusWord: "pants",
+      sentence: "These pants are too long for me.",
+      chinese: "pants = 裤子；这条裤子对我来说太长了。",
+    },
+    "paragraph": {
+      focusWord: "paragraph",
+      sentence: "Read the first paragraph again.",
+      chinese: "paragraph = 段落；再读一遍第一段。",
+    },
+    "parking": {
+      focusWord: "parking",
+      sentence: "Parking is free after six.",
+      chinese: "parking = 停车；六点后停车免费。",
+    },
+    "parkinglot": {
+      focusWord: "parking lot",
+      sentence: "The parking lot was full by noon.",
+      chinese: "parking lot = 停车场；停车场到中午就满了。",
+    },
+    "parrot": {
+      focusWord: "parrot",
+      sentence: "The parrot repeated my words.",
+      chinese: "parrot = 鹦鹉；鹦鹉重复了我的话。",
+    },
+    "part": {
+      focusWord: "part",
+      sentence: "This small part belongs to the machine.",
+      chinese: "part = 零件；这个小零件属于那台机器。",
+    },
+    "partner": {
+      focusWord: "partner",
+      sentence: "My project partner sent the slides.",
+      chinese: "partner = 搭档；我的项目搭档发来了幻灯片。",
+    },
+    "pass": {
+      focusWord: "pass",
+      sentence: "You need a pass to enter the building.",
+      chinese: "pass = 通行证；进入这栋楼需要通行证。",
+    },
+    "passenger": {
+      focusWord: "passenger",
+      sentence: "Each passenger showed a ticket.",
+      chinese: "passenger = 乘客；每位乘客都出示了票。",
+    },
   };
 }
 
