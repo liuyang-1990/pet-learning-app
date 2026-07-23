@@ -1,6 +1,6 @@
 {
   "batchId": "objects-014",
-  "status": "draft",
+  "status": "promoted",
   "entries": [
     { "term": "reporter", "focusWord": "reporter", "sentence": "The reporter interviewed the footballer.", "chinese": "reporter = 记者；记者采访了那名足球运动员。" },
     { "term": "request", "focusWord": "request", "sentence": "The hotel accepted our request for a quiet room.", "chinese": "request = 请求；酒店接受了我们要一间安静房间的请求。" },
