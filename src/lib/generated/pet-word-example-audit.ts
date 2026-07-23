@@ -8374,5 +8374,605 @@ export const reviewedWordExampleAudit = {
   "seat": {
     "status": "pass",
     "reasons": []
+  },
+  "seatbelt": {
+    "status": "pass",
+    "reasons": []
+  },
+  "selfie": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sense": {
+    "status": "pass",
+    "reasons": []
+  },
+  "server": {
+    "status": "pass",
+    "reasons": []
+  },
+  "service": {
+    "status": "pass",
+    "reasons": []
+  },
+  "session": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sex": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shade": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shadow": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shame": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shampoo": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shark": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sheep": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sheet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shock": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shopper": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shore": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shorts": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shout": {
+    "status": "pass",
+    "reasons": []
+  },
+  "side": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sight": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sign": {
+    "status": "pass",
+    "reasons": []
+  },
+  "signal": {
+    "status": "pass",
+    "reasons": []
+  },
+  "signature": {
+    "status": "pass",
+    "reasons": []
+  },
+  "signpost": {
+    "status": "pass",
+    "reasons": []
+  },
+  "singer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "singing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sink": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sir": {
+    "status": "pass",
+    "reasons": []
+  },
+  "site": {
+    "status": "pass",
+    "reasons": []
+  },
+  "skateboard": {
+    "status": "pass",
+    "reasons": []
+  },
+  "skateboarding": {
+    "status": "pass",
+    "reasons": []
+  },
+  "ski": {
+    "status": "pass",
+    "reasons": []
+  },
+  "skin": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sleep": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sleeve": {
+    "status": "pass",
+    "reasons": []
+  },
+  "slice": {
+    "status": "pass",
+    "reasons": []
+  },
+  "slide": {
+    "status": "pass",
+    "reasons": []
+  },
+  "smartphone": {
+    "status": "pass",
+    "reasons": []
+  },
+  "smell": {
+    "status": "pass",
+    "reasons": []
+  },
+  "smile": {
+    "status": "pass",
+    "reasons": []
+  },
+  "smoke": {
+    "status": "pass",
+    "reasons": []
+  },
+  "smoking": {
+    "status": "pass",
+    "reasons": []
+  },
+  "snack": {
+    "status": "pass",
+    "reasons": []
+  },
+  "snowboard": {
+    "status": "pass",
+    "reasons": []
+  },
+  "snowboarding": {
+    "status": "pass",
+    "reasons": []
+  },
+  "snowfall": {
+    "status": "pass",
+    "reasons": []
+  },
+  "soap": {
+    "status": "pass",
+    "reasons": []
+  },
+  "soapopera": {
+    "status": "pass",
+    "reasons": []
+  },
+  "soccer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "socialmedia": {
+    "status": "pass",
+    "reasons": []
+  },
+  "soldier": {
+    "status": "pass",
+    "reasons": []
+  },
+  "solve": {
+    "status": "pass",
+    "reasons": []
+  },
+  "soul": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sound": {
+    "status": "pass",
+    "reasons": []
+  },
+  "souvenir": {
+    "status": "pass",
+    "reasons": []
+  },
+  "speaker": {
+    "status": "pass",
+    "reasons": []
+  },
+  "species": {
+    "status": "pass",
+    "reasons": []
+  },
+  "speech": {
+    "status": "pass",
+    "reasons": []
+  },
+  "speed": {
+    "status": "pass",
+    "reasons": []
+  },
+  "spice": {
+    "status": "pass",
+    "reasons": []
+  },
+  "spinach": {
+    "status": "pass",
+    "reasons": []
+  },
+  "spite": {
+    "status": "pass",
+    "reasons": []
+  },
+  "spot": {
+    "status": "pass",
+    "reasons": []
+  },
+  "spy": {
+    "status": "pass",
+    "reasons": []
+  },
+  "squash": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stadium": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stairs": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stall": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stamp": {
+    "status": "pass",
+    "reasons": []
+  },
+  "statue": {
+    "status": "pass",
+    "reasons": []
+  },
+  "steak": {
+    "status": "pass",
+    "reasons": []
+  },
+  "step": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stick": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stomach": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stranger": {
+    "status": "pass",
+    "reasons": []
+  },
+  "strawberry": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stream": {
+    "status": "pass",
+    "reasons": []
+  },
+  "strike": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stripe": {
+    "status": "pass",
+    "reasons": []
+  },
+  "studio": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stuff": {
+    "status": "pass",
+    "reasons": []
+  },
+  "style": {
+    "status": "pass",
+    "reasons": []
+  },
+  "success": {
+    "status": "pass",
+    "reasons": []
+  },
+  "suit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sum": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sunglasses": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sunrise": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sunset": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sunshine": {
+    "status": "pass",
+    "reasons": []
+  },
+  "support": {
+    "status": "pass",
+    "reasons": []
+  },
+  "exams": {
+    "status": "pass",
+    "reasons": []
+  },
+  "supporter": {
+    "status": "pass",
+    "reasons": []
+  },
+  "surfboard": {
+    "status": "pass",
+    "reasons": []
+  },
+  "surfing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "surname": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sweater": {
+    "status": "pass",
+    "reasons": []
+  },
+  "swimmer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "switch": {
+    "status": "pass",
+    "reasons": []
+  },
+  "system": {
+    "status": "pass",
+    "reasons": []
+  },
+  "takeaway": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tap": {
+    "status": "pass",
+    "reasons": []
+  },
+  "taste": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tax": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tear": {
+    "status": "pass",
+    "reasons": []
+  },
+  "technique": {
+    "status": "pass",
+    "reasons": []
+  },
+  "telephone": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tense": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tent": {
+    "status": "pass",
+    "reasons": []
+  },
+  "term": {
+    "status": "pass",
+    "reasons": []
+  },
+  "text": {
+    "status": "pass",
+    "reasons": []
+  },
+  "thief": {
+    "status": "pass",
+    "reasons": []
+  },
+  "thing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "thought": {
+    "status": "pass",
+    "reasons": []
+  },
+  "thriller": {
+    "status": "pass",
+    "reasons": []
+  },
+  "throat": {
+    "status": "pass",
+    "reasons": []
+  },
+  "thumb": {
+    "status": "pass",
+    "reasons": []
+  },
+  "thunderstorm": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tick": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tie": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tights": {
+    "status": "pass",
+    "reasons": []
+  },
+  "timetable": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tin": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tip": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tissue": {
+    "status": "pass",
+    "reasons": []
+  },
+  "title": {
+    "status": "pass",
+    "reasons": []
+  },
+  "toast": {
+    "status": "pass",
+    "reasons": []
+  },
+  "toe": {
+    "status": "pass",
+    "reasons": []
+  },
+  "toilet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tomato": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tongue": {
+    "status": "pass",
+    "reasons": []
+  },
+  "toothache": {
+    "status": "pass",
+    "reasons": []
+  },
+  "toothbrush": {
+    "status": "pass",
+    "reasons": []
+  },
+  "topic": {
+    "status": "pass",
+    "reasons": []
+  },
+  "torch": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tour": {
+    "status": "pass",
+    "reasons": []
+  },
+  "towel": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tower": {
+    "status": "pass",
+    "reasons": []
+  },
+  "track": {
+    "status": "pass",
+    "reasons": []
+  },
+  "trainer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "training": {
+    "status": "pass",
+    "reasons": []
+  },
+  "trashcan": {
+    "status": "pass",
+    "reasons": []
+  },
+  "trend": {
+    "status": "pass",
+    "reasons": []
+  },
+  "trick": {
+    "status": "pass",
+    "reasons": []
+  },
+  "trouble": {
+    "status": "pass",
+    "reasons": []
+  },
+  "trunk": {
+    "status": "pass",
+    "reasons": []
+  },
+  "trumpet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "truth": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tube": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tuna": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

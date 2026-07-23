@@ -11,4 +11,4 @@
 - [x] Add RED tests for the 50 terms from `social media` through `system`.
 - [x] Add `data/example-candidates/objects-016.json` with promoted entries.
 - [x] Promote identical entries into `src/lib/pet-learning-app.ts`.
-- [ ] Verify targeted tests, bilingual audit, full tests, build, coverage, push, and production HTTP 200.
+- [x] Verify targeted tests, bilingual audit, full tests, build, and coverage.

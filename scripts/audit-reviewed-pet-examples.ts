@@ -312,6 +312,33 @@ const manuallyConfirmedTerms = new Set([
   "salary", // salary / wages, expressed naturally as 薪水
   "saucepan", // saucepan / cooking pan; back translation preserves the cooking vessel
   "saucer", // saucer / small plate under a cup
+  // These fifteenth-batch objects examples use valid contextual noun senses or synonyms.
+  "session", // a training session / class period, not only a meeting
+  "shame", // "a shame" meaning a pity / regret, not disgrace
+  "sheet", // a bed sheet, not a generic sheet of material
+  "side", // one side of a road, not only a flat surface side
+  "sight", // an impressive view / sight, not eyesight
+  "site", // a building site, not only a website
+  "slide", // playground slide, not a presentation slide
+  "smile", // back translation preserves the welcoming smile meaning
+  // These sixteenth-batch objects examples use valid contextual noun senses or synonyms.
+  "spot", // a mark on clothing, not an available place
+  "step", // a stair step, not only a process step
+  "stream", // a small river / stream, not online streaming
+  "style", // clothing style / cut, expressed naturally as 款式
+  "sum", // a math problem on a board, expressed naturally as 算式
+  // These seventeenth-batch objects examples use valid contextual noun senses or British terms.
+  "tap", // British tap / faucet, not the verb "tap"
+  "tense", // grammar tense, not the adjective "tense"
+  "term", // school term / semester, not a vocabulary term
+  "text", // a text message, not only written text
+  "tick", // British tick / check mark
+  "tights", // tights / pantyhose
+  "tin", // British tin / can of food, not the metal
+  "tissue", // paper tissue, not biological tissue
+  "toast", // toast as toasted bread, not a toast at a party
+  "torch", // British torch / flashlight, not a flame torch
+  "trick", // a magic/card trick, not a dishonest trick
 ]);
 
 async function main() {
