@@ -1709,8 +1709,8 @@ describe("PET Learning App", () => {
     });
     expect(getWordExample({ term: "workout", chineseGloss: "锻炼；训练" })).toMatchObject({
       focusWord: "workout",
-      sentence: null,
-      chinese: "workout = 锻炼；训练",
+      sentence: "The short workout made me tired.",
+      chinese: "workout = 锻炼；短时间锻炼让我累了。",
     });
     expect(getWordExample({ term: "admission", chineseGloss: "承认；入场费" })).toMatchObject({
       sentence: "Admission to the museum is free on Sundays.",
@@ -2123,8 +2123,8 @@ describe("PET Learning App", () => {
     });
     expect(getWordExample({ term: "workout", chineseGloss: "锻炼；训练" })).toMatchObject({
       focusWord: "workout",
-      sentence: null,
-      chinese: "workout = 锻炼；训练",
+      sentence: "The short workout made me tired.",
+      chinese: "workout = 锻炼；短时间锻炼让我累了。",
     });
   });
 

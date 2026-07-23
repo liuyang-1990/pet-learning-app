@@ -339,6 +339,37 @@ const manuallyConfirmedTerms = new Set([
   "toast", // toast as toasted bread, not a toast at a party
   "torch", // British torch / flashlight, not a flame torch
   "trick", // a magic/card trick, not a dishonest trick
+  // These final objects examples use valid contextual noun senses.
+  "view", // a sea view from a room, not the verb "view"
+  "volume", // radio volume, not physical size
+  "wave", // a sea wave, not a hand gesture
+  "way", // a path/route to the station, not only a method
+  "wing", // a bird wing, expressed naturally as 翅膀
+  "writing", // handwriting / written script, not the activity of writing
+  // These first qualities examples use valid adjective senses or synonyms.
+  "alright", // all right / fine, expressed naturally as 没问题
+  "awesome", // excellent / great, expressed naturally as 极好的
+  "bad", // bad weather / poor, not morally bad
+  "blind", // blind person/singer, expressed naturally as 失明的
+  "broad", // a wide path, not a broad topic
+  "capital", // capital city, not financial capital
+  "certain", // sure, not the determiner "certain"
+  // These second qualities examples use valid adjective senses or synonyms.
+  "close", // near the hotel, not the verb "close"
+  "confusing", // confusing map; back translation preserves the adjective
+  "deaf", // unable to hear, expressed naturally as 失聪的
+  "delicious", // delicious / tasty
+  "due", // homework due tomorrow, not because of
+  // These third qualities examples use valid adjective senses or synonyms.
+  "fantastic", // very good / excellent
+  "fat", // an overweight cat, not dietary fat
+  "final", // the last question, not a final match
+  "financial", // financial advice, expressed naturally as 财务的
+  "following", // the following sentence, not social media following
+  "general", // general idea / overall meaning, not a military general
+  "guilty", // feeling guilty, not a legal verdict
+  "handsome", // handsome prince, not a noun phrase "handsome man"
+  "hard", // a difficult exam, not a hard object
 ]);
 
 async function main() {

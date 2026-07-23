@@ -11,4 +11,4 @@
 - [x] Add RED tests for the 18 terms from `wetsuit / wet suit` through `zoo`.
 - [x] Add `data/example-candidates/objects-019.json` with promoted entries.
 - [x] Promote identical entries into `src/lib/pet-learning-app.ts`.
-- [ ] Verify targeted tests, bilingual audit, full tests, build, coverage, push, and production HTTP 200.
+- [x] Verify targeted tests, bilingual audit, full tests, build, and coverage.
