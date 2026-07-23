@@ -7974,5 +7974,205 @@ export const reviewedWordExampleAudit = {
   "post": {
     "status": "pass",
     "reasons": []
+  },
+  "postcard": {
+    "status": "pass",
+    "reasons": []
+  },
+  "poster": {
+    "status": "pass",
+    "reasons": []
+  },
+  "postman": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pot": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pottery": {
+    "status": "pass",
+    "reasons": []
+  },
+  "powder": {
+    "status": "pass",
+    "reasons": []
+  },
+  "practice": {
+    "status": "pass",
+    "reasons": []
+  },
+  "prayer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "presenter": {
+    "status": "pass",
+    "reasons": []
+  },
+  "president": {
+    "status": "pass",
+    "reasons": []
+  },
+  "prince": {
+    "status": "pass",
+    "reasons": []
+  },
+  "princess": {
+    "status": "pass",
+    "reasons": []
+  },
+  "printer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "prison": {
+    "status": "pass",
+    "reasons": []
+  },
+  "prisoner": {
+    "status": "pass",
+    "reasons": []
+  },
+  "prize": {
+    "status": "pass",
+    "reasons": []
+  },
+  "problem": {
+    "status": "pass",
+    "reasons": []
+  },
+  "product": {
+    "status": "pass",
+    "reasons": []
+  },
+  "professor": {
+    "status": "pass",
+    "reasons": []
+  },
+  "programmer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "progress": {
+    "status": "pass",
+    "reasons": []
+  },
+  "promise": {
+    "status": "pass",
+    "reasons": []
+  },
+  "publisher": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pullover": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pump": {
+    "status": "pass",
+    "reasons": []
+  },
+  "purpose": {
+    "status": "pass",
+    "reasons": []
+  },
+  "purse": {
+    "status": "pass",
+    "reasons": []
+  },
+  "push": {
+    "status": "pass",
+    "reasons": []
+  },
+  "puzzle": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pyjamas": {
+    "status": "pass",
+    "reasons": []
+  },
+  "quiz": {
+    "status": "pass",
+    "reasons": []
+  },
+  "racket": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rail": {
+    "status": "pass",
+    "reasons": []
+  },
+  "railroad": {
+    "status": "pass",
+    "reasons": []
+  },
+  "railway": {
+    "status": "pass",
+    "reasons": []
+  },
+  "raincoat": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rainforest": {
+    "status": "pass",
+    "reasons": []
+  },
+  "range": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rap": {
+    "status": "pass",
+    "reasons": []
+  },
+  "reader": {
+    "status": "pass",
+    "reasons": []
+  },
+  "recording": {
+    "status": "pass",
+    "reasons": []
+  },
+  "recycling": {
+    "status": "pass",
+    "reasons": []
+  },
+  "refrigerator": {
+    "status": "pass",
+    "reasons": []
+  },
+  "refund": {
+    "status": "pass",
+    "reasons": []
+  },
+  "regards": {
+    "status": "pass",
+    "reasons": []
+  },
+  "regret": {
+    "status": "pass",
+    "reasons": []
+  },
+  "religion": {
+    "status": "pass",
+    "reasons": []
+  },
+  "remotecontrol": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rent": {
+    "status": "pass",
+    "reasons": []
+  },
+  "report": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

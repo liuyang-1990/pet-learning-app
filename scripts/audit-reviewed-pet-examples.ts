@@ -298,6 +298,11 @@ const manuallyConfirmedTerms = new Set([
   "play", // a stage play, not the verb "play"
   "pleasure", // pleasure in the polite phrase, expressed naturally as 荣幸
   "post", // British mail, not an online post
+  // These thirteenth-batch objects examples use valid contextual noun senses.
+  "president", // a club president / chair, not a national president
+  "pump", // a bicycle pump, expressed as 打气筒 in context
+  "rail", // a handrail, not a railway
+  "range", // a selection / variety of goods, not only a scope
 ]);
 
 async function main() {
