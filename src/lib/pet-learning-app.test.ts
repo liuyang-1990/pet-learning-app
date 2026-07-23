@@ -466,6 +466,16 @@ const objectsThirteenthBatch = [
   "religion", "remote control", "rent", "report",
 ] as const;
 
+const objectsFourteenthBatch = [
+  "reporter", "request", "resort", "respect", "rest", "revision", "reward",
+  "ride", "rider", "riding", "robot", "rocket", "roll", "roommate", "rope",
+  "rose", "roundabout", "route", "routine", "row", "rubber", "rubbish",
+  "rug", "ruin", "ruler", "runner", "running", "sail", "sailing", "sailor",
+  "salary", "salesman / saleswoman", "salmon", "sand", "sandal", "sauce",
+  "saucepan", "saucer", "sausage", "scarf", "scene", "scenery", "scientist",
+  "scissors", "scooter", "scream", "sculpture", "search", "seaside", "seat",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -3871,6 +3881,98 @@ describe("PET Learning App", () => {
       report: [
         "The report explains the accident clearly.",
         "report = 报告；这份报告清楚地解释了事故。",
+      ],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the fourteenth objects reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const objectsWords = words.filter((word) => word.theme === "objects");
+    const selectedExamples = objectsFourteenthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(objectsFourteenthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(2094);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(objectsWords).toHaveLength(972);
+    expect(
+      objectsWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(754);
+  });
+
+  it("keeps the fourteenth objects ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/objects-014.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("objects-014");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(objectsFourteenthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the fourteenth objects batch", () => {
+    const expectedExamples = {
+      request: [
+        "The hotel accepted our request for a quiet room.",
+        "request = 请求；酒店接受了我们要一间安静房间的请求。",
+      ],
+      rest: ["Take a rest after the long walk.", "rest = 休息；长途步行后休息一下。"],
+      ride: [
+        "The bike ride took thirty minutes.",
+        "ride = 骑行；这次骑自行车花了三十分钟。",
+      ],
+      roll: [
+        "She ate a bread roll with soup.",
+        "roll = 小面包；她配着汤吃了一个小面包。",
+      ],
+      roundabout: [
+        "Turn right at the roundabout.",
+        "roundabout = 环岛；在环岛处右转。",
+      ],
+      row: ["We sat in the front row.", "row = 排；我们坐在第一排。"],
+      rubber: [
+        "Use a rubber to remove the pencil mark.",
+        "rubber = 橡皮；用橡皮擦掉铅笔痕迹。",
+      ],
+      ruin: [
+        "The castle ruin stands above the town.",
+        "ruin = 废墟；城堡废墟矗立在城镇上方。",
+      ],
+      sail: ["The white sail filled with wind.", "sail = 帆；白色的帆鼓满了风。"],
+      scene: [
+        "The final scene of the film was sad.",
+        "scene = 场景；电影的最后一个场景很悲伤。",
+      ],
+      search: [
+        "The search for the lost dog lasted all night.",
+        "search = 搜索；寻找走失狗的搜索持续了一整夜。",
       ],
     } as const;
 
