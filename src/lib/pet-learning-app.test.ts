@@ -4500,10 +4500,10 @@ describe("PET Learning App", () => {
     expect(qualitiesFirstBatch).toHaveLength(50);
     expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(2362);
     expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
-    expect(themeWords).toHaveLength(406);
+    expect(themeWords).toHaveLength(450);
     expect(
       themeWords.filter((word) => getWordExample(word).sentence !== null).length,
-    ).toBeGreaterThanOrEqual(50);
+    ).toBeGreaterThanOrEqual(94);
   });
 
   it("keeps the first qualities ledger aligned with reviewed examples", () => {
@@ -4601,10 +4601,10 @@ describe("PET Learning App", () => {
     expect(qualitiesSecondBatch).toHaveLength(50);
     expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(2412);
     expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
-    expect(themeWords).toHaveLength(406);
+    expect(themeWords).toHaveLength(450);
     expect(
       themeWords.filter((word) => getWordExample(word).sentence !== null).length,
-    ).toBeGreaterThanOrEqual(100);
+    ).toBeGreaterThanOrEqual(144);
   });
 
   it("keeps the second qualities ledger aligned with reviewed examples", () => {
@@ -4710,10 +4710,10 @@ describe("PET Learning App", () => {
     expect(qualitiesThirdBatch).toHaveLength(50);
     expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(2462);
     expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
-    expect(themeWords).toHaveLength(406);
+    expect(themeWords).toHaveLength(450);
     expect(
       themeWords.filter((word) => getWordExample(word).sentence !== null).length,
-    ).toBeGreaterThanOrEqual(150);
+    ).toBeGreaterThanOrEqual(194);
   });
 
   it("keeps the third qualities ledger aligned with reviewed examples", () => {

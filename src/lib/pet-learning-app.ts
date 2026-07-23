@@ -11885,6 +11885,1096 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "Tuna tastes good in a sandwich.",
       chinese: "tuna = 金枪鱼；金枪鱼夹在三明治里很好吃。",
     },
+    tune: {
+      focusWord: "tune",
+      sentence: "The tune was easy to remember.",
+      chinese: "tune = 曲调；这段曲调很容易记住。",
+    },
+    tunnel: {
+      focusWord: "tunnel",
+      sentence: "The train went through a long tunnel.",
+      chinese: "tunnel = 隧道；火车穿过了一条长隧道。",
+    },
+    turkey: {
+      focusWord: "turkey",
+      sentence: "We ate turkey for lunch.",
+      chinese: "turkey = 火鸡肉；我们午饭吃了火鸡肉。",
+    },
+    turning: {
+      focusWord: "turning",
+      sentence: "Take the next turning on the left.",
+      chinese: "turning = 转弯处；在下一个转弯处向左转。",
+    },
+    twin: {
+      focusWord: "twin",
+      sentence: "My twin wears glasses.",
+      chinese: "twin = 双胞胎之一；我的双胞胎兄弟戴眼镜。",
+    },
+    type: {
+      focusWord: "type",
+      sentence: "This type of music is loud.",
+      chinese: "type = 类型；这种类型的音乐很响。",
+    },
+    tyre: {
+      focusWord: "tyre",
+      sentence: "The car has a flat tyre.",
+      chinese: "tyre = 轮胎；这辆车有一个轮胎瘪了。",
+    },
+    umbrella: {
+      focusWord: "umbrella",
+      sentence: "Take an umbrella because it may rain.",
+      chinese: "umbrella = 雨伞；带上雨伞，因为可能会下雨。",
+    },
+    unhappy: {
+      focusWord: "unhappy",
+      sentence: "His unhappy face worried me.",
+      chinese: "unhappy = 不高兴的；他不高兴的脸让我担心。",
+    },
+    union: {
+      focusWord: "union",
+      sentence: "The student union organized a party.",
+      chinese: "union = 联合会；学生会组织了一场聚会。",
+    },
+    unit: {
+      focusWord: "unit",
+      sentence: "This unit of the book is about travel.",
+      chinese: "unit = 单元；这本书的这个单元是关于旅行的。",
+    },
+    universe: {
+      focusWord: "universe",
+      sentence: "Stars fill the universe.",
+      chinese: "universe = 宇宙；星星布满宇宙。",
+    },
+    user: {
+      focusWord: "user",
+      sentence: "Each user needs a password.",
+      chinese: "user = 用户；每个用户都需要一个密码。",
+    },
+    valley: {
+      focusWord: "valley",
+      sentence: "The valley was green after the rain.",
+      chinese: "valley = 山谷；雨后山谷一片翠绿。",
+    },
+    van: {
+      focusWord: "van",
+      sentence: "The delivery van stopped outside.",
+      chinese: "van = 小货车；送货小货车停在外面。",
+    },
+    vanilla: {
+      focusWord: "vanilla",
+      sentence: "Vanilla is my favourite ice cream flavour.",
+      chinese: "vanilla = 香草；香草是我最喜欢的冰淇淋口味。",
+    },
+    variety: {
+      focusWord: "variety",
+      sentence: "The shop sells a variety of hats.",
+      chinese: "variety = 种类；这家商店出售各种帽子。",
+    },
+    vase: {
+      focusWord: "vase",
+      sentence: "Put the flowers in the vase.",
+      chinese: "vase = 花瓶；把花放进花瓶里。",
+    },
+    vegetarian: {
+      focusWord: "vegetarian",
+      sentence: "The vegetarian ordered mushroom pasta.",
+      chinese: "vegetarian = 素食者；素食者点了蘑菇意面。",
+    },
+    vehicle: {
+      focusWord: "vehicle",
+      sentence: "This vehicle carries eight people.",
+      chinese: "vehicle = 车辆；这辆车能载八个人。",
+    },
+    version: {
+      focusWord: "version",
+      sentence: "I downloaded the latest version.",
+      chinese: "version = 版本；我下载了最新版本。",
+    },
+    vet: {
+      focusWord: "vet",
+      sentence: "The vet checked our cat.",
+      chinese: "vet = 兽医；兽医检查了我们的猫。",
+    },
+    view: {
+      focusWord: "view",
+      sentence: "The hotel room has a sea view.",
+      chinese: "view = 景色；这间酒店房间能看到海景。",
+    },
+    violin: {
+      focusWord: "violin",
+      sentence: "She plays the violin after school.",
+      chinese: "violin = 小提琴；她放学后拉小提琴。",
+    },
+    virus: {
+      focusWord: "virus",
+      sentence: "A virus made his computer slow.",
+      chinese: "virus = 病毒；病毒让他的电脑变慢了。",
+    },
+    visa: {
+      focusWord: "visa",
+      sentence: "You need a visa to enter the country.",
+      chinese: "visa = 签证；进入这个国家需要签证。",
+    },
+    visitor: {
+      focusWord: "visitor",
+      sentence: "The visitor signed the book.",
+      chinese: "visitor = 访客；访客在本子上签了名。",
+    },
+    voice: {
+      focusWord: "voice",
+      sentence: "Her voice was soft and calm.",
+      chinese: "voice = 声音；她的声音轻柔而平静。",
+    },
+    volume: {
+      focusWord: "volume",
+      sentence: "Turn down the volume of the radio.",
+      chinese: "volume = 音量；把收音机的音量调低。",
+    },
+    volunteer: {
+      focusWord: "volunteer",
+      sentence: "A volunteer helped at the race.",
+      chinese: "volunteer = 志愿者；一名志愿者在比赛中帮忙。",
+    },
+    vote: {
+      focusWord: "vote",
+      sentence: "Each student has one vote.",
+      chinese: "vote = 选票；每个学生有一张选票。",
+    },
+    vowel: {
+      focusWord: "vowel",
+      sentence: "A is a vowel in English.",
+      chinese: "vowel = 元音字母；A 是英语里的元音字母。",
+    },
+    wage: {
+      focusWord: "wage",
+      sentence: "The weekly wage was low.",
+      chinese: "wage = 工资；周工资很低。",
+    },
+    walking: {
+      focusWord: "walking",
+      sentence: "Walking is good exercise.",
+      chinese: "walking = 步行；步行是很好的锻炼。",
+    },
+    war: {
+      focusWord: "war",
+      sentence: "The museum has photos from the war.",
+      chinese: "war = 战争；博物馆有战争时期的照片。",
+    },
+    wardrobe: {
+      focusWord: "wardrobe",
+      sentence: "Her dresses hung in the wardrobe.",
+      chinese: "wardrobe = 衣柜；她的连衣裙挂在衣柜里。",
+    },
+    warning: {
+      focusWord: "warning",
+      sentence: "The warning was printed in red.",
+      chinese: "warning = 警告；警告用红色印着。",
+    },
+    wash: {
+      focusWord: "wash",
+      sentence: "This shirt needs a wash.",
+      chinese: "wash = 洗涤；这件衬衫需要洗一下。",
+    },
+    washingmachine: {
+      focusWord: "washing machine",
+      sentence: "The washing machine is noisy.",
+      chinese: "washing machine = 洗衣机；这台洗衣机很吵。",
+    },
+    washingup: {
+      focusWord: "washing-up",
+      sentence: "The washing-up was left in the sink.",
+      chinese: "washing-up = 洗碗；要洗的碗盘留在了水槽里。",
+    },
+    waterfall: {
+      focusWord: "waterfall",
+      sentence: "We took photos of the waterfall.",
+      chinese: "waterfall = 瀑布；我们拍了瀑布的照片。",
+    },
+    wave: {
+      focusWord: "wave",
+      sentence: "A large wave hit the rocks.",
+      chinese: "wave = 海浪；一个大浪拍打着岩石。",
+    },
+    way: {
+      focusWord: "way",
+      sentence: "This way leads to the station.",
+      chinese: "way = 路；这条路通向车站。",
+    },
+    web: {
+      focusWord: "web",
+      sentence: "A spider's web hung in the corner.",
+      chinese: "web = 网；角落里挂着一张蜘蛛网。",
+    },
+    webcam: {
+      focusWord: "webcam",
+      sentence: "My webcam stopped working during the call.",
+      chinese: "webcam = 网络摄像头；通话时我的网络摄像头坏了。",
+    },
+    webpage: {
+      focusWord: "web page",
+      sentence: "The web page loaded slowly.",
+      chinese: "web page = 网页；这个网页加载得很慢。",
+    },
+    wedding: {
+      focusWord: "wedding",
+      sentence: "The wedding was in June.",
+      chinese: "wedding = 婚礼；婚礼在六月举行。",
+    },
+    weekday: {
+      focusWord: "weekday",
+      sentence: "Monday is a weekday.",
+      chinese: "weekday = 工作日；星期一是工作日。",
+    },
+    weekend: {
+      focusWord: "weekend",
+      sentence: "We went camping at the weekend.",
+      chinese: "weekend = 周末；我们周末去露营了。",
+    },
+    welcome: {
+      focusWord: "welcome",
+      sentence: "The warm welcome made us happy.",
+      chinese: "welcome = 欢迎；热情的欢迎让我们很高兴。",
+    },
+    wetsuit: {
+      focusWord: "wetsuit",
+      sentence: "The surfer wore a black wetsuit.",
+      chinese: "wetsuit = 潜水服；冲浪者穿着黑色潜水服。",
+    },
+    whale: {
+      focusWord: "whale",
+      sentence: "A whale rose beside the boat.",
+      chinese: "whale = 鲸；一头鲸在船旁浮出水面。",
+    },
+    wheel: {
+      focusWord: "wheel",
+      sentence: "The wheel of my bike is bent.",
+      chinese: "wheel = 轮子；我的自行车轮子弯了。",
+    },
+    wheelchair: {
+      focusWord: "wheelchair",
+      sentence: "The museum entrance is wide enough for a wheelchair.",
+      chinese: "wheelchair = 轮椅；博物馆入口宽到足够轮椅通过。",
+    },
+    windscreen: {
+      focusWord: "windscreen",
+      sentence: "Rain covered the car windscreen.",
+      chinese: "windscreen = 挡风玻璃；雨水覆盖了汽车挡风玻璃。",
+    },
+    windsurfing: {
+      focusWord: "windsurfing",
+      sentence: "Windsurfing is popular on this lake.",
+      chinese: "windsurfing = 风帆冲浪；风帆冲浪在这个湖上很受欢迎。",
+    },
+    wing: {
+      focusWord: "wing",
+      sentence: "The bird hurt one wing.",
+      chinese: "wing = 翅膀；那只鸟伤了一只翅膀。",
+    },
+    winner: {
+      focusWord: "winner",
+      sentence: "The winner received a silver cup.",
+      chinese: "winner = 获胜者；获胜者得到了一只银杯。",
+    },
+    workoutnoun: {
+      focusWord: "workout",
+      sentence: "The short workout made me tired.",
+      chinese: "workout = 锻炼；短时间锻炼让我累了。",
+    },
+    worry: {
+      focusWord: "worry",
+      sentence: "Money was her main worry.",
+      chinese: "worry = 担心的事；钱是她主要担心的事。",
+    },
+    writer: {
+      focusWord: "writer",
+      sentence: "The writer signed my book.",
+      chinese: "writer = 作家；作家在我的书上签了名。",
+    },
+    writing: {
+      focusWord: "writing",
+      sentence: "Her writing is clear and neat.",
+      chinese: "writing = 字迹；她的字迹清楚整洁。",
+    },
+    yard: {
+      focusWord: "yard",
+      sentence: "The children played in the yard.",
+      chinese: "yard = 院子；孩子们在院子里玩。",
+    },
+    yogurt: {
+      focusWord: "yogurt",
+      sentence: "I ate yogurt with fruit.",
+      chinese: "yogurt = 酸奶；我吃了水果酸奶。",
+    },
+    youth: {
+      focusWord: "youth",
+      sentence: "The club works with local youth.",
+      chinese: "youth = 青年；这个俱乐部与当地青年合作。",
+    },
+    zero: {
+      focusWord: "zero",
+      sentence: "The score was zero at half-time.",
+      chinese: "zero = 零；半场时比分是零。",
+    },
+    zone: {
+      focusWord: "zone",
+      sentence: "This is a quiet zone.",
+      chinese: "zone = 区域；这是安静区域。",
+    },
+    zoo: {
+      focusWord: "zoo",
+      sentence: "The zoo has two new penguins.",
+      chinese: "zoo = 动物园；动物园有两只新企鹅。",
+    },
+    absent: {
+      focusWord: "absent",
+      sentence: "The absent student missed the test.",
+      chinese: "absent = 缺席的；缺席的学生错过了考试。",
+    },
+    acceptable: {
+      focusWord: "acceptable",
+      sentence: "This answer is acceptable.",
+      chinese: "acceptable = 可接受的；这个答案可以接受。",
+    },
+    accurate: {
+      focusWord: "accurate",
+      sentence: "The map is accurate.",
+      chinese: "accurate = 准确的；这张地图很准确。",
+    },
+    active: {
+      focusWord: "active",
+      sentence: "My grandfather is still active.",
+      chinese: "active = 活跃的；我的祖父仍然很活跃。",
+    },
+    advanced: {
+      focusWord: "advanced",
+      sentence: "She joined an advanced English class.",
+      chinese: "advanced = 高级的；她参加了高级英语班。",
+    },
+    alive: {
+      focusWord: "alive",
+      sentence: "The fish was still alive.",
+      chinese: "alive = 活着的；那条鱼还活着。",
+    },
+    alright: {
+      focusWord: "alright",
+      sentence: "Don't worry; everything is alright.",
+      chinese: "alright = 没问题；别担心，一切都没问题。",
+    },
+    ancient: {
+      focusWord: "ancient",
+      sentence: "We visited an ancient temple.",
+      chinese: "ancient = 古老的；我们参观了一座古老的寺庙。",
+    },
+    annual: {
+      focusWord: "annual",
+      sentence: "The annual school concert is in May.",
+      chinese: "annual = 年度的；学校年度音乐会在五月举行。",
+    },
+    antique: {
+      focusWord: "antique",
+      sentence: "She bought an antique clock.",
+      chinese: "antique = 古董的；她买了一个古董钟。",
+    },
+    asleep: {
+      focusWord: "asleep",
+      sentence: "The baby is asleep.",
+      chinese: "asleep = 睡着的；宝宝睡着了。",
+    },
+    attractive: {
+      focusWord: "attractive",
+      sentence: "The poster has an attractive design.",
+      chinese: "attractive = 有吸引力的；这张海报设计得很有吸引力。",
+    },
+    available: {
+      focusWord: "available",
+      sentence: "Tickets are available online.",
+      chinese: "available = 可获得的；门票可以在网上买到。",
+    },
+    awake: {
+      focusWord: "awake",
+      sentence: "I was awake at midnight.",
+      chinese: "awake = 醒着的；午夜时我还醒着。",
+    },
+    awesome: {
+      focusWord: "awesome",
+      sentence: "The view from the hill was awesome.",
+      chinese: "awesome = 极好的；山上的景色极好。",
+    },
+    bad: {
+      focusWord: "bad",
+      sentence: "The weather was bad yesterday.",
+      chinese: "bad = 糟糕的；昨天天气很糟糕。",
+    },
+    bald: {
+      focusWord: "bald",
+      sentence: "The bald man wore a hat.",
+      chinese: "bald = 秃头的；那个秃头男人戴着帽子。",
+    },
+    basic: {
+      focusWord: "basic",
+      sentence: "This course teaches basic grammar.",
+      chinese: "basic = 基本的；这门课程教授基本语法。",
+    },
+    beautiful: {
+      focusWord: "beautiful",
+      sentence: "The garden is beautiful in spring.",
+      chinese: "beautiful = 美丽的；春天的花园很美。",
+    },
+    best: {
+      focusWord: "best",
+      sentence: "This is the best answer.",
+      chinese: "best = 最好的；这是最好的答案。",
+    },
+    better: {
+      focusWord: "better",
+      sentence: "She feels better today.",
+      chinese: "better = 更好的；她今天感觉好多了。",
+    },
+    big: {
+      focusWord: "big",
+      sentence: "They live in a big house.",
+      chinese: "big = 大的；他们住在一所大房子里。",
+    },
+    bitter: {
+      focusWord: "bitter",
+      sentence: "The coffee tastes bitter.",
+      chinese: "bitter = 苦的；这杯咖啡尝起来很苦。",
+    },
+    black: {
+      focusWord: "black",
+      sentence: "She wore a black coat.",
+      chinese: "black = 黑色的；她穿了一件黑色外套。",
+    },
+    blind: {
+      focusWord: "blind",
+      sentence: "The blind singer performed beautifully.",
+      chinese: "blind = 失明的；那位失明的歌手表演得很美。",
+    },
+    blond: {
+      focusWord: "blond",
+      sentence: "The blond child waved at us.",
+      chinese: "blond = 金发的；那个金发孩子向我们挥手。",
+    },
+    blue: {
+      focusWord: "blue",
+      sentence: "He chose a blue shirt.",
+      chinese: "blue = 蓝色的；他选了一件蓝色衬衫。",
+    },
+    boiled: {
+      focusWord: "boiled",
+      sentence: "We ate boiled potatoes.",
+      chinese: "boiled = 煮熟的；我们吃了煮熟的土豆。",
+    },
+    bold: {
+      focusWord: "bold",
+      sentence: "The bold title was easy to read.",
+      chinese: "bold = 粗体的；粗体标题很容易阅读。",
+    },
+    born: {
+      focusWord: "born",
+      sentence: "She was born in April.",
+      chinese: "born = 出生的；她出生在四月。",
+    },
+    bossy: {
+      focusWord: "bossy",
+      sentence: "His bossy sister told everyone what to do.",
+      chinese: "bossy = 专横的；他专横的姐姐指挥每个人做事。",
+    },
+    bottom: {
+      focusWord: "bottom",
+      sentence: "Sign on the bottom line.",
+      chinese: "bottom = 底部的；在底部那一行签名。",
+    },
+    brandnew: {
+      focusWord: "brand new",
+      sentence: "She bought a brand new bike.",
+      chinese: "brand new = 崭新的；她买了一辆崭新的自行车。",
+    },
+    brief: {
+      focusWord: "brief",
+      sentence: "The teacher gave a brief explanation.",
+      chinese: "brief = 简短的；老师做了简短的解释。",
+    },
+    brilliant: {
+      focusWord: "brilliant",
+      sentence: "His idea was brilliant.",
+      chinese: "brilliant = 出色的；他的想法很出色。",
+    },
+    broad: {
+      focusWord: "broad",
+      sentence: "A broad path led to the lake.",
+      chinese: "broad = 宽阔的；一条宽阔的小路通向湖边。",
+    },
+    broken: {
+      focusWord: "broken",
+      sentence: "The broken chair was in the corner.",
+      chinese: "broken = 坏了的；坏椅子在角落里。",
+    },
+    brown: {
+      focusWord: "brown",
+      sentence: "The dog has brown ears.",
+      chinese: "brown = 棕色的；这只狗有棕色耳朵。",
+    },
+    burning: {
+      focusWord: "burning",
+      sentence: "The burning candle lit the room.",
+      chinese: "burning = 燃烧的；燃烧的蜡烛照亮了房间。",
+    },
+    busy: {
+      focusWord: "busy",
+      sentence: "The cafe was busy at lunchtime.",
+      chinese: "busy = 忙碌的；午餐时间咖啡馆很忙。",
+    },
+    capital: {
+      focusWord: "capital",
+      sentence: "London is the capital city of the UK.",
+      chinese: "capital = 首都的；伦敦是英国的首都城市。",
+    },
+    cardboard: {
+      focusWord: "cardboard",
+      sentence: "The cardboard box was light.",
+      chinese: "cardboard = 纸板的；这个纸板箱很轻。",
+    },
+    careful: {
+      focusWord: "careful",
+      sentence: "Be careful on the icy road.",
+      chinese: "careful = 小心的；在结冰的路上要小心。",
+    },
+    careless: {
+      focusWord: "careless",
+      sentence: "A careless mistake cost him a mark.",
+      chinese: "careless = 粗心的；一个粗心的错误让他丢了一分。",
+    },
+    casual: {
+      focusWord: "casual",
+      sentence: "Wear casual clothes to the picnic.",
+      chinese: "casual = 休闲的；野餐时穿休闲衣服。",
+    },
+    central: {
+      focusWord: "central",
+      sentence: "Our hotel is in a central area.",
+      chinese: "central = 中心的；我们的酒店在中心区域。",
+    },
+    certain: {
+      focusWord: "certain",
+      sentence: "I am certain that the shop is open.",
+      chinese: "certain = 确信的；我确信商店开着。",
+    },
+    challenging: {
+      focusWord: "challenging",
+      sentence: "The mountain walk was challenging.",
+      chinese: "challenging = 有挑战性的；这次山路徒步很有挑战性。",
+    },
+    charming: {
+      focusWord: "charming",
+      sentence: "The village has a charming square.",
+      chinese: "charming = 迷人的；这个村庄有一个迷人的广场。",
+    },
+    clever: {
+      focusWord: "clever",
+      sentence: "The clever child solved the puzzle.",
+      chinese: "clever = 聪明的；聪明的孩子解开了谜题。",
+    },
+    close: {
+      focusWord: "close",
+      sentence: "The station is close to our hotel.",
+      chinese: "close = 近的；车站离我们的酒店很近。",
+    },
+    closed: {
+      focusWord: "closed",
+      sentence: "The library is closed on Mondays.",
+      chinese: "closed = 关闭的；图书馆星期一关闭。",
+    },
+    colourful: {
+      focusWord: "colourful",
+      sentence: "She wore a colourful dress.",
+      chinese: "colourful = 色彩鲜艳的；她穿了一条色彩鲜艳的连衣裙。",
+    },
+    complicated: {
+      focusWord: "complicated",
+      sentence: "The instructions were complicated.",
+      chinese: "complicated = 复杂的；说明很复杂。",
+    },
+    confusing: {
+      focusWord: "confusing",
+      sentence: "The map was confusing.",
+      chinese: "confusing = 令人困惑的；这张地图令人困惑。",
+    },
+    convenient: {
+      focusWord: "convenient",
+      sentence: "The new bus stop is convenient.",
+      chinese: "convenient = 方便的；新的公交站很方便。",
+    },
+    correct: {
+      focusWord: "correct",
+      sentence: "Your answer is correct.",
+      chinese: "correct = 正确的；你的答案是正确的。",
+    },
+    cosy: {
+      focusWord: "cosy",
+      sentence: "The small room felt cosy.",
+      chinese: "cosy = 舒适的；这个小房间让人觉得舒适。",
+    },
+    cream: {
+      focusWord: "cream",
+      sentence: "She wore a cream scarf.",
+      chinese: "cream = 奶油色的；她戴了一条奶油色围巾。",
+    },
+    creative: {
+      focusWord: "creative",
+      sentence: "The creative student made a poster.",
+      chinese: "creative = 有创造力的；有创造力的学生做了一张海报。",
+    },
+    crowded: {
+      focusWord: "crowded",
+      sentence: "The train was crowded.",
+      chinese: "crowded = 拥挤的；火车很拥挤。",
+    },
+    cruel: {
+      focusWord: "cruel",
+      sentence: "The cruel joke upset him.",
+      chinese: "cruel = 残忍的；这个残忍的玩笑让他难过。",
+    },
+    cultural: {
+      focusWord: "cultural",
+      sentence: "The city has many cultural events.",
+      chinese: "cultural = 文化的；这座城市有许多文化活动。",
+    },
+    curious: {
+      focusWord: "curious",
+      sentence: "The curious child asked many questions.",
+      chinese: "curious = 好奇的；好奇的孩子问了很多问题。",
+    },
+    curly: {
+      focusWord: "curly",
+      sentence: "She has curly hair.",
+      chinese: "curly = 卷曲的；她有卷发。",
+    },
+    cute: {
+      focusWord: "cute",
+      sentence: "The puppy is cute.",
+      chinese: "cute = 可爱的；这只小狗很可爱。",
+    },
+    daily: {
+      focusWord: "daily",
+      sentence: "Daily exercise keeps him healthy.",
+      chinese: "daily = 每日的；每日锻炼让他保持健康。",
+    },
+    damaged: {
+      focusWord: "damaged",
+      sentence: "The damaged phone would not start.",
+      chinese: "damaged = 损坏的；损坏的手机无法启动。",
+    },
+    dangerous: {
+      focusWord: "dangerous",
+      sentence: "The road is dangerous at night.",
+      chinese: "dangerous = 危险的；这条路夜里很危险。",
+    },
+    dead: {
+      focusWord: "dead",
+      sentence: "The plant was dead after the heat.",
+      chinese: "dead = 死的；高温之后那株植物死了。",
+    },
+    deaf: {
+      focusWord: "deaf",
+      sentence: "The deaf student used sign language.",
+      chinese: "deaf = 失聪的；失聪的学生使用手语。",
+    },
+    dear: {
+      focusWord: "dear",
+      sentence: "Dear Grandma, thank you for the gift.",
+      chinese: "dear = 亲爱的；亲爱的奶奶，谢谢您的礼物。",
+    },
+    delayed: {
+      focusWord: "delayed",
+      sentence: "The delayed flight arrived at midnight.",
+      chinese: "delayed = 延误的；延误的航班午夜抵达。",
+    },
+    delicious: {
+      focusWord: "delicious",
+      sentence: "The soup was delicious.",
+      chinese: "delicious = 美味的；这汤很美味。",
+    },
+    different: {
+      focusWord: "different",
+      sentence: "We chose different colours.",
+      chinese: "different = 不同的；我们选择了不同的颜色。",
+    },
+    difficult: {
+      focusWord: "difficult",
+      sentence: "The exam was difficult.",
+      chinese: "difficult = 困难的；考试很难。",
+    },
+    direct: {
+      focusWord: "direct",
+      sentence: "We took a direct train to London.",
+      chinese: "direct = 直达的；我们乘直达火车去了伦敦。",
+    },
+    disabled: {
+      focusWord: "disabled",
+      sentence: "The disabled athlete won a medal.",
+      chinese: "disabled = 残疾的；那位残疾运动员赢得了奖牌。",
+    },
+    disgusting: {
+      focusWord: "disgusting",
+      sentence: "The old milk smelled disgusting.",
+      chinese: "disgusting = 令人恶心的；过期牛奶闻起来令人恶心。",
+    },
+    downstairs: {
+      focusWord: "downstairs",
+      sentence: "The downstairs bathroom is small.",
+      chinese: "downstairs = 楼下的；楼下的浴室很小。",
+    },
+    dressed: {
+      focusWord: "dressed",
+      sentence: "The children were dressed for the party.",
+      chinese: "dressed = 穿着衣服的；孩子们穿好衣服准备参加聚会。",
+    },
+    due: {
+      focusWord: "due",
+      sentence: "The homework is due tomorrow.",
+      chinese: "due = 到期的；作业明天到期。",
+    },
+    dull: {
+      focusWord: "dull",
+      sentence: "The lecture was dull.",
+      chinese: "dull = 乏味的；讲座很乏味。",
+    },
+    dutyfree: {
+      focusWord: "duty-free",
+      sentence: "She bought duty-free perfume at the airport.",
+      chinese: "duty-free = 免税的；她在机场买了免税香水。",
+    },
+    eastern: {
+      focusWord: "eastern",
+      sentence: "The eastern gate opens first.",
+      chinese: "eastern = 东部的；东门最先开放。",
+    },
+    easy: {
+      focusWord: "easy",
+      sentence: "This question is easy.",
+      chinese: "easy = 容易的；这个问题很容易。",
+    },
+    easygoing: {
+      focusWord: "easygoing",
+      sentence: "Our new teacher is easygoing.",
+      chinese: "easygoing = 随和的；我们的新老师很随和。",
+    },
+    efficient: {
+      focusWord: "efficient",
+      sentence: "The efficient system saves time.",
+      chinese: "efficient = 高效的；高效的系统节省时间。",
+    },
+    elder: {
+      focusWord: "elder",
+      sentence: "My elder brother studies medicine.",
+      chinese: "elder = 年长的；我的哥哥学医。",
+    },
+    elderly: {
+      focusWord: "elderly",
+      sentence: "An elderly woman sat near the door.",
+      chinese: "elderly = 年老的；一位老妇人坐在门附近。",
+    },
+    electric: {
+      focusWord: "electric",
+      sentence: "The electric car is quiet.",
+      chinese: "electric = 电动的；这辆电动车很安静。",
+    },
+    electrical: {
+      focusWord: "electrical",
+      sentence: "The electrical equipment must stay dry.",
+      chinese: "electrical = 电气的；电气设备必须保持干燥。",
+    },
+    empty: {
+      focusWord: "empty",
+      sentence: "The bottle was empty.",
+      chinese: "empty = 空的；瓶子是空的。",
+    },
+    engaged: {
+      focusWord: "engaged",
+      sentence: "My cousin is engaged to a doctor.",
+      chinese: "engaged = 订婚的；我的表姐和一名医生订婚了。",
+    },
+    enjoyable: {
+      focusWord: "enjoyable",
+      sentence: "The trip was enjoyable.",
+      chinese: "enjoyable = 令人愉快的；这次旅行令人愉快。",
+    },
+    enormous: {
+      focusWord: "enormous",
+      sentence: "An enormous ship entered the port.",
+      chinese: "enormous = 巨大的；一艘巨大的船驶入港口。",
+    },
+    equal: {
+      focusWord: "equal",
+      sentence: "The two teams had equal scores.",
+      chinese: "equal = 相等的；两队得分相等。",
+    },
+    essential: {
+      focusWord: "essential",
+      sentence: "Water is essential for life.",
+      chinese: "essential = 必要的；水对生命是必要的。",
+    },
+    exact: {
+      focusWord: "exact",
+      sentence: "Tell me the exact time.",
+      chinese: "exact = 精确的；告诉我精确时间。",
+    },
+    excellent: {
+      focusWord: "excellent",
+      sentence: "Her English is excellent.",
+      chinese: "excellent = 优秀的；她的英语很优秀。",
+    },
+    extra: {
+      focusWord: "extra",
+      sentence: "Take an extra jacket.",
+      chinese: "extra = 额外的；带上一件额外的夹克。",
+    },
+    extraordinary: {
+      focusWord: "extraordinary",
+      sentence: "The singer had an extraordinary voice.",
+      chinese: "extraordinary = 非凡的；那位歌手有非凡的嗓音。",
+    },
+    fair: {
+      focusWord: "fair",
+      sentence: "The referee made a fair decision.",
+      chinese: "fair = 公平的；裁判做出了公平的决定。",
+    },
+    false: {
+      focusWord: "false",
+      sentence: "The story was false.",
+      chinese: "false = 错误的；这个故事是假的。",
+    },
+    familiar: {
+      focusWord: "familiar",
+      sentence: "The street looked familiar.",
+      chinese: "familiar = 熟悉的；这条街看起来很熟悉。",
+    },
+    famous: {
+      focusWord: "famous",
+      sentence: "A famous actor visited our school.",
+      chinese: "famous = 著名的；一位著名演员参观了我们学校。",
+    },
+    fantastic: {
+      focusWord: "fantastic",
+      sentence: "The concert was fantastic.",
+      chinese: "fantastic = 极好的；音乐会棒极了。",
+    },
+    fashionable: {
+      focusWord: "fashionable",
+      sentence: "Those shoes are fashionable.",
+      chinese: "fashionable = 时髦的；那双鞋很时髦。",
+    },
+    fast: {
+      focusWord: "fast",
+      sentence: "The fast train arrived early.",
+      chinese: "fast = 快的；快车提前到达了。",
+    },
+    fat: {
+      focusWord: "fat",
+      sentence: "The fat cat slept on the sofa.",
+      chinese: "fat = 胖的；那只胖猫睡在沙发上。",
+    },
+    favourite: {
+      focusWord: "favourite",
+      sentence: "Blue is my favourite colour.",
+      chinese: "favourite = 最喜欢的；蓝色是我最喜欢的颜色。",
+    },
+    final: {
+      focusWord: "final",
+      sentence: "The final question was easy.",
+      chinese: "final = 最后的；最后一个问题很容易。",
+    },
+    financial: {
+      focusWord: "financial",
+      sentence: "The family needed financial advice.",
+      chinese: "financial = 财务的；这家人需要财务建议。",
+    },
+    fine: {
+      focusWord: "fine",
+      sentence: "I'm fine after the rest.",
+      chinese: "fine = 好的；休息后我很好。",
+    },
+    first: {
+      focusWord: "first",
+      sentence: "Her first lesson starts at nine.",
+      chinese: "first = 第一的；她的第一节课九点开始。",
+    },
+    foggy: {
+      focusWord: "foggy",
+      sentence: "It was foggy near the river.",
+      chinese: "foggy = 有雾的；河边有雾。",
+    },
+    folk: {
+      focusWord: "folk",
+      sentence: "We listened to folk music.",
+      chinese: "folk = 民间的；我们听了民间音乐。",
+    },
+    following: {
+      focusWord: "following",
+      sentence: "Read the following sentence.",
+      chinese: "following = 接下来的；阅读接下来的句子。",
+    },
+    fond: {
+      focusWord: "fond",
+      sentence: "She is fond of classical music.",
+      chinese: "fond = 喜爱的；她喜爱古典音乐。",
+    },
+    forbidden: {
+      focusWord: "forbidden",
+      sentence: "Swimming is forbidden here.",
+      chinese: "forbidden = 禁止的；这里禁止游泳。",
+    },
+    foreign: {
+      focusWord: "foreign",
+      sentence: "He enjoys foreign films.",
+      chinese: "foreign = 外国的；他喜欢外国电影。",
+    },
+    former: {
+      focusWord: "former",
+      sentence: "My former teacher lives nearby.",
+      chinese: "former = 以前的；我以前的老师住在附近。",
+    },
+    free: {
+      focusWord: "free",
+      sentence: "The museum is free on Sundays.",
+      chinese: "free = 免费的；博物馆星期天免费。",
+    },
+    freezing: {
+      focusWord: "freezing",
+      sentence: "The water was freezing.",
+      chinese: "freezing = 极冷的；水冰冷刺骨。",
+    },
+    frequent: {
+      focusWord: "frequent",
+      sentence: "Frequent rain delayed the work.",
+      chinese: "frequent = 频繁的；频繁下雨耽误了工作。",
+    },
+    fried: {
+      focusWord: "fried",
+      sentence: "He ordered fried fish.",
+      chinese: "fried = 油炸的；他点了炸鱼。",
+    },
+    friendly: {
+      focusWord: "friendly",
+      sentence: "The hotel staff were friendly.",
+      chinese: "friendly = 友好的；酒店员工很友好。",
+    },
+    front: {
+      focusWord: "front",
+      sentence: "Use the front door.",
+      chinese: "front = 前面的；使用前门。",
+    },
+    frozen: {
+      focusWord: "frozen",
+      sentence: "We bought frozen peas.",
+      chinese: "frozen = 冷冻的；我们买了冷冻豌豆。",
+    },
+    full: {
+      focusWord: "full",
+      sentence: "The bus was full.",
+      chinese: "full = 满的；公交车满员了。",
+    },
+    furthest: {
+      focusWord: "furthest",
+      sentence: "The furthest village is twenty kilometres away.",
+      chinese: "furthest = 最远的；最远的村庄在二十公里外。",
+    },
+    future: {
+      focusWord: "future",
+      sentence: "Future plans depend on the weather.",
+      chinese: "future = 未来的；未来计划取决于天气。",
+    },
+    general: {
+      focusWord: "general",
+      sentence: "The general idea is clear.",
+      chinese: "general = 大体的；大体意思很清楚。",
+    },
+    generous: {
+      focusWord: "generous",
+      sentence: "Her generous gift helped the club.",
+      chinese: "generous = 慷慨的；她慷慨的礼物帮助了俱乐部。",
+    },
+    gentle: {
+      focusWord: "gentle",
+      sentence: "The nurse had a gentle voice.",
+      chinese: "gentle = 温柔的；护士声音温柔。",
+    },
+    giant: {
+      focusWord: "giant",
+      sentence: "A giant screen showed the match.",
+      chinese: "giant = 巨大的；一块巨大屏幕播放了比赛。",
+    },
+    golden: {
+      focusWord: "golden",
+      sentence: "The golden leaves covered the path.",
+      chinese: "golden = 金色的；金色树叶覆盖了小路。",
+    },
+    good: {
+      focusWord: "good",
+      sentence: "That is a good idea.",
+      chinese: "good = 好的；那是个好主意。",
+    },
+    goodlooking: {
+      focusWord: "good-looking",
+      sentence: "The good-looking actor smiled at the camera.",
+      chinese: "good-looking = 好看的；那位好看的演员对着镜头微笑。",
+    },
+    gorgeous: {
+      focusWord: "gorgeous",
+      sentence: "She wore a gorgeous dress.",
+      chinese: "gorgeous = 漂亮的；她穿了一条漂亮的连衣裙。",
+    },
+    grateful: {
+      focusWord: "grateful",
+      sentence: "I am grateful for your help.",
+      chinese: "grateful = 感激的；我很感激你的帮助。",
+    },
+    great: {
+      focusWord: "great",
+      sentence: "We had a great holiday.",
+      chinese: "great = 很棒的；我们度过了一个很棒的假期。",
+    },
+    grey: {
+      focusWord: "grey",
+      sentence: "Grey clouds covered the sky.",
+      chinese: "grey = 灰色的；灰色云层遮住了天空。",
+    },
+    grilled: {
+      focusWord: "grilled",
+      sentence: "The grilled chicken smelled delicious.",
+      chinese: "grilled = 烤的；烤鸡闻起来很香。",
+    },
+    guilty: {
+      focusWord: "guilty",
+      sentence: "He felt guilty about the broken window.",
+      chinese: "guilty = 内疚的；他对打破窗户感到内疚。",
+    },
+    handsome: {
+      focusWord: "handsome",
+      sentence: "The handsome prince rode a horse.",
+      chinese: "handsome = 英俊的；英俊的王子骑着马。",
+    },
+    hard: {
+      focusWord: "hard",
+      sentence: "The exam was hard.",
+      chinese: "hard = 困难的；考试很难。",
+    },
+    heavy: {
+      focusWord: "heavy",
+      sentence: "The heavy bag hurt my shoulder.",
+      chinese: "heavy = 重的；沉重的包弄疼了我的肩膀。",
+    },
+    hidden: {
+      focusWord: "hidden",
+      sentence: "The hidden key was under the mat.",
+      chinese: "hidden = 隐藏的；隐藏的钥匙在垫子下面。",
+    },
+    highjump: {
+      focusWord: "high jump",
+      sentence: "The high jump event starts at noon.",
+      chinese: "high jump = 跳高；跳高项目中午开始。",
+    },
   };
 }
 
