@@ -288,6 +288,9 @@ const manuallyConfirmedTerms = new Set([
   "level", // a game level, expressed as 关卡 in context
   "lots", // the quantifier "lots of", not land lots
   "mate", // British informal friend, not a partner
+  // These eleventh-batch objects examples use valid contextual noun senses.
+  "part", // a machine component, expressed as 零件 in context
+  "partner", // a project partner / teammate, expressed as 搭档
 ]);
 
 async function main() {
