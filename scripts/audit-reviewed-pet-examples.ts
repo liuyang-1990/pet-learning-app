@@ -291,6 +291,13 @@ const manuallyConfirmedTerms = new Set([
   // These eleventh-batch objects examples use valid contextual noun senses.
   "part", // a machine component, expressed as 零件 in context
   "partner", // a project partner / teammate, expressed as 搭档
+  // These twelfth-batch objects examples use valid contextual noun senses.
+  "period", // a school lesson period, not a general time period
+  "pin", // a thumbtack / drawing pin, not a sewing needle
+  "pitch", // a football field, not musical pitch
+  "play", // a stage play, not the verb "play"
+  "pleasure", // pleasure in the polite phrase, expressed naturally as 荣幸
+  "post", // British mail, not an online post
 ]);
 
 async function main() {

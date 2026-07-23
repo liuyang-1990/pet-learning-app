@@ -7774,5 +7774,205 @@ export const reviewedWordExampleAudit = {
   "passenger": {
     "status": "pass",
     "reasons": []
+  },
+  "pasta": {
+    "status": "pass",
+    "reasons": []
+  },
+  "path": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pattern": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pea": {
+    "status": "pass",
+    "reasons": []
+  },
+  "peach": {
+    "status": "pass",
+    "reasons": []
+  },
+  "peak": {
+    "status": "pass",
+    "reasons": []
+  },
+  "peanut": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pear": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pedestrian": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pen": {
+    "status": "pass",
+    "reasons": []
+  },
+  "penfriend": {
+    "status": "pass",
+    "reasons": []
+  },
+  "penny": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pepper": {
+    "status": "pass",
+    "reasons": []
+  },
+  "performer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "perfume": {
+    "status": "pass",
+    "reasons": []
+  },
+  "period": {
+    "status": "pass",
+    "reasons": []
+  },
+  "permission": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "petrol": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pharmacy": {
+    "status": "pass",
+    "reasons": []
+  },
+  "photo": {
+    "status": "pass",
+    "reasons": []
+  },
+  "photocopy": {
+    "status": "pass",
+    "reasons": []
+  },
+  "photograph": {
+    "status": "pass",
+    "reasons": []
+  },
+  "photographer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "photography": {
+    "status": "pass",
+    "reasons": []
+  },
+  "phrase": {
+    "status": "pass",
+    "reasons": []
+  },
+  "physics": {
+    "status": "pass",
+    "reasons": []
+  },
+  "piano": {
+    "status": "pass",
+    "reasons": []
+  },
+  "picnic": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pie": {
+    "status": "pass",
+    "reasons": []
+  },
+  "piece": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pig": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pile": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pill": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pillow": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pin": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pineapple": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pipe": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pirate": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pitch": {
+    "status": "pass",
+    "reasons": []
+  },
+  "play": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pleasure": {
+    "status": "pass",
+    "reasons": []
+  },
+  "plot": {
+    "status": "pass",
+    "reasons": []
+  },
+  "plug": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pocket": {
+    "status": "pass",
+    "reasons": []
+  },
+  "podcast": {
+    "status": "pass",
+    "reasons": []
+  },
+  "poet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "poetry": {
+    "status": "pass",
+    "reasons": []
+  },
+  "port": {
+    "status": "pass",
+    "reasons": []
+  },
+  "post": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;
