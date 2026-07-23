@@ -10635,6 +10635,256 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "The morning post brought two letters.",
       chinese: "post = 邮件；早上的邮件送来了两封信。",
     },
+    "postcard": {
+      focusWord: "postcard",
+      sentence: "She sent a postcard from Spain.",
+      chinese: "postcard = 明信片；她从西班牙寄来了一张明信片。",
+    },
+    "poster": {
+      focusWord: "poster",
+      sentence: "The poster showed the concert date.",
+      chinese: "poster = 海报；海报显示了音乐会日期。",
+    },
+    "postman": {
+      focusWord: "postman",
+      sentence: "The postman brought a parcel this morning.",
+      chinese: "postman = 邮递员；邮递员今天早上送来了一个包裹。",
+    },
+    "pot": {
+      focusWord: "pot",
+      sentence: "The soup cooked in a large pot.",
+      chinese: "pot = 锅；汤在一个大锅里煮着。",
+    },
+    "pottery": {
+      focusWord: "pottery",
+      sentence: "The museum has old pottery from Greece.",
+      chinese: "pottery = 陶器；博物馆有来自希腊的古陶器。",
+    },
+    "powder": {
+      focusWord: "powder",
+      sentence: "Mix the powder with cold milk.",
+      chinese: "powder = 粉末；把粉末和冷牛奶混合。",
+    },
+    "practice": {
+      focusWord: "practice",
+      sentence: "Daily practice helped her piano playing.",
+      chinese: "practice = 练习；每天练习帮助了她的钢琴演奏。",
+    },
+    "prayer": {
+      focusWord: "prayer",
+      sentence: "She said a quiet prayer before the journey.",
+      chinese: "prayer = 祈祷；旅程前她轻声祈祷。",
+    },
+    "presenter": {
+      focusWord: "presenter",
+      sentence: "The presenter introduced the next singer.",
+      chinese: "presenter = 主持人；主持人介绍了下一位歌手。",
+    },
+    "president": {
+      focusWord: "president",
+      sentence: "The club president opened the meeting.",
+      chinese: "president = 主席；俱乐部主席宣布会议开始。",
+    },
+    "prince": {
+      focusWord: "prince",
+      sentence: "The prince lived in a beautiful palace.",
+      chinese: "prince = 王子；王子住在一座美丽的宫殿里。",
+    },
+    "princess": {
+      focusWord: "princess",
+      sentence: "The princess wore a silver dress.",
+      chinese: "princess = 公主；公主穿着一条银色连衣裙。",
+    },
+    "printer": {
+      focusWord: "printer",
+      sentence: "The printer ran out of paper.",
+      chinese: "printer = 打印机；打印机没纸了。",
+    },
+    "prison": {
+      focusWord: "prison",
+      sentence: "The old prison is now a museum.",
+      chinese: "prison = 监狱；旧监狱现在是一座博物馆。",
+    },
+    "prisoner": {
+      focusWord: "prisoner",
+      sentence: "The prisoner wrote a letter to his family.",
+      chinese: "prisoner = 囚犯；囚犯给家人写了一封信。",
+    },
+    "prize": {
+      focusWord: "prize",
+      sentence: "She won first prize in the quiz.",
+      chinese: "prize = 奖品；她在测验中赢得了一等奖。",
+    },
+    "problem": {
+      focusWord: "problem",
+      sentence: "This problem has an easy answer.",
+      chinese: "problem = 问题；这个问题有一个简单的答案。",
+    },
+    "product": {
+      focusWord: "product",
+      sentence: "This product is made from recycled plastic.",
+      chinese: "product = 产品；这个产品由回收塑料制成。",
+    },
+    "professor": {
+      focusWord: "professor",
+      sentence: "The professor gave a talk about stars.",
+      chinese: "professor = 教授；教授做了一场关于星星的讲座。",
+    },
+    "programmer": {
+      focusWord: "programmer",
+      sentence: "The programmer fixed the app quickly.",
+      chinese: "programmer = 程序员；程序员很快修好了应用。",
+    },
+    "progress": {
+      focusWord: "progress",
+      sentence: "The teacher was pleased with my progress.",
+      chinese: "progress = 进步；老师对我的进步很满意。",
+    },
+    "promise": {
+      focusWord: "promise",
+      sentence: "He made a promise to return the book.",
+      chinese: "promise = 承诺；他承诺归还那本书。",
+    },
+    "publisher": {
+      focusWord: "publisher",
+      sentence: "The publisher printed the new guidebook.",
+      chinese: "publisher = 出版商；出版商印刷了新的旅行指南。",
+    },
+    "pullover": {
+      focusWord: "pullover",
+      sentence: "She wore a red pullover on the trip.",
+      chinese: "pullover = 套头毛衣；她旅行时穿了一件红色套头毛衣。",
+    },
+    "pump": {
+      focusWord: "pump",
+      sentence: "The bike pump is in the garage.",
+      chinese: "pump = 打气筒；自行车打气筒在车库里。",
+    },
+    "purpose": {
+      focusWord: "purpose",
+      sentence: "The purpose of the visit was research.",
+      chinese: "purpose = 目的；这次访问的目的是研究。",
+    },
+    "purse": {
+      focusWord: "purse",
+      sentence: "She kept her coins in a small purse.",
+      chinese: "purse = 钱包；她把硬币放在一个小钱包里。",
+    },
+    "push": {
+      focusWord: "push",
+      sentence: "The door needs a strong push.",
+      chinese: "push = 推；这扇门需要用力推一下。",
+    },
+    "puzzle": {
+      focusWord: "puzzle",
+      sentence: "This puzzle has five hundred pieces.",
+      chinese: "puzzle = 拼图；这个拼图有五百块。",
+    },
+    "pyjamas": {
+      focusWord: "pyjamas",
+      sentence: "He packed clean pyjamas for the night.",
+      chinese: "pyjamas = 睡衣；他为晚上装了干净的睡衣。",
+    },
+    "quiz": {
+      focusWord: "quiz",
+      sentence: "The history quiz had ten questions.",
+      chinese: "quiz = 测验；历史测验有十道题。",
+    },
+    "racket": {
+      focusWord: "racket",
+      sentence: "My tennis racket needs new strings.",
+      chinese: "racket = 球拍；我的网球拍需要换新线。",
+    },
+    "rail": {
+      focusWord: "rail",
+      sentence: "Hold the rail when you climb the stairs.",
+      chinese: "rail = 扶手；上楼梯时扶着扶手。",
+    },
+    "railroad": {
+      focusWord: "railroad",
+      sentence: "The railroad runs beside the river.",
+      chinese: "railroad = 铁路；铁路沿着河边延伸。",
+    },
+    "railway": {
+      focusWord: "railway",
+      sentence: "The railway station is near the hotel.",
+      chinese: "railway = 铁路；火车站在酒店附近。",
+    },
+    "raincoat": {
+      focusWord: "raincoat",
+      sentence: "Take a raincoat because it may rain.",
+      chinese: "raincoat = 雨衣；带上雨衣，因为可能会下雨。",
+    },
+    "rainforest": {
+      focusWord: "rainforest",
+      sentence: "Many birds live in the rainforest.",
+      chinese: "rainforest = 雨林；许多鸟生活在雨林里。",
+    },
+    "range": {
+      focusWord: "range",
+      sentence: "The shop sells a wide range of shoes.",
+      chinese: "range = 种类；这家商店出售种类很多的鞋。",
+    },
+    "rap": {
+      focusWord: "rap",
+      sentence: "Rap is popular with many students.",
+      chinese: "rap = 说唱音乐；说唱音乐很受许多学生欢迎。",
+    },
+    "reader": {
+      focusWord: "reader",
+      sentence: "This story is written for young readers.",
+      chinese: "reader = 读者；这个故事是为年轻读者写的。",
+    },
+    "recording": {
+      focusWord: "recording",
+      sentence: "The recording of the song sounded clear.",
+      chinese: "recording = 录音；这首歌的录音听起来很清楚。",
+    },
+    "recycling": {
+      focusWord: "recycling",
+      sentence: "Recycling saves paper and plastic.",
+      chinese: "recycling = 回收利用；回收利用能节省纸张和塑料。",
+    },
+    "refrigerator": {
+      focusWord: "refrigerator",
+      sentence: "Put the milk in the refrigerator.",
+      chinese: "refrigerator = 冰箱；把牛奶放进冰箱。",
+    },
+    "refund": {
+      focusWord: "refund",
+      sentence: "The shop gave me a refund for the broken lamp.",
+      chinese: "refund = 退款；商店为坏掉的灯给了我退款。",
+    },
+    "regards": {
+      focusWord: "regards",
+      sentence: "Please give my regards to your parents.",
+      chinese: "regards = 问候；请代我向你的父母问好。",
+    },
+    "regret": {
+      focusWord: "regret",
+      sentence: "My only regret was missing the final match.",
+      chinese: "regret = 遗憾；我唯一的遗憾是错过了决赛。",
+    },
+    "religion": {
+      focusWord: "religion",
+      sentence: "Religion is part of the history course.",
+      chinese: "religion = 宗教；宗教是历史课程的一部分。",
+    },
+    "remotecontrol": {
+      focusWord: "remote control",
+      sentence: "The remote control is under the sofa.",
+      chinese: "remote control = 遥控器；遥控器在沙发下面。",
+    },
+    "rent": {
+      focusWord: "rent",
+      sentence: "The monthly rent is eight hundred pounds.",
+      chinese: "rent = 租金；月租金是八百英镑。",
+    },
+    "report": {
+      focusWord: "report",
+      sentence: "The report explains the accident clearly.",
+      chinese: "report = 报告；这份报告清楚地解释了事故。",
+    },
   };
 }
 
