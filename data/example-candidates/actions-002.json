@@ -1,0 +1,306 @@
+{
+  "batchId": "actions-002",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "catch",
+      "focusWord": "catch",
+      "sentence": "We ran to catch the bus.",
+      "chinese": "catch = 赶上；我们跑着去赶公交车。"
+    },
+    {
+      "term": "celebrate",
+      "focusWord": "celebrate",
+      "sentence": "We celebrated her birthday at home.",
+      "chinese": "celebrate = 庆祝；我们在家庆祝了她的生日。"
+    },
+    {
+      "term": "cheat",
+      "focusWord": "cheat",
+      "sentence": "He was caught cheating in the exam.",
+      "chinese": "cheat = 作弊；他考试作弊时被发现了。"
+    },
+    {
+      "term": "choose",
+      "focusWord": "choose",
+      "sentence": "You can choose any seat.",
+      "chinese": "choose = 选择；你可以任选一个座位。"
+    },
+    {
+      "term": "clap",
+      "focusWord": "clap",
+      "sentence": "The audience clapped loudly.",
+      "chinese": "clap = 鼓掌；观众热烈鼓掌。"
+    },
+    {
+      "term": "climb",
+      "focusWord": "climb",
+      "sentence": "We climbed the hill before lunch.",
+      "chinese": "climb = 攀登；我们午饭前爬上了山。"
+    },
+    {
+      "term": "collect",
+      "focusWord": "collect",
+      "sentence": "I collected the tickets from the office.",
+      "chinese": "collect = 领取；我从办公室领了票。"
+    },
+    {
+      "term": "come",
+      "focusWord": "come",
+      "sentence": "Please come home before dark.",
+      "chinese": "come = 来；请在天黑前回家。"
+    },
+    {
+      "term": "come on",
+      "focusWord": "come on",
+      "sentence": "Come on, or we will miss the train.",
+      "chinese": "come on = 快点；快点，否则我们会错过火车。"
+    },
+    {
+      "term": "communicate",
+      "focusWord": "communicate",
+      "sentence": "We usually communicate by email.",
+      "chinese": "communicate = 沟通；我们通常通过电子邮件沟通。"
+    },
+    {
+      "term": "compare",
+      "focusWord": "compare",
+      "sentence": "Compare the prices before you buy.",
+      "chinese": "compare = 比较；购买前比较一下价格。"
+    },
+    {
+      "term": "compete",
+      "focusWord": "compete",
+      "sentence": "Twenty runners competed in the race.",
+      "chinese": "compete = 参加比赛；二十名跑步者参加了比赛。"
+    },
+    {
+      "term": "complain",
+      "focusWord": "complain",
+      "sentence": "She complained about the poor service.",
+      "chinese": "complain = 抱怨；她抱怨服务太差。"
+    },
+    {
+      "term": "complete",
+      "focusWord": "complete",
+      "sentence": "Please complete this form.",
+      "chinese": "complete = 填写完；请填写完这张表格。"
+    },
+    {
+      "term": "concentrate",
+      "focusWord": "concentrate",
+      "sentence": "I cannot concentrate with the television on.",
+      "chinese": "concentrate = 集中注意力；开着电视我无法集中注意力。"
+    },
+    {
+      "term": "connect",
+      "focusWord": "connect",
+      "sentence": "Connect the printer to your laptop.",
+      "chinese": "connect = 连接；把打印机连接到笔记本电脑。"
+    },
+    {
+      "term": "consider",
+      "focusWord": "consider",
+      "sentence": "We are considering your offer.",
+      "chinese": "consider = 考虑；我们正在考虑你的提议。"
+    },
+    {
+      "term": "consist",
+      "focusWord": "consist",
+      "sentence": "The course consists of six lessons.",
+      "chinese": "consist = 由...组成；这门课程由六节课组成。"
+    },
+    {
+      "term": "contain",
+      "focusWord": "contain",
+      "sentence": "This cake contains nuts.",
+      "chinese": "contain = 含有；这个蛋糕含有坚果。"
+    },
+    {
+      "term": "continue",
+      "focusWord": "continue",
+      "sentence": "We continued our journey after lunch.",
+      "chinese": "continue = 继续；午饭后我们继续旅程。"
+    },
+    {
+      "term": "convince",
+      "focusWord": "convince",
+      "sentence": "She convinced me to join the club.",
+      "chinese": "convince = 说服；她说服我加入了俱乐部。"
+    },
+    {
+      "term": "create",
+      "focusWord": "create",
+      "sentence": "The class created a poster.",
+      "chinese": "create = 创作；全班制作了一张海报。"
+    },
+    {
+      "term": "deal",
+      "focusWord": "deal",
+      "sentence": "She dealt with the problem calmly.",
+      "chinese": "deal = 处理；她冷静地处理了问题。"
+    },
+    {
+      "term": "decide",
+      "focusWord": "decide",
+      "sentence": "We decided to walk home.",
+      "chinese": "decide = 决定；我们决定步行回家。"
+    },
+    {
+      "term": "declare",
+      "focusWord": "declare",
+      "sentence": "The judge declared Mia the winner.",
+      "chinese": "declare = 宣布；裁判宣布米娅获胜。"
+    },
+    {
+      "term": "decorate",
+      "focusWord": "decorate",
+      "sentence": "We decorated the room with balloons.",
+      "chinese": "decorate = 装饰；我们用气球装饰了房间。"
+    },
+    {
+      "term": "defend",
+      "focusWord": "defend",
+      "sentence": "The goalkeeper defended the goal well.",
+      "chinese": "defend = 防守；守门员很好地守住了球门。"
+    },
+    {
+      "term": "delete",
+      "focusWord": "delete",
+      "sentence": "I deleted the message by mistake.",
+      "chinese": "delete = 删除；我误删了那条消息。"
+    },
+    {
+      "term": "deliver",
+      "focusWord": "deliver",
+      "sentence": "They will deliver the sofa tomorrow.",
+      "chinese": "deliver = 运送；他们明天会送来沙发。"
+    },
+    {
+      "term": "depart",
+      "focusWord": "depart",
+      "sentence": "The train departs at noon.",
+      "chinese": "depart = 出发；火车中午出发。"
+    },
+    {
+      "term": "depend",
+      "focusWord": "depend",
+      "sentence": "Our plans depend on the weather.",
+      "chinese": "depend = 取决于；我们的计划取决于天气。"
+    },
+    {
+      "term": "deserve",
+      "focusWord": "deserve",
+      "sentence": "You deserve a rest after that long walk.",
+      "chinese": "deserve = 应得；走了那么久，你应该休息一下。"
+    },
+    {
+      "term": "destroy",
+      "focusWord": "destroy",
+      "sentence": "The fire destroyed the old building.",
+      "chinese": "destroy = 毁坏；大火烧毁了那栋旧楼。"
+    },
+    {
+      "term": "develop",
+      "focusWord": "develop",
+      "sentence": "Reading can develop your vocabulary.",
+      "chinese": "develop = 发展；阅读可以扩大你的词汇量。"
+    },
+    {
+      "term": "dial",
+      "focusWord": "dial",
+      "sentence": "Dial this number in an emergency.",
+      "chinese": "dial = 拨号；紧急情况下拨打这个号码。"
+    },
+    {
+      "term": "die",
+      "focusWord": "die",
+      "sentence": "The plant died because it had no water.",
+      "chinese": "die = 死亡；这株植物因为缺水死了。"
+    },
+    {
+      "term": "dig",
+      "focusWord": "dig",
+      "sentence": "The dog dug a hole in the garden.",
+      "chinese": "dig = 挖；狗在花园里挖了一个洞。"
+    },
+    {
+      "term": "disagree",
+      "focusWord": "disagree",
+      "sentence": "We disagreed about the best route.",
+      "chinese": "disagree = 不同意；我们对最佳路线意见不一。"
+    },
+    {
+      "term": "disappear",
+      "focusWord": "disappear",
+      "sentence": "The sun disappeared behind a cloud.",
+      "chinese": "disappear = 消失；太阳消失在云后。"
+    },
+    {
+      "term": "disappoint",
+      "focusWord": "disappoint",
+      "sentence": "The result disappointed the fans.",
+      "chinese": "disappoint = 使失望；结果让球迷们失望。"
+    },
+    {
+      "term": "discover",
+      "focusWord": "discover",
+      "sentence": "We discovered a quiet beach.",
+      "chinese": "discover = 发现；我们发现了一处安静的海滩。"
+    },
+    {
+      "term": "dislike",
+      "focusWord": "dislike",
+      "sentence": "I dislike travelling in crowded buses.",
+      "chinese": "dislike = 不喜欢；我不喜欢乘坐拥挤的公交车。"
+    },
+    {
+      "term": "disturb",
+      "focusWord": "disturb",
+      "sentence": "Please do not disturb the other guests.",
+      "chinese": "disturb = 打扰；请不要打扰其他客人。"
+    },
+    {
+      "term": "dive",
+      "focusWord": "dive",
+      "sentence": "He dived into the pool.",
+      "chinese": "dive = 跳水；他跳进了游泳池。"
+    },
+    {
+      "term": "divide",
+      "focusWord": "divide",
+      "sentence": "Divide the cake into eight pieces.",
+      "chinese": "divide = 分开；把蛋糕分成八块。"
+    },
+    {
+      "term": "drag",
+      "focusWord": "drag",
+      "sentence": "They dragged the heavy box across the floor.",
+      "chinese": "drag = 拖；他们把沉重的箱子拖过地板。"
+    },
+    {
+      "term": "drop",
+      "focusWord": "drop",
+      "sentence": "Be careful not to drop the glass.",
+      "chinese": "drop = 使掉落；小心别把玻璃杯掉在地上。"
+    },
+    {
+      "term": "earn",
+      "focusWord": "earn",
+      "sentence": "She earns money by teaching music.",
+      "chinese": "earn = 赚取；她通过教音乐赚钱。"
+    },
+    {
+      "term": "eat",
+      "focusWord": "eat",
+      "sentence": "We ate breakfast on the balcony.",
+      "chinese": "eat = 吃；我们在阳台上吃了早餐。"
+    },
+    {
+      "term": "employ",
+      "focusWord": "employ",
+      "sentence": "The hotel employs twelve local people.",
+      "chinese": "employ = 雇用；这家酒店雇用了十二名当地人。"
+    }
+  ]
+}

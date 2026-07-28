@@ -611,6 +611,26 @@ const qualitiesEighthBatch = [
   "working",
 ] as const;
 
+const qualitiesNinthBatch = [
+  "worse", "worst", "written", "wrong", "yellow", "young",
+] as const;
+
+const actionsFirstBatch = [
+  "accept", "accompany", "achieve", "act", "add", "admire", "admit", "advance", "affect", "agree", "allow", "annoy", "apologise", "appear", "apply", "approach", "approve", "argue", "arrange", "arrest", "arrive", "assist", "attach", "attempt", "attend", "attract", "avoid", "babysit", "bake", "be", "beat", "become", "begin", "behave", "believe", "belong", "bite", "blame", "bleed", "blow", "boil", "breathe", "bring", "bring up", "build", "burn", "bury", "carry", "carry on", "carry out",
+] as const;
+
+const actionsSecondBatch = [
+  "catch", "celebrate", "cheat", "choose", "clap", "climb", "collect", "come", "come on", "communicate", "compare", "compete", "complain", "complete", "concentrate", "connect", "consider", "consist", "contain", "continue", "convince", "create", "deal", "decide", "declare", "decorate", "defend", "delete", "deliver", "depart", "depend", "deserve", "destroy", "develop", "dial", "die", "dig", "disagree", "disappear", "disappoint", "discover", "dislike", "disturb", "dive", "divide", "drag", "drop", "earn", "eat", "employ",
+] as const;
+
+const actionsThirdBatch = [
+  "encourage", "end", "end up", "enjoy", "enquire", "enter", "entertain", "escape", "exist", "expect", "explode", "explore", "fail", "fall", "fancy", "fasten", "fax", "feed", "feel", "fetch", "fill", "find", "find out", "finish", "fix", "float", "flow", "fly", "focus on / upon sth / sb", "fold", "follow", "forget", "forgive", "freeze", "frighten", "fry", "gain", "get", "get along", "get back", "get down", "get in", "get off", "get on", "get rid of", "get up", "give", "give back", "give in", "give out",
+] as const;
+
+const actionsFourthBatch = [
+  "give up", "give way", "go", "go for", "go off", "go on", "go out", "grab", "greet", "grow", "grow up", "guess", "handle", "hang", "happen", "have got to", "have to", "hear", "help", "hide", "hike", "hire", "hitchhike", "hold", "hold up", "hunt", "identify", "ignore", "imagine", "improve", "include", "increase", "inform", "injure", "insist", "inspire", "install", "intend", "interrupt", "introduce", "invent", "invite", "involve", "jog", "join", "keep", "keep in", "keep on", "keep up", "kill",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -5414,6 +5434,251 @@ describe("PET Learning App", () => {
 
     for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
       expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the ninth qualities reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const themeWords = words.filter((word) => word.theme === "qualities");
+    const selectedExamples = qualitiesNinthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(qualitiesNinthBatch).toHaveLength(6);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(2718);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(themeWords).toHaveLength(450);
+    expect(
+      themeWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(450);
+  });
+
+  it("keeps the ninth qualities ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/qualities-009.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      status: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("qualities-009");
+    expect(candidate.entries).toHaveLength(6);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(qualitiesNinthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("adds the first actions reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const themeWords = words.filter((word) => word.theme === "actions");
+    const selectedExamples = actionsFirstBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(actionsFirstBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(2768);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(themeWords).toHaveLength(384);
+    expect(
+      themeWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(59);
+  });
+
+  it("keeps the first actions ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/actions-001.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      status: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("actions-001");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(actionsFirstBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("adds the second actions reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const themeWords = words.filter((word) => word.theme === "actions");
+    const selectedExamples = actionsSecondBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(actionsSecondBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(2818);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(themeWords).toHaveLength(384);
+    expect(
+      themeWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(109);
+  });
+
+  it("keeps the second actions ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/actions-002.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      status: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("actions-002");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(actionsSecondBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("adds the third actions reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const themeWords = words.filter((word) => word.theme === "actions");
+    const selectedExamples = actionsThirdBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(actionsThirdBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(2868);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(themeWords).toHaveLength(384);
+    expect(
+      themeWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(159);
+  });
+
+  it("keeps the third actions ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/actions-003.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      status: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("actions-003");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(actionsThirdBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("adds the fourth actions reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const themeWords = words.filter((word) => word.theme === "actions");
+    const selectedExamples = actionsFourthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(actionsFourthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(2918);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(themeWords).toHaveLength(384);
+    expect(
+      themeWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(209);
+  });
+
+  it("keeps the fourth actions ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/actions-004.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      status: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("actions-004");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(actionsFourthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
     }
   });
 

@@ -1,0 +1,42 @@
+{
+  "batchId": "qualities-009",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "worse",
+      "focusWord": "worse",
+      "sentence": "The weather is worse today.",
+      "chinese": "worse = 更糟的；今天的天气更糟。"
+    },
+    {
+      "term": "worst",
+      "focusWord": "worst",
+      "sentence": "That was the worst meal of the trip.",
+      "chinese": "worst = 最糟的；那是旅途中最糟的一顿饭。"
+    },
+    {
+      "term": "written",
+      "focusWord": "written",
+      "sentence": "Please follow the written instructions.",
+      "chinese": "written = 书面的；请按照书面说明操作。"
+    },
+    {
+      "term": "wrong",
+      "focusWord": "wrong",
+      "sentence": "Your answer is wrong.",
+      "chinese": "wrong = 错误的；你的答案是错的。"
+    },
+    {
+      "term": "yellow",
+      "focusWord": "yellow",
+      "sentence": "She wore a yellow dress.",
+      "chinese": "yellow = 黄色的；她穿了一条黄色连衣裙。"
+    },
+    {
+      "term": "young",
+      "focusWord": "young",
+      "sentence": "The young horse ran across the field.",
+      "chinese": "young = 年幼的；小马跑过田野。"
+    }
+  ]
+}

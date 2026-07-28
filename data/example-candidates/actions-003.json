@@ -1,0 +1,306 @@
+{
+  "batchId": "actions-003",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "encourage",
+      "focusWord": "encourage",
+      "sentence": "My teacher encouraged me to enter the competition.",
+      "chinese": "encourage = 鼓励；老师鼓励我参加比赛。"
+    },
+    {
+      "term": "end",
+      "focusWord": "end",
+      "sentence": "The concert ended at ten.",
+      "chinese": "end = 结束；音乐会十点结束。"
+    },
+    {
+      "term": "end up",
+      "focusWord": "end up",
+      "sentence": "We ended up staying for another night.",
+      "chinese": "end up = 最终；我们最后又住了一晚。"
+    },
+    {
+      "term": "enjoy",
+      "focusWord": "enjoy",
+      "sentence": "Did you enjoy the trip?",
+      "chinese": "enjoy = 享受；你喜欢这次旅行吗？"
+    },
+    {
+      "term": "enquire",
+      "focusWord": "enquire",
+      "sentence": "I called to enquire about ticket prices.",
+      "chinese": "enquire = 询问；我打电话询问票价。"
+    },
+    {
+      "term": "enter",
+      "focusWord": "enter",
+      "sentence": "Please knock before you enter the room.",
+      "chinese": "enter = 进入；进入房间前请敲门。"
+    },
+    {
+      "term": "entertain",
+      "focusWord": "entertain",
+      "sentence": "The magician entertained the children.",
+      "chinese": "entertain = 使娱乐；魔术师逗孩子们开心。"
+    },
+    {
+      "term": "escape",
+      "focusWord": "escape",
+      "sentence": "Everyone escaped from the burning building.",
+      "chinese": "escape = 逃离；所有人都逃离了着火的大楼。"
+    },
+    {
+      "term": "exist",
+      "focusWord": "exist",
+      "sentence": "Do you believe that life exists on other planets?",
+      "chinese": "exist = 存在；你相信其他星球上存在生命吗？"
+    },
+    {
+      "term": "expect",
+      "focusWord": "expect",
+      "sentence": "I expect her to call this evening.",
+      "chinese": "expect = 预期；我预计她今晚会打电话。"
+    },
+    {
+      "term": "explode",
+      "focusWord": "explode",
+      "sentence": "The firework exploded above the park.",
+      "chinese": "explode = 爆炸；烟花在公园上空爆开。"
+    },
+    {
+      "term": "explore",
+      "focusWord": "explore",
+      "sentence": "We spent a day exploring the old town.",
+      "chinese": "explore = 探索；我们花了一天探索老城区。"
+    },
+    {
+      "term": "fail",
+      "focusWord": "fail",
+      "sentence": "He failed his driving test.",
+      "chinese": "fail = 未通过；他驾驶考试没通过。"
+    },
+    {
+      "term": "fall",
+      "focusWord": "fall",
+      "sentence": "The leaves begin to fall in October.",
+      "chinese": "fall = 落下；树叶在十月开始飘落。"
+    },
+    {
+      "term": "fancy",
+      "focusWord": "fancy",
+      "sentence": "Do you fancy a cup of tea?",
+      "chinese": "fancy = 想要；你想喝杯茶吗？"
+    },
+    {
+      "term": "fasten",
+      "focusWord": "fasten",
+      "sentence": "Please fasten your seat belt.",
+      "chinese": "fasten = 系牢；请系好安全带。"
+    },
+    {
+      "term": "fax",
+      "focusWord": "fax",
+      "sentence": "She faxed the document to the office.",
+      "chinese": "fax = 传真发送；她把文件传真到了办公室。"
+    },
+    {
+      "term": "feed",
+      "focusWord": "feed",
+      "sentence": "Could you feed the cat tonight?",
+      "chinese": "feed = 喂养；你今晚能喂猫吗？"
+    },
+    {
+      "term": "feel",
+      "focusWord": "feel",
+      "sentence": "I feel tired after the journey.",
+      "chinese": "feel = 感觉；旅程结束后我觉得很累。"
+    },
+    {
+      "term": "fetch",
+      "focusWord": "fetch",
+      "sentence": "I will fetch your coat.",
+      "chinese": "fetch = 取来；我去取你的外套。"
+    },
+    {
+      "term": "fill",
+      "focusWord": "fill",
+      "sentence": "Fill the bottle with water.",
+      "chinese": "fill = 装满；把瓶子装满水。"
+    },
+    {
+      "term": "find",
+      "focusWord": "find",
+      "sentence": "I found my keys under the sofa.",
+      "chinese": "find = 找到；我在沙发下面找到了钥匙。"
+    },
+    {
+      "term": "find out",
+      "focusWord": "find out",
+      "sentence": "We need to find out when the shop closes.",
+      "chinese": "find out = 查明；我们需要查清商店几点关门。"
+    },
+    {
+      "term": "finish",
+      "focusWord": "finish",
+      "sentence": "She finished the project yesterday.",
+      "chinese": "finish = 完成；她昨天完成了项目。"
+    },
+    {
+      "term": "fix",
+      "focusWord": "fix",
+      "sentence": "Can you fix my bicycle?",
+      "chinese": "fix = 修理；你能修好我的自行车吗？"
+    },
+    {
+      "term": "float",
+      "focusWord": "float",
+      "sentence": "The empty bottle floated on the water.",
+      "chinese": "float = 漂浮；空瓶子漂在水面上。"
+    },
+    {
+      "term": "flow",
+      "focusWord": "flow",
+      "sentence": "The river flows into the sea.",
+      "chinese": "flow = 流入；这条河流入大海。"
+    },
+    {
+      "term": "fly",
+      "focusWord": "fly",
+      "sentence": "We are flying to Rome tomorrow.",
+      "chinese": "fly = 乘飞机；我们明天乘飞机去罗马。"
+    },
+    {
+      "term": "focus on / upon sth / sb",
+      "focusWord": "focus on",
+      "sentence": "Please focus on your homework.",
+      "chinese": "focus on = 专注于；请专心做作业。"
+    },
+    {
+      "term": "fold",
+      "focusWord": "fold",
+      "sentence": "Fold the clothes before putting them away.",
+      "chinese": "fold = 折叠；收衣服前先把它们叠好。"
+    },
+    {
+      "term": "follow",
+      "focusWord": "follow",
+      "sentence": "Follow the signs to the museum.",
+      "chinese": "follow = 跟随；按照路标前往博物馆。"
+    },
+    {
+      "term": "forget",
+      "focusWord": "forget",
+      "sentence": "Do not forget your umbrella.",
+      "chinese": "forget = 忘记；别忘了带伞。"
+    },
+    {
+      "term": "forgive",
+      "focusWord": "forgive",
+      "sentence": "Please forgive me for losing your book.",
+      "chinese": "forgive = 原谅；请原谅我弄丢了你的书。"
+    },
+    {
+      "term": "freeze",
+      "focusWord": "freeze",
+      "sentence": "Water freezes at zero degrees Celsius.",
+      "chinese": "freeze = 结冰；水在零摄氏度结冰。"
+    },
+    {
+      "term": "frighten",
+      "focusWord": "frighten",
+      "sentence": "The sudden noise frightened the baby.",
+      "chinese": "frighten = 使害怕；突然的声音吓到了婴儿。"
+    },
+    {
+      "term": "fry",
+      "focusWord": "fry",
+      "sentence": "Fry the onions for three minutes.",
+      "chinese": "fry = 煎炒；把洋葱炒三分钟。"
+    },
+    {
+      "term": "gain",
+      "focusWord": "gain",
+      "sentence": "She gained useful experience at the hospital.",
+      "chinese": "gain = 获得；她在医院获得了有用的经验。"
+    },
+    {
+      "term": "get",
+      "focusWord": "get",
+      "sentence": "Did you get my message?",
+      "chinese": "get = 收到；你收到我的消息了吗？"
+    },
+    {
+      "term": "get along",
+      "focusWord": "get along",
+      "sentence": "I get along well with my neighbours.",
+      "chinese": "get along = 相处融洽；我和邻居相处得很好。"
+    },
+    {
+      "term": "get back",
+      "focusWord": "get back",
+      "sentence": "What time did you get back?",
+      "chinese": "get back = 回来；你几点回来的？"
+    },
+    {
+      "term": "get down",
+      "focusWord": "get down",
+      "sentence": "Get down from the chair carefully.",
+      "chinese": "get down = 下来；小心地从椅子上下来。"
+    },
+    {
+      "term": "get in",
+      "focusWord": "get in",
+      "sentence": "We got in the car and drove away.",
+      "chinese": "get in = 进入；我们上了车，然后开走了。"
+    },
+    {
+      "term": "get off",
+      "focusWord": "get off",
+      "sentence": "Get off the bus at the next stop.",
+      "chinese": "get off = 下车；在下一站下公交车。"
+    },
+    {
+      "term": "get on",
+      "focusWord": "get on",
+      "sentence": "We got on the train just in time.",
+      "chinese": "get on = 上车；我们刚好及时上了火车。"
+    },
+    {
+      "term": "get rid of",
+      "focusWord": "get rid of",
+      "sentence": "I need to get rid of these old clothes.",
+      "chinese": "get rid of = 处理掉；我需要处理掉这些旧衣服。"
+    },
+    {
+      "term": "get up",
+      "focusWord": "get up",
+      "sentence": "I get up at seven every day.",
+      "chinese": "get up = 起床；我每天七点起床。"
+    },
+    {
+      "term": "give",
+      "focusWord": "give",
+      "sentence": "Could you give me some advice?",
+      "chinese": "give = 给；你能给我一些建议吗？"
+    },
+    {
+      "term": "give back",
+      "focusWord": "give back",
+      "sentence": "Please give back the library book.",
+      "chinese": "give back = 归还；请归还图书馆的书。"
+    },
+    {
+      "term": "give in",
+      "focusWord": "give in",
+      "sentence": "He refused to give in.",
+      "chinese": "give in = 让步；他拒绝让步。"
+    },
+    {
+      "term": "give out",
+      "focusWord": "give out",
+      "sentence": "The teacher gave out the worksheets.",
+      "chinese": "give out = 分发；老师分发了练习单。"
+    }
+  ]
+}

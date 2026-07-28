@@ -1,0 +1,306 @@
+{
+  "batchId": "actions-001",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "accept",
+      "focusWord": "accept",
+      "sentence": "Maya accepted the invitation.",
+      "chinese": "accept = 接受；玛雅接受了邀请。"
+    },
+    {
+      "term": "accompany",
+      "focusWord": "accompany",
+      "sentence": "A teacher will accompany the students.",
+      "chinese": "accompany = 陪同；一位老师将陪同学生们。"
+    },
+    {
+      "term": "achieve",
+      "focusWord": "achieve",
+      "sentence": "She worked hard to achieve her goal.",
+      "chinese": "achieve = 实现；她努力实现自己的目标。"
+    },
+    {
+      "term": "act",
+      "focusWord": "act",
+      "sentence": "Leo will act in the school play.",
+      "chinese": "act = 表演；利奥将在学校话剧中表演。"
+    },
+    {
+      "term": "add",
+      "focusWord": "add",
+      "sentence": "Add a little milk to the soup.",
+      "chinese": "add = 添加；往汤里加一点牛奶。"
+    },
+    {
+      "term": "admire",
+      "focusWord": "admire",
+      "sentence": "We stopped to admire the view.",
+      "chinese": "admire = 欣赏；我们停下来欣赏风景。"
+    },
+    {
+      "term": "admit",
+      "focusWord": "admit",
+      "sentence": "He admitted his mistake.",
+      "chinese": "admit = 承认；他承认了自己的错误。"
+    },
+    {
+      "term": "advance",
+      "focusWord": "advance",
+      "sentence": "Our team advanced to the final.",
+      "chinese": "advance = 晋级；我们队晋级了决赛。"
+    },
+    {
+      "term": "affect",
+      "focusWord": "affect",
+      "sentence": "Too much noise can affect your sleep.",
+      "chinese": "affect = 影响；太多噪音会影响你的睡眠。"
+    },
+    {
+      "term": "agree",
+      "focusWord": "agree",
+      "sentence": "We agreed to meet at six.",
+      "chinese": "agree = 同意；我们同意六点见面。"
+    },
+    {
+      "term": "allow",
+      "focusWord": "allow",
+      "sentence": "The library allows students to borrow six books.",
+      "chinese": "allow = 允许；图书馆允许学生借六本书。"
+    },
+    {
+      "term": "annoy",
+      "focusWord": "annoy",
+      "sentence": "Loud music can annoy the neighbours.",
+      "chinese": "annoy = 使恼怒；吵闹的音乐会惹恼邻居。"
+    },
+    {
+      "term": "apologise",
+      "focusWord": "apologise",
+      "sentence": "I apologised for being late.",
+      "chinese": "apologise = 道歉；我为迟到道了歉。"
+    },
+    {
+      "term": "appear",
+      "focusWord": "appear",
+      "sentence": "The singer appeared on stage.",
+      "chinese": "appear = 出现；歌手出现在舞台上。"
+    },
+    {
+      "term": "apply",
+      "focusWord": "apply",
+      "sentence": "She applied for a summer job.",
+      "chinese": "apply = 申请；她申请了一份暑期工作。"
+    },
+    {
+      "term": "approach",
+      "focusWord": "approach",
+      "sentence": "A man approached the information desk.",
+      "chinese": "approach = 走近；一名男子走近问讯处。"
+    },
+    {
+      "term": "approve",
+      "focusWord": "approve",
+      "sentence": "The head teacher approved our plan.",
+      "chinese": "approve = 批准；校长批准了我们的计划。"
+    },
+    {
+      "term": "argue",
+      "focusWord": "argue",
+      "sentence": "The brothers argued about the computer.",
+      "chinese": "argue = 争论；兄弟俩为电脑争论起来。"
+    },
+    {
+      "term": "arrange",
+      "focusWord": "arrange",
+      "sentence": "I arranged a meeting for Friday.",
+      "chinese": "arrange = 安排；我安排了周五的会议。"
+    },
+    {
+      "term": "arrest",
+      "focusWord": "arrest",
+      "sentence": "The police arrested the thief.",
+      "chinese": "arrest = 逮捕；警方逮捕了小偷。"
+    },
+    {
+      "term": "arrive",
+      "focusWord": "arrive",
+      "sentence": "We arrived at the station early.",
+      "chinese": "arrive = 到达；我们很早就到了车站。"
+    },
+    {
+      "term": "assist",
+      "focusWord": "assist",
+      "sentence": "A member of staff assisted the customer.",
+      "chinese": "assist = 帮助；一名工作人员帮助了顾客。"
+    },
+    {
+      "term": "attach",
+      "focusWord": "attach",
+      "sentence": "Please attach a photo to the form.",
+      "chinese": "attach = 附上；请在表格上附一张照片。"
+    },
+    {
+      "term": "attempt",
+      "focusWord": "attempt",
+      "sentence": "They attempted to climb the mountain.",
+      "chinese": "attempt = 尝试；他们尝试攀登那座山。"
+    },
+    {
+      "term": "attend",
+      "focusWord": "attend",
+      "sentence": "More than fifty people attended the talk.",
+      "chinese": "attend = 参加；五十多人参加了讲座。"
+    },
+    {
+      "term": "attract",
+      "focusWord": "attract",
+      "sentence": "The festival attracts many visitors.",
+      "chinese": "attract = 吸引；这个节日吸引了许多游客。"
+    },
+    {
+      "term": "avoid",
+      "focusWord": "avoid",
+      "sentence": "We avoided the busy main road.",
+      "chinese": "avoid = 避开；我们避开了繁忙的主干道。"
+    },
+    {
+      "term": "babysit",
+      "focusWord": "babysit",
+      "sentence": "I babysit my cousin on Saturdays.",
+      "chinese": "babysit = 照看小孩；我每周六照看表弟。"
+    },
+    {
+      "term": "bake",
+      "focusWord": "bake",
+      "sentence": "We baked a cake for Mum.",
+      "chinese": "bake = 烘烤；我们为妈妈烤了一个蛋糕。"
+    },
+    {
+      "term": "be",
+      "focusWord": "be",
+      "sentence": "I will be home before dinner.",
+      "chinese": "be = 在；我会在晚饭前到家。"
+    },
+    {
+      "term": "beat",
+      "focusWord": "beat",
+      "sentence": "Our team beat the champions.",
+      "chinese": "beat = 打败；我们队击败了冠军队。"
+    },
+    {
+      "term": "become",
+      "focusWord": "become",
+      "sentence": "She hopes to become a doctor.",
+      "chinese": "become = 成为；她希望成为一名医生。"
+    },
+    {
+      "term": "begin",
+      "focusWord": "begin",
+      "sentence": "The lesson begins at nine.",
+      "chinese": "begin = 开始；课程九点开始。"
+    },
+    {
+      "term": "behave",
+      "focusWord": "behave",
+      "sentence": "The children behaved politely.",
+      "chinese": "behave = 表现；孩子们表现得很有礼貌。"
+    },
+    {
+      "term": "believe",
+      "focusWord": "believe",
+      "sentence": "I believe his story.",
+      "chinese": "believe = 相信；我相信他的故事。"
+    },
+    {
+      "term": "belong",
+      "focusWord": "belong",
+      "sentence": "These keys belong to Ella.",
+      "chinese": "belong = 属于；这些钥匙是埃拉的。"
+    },
+    {
+      "term": "bite",
+      "focusWord": "bite",
+      "sentence": "Be careful because that dog may bite.",
+      "chinese": "bite = 咬；小心，那只狗可能会咬人。"
+    },
+    {
+      "term": "blame",
+      "focusWord": "blame",
+      "sentence": "Do not blame me for the delay.",
+      "chinese": "blame = 责怪；不要因为延误而责怪我。"
+    },
+    {
+      "term": "bleed",
+      "focusWord": "bleed",
+      "sentence": "His finger began to bleed.",
+      "chinese": "bleed = 流血；他的手指开始流血。"
+    },
+    {
+      "term": "blow",
+      "focusWord": "blow",
+      "sentence": "Blow out the candles before you cut the cake.",
+      "chinese": "blow = 吹；切蛋糕前把蜡烛吹灭。"
+    },
+    {
+      "term": "boil",
+      "focusWord": "boil",
+      "sentence": "Boil the water for five minutes.",
+      "chinese": "boil = 煮沸；把水煮沸五分钟。"
+    },
+    {
+      "term": "breathe",
+      "focusWord": "breathe",
+      "sentence": "Breathe slowly and try to relax.",
+      "chinese": "breathe = 呼吸；慢慢呼吸，尽量放松。"
+    },
+    {
+      "term": "bring",
+      "focusWord": "bring",
+      "sentence": "Remember to bring your passport.",
+      "chinese": "bring = 带来；记得带上护照。"
+    },
+    {
+      "term": "bring up",
+      "focusWord": "bring up",
+      "sentence": "She brought up an important issue.",
+      "chinese": "bring up = 提出；她提出了一个重要问题。"
+    },
+    {
+      "term": "build",
+      "focusWord": "build",
+      "sentence": "They plan to build a new bridge.",
+      "chinese": "build = 建造；他们计划建一座新桥。"
+    },
+    {
+      "term": "burn",
+      "focusWord": "burn",
+      "sentence": "I burned the toast this morning.",
+      "chinese": "burn = 烧焦；我今天早上把吐司烤焦了。"
+    },
+    {
+      "term": "bury",
+      "focusWord": "bury",
+      "sentence": "We buried the box in the garden.",
+      "chinese": "bury = 埋；我们把盒子埋在花园里。"
+    },
+    {
+      "term": "carry",
+      "focusWord": "carry",
+      "sentence": "Can you carry these bags?",
+      "chinese": "carry = 搬；你能搬这些袋子吗？"
+    },
+    {
+      "term": "carry on",
+      "focusWord": "carry on",
+      "sentence": "Please carry on with your work.",
+      "chinese": "carry on = 继续；请继续你的工作。"
+    },
+    {
+      "term": "carry out",
+      "focusWord": "carry out",
+      "sentence": "The students carried out an experiment.",
+      "chinese": "carry out = 进行；学生们进行了一项实验。"
+    }
+  ]
+}

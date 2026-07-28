@@ -1,0 +1,306 @@
+{
+  "batchId": "actions-004",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "give up",
+      "focusWord": "give up",
+      "sentence": "She gave up eating sweets.",
+      "chinese": "give up = 放弃；她不再吃甜食了。"
+    },
+    {
+      "term": "give way",
+      "focusWord": "give way",
+      "sentence": "Drivers must give way to cyclists here.",
+      "chinese": "give way = 让路；司机在这里必须给骑车人让路。"
+    },
+    {
+      "term": "go",
+      "focusWord": "go",
+      "sentence": "I go to school by bus.",
+      "chinese": "go = 去；我乘公交车上学。"
+    },
+    {
+      "term": "go for",
+      "focusWord": "go for",
+      "sentence": "Let us go for a walk after dinner.",
+      "chinese": "go for = 去做；晚饭后我们去散步吧。"
+    },
+    {
+      "term": "go off",
+      "focusWord": "go off",
+      "sentence": "My alarm went off at six.",
+      "chinese": "go off = 响起；我的闹钟六点响了。"
+    },
+    {
+      "term": "go on",
+      "focusWord": "go on",
+      "sentence": "Please go on with your story.",
+      "chinese": "go on = 继续；请继续讲你的故事。"
+    },
+    {
+      "term": "go out",
+      "focusWord": "go out",
+      "sentence": "We are going out for dinner tonight.",
+      "chinese": "go out = 外出；我们今晚要出去吃饭。"
+    },
+    {
+      "term": "grab",
+      "focusWord": "grab",
+      "sentence": "Grab your coat because we are late.",
+      "chinese": "grab = 迅速拿取；快拿上外套，我们迟到了。"
+    },
+    {
+      "term": "greet",
+      "focusWord": "greet",
+      "sentence": "The manager greeted every guest.",
+      "chinese": "greet = 迎接；经理迎接了每位客人。"
+    },
+    {
+      "term": "grow",
+      "focusWord": "grow",
+      "sentence": "We grow tomatoes in the garden.",
+      "chinese": "grow = 种植；我们在花园里种西红柿。"
+    },
+    {
+      "term": "grow up",
+      "focusWord": "grow up",
+      "sentence": "She grew up in a small village.",
+      "chinese": "grow up = 长大；她在一个小村庄长大。"
+    },
+    {
+      "term": "guess",
+      "focusWord": "guess",
+      "sentence": "Can you guess the answer?",
+      "chinese": "guess = 猜；你能猜出答案吗？"
+    },
+    {
+      "term": "handle",
+      "focusWord": "handle",
+      "sentence": "Only trained staff may handle this machine.",
+      "chinese": "handle = 操作；只有受过培训的员工可以操作这台机器。"
+    },
+    {
+      "term": "hang",
+      "focusWord": "hang",
+      "sentence": "We hung the picture above the sofa.",
+      "chinese": "hang = 悬挂；我们把画挂在沙发上方。"
+    },
+    {
+      "term": "happen",
+      "focusWord": "happen",
+      "sentence": "What happened at the meeting?",
+      "chinese": "happen = 发生；会议上发生了什么？"
+    },
+    {
+      "term": "have got to",
+      "focusWord": "have got to",
+      "sentence": "I have got to leave now.",
+      "chinese": "have got to = 必须；我现在必须走了。"
+    },
+    {
+      "term": "have to",
+      "focusWord": "have to",
+      "sentence": "Students have to wear a uniform.",
+      "chinese": "have to = 必须；学生必须穿校服。"
+    },
+    {
+      "term": "hear",
+      "focusWord": "hear",
+      "sentence": "I could hear music from the next room.",
+      "chinese": "hear = 听见；我能听见隔壁房间传来的音乐。"
+    },
+    {
+      "term": "help",
+      "focusWord": "help",
+      "sentence": "Can you help me with my homework?",
+      "chinese": "help = 帮助；你能帮我做作业吗？"
+    },
+    {
+      "term": "hide",
+      "focusWord": "hide",
+      "sentence": "She hid the key under a flowerpot.",
+      "chinese": "hide = 藏；她把钥匙藏在花盆下面。"
+    },
+    {
+      "term": "hike",
+      "focusWord": "hike",
+      "sentence": "We hiked through the mountains.",
+      "chinese": "hike = 徒步；我们徒步穿过群山。"
+    },
+    {
+      "term": "hire",
+      "focusWord": "hire",
+      "sentence": "We hired bicycles for the afternoon.",
+      "chinese": "hire = 租用；我们租了自行车骑一下午。"
+    },
+    {
+      "term": "hitchhike",
+      "focusWord": "hitchhike",
+      "sentence": "They hitchhiked across France.",
+      "chinese": "hitchhike = 搭便车旅行；他们搭便车穿越了法国。"
+    },
+    {
+      "term": "hold",
+      "focusWord": "hold",
+      "sentence": "Could you hold the baby for a moment?",
+      "chinese": "hold = 抱住；你能抱一会儿宝宝吗？"
+    },
+    {
+      "term": "hold up",
+      "focusWord": "hold up",
+      "sentence": "Roadworks held up the traffic.",
+      "chinese": "hold up = 耽搁；道路施工耽搁了交通。"
+    },
+    {
+      "term": "hunt",
+      "focusWord": "hunt",
+      "sentence": "Owls hunt at night.",
+      "chinese": "hunt = 捕猎；猫头鹰在夜间捕猎。"
+    },
+    {
+      "term": "identify",
+      "focusWord": "identify",
+      "sentence": "The witness identified the thief.",
+      "chinese": "identify = 认出；目击者认出了小偷。"
+    },
+    {
+      "term": "ignore",
+      "focusWord": "ignore",
+      "sentence": "He ignored my message.",
+      "chinese": "ignore = 不理会；他没有理会我的消息。"
+    },
+    {
+      "term": "imagine",
+      "focusWord": "imagine",
+      "sentence": "Imagine living beside the sea.",
+      "chinese": "imagine = 想象；想象一下住在海边。"
+    },
+    {
+      "term": "improve",
+      "focusWord": "improve",
+      "sentence": "Reading will improve your English.",
+      "chinese": "improve = 提高；阅读会提高你的英语水平。"
+    },
+    {
+      "term": "include",
+      "focusWord": "include",
+      "sentence": "The price includes breakfast.",
+      "chinese": "include = 包括；这个价格包括早餐。"
+    },
+    {
+      "term": "increase",
+      "focusWord": "increase",
+      "sentence": "The shop increased its prices.",
+      "chinese": "increase = 提高；商店提高了价格。"
+    },
+    {
+      "term": "inform",
+      "focusWord": "inform",
+      "sentence": "Please inform the staff about the change.",
+      "chinese": "inform = 通知；请通知员工这一变化。"
+    },
+    {
+      "term": "injure",
+      "focusWord": "injure",
+      "sentence": "He injured his knee during the match.",
+      "chinese": "injure = 弄伤；他在比赛中伤了膝盖。"
+    },
+    {
+      "term": "insist",
+      "focusWord": "insist",
+      "sentence": "She insisted on paying for dinner.",
+      "chinese": "insist = 坚持；她坚持要付晚餐的钱。"
+    },
+    {
+      "term": "inspire",
+      "focusWord": "inspire",
+      "sentence": "Her speech inspired the students.",
+      "chinese": "inspire = 激励；她的演讲激励了学生们。"
+    },
+    {
+      "term": "install",
+      "focusWord": "install",
+      "sentence": "I installed the new software yesterday.",
+      "chinese": "install = 安装；我昨天安装了新软件。"
+    },
+    {
+      "term": "intend",
+      "focusWord": "intend",
+      "sentence": "We intend to travel in June.",
+      "chinese": "intend = 打算；我们打算六月去旅行。"
+    },
+    {
+      "term": "interrupt",
+      "focusWord": "interrupt",
+      "sentence": "Please do not interrupt the speaker.",
+      "chinese": "interrupt = 打断；请不要打断发言者。"
+    },
+    {
+      "term": "introduce",
+      "focusWord": "introduce",
+      "sentence": "Let me introduce my friend Alex.",
+      "chinese": "introduce = 介绍；让我介绍一下我的朋友亚历克斯。"
+    },
+    {
+      "term": "invent",
+      "focusWord": "invent",
+      "sentence": "She invented a machine that saves water.",
+      "chinese": "invent = 发明；她发明了一台节水机器。"
+    },
+    {
+      "term": "invite",
+      "focusWord": "invite",
+      "sentence": "We invited our neighbours to dinner.",
+      "chinese": "invite = 邀请；我们邀请邻居来吃晚餐。"
+    },
+    {
+      "term": "involve",
+      "focusWord": "involve",
+      "sentence": "The job involves lifting heavy boxes.",
+      "chinese": "involve = 涉及；这份工作需要搬重箱子。"
+    },
+    {
+      "term": "jog",
+      "focusWord": "jog",
+      "sentence": "I jog in the park every morning.",
+      "chinese": "jog = 慢跑；我每天早上在公园慢跑。"
+    },
+    {
+      "term": "join",
+      "focusWord": "join",
+      "sentence": "She joined the photography club.",
+      "chinese": "join = 加入；她加入了摄影俱乐部。"
+    },
+    {
+      "term": "keep",
+      "focusWord": "keep",
+      "sentence": "Keep the receipt in a safe place.",
+      "chinese": "keep = 保留；把收据放在安全的地方。"
+    },
+    {
+      "term": "keep in",
+      "focusWord": "keep in",
+      "sentence": "The heavy rain kept us in all day.",
+      "chinese": "keep in = 使留在室内；大雨使我们一整天都待在室内。"
+    },
+    {
+      "term": "keep on",
+      "focusWord": "keep on",
+      "sentence": "Keep on trying and you will improve.",
+      "chinese": "keep on = 继续；继续努力，你会进步的。"
+    },
+    {
+      "term": "keep up",
+      "focusWord": "keep up",
+      "sentence": "Ben works hard to keep up with the class.",
+      "chinese": "keep up = 跟上；本努力学习以跟上全班。"
+    },
+    {
+      "term": "kill",
+      "focusWord": "kill",
+      "sentence": "The cold weather killed the plants.",
+      "chinese": "kill = 使死亡；寒冷的天气冻死了植物。"
+    }
+  ]
+}
