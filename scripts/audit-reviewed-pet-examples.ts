@@ -370,6 +370,41 @@ const manuallyConfirmedTerms = new Set([
   "guilty", // feeling guilty, not a legal verdict
   "handsome", // handsome prince, not a noun phrase "handsome man"
   "hard", // a difficult exam, not a hard object
+  // These fourth qualities examples use valid adjective senses or synonyms.
+  "later", // a later train, not the adverb "later"
+  "little", // a small child, not quantity "little"
+  "long", // a long journey; back translation preserves duration/distance
+  "magnificent", // magnificent / grand, expressed naturally as 壮丽的
+  // These fifth qualities examples use valid adjective senses or synonyms.
+  "nice", // nice soup / pleasant taste, not only "nice person"
+  "ok", // OK / acceptable, expressed naturally as 还可以
+  "old", // an old bridge, where 旧的 is natural in context
+  "present", // current situation, not a gift
+  // These sixth qualities examples use valid adjective senses or synonyms.
+  "previous", // previous lesson, expressed naturally as 上一节课
+  "principal", // principal reason / main reason, not a school principal
+  "reduced", // reduced price, not only the verb "reduce"
+  "relieved", // feeling relieved; sentence/back translation preserve the emotion
+  "rich", // rich sauce / strong flavour, not wealthy
+  "right", // correct answer, not direction
+  "rough", // rough road / uneven surface
+  "same", // same colour, expressed naturally as 相同的
+  "shiny", // shiny shoes, expressed naturally as 闪亮的
+  // These seventh qualities examples use valid adjective senses or synonyms.
+  "slim", // slim phone / thin device, not a slim person
+  "sorry", // apologetic "sorry for the delay"; back translation preserves the sense
+  "soso", // so-so / average, expressed naturally as 一般的
+  "stressed", // under stress, not the verb "stressed"
+  "sure", // certain about the answer, not a standalone response
+  "tasty", // tasty / delicious
+  "terrific", // terrific / great
+  // These eighth qualities examples use valid adjective senses or synonyms.
+  "tiring", // causing tiredness, not simply "tired"
+  "unexpected", // unexpected visitor; back translation preserves the adjective
+  "upset", // sad or distressed about a broken phone
+  "well", // healthy again after illness, not the interjection
+  "welldressed", // well-dressed guest, expressed naturally as 穿着讲究的
+  "wonderful", // wonderful / great, expressed naturally as 精彩的
 ]);
 
 async function main() {

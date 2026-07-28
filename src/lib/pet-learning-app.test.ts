@@ -4948,7 +4948,7 @@ describe("PET Learning App", () => {
       ],
       "long jump": [
         "The long jump competition starts at two.",
-        "long jump = 跳远的；跳远比赛两点开始。",
+        "long jump = 跳远；跳远比赛两点开始。",
       ],
       "medium": [
         "She ordered a medium pizza.",

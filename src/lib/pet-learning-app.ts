@@ -13163,7 +13163,7 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     longjump: {
       focusWord: "long jump",
       sentence: "The long jump competition starts at two.",
-      chinese: "long jump = 跳远的；跳远比赛两点开始。",
+      chinese: "long jump = 跳远；跳远比赛两点开始。",
     },
     loose: {
       focusWord: "loose",
