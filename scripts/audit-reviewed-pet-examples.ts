@@ -453,6 +453,49 @@ const manuallyConfirmedTerms = new Set([
   "improve", // improve English / 提高
   "increase", // raise prices / 提高
   "inspire", // motivate students / 激励
+  // These fifth actions examples use valid verb or phrasal-verb senses.
+  "lay", // place a map / 放置, not lie down
+  "lead", // guide people through a town / 带领, not the metal
+  "let", // allow someone to stay up / 允许
+  "live", // reside near the coast / 居住, not a live broadcast
+  "locate", // find a missing bicycle / 找到
+  "lookup", // search for a word in a dictionary / 查找
+  "make", // prepare a sandwich / 制作
+  "makeup", // invent a story / 编造, not cosmetics
+  "manage", // succeed in finishing / 设法做到
+  "miss", // fail to catch a bus / 错过
+  "offer", // voluntarily give a seat / 主动提供
+  "pack", // put things into a suitcase / 收拾
+  "perform", // play songs for an audience / 表演
+  "pickup", // collect a parcel / 领取
+  // These sixth actions examples use valid verb or phrasal-verb senses.
+  "publish", // issue a magazine / 出版
+  "put", // place keys on a shelf / 放
+  "putout", // extinguish a fire / 扑灭
+  "putup", // erect a tent / 搭起
+  "quit", // leave a job / 辞去
+  "raise", // lift a hand / 举起
+  "remain", // stay calm / 保持
+  "remove", // take off shoes / 脱掉
+  // These seventh actions examples use valid verb or phrasal-verb senses.
+  "serve", // provide lunch / 供应
+  "setout", // begin a journey / 动身
+  "setup", // establish a club / 创办
+  "shoot", // record a video / 拍摄, not fire a weapon
+  "signup", // register for a course / 报名
+  "sort", // classify bottles / 分类
+  "spell", // form a surname with letters / 拼写, not a magic spell
+  "spend", // pass a weekend somewhere / 度过
+  "spill", // accidentally pour juice / 洒出
+  "suppose", // think or assume / 认为
+  "take", // bring an umbrella / 带上
+  "takeoff", // remove shoes / 脱下, not an aircraft departure
+  "takeup", // begin playing tennis / 开始从事
+  "think", // consider an offer / 考虑
+  // These eighth actions examples use valid contextual verb senses.
+  "turnup", // increase music volume / 调大
+  "visit", // tour a museum / 参观
+  "watch", // view a film / 观看, not a wristwatch
 ]);
 
 async function main() {

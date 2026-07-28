@@ -11670,5 +11670,705 @@ export const reviewedWordExampleAudit = {
   "kill": {
     "status": "pass",
     "reasons": []
+  },
+  "knit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "knock": {
+    "status": "pass",
+    "reasons": []
+  },
+  "know": {
+    "status": "pass",
+    "reasons": []
+  },
+  "laugh": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lay": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lead": {
+    "status": "pass",
+    "reasons": []
+  },
+  "leave": {
+    "status": "pass",
+    "reasons": []
+  },
+  "let": {
+    "status": "pass",
+    "reasons": []
+  },
+  "listen": {
+    "status": "pass",
+    "reasons": []
+  },
+  "live": {
+    "status": "pass",
+    "reasons": []
+  },
+  "locate": {
+    "status": "pass",
+    "reasons": []
+  },
+  "look": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lookat": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lookfor": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lookforwardto": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lookout": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lookup": {
+    "status": "pass",
+    "reasons": []
+  },
+  "lose": {
+    "status": "pass",
+    "reasons": []
+  },
+  "madeofmaterial": {
+    "status": "pass",
+    "reasons": []
+  },
+  "make": {
+    "status": "pass",
+    "reasons": []
+  },
+  "makesure": {
+    "status": "pass",
+    "reasons": []
+  },
+  "makeup": {
+    "status": "pass",
+    "reasons": []
+  },
+  "manage": {
+    "status": "pass",
+    "reasons": []
+  },
+  "marry": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mean": {
+    "status": "pass",
+    "reasons": []
+  },
+  "measure": {
+    "status": "pass",
+    "reasons": []
+  },
+  "meet": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mend": {
+    "status": "pass",
+    "reasons": []
+  },
+  "miss": {
+    "status": "pass",
+    "reasons": []
+  },
+  "mix": {
+    "status": "pass",
+    "reasons": []
+  },
+  "move": {
+    "status": "pass",
+    "reasons": []
+  },
+  "multiply": {
+    "status": "pass",
+    "reasons": []
+  },
+  "need": {
+    "status": "pass",
+    "reasons": []
+  },
+  "offer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "open": {
+    "status": "pass",
+    "reasons": []
+  },
+  "operate": {
+    "status": "pass",
+    "reasons": []
+  },
+  "organise": {
+    "status": "pass",
+    "reasons": []
+  },
+  "owe": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pack": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pause": {
+    "status": "pass",
+    "reasons": []
+  },
+  "peel": {
+    "status": "pass",
+    "reasons": []
+  },
+  "perform": {
+    "status": "pass",
+    "reasons": []
+  },
+  "permit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "persuade": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pick": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pickup": {
+    "status": "pass",
+    "reasons": []
+  },
+  "plan": {
+    "status": "pass",
+    "reasons": []
+  },
+  "postpone": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pour": {
+    "status": "pass",
+    "reasons": []
+  },
+  "practise": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pray": {
+    "status": "pass",
+    "reasons": []
+  },
+  "predict": {
+    "status": "pass",
+    "reasons": []
+  },
+  "prepare": {
+    "status": "pass",
+    "reasons": []
+  },
+  "prizes": {
+    "status": "pass",
+    "reasons": []
+  },
+  "press": {
+    "status": "pass",
+    "reasons": []
+  },
+  "prevent": {
+    "status": "pass",
+    "reasons": []
+  },
+  "print": {
+    "status": "pass",
+    "reasons": []
+  },
+  "produce": {
+    "status": "pass",
+    "reasons": []
+  },
+  "promote": {
+    "status": "pass",
+    "reasons": []
+  },
+  "protect": {
+    "status": "pass",
+    "reasons": []
+  },
+  "prove": {
+    "status": "pass",
+    "reasons": []
+  },
+  "provide": {
+    "status": "pass",
+    "reasons": []
+  },
+  "publish": {
+    "status": "pass",
+    "reasons": []
+  },
+  "pull": {
+    "status": "pass",
+    "reasons": []
+  },
+  "punish": {
+    "status": "pass",
+    "reasons": []
+  },
+  "put": {
+    "status": "pass",
+    "reasons": []
+  },
+  "putaway": {
+    "status": "pass",
+    "reasons": []
+  },
+  "putdown": {
+    "status": "pass",
+    "reasons": []
+  },
+  "putoff": {
+    "status": "pass",
+    "reasons": []
+  },
+  "puton": {
+    "status": "pass",
+    "reasons": []
+  },
+  "putout": {
+    "status": "pass",
+    "reasons": []
+  },
+  "putthrough": {
+    "status": "pass",
+    "reasons": []
+  },
+  "putup": {
+    "status": "pass",
+    "reasons": []
+  },
+  "quit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "raise": {
+    "status": "pass",
+    "reasons": []
+  },
+  "reach": {
+    "status": "pass",
+    "reasons": []
+  },
+  "react": {
+    "status": "pass",
+    "reasons": []
+  },
+  "realise": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rebuild": {
+    "status": "pass",
+    "reasons": []
+  },
+  "receive": {
+    "status": "pass",
+    "reasons": []
+  },
+  "recognise": {
+    "status": "pass",
+    "reasons": []
+  },
+  "recover": {
+    "status": "pass",
+    "reasons": []
+  },
+  "reduce": {
+    "status": "pass",
+    "reasons": []
+  },
+  "refuse": {
+    "status": "pass",
+    "reasons": []
+  },
+  "register": {
+    "status": "pass",
+    "reasons": []
+  },
+  "relax": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rely": {
+    "status": "pass",
+    "reasons": []
+  },
+  "remain": {
+    "status": "pass",
+    "reasons": []
+  },
+  "remember": {
+    "status": "pass",
+    "reasons": []
+  },
+  "remind": {
+    "status": "pass",
+    "reasons": []
+  },
+  "remove": {
+    "status": "pass",
+    "reasons": []
+  },
+  "repair": {
+    "status": "pass",
+    "reasons": []
+  },
+  "repeat": {
+    "status": "pass",
+    "reasons": []
+  },
+  "replace": {
+    "status": "pass",
+    "reasons": []
+  },
+  "require": {
+    "status": "pass",
+    "reasons": []
+  },
+  "retire": {
+    "status": "pass",
+    "reasons": []
+  },
+  "return": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rise": {
+    "status": "pass",
+    "reasons": []
+  },
+  "rob": {
+    "status": "pass",
+    "reasons": []
+  },
+  "run": {
+    "status": "pass",
+    "reasons": []
+  },
+  "runout": {
+    "status": "pass",
+    "reasons": []
+  },
+  "see": {
+    "status": "pass",
+    "reasons": []
+  },
+  "seem": {
+    "status": "pass",
+    "reasons": []
+  },
+  "select": {
+    "status": "pass",
+    "reasons": []
+  },
+  "send": {
+    "status": "pass",
+    "reasons": []
+  },
+  "serve": {
+    "status": "pass",
+    "reasons": []
+  },
+  "set": {
+    "status": "pass",
+    "reasons": []
+  },
+  "setoff": {
+    "status": "pass",
+    "reasons": []
+  },
+  "setout": {
+    "status": "pass",
+    "reasons": []
+  },
+  "setup": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sew": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shake": {
+    "status": "pass",
+    "reasons": []
+  },
+  "share": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shave": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shine": {
+    "status": "pass",
+    "reasons": []
+  },
+  "shoot": {
+    "status": "pass",
+    "reasons": []
+  },
+  "signup": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sing": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "slip": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sort": {
+    "status": "pass",
+    "reasons": []
+  },
+  "spell": {
+    "status": "pass",
+    "reasons": []
+  },
+  "spend": {
+    "status": "pass",
+    "reasons": []
+  },
+  "spill": {
+    "status": "pass",
+    "reasons": []
+  },
+  "spoil": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stand": {
+    "status": "pass",
+    "reasons": []
+  },
+  "start": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stay": {
+    "status": "pass",
+    "reasons": []
+  },
+  "staybehind": {
+    "status": "pass",
+    "reasons": []
+  },
+  "steal": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stepforwardbackout": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stir": {
+    "status": "pass",
+    "reasons": []
+  },
+  "stop": {
+    "status": "pass",
+    "reasons": []
+  },
+  "subtract": {
+    "status": "pass",
+    "reasons": []
+  },
+  "succeed": {
+    "status": "pass",
+    "reasons": []
+  },
+  "suffer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "suggest": {
+    "status": "pass",
+    "reasons": []
+  },
+  "sunbathe": {
+    "status": "pass",
+    "reasons": []
+  },
+  "supply": {
+    "status": "pass",
+    "reasons": []
+  },
+  "suppose": {
+    "status": "pass",
+    "reasons": []
+  },
+  "surf": {
+    "status": "pass",
+    "reasons": []
+  },
+  "surround": {
+    "status": "pass",
+    "reasons": []
+  },
+  "take": {
+    "status": "pass",
+    "reasons": []
+  },
+  "takecareof": {
+    "status": "pass",
+    "reasons": []
+  },
+  "takeoff": {
+    "status": "pass",
+    "reasons": []
+  },
+  "takepart": {
+    "status": "pass",
+    "reasons": []
+  },
+  "takeup": {
+    "status": "pass",
+    "reasons": []
+  },
+  "think": {
+    "status": "pass",
+    "reasons": []
+  },
+  "throw": {
+    "status": "pass",
+    "reasons": []
+  },
+  "touch": {
+    "status": "pass",
+    "reasons": []
+  },
+  "transfer": {
+    "status": "pass",
+    "reasons": []
+  },
+  "try": {
+    "status": "pass",
+    "reasons": []
+  },
+  "tryon": {
+    "status": "pass",
+    "reasons": []
+  },
+  "turn": {
+    "status": "pass",
+    "reasons": []
+  },
+  "turndown": {
+    "status": "pass",
+    "reasons": []
+  },
+  "turninto": {
+    "status": "pass",
+    "reasons": []
+  },
+  "turnoff": {
+    "status": "pass",
+    "reasons": []
+  },
+  "turnon": {
+    "status": "pass",
+    "reasons": []
+  },
+  "turnup": {
+    "status": "pass",
+    "reasons": []
+  },
+  "underline": {
+    "status": "pass",
+    "reasons": []
+  },
+  "undress": {
+    "status": "pass",
+    "reasons": []
+  },
+  "unpack": {
+    "status": "pass",
+    "reasons": []
+  },
+  "update": {
+    "status": "pass",
+    "reasons": []
+  },
+  "use": {
+    "status": "pass",
+    "reasons": []
+  },
+  "visit": {
+    "status": "pass",
+    "reasons": []
+  },
+  "wait": {
+    "status": "pass",
+    "reasons": []
+  },
+  "wake": {
+    "status": "pass",
+    "reasons": []
+  },
+  "walk": {
+    "status": "pass",
+    "reasons": []
+  },
+  "want": {
+    "status": "pass",
+    "reasons": []
+  },
+  "warn": {
+    "status": "pass",
+    "reasons": []
+  },
+  "watch": {
+    "status": "pass",
+    "reasons": []
+  },
+  "weigh": {
+    "status": "pass",
+    "reasons": []
+  },
+  "win": {
+    "status": "pass",
+    "reasons": []
+  },
+  "wonder": {
+    "status": "pass",
+    "reasons": []
+  },
+  "wrap": {
+    "status": "pass",
+    "reasons": []
   }
 } as const;

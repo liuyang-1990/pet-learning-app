@@ -2587,9 +2587,6 @@ describe("PET Learning App", () => {
     expect(
       grammarWords.filter((word) => getWordExample(word).sentence !== null).length,
     ).toBeGreaterThanOrEqual(129);
-    expect(
-      getWordExample({ term: "made of / from / out of", chineseGloss: "由...制成" }).sentence,
-    ).toBeNull();
   });
 
   it("keeps the third grammar ledger aligned with reviewed examples", () => {
@@ -2666,9 +2663,6 @@ describe("PET Learning App", () => {
     expect(
       grammarWords.filter((word) => getWordExample(word).sentence !== null).length,
     ).toBeGreaterThanOrEqual(179);
-    expect(
-      getWordExample({ term: "made of / from / out of", chineseGloss: "由...制成" }).sentence,
-    ).toBeNull();
   });
 
   it("keeps the fourth grammar ledger aligned with reviewed examples", () => {
@@ -2748,12 +2742,6 @@ describe("PET Learning App", () => {
     expect(
       grammarWords.filter((word) => getWordExample(word).sentence !== null).length,
     ).toBeGreaterThanOrEqual(229);
-    expect(
-      getWordExample({ term: "made of / from / out of", chineseGloss: "由...制成" }).sentence,
-    ).toBeNull();
-    expect(
-      getWordExample({ term: "step forward / back / out", chineseGloss: "向前、向后或出去" }).sentence,
-    ).toBeNull();
   });
 
   it("keeps the fifth grammar ledger aligned with reviewed examples", () => {
@@ -2834,9 +2822,6 @@ describe("PET Learning App", () => {
     expect(
       grammarWords.filter((word) => getWordExample(word).sentence !== null).length,
     ).toBeGreaterThanOrEqual(279);
-    expect(
-      getWordExample({ term: "step forward / back / out", chineseGloss: "向前、向后或出去" }).sentence,
-    ).toBeNull();
   });
 
   it("keeps the sixth grammar ledger aligned with reviewed examples", () => {
@@ -2914,9 +2899,6 @@ describe("PET Learning App", () => {
     expect(
       grammarWords.filter((word) => getWordExample(word).sentence !== null).length,
     ).toBeGreaterThanOrEqual(329);
-    expect(
-      getWordExample({ term: "step forward / back / out", chineseGloss: "向前、向后或出去" }).sentence,
-    ).toBeNull();
   });
 
   it("keeps the seventh grammar ledger aligned with reviewed examples", () => {

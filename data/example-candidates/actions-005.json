@@ -36,7 +36,7 @@
       "term": "lead",
       "focusWord": "lead",
       "sentence": "The guide led us through the old town.",
-      "chinese": "lead = 带领；导游带我们参观了老城区。"
+      "chinese": "lead = 带领；导游带我们穿过了老城区。"
     },
     {
       "term": "leave",
@@ -174,7 +174,7 @@
       "term": "miss",
       "focusWord": "miss",
       "sentence": "We missed the last bus home.",
-      "chinese": "miss = 错过；我们错过了回家的末班车。"
+      "chinese": "miss = 错过；我们错过了回家的末班公交车。"
     },
     {
       "term": "mix",

@@ -15283,7 +15283,7 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     "lead": {
       focusWord: "lead",
       sentence: "The guide led us through the old town.",
-      chinese: "lead = 带领；导游带我们参观了老城区。",
+      chinese: "lead = 带领；导游带我们穿过了老城区。",
     },
     "leave": {
       focusWord: "leave",
@@ -15398,7 +15398,7 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     "miss": {
       focusWord: "miss",
       sentence: "We missed the last bus home.",
-      chinese: "miss = 错过；我们错过了回家的末班车。",
+      chinese: "miss = 错过；我们错过了回家的末班公交车。",
     },
     "mix": {
       focusWord: "mix",
@@ -15758,7 +15758,7 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     "runout": {
       focusWord: "run out",
       sentence: "We ran out of milk this morning.",
-      chinese: "run out = 用完；我们今天早上把牛奶喝完了。",
+      chinese: "run out = 用完；我们今天早上牛奶用完了。",
     },
     "see": {
       focusWord: "see",
