@@ -1,0 +1,156 @@
+{
+  "batchId": "actions-008",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "transfer",
+      "focusWord": "transfer",
+      "sentence": "I transferred the money online.",
+      "chinese": "transfer = 转账；我在网上转了账。"
+    },
+    {
+      "term": "try",
+      "focusWord": "try",
+      "sentence": "Try again if the answer is wrong.",
+      "chinese": "try = 尝试；如果答案错了就再试一次。"
+    },
+    {
+      "term": "try on",
+      "focusWord": "try on",
+      "sentence": "Can I try on this jacket?",
+      "chinese": "try on = 试穿；我能试穿这件夹克吗？"
+    },
+    {
+      "term": "turn",
+      "focusWord": "turn",
+      "sentence": "Turn left at the traffic lights.",
+      "chinese": "turn = 转弯；在红绿灯处左转。"
+    },
+    {
+      "term": "turn down",
+      "focusWord": "turn down",
+      "sentence": "She turned down the job offer.",
+      "chinese": "turn down = 拒绝；她拒绝了那份工作邀请。"
+    },
+    {
+      "term": "turn into",
+      "focusWord": "turn into",
+      "sentence": "The water turned into ice.",
+      "chinese": "turn into = 变成；水变成了冰。"
+    },
+    {
+      "term": "turn off",
+      "focusWord": "turn off",
+      "sentence": "Turn off the light when you leave.",
+      "chinese": "turn off = 关掉；离开时关灯。"
+    },
+    {
+      "term": "turn on",
+      "focusWord": "turn on",
+      "sentence": "Turn on the oven before you start cooking.",
+      "chinese": "turn on = 打开；开始做饭前打开烤箱。"
+    },
+    {
+      "term": "turn up",
+      "focusWord": "turn up",
+      "sentence": "Could you turn up the music?",
+      "chinese": "turn up = 调大；你能把音乐声调大吗？"
+    },
+    {
+      "term": "underline",
+      "focusWord": "underline",
+      "sentence": "Underline the correct answer.",
+      "chinese": "underline = 在...下面划线；在正确答案下面划线。"
+    },
+    {
+      "term": "undress",
+      "focusWord": "undress",
+      "sentence": "The child undressed before bed.",
+      "chinese": "undress = 脱衣服；孩子睡前脱了衣服。"
+    },
+    {
+      "term": "unpack",
+      "focusWord": "unpack",
+      "sentence": "We unpacked our suitcases at the hotel.",
+      "chinese": "unpack = 打开行李；我们在酒店打开行李箱整理东西。"
+    },
+    {
+      "term": "update",
+      "focusWord": "update",
+      "sentence": "Please update your address online.",
+      "chinese": "update = 更新；请在线更新你的地址。"
+    },
+    {
+      "term": "use",
+      "focusWord": "use",
+      "sentence": "You can use this app to book tickets.",
+      "chinese": "use = 使用；你可以用这个应用程序订票。"
+    },
+    {
+      "term": "visit",
+      "focusWord": "visit",
+      "sentence": "We visited the science museum yesterday.",
+      "chinese": "visit = 参观；我们昨天参观了科学博物馆。"
+    },
+    {
+      "term": "wait",
+      "focusWord": "wait",
+      "sentence": "We waited twenty minutes for the bus.",
+      "chinese": "wait = 等待；我们等公交车等了二十分钟。"
+    },
+    {
+      "term": "wake",
+      "focusWord": "wake",
+      "sentence": "Please wake me at six tomorrow.",
+      "chinese": "wake = 叫醒；明天六点请叫醒我。"
+    },
+    {
+      "term": "walk",
+      "focusWord": "walk",
+      "sentence": "I walk to school every day.",
+      "chinese": "walk = 步行；我每天步行上学。"
+    },
+    {
+      "term": "want",
+      "focusWord": "want",
+      "sentence": "I want a new bicycle for my birthday.",
+      "chinese": "want = 想要；我生日想要一辆新自行车。"
+    },
+    {
+      "term": "warn",
+      "focusWord": "warn",
+      "sentence": "They warned us about the storm.",
+      "chinese": "warn = 警告；他们警告我们暴风雨要来了。"
+    },
+    {
+      "term": "watch",
+      "focusWord": "watch",
+      "sentence": "We watched a film after dinner.",
+      "chinese": "watch = 观看；晚饭后我们看了一部电影。"
+    },
+    {
+      "term": "weigh",
+      "focusWord": "weigh",
+      "sentence": "Please weigh the parcel before posting it.",
+      "chinese": "weigh = 称重；寄包裹前请先称重。"
+    },
+    {
+      "term": "win",
+      "focusWord": "win",
+      "sentence": "Our team won the match.",
+      "chinese": "win = 赢得；我们队赢得了比赛。"
+    },
+    {
+      "term": "wonder",
+      "focusWord": "wonder",
+      "sentence": "I wonder where he went.",
+      "chinese": "wonder = 想知道；我想知道他去了哪里。"
+    },
+    {
+      "term": "wrap",
+      "focusWord": "wrap",
+      "sentence": "She wrapped the gift in blue paper.",
+      "chinese": "wrap = 包裹；她用蓝色纸把礼物包了起来。"
+    }
+  ]
+}

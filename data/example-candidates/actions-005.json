@@ -1,0 +1,306 @@
+{
+  "batchId": "actions-005",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "knit",
+      "focusWord": "knit",
+      "sentence": "My grandmother knitted a warm scarf.",
+      "chinese": "knit = 编织；我奶奶织了一条暖和的围巾。"
+    },
+    {
+      "term": "knock",
+      "focusWord": "knock",
+      "sentence": "Please knock before entering the room.",
+      "chinese": "knock = 敲门；进入房间前请先敲门。"
+    },
+    {
+      "term": "know",
+      "focusWord": "know",
+      "sentence": "Do you know the answer?",
+      "chinese": "know = 知道；你知道答案吗？"
+    },
+    {
+      "term": "laugh",
+      "focusWord": "laugh",
+      "sentence": "Everyone laughed at his joke.",
+      "chinese": "laugh = 笑；大家听了他的笑话都笑了。"
+    },
+    {
+      "term": "lay",
+      "focusWord": "lay",
+      "sentence": "She laid the map on the table.",
+      "chinese": "lay = 放置；她把地图放在桌上。"
+    },
+    {
+      "term": "lead",
+      "focusWord": "lead",
+      "sentence": "The guide led us through the old town.",
+      "chinese": "lead = 带领；导游带我们参观了老城区。"
+    },
+    {
+      "term": "leave",
+      "focusWord": "leave",
+      "sentence": "We left the office at six.",
+      "chinese": "leave = 离开；我们六点离开了办公室。"
+    },
+    {
+      "term": "let",
+      "focusWord": "let",
+      "sentence": "My parents let me stay up late.",
+      "chinese": "let = 允许；父母允许我晚睡。"
+    },
+    {
+      "term": "listen",
+      "focusWord": "listen",
+      "sentence": "Listen carefully to the instructions.",
+      "chinese": "listen = 听；仔细听说明。"
+    },
+    {
+      "term": "live",
+      "focusWord": "live",
+      "sentence": "My grandparents live near the coast.",
+      "chinese": "live = 居住；我的祖父母住在海岸附近。"
+    },
+    {
+      "term": "locate",
+      "focusWord": "locate",
+      "sentence": "The police located the missing bicycle.",
+      "chinese": "locate = 找到；警方找到了丢失的自行车。"
+    },
+    {
+      "term": "look",
+      "focusWord": "look",
+      "sentence": "You look tired today.",
+      "chinese": "look = 看起来；你今天看起来很累。"
+    },
+    {
+      "term": "look at",
+      "focusWord": "look at",
+      "sentence": "Look at the timetable before you leave.",
+      "chinese": "look at = 查看；离开前看一下时间表。"
+    },
+    {
+      "term": "look for",
+      "focusWord": "look for",
+      "sentence": "I am looking for my keys.",
+      "chinese": "look for = 寻找；我正在找钥匙。"
+    },
+    {
+      "term": "look forward to",
+      "focusWord": "look forward to",
+      "sentence": "We look forward to seeing you.",
+      "chinese": "look forward to = 期待；我们期待见到你。"
+    },
+    {
+      "term": "look out",
+      "focusWord": "look out",
+      "sentence": "Look out! There is a car coming.",
+      "chinese": "look out = 当心；当心！有辆车开过来了。"
+    },
+    {
+      "term": "look up",
+      "focusWord": "look up",
+      "sentence": "Look up the word in a dictionary.",
+      "chinese": "look up = 查找；在词典里查一下这个词。"
+    },
+    {
+      "term": "lose",
+      "focusWord": "lose",
+      "sentence": "Be careful not to lose your ticket.",
+      "chinese": "lose = 丢失；小心别把票弄丢了。"
+    },
+    {
+      "term": "made of / from / out of",
+      "focusWord": "made of",
+      "sentence": "The table is made of wood.",
+      "chinese": "made of = 由...制成；这张桌子是木制的。"
+    },
+    {
+      "term": "make",
+      "focusWord": "make",
+      "sentence": "I made a sandwich for lunch.",
+      "chinese": "make = 制作；我做了一个三明治当午餐。"
+    },
+    {
+      "term": "make sure",
+      "focusWord": "make sure",
+      "sentence": "Make sure the door is locked.",
+      "chinese": "make sure = 确保；确保门已经锁好。"
+    },
+    {
+      "term": "make-up",
+      "focusWord": "make up",
+      "sentence": "He made up a funny story.",
+      "chinese": "make up = 编造；他编了一个有趣的故事。"
+    },
+    {
+      "term": "manage",
+      "focusWord": "manage",
+      "sentence": "She managed to finish on time.",
+      "chinese": "manage = 设法做到；她设法按时完成了。"
+    },
+    {
+      "term": "marry",
+      "focusWord": "marry",
+      "sentence": "They plan to marry next year.",
+      "chinese": "marry = 结婚；他们计划明年结婚。"
+    },
+    {
+      "term": "mean",
+      "focusWord": "mean",
+      "sentence": "What does this sign mean?",
+      "chinese": "mean = 意思是；这个标志是什么意思？"
+    },
+    {
+      "term": "measure",
+      "focusWord": "measure",
+      "sentence": "Measure the window before buying curtains.",
+      "chinese": "measure = 测量；买窗帘前先量一下窗户。"
+    },
+    {
+      "term": "meet",
+      "focusWord": "meet",
+      "sentence": "Let us meet outside the station.",
+      "chinese": "meet = 见面；我们在车站外见吧。"
+    },
+    {
+      "term": "mend",
+      "focusWord": "mend",
+      "sentence": "Can you mend this torn shirt?",
+      "chinese": "mend = 修补；你能补一下这件破衬衫吗？"
+    },
+    {
+      "term": "miss",
+      "focusWord": "miss",
+      "sentence": "We missed the last bus home.",
+      "chinese": "miss = 错过；我们错过了回家的末班车。"
+    },
+    {
+      "term": "mix",
+      "focusWord": "mix",
+      "sentence": "Mix the flour and sugar together.",
+      "chinese": "mix = 混合；把面粉和糖混合在一起。"
+    },
+    {
+      "term": "move",
+      "focusWord": "move",
+      "sentence": "Please move the chair closer.",
+      "chinese": "move = 移动；请把椅子移近一点。"
+    },
+    {
+      "term": "multiply",
+      "focusWord": "multiply",
+      "sentence": "Multiply six by four.",
+      "chinese": "multiply = 乘；用六乘以四。"
+    },
+    {
+      "term": "need",
+      "focusWord": "need",
+      "sentence": "I need some help with this box.",
+      "chinese": "need = 需要；我需要有人帮忙搬这个箱子。"
+    },
+    {
+      "term": "offer",
+      "focusWord": "offer",
+      "sentence": "She offered me her seat.",
+      "chinese": "offer = 主动提供；她主动把座位让给我。"
+    },
+    {
+      "term": "open",
+      "focusWord": "open",
+      "sentence": "Could you open the window?",
+      "chinese": "open = 打开；你能打开窗户吗？"
+    },
+    {
+      "term": "operate",
+      "focusWord": "operate",
+      "sentence": "He knows how to operate the machine.",
+      "chinese": "operate = 操作；他知道怎样操作这台机器。"
+    },
+    {
+      "term": "organise",
+      "focusWord": "organise",
+      "sentence": "Our class organised a charity sale.",
+      "chinese": "organise = 组织；我们班组织了一次慈善义卖。"
+    },
+    {
+      "term": "owe",
+      "focusWord": "owe",
+      "sentence": "I owe my brother ten pounds.",
+      "chinese": "owe = 欠；我欠弟弟十英镑。"
+    },
+    {
+      "term": "pack",
+      "focusWord": "pack",
+      "sentence": "Pack your suitcase before dinner.",
+      "chinese": "pack = 收拾；晚饭前收拾好行李箱。"
+    },
+    {
+      "term": "pause",
+      "focusWord": "pause",
+      "sentence": "Pause the video while I take notes.",
+      "chinese": "pause = 暂停；我记笔记时请暂停视频。"
+    },
+    {
+      "term": "peel",
+      "focusWord": "peel",
+      "sentence": "Peel the potatoes before cooking them.",
+      "chinese": "peel = 削皮；烹饪前把土豆削皮。"
+    },
+    {
+      "term": "perform",
+      "focusWord": "perform",
+      "sentence": "The band performed three songs.",
+      "chinese": "perform = 表演；乐队表演了三首歌。"
+    },
+    {
+      "term": "permit",
+      "focusWord": "permit",
+      "sentence": "The school does not permit smoking.",
+      "chinese": "permit = 允许；学校不允许吸烟。"
+    },
+    {
+      "term": "persuade",
+      "focusWord": "persuade",
+      "sentence": "She persuaded me to take the course.",
+      "chinese": "persuade = 说服；她说服我参加这门课程。"
+    },
+    {
+      "term": "pick",
+      "focusWord": "pick",
+      "sentence": "Pick a card from the pack.",
+      "chinese": "pick = 挑选；从这副牌中挑一张。"
+    },
+    {
+      "term": "pick up",
+      "focusWord": "pick up",
+      "sentence": "I will pick up the parcel after work.",
+      "chinese": "pick up = 领取；我下班后去取包裹。"
+    },
+    {
+      "term": "plan",
+      "focusWord": "plan",
+      "sentence": "We are planning our summer holiday.",
+      "chinese": "plan = 计划；我们正在计划暑假。"
+    },
+    {
+      "term": "postpone",
+      "focusWord": "postpone",
+      "sentence": "They postponed the match because of rain.",
+      "chinese": "postpone = 推迟；他们因下雨推迟了比赛。"
+    },
+    {
+      "term": "pour",
+      "focusWord": "pour",
+      "sentence": "Pour the tea into the cups.",
+      "chinese": "pour = 倒；把茶倒进杯子里。"
+    },
+    {
+      "term": "practise",
+      "focusWord": "practise",
+      "sentence": "I practise the piano every evening.",
+      "chinese": "practise = 练习；我每天晚上练习钢琴。"
+    }
+  ]
+}

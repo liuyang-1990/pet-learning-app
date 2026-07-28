@@ -1,0 +1,306 @@
+{
+  "batchId": "actions-006",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "pray",
+      "focusWord": "pray",
+      "sentence": "They prayed for a safe journey.",
+      "chinese": "pray = 祈祷；他们祈祷旅途平安。"
+    },
+    {
+      "term": "predict",
+      "focusWord": "predict",
+      "sentence": "Experts predict more rain tomorrow.",
+      "chinese": "predict = 预测；专家预测明天会有更多降雨。"
+    },
+    {
+      "term": "prepare",
+      "focusWord": "prepare",
+      "sentence": "We prepared lunch for the visitors.",
+      "chinese": "prepare = 准备；我们为访客准备了午餐。"
+    },
+    {
+      "term": "prizes",
+      "focusWord": "prizes",
+      "sentence": "The prizes were presented after the race.",
+      "chinese": "prizes = 奖品；比赛结束后颁发了奖品。"
+    },
+    {
+      "term": "press",
+      "focusWord": "press",
+      "sentence": "Press the green button to start.",
+      "chinese": "press = 按；按绿色按钮启动。"
+    },
+    {
+      "term": "prevent",
+      "focusWord": "prevent",
+      "sentence": "The seat belt prevented a serious injury.",
+      "chinese": "prevent = 防止；安全带防止了严重受伤。"
+    },
+    {
+      "term": "print",
+      "focusWord": "print",
+      "sentence": "Please print your ticket before the trip.",
+      "chinese": "print = 打印；出发前请打印车票。"
+    },
+    {
+      "term": "produce",
+      "focusWord": "produce",
+      "sentence": "This factory produces electric bicycles.",
+      "chinese": "produce = 生产；这家工厂生产电动自行车。"
+    },
+    {
+      "term": "promote",
+      "focusWord": "promote",
+      "sentence": "The campaign promotes healthy eating.",
+      "chinese": "promote = 促进；这项活动倡导健康饮食。"
+    },
+    {
+      "term": "protect",
+      "focusWord": "protect",
+      "sentence": "This cream protects your skin from the sun.",
+      "chinese": "protect = 保护；这种乳霜保护皮肤免受阳光伤害。"
+    },
+    {
+      "term": "prove",
+      "focusWord": "prove",
+      "sentence": "Can you prove that the story is true?",
+      "chinese": "prove = 证明；你能证明这个故事是真的吗？"
+    },
+    {
+      "term": "provide",
+      "focusWord": "provide",
+      "sentence": "The hotel provides free breakfast.",
+      "chinese": "provide = 提供；这家酒店提供免费早餐。"
+    },
+    {
+      "term": "publish",
+      "focusWord": "publish",
+      "sentence": "The magazine publishes a new issue each month.",
+      "chinese": "publish = 出版；这本杂志每月出版一期。"
+    },
+    {
+      "term": "pull",
+      "focusWord": "pull",
+      "sentence": "Pull the door towards you.",
+      "chinese": "pull = 拉；把门朝你的方向拉。"
+    },
+    {
+      "term": "punish",
+      "focusWord": "punish",
+      "sentence": "The coach punished the players for arriving late.",
+      "chinese": "punish = 惩罚；教练因球员迟到而惩罚了他们。"
+    },
+    {
+      "term": "put",
+      "focusWord": "put",
+      "sentence": "Put your keys on the shelf.",
+      "chinese": "put = 放；把钥匙放在架子上。"
+    },
+    {
+      "term": "put away",
+      "focusWord": "put away",
+      "sentence": "Please put away your toys.",
+      "chinese": "put away = 收好；请收好你的玩具。"
+    },
+    {
+      "term": "put down",
+      "focusWord": "put down",
+      "sentence": "He put down the heavy box.",
+      "chinese": "put down = 放下；他放下了沉重的箱子。"
+    },
+    {
+      "term": "put off",
+      "focusWord": "put off",
+      "sentence": "We had to put off the meeting.",
+      "chinese": "put off = 推迟；我们不得不推迟会议。"
+    },
+    {
+      "term": "put on",
+      "focusWord": "put on",
+      "sentence": "Put on your coat before you go outside.",
+      "chinese": "put on = 穿上；出门前穿上外套。"
+    },
+    {
+      "term": "put out",
+      "focusWord": "put out",
+      "sentence": "Firefighters put out the fire quickly.",
+      "chinese": "put out = 扑灭；消防员很快扑灭了大火。"
+    },
+    {
+      "term": "put through",
+      "focusWord": "put through",
+      "sentence": "Could you put me through to the manager?",
+      "chinese": "put through = 接通电话；你能帮我接通经理的电话吗？"
+    },
+    {
+      "term": "put up",
+      "focusWord": "put up",
+      "sentence": "We put up our tent beside the lake.",
+      "chinese": "put up = 搭起；我们在湖边搭起了帐篷。"
+    },
+    {
+      "term": "quit",
+      "focusWord": "quit",
+      "sentence": "He quit his job last month.",
+      "chinese": "quit = 辞去；他上个月辞去了工作。"
+    },
+    {
+      "term": "raise",
+      "focusWord": "raise",
+      "sentence": "Raise your hand if you know the answer.",
+      "chinese": "raise = 举起；如果你知道答案就举手。"
+    },
+    {
+      "term": "reach",
+      "focusWord": "reach",
+      "sentence": "We reached the station before noon.",
+      "chinese": "reach = 到达；我们中午前到达了车站。"
+    },
+    {
+      "term": "react",
+      "focusWord": "react",
+      "sentence": "How did she react to the news?",
+      "chinese": "react = 作出反应；她对这个消息有什么反应？"
+    },
+    {
+      "term": "realise",
+      "focusWord": "realise",
+      "sentence": "I realised that I had forgotten my wallet.",
+      "chinese": "realise = 意识到；我意识到自己忘带钱包了。"
+    },
+    {
+      "term": "rebuild",
+      "focusWord": "rebuild",
+      "sentence": "The town plans to rebuild the old bridge.",
+      "chinese": "rebuild = 重建；小镇计划重建那座旧桥。"
+    },
+    {
+      "term": "receive",
+      "focusWord": "receive",
+      "sentence": "I received your email this morning.",
+      "chinese": "receive = 收到；我今天早上收到了你的邮件。"
+    },
+    {
+      "term": "recognise",
+      "focusWord": "recognise",
+      "sentence": "I recognised an old friend in the crowd.",
+      "chinese": "recognise = 认出；我在人群中认出了一位老朋友。"
+    },
+    {
+      "term": "recover",
+      "focusWord": "recover",
+      "sentence": "She recovered quickly after her illness.",
+      "chinese": "recover = 康复；她生病后很快康复了。"
+    },
+    {
+      "term": "reduce",
+      "focusWord": "reduce",
+      "sentence": "We should reduce the amount of plastic we use.",
+      "chinese": "reduce = 减少；我们应该减少塑料用量。"
+    },
+    {
+      "term": "refuse",
+      "focusWord": "refuse",
+      "sentence": "He refused their offer politely.",
+      "chinese": "refuse = 拒绝；他礼貌地拒绝了他们的提议。"
+    },
+    {
+      "term": "register",
+      "focusWord": "register",
+      "sentence": "You can register for the course online.",
+      "chinese": "register = 注册；你可以在线报名这门课程。"
+    },
+    {
+      "term": "relax",
+      "focusWord": "relax",
+      "sentence": "I like to relax on the beach.",
+      "chinese": "relax = 放松；我喜欢在海滩上放松。"
+    },
+    {
+      "term": "rely",
+      "focusWord": "rely",
+      "sentence": "You can rely on Sara for help.",
+      "chinese": "rely = 依靠；你可以依靠萨拉的帮助。"
+    },
+    {
+      "term": "remain",
+      "focusWord": "remain",
+      "sentence": "Please remain calm during the test.",
+      "chinese": "remain = 保持；考试期间请保持冷静。"
+    },
+    {
+      "term": "remember",
+      "focusWord": "remember",
+      "sentence": "Remember to lock the door.",
+      "chinese": "remember = 记得；记得锁门。"
+    },
+    {
+      "term": "remind",
+      "focusWord": "remind",
+      "sentence": "Please remind me about the appointment.",
+      "chinese": "remind = 提醒；请提醒我赴约。"
+    },
+    {
+      "term": "remove",
+      "focusWord": "remove",
+      "sentence": "Remove your shoes before entering.",
+      "chinese": "remove = 脱掉；进入前请脱鞋。"
+    },
+    {
+      "term": "repair",
+      "focusWord": "repair",
+      "sentence": "They repaired the roof after the storm.",
+      "chinese": "repair = 修理；暴风雨后他们修好了屋顶。"
+    },
+    {
+      "term": "repeat",
+      "focusWord": "repeat",
+      "sentence": "Could you repeat the question?",
+      "chinese": "repeat = 重复；你能重复一下问题吗？"
+    },
+    {
+      "term": "replace",
+      "focusWord": "replace",
+      "sentence": "I need to replace the battery.",
+      "chinese": "replace = 更换；我需要更换电池。"
+    },
+    {
+      "term": "require",
+      "focusWord": "require",
+      "sentence": "This journey requires a passport.",
+      "chinese": "require = 需要；这趟旅程需要护照。"
+    },
+    {
+      "term": "retire",
+      "focusWord": "retire",
+      "sentence": "My aunt plans to retire next year.",
+      "chinese": "retire = 退休；我姑姑计划明年退休。"
+    },
+    {
+      "term": "return",
+      "focusWord": "return",
+      "sentence": "We returned home after midnight.",
+      "chinese": "return = 返回；我们午夜后回到家。"
+    },
+    {
+      "term": "rise",
+      "focusWord": "rise",
+      "sentence": "The sun rises behind the hills.",
+      "chinese": "rise = 升起；太阳从山后升起。"
+    },
+    {
+      "term": "rob",
+      "focusWord": "rob",
+      "sentence": "Two men robbed the shop last night.",
+      "chinese": "rob = 抢劫；两名男子昨晚抢劫了商店。"
+    },
+    {
+      "term": "run",
+      "focusWord": "run",
+      "sentence": "She runs five kilometres every morning.",
+      "chinese": "run = 跑；她每天早上跑五公里。"
+    }
+  ]
+}

@@ -1,0 +1,306 @@
+{
+  "batchId": "actions-007",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "run out",
+      "focusWord": "run out",
+      "sentence": "We ran out of milk this morning.",
+      "chinese": "run out = 用完；我们今天早上把牛奶喝完了。"
+    },
+    {
+      "term": "see",
+      "focusWord": "see",
+      "sentence": "You can see the mountains from here.",
+      "chinese": "see = 看见；从这里可以看见群山。"
+    },
+    {
+      "term": "seem",
+      "focusWord": "seem",
+      "sentence": "You seem tired after the journey.",
+      "chinese": "seem = 似乎；旅程结束后你似乎很累。"
+    },
+    {
+      "term": "select",
+      "focusWord": "select",
+      "sentence": "Select one option from the menu.",
+      "chinese": "select = 选择；从菜单中选择一个选项。"
+    },
+    {
+      "term": "send",
+      "focusWord": "send",
+      "sentence": "I will send you the details by email.",
+      "chinese": "send = 发送；我会通过电子邮件把详情发给你。"
+    },
+    {
+      "term": "serve",
+      "focusWord": "serve",
+      "sentence": "Lunch is served at twelve.",
+      "chinese": "serve = 供应；午餐十二点供应。"
+    },
+    {
+      "term": "set",
+      "focusWord": "set",
+      "sentence": "I set my alarm for seven.",
+      "chinese": "set = 设定；我把闹钟设在七点。"
+    },
+    {
+      "term": "set off",
+      "focusWord": "set off",
+      "sentence": "We set off early to avoid the traffic.",
+      "chinese": "set off = 出发；我们早早出发以避开交通拥堵。"
+    },
+    {
+      "term": "set out",
+      "focusWord": "set out",
+      "sentence": "The walkers set out before sunrise.",
+      "chinese": "set out = 动身；徒步者在日出前动身了。"
+    },
+    {
+      "term": "set up",
+      "focusWord": "set up",
+      "sentence": "They set up a new sports club.",
+      "chinese": "set up = 创办；他们创办了一个新的体育俱乐部。"
+    },
+    {
+      "term": "sew",
+      "focusWord": "sew",
+      "sentence": "Can you sew this button onto my shirt?",
+      "chinese": "sew = 缝；你能把这颗纽扣缝到我的衬衫上吗？"
+    },
+    {
+      "term": "shake",
+      "focusWord": "shake",
+      "sentence": "Shake the bottle before opening it.",
+      "chinese": "shake = 摇动；开瓶前摇一摇。"
+    },
+    {
+      "term": "share",
+      "focusWord": "share",
+      "sentence": "We shared the cake with our neighbours.",
+      "chinese": "share = 分享；我们和邻居分享了蛋糕。"
+    },
+    {
+      "term": "shave",
+      "focusWord": "shave",
+      "sentence": "He shaves every morning.",
+      "chinese": "shave = 刮胡子；他每天早上刮胡子。"
+    },
+    {
+      "term": "shine",
+      "focusWord": "shine",
+      "sentence": "The sun was shining through the window.",
+      "chinese": "shine = 照耀；阳光透过窗户照进来。"
+    },
+    {
+      "term": "shoot",
+      "focusWord": "shoot",
+      "sentence": "She shot a short video on her phone.",
+      "chinese": "shoot = 拍摄；她用手机拍了一段短视频。"
+    },
+    {
+      "term": "sign up",
+      "focusWord": "sign up",
+      "sentence": "I signed up for a cooking course.",
+      "chinese": "sign up = 报名；我报名参加了烹饪课程。"
+    },
+    {
+      "term": "sing",
+      "focusWord": "sing",
+      "sentence": "We sang our favourite song.",
+      "chinese": "sing = 唱；我们唱了最喜欢的歌。"
+    },
+    {
+      "term": "sit",
+      "focusWord": "sit",
+      "sentence": "I sat near the window.",
+      "chinese": "sit = 坐；我坐在窗边。"
+    },
+    {
+      "term": "slip",
+      "focusWord": "slip",
+      "sentence": "He slipped on the wet floor.",
+      "chinese": "slip = 滑倒；他在湿地板上滑倒了。"
+    },
+    {
+      "term": "sort",
+      "focusWord": "sort",
+      "sentence": "Please sort the bottles for recycling.",
+      "chinese": "sort = 分类；请把瓶子分类回收。"
+    },
+    {
+      "term": "spell",
+      "focusWord": "spell",
+      "sentence": "How do you spell your surname?",
+      "chinese": "spell = 拼写；你的姓怎么拼？"
+    },
+    {
+      "term": "spend",
+      "focusWord": "spend",
+      "sentence": "We spent the weekend in London.",
+      "chinese": "spend = 度过；我们在伦敦度过了周末。"
+    },
+    {
+      "term": "spill",
+      "focusWord": "spill",
+      "sentence": "I spilled juice on the table.",
+      "chinese": "spill = 洒出；我把果汁洒在桌上了。"
+    },
+    {
+      "term": "spoil",
+      "focusWord": "spoil",
+      "sentence": "Do not spoil the surprise.",
+      "chinese": "spoil = 破坏；别破坏这个惊喜。"
+    },
+    {
+      "term": "stand",
+      "focusWord": "stand",
+      "sentence": "We stood in a queue for tickets.",
+      "chinese": "stand = 站立；我们排队站着等票。"
+    },
+    {
+      "term": "start",
+      "focusWord": "start",
+      "sentence": "The class starts at half past nine.",
+      "chinese": "start = 开始；课程九点半开始。"
+    },
+    {
+      "term": "stay",
+      "focusWord": "stay",
+      "sentence": "We stayed at a small hotel.",
+      "chinese": "stay = 停留；我们住在一家小旅馆。"
+    },
+    {
+      "term": "stay behind",
+      "focusWord": "stay behind",
+      "sentence": "Two students stayed behind after class.",
+      "chinese": "stay behind = 留下；两名学生课后留了下来。"
+    },
+    {
+      "term": "steal",
+      "focusWord": "steal",
+      "sentence": "Someone stole my bicycle.",
+      "chinese": "steal = 偷；有人偷了我的自行车。"
+    },
+    {
+      "term": "step forward / back / out",
+      "focusWord": "step forward",
+      "sentence": "Please step forward when your name is called.",
+      "chinese": "step forward = 向前走；叫到你的名字时请向前走。"
+    },
+    {
+      "term": "stir",
+      "focusWord": "stir",
+      "sentence": "Stir the soup before serving it.",
+      "chinese": "stir = 搅拌；上汤前先搅一搅。"
+    },
+    {
+      "term": "stop",
+      "focusWord": "stop",
+      "sentence": "The driver stopped the car safely.",
+      "chinese": "stop = 停下；司机安全地停下了车。"
+    },
+    {
+      "term": "subtract",
+      "focusWord": "subtract",
+      "sentence": "Subtract four from ten.",
+      "chinese": "subtract = 减去；从十中减去四。"
+    },
+    {
+      "term": "succeed",
+      "focusWord": "succeed",
+      "sentence": "She succeeded in passing the exam.",
+      "chinese": "succeed = 成功；她成功通过了考试。"
+    },
+    {
+      "term": "suffer",
+      "focusWord": "suffer",
+      "sentence": "He suffers from frequent headaches.",
+      "chinese": "suffer = 遭受；他经常头痛。"
+    },
+    {
+      "term": "suggest",
+      "focusWord": "suggest",
+      "sentence": "I suggest having a picnic tomorrow.",
+      "chinese": "suggest = 建议；我建议明天去野餐。"
+    },
+    {
+      "term": "sunbathe",
+      "focusWord": "sunbathe",
+      "sentence": "We sunbathed on the beach all afternoon.",
+      "chinese": "sunbathe = 晒日光浴；我们整个下午都在海滩上晒太阳。"
+    },
+    {
+      "term": "supply",
+      "focusWord": "supply",
+      "sentence": "Local farms supply the restaurant with vegetables.",
+      "chinese": "supply = 供应；当地农场为餐厅供应蔬菜。"
+    },
+    {
+      "term": "suppose",
+      "focusWord": "suppose",
+      "sentence": "I suppose he is busy today.",
+      "chinese": "suppose = 认为；我想他今天很忙。"
+    },
+    {
+      "term": "surf",
+      "focusWord": "surf",
+      "sentence": "They surf near the beach every weekend.",
+      "chinese": "surf = 冲浪；他们每周末都在海滩附近冲浪。"
+    },
+    {
+      "term": "surround",
+      "focusWord": "surround",
+      "sentence": "Tall trees surround the house.",
+      "chinese": "surround = 环绕；高大的树木环绕着房子。"
+    },
+    {
+      "term": "take",
+      "focusWord": "take",
+      "sentence": "Take an umbrella in case it rains.",
+      "chinese": "take = 带上；带把伞，以防下雨。"
+    },
+    {
+      "term": "take care of",
+      "focusWord": "take care of",
+      "sentence": "Can you take care of my cat?",
+      "chinese": "take care of = 照顾；你能照顾我的猫吗？"
+    },
+    {
+      "term": "take off",
+      "focusWord": "take off",
+      "sentence": "Please take off your shoes.",
+      "chinese": "take off = 脱下；请脱鞋。"
+    },
+    {
+      "term": "take part",
+      "focusWord": "take part",
+      "sentence": "More than a hundred people took part in the race.",
+      "chinese": "take part = 参加；一百多人参加了比赛。"
+    },
+    {
+      "term": "take up",
+      "focusWord": "take up",
+      "sentence": "She took up tennis last summer.",
+      "chinese": "take up = 开始从事；她去年夏天开始打网球。"
+    },
+    {
+      "term": "think",
+      "focusWord": "think",
+      "sentence": "I need time to think about your offer.",
+      "chinese": "think = 考虑；我需要时间考虑你的提议。"
+    },
+    {
+      "term": "throw",
+      "focusWord": "throw",
+      "sentence": "Throw the ball to me.",
+      "chinese": "throw = 扔；把球扔给我。"
+    },
+    {
+      "term": "touch",
+      "focusWord": "touch",
+      "sentence": "Do not touch the wet paint.",
+      "chinese": "touch = 触碰；不要碰未干的油漆。"
+    }
+  ]
+}
