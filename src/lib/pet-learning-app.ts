@@ -14627,7 +14627,7 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
     },
     "declare": {
       focusWord: "declare",
-      sentence: "The judge declared Mia the winner.",
+      sentence: "The referee declared Mia the winner.",
       chinese: "declare = 宣布；裁判宣布米娅获胜。",
     },
     "decorate": {

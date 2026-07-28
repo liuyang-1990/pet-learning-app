@@ -405,6 +405,54 @@ const manuallyConfirmedTerms = new Set([
   "well", // healthy again after illness, not the interjection
   "welldressed", // well-dressed guest, expressed naturally as 穿着讲究的
   "wonderful", // wonderful / great, expressed naturally as 精彩的
+  // These first actions examples use valid verb senses or Chinese synonyms.
+  "achieve", // achieve a goal / 实现目标, not only reach / 达到
+  "act", // perform in a play, not take action
+  "admire", // admire a view / 欣赏风景
+  "advance", // advance to a final / 晋级
+  "approach", // move towards a desk, not a method
+  "babysit", // look after a child, not the noun babysitter
+  "be", // be at home / 在家, not only the linking verb 是
+  "carry", // carry bags / 搬袋子
+  // These second actions examples use valid verb senses or Chinese synonyms.
+  "catch", // catch a bus / 赶公交车
+  "clap", // clap / applaud
+  "collect", // collect tickets / 领取票
+  "comeon", // an urging expression meaning 快点
+  "compete", // take part in a race / 参加比赛
+  "deal", // deal with a problem / 处理问题
+  "declare", // declare a winner / 宣布获胜
+  "defend", // defend a goal / 防守球门
+  "deliver", // deliver a sofa / 运送沙发
+  "depart", // a train leaves / 出发
+  "depend", // depend on weather / 取决于天气
+  // These third actions examples use valid verb senses or Chinese synonyms.
+  "fail", // fail a test / 未通过考试
+  "fall", // leaves fall / 落下, not the season
+  "fancy", // British verb meaning want / 想要
+  "feed", // feed a cat / 喂猫, not animal food
+  "fill", // fill a bottle / 装满
+  "findout", // discover information / 查明
+  "follow", // follow signs / 按照路标
+  "frighten", // make a baby afraid / 吓到
+  "gain", // gain experience / 获得经验
+  "getridof", // dispose of old clothes / 处理掉
+  "giveback", // return a library book / 归还
+  "giveout", // hand out worksheets / 分发
+  // These fourth actions examples use valid phrasal or contextual verb senses.
+  "gooff", // an alarm rings / 响起
+  "grab", // take a coat quickly / 迅速拿取
+  "greet", // welcome or say hello to guests / 迎接
+  "grow", // grow tomatoes / 种植
+  "handle", // operate a machine / 操作
+  "hike", // walk through mountains / 徒步
+  "hold", // hold a baby / 抱住
+  "holdup", // delay traffic / 耽搁
+  "identify", // recognise a thief / 认出
+  "ignore", // pay no attention / 不理会
+  "improve", // improve English / 提高
+  "increase", // raise prices / 提高
+  "inspire", // motivate students / 激励
 ]);
 
 async function main() {
