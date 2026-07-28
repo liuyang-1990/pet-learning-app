@@ -14225,6 +14225,1036 @@ export function getReviewedWordExamples(): Record<string, WordExample> {
       sentence: "Working parents need flexible hours.",
       chinese: "working = 工作的；有工作的父母需要灵活时间。",
     },
+    "worse": {
+      focusWord: "worse",
+      sentence: "The weather is worse today.",
+      chinese: "worse = 更糟的；今天的天气更糟。",
+    },
+    "worst": {
+      focusWord: "worst",
+      sentence: "That was the worst meal of the trip.",
+      chinese: "worst = 最糟的；那是旅途中最糟的一顿饭。",
+    },
+    "written": {
+      focusWord: "written",
+      sentence: "Please follow the written instructions.",
+      chinese: "written = 书面的；请按照书面说明操作。",
+    },
+    "wrong": {
+      focusWord: "wrong",
+      sentence: "Your answer is wrong.",
+      chinese: "wrong = 错误的；你的答案是错的。",
+    },
+    "yellow": {
+      focusWord: "yellow",
+      sentence: "She wore a yellow dress.",
+      chinese: "yellow = 黄色的；她穿了一条黄色连衣裙。",
+    },
+    "young": {
+      focusWord: "young",
+      sentence: "The young horse ran across the field.",
+      chinese: "young = 年幼的；小马跑过田野。",
+    },
+    "accept": {
+      focusWord: "accept",
+      sentence: "Maya accepted the invitation.",
+      chinese: "accept = 接受；玛雅接受了邀请。",
+    },
+    "accompany": {
+      focusWord: "accompany",
+      sentence: "A teacher will accompany the students.",
+      chinese: "accompany = 陪同；一位老师将陪同学生们。",
+    },
+    "achieve": {
+      focusWord: "achieve",
+      sentence: "She worked hard to achieve her goal.",
+      chinese: "achieve = 实现；她努力实现自己的目标。",
+    },
+    "act": {
+      focusWord: "act",
+      sentence: "Leo will act in the school play.",
+      chinese: "act = 表演；利奥将在学校话剧中表演。",
+    },
+    "add": {
+      focusWord: "add",
+      sentence: "Add a little milk to the soup.",
+      chinese: "add = 添加；往汤里加一点牛奶。",
+    },
+    "admire": {
+      focusWord: "admire",
+      sentence: "We stopped to admire the view.",
+      chinese: "admire = 欣赏；我们停下来欣赏风景。",
+    },
+    "admit": {
+      focusWord: "admit",
+      sentence: "He admitted his mistake.",
+      chinese: "admit = 承认；他承认了自己的错误。",
+    },
+    "advance": {
+      focusWord: "advance",
+      sentence: "Our team advanced to the final.",
+      chinese: "advance = 晋级；我们队晋级了决赛。",
+    },
+    "affect": {
+      focusWord: "affect",
+      sentence: "Too much noise can affect your sleep.",
+      chinese: "affect = 影响；太多噪音会影响你的睡眠。",
+    },
+    "agree": {
+      focusWord: "agree",
+      sentence: "We agreed to meet at six.",
+      chinese: "agree = 同意；我们同意六点见面。",
+    },
+    "allow": {
+      focusWord: "allow",
+      sentence: "The library allows students to borrow six books.",
+      chinese: "allow = 允许；图书馆允许学生借六本书。",
+    },
+    "annoy": {
+      focusWord: "annoy",
+      sentence: "Loud music can annoy the neighbours.",
+      chinese: "annoy = 使恼怒；吵闹的音乐会惹恼邻居。",
+    },
+    "apologise": {
+      focusWord: "apologise",
+      sentence: "I apologised for being late.",
+      chinese: "apologise = 道歉；我为迟到道了歉。",
+    },
+    "appear": {
+      focusWord: "appear",
+      sentence: "The singer appeared on stage.",
+      chinese: "appear = 出现；歌手出现在舞台上。",
+    },
+    "apply": {
+      focusWord: "apply",
+      sentence: "She applied for a summer job.",
+      chinese: "apply = 申请；她申请了一份暑期工作。",
+    },
+    "approach": {
+      focusWord: "approach",
+      sentence: "A man approached the information desk.",
+      chinese: "approach = 走近；一名男子走近问讯处。",
+    },
+    "approve": {
+      focusWord: "approve",
+      sentence: "The head teacher approved our plan.",
+      chinese: "approve = 批准；校长批准了我们的计划。",
+    },
+    "argue": {
+      focusWord: "argue",
+      sentence: "The brothers argued about the computer.",
+      chinese: "argue = 争论；兄弟俩为电脑争论起来。",
+    },
+    "arrange": {
+      focusWord: "arrange",
+      sentence: "I arranged a meeting for Friday.",
+      chinese: "arrange = 安排；我安排了周五的会议。",
+    },
+    "arrest": {
+      focusWord: "arrest",
+      sentence: "The police arrested the thief.",
+      chinese: "arrest = 逮捕；警方逮捕了小偷。",
+    },
+    "arrive": {
+      focusWord: "arrive",
+      sentence: "We arrived at the station early.",
+      chinese: "arrive = 到达；我们很早就到了车站。",
+    },
+    "assist": {
+      focusWord: "assist",
+      sentence: "A member of staff assisted the customer.",
+      chinese: "assist = 帮助；一名工作人员帮助了顾客。",
+    },
+    "attach": {
+      focusWord: "attach",
+      sentence: "Please attach a photo to the form.",
+      chinese: "attach = 附上；请在表格上附一张照片。",
+    },
+    "attempt": {
+      focusWord: "attempt",
+      sentence: "They attempted to climb the mountain.",
+      chinese: "attempt = 尝试；他们尝试攀登那座山。",
+    },
+    "attend": {
+      focusWord: "attend",
+      sentence: "More than fifty people attended the talk.",
+      chinese: "attend = 参加；五十多人参加了讲座。",
+    },
+    "attract": {
+      focusWord: "attract",
+      sentence: "The festival attracts many visitors.",
+      chinese: "attract = 吸引；这个节日吸引了许多游客。",
+    },
+    "avoid": {
+      focusWord: "avoid",
+      sentence: "We avoided the busy main road.",
+      chinese: "avoid = 避开；我们避开了繁忙的主干道。",
+    },
+    "babysit": {
+      focusWord: "babysit",
+      sentence: "I babysit my cousin on Saturdays.",
+      chinese: "babysit = 照看小孩；我每周六照看表弟。",
+    },
+    "bake": {
+      focusWord: "bake",
+      sentence: "We baked a cake for Mum.",
+      chinese: "bake = 烘烤；我们为妈妈烤了一个蛋糕。",
+    },
+    "be": {
+      focusWord: "be",
+      sentence: "I will be home before dinner.",
+      chinese: "be = 在；我会在晚饭前到家。",
+    },
+    "beat": {
+      focusWord: "beat",
+      sentence: "Our team beat the champions.",
+      chinese: "beat = 打败；我们队击败了冠军队。",
+    },
+    "become": {
+      focusWord: "become",
+      sentence: "She hopes to become a doctor.",
+      chinese: "become = 成为；她希望成为一名医生。",
+    },
+    "begin": {
+      focusWord: "begin",
+      sentence: "The lesson begins at nine.",
+      chinese: "begin = 开始；课程九点开始。",
+    },
+    "behave": {
+      focusWord: "behave",
+      sentence: "The children behaved politely.",
+      chinese: "behave = 表现；孩子们表现得很有礼貌。",
+    },
+    "believe": {
+      focusWord: "believe",
+      sentence: "I believe his story.",
+      chinese: "believe = 相信；我相信他的故事。",
+    },
+    "belong": {
+      focusWord: "belong",
+      sentence: "These keys belong to Ella.",
+      chinese: "belong = 属于；这些钥匙是埃拉的。",
+    },
+    "bite": {
+      focusWord: "bite",
+      sentence: "Be careful because that dog may bite.",
+      chinese: "bite = 咬；小心，那只狗可能会咬人。",
+    },
+    "blame": {
+      focusWord: "blame",
+      sentence: "Do not blame me for the delay.",
+      chinese: "blame = 责怪；不要因为延误而责怪我。",
+    },
+    "bleed": {
+      focusWord: "bleed",
+      sentence: "His finger began to bleed.",
+      chinese: "bleed = 流血；他的手指开始流血。",
+    },
+    "blow": {
+      focusWord: "blow",
+      sentence: "Blow out the candles before you cut the cake.",
+      chinese: "blow = 吹；切蛋糕前把蜡烛吹灭。",
+    },
+    "boil": {
+      focusWord: "boil",
+      sentence: "Boil the water for five minutes.",
+      chinese: "boil = 煮沸；把水煮沸五分钟。",
+    },
+    "breathe": {
+      focusWord: "breathe",
+      sentence: "Breathe slowly and try to relax.",
+      chinese: "breathe = 呼吸；慢慢呼吸，尽量放松。",
+    },
+    "bring": {
+      focusWord: "bring",
+      sentence: "Remember to bring your passport.",
+      chinese: "bring = 带来；记得带上护照。",
+    },
+    "bringup": {
+      focusWord: "bring up",
+      sentence: "She brought up an important issue.",
+      chinese: "bring up = 提出；她提出了一个重要问题。",
+    },
+    "build": {
+      focusWord: "build",
+      sentence: "They plan to build a new bridge.",
+      chinese: "build = 建造；他们计划建一座新桥。",
+    },
+    "burn": {
+      focusWord: "burn",
+      sentence: "I burned the toast this morning.",
+      chinese: "burn = 烧焦；我今天早上把吐司烤焦了。",
+    },
+    "bury": {
+      focusWord: "bury",
+      sentence: "We buried the box in the garden.",
+      chinese: "bury = 埋；我们把盒子埋在花园里。",
+    },
+    "carry": {
+      focusWord: "carry",
+      sentence: "Can you carry these bags?",
+      chinese: "carry = 搬；你能搬这些袋子吗？",
+    },
+    "carryon": {
+      focusWord: "carry on",
+      sentence: "Please carry on with your work.",
+      chinese: "carry on = 继续；请继续你的工作。",
+    },
+    "carryout": {
+      focusWord: "carry out",
+      sentence: "The students carried out an experiment.",
+      chinese: "carry out = 进行；学生们进行了一项实验。",
+    },
+    "catch": {
+      focusWord: "catch",
+      sentence: "We ran to catch the bus.",
+      chinese: "catch = 赶上；我们跑着去赶公交车。",
+    },
+    "celebrate": {
+      focusWord: "celebrate",
+      sentence: "We celebrated her birthday at home.",
+      chinese: "celebrate = 庆祝；我们在家庆祝了她的生日。",
+    },
+    "cheat": {
+      focusWord: "cheat",
+      sentence: "He was caught cheating in the exam.",
+      chinese: "cheat = 作弊；他考试作弊时被发现了。",
+    },
+    "choose": {
+      focusWord: "choose",
+      sentence: "You can choose any seat.",
+      chinese: "choose = 选择；你可以任选一个座位。",
+    },
+    "clap": {
+      focusWord: "clap",
+      sentence: "The audience clapped loudly.",
+      chinese: "clap = 鼓掌；观众热烈鼓掌。",
+    },
+    "climb": {
+      focusWord: "climb",
+      sentence: "We climbed the hill before lunch.",
+      chinese: "climb = 攀登；我们午饭前爬上了山。",
+    },
+    "collect": {
+      focusWord: "collect",
+      sentence: "I collected the tickets from the office.",
+      chinese: "collect = 领取；我从办公室领了票。",
+    },
+    "come": {
+      focusWord: "come",
+      sentence: "Please come home before dark.",
+      chinese: "come = 来；请在天黑前回家。",
+    },
+    "comeon": {
+      focusWord: "come on",
+      sentence: "Come on, or we will miss the train.",
+      chinese: "come on = 快点；快点，否则我们会错过火车。",
+    },
+    "communicate": {
+      focusWord: "communicate",
+      sentence: "We usually communicate by email.",
+      chinese: "communicate = 沟通；我们通常通过电子邮件沟通。",
+    },
+    "compare": {
+      focusWord: "compare",
+      sentence: "Compare the prices before you buy.",
+      chinese: "compare = 比较；购买前比较一下价格。",
+    },
+    "compete": {
+      focusWord: "compete",
+      sentence: "Twenty runners competed in the race.",
+      chinese: "compete = 参加比赛；二十名跑步者参加了比赛。",
+    },
+    "complain": {
+      focusWord: "complain",
+      sentence: "She complained about the poor service.",
+      chinese: "complain = 抱怨；她抱怨服务太差。",
+    },
+    "complete": {
+      focusWord: "complete",
+      sentence: "Please complete this form.",
+      chinese: "complete = 填写完；请填写完这张表格。",
+    },
+    "concentrate": {
+      focusWord: "concentrate",
+      sentence: "I cannot concentrate with the television on.",
+      chinese: "concentrate = 集中注意力；开着电视我无法集中注意力。",
+    },
+    "connect": {
+      focusWord: "connect",
+      sentence: "Connect the printer to your laptop.",
+      chinese: "connect = 连接；把打印机连接到笔记本电脑。",
+    },
+    "consider": {
+      focusWord: "consider",
+      sentence: "We are considering your offer.",
+      chinese: "consider = 考虑；我们正在考虑你的提议。",
+    },
+    "consist": {
+      focusWord: "consist",
+      sentence: "The course consists of six lessons.",
+      chinese: "consist = 由...组成；这门课程由六节课组成。",
+    },
+    "contain": {
+      focusWord: "contain",
+      sentence: "This cake contains nuts.",
+      chinese: "contain = 含有；这个蛋糕含有坚果。",
+    },
+    "continue": {
+      focusWord: "continue",
+      sentence: "We continued our journey after lunch.",
+      chinese: "continue = 继续；午饭后我们继续旅程。",
+    },
+    "convince": {
+      focusWord: "convince",
+      sentence: "She convinced me to join the club.",
+      chinese: "convince = 说服；她说服我加入了俱乐部。",
+    },
+    "create": {
+      focusWord: "create",
+      sentence: "The class created a poster.",
+      chinese: "create = 创作；全班制作了一张海报。",
+    },
+    "deal": {
+      focusWord: "deal",
+      sentence: "She dealt with the problem calmly.",
+      chinese: "deal = 处理；她冷静地处理了问题。",
+    },
+    "decide": {
+      focusWord: "decide",
+      sentence: "We decided to walk home.",
+      chinese: "decide = 决定；我们决定步行回家。",
+    },
+    "declare": {
+      focusWord: "declare",
+      sentence: "The judge declared Mia the winner.",
+      chinese: "declare = 宣布；裁判宣布米娅获胜。",
+    },
+    "decorate": {
+      focusWord: "decorate",
+      sentence: "We decorated the room with balloons.",
+      chinese: "decorate = 装饰；我们用气球装饰了房间。",
+    },
+    "defend": {
+      focusWord: "defend",
+      sentence: "The goalkeeper defended the goal well.",
+      chinese: "defend = 防守；守门员很好地守住了球门。",
+    },
+    "delete": {
+      focusWord: "delete",
+      sentence: "I deleted the message by mistake.",
+      chinese: "delete = 删除；我误删了那条消息。",
+    },
+    "deliver": {
+      focusWord: "deliver",
+      sentence: "They will deliver the sofa tomorrow.",
+      chinese: "deliver = 运送；他们明天会送来沙发。",
+    },
+    "depart": {
+      focusWord: "depart",
+      sentence: "The train departs at noon.",
+      chinese: "depart = 出发；火车中午出发。",
+    },
+    "depend": {
+      focusWord: "depend",
+      sentence: "Our plans depend on the weather.",
+      chinese: "depend = 取决于；我们的计划取决于天气。",
+    },
+    "deserve": {
+      focusWord: "deserve",
+      sentence: "You deserve a rest after that long walk.",
+      chinese: "deserve = 应得；走了那么久，你应该休息一下。",
+    },
+    "destroy": {
+      focusWord: "destroy",
+      sentence: "The fire destroyed the old building.",
+      chinese: "destroy = 毁坏；大火烧毁了那栋旧楼。",
+    },
+    "develop": {
+      focusWord: "develop",
+      sentence: "Reading can develop your vocabulary.",
+      chinese: "develop = 发展；阅读可以扩大你的词汇量。",
+    },
+    "dial": {
+      focusWord: "dial",
+      sentence: "Dial this number in an emergency.",
+      chinese: "dial = 拨号；紧急情况下拨打这个号码。",
+    },
+    "die": {
+      focusWord: "die",
+      sentence: "The plant died because it had no water.",
+      chinese: "die = 死亡；这株植物因为缺水死了。",
+    },
+    "dig": {
+      focusWord: "dig",
+      sentence: "The dog dug a hole in the garden.",
+      chinese: "dig = 挖；狗在花园里挖了一个洞。",
+    },
+    "disagree": {
+      focusWord: "disagree",
+      sentence: "We disagreed about the best route.",
+      chinese: "disagree = 不同意；我们对最佳路线意见不一。",
+    },
+    "disappear": {
+      focusWord: "disappear",
+      sentence: "The sun disappeared behind a cloud.",
+      chinese: "disappear = 消失；太阳消失在云后。",
+    },
+    "disappoint": {
+      focusWord: "disappoint",
+      sentence: "The result disappointed the fans.",
+      chinese: "disappoint = 使失望；结果让球迷们失望。",
+    },
+    "discover": {
+      focusWord: "discover",
+      sentence: "We discovered a quiet beach.",
+      chinese: "discover = 发现；我们发现了一处安静的海滩。",
+    },
+    "dislike": {
+      focusWord: "dislike",
+      sentence: "I dislike travelling in crowded buses.",
+      chinese: "dislike = 不喜欢；我不喜欢乘坐拥挤的公交车。",
+    },
+    "disturb": {
+      focusWord: "disturb",
+      sentence: "Please do not disturb the other guests.",
+      chinese: "disturb = 打扰；请不要打扰其他客人。",
+    },
+    "dive": {
+      focusWord: "dive",
+      sentence: "He dived into the pool.",
+      chinese: "dive = 跳水；他跳进了游泳池。",
+    },
+    "divide": {
+      focusWord: "divide",
+      sentence: "Divide the cake into eight pieces.",
+      chinese: "divide = 分开；把蛋糕分成八块。",
+    },
+    "drag": {
+      focusWord: "drag",
+      sentence: "They dragged the heavy box across the floor.",
+      chinese: "drag = 拖；他们把沉重的箱子拖过地板。",
+    },
+    "drop": {
+      focusWord: "drop",
+      sentence: "Be careful not to drop the glass.",
+      chinese: "drop = 使掉落；小心别把玻璃杯掉在地上。",
+    },
+    "earn": {
+      focusWord: "earn",
+      sentence: "She earns money by teaching music.",
+      chinese: "earn = 赚取；她通过教音乐赚钱。",
+    },
+    "eat": {
+      focusWord: "eat",
+      sentence: "We ate breakfast on the balcony.",
+      chinese: "eat = 吃；我们在阳台上吃了早餐。",
+    },
+    "employ": {
+      focusWord: "employ",
+      sentence: "The hotel employs twelve local people.",
+      chinese: "employ = 雇用；这家酒店雇用了十二名当地人。",
+    },
+    "encourage": {
+      focusWord: "encourage",
+      sentence: "My teacher encouraged me to enter the competition.",
+      chinese: "encourage = 鼓励；老师鼓励我参加比赛。",
+    },
+    "end": {
+      focusWord: "end",
+      sentence: "The concert ended at ten.",
+      chinese: "end = 结束；音乐会十点结束。",
+    },
+    "endup": {
+      focusWord: "end up",
+      sentence: "We ended up staying for another night.",
+      chinese: "end up = 最终；我们最后又住了一晚。",
+    },
+    "enjoy": {
+      focusWord: "enjoy",
+      sentence: "Did you enjoy the trip?",
+      chinese: "enjoy = 享受；你喜欢这次旅行吗？",
+    },
+    "enquire": {
+      focusWord: "enquire",
+      sentence: "I called to enquire about ticket prices.",
+      chinese: "enquire = 询问；我打电话询问票价。",
+    },
+    "enter": {
+      focusWord: "enter",
+      sentence: "Please knock before you enter the room.",
+      chinese: "enter = 进入；进入房间前请敲门。",
+    },
+    "entertain": {
+      focusWord: "entertain",
+      sentence: "The magician entertained the children.",
+      chinese: "entertain = 使娱乐；魔术师逗孩子们开心。",
+    },
+    "escape": {
+      focusWord: "escape",
+      sentence: "Everyone escaped from the burning building.",
+      chinese: "escape = 逃离；所有人都逃离了着火的大楼。",
+    },
+    "exist": {
+      focusWord: "exist",
+      sentence: "Do you believe that life exists on other planets?",
+      chinese: "exist = 存在；你相信其他星球上存在生命吗？",
+    },
+    "expect": {
+      focusWord: "expect",
+      sentence: "I expect her to call this evening.",
+      chinese: "expect = 预期；我预计她今晚会打电话。",
+    },
+    "explode": {
+      focusWord: "explode",
+      sentence: "The firework exploded above the park.",
+      chinese: "explode = 爆炸；烟花在公园上空爆开。",
+    },
+    "explore": {
+      focusWord: "explore",
+      sentence: "We spent a day exploring the old town.",
+      chinese: "explore = 探索；我们花了一天探索老城区。",
+    },
+    "fail": {
+      focusWord: "fail",
+      sentence: "He failed his driving test.",
+      chinese: "fail = 未通过；他驾驶考试没通过。",
+    },
+    "fall": {
+      focusWord: "fall",
+      sentence: "The leaves begin to fall in October.",
+      chinese: "fall = 落下；树叶在十月开始飘落。",
+    },
+    "fancy": {
+      focusWord: "fancy",
+      sentence: "Do you fancy a cup of tea?",
+      chinese: "fancy = 想要；你想喝杯茶吗？",
+    },
+    "fasten": {
+      focusWord: "fasten",
+      sentence: "Please fasten your seat belt.",
+      chinese: "fasten = 系牢；请系好安全带。",
+    },
+    "fax": {
+      focusWord: "fax",
+      sentence: "She faxed the document to the office.",
+      chinese: "fax = 传真发送；她把文件传真到了办公室。",
+    },
+    "feed": {
+      focusWord: "feed",
+      sentence: "Could you feed the cat tonight?",
+      chinese: "feed = 喂养；你今晚能喂猫吗？",
+    },
+    "feel": {
+      focusWord: "feel",
+      sentence: "I feel tired after the journey.",
+      chinese: "feel = 感觉；旅程结束后我觉得很累。",
+    },
+    "fetch": {
+      focusWord: "fetch",
+      sentence: "I will fetch your coat.",
+      chinese: "fetch = 取来；我去取你的外套。",
+    },
+    "fill": {
+      focusWord: "fill",
+      sentence: "Fill the bottle with water.",
+      chinese: "fill = 装满；把瓶子装满水。",
+    },
+    "find": {
+      focusWord: "find",
+      sentence: "I found my keys under the sofa.",
+      chinese: "find = 找到；我在沙发下面找到了钥匙。",
+    },
+    "findout": {
+      focusWord: "find out",
+      sentence: "We need to find out when the shop closes.",
+      chinese: "find out = 查明；我们需要查清商店几点关门。",
+    },
+    "finish": {
+      focusWord: "finish",
+      sentence: "She finished the project yesterday.",
+      chinese: "finish = 完成；她昨天完成了项目。",
+    },
+    "fix": {
+      focusWord: "fix",
+      sentence: "Can you fix my bicycle?",
+      chinese: "fix = 修理；你能修好我的自行车吗？",
+    },
+    "float": {
+      focusWord: "float",
+      sentence: "The empty bottle floated on the water.",
+      chinese: "float = 漂浮；空瓶子漂在水面上。",
+    },
+    "flow": {
+      focusWord: "flow",
+      sentence: "The river flows into the sea.",
+      chinese: "flow = 流入；这条河流入大海。",
+    },
+    "fly": {
+      focusWord: "fly",
+      sentence: "We are flying to Rome tomorrow.",
+      chinese: "fly = 乘飞机；我们明天乘飞机去罗马。",
+    },
+    "sb": {
+      focusWord: "focus on",
+      sentence: "Please focus on your homework.",
+      chinese: "focus on = 专注于；请专心做作业。",
+    },
+    "fold": {
+      focusWord: "fold",
+      sentence: "Fold the clothes before putting them away.",
+      chinese: "fold = 折叠；收衣服前先把它们叠好。",
+    },
+    "follow": {
+      focusWord: "follow",
+      sentence: "Follow the signs to the museum.",
+      chinese: "follow = 跟随；按照路标前往博物馆。",
+    },
+    "forget": {
+      focusWord: "forget",
+      sentence: "Do not forget your umbrella.",
+      chinese: "forget = 忘记；别忘了带伞。",
+    },
+    "forgive": {
+      focusWord: "forgive",
+      sentence: "Please forgive me for losing your book.",
+      chinese: "forgive = 原谅；请原谅我弄丢了你的书。",
+    },
+    "freeze": {
+      focusWord: "freeze",
+      sentence: "Water freezes at zero degrees Celsius.",
+      chinese: "freeze = 结冰；水在零摄氏度结冰。",
+    },
+    "frighten": {
+      focusWord: "frighten",
+      sentence: "The sudden noise frightened the baby.",
+      chinese: "frighten = 使害怕；突然的声音吓到了婴儿。",
+    },
+    "fry": {
+      focusWord: "fry",
+      sentence: "Fry the onions for three minutes.",
+      chinese: "fry = 煎炒；把洋葱炒三分钟。",
+    },
+    "gain": {
+      focusWord: "gain",
+      sentence: "She gained useful experience at the hospital.",
+      chinese: "gain = 获得；她在医院获得了有用的经验。",
+    },
+    "get": {
+      focusWord: "get",
+      sentence: "Did you get my message?",
+      chinese: "get = 收到；你收到我的消息了吗？",
+    },
+    "getalong": {
+      focusWord: "get along",
+      sentence: "I get along well with my neighbours.",
+      chinese: "get along = 相处融洽；我和邻居相处得很好。",
+    },
+    "getback": {
+      focusWord: "get back",
+      sentence: "What time did you get back?",
+      chinese: "get back = 回来；你几点回来的？",
+    },
+    "getdown": {
+      focusWord: "get down",
+      sentence: "Get down from the chair carefully.",
+      chinese: "get down = 下来；小心地从椅子上下来。",
+    },
+    "getin": {
+      focusWord: "get in",
+      sentence: "We got in the car and drove away.",
+      chinese: "get in = 进入；我们上了车，然后开走了。",
+    },
+    "getoff": {
+      focusWord: "get off",
+      sentence: "Get off the bus at the next stop.",
+      chinese: "get off = 下车；在下一站下公交车。",
+    },
+    "geton": {
+      focusWord: "get on",
+      sentence: "We got on the train just in time.",
+      chinese: "get on = 上车；我们刚好及时上了火车。",
+    },
+    "getridof": {
+      focusWord: "get rid of",
+      sentence: "I need to get rid of these old clothes.",
+      chinese: "get rid of = 处理掉；我需要处理掉这些旧衣服。",
+    },
+    "getup": {
+      focusWord: "get up",
+      sentence: "I get up at seven every day.",
+      chinese: "get up = 起床；我每天七点起床。",
+    },
+    "give": {
+      focusWord: "give",
+      sentence: "Could you give me some advice?",
+      chinese: "give = 给；你能给我一些建议吗？",
+    },
+    "giveback": {
+      focusWord: "give back",
+      sentence: "Please give back the library book.",
+      chinese: "give back = 归还；请归还图书馆的书。",
+    },
+    "givein": {
+      focusWord: "give in",
+      sentence: "He refused to give in.",
+      chinese: "give in = 让步；他拒绝让步。",
+    },
+    "giveout": {
+      focusWord: "give out",
+      sentence: "The teacher gave out the worksheets.",
+      chinese: "give out = 分发；老师分发了练习单。",
+    },
+    "giveup": {
+      focusWord: "give up",
+      sentence: "She gave up eating sweets.",
+      chinese: "give up = 放弃；她不再吃甜食了。",
+    },
+    "giveway": {
+      focusWord: "give way",
+      sentence: "Drivers must give way to cyclists here.",
+      chinese: "give way = 让路；司机在这里必须给骑车人让路。",
+    },
+    "go": {
+      focusWord: "go",
+      sentence: "I go to school by bus.",
+      chinese: "go = 去；我乘公交车上学。",
+    },
+    "gofor": {
+      focusWord: "go for",
+      sentence: "Let us go for a walk after dinner.",
+      chinese: "go for = 去做；晚饭后我们去散步吧。",
+    },
+    "gooff": {
+      focusWord: "go off",
+      sentence: "My alarm went off at six.",
+      chinese: "go off = 响起；我的闹钟六点响了。",
+    },
+    "goon": {
+      focusWord: "go on",
+      sentence: "Please go on with your story.",
+      chinese: "go on = 继续；请继续讲你的故事。",
+    },
+    "goout": {
+      focusWord: "go out",
+      sentence: "We are going out for dinner tonight.",
+      chinese: "go out = 外出；我们今晚要出去吃饭。",
+    },
+    "grab": {
+      focusWord: "grab",
+      sentence: "Grab your coat because we are late.",
+      chinese: "grab = 迅速拿取；快拿上外套，我们迟到了。",
+    },
+    "greet": {
+      focusWord: "greet",
+      sentence: "The manager greeted every guest.",
+      chinese: "greet = 迎接；经理迎接了每位客人。",
+    },
+    "grow": {
+      focusWord: "grow",
+      sentence: "We grow tomatoes in the garden.",
+      chinese: "grow = 种植；我们在花园里种西红柿。",
+    },
+    "growup": {
+      focusWord: "grow up",
+      sentence: "She grew up in a small village.",
+      chinese: "grow up = 长大；她在一个小村庄长大。",
+    },
+    "guess": {
+      focusWord: "guess",
+      sentence: "Can you guess the answer?",
+      chinese: "guess = 猜；你能猜出答案吗？",
+    },
+    "handle": {
+      focusWord: "handle",
+      sentence: "Only trained staff may handle this machine.",
+      chinese: "handle = 操作；只有受过培训的员工可以操作这台机器。",
+    },
+    "hang": {
+      focusWord: "hang",
+      sentence: "We hung the picture above the sofa.",
+      chinese: "hang = 悬挂；我们把画挂在沙发上方。",
+    },
+    "happen": {
+      focusWord: "happen",
+      sentence: "What happened at the meeting?",
+      chinese: "happen = 发生；会议上发生了什么？",
+    },
+    "havegotto": {
+      focusWord: "have got to",
+      sentence: "I have got to leave now.",
+      chinese: "have got to = 必须；我现在必须走了。",
+    },
+    "haveto": {
+      focusWord: "have to",
+      sentence: "Students have to wear a uniform.",
+      chinese: "have to = 必须；学生必须穿校服。",
+    },
+    "hear": {
+      focusWord: "hear",
+      sentence: "I could hear music from the next room.",
+      chinese: "hear = 听见；我能听见隔壁房间传来的音乐。",
+    },
+    "help": {
+      focusWord: "help",
+      sentence: "Can you help me with my homework?",
+      chinese: "help = 帮助；你能帮我做作业吗？",
+    },
+    "hide": {
+      focusWord: "hide",
+      sentence: "She hid the key under a flowerpot.",
+      chinese: "hide = 藏；她把钥匙藏在花盆下面。",
+    },
+    "hike": {
+      focusWord: "hike",
+      sentence: "We hiked through the mountains.",
+      chinese: "hike = 徒步；我们徒步穿过群山。",
+    },
+    "hire": {
+      focusWord: "hire",
+      sentence: "We hired bicycles for the afternoon.",
+      chinese: "hire = 租用；我们租了自行车骑一下午。",
+    },
+    "hitchhike": {
+      focusWord: "hitchhike",
+      sentence: "They hitchhiked across France.",
+      chinese: "hitchhike = 搭便车旅行；他们搭便车穿越了法国。",
+    },
+    "hold": {
+      focusWord: "hold",
+      sentence: "Could you hold the baby for a moment?",
+      chinese: "hold = 抱住；你能抱一会儿宝宝吗？",
+    },
+    "holdup": {
+      focusWord: "hold up",
+      sentence: "Roadworks held up the traffic.",
+      chinese: "hold up = 耽搁；道路施工耽搁了交通。",
+    },
+    "hunt": {
+      focusWord: "hunt",
+      sentence: "Owls hunt at night.",
+      chinese: "hunt = 捕猎；猫头鹰在夜间捕猎。",
+    },
+    "identify": {
+      focusWord: "identify",
+      sentence: "The witness identified the thief.",
+      chinese: "identify = 认出；目击者认出了小偷。",
+    },
+    "ignore": {
+      focusWord: "ignore",
+      sentence: "He ignored my message.",
+      chinese: "ignore = 不理会；他没有理会我的消息。",
+    },
+    "imagine": {
+      focusWord: "imagine",
+      sentence: "Imagine living beside the sea.",
+      chinese: "imagine = 想象；想象一下住在海边。",
+    },
+    "improve": {
+      focusWord: "improve",
+      sentence: "Reading will improve your English.",
+      chinese: "improve = 提高；阅读会提高你的英语水平。",
+    },
+    "include": {
+      focusWord: "include",
+      sentence: "The price includes breakfast.",
+      chinese: "include = 包括；这个价格包括早餐。",
+    },
+    "increase": {
+      focusWord: "increase",
+      sentence: "The shop increased its prices.",
+      chinese: "increase = 提高；商店提高了价格。",
+    },
+    "inform": {
+      focusWord: "inform",
+      sentence: "Please inform the staff about the change.",
+      chinese: "inform = 通知；请通知员工这一变化。",
+    },
+    "injure": {
+      focusWord: "injure",
+      sentence: "He injured his knee during the match.",
+      chinese: "injure = 弄伤；他在比赛中伤了膝盖。",
+    },
+    "insist": {
+      focusWord: "insist",
+      sentence: "She insisted on paying for dinner.",
+      chinese: "insist = 坚持；她坚持要付晚餐的钱。",
+    },
+    "inspire": {
+      focusWord: "inspire",
+      sentence: "Her speech inspired the students.",
+      chinese: "inspire = 激励；她的演讲激励了学生们。",
+    },
+    "install": {
+      focusWord: "install",
+      sentence: "I installed the new software yesterday.",
+      chinese: "install = 安装；我昨天安装了新软件。",
+    },
+    "intend": {
+      focusWord: "intend",
+      sentence: "We intend to travel in June.",
+      chinese: "intend = 打算；我们打算六月去旅行。",
+    },
+    "interrupt": {
+      focusWord: "interrupt",
+      sentence: "Please do not interrupt the speaker.",
+      chinese: "interrupt = 打断；请不要打断发言者。",
+    },
+    "introduce": {
+      focusWord: "introduce",
+      sentence: "Let me introduce my friend Alex.",
+      chinese: "introduce = 介绍；让我介绍一下我的朋友亚历克斯。",
+    },
+    "invent": {
+      focusWord: "invent",
+      sentence: "She invented a machine that saves water.",
+      chinese: "invent = 发明；她发明了一台节水机器。",
+    },
+    "invite": {
+      focusWord: "invite",
+      sentence: "We invited our neighbours to dinner.",
+      chinese: "invite = 邀请；我们邀请邻居来吃晚餐。",
+    },
+    "involve": {
+      focusWord: "involve",
+      sentence: "The job involves lifting heavy boxes.",
+      chinese: "involve = 涉及；这份工作需要搬重箱子。",
+    },
+    "jog": {
+      focusWord: "jog",
+      sentence: "I jog in the park every morning.",
+      chinese: "jog = 慢跑；我每天早上在公园慢跑。",
+    },
+    "join": {
+      focusWord: "join",
+      sentence: "She joined the photography club.",
+      chinese: "join = 加入；她加入了摄影俱乐部。",
+    },
+    "keep": {
+      focusWord: "keep",
+      sentence: "Keep the receipt in a safe place.",
+      chinese: "keep = 保留；把收据放在安全的地方。",
+    },
+    "keepin": {
+      focusWord: "keep in",
+      sentence: "The heavy rain kept us in all day.",
+      chinese: "keep in = 使留在室内；大雨使我们一整天都待在室内。",
+    },
+    "keepon": {
+      focusWord: "keep on",
+      sentence: "Keep on trying and you will improve.",
+      chinese: "keep on = 继续；继续努力，你会进步的。",
+    },
+    "keepup": {
+      focusWord: "keep up",
+      sentence: "Ben works hard to keep up with the class.",
+      chinese: "keep up = 跟上；本努力学习以跟上全班。",
+    },
+    "kill": {
+      focusWord: "kill",
+      sentence: "The cold weather killed the plants.",
+      chinese: "kill = 使死亡；寒冷的天气冻死了植物。",
+    },
   };
 }
 

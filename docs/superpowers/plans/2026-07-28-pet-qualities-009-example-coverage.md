@@ -9,5 +9,5 @@
 ## Tasks
 
 - [x] Add RED tests for the 6 terms from `worse` through `young`.
-- [ ] Promote the candidate ledger into `src/lib/pet-learning-app.ts`.
-- [ ] Verify targeted tests, bilingual audit, full tests, build, and coverage.
+- [x] Promote the candidate ledger into `src/lib/pet-learning-app.ts`.
+- [x] Verify targeted tests, bilingual audit, full tests, build, and coverage.

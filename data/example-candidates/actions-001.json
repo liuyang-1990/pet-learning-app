@@ -1,6 +1,6 @@
 {
   "batchId": "actions-001",
-  "status": "draft",
+  "status": "promoted",
   "entries": [
     {
       "term": "accept",
