@@ -1,0 +1,306 @@
+{
+  "batchId": "qualities-007",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "shy",
+      "focusWord": "shy",
+      "sentence": "The shy boy spoke quietly.",
+      "chinese": "shy = 害羞的；害羞的男孩轻声说话。"
+    },
+    {
+      "term": "silent",
+      "focusWord": "silent",
+      "sentence": "The room was silent.",
+      "chinese": "silent = 安静的；房间很安静。"
+    },
+    {
+      "term": "silk",
+      "focusWord": "silk",
+      "sentence": "She wore a silk scarf.",
+      "chinese": "silk = 丝绸的；她戴了一条丝绸围巾。"
+    },
+    {
+      "term": "silly",
+      "focusWord": "silly",
+      "sentence": "That was a silly mistake.",
+      "chinese": "silly = 愚蠢的；那是个愚蠢的错误。"
+    },
+    {
+      "term": "similar",
+      "focusWord": "similar",
+      "sentence": "The two bags are similar.",
+      "chinese": "similar = 相似的；这两个包很相似。"
+    },
+    {
+      "term": "simple",
+      "focusWord": "simple",
+      "sentence": "The recipe is simple.",
+      "chinese": "simple = 简单的；这个食谱很简单。"
+    },
+    {
+      "term": "situated",
+      "focusWord": "situated",
+      "sentence": "The hotel is situated near the station.",
+      "chinese": "situated = 位于；这家酒店位于车站附近。"
+    },
+    {
+      "term": "sleepy",
+      "focusWord": "sleepy",
+      "sentence": "The sleepy child went to bed early.",
+      "chinese": "sleepy = 困倦的；困倦的孩子早早上床睡觉。"
+    },
+    {
+      "term": "sleeveless",
+      "focusWord": "sleeveless",
+      "sentence": "She wore a sleeveless dress.",
+      "chinese": "sleeveless = 无袖的；她穿了一条无袖连衣裙。"
+    },
+    {
+      "term": "slim",
+      "focusWord": "slim",
+      "sentence": "The slim phone fits in my pocket.",
+      "chinese": "slim = 纤薄的；这部纤薄手机能放进口袋。"
+    },
+    {
+      "term": "slow",
+      "focusWord": "slow",
+      "sentence": "The slow bus arrived late.",
+      "chinese": "slow = 慢的；慢车晚到了。"
+    },
+    {
+      "term": "small",
+      "focusWord": "small",
+      "sentence": "They rented a small flat.",
+      "chinese": "small = 小的；他们租了一套小公寓。"
+    },
+    {
+      "term": "smart",
+      "focusWord": "smart",
+      "sentence": "He wore a smart suit.",
+      "chinese": "smart = 整洁漂亮的；他穿着整洁漂亮的西装。"
+    },
+    {
+      "term": "smooth",
+      "focusWord": "smooth",
+      "sentence": "The road was smooth.",
+      "chinese": "smooth = 平滑的；这条路很平坦。"
+    },
+    {
+      "term": "sociable",
+      "focusWord": "sociable",
+      "sentence": "Her sociable brother enjoys parties.",
+      "chinese": "sociable = 好交际的；她好交际的哥哥喜欢聚会。"
+    },
+    {
+      "term": "social",
+      "focusWord": "social",
+      "sentence": "The club organizes social events.",
+      "chinese": "social = 社交的；俱乐部组织社交活动。"
+    },
+    {
+      "term": "soft",
+      "focusWord": "soft",
+      "sentence": "The soft blanket kept me warm.",
+      "chinese": "soft = 柔软的；柔软的毯子让我暖和。"
+    },
+    {
+      "term": "sorry",
+      "focusWord": "sorry",
+      "sentence": "I am sorry for the delay.",
+      "chinese": "sorry = 抱歉的；我为延误感到抱歉。"
+    },
+    {
+      "term": "so-so",
+      "focusWord": "so-so",
+      "sentence": "The film was so-so.",
+      "chinese": "so-so = 一般的；这部电影很一般。"
+    },
+    {
+      "term": "sour",
+      "focusWord": "sour",
+      "sentence": "The lemon tasted sour.",
+      "chinese": "sour = 酸的；柠檬尝起来很酸。"
+    },
+    {
+      "term": "southeast",
+      "focusWord": "southeast",
+      "sentence": "The southeast gate is open.",
+      "chinese": "southeast = 东南的；东南门开着。"
+    },
+    {
+      "term": "southern",
+      "focusWord": "southern",
+      "sentence": "The southern beach is warmer.",
+      "chinese": "southern = 南部的；南部海滩更暖和。"
+    },
+    {
+      "term": "southwest",
+      "focusWord": "southwest",
+      "sentence": "The southwest wind brought rain.",
+      "chinese": "southwest = 西南的；西南风带来了雨。"
+    },
+    {
+      "term": "spare",
+      "focusWord": "spare",
+      "sentence": "I keep a spare key in my bag.",
+      "chinese": "spare = 备用的；我在包里放了一把备用钥匙。"
+    },
+    {
+      "term": "sparkling",
+      "focusWord": "sparkling",
+      "sentence": "We ordered sparkling water.",
+      "chinese": "sparkling = 起泡的；我们点了气泡水。"
+    },
+    {
+      "term": "special",
+      "focusWord": "special",
+      "sentence": "This is a special day.",
+      "chinese": "special = 特别的；这是特别的一天。"
+    },
+    {
+      "term": "spectacular",
+      "focusWord": "spectacular",
+      "sentence": "The fireworks were spectacular.",
+      "chinese": "spectacular = 壮观的；烟花很壮观。"
+    },
+    {
+      "term": "spicy",
+      "focusWord": "spicy",
+      "sentence": "The spicy soup was hot.",
+      "chinese": "spicy = 辛辣的；辛辣的汤很辣。"
+    },
+    {
+      "term": "steep",
+      "focusWord": "steep",
+      "sentence": "The steep hill was hard to climb.",
+      "chinese": "steep = 陡峭的；陡峭的山坡很难爬。"
+    },
+    {
+      "term": "sticky",
+      "focusWord": "sticky",
+      "sentence": "The sticky floor needed cleaning.",
+      "chinese": "sticky = 黏的；黏糊糊的地板需要清理。"
+    },
+    {
+      "term": "straight",
+      "focusWord": "straight",
+      "sentence": "Draw a straight line.",
+      "chinese": "straight = 直的；画一条直线。"
+    },
+    {
+      "term": "strange",
+      "focusWord": "strange",
+      "sentence": "A strange noise came from the kitchen.",
+      "chinese": "strange = 奇怪的；厨房传来奇怪的声音。"
+    },
+    {
+      "term": "stressed",
+      "focusWord": "stressed",
+      "sentence": "He felt stressed before the exam.",
+      "chinese": "stressed = 有压力的；考试前他感到有压力。"
+    },
+    {
+      "term": "stressful",
+      "focusWord": "stressful",
+      "sentence": "Moving house was stressful.",
+      "chinese": "stressful = 压力大的；搬家压力很大。"
+    },
+    {
+      "term": "strict",
+      "focusWord": "strict",
+      "sentence": "The strict teacher checked every answer.",
+      "chinese": "strict = 严格的；严格的老师检查了每个答案。"
+    },
+    {
+      "term": "strong",
+      "focusWord": "strong",
+      "sentence": "The strong wind broke the umbrella.",
+      "chinese": "strong = 强劲的；强风吹坏了雨伞。"
+    },
+    {
+      "term": "stupid",
+      "focusWord": "stupid",
+      "sentence": "It was a stupid idea.",
+      "chinese": "stupid = 愚蠢的；那是个愚蠢的想法。"
+    },
+    {
+      "term": "stylish",
+      "focusWord": "stylish",
+      "sentence": "She bought a stylish coat.",
+      "chinese": "stylish = 时尚的；她买了一件时尚外套。"
+    },
+    {
+      "term": "successful",
+      "focusWord": "successful",
+      "sentence": "The meeting was successful.",
+      "chinese": "successful = 成功的；会议很成功。"
+    },
+    {
+      "term": "sudden",
+      "focusWord": "sudden",
+      "sentence": "A sudden storm stopped the game.",
+      "chinese": "sudden = 突然的；突如其来的暴风雨中止了比赛。"
+    },
+    {
+      "term": "suitable",
+      "focusWord": "suitable",
+      "sentence": "This book is suitable for children.",
+      "chinese": "suitable = 合适的；这本书适合儿童。"
+    },
+    {
+      "term": "sure",
+      "focusWord": "sure",
+      "sentence": "Are you sure about the answer?",
+      "chinese": "sure = 确信的；你确定这个答案吗？"
+    },
+    {
+      "term": "suprising",
+      "focusWord": "surprising",
+      "sentence": "The surprising result pleased the team.",
+      "chinese": "surprising = 令人惊讶的；令人惊讶的结果让团队很高兴。"
+    },
+    {
+      "term": "sweet",
+      "focusWord": "sweet",
+      "sentence": "The sweet cake tasted of honey.",
+      "chinese": "sweet = 甜的；这个甜蛋糕有蜂蜜味。"
+    },
+    {
+      "term": "talented",
+      "focusWord": "talented",
+      "sentence": "The talented pianist won first prize.",
+      "chinese": "talented = 有天赋的；有天赋的钢琴家获得了一等奖。"
+    },
+    {
+      "term": "tall",
+      "focusWord": "tall",
+      "sentence": "A tall tree stood by the gate.",
+      "chinese": "tall = 高的；一棵高树立在门旁。"
+    },
+    {
+      "term": "tasty",
+      "focusWord": "tasty",
+      "sentence": "The pasta was tasty.",
+      "chinese": "tasty = 美味的；意大利面很美味。"
+    },
+    {
+      "term": "temporary",
+      "focusWord": "temporary",
+      "sentence": "They built a temporary bridge.",
+      "chinese": "temporary = 临时的；他们建了一座临时桥。"
+    },
+    {
+      "term": "terrible",
+      "focusWord": "terrible",
+      "sentence": "The traffic was terrible.",
+      "chinese": "terrible = 糟糕的；交通很糟糕。"
+    },
+    {
+      "term": "terrific",
+      "focusWord": "terrific",
+      "sentence": "The show was terrific.",
+      "chinese": "terrific = 极好的；演出棒极了。"
+    }
+  ]
+}

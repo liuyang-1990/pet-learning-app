@@ -556,6 +556,61 @@ const qualitiesThirdBatch = [
   "high jump",
 ] as const;
 
+const qualitiesFourthBatch = [
+  "historic", "historical", "honest", "hopeful", "horror", "huge", "human",
+  "humid", "icy", "important", "impossible", "impressed", "incorrect", "incredible",
+  "independent", "individual", "indoor", "inexpensive", "intelligent", "interested", "interesting",
+  "intermediate", "jealous", "keen", "kind", "large", "last", "later",
+  "latest", "lazy", "least", "likely", "limited", "little", "lively",
+  "local", "long", "long jump", "loose", "lost", "loud", "lovely",
+  "lucky", "magic", "magnificent", "main", "marvellous", "maximum", "medium",
+  "messy",
+] as const;
+
+const qualitiesFifthBatch = [
+  "mild", "minimum", "miserable", "missing", "modern", "monthly", "musical",
+  "narrow", "nasty", "navy blue", "nearby", "neat", "necessary", "negative",
+  "new", "next", "nice", "noisy", "normal", "northeast", "northern",
+  "northwest", "obvious", "OK / OK / okay", "old", "old-fashioned", "opposite", "orange",
+  "ordinary", "original", "pale", "particular", "past", "peaceful", "perfect",
+  "permanent", "permitted", "personal", "pink", "plain", "pleasant", "polite",
+  "political", "poor", "popular", "positive", "possible", "powerful", "prepared",
+  "present",
+] as const;
+
+const qualitiesSixthBatch = [
+  "pretty", "previous", "principal", "private", "prohibited", "proper", "pure",
+  "purple", "qualified", "quick", "quiet", "rare", "raw", "ready",
+  "real", "realistic", "reasonable", "recent", "red", "reduced", "regular",
+  "relaxed", "reliable", "relieved", "responsible", "rich", "right", "roast",
+  "romantic", "rough", "round", "rude", "safe", "same", "satisfactory",
+  "satisfied", "scared", "scary", "scientific", "secondary", "selfish", "self-service",
+  "sensible", "separate", "serious", "sharp", "shiny", "shocked", "short",
+  "shut",
+] as const;
+
+const qualitiesSeventhBatch = [
+  "shy", "silent", "silk", "silly", "similar", "simple", "situated",
+  "sleepy", "sleeveless", "slim", "slow", "small", "smart", "smooth",
+  "sociable", "social", "soft", "sorry", "so-so", "sour", "southeast",
+  "southern", "southwest", "spare", "sparkling", "special", "spectacular", "spicy",
+  "steep", "sticky", "straight", "strange", "stressed", "stressful", "strict",
+  "strong", "stupid", "stylish", "successful", "sudden", "suitable", "sure",
+  "suprising", "sweet", "talented", "tall", "tasty", "temporary", "terrible",
+  "terrific",
+] as const;
+
+const qualitiesEighthBatch = [
+  "terrified", "thick", "thin", "tidy", "tight", "tiny", "tiring",
+  "top", "true", "typical", "ugly", "unable", "unbelievable", "underwater",
+  "unemployed", "unexpected", "unfair", "unforgettable", "unfriendly", "unhealthy", "unkind",
+  "unknown", "unimportant", "uninterested", "uninteresting", "unlikely", "unlucky", "unnecessary",
+  "unsure", "untidy", "upper", "upset", "upstairs", "urgent", "useful",
+  "usual", "valuable", "various", "weak", "weekly", "well", "well-dressed",
+  "well-known", "western", "white", "wide", "willing", "wise", "wonderful",
+  "working",
+] as const;
+
 describe("PET Learning App", () => {
   it("ships an official-scale cleaned PET vocabulary grouped by theme", () => {
     const vocabularyPath = path.resolve(process.cwd(), "src/lib/generated/pet-vocabulary.json");
@@ -4789,6 +4844,571 @@ describe("PET Learning App", () => {
       "high jump": [
         "The high jump event starts at noon.",
         "high jump = 跳高；跳高项目中午开始。",
+      ],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the fourth qualities reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const themeWords = words.filter((word) => word.theme === "qualities");
+    const selectedExamples = qualitiesFourthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(qualitiesFourthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(2512);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(themeWords).toHaveLength(450);
+    expect(
+      themeWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(244);
+  });
+
+  it("keeps the fourth qualities ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/qualities-004.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("qualities-004");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(qualitiesFourthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the fourth qualities batch", () => {
+    const expectedExamples = {
+      "historic": [
+        "We visited a historic castle.",
+        "historic = 有历史意义的；我们参观了一座有历史意义的城堡。",
+      ],
+      "historical": [
+        "This historical novel is about ancient Rome.",
+        "historical = 历史的；这本历史小说讲的是古罗马。",
+      ],
+      "horror": [
+        "We watched a horror film.",
+        "horror = 恐怖的；我们看了一部恐怖电影。",
+      ],
+      "human": [
+        "Human kindness helped the family.",
+        "human = 人类的；人类的善意帮助了这个家庭。",
+      ],
+      "impressed": [
+        "I was impressed by her singing.",
+        "impressed = 印象深刻的；她的歌声给我留下了深刻印象。",
+      ],
+      "intermediate": [
+        "He joined the intermediate class.",
+        "intermediate = 中级的；他参加了中级班。",
+      ],
+      "keen": [
+        "She is keen on tennis.",
+        "keen = 热衷的；她热衷于网球。",
+      ],
+      "last": [
+        "The last bus leaves at midnight.",
+        "last = 最后的；最后一班公交车午夜发车。",
+      ],
+      "least": [
+        "Choose the least expensive ticket.",
+        "least = 最少的；选择最便宜的票。",
+      ],
+      "limited": [
+        "Places are limited on the course.",
+        "limited = 有限的；这门课程名额有限。",
+      ],
+      "little": [
+        "A little child waved at us.",
+        "little = 小的；一个小孩向我们挥手。",
+      ],
+      "long jump": [
+        "The long jump competition starts at two.",
+        "long jump = 跳远的；跳远比赛两点开始。",
+      ],
+      "medium": [
+        "She ordered a medium pizza.",
+        "medium = 中等的；她点了一个中号披萨。",
+      ],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the fifth qualities reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const themeWords = words.filter((word) => word.theme === "qualities");
+    const selectedExamples = qualitiesFifthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(qualitiesFifthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(2562);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(themeWords).toHaveLength(450);
+    expect(
+      themeWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(294);
+  });
+
+  it("keeps the fifth qualities ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/qualities-005.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("qualities-005");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(qualitiesFifthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the fifth qualities batch", () => {
+    const expectedExamples = {
+      "OK / OK / okay": [
+        "The food was OK, but not great.",
+        "OK = 还可以；食物还可以，但不是特别好。",
+      ],
+      "navy blue": [
+        "He wore a navy blue jacket.",
+        "navy blue = 深蓝色的；他穿了一件深蓝色夹克。",
+      ],
+      "nearby": [
+        "We stayed in a nearby village.",
+        "nearby = 附近的；我们住在附近的村庄。",
+      ],
+      "next": [
+        "The next train leaves soon.",
+        "next = 下一个的；下一班火车很快发车。",
+      ],
+      "opposite": [
+        "The opposite wall is blue.",
+        "opposite = 对面的；对面的墙是蓝色的。",
+      ],
+      "orange": [
+        "She wore an orange coat.",
+        "orange = 橙色的；她穿了一件橙色外套。",
+      ],
+      "past": [
+        "The past year was busy.",
+        "past = 过去的；过去一年很忙。",
+      ],
+      "particular": [
+        "I need that particular book.",
+        "particular = 特定的；我需要那本特定的书。",
+      ],
+      "permitted": [
+        "Only permitted cars may park here.",
+        "permitted = 获准的；只有获准的汽车可以停在这里。",
+      ],
+      "plain": [
+        "She wore a plain white shirt.",
+        "plain = 素色的；她穿了一件素白衬衫。",
+      ],
+      "poor": [
+        "The poor family needed help.",
+        "poor = 贫穷的；这个贫穷的家庭需要帮助。",
+      ],
+      "present": [
+        "The present situation is difficult.",
+        "present = 目前的；目前的情况很困难。",
+      ],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the sixth qualities reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const themeWords = words.filter((word) => word.theme === "qualities");
+    const selectedExamples = qualitiesSixthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(qualitiesSixthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(2612);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(themeWords).toHaveLength(450);
+    expect(
+      themeWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(344);
+  });
+
+  it("keeps the sixth qualities ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/qualities-006.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("qualities-006");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(qualitiesSixthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the sixth qualities batch", () => {
+    const expectedExamples = {
+      "pretty": [
+        "The garden looked pretty in spring.",
+        "pretty = 漂亮的；春天的花园看起来很漂亮。",
+      ],
+      "principal": [
+        "The principal reason was cost.",
+        "principal = 主要的；主要原因是费用。",
+      ],
+      "private": [
+        "This is a private road.",
+        "private = 私人的；这是一条私人道路。",
+      ],
+      "proper": [
+        "Wear proper shoes for the walk.",
+        "proper = 合适的；徒步时穿合适的鞋。",
+      ],
+      "qualified": [
+        "She is a qualified nurse.",
+        "qualified = 合格的；她是一名合格护士。",
+      ],
+      "rare": [
+        "This rare bird lives near the river.",
+        "rare = 稀有的；这种稀有鸟类生活在河边。",
+      ],
+      "raw": [
+        "Do not eat raw meat.",
+        "raw = 生的；不要吃生肉。",
+      ],
+      "realistic": [
+        "The plan is realistic.",
+        "realistic = 现实的；这个计划很现实。",
+      ],
+      "reduced": [
+        "The reduced price helped us save money.",
+        "reduced = 降低的；降低后的价格帮我们省了钱。",
+      ],
+      "regular": [
+        "He is a regular customer.",
+        "regular = 经常的；他是一位常客。",
+      ],
+      "right": [
+        "The right answer is at the top.",
+        "right = 正确的；正确答案在顶部。",
+      ],
+      "roast": [
+        "We ate roast chicken.",
+        "roast = 烤的；我们吃了烤鸡。",
+      ],
+      "rough": [
+        "The rough road damaged the bike.",
+        "rough = 不平的；崎岖的路损坏了自行车。",
+      ],
+      "round": [
+        "The round table seats six.",
+        "round = 圆形的；圆桌能坐六个人。",
+      ],
+      "secondary": [
+        "He goes to a secondary school.",
+        "secondary = 中学的；他上中学。",
+      ],
+      "sharp": [
+        "The sharp knife cut the bread easily.",
+        "sharp = 锋利的；锋利的刀轻松切开了面包。",
+      ],
+      "shut": [
+        "The shop was shut when we arrived.",
+        "shut = 关闭的；我们到达时商店关门了。",
+      ],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the seventh qualities reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const themeWords = words.filter((word) => word.theme === "qualities");
+    const selectedExamples = qualitiesSeventhBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(qualitiesSeventhBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(2662);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(themeWords).toHaveLength(450);
+    expect(
+      themeWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(394);
+  });
+
+  it("keeps the seventh qualities ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/qualities-007.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("qualities-007");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(qualitiesSeventhBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the seventh qualities batch", () => {
+    const expectedExamples = {
+      "silk": [
+        "She wore a silk scarf.",
+        "silk = 丝绸的；她戴了一条丝绸围巾。",
+      ],
+      "situated": [
+        "The hotel is situated near the station.",
+        "situated = 位于；这家酒店位于车站附近。",
+      ],
+      "smart": [
+        "He wore a smart suit.",
+        "smart = 整洁漂亮的；他穿着整洁漂亮的西装。",
+      ],
+      "social": [
+        "The club organizes social events.",
+        "social = 社交的；俱乐部组织社交活动。",
+      ],
+      "sorry": [
+        "I am sorry for the delay.",
+        "sorry = 抱歉的；我为延误感到抱歉。",
+      ],
+      "so-so": [
+        "The film was so-so.",
+        "so-so = 一般的；这部电影很一般。",
+      ],
+      "spare": [
+        "I keep a spare key in my bag.",
+        "spare = 备用的；我在包里放了一把备用钥匙。",
+      ],
+      "sparkling": [
+        "We ordered sparkling water.",
+        "sparkling = 起泡的；我们点了气泡水。",
+      ],
+      "steep": [
+        "The steep hill was hard to climb.",
+        "steep = 陡峭的；陡峭的山坡很难爬。",
+      ],
+      "straight": [
+        "Draw a straight line.",
+        "straight = 直的；画一条直线。",
+      ],
+      "strict": [
+        "The strict teacher checked every answer.",
+        "strict = 严格的；严格的老师检查了每个答案。",
+      ],
+      "strong": [
+        "The strong wind broke the umbrella.",
+        "strong = 强劲的；强风吹坏了雨伞。",
+      ],
+      "sure": [
+        "Are you sure about the answer?",
+        "sure = 确信的；你确定这个答案吗？",
+      ],
+      "suprising": [
+        "The surprising result pleased the team.",
+        "surprising = 令人惊讶的；令人惊讶的结果让团队很高兴。",
+      ],
+      "sweet": [
+        "The sweet cake tasted of honey.",
+        "sweet = 甜的；这个甜蛋糕有蜂蜜味。",
+      ],
+    } as const;
+
+    for (const [term, [sentence, chinese]] of Object.entries(expectedExamples)) {
+      expect(getWordExample({ term, chineseGloss: "" })).toMatchObject({ sentence, chinese });
+    }
+  });
+
+  it("adds the eighth qualities reviewed batch", () => {
+    const vocabularyPath = path.resolve(
+      process.cwd(),
+      "src/lib/generated/pet-vocabulary.json",
+    );
+    const words = JSON.parse(fs.readFileSync(vocabularyPath, "utf8")) as Array<{
+      term: string;
+      chineseGloss: string;
+      theme: string;
+    }>;
+    const themeWords = words.filter((word) => word.theme === "qualities");
+    const selectedExamples = qualitiesEighthBatch.map((term) =>
+      getWordExample({ term, chineseGloss: "" }),
+    );
+
+    expect(qualitiesEighthBatch).toHaveLength(50);
+    expect(Object.keys(getReviewedWordExamples()).length).toBeGreaterThanOrEqual(2712);
+    expect(selectedExamples.every((example) => example.sentence !== null)).toBe(true);
+    expect(themeWords).toHaveLength(450);
+    expect(
+      themeWords.filter((word) => getWordExample(word).sentence !== null).length,
+    ).toBeGreaterThanOrEqual(444);
+  });
+
+  it("keeps the eighth qualities ledger aligned with reviewed examples", () => {
+    const candidatePath = path.resolve(
+      process.cwd(),
+      "data/example-candidates/qualities-008.json",
+    );
+    expect(fs.existsSync(candidatePath)).toBe(true);
+    if (!fs.existsSync(candidatePath)) return;
+
+    const candidate = JSON.parse(fs.readFileSync(candidatePath, "utf8")) as {
+      batchId: string;
+      entries: Array<{ term: string; focusWord: string; sentence: string; chinese: string }>;
+    };
+    expect(candidate.batchId).toBe("qualities-008");
+    expect(candidate.entries).toHaveLength(50);
+    expect(candidate.entries.map((entry) => entry.term)).toEqual(qualitiesEighthBatch);
+    for (const entry of candidate.entries) {
+      expect(getWordExample({ term: entry.term, chineseGloss: "" })).toMatchObject({
+        focusWord: entry.focusWord,
+        sentence: entry.sentence,
+        chinese: entry.chinese,
+      });
+    }
+  });
+
+  it("uses intended senses for the eighth qualities batch", () => {
+    const expectedExamples = {
+      "top": [
+        "The top shelf is hard to reach.",
+        "top = 顶部的；最上面的架子很难够到。",
+      ],
+      "true": [
+        "The story is true.",
+        "true = 真实的；这个故事是真实的。",
+      ],
+      "typical": [
+        "This is a typical English village.",
+        "typical = 典型的；这是一个典型的英国村庄。",
+      ],
+      "upper": [
+        "The upper floor has two bedrooms.",
+        "upper = 上面的；上层有两间卧室。",
+      ],
+      "upset": [
+        "She was upset about the broken phone.",
+        "upset = 难过的；手机坏了让她很难过。",
+      ],
+      "upstairs": [
+        "The upstairs room is quiet.",
+        "upstairs = 楼上的；楼上的房间很安静。",
+      ],
+      "well": [
+        "She is well again after the flu.",
+        "well = 健康的；流感后她又恢复健康了。",
+      ],
+      "well-dressed": [
+        "The well-dressed guest entered the hall.",
+        "well-dressed = 穿着讲究的；穿着讲究的客人走进大厅。",
+      ],
+      "well-known": [
+        "The well-known writer visited our school.",
+        "well-known = 著名的；那位著名作家参观了我们学校。",
+      ],
+      "western": [
+        "The western coast is windy.",
+        "western = 西部的；西部海岸风很大。",
+      ],
+      "wide": [
+        "The wide road was easy to cross.",
+        "wide = 宽的；宽阔的道路很容易穿过。",
+      ],
+      "willing": [
+        "He is willing to help.",
+        "willing = 愿意的；他愿意帮忙。",
+      ],
+      "working": [
+        "Working parents need flexible hours.",
+        "working = 工作的；有工作的父母需要灵活时间。",
       ],
     } as const;
 

@@ -1,0 +1,306 @@
+{
+  "batchId": "qualities-005",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "mild",
+      "focusWord": "mild",
+      "sentence": "The weather was mild for winter.",
+      "chinese": "mild = 温和的；冬天这样的天气很温和。"
+    },
+    {
+      "term": "minimum",
+      "focusWord": "minimum",
+      "sentence": "The minimum age is twelve.",
+      "chinese": "minimum = 最小的；最低年龄是十二岁。"
+    },
+    {
+      "term": "miserable",
+      "focusWord": "miserable",
+      "sentence": "He felt miserable after the match.",
+      "chinese": "miserable = 痛苦的；比赛后他感到很痛苦。"
+    },
+    {
+      "term": "missing",
+      "focusWord": "missing",
+      "sentence": "The missing key was under the sofa.",
+      "chinese": "missing = 丢失的；丢失的钥匙在沙发下面。"
+    },
+    {
+      "term": "modern",
+      "focusWord": "modern",
+      "sentence": "The hotel has modern rooms.",
+      "chinese": "modern = 现代的；这家酒店有现代化房间。"
+    },
+    {
+      "term": "monthly",
+      "focusWord": "monthly",
+      "sentence": "We have a monthly meeting.",
+      "chinese": "monthly = 每月的；我们每月开一次会。"
+    },
+    {
+      "term": "musical",
+      "focusWord": "musical",
+      "sentence": "She has strong musical talent.",
+      "chinese": "musical = 音乐的；她有很强的音乐天赋。"
+    },
+    {
+      "term": "narrow",
+      "focusWord": "narrow",
+      "sentence": "The narrow street was full of people.",
+      "chinese": "narrow = 狭窄的；狭窄的街上挤满了人。"
+    },
+    {
+      "term": "nasty",
+      "focusWord": "nasty",
+      "sentence": "The nasty smell came from the bin.",
+      "chinese": "nasty = 令人不快的；难闻的气味来自垃圾桶。"
+    },
+    {
+      "term": "navy blue",
+      "focusWord": "navy blue",
+      "sentence": "He wore a navy blue jacket.",
+      "chinese": "navy blue = 深蓝色的；他穿了一件深蓝色夹克。"
+    },
+    {
+      "term": "nearby",
+      "focusWord": "nearby",
+      "sentence": "We stayed in a nearby village.",
+      "chinese": "nearby = 附近的；我们住在附近的村庄。"
+    },
+    {
+      "term": "neat",
+      "focusWord": "neat",
+      "sentence": "Her desk is always neat.",
+      "chinese": "neat = 整洁的；她的书桌总是很整洁。"
+    },
+    {
+      "term": "necessary",
+      "focusWord": "necessary",
+      "sentence": "A passport is necessary for the trip.",
+      "chinese": "necessary = 必要的；这次旅行需要护照。"
+    },
+    {
+      "term": "negative",
+      "focusWord": "negative",
+      "sentence": "His negative comments upset the team.",
+      "chinese": "negative = 消极的；他的消极评论让团队不快。"
+    },
+    {
+      "term": "new",
+      "focusWord": "new",
+      "sentence": "I bought a new notebook.",
+      "chinese": "new = 新的；我买了一本新笔记本。"
+    },
+    {
+      "term": "next",
+      "focusWord": "next",
+      "sentence": "The next train leaves soon.",
+      "chinese": "next = 下一个的；下一班火车很快发车。"
+    },
+    {
+      "term": "nice",
+      "focusWord": "nice",
+      "sentence": "The soup tasted nice.",
+      "chinese": "nice = 好的；这汤味道很好。"
+    },
+    {
+      "term": "noisy",
+      "focusWord": "noisy",
+      "sentence": "The noisy street kept us awake.",
+      "chinese": "noisy = 吵闹的；吵闹的街道让我们睡不着。"
+    },
+    {
+      "term": "normal",
+      "focusWord": "normal",
+      "sentence": "It was a normal school day.",
+      "chinese": "normal = 正常的；那是一个正常的上学日。"
+    },
+    {
+      "term": "northeast",
+      "focusWord": "northeast",
+      "sentence": "The northeast wind was cold.",
+      "chinese": "northeast = 东北的；东北风很冷。"
+    },
+    {
+      "term": "northern",
+      "focusWord": "northern",
+      "sentence": "The northern coast is rocky.",
+      "chinese": "northern = 北部的；北部海岸多岩石。"
+    },
+    {
+      "term": "northwest",
+      "focusWord": "northwest",
+      "sentence": "The northwest corner was quiet.",
+      "chinese": "northwest = 西北的；西北角很安静。"
+    },
+    {
+      "term": "obvious",
+      "focusWord": "obvious",
+      "sentence": "The answer was obvious.",
+      "chinese": "obvious = 明显的；答案很明显。"
+    },
+    {
+      "term": "OK / OK / okay",
+      "focusWord": "OK",
+      "sentence": "The food was OK, but not great.",
+      "chinese": "OK = 还可以；食物还可以，但不是特别好。"
+    },
+    {
+      "term": "old",
+      "focusWord": "old",
+      "sentence": "The old bridge is still strong.",
+      "chinese": "old = 旧的；这座旧桥仍然坚固。"
+    },
+    {
+      "term": "old-fashioned",
+      "focusWord": "old-fashioned",
+      "sentence": "The old-fashioned phone still works.",
+      "chinese": "old-fashioned = 老式的；这部老式电话仍然能用。"
+    },
+    {
+      "term": "opposite",
+      "focusWord": "opposite",
+      "sentence": "The opposite wall is blue.",
+      "chinese": "opposite = 对面的；对面的墙是蓝色的。"
+    },
+    {
+      "term": "orange",
+      "focusWord": "orange",
+      "sentence": "She wore an orange coat.",
+      "chinese": "orange = 橙色的；她穿了一件橙色外套。"
+    },
+    {
+      "term": "ordinary",
+      "focusWord": "ordinary",
+      "sentence": "It was an ordinary day.",
+      "chinese": "ordinary = 普通的；那是普通的一天。"
+    },
+    {
+      "term": "original",
+      "focusWord": "original",
+      "sentence": "This is the original painting.",
+      "chinese": "original = 原作的；这是原作画。"
+    },
+    {
+      "term": "pale",
+      "focusWord": "pale",
+      "sentence": "Her face looked pale.",
+      "chinese": "pale = 苍白的；她的脸看起来苍白。"
+    },
+    {
+      "term": "particular",
+      "focusWord": "particular",
+      "sentence": "I need that particular book.",
+      "chinese": "particular = 特定的；我需要那本特定的书。"
+    },
+    {
+      "term": "past",
+      "focusWord": "past",
+      "sentence": "The past year was busy.",
+      "chinese": "past = 过去的；过去一年很忙。"
+    },
+    {
+      "term": "peaceful",
+      "focusWord": "peaceful",
+      "sentence": "The village was peaceful at night.",
+      "chinese": "peaceful = 宁静的；村庄夜里很宁静。"
+    },
+    {
+      "term": "perfect",
+      "focusWord": "perfect",
+      "sentence": "The weather was perfect for a picnic.",
+      "chinese": "perfect = 完美的；天气非常适合野餐。"
+    },
+    {
+      "term": "permanent",
+      "focusWord": "permanent",
+      "sentence": "She found a permanent job.",
+      "chinese": "permanent = 永久的；她找到了一份长期工作。"
+    },
+    {
+      "term": "permitted",
+      "focusWord": "permitted",
+      "sentence": "Only permitted cars may park here.",
+      "chinese": "permitted = 获准的；只有获准的汽车可以停在这里。"
+    },
+    {
+      "term": "personal",
+      "focusWord": "personal",
+      "sentence": "Keep your personal details safe.",
+      "chinese": "personal = 个人的；保护好你的个人信息。"
+    },
+    {
+      "term": "pink",
+      "focusWord": "pink",
+      "sentence": "The pink flowers opened today.",
+      "chinese": "pink = 粉色的；粉色花今天开了。"
+    },
+    {
+      "term": "plain",
+      "focusWord": "plain",
+      "sentence": "She wore a plain white shirt.",
+      "chinese": "plain = 素色的；她穿了一件素白衬衫。"
+    },
+    {
+      "term": "pleasant",
+      "focusWord": "pleasant",
+      "sentence": "We had a pleasant walk.",
+      "chinese": "pleasant = 愉快的；我们散了一次愉快的步。"
+    },
+    {
+      "term": "polite",
+      "focusWord": "polite",
+      "sentence": "The polite waiter smiled.",
+      "chinese": "polite = 有礼貌的；有礼貌的服务员微笑着。"
+    },
+    {
+      "term": "political",
+      "focusWord": "political",
+      "sentence": "The article discussed political change.",
+      "chinese": "political = 政治的；文章讨论了政治变化。"
+    },
+    {
+      "term": "poor",
+      "focusWord": "poor",
+      "sentence": "The poor family needed help.",
+      "chinese": "poor = 贫穷的；这个贫穷的家庭需要帮助。"
+    },
+    {
+      "term": "popular",
+      "focusWord": "popular",
+      "sentence": "The cafe is popular with students.",
+      "chinese": "popular = 受欢迎的；这家咖啡馆受学生欢迎。"
+    },
+    {
+      "term": "positive",
+      "focusWord": "positive",
+      "sentence": "She gave a positive answer.",
+      "chinese": "positive = 积极的；她给出了积极的回答。"
+    },
+    {
+      "term": "possible",
+      "focusWord": "possible",
+      "sentence": "An early start is possible.",
+      "chinese": "possible = 可能的；早点出发是可能的。"
+    },
+    {
+      "term": "powerful",
+      "focusWord": "powerful",
+      "sentence": "The powerful engine was noisy.",
+      "chinese": "powerful = 强大的；强大的发动机很吵。"
+    },
+    {
+      "term": "prepared",
+      "focusWord": "prepared",
+      "sentence": "The prepared students arrived early.",
+      "chinese": "prepared = 准备好的；准备充分的学生早早到了。"
+    },
+    {
+      "term": "present",
+      "focusWord": "present",
+      "sentence": "The present situation is difficult.",
+      "chinese": "present = 目前的；目前的情况很困难。"
+    }
+  ]
+}

@@ -1,0 +1,306 @@
+{
+  "batchId": "qualities-006",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "pretty",
+      "focusWord": "pretty",
+      "sentence": "The garden looked pretty in spring.",
+      "chinese": "pretty = 漂亮的；春天的花园看起来很漂亮。"
+    },
+    {
+      "term": "previous",
+      "focusWord": "previous",
+      "sentence": "The previous lesson was about travel.",
+      "chinese": "previous = 以前的；上一节课讲的是旅行。"
+    },
+    {
+      "term": "principal",
+      "focusWord": "principal",
+      "sentence": "The principal reason was cost.",
+      "chinese": "principal = 主要的；主要原因是费用。"
+    },
+    {
+      "term": "private",
+      "focusWord": "private",
+      "sentence": "This is a private road.",
+      "chinese": "private = 私人的；这是一条私人道路。"
+    },
+    {
+      "term": "prohibited",
+      "focusWord": "prohibited",
+      "sentence": "Smoking is prohibited inside.",
+      "chinese": "prohibited = 禁止的；室内禁止吸烟。"
+    },
+    {
+      "term": "proper",
+      "focusWord": "proper",
+      "sentence": "Wear proper shoes for the walk.",
+      "chinese": "proper = 合适的；徒步时穿合适的鞋。"
+    },
+    {
+      "term": "pure",
+      "focusWord": "pure",
+      "sentence": "The mountain air was pure.",
+      "chinese": "pure = 纯净的；山里的空气很纯净。"
+    },
+    {
+      "term": "purple",
+      "focusWord": "purple",
+      "sentence": "She chose a purple bag.",
+      "chinese": "purple = 紫色的；她选了一个紫色包。"
+    },
+    {
+      "term": "qualified",
+      "focusWord": "qualified",
+      "sentence": "She is a qualified nurse.",
+      "chinese": "qualified = 合格的；她是一名合格护士。"
+    },
+    {
+      "term": "quick",
+      "focusWord": "quick",
+      "sentence": "We made a quick stop for coffee.",
+      "chinese": "quick = 快速的；我们快速停下来喝了咖啡。"
+    },
+    {
+      "term": "quiet",
+      "focusWord": "quiet",
+      "sentence": "The quiet room was good for study.",
+      "chinese": "quiet = 安静的；安静的房间适合学习。"
+    },
+    {
+      "term": "rare",
+      "focusWord": "rare",
+      "sentence": "This rare bird lives near the river.",
+      "chinese": "rare = 稀有的；这种稀有鸟类生活在河边。"
+    },
+    {
+      "term": "raw",
+      "focusWord": "raw",
+      "sentence": "Do not eat raw meat.",
+      "chinese": "raw = 生的；不要吃生肉。"
+    },
+    {
+      "term": "ready",
+      "focusWord": "ready",
+      "sentence": "Dinner is ready.",
+      "chinese": "ready = 准备好的；晚饭准备好了。"
+    },
+    {
+      "term": "real",
+      "focusWord": "real",
+      "sentence": "This is a real problem.",
+      "chinese": "real = 真实的；这是一个真实的问题。"
+    },
+    {
+      "term": "realistic",
+      "focusWord": "realistic",
+      "sentence": "The plan is realistic.",
+      "chinese": "realistic = 现实的；这个计划很现实。"
+    },
+    {
+      "term": "reasonable",
+      "focusWord": "reasonable",
+      "sentence": "The price was reasonable.",
+      "chinese": "reasonable = 合理的；价格很合理。"
+    },
+    {
+      "term": "recent",
+      "focusWord": "recent",
+      "sentence": "A recent storm damaged the roof.",
+      "chinese": "recent = 最近的；最近一场暴风雨损坏了屋顶。"
+    },
+    {
+      "term": "red",
+      "focusWord": "red",
+      "sentence": "The red bus stopped outside.",
+      "chinese": "red = 红色的；红色公交车停在外面。"
+    },
+    {
+      "term": "reduced",
+      "focusWord": "reduced",
+      "sentence": "The reduced price helped us save money.",
+      "chinese": "reduced = 降低的；降低后的价格帮我们省了钱。"
+    },
+    {
+      "term": "regular",
+      "focusWord": "regular",
+      "sentence": "He is a regular customer.",
+      "chinese": "regular = 经常的；他是一位常客。"
+    },
+    {
+      "term": "relaxed",
+      "focusWord": "relaxed",
+      "sentence": "She felt relaxed after the holiday.",
+      "chinese": "relaxed = 放松的；假期后她感到放松。"
+    },
+    {
+      "term": "reliable",
+      "focusWord": "reliable",
+      "sentence": "This bus service is reliable.",
+      "chinese": "reliable = 可靠的；这项公交服务很可靠。"
+    },
+    {
+      "term": "relieved",
+      "focusWord": "relieved",
+      "sentence": "He was relieved when the keys were found.",
+      "chinese": "relieved = 宽慰的；钥匙找到后他松了一口气。"
+    },
+    {
+      "term": "responsible",
+      "focusWord": "responsible",
+      "sentence": "She is responsible for the tickets.",
+      "chinese": "responsible = 负责的；她负责票务。"
+    },
+    {
+      "term": "rich",
+      "focusWord": "rich",
+      "sentence": "The rich sauce tasted wonderful.",
+      "chinese": "rich = 浓郁的；浓郁的酱汁味道很好。"
+    },
+    {
+      "term": "right",
+      "focusWord": "right",
+      "sentence": "The right answer is at the top.",
+      "chinese": "right = 正确的；正确答案在顶部。"
+    },
+    {
+      "term": "roast",
+      "focusWord": "roast",
+      "sentence": "We ate roast chicken.",
+      "chinese": "roast = 烤的；我们吃了烤鸡。"
+    },
+    {
+      "term": "romantic",
+      "focusWord": "romantic",
+      "sentence": "They had a romantic dinner.",
+      "chinese": "romantic = 浪漫的；他们吃了一顿浪漫的晚餐。"
+    },
+    {
+      "term": "rough",
+      "focusWord": "rough",
+      "sentence": "The rough road damaged the bike.",
+      "chinese": "rough = 不平的；崎岖的路损坏了自行车。"
+    },
+    {
+      "term": "round",
+      "focusWord": "round",
+      "sentence": "The round table seats six.",
+      "chinese": "round = 圆形的；圆桌能坐六个人。"
+    },
+    {
+      "term": "rude",
+      "focusWord": "rude",
+      "sentence": "The rude customer shouted at the waiter.",
+      "chinese": "rude = 粗鲁的；粗鲁的顾客对服务员大喊。"
+    },
+    {
+      "term": "safe",
+      "focusWord": "safe",
+      "sentence": "This beach is safe for swimming.",
+      "chinese": "safe = 安全的；这个海滩适合安全游泳。"
+    },
+    {
+      "term": "same",
+      "focusWord": "same",
+      "sentence": "We chose the same colour.",
+      "chinese": "same = 相同的；我们选择了相同的颜色。"
+    },
+    {
+      "term": "satisfactory",
+      "focusWord": "satisfactory",
+      "sentence": "The result was satisfactory.",
+      "chinese": "satisfactory = 令人满意的；结果令人满意。"
+    },
+    {
+      "term": "satisfied",
+      "focusWord": "satisfied",
+      "sentence": "The teacher was satisfied with our work.",
+      "chinese": "satisfied = 满意的；老师对我们的作业很满意。"
+    },
+    {
+      "term": "scared",
+      "focusWord": "scared",
+      "sentence": "The scared child held his father's hand.",
+      "chinese": "scared = 害怕的；害怕的孩子牵着父亲的手。"
+    },
+    {
+      "term": "scary",
+      "focusWord": "scary",
+      "sentence": "The scary story kept us awake.",
+      "chinese": "scary = 吓人的；吓人的故事让我们睡不着。"
+    },
+    {
+      "term": "scientific",
+      "focusWord": "scientific",
+      "sentence": "The scientific report was clear.",
+      "chinese": "scientific = 科学的；科学报告很清楚。"
+    },
+    {
+      "term": "secondary",
+      "focusWord": "secondary",
+      "sentence": "He goes to a secondary school.",
+      "chinese": "secondary = 中学的；他上中学。"
+    },
+    {
+      "term": "selfish",
+      "focusWord": "selfish",
+      "sentence": "It was selfish to take all the cake.",
+      "chinese": "selfish = 自私的；拿走所有蛋糕很自私。"
+    },
+    {
+      "term": "self-service",
+      "focusWord": "self-service",
+      "sentence": "The self-service cafe is cheap.",
+      "chinese": "self-service = 自助的；自助咖啡馆很便宜。"
+    },
+    {
+      "term": "sensible",
+      "focusWord": "sensible",
+      "sentence": "That is a sensible plan.",
+      "chinese": "sensible = 明智的；那是个明智的计划。"
+    },
+    {
+      "term": "separate",
+      "focusWord": "separate",
+      "sentence": "The children sleep in separate rooms.",
+      "chinese": "separate = 分开的；孩子们睡在不同房间。"
+    },
+    {
+      "term": "serious",
+      "focusWord": "serious",
+      "sentence": "This is a serious problem.",
+      "chinese": "serious = 严重的；这是个严重的问题。"
+    },
+    {
+      "term": "sharp",
+      "focusWord": "sharp",
+      "sentence": "The sharp knife cut the bread easily.",
+      "chinese": "sharp = 锋利的；锋利的刀轻松切开了面包。"
+    },
+    {
+      "term": "shiny",
+      "focusWord": "shiny",
+      "sentence": "She wore shiny black shoes.",
+      "chinese": "shiny = 闪亮的；她穿着闪亮的黑鞋。"
+    },
+    {
+      "term": "shocked",
+      "focusWord": "shocked",
+      "sentence": "We were shocked by the news.",
+      "chinese": "shocked = 震惊的；我们对这个消息感到震惊。"
+    },
+    {
+      "term": "short",
+      "focusWord": "short",
+      "sentence": "The short film lasted ten minutes.",
+      "chinese": "short = 短的；这部短片持续了十分钟。"
+    },
+    {
+      "term": "shut",
+      "focusWord": "shut",
+      "sentence": "The shop was shut when we arrived.",
+      "chinese": "shut = 关闭的；我们到达时商店关门了。"
+    }
+  ]
+}

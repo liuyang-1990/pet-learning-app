@@ -1,0 +1,306 @@
+{
+  "batchId": "qualities-008",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "terrified",
+      "focusWord": "terrified",
+      "sentence": "The terrified child cried.",
+      "chinese": "terrified = 非常害怕的；非常害怕的孩子哭了。"
+    },
+    {
+      "term": "thick",
+      "focusWord": "thick",
+      "sentence": "The thick coat kept him warm.",
+      "chinese": "thick = 厚的；厚外套让他暖和。"
+    },
+    {
+      "term": "thin",
+      "focusWord": "thin",
+      "sentence": "Cut the bread into thin slices.",
+      "chinese": "thin = 薄的；把面包切成薄片。"
+    },
+    {
+      "term": "tidy",
+      "focusWord": "tidy",
+      "sentence": "Her room is tidy.",
+      "chinese": "tidy = 整洁的；她的房间很整洁。"
+    },
+    {
+      "term": "tight",
+      "focusWord": "tight",
+      "sentence": "These shoes are too tight.",
+      "chinese": "tight = 紧的；这双鞋太紧了。"
+    },
+    {
+      "term": "tiny",
+      "focusWord": "tiny",
+      "sentence": "A tiny bird sat on the wall.",
+      "chinese": "tiny = 极小的；一只极小的鸟停在墙上。"
+    },
+    {
+      "term": "tiring",
+      "focusWord": "tiring",
+      "sentence": "The long walk was tiring.",
+      "chinese": "tiring = 令人疲劳的；长途步行很累人。"
+    },
+    {
+      "term": "top",
+      "focusWord": "top",
+      "sentence": "The top shelf is hard to reach.",
+      "chinese": "top = 顶部的；最上面的架子很难够到。"
+    },
+    {
+      "term": "true",
+      "focusWord": "true",
+      "sentence": "The story is true.",
+      "chinese": "true = 真实的；这个故事是真实的。"
+    },
+    {
+      "term": "typical",
+      "focusWord": "typical",
+      "sentence": "This is a typical English village.",
+      "chinese": "typical = 典型的；这是一个典型的英国村庄。"
+    },
+    {
+      "term": "ugly",
+      "focusWord": "ugly",
+      "sentence": "The ugly building was empty.",
+      "chinese": "ugly = 丑陋的；那栋丑陋的建筑是空的。"
+    },
+    {
+      "term": "unable",
+      "focusWord": "unable",
+      "sentence": "She was unable to attend the meeting.",
+      "chinese": "unable = 不能的；她不能参加会议。"
+    },
+    {
+      "term": "unbelievable",
+      "focusWord": "unbelievable",
+      "sentence": "The final score was unbelievable.",
+      "chinese": "unbelievable = 难以置信的；最终比分令人难以置信。"
+    },
+    {
+      "term": "underwater",
+      "focusWord": "underwater",
+      "sentence": "The underwater camera took clear photos.",
+      "chinese": "underwater = 水下的；水下相机拍出了清晰照片。"
+    },
+    {
+      "term": "unemployed",
+      "focusWord": "unemployed",
+      "sentence": "He was unemployed for three months.",
+      "chinese": "unemployed = 失业的；他失业了三个月。"
+    },
+    {
+      "term": "unexpected",
+      "focusWord": "unexpected",
+      "sentence": "The unexpected visitor arrived early.",
+      "chinese": "unexpected = 意外的；意外的访客早早到了。"
+    },
+    {
+      "term": "unfair",
+      "focusWord": "unfair",
+      "sentence": "The unfair rule upset the players.",
+      "chinese": "unfair = 不公平的；不公平的规则让球员不满。"
+    },
+    {
+      "term": "unforgettable",
+      "focusWord": "unforgettable",
+      "sentence": "It was an unforgettable holiday.",
+      "chinese": "unforgettable = 难忘的；那是一次难忘的假期。"
+    },
+    {
+      "term": "unfriendly",
+      "focusWord": "unfriendly",
+      "sentence": "The unfriendly shopkeeper did not smile.",
+      "chinese": "unfriendly = 不友好的；不友好的店主没有微笑。"
+    },
+    {
+      "term": "unhealthy",
+      "focusWord": "unhealthy",
+      "sentence": "Too much sugar is unhealthy.",
+      "chinese": "unhealthy = 不健康的；糖太多不健康。"
+    },
+    {
+      "term": "unkind",
+      "focusWord": "unkind",
+      "sentence": "His unkind words hurt her.",
+      "chinese": "unkind = 不友善的；他不友善的话伤害了她。"
+    },
+    {
+      "term": "unknown",
+      "focusWord": "unknown",
+      "sentence": "The unknown singer became famous.",
+      "chinese": "unknown = 不知名的；那位不知名歌手成名了。"
+    },
+    {
+      "term": "unimportant",
+      "focusWord": "unimportant",
+      "sentence": "The small delay was unimportant.",
+      "chinese": "unimportant = 不重要的；小小的延误并不重要。"
+    },
+    {
+      "term": "uninterested",
+      "focusWord": "uninterested",
+      "sentence": "The uninterested student looked out of the window.",
+      "chinese": "uninterested = 不感兴趣的；不感兴趣的学生望着窗外。"
+    },
+    {
+      "term": "uninteresting",
+      "focusWord": "uninteresting",
+      "sentence": "The lecture was uninteresting.",
+      "chinese": "uninteresting = 无趣的；讲座很无趣。"
+    },
+    {
+      "term": "unlikely",
+      "focusWord": "unlikely",
+      "sentence": "Snow is unlikely tomorrow.",
+      "chinese": "unlikely = 不大可能的；明天不大可能下雪。"
+    },
+    {
+      "term": "unlucky",
+      "focusWord": "unlucky",
+      "sentence": "He was unlucky to miss the bus.",
+      "chinese": "unlucky = 不走运的；他没赶上公交车真不走运。"
+    },
+    {
+      "term": "unnecessary",
+      "focusWord": "unnecessary",
+      "sentence": "The extra ticket was unnecessary.",
+      "chinese": "unnecessary = 不必要的；额外的票是不必要的。"
+    },
+    {
+      "term": "unsure",
+      "focusWord": "unsure",
+      "sentence": "She was unsure about the answer.",
+      "chinese": "unsure = 不确定的；她不确定答案。"
+    },
+    {
+      "term": "untidy",
+      "focusWord": "untidy",
+      "sentence": "The untidy desk needed cleaning.",
+      "chinese": "untidy = 不整洁的；凌乱的书桌需要清理。"
+    },
+    {
+      "term": "upper",
+      "focusWord": "upper",
+      "sentence": "The upper floor has two bedrooms.",
+      "chinese": "upper = 上面的；上层有两间卧室。"
+    },
+    {
+      "term": "upset",
+      "focusWord": "upset",
+      "sentence": "She was upset about the broken phone.",
+      "chinese": "upset = 难过的；手机坏了让她很难过。"
+    },
+    {
+      "term": "upstairs",
+      "focusWord": "upstairs",
+      "sentence": "The upstairs room is quiet.",
+      "chinese": "upstairs = 楼上的；楼上的房间很安静。"
+    },
+    {
+      "term": "urgent",
+      "focusWord": "urgent",
+      "sentence": "This is an urgent message.",
+      "chinese": "urgent = 紧急的；这是一条紧急消息。"
+    },
+    {
+      "term": "useful",
+      "focusWord": "useful",
+      "sentence": "The guidebook was useful.",
+      "chinese": "useful = 有用的；这本指南很有用。"
+    },
+    {
+      "term": "usual",
+      "focusWord": "usual",
+      "sentence": "We met at the usual place.",
+      "chinese": "usual = 通常的；我们在通常的地方见面。"
+    },
+    {
+      "term": "valuable",
+      "focusWord": "valuable",
+      "sentence": "The valuable painting was protected.",
+      "chinese": "valuable = 贵重的；那幅贵重的画受到保护。"
+    },
+    {
+      "term": "various",
+      "focusWord": "various",
+      "sentence": "The shop sells various fruits.",
+      "chinese": "various = 各种各样的；商店出售各种水果。"
+    },
+    {
+      "term": "weak",
+      "focusWord": "weak",
+      "sentence": "The weak signal made the call difficult.",
+      "chinese": "weak = 弱的；信号弱让通话变得困难。"
+    },
+    {
+      "term": "weekly",
+      "focusWord": "weekly",
+      "sentence": "The weekly quiz starts on Friday.",
+      "chinese": "weekly = 每周的；每周测验星期五开始。"
+    },
+    {
+      "term": "well",
+      "focusWord": "well",
+      "sentence": "She is well again after the flu.",
+      "chinese": "well = 健康的；流感后她又恢复健康了。"
+    },
+    {
+      "term": "well-dressed",
+      "focusWord": "well-dressed",
+      "sentence": "The well-dressed guest entered the hall.",
+      "chinese": "well-dressed = 穿着讲究的；穿着讲究的客人走进大厅。"
+    },
+    {
+      "term": "well-known",
+      "focusWord": "well-known",
+      "sentence": "The well-known writer visited our school.",
+      "chinese": "well-known = 著名的；那位著名作家参观了我们学校。"
+    },
+    {
+      "term": "western",
+      "focusWord": "western",
+      "sentence": "The western coast is windy.",
+      "chinese": "western = 西部的；西部海岸风很大。"
+    },
+    {
+      "term": "white",
+      "focusWord": "white",
+      "sentence": "She bought white shoes.",
+      "chinese": "white = 白色的；她买了白色鞋子。"
+    },
+    {
+      "term": "wide",
+      "focusWord": "wide",
+      "sentence": "The wide road was easy to cross.",
+      "chinese": "wide = 宽的；宽阔的道路很容易穿过。"
+    },
+    {
+      "term": "willing",
+      "focusWord": "willing",
+      "sentence": "He is willing to help.",
+      "chinese": "willing = 愿意的；他愿意帮忙。"
+    },
+    {
+      "term": "wise",
+      "focusWord": "wise",
+      "sentence": "Her wise advice helped me.",
+      "chinese": "wise = 明智的；她明智的建议帮助了我。"
+    },
+    {
+      "term": "wonderful",
+      "focusWord": "wonderful",
+      "sentence": "We had a wonderful time.",
+      "chinese": "wonderful = 精彩的；我们度过了精彩的时光。"
+    },
+    {
+      "term": "working",
+      "focusWord": "working",
+      "sentence": "Working parents need flexible hours.",
+      "chinese": "working = 工作的；有工作的父母需要灵活时间。"
+    }
+  ]
+}

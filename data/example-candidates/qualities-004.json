@@ -1,0 +1,306 @@
+{
+  "batchId": "qualities-004",
+  "status": "draft",
+  "entries": [
+    {
+      "term": "historic",
+      "focusWord": "historic",
+      "sentence": "We visited a historic castle.",
+      "chinese": "historic = 有历史意义的；我们参观了一座有历史意义的城堡。"
+    },
+    {
+      "term": "historical",
+      "focusWord": "historical",
+      "sentence": "This historical novel is about ancient Rome.",
+      "chinese": "historical = 历史的；这本历史小说讲的是古罗马。"
+    },
+    {
+      "term": "honest",
+      "focusWord": "honest",
+      "sentence": "He gave an honest answer.",
+      "chinese": "honest = 诚实的；他给出了诚实的回答。"
+    },
+    {
+      "term": "hopeful",
+      "focusWord": "hopeful",
+      "sentence": "She sounded hopeful about the exam.",
+      "chinese": "hopeful = 抱有希望的；她听起来对考试抱有希望。"
+    },
+    {
+      "term": "horror",
+      "focusWord": "horror",
+      "sentence": "We watched a horror film.",
+      "chinese": "horror = 恐怖的；我们看了一部恐怖电影。"
+    },
+    {
+      "term": "huge",
+      "focusWord": "huge",
+      "sentence": "A huge cloud covered the sun.",
+      "chinese": "huge = 巨大的；一片巨大的云遮住了太阳。"
+    },
+    {
+      "term": "human",
+      "focusWord": "human",
+      "sentence": "Human kindness helped the family.",
+      "chinese": "human = 人类的；人类的善意帮助了这个家庭。"
+    },
+    {
+      "term": "humid",
+      "focusWord": "humid",
+      "sentence": "The air was humid after the rain.",
+      "chinese": "humid = 潮湿的；雨后空气很潮湿。"
+    },
+    {
+      "term": "icy",
+      "focusWord": "icy",
+      "sentence": "The icy path was dangerous.",
+      "chinese": "icy = 结冰的；结冰的小路很危险。"
+    },
+    {
+      "term": "important",
+      "focusWord": "important",
+      "sentence": "This is an important message.",
+      "chinese": "important = 重要的；这是一条重要消息。"
+    },
+    {
+      "term": "impossible",
+      "focusWord": "impossible",
+      "sentence": "The puzzle looked impossible.",
+      "chinese": "impossible = 不可能的；这个谜题看起来不可能解开。"
+    },
+    {
+      "term": "impressed",
+      "focusWord": "impressed",
+      "sentence": "I was impressed by her singing.",
+      "chinese": "impressed = 印象深刻的；她的歌声给我留下了深刻印象。"
+    },
+    {
+      "term": "incorrect",
+      "focusWord": "incorrect",
+      "sentence": "The incorrect address delayed the parcel.",
+      "chinese": "incorrect = 不正确的；错误地址延误了包裹。"
+    },
+    {
+      "term": "incredible",
+      "focusWord": "incredible",
+      "sentence": "The view was incredible.",
+      "chinese": "incredible = 难以置信的；景色令人难以置信。"
+    },
+    {
+      "term": "independent",
+      "focusWord": "independent",
+      "sentence": "She is an independent learner.",
+      "chinese": "independent = 独立的；她是一个独立的学习者。"
+    },
+    {
+      "term": "individual",
+      "focusWord": "individual",
+      "sentence": "Each individual ticket has a number.",
+      "chinese": "individual = 单独的；每张单独的票都有编号。"
+    },
+    {
+      "term": "indoor",
+      "focusWord": "indoor",
+      "sentence": "The indoor pool opens at seven.",
+      "chinese": "indoor = 室内的；室内泳池七点开放。"
+    },
+    {
+      "term": "inexpensive",
+      "focusWord": "inexpensive",
+      "sentence": "This meal was inexpensive.",
+      "chinese": "inexpensive = 不贵的；这顿饭不贵。"
+    },
+    {
+      "term": "intelligent",
+      "focusWord": "intelligent",
+      "sentence": "The intelligent dog learned quickly.",
+      "chinese": "intelligent = 聪明的；这只聪明的狗学得很快。"
+    },
+    {
+      "term": "interested",
+      "focusWord": "interested",
+      "sentence": "She is interested in science.",
+      "chinese": "interested = 感兴趣的；她对科学感兴趣。"
+    },
+    {
+      "term": "interesting",
+      "focusWord": "interesting",
+      "sentence": "It was an interesting talk.",
+      "chinese": "interesting = 有趣的；那是一场有趣的讲座。"
+    },
+    {
+      "term": "intermediate",
+      "focusWord": "intermediate",
+      "sentence": "He joined the intermediate class.",
+      "chinese": "intermediate = 中级的；他参加了中级班。"
+    },
+    {
+      "term": "jealous",
+      "focusWord": "jealous",
+      "sentence": "He felt jealous of his friend.",
+      "chinese": "jealous = 嫉妒的；他嫉妒他的朋友。"
+    },
+    {
+      "term": "keen",
+      "focusWord": "keen",
+      "sentence": "She is keen on tennis.",
+      "chinese": "keen = 热衷的；她热衷于网球。"
+    },
+    {
+      "term": "kind",
+      "focusWord": "kind",
+      "sentence": "It was kind of you to help.",
+      "chinese": "kind = 友善的；你帮忙真友善。"
+    },
+    {
+      "term": "large",
+      "focusWord": "large",
+      "sentence": "They live in a large flat.",
+      "chinese": "large = 大的；他们住在一套大公寓里。"
+    },
+    {
+      "term": "last",
+      "focusWord": "last",
+      "sentence": "The last bus leaves at midnight.",
+      "chinese": "last = 最后的；最后一班公交车午夜发车。"
+    },
+    {
+      "term": "later",
+      "focusWord": "later",
+      "sentence": "A later train is cheaper.",
+      "chinese": "later = 较晚的；较晚的一班火车更便宜。"
+    },
+    {
+      "term": "latest",
+      "focusWord": "latest",
+      "sentence": "The latest model has a better camera.",
+      "chinese": "latest = 最新的；最新型号有更好的相机。"
+    },
+    {
+      "term": "lazy",
+      "focusWord": "lazy",
+      "sentence": "The lazy student forgot his homework.",
+      "chinese": "lazy = 懒惰的；懒惰的学生忘了作业。"
+    },
+    {
+      "term": "least",
+      "focusWord": "least",
+      "sentence": "Choose the least expensive ticket.",
+      "chinese": "least = 最少的；选择最便宜的票。"
+    },
+    {
+      "term": "likely",
+      "focusWord": "likely",
+      "sentence": "Rain is likely tonight.",
+      "chinese": "likely = 可能的；今晚可能下雨。"
+    },
+    {
+      "term": "limited",
+      "focusWord": "limited",
+      "sentence": "Places are limited on the course.",
+      "chinese": "limited = 有限的；这门课程名额有限。"
+    },
+    {
+      "term": "little",
+      "focusWord": "little",
+      "sentence": "A little child waved at us.",
+      "chinese": "little = 小的；一个小孩向我们挥手。"
+    },
+    {
+      "term": "lively",
+      "focusWord": "lively",
+      "sentence": "The lively music made us dance.",
+      "chinese": "lively = 活泼的；欢快的音乐让我们跳舞。"
+    },
+    {
+      "term": "local",
+      "focusWord": "local",
+      "sentence": "We visited a local market.",
+      "chinese": "local = 当地的；我们参观了当地市场。"
+    },
+    {
+      "term": "long",
+      "focusWord": "long",
+      "sentence": "The long journey was tiring.",
+      "chinese": "long = 长的；漫长的旅程令人疲惫。"
+    },
+    {
+      "term": "long jump",
+      "focusWord": "long jump",
+      "sentence": "The long jump competition starts at two.",
+      "chinese": "long jump = 跳远的；跳远比赛两点开始。"
+    },
+    {
+      "term": "loose",
+      "focusWord": "loose",
+      "sentence": "My shoes feel loose.",
+      "chinese": "loose = 松的；我的鞋感觉很松。"
+    },
+    {
+      "term": "lost",
+      "focusWord": "lost",
+      "sentence": "The lost child found his mother.",
+      "chinese": "lost = 迷路的；迷路的孩子找到了母亲。"
+    },
+    {
+      "term": "loud",
+      "focusWord": "loud",
+      "sentence": "The loud music annoyed the neighbours.",
+      "chinese": "loud = 大声的；吵闹的音乐惹恼了邻居。"
+    },
+    {
+      "term": "lovely",
+      "focusWord": "lovely",
+      "sentence": "We had a lovely meal.",
+      "chinese": "lovely = 令人愉快的；我们吃了一顿令人愉快的饭。"
+    },
+    {
+      "term": "lucky",
+      "focusWord": "lucky",
+      "sentence": "She was lucky to catch the train.",
+      "chinese": "lucky = 幸运的；她很幸运赶上了火车。"
+    },
+    {
+      "term": "magic",
+      "focusWord": "magic",
+      "sentence": "The magic show amazed the children.",
+      "chinese": "magic = 魔术的；魔术表演让孩子们惊叹。"
+    },
+    {
+      "term": "magnificent",
+      "focusWord": "magnificent",
+      "sentence": "The palace was magnificent.",
+      "chinese": "magnificent = 壮丽的；这座宫殿很壮丽。"
+    },
+    {
+      "term": "main",
+      "focusWord": "main",
+      "sentence": "The main entrance is closed.",
+      "chinese": "main = 主要的；主入口关闭了。"
+    },
+    {
+      "term": "marvellous",
+      "focusWord": "marvellous",
+      "sentence": "We had a marvellous day.",
+      "chinese": "marvellous = 极好的；我们度过了极好的一天。"
+    },
+    {
+      "term": "maximum",
+      "focusWord": "maximum",
+      "sentence": "The maximum speed is fifty kilometres an hour.",
+      "chinese": "maximum = 最大的；最高速度是每小时五十公里。"
+    },
+    {
+      "term": "medium",
+      "focusWord": "medium",
+      "sentence": "She ordered a medium pizza.",
+      "chinese": "medium = 中等的；她点了一个中号披萨。"
+    },
+    {
+      "term": "messy",
+      "focusWord": "messy",
+      "sentence": "His room was messy.",
+      "chinese": "messy = 凌乱的；他的房间很凌乱。"
+    }
+  ]
+}
